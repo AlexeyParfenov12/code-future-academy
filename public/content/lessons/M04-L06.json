@@ -10,7 +10,7 @@
   "slideCount": 27,
   "fileCount": 1,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Подготовка датасета для прикладного кейса  В этом занятии рассматривается тема «Подготовка датасета для прикладного кейса». Будем опираться на примеры курса и",
+  "description": "В этом занятии рассматривается тема «Подготовка датасета для прикладного кейса». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L06",
-      "statement": "### Задача 1. Опишите задачу и роли столбцов\n\n\n| Максимум: 3 баллов | Ситуация успеха: начните с ответа на вопросы по кейсу. |\n| --- | --- |\n\nЧто нужно сделать\n\n- Что является объектом наблюдения?\n\n- Это классификация или регрессия? Обоснуйте одним предложением.\n\n- Какой столбец является целевой переменной?\n\n- Какие столбцы нельзя использовать как признаки и почему?\n\n\n| Роль | Столбцы | Обоснование |\n| --- | --- | --- |\n| Идентификатор |  |  |\n| Числовые признаки |  |  |\n| Категориальные признаки |  |  |\n| Цель |  |  |\n| Исключить |  |  |",
+      "statement": "## Задача 1. Опишите задачу и роли столбцов\n\n| Максимум: 3 баллов | Ситуация успеха: начните с ответа на вопросы по кейсу. |\n| --- | --- |\n\nЧто нужно сделать\n\n- Что является объектом наблюдения?\n\n- Это классификация или регрессия? Обоснуйте одним предложением.\n\n- Какой столбец является целевой переменной?\n\n- Какие столбцы нельзя использовать как признаки и почему?\n\n| Роль | Столбцы | Обоснование |\n| --- | --- | --- |\n| Идентификатор |  |  |\n| Числовые признаки |  |  |\n| Категориальные признаки |  |  |\n| Цель |  |  |\n| Исключить |  |  |",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab911c4fea5a2fa9cbd8d23",
@@ -35,17 +35,39 @@
         "a579c0525691c575.pdf"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L06",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Объект: одно наблюдение оборудования перед решением об обслуживании. Задача: бинарная классификация, нужно выбрать 0/1, а не предсказать число часов.\nИдентификатор: record_id — связь записей, не признак.\nЧисловые признаки: temperature_c, vibration_mm_s, load_pct, hours_since_service, alarms_24h.\nКатегориальные: machine_type, shift.\nЦель: needs_service_24h.\nИсключить repair_result_after_shift: результат ремонта появляется позже и создаёт утечку. Исключить record_id из X, сохранив для аудита.",
+        "explanation": "Роль определяется доступностью до решения. Цель нужна для обучения и проверки, но не входит в X. Числовое кодирование 0/1 не делает задачу регрессией.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "features",
+          "target"
+        ],
+        "id": "T-6ab911c4fea5a2fa9cbd8d23-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 06/Практика для студентов.md",
-        "sha256": "f7aeb2fe3a7f7f3baf327840f49f3fbfc2811bb8a6f6b0230c3189734bb2507c"
+        "elementId": "6ab911c4fea5a2fa9cbd8d23",
+        "archive": "Снимки страниц.json",
+        "sha256": "f9b96f455997ab4e8986a126d0baae219d6050300a3357bfa1a09c7ac0adf7eb"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6ab911c7fea5a2fa9cbd8d24",
@@ -54,7 +76,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L06",
-      "statement": "### Задача 2. Проведите ручной аудит\n\n\n| Максимум: 4 баллов | Найдите минимум 8 проблем или рисков. |\n| --- | --- |\n\nЧто нужно сделать\n\nЗаполните реестр. Не исправляйте данные сразу: сначала зафиксируйте проблему и правило решения.\n\n\n| № | Строка/столбец | Проблема | Почему опасно | Предлагаемое правило |\n| --- | --- | --- | --- | --- |\n| 1 |  |  |  |  |\n| 2 |  |  |  |  |\n| 3 |  |  |  |  |\n| 4 |  |  |  |  |\n| 5 |  |  |  |  |\n| 6 |  |  |  |  |\n| 7 |  |  |  |  |\n| 8 |  |  |  |  |\n| 9 |  |  |  |  |\n| 10 |  |  |  |  |\n\nПодсказка\n\nПроверьте уникальность record_id, пропуски, регистр текста, допустимые диапазоны, значения цели и наличие информации из будущего.",
+      "statement": "## Задача 2. Проведите ручной аудит\n\n| Максимум: 4 баллов | Найдите минимум 8 проблем или рисков. |\n| --- | --- |\n\nЧто нужно сделать\n\nЗаполните реестр. Не исправляйте данные сразу: сначала зафиксируйте проблему и правило решения.\n\n| № | Строка/столбец | Проблема | Почему опасно | Предлагаемое правило |\n| --- | --- | --- | --- | --- |\n| 1 |  |  |  |  |\n| 2 |  |  |  |  |\n| 3 |  |  |  |  |\n| 4 |  |  |  |  |\n| 5 |  |  |  |  |\n| 6 |  |  |  |  |\n| 7 |  |  |  |  |\n| 8 |  |  |  |  |\n| 9 |  |  |  |  |\n| 10 |  |  |  |  |\n\n**Подсказка**\n\nПроверьте уникальность record_id, пропуски, регистр текста, допустимые диапазоны, значения цели и наличие информации из будущего.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab911c7fea5a2fa9cbd8d24",
@@ -69,17 +91,33 @@
         "a579c0525691c575.pdf"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L06",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "1.M07 повторён с тем же record_id — двойной вес события; оставить подтверждённую первую запись.\n2.M04: Pump вместо pump — унифицировать регистр.\n3.M08: NIGHT вместо night — lower.\n4.M10: eve вместо evening — явная замена категории.\n5.M04/M08/M09: цель yes/Да/Нет смешана с 0/1 — явное сопоставление.\n6.M04: vibration_mm_s пропущена — восстановление из источника или медиана по типу после разделения для ML.\n7.M09: load_pct пропущена — аналогичная обработка.\n8.M05: load_pct140 вне 0–100 — заменить пропуском, проверить источник.\n9.M07: hours_since_service−30 невозможно — пропуск.\n10.M06: temperature_c−40 вне заданных 0–120 — пропуск, не считать доказанной температурой.\n11.repair_result_after_shift — поле будущего, исключить из признаков.\n12. Малый набор 15 строк с дублем — риск неустойчивой оценки.",
+        "explanation": "Аудит отдельно указывает строку, основание и правило. После удаления дубля остаётся 14 объектов. Температура−40 проверяется по явному диапазону практики, а не интерпретируется по будущему результату ремонта.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [],
+        "id": "T-6ab911c7fea5a2fa9cbd8d24-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 06/Практика для студентов.md",
-        "sha256": "f7aeb2fe3a7f7f3baf327840f49f3fbfc2811bb8a6f6b0230c3189734bb2507c"
+        "elementId": "6ab911c7fea5a2fa9cbd8d24",
+        "archive": "Снимки страниц.json",
+        "sha256": "ed1d48ba768f38b3400e90c378bc1334d116bd49662348c1a96f0cc32978303f"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": []
     },
     {
       "id": "T-6ab911cafea5a2fa9cbd8d25",
@@ -88,7 +126,7 @@
       "type": "choice",
       "moduleId": 4,
       "lessonId": "M04-L06",
-      "statement": "### Задача 3. Что выведет код?\n\n\n| Максимум: 3 баллов | Выберите ответ и объясните его. |\n| --- | --- |\n\nИсходный код\n\n\n```\nimport pandas as pd\n\ns = pd.Series([0, 1, \"Да\", \"Нет\", 1])\nprint(s.nunique())\nprint(set(s.astype(str)))\n```\n\nВыберите вариант:\n\n- А. 2 и {0, 1}\n\n- Б. 4 и {\"0\", \"1\", \"Да\", \"Нет\"}\n\n- В. 5 и пять различных значений\n\n- Г. Код завершится ошибкой\n\nПочему этот результат важен для целевой переменной needs_service_24h?",
+      "statement": "## Задача 3. Что выведет код?\n\n| Максимум: 3 баллов | Выберите ответ и объясните его. |\n| --- | --- |\n\nИсходный код\n\n```python\nimport pandas as pd\n\ns = pd.Series([0, 1, \"Да\", \"Нет\", 1])\nprint(s.nunique())\nprint(set(s.astype(str)))\n```\n\nВыберите вариант:\n\n- А. 2 и {0, 1}\n\n- Б. 4 и {\"0\", \"1\", \"Да\", \"Нет\"}\n\n- В. 5 и пять различных значений\n\n- Г. Код завершится ошибкой\n\nПочему этот результат важен для целевой переменной needs_service_24h?",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab911cafea5a2fa9cbd8d25",
@@ -103,17 +141,37 @@
         "a579c0525691c575.pdf"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L06",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Б) 4 и {\"0\", \"1\", \"Да\", \"Нет\"}. Порядок элементов при печати множества может различаться.",
+        "explanation": "nunique различает числа 0, 1 и строки«Да», «Нет»: получаются четыре значения. astype(str) приводит их к строкам, но не объединяет семантически равные ответы. Для цели нужна явная нормализация, иначе модель увидит лишние классы.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "output"
+        ],
+        "id": "T-6ab911cafea5a2fa9cbd8d25-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 06/Практика для студентов.md",
-        "sha256": "f7aeb2fe3a7f7f3baf327840f49f3fbfc2811bb8a6f6b0230c3189734bb2507c"
+        "elementId": "6ab911cafea5a2fa9cbd8d25",
+        "archive": "Снимки страниц.json",
+        "sha256": "13ff5467ada6af1ee120ebdf22cb01b16e508797242e4da77394c8176d068eb1"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output"
+      ]
     },
     {
       "id": "T-6ab911cdfea5a2fa9cbd8d26",
@@ -122,7 +180,7 @@
       "type": "code",
       "moduleId": 4,
       "lessonId": "M04-L06",
-      "statement": "### Задача 4. Найдите и исправьте ошибки в коде\n\n\n| Максимум: 4 баллов | Исправьте синтаксические и логические ошибки. |\n| --- | --- |\n\nИсходный код\n\n\n```\n# В переменной df уже находится исходная таблица\n\nfeatures = [\"record_id\", \"temperature_c\", \"vibration_mm_s\",\n            \"load_pct\", \"repair_result_after_shift\"]\ntarget = \"needs_service_24h\"\n\n# Ошибка 1: удаляются все строки, где есть хотя бы один пропуск\nclean_df = df.dropna()\n\n# Ошибка 2: дубликат ищется по всем полям, а не по идентификатору события\nclean_df = clean_df.drop_duplicates()\n\n# Ошибка 3: разные варианты цели не нормализованы\nclean_df[target] = clean_df[target].astype(int)\n\nX = clean_df[features]\ny = clean_df[target]\nprint(X.shape, y.shape)\n```\n\nТребования к исправлению\n\n- исключить record_id и repair_result_after_shift из признаков;\n\n- удалить повторную запись M07 по record_id ;\n\n- нормализовать значения цели к 0 и 1;\n\n- не удалять все строки только из-за единичных пропусков;\n\n- сохранить одинаковое число строк в X и y .\n\nОбратите внимание\n\nОдна и та же строка может содержать сразу несколько из перечисленных проблем. Исправлять их нужно последовательно, чтобы каждое изменение было проверяемым. Например, после нормализации цели имеет смысл отдельно убедиться, что в столбце остались только значения 0 и 1.",
+      "statement": "## Задача 4. Найдите и исправьте ошибки в коде\n\n| Максимум: 4 баллов | Исправьте синтаксические и логические ошибки. |\n| --- | --- |\n\nИсходный код\n\n```python\n# В переменной df уже находится исходная таблица\n\nfeatures = [\"record_id\", \"temperature_c\", \"vibration_mm_s\",\n            \"load_pct\", \"repair_result_after_shift\"]\ntarget = \"needs_service_24h\"\n\n# Ошибка 1: удаляются все строки, где есть хотя бы один пропуск\nclean_df = df.dropna()\n\n# Ошибка 2: дубликат ищется по всем полям, а не по идентификатору события\nclean_df = clean_df.drop_duplicates()\n\n# Ошибка 3: разные варианты цели не нормализованы\nclean_df[target] = clean_df[target].astype(int)\n\nX = clean_df[features]\ny = clean_df[target]\nprint(X.shape, y.shape)\n```\n\nТребования к исправлению\n\n- исключить `record_id` и `repair_result_after_shift` из признаков;\n\n- удалить повторную запись `M07` по `record_id`;\n\n- нормализовать значения цели к 0 и 1;\n\n- не удалять все строки только из-за единичных пропусков;\n\n- сохранить одинаковое число строк в `X` и `y`.\n\nОбратите внимание\n\nОдна и та же строка может содержать сразу несколько из перечисленных проблем. Исправлять их нужно последовательно, чтобы каждое изменение было проверяемым. Например, после нормализации цели имеет смысл отдельно убедиться, что в столбце остались только значения 0 и 1.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab911cdfea5a2fa9cbd8d26",
@@ -137,17 +195,161 @@
         "a579c0525691c575.pdf"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\nimport numpy as np\n\nrows = [\n[\"M01\", \"pump\", 72.4, 3.2, 78, 410, 1, \"day\", 0, \"no_repair\"],\n[\"M02\", \"conveyor\", 81.1, 6.8, 92, 780, 3, \"night\", 1, \"bearing\"],\n[\"M03\", \"fan\", 66.0, 2.1, 55, 250, 0, \"evening\", 0, \"no_repair\"],\n[\"M04\", \"Pump\", 79.5, np.nan, 88, 690, 2, \"night\", \"yes\", \"inspection\"],\n[\"M05\", \"conveyor\", 105.0, 9.2, 140, 1200, 5, \"day\", 1, \"overheat\"],\n[\"M06\", \"fan\", -40, 1.8, 45, 180, 0, \"day\", 0, \"sensor_error\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M08\", \"conveyor\", 83.0, 7.1, 95, 820, 4, \"NIGHT\", \"Да\", \"belt\"],\n[\"M09\", \"fan\", 68.3, 2.4, np.nan, 300, 0, \"day\", \"Нет\", \"no_repair\"],\n[\"M10\", \"pump\", 77.6, 4.8, 85, 650, 2, \"eve\", 0, \"inspection\"],\n[\"M11\", \"conveyor\", 89.2, 8.4, 99, 960, 5, \"night\", 1, \"belt\"],\n[\"M12\", \"fan\", 70.1, 2.9, 60, 430, 1, \"day\", 0, \"no_repair\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M13\", \"pump\", 84.0, 6.1, 90, 750, 3, \"night\", 1, \"seal\"],\n[\"M14\", \"conveyor\", 74.5, 3.5, 70, 520, 1, \"evening\", 0, \"no_repair\"],\n]\ncolumns = [\"record_id\", \"machine_type\", \"temperature_c\", \"vibration_mm_s\",\n\"load_pct\", \"hours_since_service\", \"alarms_24h\", \"shift\",\n\"needs_service_24h\", \"repair_result_after_shift\"]\ndf = pd.DataFrame(rows, columns=columns)\ndf.head()\nclean_df = df.drop_duplicates(subset='record_id').copy()\nclean_df['machine_type'] = clean_df['machine_type'].str.strip().str.lower()\nclean_df['shift'] = clean_df['shift'].str.strip().str.lower().replace({'eve':'evening'})\nmapping = {0:0,1:1,'0':0,'1':1,'yes':1,'Да':1,'Нет':0}\nclean_df['needs_service_24h'] = clean_df['needs_service_24h'].map(mapping)\nif clean_df['needs_service_24h'].isna().any():\n    raise ValueError('Неизвестная метка цели')\nclean_df['needs_service_24h'] = clean_df['needs_service_24h'].astype(int)\nfor column,low,high in [('temperature_c',0,120),('load_pct',0,100)]:\n    clean_df.loc[~clean_df[column].between(low,high),column] = np.nan\nclean_df.loc[clean_df['hours_since_service']<0,'hours_since_service'] = np.nan\nfor column in ['temperature_c','vibration_mm_s','load_pct','hours_since_service']:\n    clean_df[column] = clean_df.groupby('machine_type')[column].transform(lambda values: values.fillna(values.median()))\nfeature_columns = ['machine_type','temperature_c','vibration_mm_s','load_pct','hours_since_service','alarms_24h','shift']\nX = clean_df[feature_columns].copy()\ny = clean_df['needs_service_24h'].copy()\nassert X.index.equals(y.index) and X.isna().sum().sum()==0\nassert clean_df['record_id'].is_unique\nassert 'repair_result_after_shift' not in X and 'record_id' not in X\nprint(X.shape,y.shape)\nprint('Цель:',sorted(y.unique().tolist()))",
+        "answer": "",
+        "explanation": "Исправления: дубликат удалён по record_id, цель нормализована, ID и результат ремонта исключены. Вместо удаления всех неполных строк применены явные проверки диапазонов и медианы внутри типа. Для следующего ML-этапа медианы нужно учить на train внутри Pipeline: расчёт по всей учебной таблице здесь служит только требуемому упражнению очистки.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "(14, 7) (14,)\nЦель: [0, 1]"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Создаём набор значений `rows` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 21,
+            "text": "Создаём набор значений `columns` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 24,
+            "text": "Вычисляем `pd.DataFrame(rows, columns=columns)` и сохраняем результат в `df`."
+          },
+          {
+            "line": 25,
+            "text": "Выполняем `df.head` с переданными аргументами."
+          },
+          {
+            "line": 26,
+            "text": "Вычисляем `df.drop_duplicates(subset='record_id').copy()` и сохраняем результат в `clean_df`."
+          },
+          {
+            "line": 27,
+            "text": "Вычисляем `clean_df['machine_type'].str.strip().str.lower()` и сохраняем результат в `clean_df['machine_type']`."
+          },
+          {
+            "line": 28,
+            "text": "Вычисляем `clean_df['shift'].str.strip().str.lower().replace({'eve': 'evening'})` и сохраняем результат в `clean_df['shift']`."
+          },
+          {
+            "line": 29,
+            "text": "Создаём словарь `mapping` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 30,
+            "text": "Вычисляем `clean_df['needs_service_24h'].map(mapping)` и сохраняем результат в `clean_df['needs_service_24h']`."
+          },
+          {
+            "line": 31,
+            "text": "Проверяем условие `clean_df['needs_service_24h'].isna().any()`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 33,
+            "text": "Вычисляем `clean_df['needs_service_24h'].astype(int)` и сохраняем результат в `clean_df['needs_service_24h']`."
+          },
+          {
+            "line": 34,
+            "text": "Перебираем `[('temperature_c', 0, 120), ('load_pct', 0, 100)]`; очередное значение доступно через `(column, low, high)`."
+          },
+          {
+            "line": 35,
+            "text": "Вычисляем `np.nan` и сохраняем результат в `clean_df.loc[~clean_df[column].between(low, high), column]`."
+          },
+          {
+            "line": 36,
+            "text": "Вычисляем `np.nan` и сохраняем результат в `clean_df.loc[clean_df['hours_since_service'] < 0, 'hours_since_service']`."
+          },
+          {
+            "line": 37,
+            "text": "Перебираем `['temperature_c', 'vibration_mm_s', 'load_pct', 'hours_since_service']`; очередное значение доступно через `column`."
+          },
+          {
+            "line": 38,
+            "text": "Вычисляем `clean_df.groupby('machine_type')[column].transform(lambda values: values.fillna(values.median()))` и сохраняем результат в `clean_df[column]`."
+          },
+          {
+            "line": 39,
+            "text": "Создаём набор значений `feature_columns` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 40,
+            "text": "Вычисляем `clean_df[feature_columns].copy()` и сохраняем результат в `X`."
+          },
+          {
+            "line": 41,
+            "text": "Вычисляем `clean_df['needs_service_24h'].copy()` и сохраняем результат в `y`."
+          },
+          {
+            "line": 42,
+            "text": "Проверяем инвариант `X.index.equals(y.index) and X.isna().sum().sum() == 0`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 43,
+            "text": "Проверяем инвариант `clean_df['record_id'].is_unique`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 44,
+            "text": "Проверяем инвариант `'repair_result_after_shift' not in X and 'record_id' not in X`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 45,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 46,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "tables",
+          "statistics",
+          "features",
+          "target"
+        ],
+        "id": "T-6ab911cdfea5a2fa9cbd8d26-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 06/Практика для студентов.md",
-        "sha256": "f7aeb2fe3a7f7f3baf327840f49f3fbfc2811bb8a6f6b0230c3189734bb2507c"
+        "elementId": "6ab911cdfea5a2fa9cbd8d26",
+        "archive": "Снимки страниц.json",
+        "sha256": "c0e67329b4bcccde4495be06825f349bea7c1bd82cb7be4abd2b07ec14ef2bd2"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "tables",
+        "statistics",
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6ab911d2fea5a2fa9cbd8d27",
@@ -156,7 +358,7 @@
       "type": "code",
       "moduleId": 4,
       "lessonId": "M04-L06",
-      "statement": "### Задача 5. Подготовьте датасет и рассчитайте показатели\n\n\n| Максимум: 6 баллов | Получите clean_df, готовый для следующего этапа проекта. |\n| --- | --- |\n\nЧто нужно сделать\n\nИспользуйте следующий план и заполните пропуски в коде. Допустимо выполнить те же действия в табличном редакторе, но итоговые правила очистки должны быть записаны.\n\nКод для доработки\n\n\n```\nimport pandas as pd\nimport numpy as np\n\n# 1. Удаление повторной записи\nclean_df = df.drop_duplicates(subset=[\"record_id\"]).copy()\n\n# 2. Нормализация категорий\nclean_df[\"machine_type\"] = clean_df[\"machine_type\"].str.____()\nclean_df[\"shift\"] = clean_df[\"shift\"].str.lower().replace({\"eve\": \"evening\"})\nclean_df[\"needs_service_24h\"] = clean_df[\"needs_service_24h\"].replace(\n    {\"yes\": 1, \"Да\": 1, \"Нет\": 0}\n).astype(int)\n\n# 3. Недопустимые значения превращаем в пропуски\nclean_df.loc[~clean_df[\"temperature_c\"].between(0, 120), \"temperature_c\"] = np.nan\nclean_df.loc[~clean_df[\"load_pct\"].between(0, 100), \"load_pct\"] = np.nan\nclean_df.loc[clean_df[\"hours_since_service\"] < 0, \"hours_since_service\"] = np.nan\n\n# 4. Заполнение пропусков медианой внутри типа оборудования\nfor column in [\"temperature_c\", \"vibration_mm_s\", \"load_pct\", \"hours_since_service\"]:\n    clean_df[column] = clean_df.groupby(\"machine_type\")[column].transform(\n        lambda values: values.fillna(values.____())\n    )\n\n# 5. Формируем признаки и цель\nfeature_columns = [\n    \"machine_type\", \"temperature_c\", \"vibration_mm_s\", \"load_pct\",\n    \"hours_since_service\", \"alarms_24h\", \"shift\"\n]\nX = clean_df[feature_columns]\ny = clean_df[\"needs_service_24h\"]\n\n# 6. Контроль качества\nprint(\"Строк:\", len(clean_df))\nprint(\"Пропусков в признаках:\", X.isna().sum().sum())\nprint(\"Дубликатов ID:\", clean_df[\"record_id\"].duplicated().sum())\nprint(\"Распределение цели:\")\nprint(y.value_counts().sort_index())\nprint(\"Средняя температура:\", round(clean_df[\"temperature_c\"].mean(), 2))\nprint(\"Медианная вибрация:\", round(clean_df[\"vibration_mm_s\"].median(), 2))\n```\n\nЗапишите результаты\n\n\n| Показатель | Ваш результат | Что он означает |\n| --- | --- | --- |\n| Количество строк после очистки |  |  |\n| Пропуски в признаках |  |  |\n| Дубликаты record_id |  |  |\n| Класс 0 / класс 1 |  |  |\n| Средняя температура |  |  |\n| Медианная вибрация |  |  |\n\nОбратите внимание\n\nПропуски в коде заполняются медианой, а не средним: медиана устойчива к выбросам и не искажает признак из-за единичных экстремальных значений. Заполнение выполняется отдельно внутри каждого типа оборудования, потому что типичные диапазоны температуры, вибрации и нагрузки могут отличаться для разных машин.",
+      "statement": "## Задача 5. Подготовьте датасет и рассчитайте показатели\n\n| Максимум: 6 баллов | Получите clean_df, готовый для следующего этапа проекта. |\n| --- | --- |\n\nЧто нужно сделать\n\nИспользуйте следующий план и заполните пропуски в коде. Допустимо выполнить те же действия в табличном редакторе, но итоговые правила очистки должны быть записаны.\n\nКод для доработки\n\n```python\nimport pandas as pd\nimport numpy as np\n\n# 1. Удаление повторной записи\nclean_df = df.drop_duplicates(subset=[\"record_id\"]).copy()\n\n# 2. Нормализация категорий\nclean_df[\"machine_type\"] = clean_df[\"machine_type\"].str.____()\nclean_df[\"shift\"] = clean_df[\"shift\"].str.lower().replace({\"eve\": \"evening\"})\nclean_df[\"needs_service_24h\"] = clean_df[\"needs_service_24h\"].replace(\n    {\"yes\": 1, \"Да\": 1, \"Нет\": 0}\n).astype(int)\n\n# 3. Недопустимые значения превращаем в пропуски\nclean_df.loc[~clean_df[\"temperature_c\"].between(0, 120), \"temperature_c\"] = np.nan\nclean_df.loc[~clean_df[\"load_pct\"].between(0, 100), \"load_pct\"] = np.nan\nclean_df.loc[clean_df[\"hours_since_service\"] < 0, \"hours_since_service\"] = np.nan\n\n# 4. Заполнение пропусков медианой внутри типа оборудования\nfor column in [\"temperature_c\", \"vibration_mm_s\", \"load_pct\", \"hours_since_service\"]:\n    clean_df[column] = clean_df.groupby(\"machine_type\")[column].transform(\n        lambda values: values.fillna(values.____())\n    )\n\n# 5. Формируем признаки и цель\nfeature_columns = [\n    \"machine_type\", \"temperature_c\", \"vibration_mm_s\", \"load_pct\",\n    \"hours_since_service\", \"alarms_24h\", \"shift\"\n]\nX = clean_df[feature_columns]\ny = clean_df[\"needs_service_24h\"]\n\n# 6. Контроль качества\nprint(\"Строк:\", len(clean_df))\nprint(\"Пропусков в признаках:\", X.isna().sum().sum())\nprint(\"Дубликатов ID:\", clean_df[\"record_id\"].duplicated().sum())\nprint(\"Распределение цели:\")\nprint(y.value_counts().sort_index())\nprint(\"Средняя температура:\", round(clean_df[\"temperature_c\"].mean(), 2))\nprint(\"Медианная вибрация:\", round(clean_df[\"vibration_mm_s\"].median(), 2))\n```\n\nЗапишите результаты\n\n| Показатель | Ваш результат | Что он означает |\n| --- | --- | --- |\n| Количество строк после очистки |  |  |\n| Пропуски в признаках |  |  |\n| Дубликаты record_id |  |  |\n| Класс 0 / класс 1 |  |  |\n| Средняя температура |  |  |\n| Медианная вибрация |  |  |\n\nОбратите внимание\n\nПропуски в коде заполняются медианой, а не средним: медиана устойчива к выбросам и не искажает признак из-за единичных экстремальных значений. Заполнение выполняется отдельно внутри каждого типа оборудования, потому что типичные диапазоны температуры, вибрации и нагрузки могут отличаться для разных машин.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab911d2fea5a2fa9cbd8d27",
@@ -171,17 +373,179 @@
         "a579c0525691c575.pdf"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\nimport numpy as np\n\nrows = [\n[\"M01\", \"pump\", 72.4, 3.2, 78, 410, 1, \"day\", 0, \"no_repair\"],\n[\"M02\", \"conveyor\", 81.1, 6.8, 92, 780, 3, \"night\", 1, \"bearing\"],\n[\"M03\", \"fan\", 66.0, 2.1, 55, 250, 0, \"evening\", 0, \"no_repair\"],\n[\"M04\", \"Pump\", 79.5, np.nan, 88, 690, 2, \"night\", \"yes\", \"inspection\"],\n[\"M05\", \"conveyor\", 105.0, 9.2, 140, 1200, 5, \"day\", 1, \"overheat\"],\n[\"M06\", \"fan\", -40, 1.8, 45, 180, 0, \"day\", 0, \"sensor_error\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M08\", \"conveyor\", 83.0, 7.1, 95, 820, 4, \"NIGHT\", \"Да\", \"belt\"],\n[\"M09\", \"fan\", 68.3, 2.4, np.nan, 300, 0, \"day\", \"Нет\", \"no_repair\"],\n[\"M10\", \"pump\", 77.6, 4.8, 85, 650, 2, \"eve\", 0, \"inspection\"],\n[\"M11\", \"conveyor\", 89.2, 8.4, 99, 960, 5, \"night\", 1, \"belt\"],\n[\"M12\", \"fan\", 70.1, 2.9, 60, 430, 1, \"day\", 0, \"no_repair\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M13\", \"pump\", 84.0, 6.1, 90, 750, 3, \"night\", 1, \"seal\"],\n[\"M14\", \"conveyor\", 74.5, 3.5, 70, 520, 1, \"evening\", 0, \"no_repair\"],\n]\ncolumns = [\"record_id\", \"machine_type\", \"temperature_c\", \"vibration_mm_s\",\n\"load_pct\", \"hours_since_service\", \"alarms_24h\", \"shift\",\n\"needs_service_24h\", \"repair_result_after_shift\"]\ndf = pd.DataFrame(rows, columns=columns)\ndf.head()\nclean_df = df.drop_duplicates(subset='record_id').copy()\nclean_df['machine_type'] = clean_df['machine_type'].str.strip().str.lower()\nclean_df['shift'] = clean_df['shift'].str.strip().str.lower().replace({'eve':'evening'})\nmapping = {0:0,1:1,'0':0,'1':1,'yes':1,'Да':1,'Нет':0}\nclean_df['needs_service_24h'] = clean_df['needs_service_24h'].map(mapping)\nif clean_df['needs_service_24h'].isna().any():\n    raise ValueError('Неизвестная метка цели')\nclean_df['needs_service_24h'] = clean_df['needs_service_24h'].astype(int)\nfor column,low,high in [('temperature_c',0,120),('load_pct',0,100)]:\n    clean_df.loc[~clean_df[column].between(low,high),column] = np.nan\nclean_df.loc[clean_df['hours_since_service']<0,'hours_since_service'] = np.nan\nfor column in ['temperature_c','vibration_mm_s','load_pct','hours_since_service']:\n    clean_df[column] = clean_df.groupby('machine_type')[column].transform(lambda values: values.fillna(values.median()))\nfeature_columns = ['machine_type','temperature_c','vibration_mm_s','load_pct','hours_since_service','alarms_24h','shift']\nX = clean_df[feature_columns].copy()\ny = clean_df['needs_service_24h'].copy()\nassert X.index.equals(y.index) and X.isna().sum().sum()==0\nassert clean_df['record_id'].is_unique\nassert 'repair_result_after_shift' not in X and 'record_id' not in X\nprint('Строк:',len(clean_df))\nprint('Пропусков:',int(X.isna().sum().sum()))\nprint('Дублей ID:',int(clean_df['record_id'].duplicated().sum()))\nprint(y.value_counts().sort_index().to_string())\nprint('Средняя температура:',round(clean_df['temperature_c'].mean(),2))\nprint('Медианная вибрация:',round(clean_df['vibration_mm_s'].median(),2))",
+        "answer": "",
+        "explanation": "Пропуски шаблона: lower() и median(). Все 14 строк сохраняются после удаления одного дубля, неверные числа заменены NaN и заполнены по типу оборудования. Правило именно из условия практики: оно отличается от упрощённого демонстрационного фрагмента, где использовалась общая медиана. Показатели рассчитаны после полной очистки.\n\nРезультат: 14 строк, 0 пропусков, 0 дублей ID; класс 0—8, класс 1—6; средняя температура 78.16, медианная вибрация 4.2.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Строк: 14\nПропусков: 0\nДублей ID: 0\nneeds_service_24h\n0    8\n1    6\nСредняя температура: 78.16\nМедианная вибрация: 4.2"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Создаём набор значений `rows` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 21,
+            "text": "Создаём набор значений `columns` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 24,
+            "text": "Вычисляем `pd.DataFrame(rows, columns=columns)` и сохраняем результат в `df`."
+          },
+          {
+            "line": 25,
+            "text": "Выполняем `df.head` с переданными аргументами."
+          },
+          {
+            "line": 26,
+            "text": "Вычисляем `df.drop_duplicates(subset='record_id').copy()` и сохраняем результат в `clean_df`."
+          },
+          {
+            "line": 27,
+            "text": "Вычисляем `clean_df['machine_type'].str.strip().str.lower()` и сохраняем результат в `clean_df['machine_type']`."
+          },
+          {
+            "line": 28,
+            "text": "Вычисляем `clean_df['shift'].str.strip().str.lower().replace({'eve': 'evening'})` и сохраняем результат в `clean_df['shift']`."
+          },
+          {
+            "line": 29,
+            "text": "Создаём словарь `mapping` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 30,
+            "text": "Вычисляем `clean_df['needs_service_24h'].map(mapping)` и сохраняем результат в `clean_df['needs_service_24h']`."
+          },
+          {
+            "line": 31,
+            "text": "Проверяем условие `clean_df['needs_service_24h'].isna().any()`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 33,
+            "text": "Вычисляем `clean_df['needs_service_24h'].astype(int)` и сохраняем результат в `clean_df['needs_service_24h']`."
+          },
+          {
+            "line": 34,
+            "text": "Перебираем `[('temperature_c', 0, 120), ('load_pct', 0, 100)]`; очередное значение доступно через `(column, low, high)`."
+          },
+          {
+            "line": 35,
+            "text": "Вычисляем `np.nan` и сохраняем результат в `clean_df.loc[~clean_df[column].between(low, high), column]`."
+          },
+          {
+            "line": 36,
+            "text": "Вычисляем `np.nan` и сохраняем результат в `clean_df.loc[clean_df['hours_since_service'] < 0, 'hours_since_service']`."
+          },
+          {
+            "line": 37,
+            "text": "Перебираем `['temperature_c', 'vibration_mm_s', 'load_pct', 'hours_since_service']`; очередное значение доступно через `column`."
+          },
+          {
+            "line": 38,
+            "text": "Вычисляем `clean_df.groupby('machine_type')[column].transform(lambda values: values.fillna(values.median()))` и сохраняем результат в `clean_df[column]`."
+          },
+          {
+            "line": 39,
+            "text": "Создаём набор значений `feature_columns` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 40,
+            "text": "Вычисляем `clean_df[feature_columns].copy()` и сохраняем результат в `X`."
+          },
+          {
+            "line": 41,
+            "text": "Вычисляем `clean_df['needs_service_24h'].copy()` и сохраняем результат в `y`."
+          },
+          {
+            "line": 42,
+            "text": "Проверяем инвариант `X.index.equals(y.index) and X.isna().sum().sum() == 0`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 43,
+            "text": "Проверяем инвариант `clean_df['record_id'].is_unique`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 44,
+            "text": "Проверяем инвариант `'repair_result_after_shift' not in X and 'record_id' not in X`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 45,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 46,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 47,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 48,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 49,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 50,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "tables",
+          "statistics",
+          "features",
+          "target",
+          "problem"
+        ],
+        "id": "T-6ab911d2fea5a2fa9cbd8d27-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 06/Практика для студентов.md",
-        "sha256": "f7aeb2fe3a7f7f3baf327840f49f3fbfc2811bb8a6f6b0230c3189734bb2507c"
+        "elementId": "6ab911d2fea5a2fa9cbd8d27",
+        "archive": "Снимки страниц.json",
+        "sha256": "bbaca19c0b78ea95c6c40f91bcdfc0fc38a9815f0c5423d8d4aceb25ca21d4d3"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "tables",
+        "statistics",
+        "features",
+        "target",
+        "problem"
+      ]
     },
     {
       "id": "T-6ab911d4fea5a2fa9cbd8d28",
@@ -190,7 +554,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L06",
-      "statement": "### 11. Дополнительные задания\n\nЧто нужно сделать\n\n- Предложите разбиение на обучающую и проверочную части так, чтобы оба класса присутствовали в каждой части.\n\n- Сформулируйте два новых признака, которые можно собирать до наступления отказа и которые не создают утечку данных.\n\n- Предложите правило контроля дрейфа данных после запуска прототипа.\n\n- Объясните, почему строка M06 с repair_result_after_shift = sensor_error не позволяет автоматически считать temperature_c = −40 реальной температурой.\n\nОбратите внимание\n\nПри разбиении учитывайте малый размер набора: случайное разбиение без контроля может оставить один из классов только в одной части. Однако присутствие обоих классов ещё не делает оценку устойчивой — результат будет сильно зависеть от нескольких строк.\n\nДля контроля дрейфа выберите конкретные показатели, например долю новых категорий, долю пропусков или изменение распределения числового признака. Укажите период проверки и порог, после которого требуется повторный аудит данных.",
+      "statement": "## 11. Дополнительные задания\n\nЧто нужно сделать\n\n- Предложите разбиение на обучающую и проверочную части так, чтобы оба класса присутствовали в каждой части.\n\n- Сформулируйте два новых признака, которые можно собирать до наступления отказа и которые не создают утечку данных.\n\n- Предложите правило контроля дрейфа данных после запуска прототипа.\n\n- Объясните, почему строка M06 с `repair_result_after_shift = sensor_error` не позволяет автоматически считать `temperature_c = −40` реальной температурой.\n\nОбратите внимание\n\nПри разбиении учитывайте малый размер набора: случайное разбиение без контроля может оставить один из классов только в одной части. Однако присутствие обоих классов ещё не делает оценку устойчивой — результат будет сильно зависеть от нескольких строк.\n\nДля контроля дрейфа выберите конкретные показатели, например долю новых категорий, долю пропусков или изменение распределения числового признака. Укажите период проверки и порог, после которого требуется повторный аудит данных.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab911d4fea5a2fa9cbd8d28",
@@ -205,24 +569,45 @@
         "a579c0525691c575.pdf"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L06",
+        "status": "published",
+        "kind": "project_example",
+        "code": "",
+        "answer": "Разбиение 14 уникальных событий: 10train и 4validation со stratify=y ификсированным random_state; проверить наличие 0/1 в обеих частях. При повторных наблюдениях одной машины разделять по машине/времени, а не случайным строкам. Для финальной оценки собрать новые события: 4 проверочных слишком мало.\nНовые признаки до отказа: тренд вибрации за последние 6 часов и число превышений температуры за последние 24 часа. Окна заканчиваются строго до момента прогноза.\nКонтроль дрейфа: еженедельно на последних 100 событиях считать долю неизвестных типов и долю пропусков; порог, например, >5% неизвестных или рост пропусков на 10 п.п.от базовой train-статистики вызывает аудит. Это проектные пороги, требующие проверки.\nM06: sensor_error записан после смены, не подтверждает реальную температуру−40 и не доступен в момент прогноза. Нужно проверить датчик и первичный журнал, а значение обработать по правилу допустимости.",
+        "explanation": "Разделены обучение, проверка, мониторинг и расследование ошибки датчика. Даже стратификация не делает оценку на четырёх наблюдениях устойчивой. Новые признаки используют только прошлое.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "features",
+          "target"
+        ],
+        "id": "T-6ab911d4fea5a2fa9cbd8d28-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 06/Практика для студентов.md",
-        "sha256": "f7aeb2fe3a7f7f3baf327840f49f3fbfc2811bb8a6f6b0230c3189734bb2507c"
+        "elementId": "6ab911d4fea5a2fa9cbd8d28",
+        "archive": "Снимки страниц.json",
+        "sha256": "f206a8ab1ba4eb0fef9f52d0e9c087641c81317e73a0702923626186dba4954f"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "features",
+        "target"
+      ]
     }
   ],
-  "lecture": "# Подготовка датасета для прикладного кейса\n\n### СЛАЙД 01. Подготовка датасета для прикладного кейса\n\nВ этом занятии рассматривается тема «Подготовка датасета для прикладного кейса». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. 2. Вступление-обращение\n\nСравним данные в таблице.\nКоллега, сегодня вы будете работать как аналитик данных. Модель машинного обучения не понимает таблицу так, как человек. Если в данных есть дубликаты, пропуски, разные варианты одной категории или информация из будущего, прототип может показать высокий результат на проверке и провалиться в реальной работе. За 90 минут вы пройдёте путь от сырого набора до датасета, который можно передать разработчику модели.\n\nПодготовка данных похожа на проверку измерительного прибора перед экспериментом: даже правильный алгоритм не компенсирует систематические ошибки во входной информации. Важно не только удалить очевидные дефекты, но и не превратить очистку в незаметное изменение исходной задачи.\n\n### СЛАЙД 03. 3. Что вы сможете после занятия\n\nсформулировать объект прогнозирования и тип задачи машинного обучения;\n\nразделить столбцы на идентификаторы, приизнаки, целевую переменную и недопустимые признаки;\n\nобнаружить пропуски, дубликаты, ошибки диапазонов и несогласованные категории;\n\nприменить обоснованные правила очистки, не подменяя неизвестные значения выдуманными;\n\nрассчитать базовые показатели качества данных и оформить паспорт датасета;\n\nобъяснить ограничения датасета и риски будущей модели.\n\nЭти действия образуют воспроизводимый аудит: другой аналитик должен суметь применить те же правила к новой выгрузке и получить сопоставимый результат.\n\n### СЛАЙД 04. 5. Краткий теоретический минимум (1/2)\n\nРисунок 1. Подготовка данных — отдельный этап проекта, а не техническая формальность.\n\nДо очистки необходимо зафиксировать постановку задачи. В данном случае единица наблюдения — состояние одной установки в конце смены, а прогноз относится к следующим 24 часам. Поскольку целевая переменная принимает два значения — обслуживание требуется или не требуется, — решается задача бинарной классификации.\n\nУ столбцов таблицы могут быть разные роли:\n\nидентификатор связывает записи и помогает обнаруживать повторы, но обычно не описывает состояние объекта;\n\nпризнак содержит информацию, доступную модели в момент прогноза;\n\nцелевая переменная хранит правильный ответ, который модель должна научиться предсказывать;\n\nнедопустимый признак содержит сведения, которые нельзя использовать при реальном прогнозе, например результат события, произошедшего позже.\n\nТип данных сам по себе не определяет роль столбца. Числовой код может быть идентификатором, а текстовая категория — полезным признаком. Роль определяется смыслом и моментом появления информации.\n\nГлавное правило\n\nВ качестве признаков используйте только то, что реально известно в момент, когда модель должна сделать прогноз. Столбец, заполненный после события, создаёт утечку данных.\n\nУтечка данных опасна тем, что делает проверку модели нереалистичной. Например, результат ремонта может быть тесно связан с необходимостью обслуживания, но в конце смены этот реезультат ещё неизвестен. Следовательно, модель не сможет получить такой столбец при эксплуатации.\n\nРисунок 2. Четыре разные роли столбцов.\n\nАудит качества обычно включает несколько независимых проверок:\n\nполнота — есть ли пропуски и в каких столбцах они находятся;\n\nуникальность — нет ли повторных записей об одном наблюдении;\n\nсогласованность — одинаково ли записаны равнозначные категории;\n\nдопустимость — соответствуют ли значения смысловым ограничениям, например диапазону от 0 до 100 для процента нагрузки;\n\nвременная корректность — не попала ли в признаки информация из будущего.\n\nПропуск и ошибочное значение — не одно и то же. Пропуск прямо сообщает, что значение неизвестно. Ошибочное число может выглядеть заполненным и поэтому требует отдельной проверки диапазона или источника данных.\n\n### СЛАЙД 05. 5. Краткий теоретический минимум (2/2)\n\nЗаполнение пропуска медианой является оценкой, а не восстановлением истинного измерения. Такое решение допустимо как базовое правило для прототипа, если оно задокументировано. При последующем обучении модели медиану следует вычислять только по обучающей части, а затем применять к проверочной части, иначе возникает утечка из данных проверки.\n\nВажно\n\nНе следует исправлять подозрительное значение только потому, что оно выглядит необычно. Сначала нужно проверить единицы измерения, допустимый диапазон и источник записи. Если подтвердить значение невозможно, его можно пометить как пропуск, исключить строку по заранее сформулированному правилу или отправить запись на дополнительную проверку.\n\n### СЛАЙД 06. 6. Прикладной кейс «ТехСервис-24»\n\nУчебный сервисный центр обслуживает насосы, конвейеры и вентиляторы. Требуется подготовить прототип, который будет предсказывать, понадобится ли оборудованию срочное обслуживание в ближайшие 24 часа. Каждая строка описывает состояние одной установки в конце смены. Набор синтетический: он создан для обучения и не отражает статистику конкретного предприятия.\n\nБизнес-вопрос\n\nМожно ли по параметрам оборудования, доступным в конце смены, определить, требуется ли срочное обслуживание в течение следующих 24 часов?\n\nПоложительный класс соответствует случаю, когда срочное обслуживание потребуется, отрицательный — когда оно не потребуется. Для корректной постановки задачи необходимо заранее определить момент прогноза: конец смены. Все допустимые признаки должны быть известны не позже этого момента.\n\nДаже если учебный прототип покажет хороший результат, его нельзя автоматически переносить на реальный сервисный центр. Набор мал, создан искусственно и не отражает возможное разнообразие моделей оборудования, условий эксплуатации и ошибок промышленных датчиков.\n\n### СЛАЙД 07. 7. Исходный набор данных\n\nИз-за ширины таблица разделена на две части. Строки соединяются по record_id. Символ «—» означает отсутствие значения.\n\nПри соединении частей необходимо контролировать ключ: повторяющийся record_id может размножить строки при merge. Сначала следует проверить число повторов в каждой части и убедиться, что одинаковые идентификаторы действительно относятся к одному наблюдению.\n\nСравним данные в таблице.\nrecord_id machine_type temperature_c vibration_mm_s load_pct hours_since_service M01 pump 72,4 3,2 78 410 M02 conveyor 81,1 6,8 92 780 M03 fan 66,0 2,1 55 250 M04 Pump 79,5 — 88 690 M05 conveyor 105,0 9,2 140 1200 M06 fan −40 1,8 45 180 M07 pump 75,2 4,0 80 −30 M08 conveyor 83,0 7,1 95 820 M09 fan 68,3 2,4 — 300 M10 pump 77,6 4,8 85 650 M11 conveyor 89,2 8,4 99 960 M12 fan 70,1 2,9 60 430 M07 pump 75,2 4,0 80 −30 M13 pump 84,0 6,1 90 750 M14 conveyor 74,5 3,5 70 520\n\nТаблица 1А. Технические параметры.\n\nСравним данные в таблице.\nrecord_id alarms_24h shift needs_service_24h repair_result_after_shift M01 1 day 0 no_repair M02 3 night 1 bearing M03 0 evening 0 no_repair M04 2 night yes inspection M05 5 day 1 overheat M06 0 day 0 sensor_error M07 1 evening 0 no_repair M08 4 NIGHT Да belt M09 0 day Нет no_repair M10 2 eve 0 inspection M11 5 night 1 belt M12 1 day 0 no_repair M07 1 evening 0 no_repair M13 3 night 1 seal M14 1 evening 0 no_repair\n\nТаблица 1Б. Контекст, целевая переменная и результат после смены.\n\nПри первом просмотре не исправляйте таблицу сразу. Сначала составьте реестр проблем: столбец, строка, обнаруженное значение, причина сомнения и предполагаемое действие. Такой порядок позволяет отделить наблюдение от решения и не потерять исходные данные.\n\nРисунок 3. Основные направления аудита.\n\n### СЛАЙД 08. 8. План работы на 90 минут · таблица 1/3\n\nСравним данные в таблице.\nЭтап Время Результат Постановка задачи и роли столбцов 10 мин Паспорт задачи Ручной аудит таблицы 15 мин Реестр ошибок Анализ и исправление кода 15 мин Рабочие фрагменты pandas Очистка и расчёт показателей 35 мин clean_df и показатели Паспорт датасета и вывод 15 мин Готовность к прототипированию\n\nЕсли работа выполняется в паре, один участник может вести реестр решений, а второй — реализовывать проверки в pandas. Перед очисткой решения необходимо согласовать: код не должен молча заменять экспертное правило.\n\n### СЛАЙД 09. 8. План работы на 90 минут · таблица 2/3\n\nПосмотрите на продолжение таблицы. Анализ и исправление кода 15 мин Рабочие фрагменты pandas Очистка и расчёт показателей 35 мин clean_df и показатели\n\n### СЛАЙД 10. 8. План работы на 90 минут · таблица 3/3\n\nПосмотрите на продолжение таблицы. Паспорт датасета и вывод 15 мин Готовность к прототипированию\n\n### СЛАЙД 11. Задание 1. Постановка задачи и роли столбцов\n\nДо запуска очистки письменно ответьте на вопросы:\n\nЧто является единицей наблюдения?\n\nВ какой момент модель должна выдавать прогноз?\n\nКакой столбец является целевой переменной и какие два класса он представляет?\n\nКакие столбцы доступны в момент прогноза?\n\nКакие столбцы нельзя передавать модели и почему?\n\nРазделите столбцы на четыре группы: идентификатор, признаки, целевая переменная и недопустимые признаки. Обратите внимание, что record_id полезен для контроля записей, но не должен автоматически входить в X. Столбец repair_result_after_shift нужен для аудита исходной таблицы, однако содержит сведения, появившиеся после смены.\n\n### СЛАЙД 12. Задание 2. Ручной аудит исходной таблицы\n\nНайдите не менее восьми проблем или рисков. Для каждой записи укажите:\n\nместо проблемы: столбец и record_id;\n\nтип проблемы: пропуск, дубликат, несогласованная категория, недопустимый диапазон, подозрительное значение или утечка;\n\nправило обработки;\n\nобоснование правила;\n\nвозможное влияние на будущую модель.\n\nВ наборе следует проверить повторяющийся record_id, регистр категорий, сокращение названия смены, разные обозначения классов, пропуски и физически или логически сомнительные значения. Значения temperature_c = −40 и temperature_c = 105,0 требуют проверки, но необычность сама по себе ещё не доказывает ошибку. Напротив, load_pct = 140 нарушает смысл процентной шкалы от 0 до 100, а отрицательное число часов после обслуживания противоречит смыслу показателя.\n\nОбрати внимание\n\nЕсть два способа считать дубликаты. Число строк с повторяющимся ключом включает все экземпляры повтора, а число лишних строк показывает, сколько записей необходимо удалить, чтобы ключ стал уникальным. В отчёте укажите, какой способ использован.\n\n### СЛАЙД 13. Задание 3. Анализ ошибочного кода\n\nРассмотрите фрагмент. Не запускайте его сразу: сначала найдите логические проблемы.\n\nПример на слайде:\nX = df.drop(columns=[\"needs_service_24h\"])\ny = df[\"needs_service_24h\"].astype(int)\n\ndf.drop_duplicates(inplace=True)\n\nX = X.fillna(X.mean(numeric_only=True))\nprint(X.shape, y.shape)\n\nОбъясните:\n\nпочему преобразование целевой переменной через astype(int) не сработает для всех исходных меток;\n\nкакие недопустимые столбцы останутся в X;\n\nпочему удаление дубликатов после создания X и y не исправляет уже созданные объекты;\n\nпочему fillna не устраняет ошибки диапазонов и несогласованные текстовые категории;\n\nпочему совпадение числа строк ещё не гарантирует правильное соответствие X и y.\n\nИсправленный порядок должен быть таким: создать копию исходной таблицы, нормализовать значения, обработать дубликаты и недопустимые значения, сформировать clean_df, а только затем получить X и y из одних и тех же строк.\n\n### СЛАЙД 14. Задание 4. Нормализация категорий и целевой переменной\n\nПриведите равнозначные категории к единой записи. Сначала удалите лишние пробелы и выровняйте регистр, затем замените известные сокращения. Не используйте автоматическое исправление опечаток без словаря: похожие строки могут обозначать разные реальные категории.\n\nПример на слайде:\nwork_df = df.copy()\n\nwork_df[\"machine_type\"] = (\n    work_df[\"machine_type\"]\n    .str.strip()\n    .str.lower()\n)\n\nwork_df[\"shift\"] = (\n    work_df[\"shift\"]\n    .str.strip()\n    .str.lower()\n    .replace({\"eve\": \"evening\"})\n)\n\ntarget_map = {\n    0: 0,\n    1: 1,\n    \"0\": 0,\n    \"1\": 1,\n    \"yes\": 1,\n    \"no\": 0,\n    \"Да\": 1,\n    \"Нет\": 0\n}\nwork_df[\"needs_service_24h\"] = work_df[\"needs_service_24h\"].map(target_map)\n\nПосле преобразования проверьте уникальные значения. Если появилась NaN, значит в исходных данных встретилась метка, которой нет в словаре. Её нельзя автоматически относить к одному из классов.\n\nПример на слайде:\nprint(work_df[\"machine_type\"].value_counts(dropna=False))\nprint(work_df[\"shift\"].value_counts(dropna=False))\nprint(work_df[\"needs_service_24h\"].value_counts(dropna=False))\n\n### СЛАЙД 15. Задание 5. Очистка датасета и формирование clean_df\n\nЭто обязательное задание. Очистка должна выполняться на копии df, чтобы исходная таблица оставалась доступной для сравнения.\n\nУдалите точный повтор M07 по record_id, предварительно убедившись, что значения во всех столбцах совпадают.\n\nЗамените явно недопустимые значения load_pct и hours_since_service на пропуски либо исключите соответствующие строки по выбранному правилу.\n\nОпределите политику для исходных пропусков vibration_mm_s и load_pct.\n\nОтдельно задокументируйте решение по подозрительным температурам. Не используйте repair_result_after_shift как скрытый способ исправления признака: этот столбец появляется после момента прогноза.\n\nУдалите repair_result_after_shift из набора, передаваемого модели.\n\nСохраните record_id в clean_df для прослеживаемости, но исключите его из X.\n\nБазовую проверку диапазонов можно выполнить так:\n\nПример на слайде:\nwork_df = work_df.drop_duplicates(subset=\"record_id\", keep=\"first\").copy()\n\ninvalid_load = ~work_df[\"load_pct\"].between(0, 100)\ninvalid_hours = work_df[\"hours_since_service\"] < 0\n\nwork_df.loc[invalid_load, \"load_pct\"] = pd.NA\nwork_df.loc[invalid_hours, \"hours_since_service\"] = pd.NA\n\nДля прототипа разрешается заполнить числовые пропуски медианой. Выберите один воспроизводимый вариант: общую медиану по столбцу или медиану внутри machine_type с резервным заполнением общей медианой. Объясните выбор. На таком небольшом наборе групповые оценки могут быть нестабильны.\n\nПример на слайде:\nnumeric_features = [\n    \"temperature_c\",\n    \"vibration_mm_s\",\n    \"load_pct\",\n    \"hours_since_service\",\n    \"alarms_24h\"\n]\n\nfor column in numeric_features:\n    median_value = work_df[column].median()\n    work_df[column] = work_df[column].fillna(median_value)\n\nЕсли подозрительная температура признана недостоверной, сначала замените её на пропуск по отдельному, явно записанному правилу, а затем примените выбранный способ заполнения. Если достоверного основания нет, пометьте случай как нерешённое ограничение или исключите строку из итогового набора. Итоговое количество строк поэтому может зависеть от принятой политики.\n\nСформируйте очищенный датасет, признаки и цель:\n\nПример на слайде:\nclean_df = work_df.drop(columns=[\"repair_result_after_shift\"]).copy()\n\nfeature_columns = [\n    \"machine_type\",\n    \"temperature_c\",\n    \"vibration_mm_s\",\n    \"load_pct\",\n    \"hours_since_service\",\n    \"alarms_24h\",\n    \"shift\"\n]\n\nX = clean_df[feature_columns].copy()\ny = clean_df[\"needs_service_24h\"].astype(int).copy()\n\nЕсли все уникальные строки сохранены, после удаления одного лишнего повтора останется 14 наблюдений. При дополнительном исключении строк число будет меньше; это решение необходимо отразить в паспорте.\n\n### СЛАЙД 16. Задание 6. Автоматические проверки результата\n\nПроверки должны завершаться без ошибок. Добавьте собственные условия, если использовали дополнительные правила очистки.\n\nПример на слайде:\nassert clean_df[\"record_id\"].is_unique\nassert clean_df[\"needs_service_24h\"].isin([0, 1]).all()\nassert clean_df[feature_columns].isna().sum().sum() == 0\nassert clean_df[\"load_pct\"].between(0, 100).all()\nassert (clean_df[\"hours_since_service\"] >= 0).all()\nassert \"record_id\" not in X.columns\nassert \"repair_result_after_shift\" not in X.columns\nassert len(X) == len(y)\nassert X.index.equals(y.index)\n\nПоследняя проверка особенно важна: одинаковая длина X и y не исключает перемешивания строк. Совпадение индексов подтверждает, что каждому набору признаков соответствует правильная целевая метка.\n\n### СЛАЙД 17. Задание 7. Базовые показатели качества данных\n\nРассчитайте показатели до и после очистки:\n\nчисло строк и столбцов;\n\nчисло уникальных record_id;\n\nчисло лишних дубликатов;\n\nдолю пропусков по каждому столбцу;\n\nчисло значений вне установленных диапазонов;\n\nнабор уникальных категорий machine_type и shift;\n\nчисло объектов каждого класса и долю положительного класса.\n\nПример на слайде:\nprint(\"Размер исходного набора:\", df.shape)\nprint(\"Размер очищенного набора:\", clean_df.shape)\n\nduplicate_count = df.duplicated(subset=\"record_id\", keep=\"first\").sum()\nprint(\"Лишних дубликатов:\", duplicate_count)\n\nmissing_share = df.isna().mean().sort_values(ascending=False)\nprint(\"Доля пропусков:\")\nprint(missing_share)\n\nclass_counts = clean_df[\"needs_service_24h\"].value_counts().sort_index()\nclass_share = clean_df[\"needs_service_24h\"].value_counts(normalize=True).sort_index()\nprint(\"Число объектов по классам:\")\nprint(class_counts)\nprint(\"Доли классов:\")\nprint(class_share)\n\nЕсли после нормализации цели и удаления только точного повтора сохранены все 14 уникальных наблюдений, в наборе будет 8 объектов класса 0 и 6 объектов класса 1. Если получен другой результат, проверьте словарь целевых меток, удаление дубликатов и правила исключения строк.\n\nВ выводе разделите факты и интерпретации. Например, «доля положительного класса равна рассчитанному значению» — факт, а «этого достаточно для надёжного обучения» — вывод, который нельзя подтвердить по столь малому синтетическому набору.\n\nЗадание 8. Краткий аналитический вывод\n\nСформулируйте вывод из четырёх частей:\n\nкакие критические проблемы были обнаружены;\n\nкакие правила очистки применены;\n\nкакие вопросы остались нерешёнными без дополнительной информации;\n\nпочему набор пригоден только для прототипирования, а не для доказательства качества будущей модели.\n\n### СЛАЙД 18. 10. Итоговый паспорт датасета\n\nЗаполните паспорт. Он является итоговым продуктом занятия вместе с clean_df.\n\nФормулировки должны быть проверяемыми. Вместо «ошибки исправлены» перечислите конкретные правила, а вместо «данных достаточно» укажите размер набора и ограничения его происхождения.\n\nСравним данные в таблице.\nРаздел Содержание Название датасета Прикладная задача Единица наблюдения Тип задачи Целевая переменная Признаки Исключённые столбцы и причины Количество строк после очистки Правила обработки пропусков Правила нормализации категорий Ограничения набора Риски ошибок будущей модели Критерий готовности к прототипированию\n\nВ строке «Критерий готовности к прототипированию» укажите измеримые условия: уникальность ключа, допустимые значения цели, отсутствие пропусков в X, отсутствие утечки и успешное выполнение автоматических проверок.\n\n### СЛАЙД 19. 12. Критерии оценивания · таблица 1/3\n\nСравним данные в таблице.\nКомпонент Баллы Условие полного балла Постановка задачи и роли столбцов 3 Верно определены объект, тип задачи, цель, признаки и исключения. Ручной аудит 4 Найдено не менее 8 проблем/рисков и предложены обоснованные правила. Анализ результата кода 3 Выбран правильный ответ и объяснена проблема несогласованных меток. Исправление кода 4 Устранены все ключевые логические ошибки, X и y согласованы. Очистка и показатели 6 Датасет очищен, проверки пройдены, показатели рассчитаны. Итого 20 Зачёт: 14 и более баллов при обязательном выполнении задачи 5.\n\nОбоснованное решение оценивается выше механической замены. Если для подозрительного значения выбрана не единственная возможная стратегия, полный балл сохраняется при условии, что правило последовательно применено, не использует информацию из будущего и отражено в паспорте.\n\n### СЛАЙД 20. 12. Критерии оценивания · таблица 2/3\n\nПосмотрите на продолжение таблицы. Анализ результата кода 3 Выбран правильный ответ и объяснена проблема несогласованных меток. Исправление кода 4 Устранены все ключевые логические ошибки, X и y согласованы.\n\n### СЛАЙД 21. 12. Критерии оценивания · таблица 3/3\n\nПосмотрите на продолжение таблицы. Очистка и показатели 6 Датасет очищен, проверки пройдены, показатели рассчитаны. Итого 20 Зачёт: 14 и более баллов при обязательном выполнении задачи 5.\n\n### СЛАЙД 22. 13. Чек-лист сдачи\n\n☐ Я сформулировал(а) задачу и единицу наблюдения.\n\n☐ Я отделил(а) идентификатор, признаки, цель и столбец с утечкой.\n\n☐ В итоговой таблице нет повторяющихся record_id.\n\n☐ Категории записаны единообразно.\n\n☐ В признаках нет пропусков и очевидно недопустимых значений.\n\n☐ Цель содержит только 0 и 1.\n\n☐ Я рассчитал(а) базовые показатели и объяснил(а) их.\n\n☐ Я описал(а) ограничения и не утверждаю, что датасет уже доказывает качество модели.\n\n☐ Я сохранил(а) исходный df и выполнял(а) очистку на копии.\n\n☐ Я проверил(а), что индексы X и y совпадают.\n\n☐ Я записал(а), какие значения были заменены и по какому правилу.\n\n☐ В X отсутствуют record_id и repair_result_after_shift.\n\n### СЛАЙД 23. 14. Самопроверка\n\n1. Можно ли включать record_id в признаки только потому, что это число или код?\n\n2. Почему repair_result_after_shift является утечкой?\n\n3. Чем медиана полезна при заполнении пропусков?\n\n4. Достаточно ли отсутствия пропусков, чтобы признать датасет качественным?\n\n5. Что означает готовность к прототипированию?\n\n6. Почему одинаковая длина X и y не гарантирует их согласованность?\n\n7. Нужно ли превращать любое необычное значение в пропуск?\n\n8. Почему медиану для реальной проверки модели нельзя вычислять сразу по всему датасету?\n\n9. Чем нормализация категории отличается от объединения разных категорий?\n\n### СЛАЙД 24. 15. Глоссарий\n\nСравним данные в таблице.\nТермин Простое объяснение Датасет Набор связанных наблюдений, обычно представленный таблицей. Признак Характеристика объекта, используемая моделью для прогноза. Целевая переменная Ответ, который модель должна научиться предсказывать. Классификация Задача выбора одного класса из заданного набора. Утечка данных Попадание в признаки информации, недоступной в момент реального прогноза. Медиана Центральное значение упорядоченного набора; половина значений не больше него, половина — не меньше. Ограничение датасета Свойство набора, которое уменьшает область применимости выводов. Прототипирование Быстрая проверка идеи модели на подготовленных данных. Единица наблюдения Объект или событие, которому соответствует одна строка таблацы. Дубликат Повторная запись одного и того же наблюдения или ключа. Нормализация категорий Приведение равнозначных текстовых меток к единому формату. Импутация Заполнение пропущенного значения по заранее выбранному правилу. Дрейф данных Изменение свойств поступающих данных по сравнению с набором, на котором создавался прототип. Воспроизводимость Возможность повторить обработку по тем же правилам и получить сопоставимый результат.\n\n### СЛАЙД 25. Приложение. Код для создания исходной таблицы\n\nВыполните этот фрагмент в отдельной ячейке перед заданиями. Объект df следует сохранить без изменений, а все преобразования проводить в work_df или другой явно названной копии.\n\nПример на слайде:\nimport pandas as pd\nimport numpy as np\n\nrows = [\n[\"M01\", \"pump\", 72.4, 3.2, 78, 410, 1, \"day\", 0, \"no_repair\"],\n[\"M02\", \"conveyor\", 81.1, 6.8, 92, 780, 3, \"night\", 1, \"bearing\"],\n[\"M03\", \"fan\", 66.0, 2.1, 55, 250, 0, \"evening\", 0, \"no_repair\"],\n[\"M04\", \"Pump\", 79.5, np.nan, 88, 690, 2, \"night\", \"yes\", \"inspection\"],\n[\"M05\", \"conveyor\", 105.0, 9.2, 140, 1200, 5, \"day\", 1, \"overheat\"],\n[\"M06\", \"fan\", -40, 1.8, 45, 180, 0, \"day\", 0, \"sensor_error\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M08\", \"conveyor\", 83.0, 7.1, 95, 820, 4, \"NIGHT\", \"Да\", \"belt\"],\n[\"M09\", \"fan\", 68.3, 2.4, np.nan, 300, 0, \"day\", \"Нет\", \"no_repair\"],\n[\"M10\", \"pump\", 77.6, 4.8, 85, 650, 2, \"eve\", 0, \"inspection\"],\n[\"M11\", \"conveyor\", 89.2, 8.4, 99, 960, 5, \"night\", 1, \"belt\"],\n[\"M12\", \"fan\", 70.1, 2.9, 60, 430, 1, \"day\", 0, \"no_repair\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M13\", \"pump\", 84.0, 6.1, 90, 750, 3, \"night\", 1, \"seal\"],\n[\"M14\", \"conveyor\", 74.5, 3.5, 70, 520, 1, \"evening\", 0, \"no_repair\"],\n]\ncolumns = [\"record_id\", \"machine_type\", \"temperature_c\", \"vibration_mm_s\",\n\"load_pct\", \"hours_since_service\", \"alarms_24h\", \"shift\",\n\"needs_service_24h\", \"repair_result_after_shift\"]\ndf = pd.DataFrame(rows, columns=columns)\ndf.head()\n\nПосле создания таблицы полезно выполнить первичный обзор через df.shape, df.info(), df.isna().sum() и df.nunique(dropna=False). Эти команды не очищают данные, а помогают зафиксировать их исходное состояние.\n\n### СЛАЙД 26. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 27. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Подготовка датасета для прикладного кейса\n\n### СЛАЙД 01. Подготовка датасета для прикладного кейса\n\nВ этом занятии рассматривается тема «Подготовка датасета для прикладного кейса». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. 2. Вступление-обращение\n\nСравним данные в таблице.\nКоллега, сегодня вы будете работать как аналитик данных. Модель машинного обучения не понимает таблицу так, как человек. Если в данных есть дубликаты, пропуски, разные варианты одной категории или информация из будущего, прототип может показать высокий результат на проверке и провалиться в реальной работе. За 90 минут вы пройдёте путь от сырого набора до датасета, который можно передать разработчику модели.\n\nПодготовка данных похожа на проверку измерительного прибора перед экспериментом: даже правильный алгоритм не компенсирует систематические ошибки во входной информации. Важно не только удалить очевидные дефекты, но и не превратить очистку в незаметное изменение исходной задачи.\n\n### СЛАЙД 03. 3. Что вы сможете после занятия\n\nсформулировать объект прогнозирования и тип задачи машинного обучения;\n\nразделить столбцы на идентификаторы, приизнаки, целевую переменную и недопустимые признаки;\n\nобнаружить пропуски, дубликаты, ошибки диапазонов и несогласованные категории;\n\nприменить обоснованные правила очистки, не подменяя неизвестные значения выдуманными;\n\nрассчитать базовые показатели качества данных и оформить паспорт датасета;\n\nобъяснить ограничения датасета и риски будущей модели.\n\nЭти действия образуют воспроизводимый аудит: другой аналитик должен суметь применить те же правила к новой выгрузке и получить сопоставимый результат.\n\n### СЛАЙД 04. 5. Краткий теоретический минимум (1/2)\n\nРисунок 1. Подготовка данных — отдельный этап проекта, а не техническая формальность.\n\nДо очистки необходимо зафиксировать постановку задачи. В данном случае единица наблюдения — состояние одной установки в конце смены, а прогноз относится к следующим 24 часам. Поскольку целевая переменная принимает два значения — обслуживание требуется или не требуется, — решается задача бинарной классификации.\n\nУ столбцов таблицы могут быть разные роли:\n\nидентификатор связывает записи и помогает обнаруживать повторы, но обычно не описывает состояние объекта;\n\nпризнак содержит информацию, доступную модели в момент прогноза;\n\nцелевая переменная хранит правильный ответ, который модель должна научиться предсказывать;\n\nнедопустимый признак содержит сведения, которые нельзя использовать при реальном прогнозе, например результат события, произошедшего позже.\n\nТип данных сам по себе не определяет роль столбца. Числовой код может быть идентификатором, а текстовая категория — полезным признаком. Роль определяется смыслом и моментом появления информации.\n\nГлавное правило\n\nВ качестве признаков используйте только то, что реально известно в момент, когда модель должна сделать прогноз. Столбец, заполненный после события, создаёт утечку данных.\n\nУтечка данных опасна тем, что делает проверку модели нереалистичной. Например, результат ремонта может быть тесно связан с необходимостью обслуживания, но в конце смены этот реезультат ещё неизвестен. Следовательно, модель не сможет получить такой столбец при эксплуатации.\n\nРисунок 2. Четыре разные роли столбцов.\n\nАудит качества обычно включает несколько независимых проверок:\n\nполнота — есть ли пропуски и в каких столбцах они находятся;\n\nуникальность — нет ли повторных записей об одном наблюдении;\n\nсогласованность — одинаково ли записаны равнозначные категории;\n\nдопустимость — соответствуют ли значения смысловым ограничениям, например диапазону от 0 до 100 для процента нагрузки;\n\nвременная корректность — не попала ли в признаки информация из будущего.\n\nПропуск и ошибочное значение — не одно и то же. Пропуск прямо сообщает, что значение неизвестно. Ошибочное число может выглядеть заполненным и поэтому требует отдельной проверки диапазона или источника данных.\n\n### СЛАЙД 05. 5. Краткий теоретический минимум (2/2)\n\nЗаполнение пропуска медианой является оценкой, а не восстановлением истинного измерения. Такое решение допустимо как базовое правило для прототипа, если оно задокументировано. При последующем обучении модели медиану следует вычислять только по обучающей части, а затем применять к проверочной части, иначе возникает утечка из данных проверки.\n\nВажно\n\nНе следует исправлять подозрительное значение только потому, что оно выглядит необычно. Сначала нужно проверить единицы измерения, допустимый диапазон и источник записи. Если подтвердить значение невозможно, его можно пометить как пропуск, исключить строку по заранее сформулированному правилу или отправить запись на дополнительную проверку.\n\n### СЛАЙД 06. 6. Прикладной кейс «ТехСервис-24»\n\nУчебный сервисный центр обслуживает насосы, конвейеры и вентиляторы. Требуется подготовить прототип, который будет предсказывать, понадобится ли оборудованию срочное обслуживание в ближайшие 24 часа. Каждая строка описывает состояние одной установки в конце смены. Набор синтетический: он создан для обучения и не отражает статистику конкретного предприятия.\n\nБизнес-вопрос\n\nМожно ли по параметрам оборудования, доступным в конце смены, определить, требуется ли срочное обслуживание в течение следующих 24 часов?\n\nПоложительный класс соответствует случаю, когда срочное обслуживание потребуется, отрицательный — когда оно не потребуется. Для корректной постановки задачи необходимо заранее определить момент прогноза: конец смены. Все допустимые признаки должны быть известны не позже этого момента.\n\nДаже если учебный прототип покажет хороший результат, его нельзя автоматически переносить на реальный сервисный центр. Набор мал, создан искусственно и не отражает возможное разнообразие моделей оборудования, условий эксплуатации и ошибок промышленных датчиков.\n\n### СЛАЙД 07. 7. Исходный набор данных\n\nИз-за ширины таблица разделена на две части. Строки соединяются по record_id. Символ «—» означает отсутствие значения.\n\nПри соединении частей необходимо контролировать ключ: повторяющийся record_id может размножить строки при merge. Сначала следует проверить число повторов в каждой части и убедиться, что одинаковые идентификаторы действительно относятся к одному наблюдению.\n\nСравним данные в таблице.\nrecord_id machine_type temperature_c vibration_mm_s load_pct hours_since_service M01 pump 72,4 3,2 78 410 M02 conveyor 81,1 6,8 92 780 M03 fan 66,0 2,1 55 250 M04 Pump 79,5 — 88 690 M05 conveyor 105,0 9,2 140 1200 M06 fan −40 1,8 45 180 M07 pump 75,2 4,0 80 −30 M08 conveyor 83,0 7,1 95 820 M09 fan 68,3 2,4 — 300 M10 pump 77,6 4,8 85 650 M11 conveyor 89,2 8,4 99 960 M12 fan 70,1 2,9 60 430 M07 pump 75,2 4,0 80 −30 M13 pump 84,0 6,1 90 750 M14 conveyor 74,5 3,5 70 520\n\nТаблица 1А. Технические параметры.\n\nСравним данные в таблице.\nrecord_id alarms_24h shift needs_service_24h repair_result_after_shift M01 1 day 0 no_repair M02 3 night 1 bearing M03 0 evening 0 no_repair M04 2 night yes inspection M05 5 day 1 overheat M06 0 day 0 sensor_error M07 1 evening 0 no_repair M08 4 NIGHT Да belt M09 0 day Нет no_repair M10 2 eve 0 inspection M11 5 night 1 belt M12 1 day 0 no_repair M07 1 evening 0 no_repair M13 3 night 1 seal M14 1 evening 0 no_repair\n\nТаблица 1Б. Контекст, целевая переменная и результат после смены.\n\nПри первом просмотре не исправляйте таблицу сразу. Сначала составьте реестр проблем: столбец, строка, обнаруженное значение, причина сомнения и предполагаемое действие. Такой порядок позволяет отделить наблюдение от решения и не потерять исходные данные.\n\nРисунок 3. Основные направления аудита.\n\n### СЛАЙД 08. 8. План работы на 90 минут · таблица 1/3\n\nСравним данные в таблице.\nЭтап Время Результат Постановка задачи и роли столбцов 10 мин Паспорт задачи Ручной аудит таблицы 15 мин Реестр ошибок Анализ и исправление кода 15 мин Рабочие фрагменты pandas Очистка и расчёт показателей 35 мин clean_df и показатели Паспорт датасета и вывод 15 мин Готовность к прототипированию\n\nЕсли работа выполняется в паре, один участник может вести реестр решений, а второй — реализовывать проверки в pandas. Перед очисткой решения необходимо согласовать: код не должен молча заменять экспертное правило.\n\n### СЛАЙД 09. 8. План работы на 90 минут · таблица 2/3\n\nПосмотрите на продолжение таблицы. Анализ и исправление кода 15 мин Рабочие фрагменты pandas Очистка и расчёт показателей 35 мин clean_df и показатели\n\n### СЛАЙД 10. 8. План работы на 90 минут · таблица 3/3\n\nПосмотрите на продолжение таблицы. Паспорт датасета и вывод 15 мин Готовность к прототипированию\n\n### СЛАЙД 11. Задание 1. Постановка задачи и роли столбцов\n\nДо запуска очистки письменно ответьте на вопросы:\n\nЧто является единицей наблюдения?\n\nВ какой момент модель должна выдавать прогноз?\n\nКакой столбец является целевой переменной и какие два класса он представляет?\n\nКакие столбцы доступны в момент прогноза?\n\nКакие столбцы нельзя передавать модели и почему?\n\nРазделите столбцы на четыре группы: идентификатор, признаки, целевая переменная и недопустимые признаки. Обратите внимание, что record_id полезен для контроля записей, но не должен автоматически входить в X. Столбец repair_result_after_shift нужен для аудита исходной таблицы, однако содержит сведения, появившиеся после смены.\n\n### СЛАЙД 12. Задание 2. Ручной аудит исходной таблицы\n\nНайдите не менее восьми проблем или рисков. Для каждой записи укажите:\n\nместо проблемы: столбец и record_id;\n\nтип проблемы: пропуск, дубликат, несогласованная категория, недопустимый диапазон, подозрительное значение или утечка;\n\nправило обработки;\n\nобоснование правила;\n\nвозможное влияние на будущую модель.\n\nВ наборе следует проверить повторяющийся record_id, регистр категорий, сокращение названия смены, разные обозначения классов, пропуски и физически или логически сомнительные значения. Значения temperature_c = −40 и temperature_c = 105,0 требуют проверки, но необычность сама по себе ещё не доказывает ошибку. Напротив, load_pct = 140 нарушает смысл процентной шкалы от 0 до 100, а отрицательное число часов после обслуживания противоречит смыслу показателя.\n\nОбрати внимание\n\nЕсть два способа считать дубликаты. Число строк с повторяющимся ключом включает все экземпляры повтора, а число лишних строк показывает, сколько записей необходимо удалить, чтобы ключ стал уникальным. В отчёте укажите, какой способ использован.\n\n### СЛАЙД 13. Задание 3. Анализ ошибочного кода\n\nРассмотрите фрагмент. Не запускайте его сразу: сначала найдите логические проблемы.\n\n\n\n```python\nX = df.drop(columns=[\"needs_service_24h\"])\ny = df[\"needs_service_24h\"].astype(int)\n\ndf.drop_duplicates(inplace=True)\n\nX = X.fillna(X.mean(numeric_only=True))\nprint(X.shape, y.shape)\n```\n\n\n\nОбъясните:\n\nпочему преобразование целевой переменной через astype(int) не сработает для всех исходных меток;\n\nкакие недопустимые столбцы останутся в X;\n\nпочему удаление дубликатов после создания X и y не исправляет уже созданные объекты;\n\nпочему fillna не устраняет ошибки диапазонов и несогласованные текстовые категории;\n\nпочему совпадение числа строк ещё не гарантирует правильное соответствие X и y.\n\nИсправленный порядок должен быть таким: создать копию исходной таблицы, нормализовать значения, обработать дубликаты и недопустимые значения, сформировать clean_df, а только затем получить X и y из одних и тех же строк.\n\n### СЛАЙД 14. Задание 4. Нормализация категорий и целевой переменной\n\nПриведите равнозначные категории к единой записи. Сначала удалите лишние пробелы и выровняйте регистр, затем замените известные сокращения. Не используйте автоматическое исправление опечаток без словаря: похожие строки могут обозначать разные реальные категории.\n\n\n\n```python\nwork_df = df.copy()\n\nwork_df[\"machine_type\"] = (\n    work_df[\"machine_type\"]\n    .str.strip()\n    .str.lower()\n)\n\nwork_df[\"shift\"] = (\n    work_df[\"shift\"]\n    .str.strip()\n    .str.lower()\n    .replace({\"eve\": \"evening\"})\n)\n\ntarget_map = {\n    0: 0,\n    1: 1,\n    \"0\": 0,\n    \"1\": 1,\n    \"yes\": 1,\n    \"no\": 0,\n    \"Да\": 1,\n    \"Нет\": 0\n}\nwork_df[\"needs_service_24h\"] = work_df[\"needs_service_24h\"].map(target_map)\n```\n\n\n\nПосле преобразования проверьте уникальные значения. Если появилась NaN, значит в исходных данных встретилась метка, которой нет в словаре. Её нельзя автоматически относить к одному из классов.\n\n\n\n```python\nprint(work_df[\"machine_type\"].value_counts(dropna=False))\nprint(work_df[\"shift\"].value_counts(dropna=False))\nprint(work_df[\"needs_service_24h\"].value_counts(dropna=False))\n```\n\n\n\n### СЛАЙД 15. Задание 5. Очистка датасета и формирование clean_df\n\nЭто обязательное задание. Очистка должна выполняться на копии df, чтобы исходная таблица оставалась доступной для сравнения.\n\nУдалите точный повтор M07 по record_id, предварительно убедившись, что значения во всех столбцах совпадают.\n\nЗамените явно недопустимые значения load_pct и hours_since_service на пропуски либо исключите соответствующие строки по выбранному правилу.\n\nОпределите политику для исходных пропусков vibration_mm_s и load_pct.\n\nОтдельно задокументируйте решение по подозрительным температурам. Не используйте repair_result_after_shift как скрытый способ исправления признака: этот столбец появляется после момента прогноза.\n\nУдалите repair_result_after_shift из набора, передаваемого модели.\n\nСохраните record_id в clean_df для прослеживаемости, но исключите его из X.\n\nБазовую проверку диапазонов можно выполнить так:\n\n\n\n```python\nwork_df = work_df.drop_duplicates(subset=\"record_id\", keep=\"first\").copy()\n\ninvalid_load = ~work_df[\"load_pct\"].between(0, 100)\ninvalid_hours = work_df[\"hours_since_service\"] < 0\n\nwork_df.loc[invalid_load, \"load_pct\"] = pd.NA\nwork_df.loc[invalid_hours, \"hours_since_service\"] = pd.NA\n```\n\n\n\nДля прототипа разрешается заполнить числовые пропуски медианой. Выберите один воспроизводимый вариант: общую медиану по столбцу или медиану внутри machine_type с резервным заполнением общей медианой. Объясните выбор. На таком небольшом наборе групповые оценки могут быть нестабильны.\n\n\n\n```python\nnumeric_features = [\n    \"temperature_c\",\n    \"vibration_mm_s\",\n    \"load_pct\",\n    \"hours_since_service\",\n    \"alarms_24h\"\n]\n\nfor column in numeric_features:\n    median_value = work_df[column].median()\n    work_df[column] = work_df[column].fillna(median_value)\n```\n\n\n\nЕсли подозрительная температура признана недостоверной, сначала замените её на пропуск по отдельному, явно записанному правилу, а затем примените выбранный способ заполнения. Если достоверного основания нет, пометьте случай как нерешённое ограничение или исключите строку из итогового набора. Итоговое количество строк поэтому может зависеть от принятой политики.\n\nСформируйте очищенный датасет, признаки и цель:\n\n\n\n```python\nclean_df = work_df.drop(columns=[\"repair_result_after_shift\"]).copy()\n\nfeature_columns = [\n    \"machine_type\",\n    \"temperature_c\",\n    \"vibration_mm_s\",\n    \"load_pct\",\n    \"hours_since_service\",\n    \"alarms_24h\",\n    \"shift\"\n]\n\nX = clean_df[feature_columns].copy()\ny = clean_df[\"needs_service_24h\"].astype(int).copy()\n```\n\n\n\nЕсли все уникальные строки сохранены, после удаления одного лишнего повтора останется 14 наблюдений. При дополнительном исключении строк число будет меньше; это решение необходимо отразить в паспорте.\n\n### СЛАЙД 16. Задание 6. Автоматические проверки результата\n\nПроверки должны завершаться без ошибок. Добавьте собственные условия, если использовали дополнительные правила очистки.\n\n```text\nassert clean_df[\"record_id\"].is_unique\nassert clean_df[\"needs_service_24h\"].isin([0, 1]).all()\nassert clean_df[feature_columns].isna().sum().sum() == 0\nassert clean_df[\"load_pct\"].between(0, 100).all()\nassert (clean_df[\"hours_since_service\"] >= 0).all()\nassert \"record_id\" not in X.columns\nassert \"repair_result_after_shift\" not in X.columns\nassert len(X) == len(y)\nassert X.index.equals(y.index)\n```\n\nПоследняя проверка особенно важна: одинаковая длина X и y не исключает перемешивания строк. Совпадение индексов подтверждает, что каждому набору признаков соответствует правильная целевая метка.\n\n### СЛАЙД 17. Задание 7. Базовые показатели качества данных\n\nРассчитайте показатели до и после очистки:\n\nчисло строк и столбцов;\n\nчисло уникальных record_id;\n\nчисло лишних дубликатов;\n\nдолю пропусков по каждому столбцу;\n\nчисло значений вне установленных диапазонов;\n\nнабор уникальных категорий machine_type и shift;\n\nчисло объектов каждого класса и долю положительного класса.\n\n\n\n```python\nprint(\"Размер исходного набора:\", df.shape)\nprint(\"Размер очищенного набора:\", clean_df.shape)\n\nduplicate_count = df.duplicated(subset=\"record_id\", keep=\"first\").sum()\nprint(\"Лишних дубликатов:\", duplicate_count)\n\nmissing_share = df.isna().mean().sort_values(ascending=False)\nprint(\"Доля пропусков:\")\nprint(missing_share)\n\nclass_counts = clean_df[\"needs_service_24h\"].value_counts().sort_index()\nclass_share = clean_df[\"needs_service_24h\"].value_counts(normalize=True).sort_index()\nprint(\"Число объектов по классам:\")\nprint(class_counts)\nprint(\"Доли классов:\")\nprint(class_share)\n```\n\n\n\nЕсли после нормализации цели и удаления только точного повтора сохранены все 14 уникальных наблюдений, в наборе будет 8 объектов класса 0 и 6 объектов класса 1. Если получен другой результат, проверьте словарь целевых меток, удаление дубликатов и правила исключения строк.\n\nВ выводе разделите факты и интерпретации. Например, «доля положительного класса равна рассчитанному значению» — факт, а «этого достаточно для надёжного обучения» — вывод, который нельзя подтвердить по столь малому синтетическому набору.\n\nЗадание 8. Краткий аналитический вывод\n\nСформулируйте вывод из четырёх частей:\n\nкакие критические проблемы были обнаружены;\n\nкакие правила очистки применены;\n\nкакие вопросы остались нерешёнными без дополнительной информации;\n\nпочему набор пригоден только для прототипирования, а не для доказательства качества будущей модели.\n\n### СЛАЙД 18. 10. Итоговый паспорт датасета\n\nЗаполните паспорт. Он является итоговым продуктом занятия вместе с clean_df.\n\nФормулировки должны быть проверяемыми. Вместо «ошибки исправлены» перечислите конкретные правила, а вместо «данных достаточно» укажите размер набора и ограничения его происхождения.\n\nСравним данные в таблице.\nРаздел Содержание Название датасета Прикладная задача Единица наблюдения Тип задачи Целевая переменная Признаки Исключённые столбцы и причины Количество строк после очистки Правила обработки пропусков Правила нормализации категорий Ограничения набора Риски ошибок будущей модели Критерий готовности к прототипированию\n\nВ строке «Критерий готовности к прототипированию» укажите измеримые условия: уникальность ключа, допустимые значения цели, отсутствие пропусков в X, отсутствие утечки и успешное выполнение автоматических проверок.\n\n### СЛАЙД 19. 12. Критерии оценивания · таблица 1/3\n\nСравним данные в таблице.\nКомпонент Баллы Условие полного балла Постановка задачи и роли столбцов 3 Верно определены объект, тип задачи, цель, признаки и исключения. Ручной аудит 4 Найдено не менее 8 проблем/рисков и предложены обоснованные правила. Анализ результата кода 3 Выбран правильный ответ и объяснена проблема несогласованных меток. Исправление кода 4 Устранены все ключевые логические ошибки, X и y согласованы. Очистка и показатели 6 Датасет очищен, проверки пройдены, показатели рассчитаны. Итого 20 Зачёт: 14 и более баллов при обязательном выполнении задачи 5.\n\nОбоснованное решение оценивается выше механической замены. Если для подозрительного значения выбрана не единственная возможная стратегия, полный балл сохраняется при условии, что правило последовательно применено, не использует информацию из будущего и отражено в паспорте.\n\n### СЛАЙД 20. 12. Критерии оценивания · таблица 2/3\n\nПосмотрите на продолжение таблицы. Анализ результата кода 3 Выбран правильный ответ и объяснена проблема несогласованных меток. Исправление кода 4 Устранены все ключевые логические ошибки, X и y согласованы.\n\n### СЛАЙД 21. 12. Критерии оценивания · таблица 3/3\n\nПосмотрите на продолжение таблицы. Очистка и показатели 6 Датасет очищен, проверки пройдены, показатели рассчитаны. Итого 20 Зачёт: 14 и более баллов при обязательном выполнении задачи 5.\n\n### СЛАЙД 22. 13. Чек-лист сдачи\n\n☐ Я сформулировал(а) задачу и единицу наблюдения.\n\n☐ Я отделил(а) идентификатор, признаки, цель и столбец с утечкой.\n\n☐ В итоговой таблице нет повторяющихся record_id.\n\n☐ Категории записаны единообразно.\n\n☐ В признаках нет пропусков и очевидно недопустимых значений.\n\n☐ Цель содержит только 0 и 1.\n\n☐ Я рассчитал(а) базовые показатели и объяснил(а) их.\n\n☐ Я описал(а) ограничения и не утверждаю, что датасет уже доказывает качество модели.\n\n☐ Я сохранил(а) исходный df и выполнял(а) очистку на копии.\n\n☐ Я проверил(а), что индексы X и y совпадают.\n\n☐ Я записал(а), какие значения были заменены и по какому правилу.\n\n☐ В X отсутствуют record_id и repair_result_after_shift.\n\n### СЛАЙД 23. 14. Самопроверка\n\n1. Можно ли включать record_id в признаки только потому, что это число или код?\n\n2. Почему repair_result_after_shift является утечкой?\n\n3. Чем медиана полезна при заполнении пропусков?\n\n4. Достаточно ли отсутствия пропусков, чтобы признать датасет качественным?\n\n5. Что означает готовность к прототипированию?\n\n6. Почему одинаковая длина X и y не гарантирует их согласованность?\n\n7. Нужно ли превращать любое необычное значение в пропуск?\n\n8. Почему медиану для реальной проверки модели нельзя вычислять сразу по всему датасету?\n\n9. Чем нормализация категории отличается от объединения разных категорий?\n\n### СЛАЙД 24. 15. Глоссарий\n\nСравним данные в таблице.\nТермин Простое объяснение Датасет Набор связанных наблюдений, обычно представленный таблицей. Признак Характеристика объекта, используемая моделью для прогноза. Целевая переменная Ответ, который модель должна научиться предсказывать. Классификация Задача выбора одного класса из заданного набора. Утечка данных Попадание в признаки информации, недоступной в момент реального прогноза. Медиана Центральное значение упорядоченного набора; половина значений не больше него, половина — не меньше. Ограничение датасета Свойство набора, которое уменьшает область применимости выводов. Прототипирование Быстрая проверка идеи модели на подготовленных данных. Единица наблюдения Объект или событие, которому соответствует одна строка таблацы. Дубликат Повторная запись одного и того же наблюдения или ключа. Нормализация категорий Приведение равнозначных текстовых меток к единому формату. Импутация Заполнение пропущенного значения по заранее выбранному правилу. Дрейф данных Изменение свойств поступающих данных по сравнению с набором, на котором создавался прототип. Воспроизводимость Возможность повторить обработку по тем же правилам и получить сопоставимый результат.\n\n### СЛАЙД 25. Приложение. Код для создания исходной таблицы\n\nВыполните этот фрагмент в отдельной ячейке перед заданиями. Объект df следует сохранить без изменений, а все преобразования проводить в work_df или другой явно названной копии.\n\n\n\n```python\nimport pandas as pd\nimport numpy as np\n\nrows = [\n[\"M01\", \"pump\", 72.4, 3.2, 78, 410, 1, \"day\", 0, \"no_repair\"],\n[\"M02\", \"conveyor\", 81.1, 6.8, 92, 780, 3, \"night\", 1, \"bearing\"],\n[\"M03\", \"fan\", 66.0, 2.1, 55, 250, 0, \"evening\", 0, \"no_repair\"],\n[\"M04\", \"Pump\", 79.5, np.nan, 88, 690, 2, \"night\", \"yes\", \"inspection\"],\n[\"M05\", \"conveyor\", 105.0, 9.2, 140, 1200, 5, \"day\", 1, \"overheat\"],\n[\"M06\", \"fan\", -40, 1.8, 45, 180, 0, \"day\", 0, \"sensor_error\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M08\", \"conveyor\", 83.0, 7.1, 95, 820, 4, \"NIGHT\", \"Да\", \"belt\"],\n[\"M09\", \"fan\", 68.3, 2.4, np.nan, 300, 0, \"day\", \"Нет\", \"no_repair\"],\n[\"M10\", \"pump\", 77.6, 4.8, 85, 650, 2, \"eve\", 0, \"inspection\"],\n[\"M11\", \"conveyor\", 89.2, 8.4, 99, 960, 5, \"night\", 1, \"belt\"],\n[\"M12\", \"fan\", 70.1, 2.9, 60, 430, 1, \"day\", 0, \"no_repair\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M13\", \"pump\", 84.0, 6.1, 90, 750, 3, \"night\", 1, \"seal\"],\n[\"M14\", \"conveyor\", 74.5, 3.5, 70, 520, 1, \"evening\", 0, \"no_repair\"],\n]\ncolumns = [\"record_id\", \"machine_type\", \"temperature_c\", \"vibration_mm_s\",\n\"load_pct\", \"hours_since_service\", \"alarms_24h\", \"shift\",\n\"needs_service_24h\", \"repair_result_after_shift\"]\ndf = pd.DataFrame(rows, columns=columns)\ndf.head()\n```\n\n\n\nПосле создания таблицы полезно выполнить первичный обзор через df.shape, df.info(), df.isna().`sum()` и df.nunique(dropna=False). Эти команды не очищают данные, а помогают зафиксировать их исходное состояние.\n\n### СЛАЙД 26. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 27. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Подготовка датасета для прикладного кейса\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Задание №1\n\n\n### Задача 1. Опишите задачу и роли столбцов\n\n\n| Максимум: 3 баллов | Ситуация успеха: начните с ответа на вопросы по кейсу. |\n| --- | --- |\n\nЧто нужно сделать\n\n- Что является объектом наблюдения?\n\n- Это классификация или регрессия? Обоснуйте одним предложением.\n\n- Какой столбец является целевой переменной?\n\n- Какие столбцы нельзя использовать как признаки и почему?\n\n\n| Роль | Столбцы | Обоснование |\n| --- | --- | --- |\n| Идентификатор |  |  |\n| Числовые признаки |  |  |\n| Категориальные признаки |  |  |\n| Цель |  |  |\n| Исключить |  |  |\n\n\n### Задание №2\n\n\n### Задача 2. Проведите ручной аудит\n\n\n| Максимум: 4 баллов | Найдите минимум 8 проблем или рисков. |\n| --- | --- |\n\nЧто нужно сделать\n\nЗаполните реестр. Не исправляйте данные сразу: сначала зафиксируйте проблему и правило решения.\n\n\n| № | Строка/столбец | Проблема | Почему опасно | Предлагаемое правило |\n| --- | --- | --- | --- | --- |\n| 1 |  |  |  |  |\n| 2 |  |  |  |  |\n| 3 |  |  |  |  |\n| 4 |  |  |  |  |\n| 5 |  |  |  |  |\n| 6 |  |  |  |  |\n| 7 |  |  |  |  |\n| 8 |  |  |  |  |\n| 9 |  |  |  |  |\n| 10 |  |  |  |  |\n\nПодсказка\n\nПроверьте уникальность record_id, пропуски, регистр текста, допустимые диапазоны, значения цели и наличие информации из будущего.\n\n\n### Задание №3\n\n\n### Задача 3. Что выведет код?\n\n\n| Максимум: 3 баллов | Выберите ответ и объясните его. |\n| --- | --- |\n\nИсходный код\n\n\n```\nimport pandas as pd\n\ns = pd.Series([0, 1, \"Да\", \"Нет\", 1])\nprint(s.nunique())\nprint(set(s.astype(str)))\n```\n\nВыберите вариант:\n\n- А. 2 и {0, 1}\n\n- Б. 4 и {\"0\", \"1\", \"Да\", \"Нет\"}\n\n- В. 5 и пять различных значений\n\n- Г. Код завершится ошибкой\n\nПочему этот результат важен для целевой переменной needs_service_24h?\n\n\n### Задание №4\n\n\n### Задача 4. Найдите и исправьте ошибки в коде\n\n\n| Максимум: 4 баллов | Исправьте синтаксические и логические ошибки. |\n| --- | --- |\n\nИсходный код\n\n\n```\n# В переменной df уже находится исходная таблица\n\nfeatures = [\"record_id\", \"temperature_c\", \"vibration_mm_s\",\n            \"load_pct\", \"repair_result_after_shift\"]\ntarget = \"needs_service_24h\"\n\n# Ошибка 1: удаляются все строки, где есть хотя бы один пропуск\nclean_df = df.dropna()\n\n# Ошибка 2: дубликат ищется по всем полям, а не по идентификатору события\nclean_df = clean_df.drop_duplicates()\n\n# Ошибка 3: разные варианты цели не нормализованы\nclean_df[target] = clean_df[target].astype(int)\n\nX = clean_df[features]\ny = clean_df[target]\nprint(X.shape, y.shape)\n```\n\nТребования к исправлению\n\n- исключить record_id и repair_result_after_shift из признаков;\n\n- удалить повторную запись M07 по record_id ;\n\n- нормализовать значения цели к 0 и 1;\n\n- не удалять все строки только из-за единичных пропусков;\n\n- сохранить одинаковое число строк в X и y .\n\nОбратите внимание\n\nОдна и та же строка может содержать сразу несколько из перечисленных проблем. Исправлять их нужно последовательно, чтобы каждое изменение было проверяемым. Например, после нормализации цели имеет смысл отдельно убедиться, что в столбце остались только значения 0 и 1.\n\n\n### Задание №5\n\n\n### Задача 5. Подготовьте датасет и рассчитайте показатели\n\n\n| Максимум: 6 баллов | Получите clean_df, готовый для следующего этапа проекта. |\n| --- | --- |\n\nЧто нужно сделать\n\nИспользуйте следующий план и заполните пропуски в коде. Допустимо выполнить те же действия в табличном редакторе, но итоговые правила очистки должны быть записаны.\n\nКод для доработки\n\n\n```\nimport pandas as pd\nimport numpy as np\n\n# 1. Удаление повторной записи\nclean_df = df.drop_duplicates(subset=[\"record_id\"]).copy()\n\n# 2. Нормализация категорий\nclean_df[\"machine_type\"] = clean_df[\"machine_type\"].str.____()\nclean_df[\"shift\"] = clean_df[\"shift\"].str.lower().replace({\"eve\": \"evening\"})\nclean_df[\"needs_service_24h\"] = clean_df[\"needs_service_24h\"].replace(\n    {\"yes\": 1, \"Да\": 1, \"Нет\": 0}\n).astype(int)\n\n# 3. Недопустимые значения превращаем в пропуски\nclean_df.loc[~clean_df[\"temperature_c\"].between(0, 120), \"temperature_c\"] = np.nan\nclean_df.loc[~clean_df[\"load_pct\"].between(0, 100), \"load_pct\"] = np.nan\nclean_df.loc[clean_df[\"hours_since_service\"] < 0, \"hours_since_service\"] = np.nan\n\n# 4. Заполнение пропусков медианой внутри типа оборудования\nfor column in [\"temperature_c\", \"vibration_mm_s\", \"load_pct\", \"hours_since_service\"]:\n    clean_df[column] = clean_df.groupby(\"machine_type\")[column].transform(\n        lambda values: values.fillna(values.____())\n    )\n\n# 5. Формируем признаки и цель\nfeature_columns = [\n    \"machine_type\", \"temperature_c\", \"vibration_mm_s\", \"load_pct\",\n    \"hours_since_service\", \"alarms_24h\", \"shift\"\n]\nX = clean_df[feature_columns]\ny = clean_df[\"needs_service_24h\"]\n\n# 6. Контроль качества\nprint(\"Строк:\", len(clean_df))\nprint(\"Пропусков в признаках:\", X.isna().sum().sum())\nprint(\"Дубликатов ID:\", clean_df[\"record_id\"].duplicated().sum())\nprint(\"Распределение цели:\")\nprint(y.value_counts().sort_index())\nprint(\"Средняя температура:\", round(clean_df[\"temperature_c\"].mean(), 2))\nprint(\"Медианная вибрация:\", round(clean_df[\"vibration_mm_s\"].median(), 2))\n```\n\nЗапишите результаты\n\n\n| Показатель | Ваш результат | Что он означает |\n| --- | --- | --- |\n| Количество строк после очистки |  |  |\n| Пропуски в признаках |  |  |\n| Дубликаты record_id |  |  |\n| Класс 0 / класс 1 |  |  |\n| Средняя температура |  |  |\n| Медианная вибрация |  |  |\n\nОбратите внимание\n\nПропуски в коде заполняются медианой, а не средним: медиана устойчива к выбросам и не искажает признак из-за единичных экстремальных значений. Заполнение выполняется отдельно внутри каждого типа оборудования, потому что типичные диапазоны температуры, вибрации и нагрузки могут отличаться для разных машин.\n\n\n### Задание №6\n\n\n### 11. Дополнительные задания\n\nЧто нужно сделать\n\n- Предложите разбиение на обучающую и проверочную части так, чтобы оба класса присутствовали в каждой части.\n\n- Сформулируйте два новых признака, которые можно собирать до наступления отказа и которые не создают утечку данных.\n\n- Предложите правило контроля дрейфа данных после запуска прототипа.\n\n- Объясните, почему строка M06 с repair_result_after_shift = sensor_error не позволяет автоматически считать temperature_c = −40 реальной температурой.\n\nОбратите внимание\n\nПри разбиении учитывайте малый размер набора: случайное разбиение без контроля может оставить один из классов только в одной части. Однако присутствие обоих классов ещё не делает оценку устойчивой — результат будет сильно зависеть от нескольких строк.\n\nДля контроля дрейфа выберите конкретные показатели, например долю новых категорий, долю пропусков или изменение распределения числового признака. Укажите период проверки и порог, после которого требуется повторный аудит данных.\n\n\n### Таблицы из теоретической части\n\n\n| Коллега, сегодня вы будете работать как аналитик данных. Модель машинного обучения не понимает таблицу так, как человек. Если в данных есть дубликаты, пропуски, разные варианты одной категории или информация из будущего, прототип может показать высокий результат на проверке и провалиться в реальной работе. За 90 минут вы пройдёте путь от сырого набора до датасета, который можно передать разработчику модели. |\n| --- |\n\n\n| record_id | machine_type | temperature_c | vibration_mm_s | load_pct | hours_since_service |\n| --- | --- | --- | --- | --- | --- |\n| M01 | pump | 72,4 | 3,2 | 78 | 410 |\n| M02 | conveyor | 81,1 | 6,8 | 92 | 780 |\n| M03 | fan | 66,0 | 2,1 | 55 | 250 |\n| M04 | Pump | 79,5 | — | 88 | 690 |\n| M05 | conveyor | 105,0 | 9,2 | 140 | 1200 |\n| M06 | fan | −40 | 1,8 | 45 | 180 |\n| M07 | pump | 75,2 | 4,0 | 80 | −30 |\n| M08 | conveyor | 83,0 | 7,1 | 95 | 820 |\n| M09 | fan | 68,3 | 2,4 | — | 300 |\n| M10 | pump | 77,6 | 4,8 | 85 | 650 |\n| M11 | conveyor | 89,2 | 8,4 | 99 | 960 |\n| M12 | fan | 70,1 | 2,9 | 60 | 430 |\n| M07 | pump | 75,2 | 4,0 | 80 | −30 |\n| M13 | pump | 84,0 | 6,1 | 90 | 750 |\n| M14 | conveyor | 74,5 | 3,5 | 70 | 520 |\n\n\n| record_id | alarms_24h | shift | needs_service_24h | repair_result_after_shift |\n| --- | --- | --- | --- | --- |\n| M01 | 1 | day | 0 | no_repair |\n| M02 | 3 | night | 1 | bearing |\n| M03 | 0 | evening | 0 | no_repair |\n| M04 | 2 | night | yes | inspection |\n| M05 | 5 | day | 1 | overheat |\n| M06 | 0 | day | 0 | sensor_error |\n| M07 | 1 | evening | 0 | no_repair |\n| M08 | 4 | NIGHT | Да | belt |\n| M09 | 0 | day | Нет | no_repair |\n| M10 | 2 | eve | 0 | inspection |\n| M11 | 5 | night | 1 | belt |\n| M12 | 1 | day | 0 | no_repair |\n| M07 | 1 | evening | 0 | no_repair |\n| M13 | 3 | night | 1 | seal |\n| M14 | 1 | evening | 0 | no_repair |\n\n\n| Этап | Время | Результат |\n| --- | --- | --- |\n| Постановка задачи и роли столбцов | 10 мин | Паспорт задачи |\n| Ручной аудит таблицы | 15 мин | Реестр ошибок |\n| Анализ и исправление кода | 15 мин | Рабочие фрагменты pandas |\n| Очистка и расчёт показателей | 35 мин | clean_df и показатели |\n| Паспорт датасета и вывод | 15 мин | Готовность к прототипированию |\n\n\n| Раздел | Содержание |\n| --- | --- |\n| Название датасета |  |\n| Прикладная задача |  |\n| Единица наблюдения |  |\n| Тип задачи |  |\n| Целевая переменная |  |\n| Признаки |  |\n| Исключённые столбцы и причины |  |\n| Количество строк после очистки |  |\n| Правила обработки пропусков |  |\n| Правила нормализации категорий |  |\n| Ограничения набора |  |\n| Риски ошибок будущей модели |  |\n| Критерий готовности к прототипированию |  |\n\n\n| Компонент | Баллы | Условие полного балла |\n| --- | --- | --- |\n| Постановка задачи и роли столбцов | 3 | Верно определены объект, тип задачи, цель, признаки и исключения. |\n| Ручной аудит | 4 | Найдено не менее 8 проблем/рисков и предложены обоснованные правила. |\n| Анализ результата кода | 3 | Выбран правильный ответ и объяснена проблема несогласованных меток. |\n| Исправление кода | 4 | Устранены все ключевые логические ошибки, X и y согласованы. |\n| Очистка и показатели | 6 | Датасет очищен, проверки пройдены, показатели рассчитаны. |\n| Итого | 20 | Зачёт: 14 и более баллов при обязательном выполнении задачи 5. |\n\n\n| Термин | Простое объяснение |\n| --- | --- |\n| Датасет | Набор связанных наблюдений, обычно представленный таблицей. |\n| Признак | Характеристика объекта, используемая моделью для прогноза. |\n| Целевая переменная | Ответ, который модель должна научиться предсказывать. |\n| Классификация | Задача выбора одного класса из заданного набора. |\n| Утечка данных | Попадание в признаки информации, недоступной в момент реального прогноза. |\n| Медиана | Центральное значение упорядоченного набора; половина значений не больше него, половина — не меньше. |\n| Ограничение датасета | Свойство набора, которое уменьшает область применимости выводов. |\n| Прототипирование | Быстрая проверка идеи модели на подготовленных данных. |\n| Единица наблюдения | Объект или событие, которому соответствует одна строка таблацы. |\n| Дубликат | Повторная запись одного и того же наблюдения или ключа. |\n| Нормализация категорий | Приведение равнозначных текстовых меток к единому формату. |\n| Импутация | Заполнение пропущенного значения по заранее выбранному правилу. |\n| Дрейф данных | Изменение свойств поступающих данных по сравнению с набором, на котором создавался прототип. |\n| Воспроизводимость | Возможность повторить обработку по тем же правилам и получить сопоставимый результат. |",
   "theory": [
     {
       "title": "Подготовка датасета для прикладного кейса",
@@ -348,5 +733,43 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "features",
+    "target",
+    "output",
+    "loops",
+    "conditions",
+    "logic",
+    "tables",
+    "statistics",
+    "problem"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M04-L06-lecture.pdf",
+      "name": "Подготовка датасета для прикладного кейса — лекция.pdf",
+      "label": "Оригинальная лекция",
+      "format": "pdf",
+      "derived": false,
+      "sha256": "a579c0525691c57529ef9b5c8ee5cacef1ee5c3a2810f752508e20531b583317",
+      "source": {
+        "path": "1c2d1c687636_Занятие 4.6. Подготовка датасета для прикладного кейса — теория.pdf",
+        "sha256": "a579c0525691c57529ef9b5c8ee5cacef1ee5c3a2810f752508e20531b583317"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M04-L06-presentation.pdf",
+      "name": "Подготовка датасета для прикладного кейса — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 27,
+      "sha256": "0ffedc4e243d33cc43750fc9436bf653b00aa5b4866f648dbba89ffb858f0054",
+      "source": {
+        "path": "Модуль 4/Занятие 06/Презентация — итоговая.pptx",
+        "sha256": "05e758007a360ab6c175969b42107fd67f8d8b65c401fdf251c31b46faf5ac4f"
+      }
+    }
   }
 }

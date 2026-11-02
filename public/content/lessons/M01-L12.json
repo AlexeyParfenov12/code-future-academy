@@ -10,7 +10,7 @@
   "slideCount": 13,
   "fileCount": 3,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Табличные данные и признаки объектов  В этом занятии рассматривается тема «Табличные данные и признаки объектов». Будем опираться на примеры курса и проверять",
+  "description": "В этом занятии рассматривается тема «Табличные данные и признаки объектов». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "code",
       "moduleId": 1,
       "lessonId": "M01-L12",
-      "statement": "#### Цель\n\nПроверить, что обучающийся умеет создать небольшую таблицу pandas и вывести её размер.\n\nУсловие / входные данные\n\nДан словарь students_dict с 4 учениками и 5 столбцами. Каждый ключ словаря — это столбец таблицы:\n\n\n```\nimport pandas as pd\n\nstudents_dict = {\n    \"student\": [\"Аня\", \"Илья\", \"Мария\", \"Тимур\"],\n    \"sleep_hours\": [7.5, 6.0, 8.0, 5.5],\n    \"screen_time_hours\": [4.0, 7.0, 3.5, 8.5],\n    \"uses_ai_for_study\": [\"Yes\", \"Sometimes\", \"No\", \"Yes\"],\n    \"stress_level_1_10\": [4, 7, 3, 8],\n}\n```\n\nНапишите программу, которая создаёт DataFrame и выводит количество строк и столбцов через пробел.\n\nОжидаемый результат\n\n\n```\n4 5\n```\n\nКритерии оценки\n\nDataFrame создан через pd.DataFrame(); размер получен через shape; stdout содержит только два числа через пробел.\n\n\n#### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
+      "statement": "## Задание 1. Создать DataFrame из словаря списков\n\n### Цель\n\nПроверить, что обучающийся умеет создать небольшую таблицу pandas и вывести её размер.\n\nУсловие / входные данные\n\nДан словарь students_dict с 4 учениками и 5 столбцами. Каждый ключ словаря — это столбец таблицы:\n\n```python\nimport pandas as pd\n\nstudents_dict = {\n    \"student\": [\"Аня\", \"Илья\", \"Мария\", \"Тимур\"],\n    \"sleep_hours\": [7.5, 6.0, 8.0, 5.5],\n    \"screen_time_hours\": [4.0, 7.0, 3.5, 8.5],\n    \"uses_ai_for_study\": [\"Yes\", \"Sometimes\", \"No\", \"Yes\"],\n    \"stress_level_1_10\": [4, 7, 3, 8],\n}\n```\n\nНапишите программу, которая создаёт DataFrame и выводит количество строк и столбцов через пробел.\n\nОжидаемый результат\n\n```text\n4 5\n```\n\nКритерии оценки\n\nDataFrame создан через pd.DataFrame(); размер получен через shape; stdout содержит только два числа через пробел.\n\n### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab2855daef10a80f7d062e9",
@@ -37,17 +37,63 @@
         "d03afd246188b7e8.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\n\nstudents_dict = {\n    \"student\": [\"Аня\", \"Илья\", \"Мария\", \"Тимур\"],\n    \"sleep_hours\": [7.5, 6.0, 8.0, 5.5],\n    \"screen_time_hours\": [4.0, 7.0, 3.5, 8.5],\n    \"uses_ai_for_study\": [\"Yes\", \"Sometimes\", \"No\", \"Yes\"],\n    \"stress_level_1_10\": [4, 7, 3, 8],\n}\ndf = pd.DataFrame(students_dict)\nprint(*df.shape)",
+        "answer": "",
+        "explanation": "Ключи словаря становятся названиями столбцов, списки — их значениями. shape возвращает пару (число строк, число столбцов); звёздочка раскрывает её в два аргумента print.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "4 5"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Создаём словарь `students_dict` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 10,
+            "text": "Вычисляем `pd.DataFrame(students_dict)` и сохраняем результат в `df`."
+          },
+          {
+            "line": 11,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab2855daef10a80f7d062e9-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 12/Практика для студентов.md",
-        "sha256": "9a071fe2263b52c49e1b080cd5d0c0c72f40b9d9b52654463d88d6700dbad503"
+        "elementId": "6ab2855daef10a80f7d062e9",
+        "archive": "Снимки страниц.json",
+        "sha256": "20aeca85b8cea4474c03c6bf6c1eb57cd119fd1cdadfc6dce376a4c5d7edf67d"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab289c8aef10a80f7d062ea",
@@ -56,7 +102,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L12",
-      "statement": "#### Цель\n\nНаучиться открывать CSV-файл и получать размер таблицы.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv . Напишите программу, которая открывает CSV и выводит количество строк и столбцов через пробел.\n\nОжидаемый результат\n\n\n```\n12 10\n```\n\nКритерии оценки\n\nФайл открыт через pd.read_csv() ; вывод соответствует размеру таблицы; лишний текст не выводится.\n\n\n#### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
+      "statement": "## Задание 2. Открыть CSV с обращениями\n\n### Цель\n\nНаучиться открывать CSV-файл и получать размер таблицы.\n\nУсловие / входные данные\n\nФайл `support_requests_10_11_spo.csv`. Напишите программу, которая открывает CSV и выводит количество строк и столбцов через пробел.\n\nОжидаемый результат\n\n```text\n12 10\n```\n\nКритерии оценки\n\nФайл открыт через `pd.read_csv()`; вывод соответствует размеру таблицы; лишний текст не выводится.\n\n### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab289c8aef10a80f7d062ea",
@@ -73,17 +119,59 @@
         "d03afd246188b7e8.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nprint(*df.shape)",
+        "answer": "",
+        "explanation": "read_csv читает первую строку как заголовки. shape считает только строки данных, поэтому заголовок не добавляет тринадцатую запись.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "12 10"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables"
+        ],
+        "id": "T-6ab289c8aef10a80f7d062ea-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 12/Практика для студентов.md",
-        "sha256": "9a071fe2263b52c49e1b080cd5d0c0c72f40b9d9b52654463d88d6700dbad503"
+        "elementId": "6ab289c8aef10a80f7d062ea",
+        "archive": "Снимки страниц.json",
+        "sha256": "6d2740c8626a0502b61c7d568337f68cf0fed58cd9811c68094a6e5c3f5740d1"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables"
+      ]
     },
     {
       "id": "T-6ab28addaef10a80f7d062eb",
@@ -92,7 +180,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L12",
-      "statement": "#### Цель\n\nЗакрепить работу со структурой DataFrame.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv . Откройте таблицу и выведите названия столбцов через запятую без пробелов.\n\nОжидаемый результат\n\n\n```\nrequest_id,text,text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority,category\n```\n\nКритерии оценки\n\nИспользован список столбцов df.columns ; порядок столбцов сохранён; вывод — одна строка.\n\n\n#### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
+      "statement": "## Задание 3. Вывести названия столбцов\n\n### Цель\n\nЗакрепить работу со структурой DataFrame.\n\nУсловие / входные данные\n\nФайл `support_requests_10_11_spo.csv`. Откройте таблицу и выведите названия столбцов через запятую без пробелов.\n\nОжидаемый результат\n\n```text\nrequest_id,text,text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority,category\n```\n\nКритерии оценки\n\nИспользован список столбцов `df.columns`; порядок столбцов сохранён; вывод — одна строка.\n\n### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab28addaef10a80f7d062eb",
@@ -109,17 +197,59 @@
         "d03afd246188b7e8.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nprint(','.join(df.columns))",
+        "answer": "",
+        "explanation": "columns хранит названия в исходном порядке. join с разделителем запятая не добавляет пробелы.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "request_id,text,text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority,category"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables"
+        ],
+        "id": "T-6ab28addaef10a80f7d062eb-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 12/Практика для студентов.md",
-        "sha256": "9a071fe2263b52c49e1b080cd5d0c0c72f40b9d9b52654463d88d6700dbad503"
+        "elementId": "6ab28addaef10a80f7d062eb",
+        "archive": "Снимки страниц.json",
+        "sha256": "aef52b6910b75ed537484325ec3e61b0d9db4bc833474b4a0f5d31ef68f78458"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables"
+      ]
     },
     {
       "id": "T-6ab28b3aaef10a80f7d062ec",
@@ -128,7 +258,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L12",
-      "statement": "Цель\n\nРазличить числовые и категориальные признаки в таблице.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv. Выведите названия числовых столбцов через запятую без пробелов.\n\nОжидаемый результат\n\n\n```\nrequest_id,text_length,has_question,has_payment_word,has_delivery_word,urgency_score\n```\n\nКритерии оценки\n\nИспользован select_dtypes или явный корректный список; категориальные столбцы не попали в вывод.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
+      "statement": "## Задание 4. Найти числовые столбцы\n\nЦель\n\nРазличить числовые и категориальные признаки в таблице.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv. Выведите названия числовых столбцов через запятую без пробелов.\n\nОжидаемый результат\n\n```text\nrequest_id,text_length,has_question,has_payment_word,has_delivery_word,urgency_score\n```\n\nКритерии оценки\n\nИспользован select_dtypes или явный корректный список; категориальные столбцы не попали в вывод.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab28b3aaef10a80f7d062ec",
@@ -145,17 +275,63 @@
         "d03afd246188b7e8.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nprint(','.join(df.select_dtypes(include='number').columns))",
+        "answer": "",
+        "explanation": "select_dtypes выбирает числовые типы, включая целочисленные индикаторы 0/1. Идентификатор числовой по типу, хотя содержательным признаком модели не является.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "request_id,text_length,has_question,has_payment_word,has_delivery_word,urgency_score"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "features",
+          "target"
+        ],
+        "id": "T-6ab28b3aaef10a80f7d062ec-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 12/Практика для студентов.md",
-        "sha256": "9a071fe2263b52c49e1b080cd5d0c0c72f40b9d9b52654463d88d6700dbad503"
+        "elementId": "6ab28b3aaef10a80f7d062ec",
+        "archive": "Снимки страниц.json",
+        "sha256": "fcb5ab5013d70ad4ce9b62b48b0aee9ddc412514251a379ec73b2aac54fed103"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6ab28b82aef10a80f7d062ed",
@@ -164,7 +340,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L12",
-      "statement": "#### Цель\n\nНаучиться находить текстовые/категориальные столбцы перед анализом.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv . Выведите названия категориальных столбцов через запятую без пробелов.\n\nОжидаемый результат\n\n\n```\ntext,source,priority,category\n```\n\nКритерии оценки\n\nКатегориальные столбцы определены корректно; stdout содержит только строку со столбцами.\n\n\n#### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
+      "statement": "## Задание 5. Найти категориальные столбцы\n\n### Цель\n\nНаучиться находить текстовые/категориальные столбцы перед анализом.\n\nУсловие / входные данные\n\nФайл `support_requests_10_11_spo.csv`. Выведите названия категориальных столбцов через запятую без пробелов.\n\nОжидаемый результат\n\n```text\ntext,source,priority,category\n```\n\nКритерии оценки\n\nКатегориальные столбцы определены корректно; stdout содержит только строку со столбцами.\n\n### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab28b82aef10a80f7d062ed",
@@ -181,17 +357,61 @@
         "d03afd246188b7e8.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nprint(','.join(df.select_dtypes(exclude='number').columns))",
+        "answer": "",
+        "explanation": "В этом CSV нечисловые столбцы содержат строки. exclude=number работает и с новым строковым типом pandas, и со старыми object-столбцами.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "text,source,priority,category"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab28b82aef10a80f7d062ed-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 12/Практика для студентов.md",
-        "sha256": "9a071fe2263b52c49e1b080cd5d0c0c72f40b9d9b52654463d88d6700dbad503"
+        "elementId": "6ab28b82aef10a80f7d062ed",
+        "archive": "Снимки страниц.json",
+        "sha256": "48115707b2364306d163a10268792c7423daffadb6d5a6992f10abe2b9519cbe"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab28c14aef10a80f7d062ee",
@@ -200,7 +420,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L12",
-      "statement": "Цель\n\nСформировать список столбцов для будущего анализа без служебного номера и ответа.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv . Служебный столбец: request_id . Целевой столбец: category . Сырой текст text пока не берём в признаки. Выведите список входных признаков через запятую без пробелов.\n\nОжидаемый результат\n\n\n```\ntext_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority\n```\n\nКритерии оценки\n\nВ список не попали request_id , text и category ; порядок признаков сохранён.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
+      "statement": "## Задание 6. Собрать список входных признаков\n\nЦель\n\nСформировать список столбцов для будущего анализа без служебного номера и ответа.\n\nУсловие / входные данные\n\nФайл `support_requests_10_11_spo.csv`. Служебный столбец: `request_id`. Целевой столбец: `category`. Сырой текст `text` пока не берём в признаки. Выведите список входных признаков через запятую без пробелов.\n\nОжидаемый результат\n\n```text\ntext_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority\n```\n\nКритерии оценки\n\nВ список не попали `request_id`, `text` и `category`; порядок признаков сохранён.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab28c14aef10a80f7d062ee",
@@ -217,17 +437,73 @@
         "d03afd246188b7e8.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nfeatures = [c for c in df.columns if c not in ['request_id', 'text', 'category']]\nprint(','.join(features))",
+        "answer": "",
+        "explanation": "Исключаем служебный номер, сырой текст и целевой ответ. Остальные признаки сохраняют порядок в файле; целевой столбец не должен попадать в X.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Вычисляем `[c for c in df.columns if c not in ['request_id', 'text', 'category']]` и сохраняем результат в `features`."
+          },
+          {
+            "line": 4,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "csv",
+          "tables",
+          "features",
+          "target"
+        ],
+        "id": "T-6ab28c14aef10a80f7d062ee-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 12/Практика для студентов.md",
-        "sha256": "9a071fe2263b52c49e1b080cd5d0c0c72f40b9d9b52654463d88d6700dbad503"
+        "elementId": "6ab28c14aef10a80f7d062ee",
+        "archive": "Снимки страниц.json",
+        "sha256": "8e5fde4054722dae30c39e694f960cda8f4ca7bdb79754c226e4a528c0cffe85"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "csv",
+        "tables",
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6ab28c94aef10a80f7d062ef",
@@ -236,7 +512,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L12",
-      "statement": "Цель\n\nПоказать, что та же логика работает с более крупной таблицей.\n\nУсловие / входные данные\n\nФайл global_high_school_student_lifestyle_wellness_edu_10_11_spo.csv . Откройте CSV и выведите количество строк и столбцов через пробел.\n\nОжидаемый результат\n\n\n```\n500 11\n```\n\nКритерии оценки\n\nФайл открыт через pd.read_csv() ; вывод соответствует размеру таблицы; лишний текст не выводится.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
+      "statement": "## Задание 7. Открыть большой учебный датасет\n\nЦель\n\nПоказать, что та же логика работает с более крупной таблицей.\n\nУсловие / входные данные\n\nФайл `global_high_school_student_lifestyle_wellness_edu_10_11_spo.csv`. Откройте CSV и выведите количество строк и столбцов через пробел.\n\nОжидаемый результат\n\n```text\n500 11\n```\n\nКритерии оценки\n\nФайл открыт через `pd.read_csv()`; вывод соответствует размеру таблицы; лишний текст не выводится.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab28c94aef10a80f7d062ef",
@@ -253,17 +529,59 @@
         "d03afd246188b7e8.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('global_high_school_student_lifestyle_wellness_edu_10_11_spo.csv')\nprint(*df.shape)",
+        "answer": "",
+        "explanation": "Та же операция чтения применяется к большему набору. Размер получаем из реально открытого файла, а не печатаем заготовленные числа.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "500 11"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables"
+        ],
+        "id": "T-6ab28c94aef10a80f7d062ef-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 12/Практика для студентов.md",
-        "sha256": "9a071fe2263b52c49e1b080cd5d0c0c72f40b9d9b52654463d88d6700dbad503"
+        "elementId": "6ab28c94aef10a80f7d062ef",
+        "archive": "Снимки страниц.json",
+        "sha256": "f6c97dee493122ba76a615130fc58d5444de24fe7f7238ad422a60f574bf85d8"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables"
+      ]
     },
     {
       "id": "T-6ab28d9bfa8b59a3bc635dda",
@@ -272,7 +590,7 @@
       "type": "debug",
       "moduleId": 1,
       "lessonId": "M01-L12",
-      "statement": "Цель\n\nНаучиться проверять код, сгенерированный ИИ, и исправлять неверный список признаков.\n\nУсловие / входные данные\n\nИИ предложил список features для датасета о школьниках, но включил student_id и wellness_group. Исправьте список features и выведите его через запятую без пробелов. Цель — wellness_group; student_id не использовать как содержательный признак.\n\nОжидаемый результат\n\n\n```\nage,gender,country,grade,sleep_hours,screen_time_hours,uses_ai_for_study,stress_level_1_10,exam_preparation\n```\n\nКритерии оценки\n\nИз списка удалены student_id и wellness_group; признаки выведены в правильном порядке; stdout содержит только одну строку.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
+      "statement": "## Задание 8. Исправить код, предложенный ИИ\n\nЦель\n\nНаучиться проверять код, сгенерированный ИИ, и исправлять неверный список признаков.\n\nУсловие / входные данные\n\nИИ предложил список features для датасета о школьниках, но включил student_id и wellness_group. Исправьте список features и выведите его через запятую без пробелов. Цель — wellness_group; student_id не использовать как содержательный признак.\n\nОжидаемый результат\n\n```text\nage,gender,country,grade,sleep_hours,screen_time_hours,uses_ai_for_study,stress_level_1_10,exam_preparation\n```\n\nКритерии оценки\n\nИз списка удалены student_id и wellness_group; признаки выведены в правильном порядке; stdout содержит только одну строку.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab28d9bfa8b59a3bc635dda",
@@ -289,24 +607,81 @@
         "d03afd246188b7e8.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('global_high_school_student_lifestyle_wellness_edu_10_11_spo.csv')\nfeatures = [c for c in df.columns if c not in ['student_id', 'wellness_group']]\nprint(','.join(features))",
+        "answer": "",
+        "explanation": "student_id — номер записи, wellness_group — целевая группа. Их исключение предотвращает бессодержательное обучение по номеру и утечку ответа в признаки.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "age,gender,country,grade,sleep_hours,screen_time_hours,uses_ai_for_study,stress_level_1_10,exam_preparation"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Вычисляем `[c for c in df.columns if c not in ['student_id', 'wellness_group']]` и сохраняем результат в `features`."
+          },
+          {
+            "line": 4,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "csv",
+          "tables",
+          "statistics",
+          "features",
+          "target"
+        ],
+        "id": "T-6ab28d9bfa8b59a3bc635dda-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 12/Практика для студентов.md",
-        "sha256": "9a071fe2263b52c49e1b080cd5d0c0c72f40b9d9b52654463d88d6700dbad503"
+        "elementId": "6ab28d9bfa8b59a3bc635dda",
+        "archive": "Снимки страниц.json",
+        "sha256": "05bab54205464d4d6b30c8a39441d7804deef5bf9055bfaef4ae555fa40ea63d"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "csv",
+        "tables",
+        "statistics",
+        "features",
+        "target"
+      ]
     }
   ],
-  "lecture": "# Табличные данные и признаки объектов\n\n### СЛАЙД 01. Табличные данные и признаки объектов\n\nВ этом занятии рассматривается тема «Табличные данные и признаки объектов». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Короткая памятка · таблица 1/4\n\nDataFrame удобно представлять как обычную таблицу: строки описывают отдельные объекты, а столбцы содержат их свойства. Однако роль столбца определяется не только типом данных. Например, числовой идентификатор записан числами, но обычно не является содержательным признаком объекта.\n\nСравним данные в таблице.\nЭлемент Как понимать DataFrame таблица pandas внутри Python; у неё есть строки, столбцы и типы данных строка один объект или один пример, например одно обращение или один ученик столбец свойство объекта или результат, который требуется определить числовой столбец столбец с числами: длина текста, оценка срочности, часы сна; числа могут быть целыми или дробными категориальный столбец столбец с категориями: источник, приоритет, группа; значения обозначают варианты, а не измеряемую величину features / X столбцы, которые можно подать на вход будущей модели для получения предсказания target / y столбец с правильным ответом, который модель должна научиться определять по входным признакам\n\nОдин и тот же столбец нельзя одновременно использовать как обычный входной признак и как целевой ответ в рамках одной задачи. Если готовый ответ попадёт в features , модель получит информацию, которой не должно быть во входных данных.\n\nТакже важно различать категорию и число. Например, значение request_id = 105 записано числом, но оно лишь обозначает конкретную строку. Арифметические действия с таким номером обычно не описывают свойства обращения, поэтому служебный идентификатор исключают из списка признаков.\n\n### СЛАЙД 03. Короткая памятка · таблица 2/4\n\nПосмотрите на продолжение таблицы. столбец свойство объекта или результат, который требуется определить числовой столбец столбец с числами: длина текста, оценка срочности, часы сна; числа могут быть целыми или дробными\n\n### СЛАЙД 04. Короткая памятка · таблица 3/4\n\nПосмотрите на продолжение таблицы. категориальный столбец столбец с категориями: источник, приоритет, группа; значения обозначают варианты, а не измеряемую величину features / X столбцы, которые можно подать на вход будущей модели для получения предсказания\n\n### СЛАЙД 05. Короткая памятка · таблица 4/4\n\nПосмотрите на продолжение таблицы. target / y столбец с правильным ответом, который модель должна научиться определять по входным признакам\n\n### СЛАЙД 06. Минимум команд pandas\n\nЭти команды позволяют выполнить первичную проверку таблицы до анализа данных. Сначала подключается библиотека и читается файл, затем проверяются первые строки, размер, названия и типы столбцов.\n\nПример на слайде:\nimport pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\ndf.head()\ndf.shape\nlist(df.columns)\ndf.select_dtypes(include='number').columns\ndf.select_dtypes(include='object').columns\n\nimport pandas as pd подключает pandas под коротким именем pd . Такое имя затем используется при обращении к функциям библиотеки.\n\npd.read_csv(...) читает CSV-файл и создаёт DataFrame. Имя файла должно совпадать с именем доступного файла, иначе pandas не сможет его найти.\n\ndf.head() показывает первые строки таблицы. Эта команда помогает проверить, правильно ли распознаны заголовки и распределились ли значения по столбцам. По умолчанию выводятся первые пять строк, но размер всей таблицы эта команда не определяет.\n\ndf.shape возвращает пару значений в порядке (количество строк, количество столбцов) . Например, результат (12, 10) означает, что в таблице 12 строк и 10 столбцов. Частая ошибка — поменять эти два числа местами.\n\nlist(df.columns) преобразует набор названий столбцов в обычный список Python. Порядок элементов совпадает с порядком столбцов в DataFrame.\n\nselect_dtypes(include='number') выбирает числовые столбцы по типам данных pandas, а select_dtypes(include='object') — столбцы типа object . Тип object часто содержит текстовые значения; категориальность определяется смыслом данных и/или типом category . При этом команда проверяет технический тип столбца, но не решает, подходит ли он для модели: это необходимо определить отдельно по смыслу данных.\n\nПосле select_dtypes(...) указано свойство .columns , поэтому результатом будут названия выбранных столбцов, а не все их значения.\n\n### СЛАЙД 07. Практические задания\n\nЗадания построены так, чтобы результат можно было проверить автоматически: программа должна вывести конкретную строку. Не добавляйте лишние пояснения в print , если работаете в режиме тренажёра. Даже дополнительная подпись перед правильным значением может привести к несовпадению с ожидаемым выводом.\n\nНазвания столбцов в заданиях требуется выводить через запятую без пробелов. Для этого список названий можно объединить в строку с помощью ','.join(...) . Порядок столбцов необходимо сохранить таким же, как в исходной таблице или в сформированном списке признаков.\n\nВ заданиях 4 и 5 классификация выполняется по типам данных в DataFrame. В задании 6 требуется дополнительный смысловой анализ: из автоматически найденных столбцов нужно выбрать только те, которые допустимо использовать как входные признаки.\n\nНапример, request_id попадёт в список числовых столбцов, потому что хранит числа, но в список признаков задания 6 не войдёт. Столбец category относится к категориальным, однако он также исключается, если является ответом, который требуется предсказывать. Исходный столбец text тоже не используется в указанном списке: вместо него представлены уже выделенные характеристики текста, например его длина и наличие определённых слов.\n\nПеред отправкой решения полезно проверить три условия: числа в размере таблицы выведены в правильном порядке, названия соединены без лишних пробелов, а список признаков не содержит идентификатор и целевой ответ.\n\n### СЛАЙД 08. Задание с кодом ИИ\n\nВ одном из заданий вы исправляете код, который как будто предложил ИИ. Это не тест на доверие к ИИ, а тренировка внимательности: помощник может предложить синтаксически правильный код, но человек должен проверить, не попал ли в признаки служебный номер или готовый ответ.\n\nИсходный код\n\nПример на слайде:\nfeatures = ['student_id', 'age', 'gender', 'country', 'grade', 'sleep_hours',\n'screen_time_hours', 'uses_ai_for_study', 'stress_level_1_10',\n'exam_preparation', 'wellness_group']\n\nВ предложенном списке нужно проверить роль каждого элемента. student_id является служебным идентификатором ученика, поэтому его следует убрать. wellness_group является целевым столбцом: именно его значение должна определять будущая модель, поэтому готовый ответ также нельзя оставлять во входных признаках.\n\nПосле исправления в списке остаются характеристики ученика, которые используются как входные данные: возраст, пол, страна, оценка, продолжительность сна, экранное время, использование ИИ для учёбы, уровень стресса и подготовка к экзаменам. Их порядок должен соответствовать ожидаемому выводу задания.\n\nТипичная ошибка — удалить только wellness_group , но оставить student_id , поскольку идентификатор имеет числовой вид. Другая ошибка — удалить все категориальные столбцы. Категориальный тип сам по себе не делает признак недопустимым: решение об исключении принимается по роли столбца, а не только по его типу.\n\n### СЛАЙД 09. Парная мини-проверка\n\nПосле выполнения заданий обменяйтесь с партнёром списками признаков для одной таблицы. Один участник проверяет, нет ли в списке служебного идентификатора, второй — нет ли в списке целевого столбца. Дополнительно проверьте, сохранился ли требуемый порядок названий и нет ли лишних пробелов в строке вывода.\n\nИтог пары: один исправленный список признаков и короткий комментарий, что было изменено. Комментарий должен называть не только удалённый столбец, но и причину удаления, например: « student_id исключён, потому что это служебный идентификатор».\n\nЧто сдать\n\nзаполненный ноутбук или решения в редакторе платформы;\n\nвыводы программ по каждому заданию в точном формате;\n\nкороткий текстовый вывод: какие столбцы числовые, какие категориальные, какой столбец можно считать целью;\n\nисправленный список признаков без служебного идентификатора и целевого столбца;\n\nкраткое объяснение, почему числовой тип столбца ещё не означает, что этот столбец подходит для обучения модели.\n\n### СЛАЙД 10. Итог урока\n\nТаблица становится полезной для ИИ только после того, как человек понял её структуру: где объекты, где столбцы, какие данные числовые, какие категориальные, какие столбцы можно дать на вход будущей модели, а какие нужно убрать. Pandas здесь не обучает модель — он помогает открыть и проверить таблицу, определить типы данных и подготовить список столбцов к дальнейшему анализу.\n\nАвтоматический выбор по типу данных является только первым шагом. После него требуется смысловая проверка: идентификатор может быть числовым, цель может быть категориальной, а оба столбца при этом должны быть исключены из features . Корректно подготовленный список входных признаков содержит данные, доступные модели для предсказания, но не содержит готового ответа.\n\n### СЛАЙД 11. Материалы к практике\n\nДля работы понадобятся CSV-файлы с табличными данными и стартовый Jupyter Notebook. CSV-файл содержит данные в текстовом табличном формате, а Notebook позволяет последовательно выполнять команды pandas и сразу просматривать результат каждой операции.\n\nПеред началом работы загрузите CSV-файлы в среду, где будет открыт Notebook. При чтении таблицы важно указать корректный путь к файлу: имя в коде должно совпадать с именем загруженного файла, включая расширение .csv .\n\n### СЛАЙД 12. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 13. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Табличные данные и признаки объектов\n\n### СЛАЙД 01. Табличные данные и признаки объектов\n\nВ этом занятии рассматривается тема «Табличные данные и признаки объектов». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Короткая памятка · таблица 1/4\n\nDataFrame удобно представлять как обычную таблицу: строки описывают отдельные объекты, а столбцы содержат их свойства. Однако роль столбца определяется не только типом данных. Например, числовой идентификатор записан числами, но обычно не является содержательным признаком объекта.\n\nСравним данные в таблице.\nЭлемент Как понимать DataFrame таблица pandas внутри Python; у неё есть строки, столбцы и типы данных строка один объект или один пример, например одно обращение или один ученик столбец свойство объекта или результат, который требуется определить числовой столбец столбец с числами: длина текста, оценка срочности, часы сна; числа могут быть целыми или дробными категориальный столбец столбец с категориями: источник, приоритет, группа; значения обозначают варианты, а не измеряемую величину features / X столбцы, которые можно подать на вход будущей модели для получения предсказания target / y столбец с правильным ответом, который модель должна научиться определять по входным признакам\n\nОдин и тот же столбец нельзя одновременно использовать как обычный входной признак и как целевой ответ в рамках одной задачи. Если готовый ответ попадёт в features , модель получит информацию, которой не должно быть во входных данных.\n\nТакже важно различать категорию и число. Например, значение request_id = 105 записано числом, но оно лишь обозначает конкретную строку. Арифметические действия с таким номером обычно не описывают свойства обращения, поэтому служебный идентификатор исключают из списка признаков.\n\n### СЛАЙД 03. Короткая памятка · таблица 2/4\n\nПосмотрите на продолжение таблицы. столбец свойство объекта или результат, который требуется определить числовой столбец столбец с числами: длина текста, оценка срочности, часы сна; числа могут быть целыми или дробными\n\n### СЛАЙД 04. Короткая памятка · таблица 3/4\n\nПосмотрите на продолжение таблицы. категориальный столбец столбец с категориями: источник, приоритет, группа; значения обозначают варианты, а не измеряемую величину features / X столбцы, которые можно подать на вход будущей модели для получения предсказания\n\n### СЛАЙД 05. Короткая памятка · таблица 4/4\n\nПосмотрите на продолжение таблицы. target / y столбец с правильным ответом, который модель должна научиться определять по входным признакам\n\n### СЛАЙД 06. Минимум команд pandas\n\nЭти команды позволяют выполнить первичную проверку таблицы до анализа данных. Сначала подключается библиотека и читается файл, затем проверяются первые строки, размер, названия и типы столбцов.\n\n\n\n```python\nimport pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\ndf.head()\ndf.shape\nlist(df.columns)\ndf.select_dtypes(include='number').columns\ndf.select_dtypes(include='object').columns\n```\n\n\n\nimport pandas as pd подключает pandas под коротким именем pd . Такое имя затем используется при обращении к функциям библиотеки.\n\npd.read_csv(...) читает CSV-файл и создаёт DataFrame. Имя файла должно совпадать с именем доступного файла, иначе pandas не сможет его найти.\n\ndf.head() показывает первые строки таблицы. Эта команда помогает проверить, правильно ли распознаны заголовки и распределились ли значения по столбцам. По умолчанию выводятся первые пять строк, но размер всей таблицы эта команда не определяет.\n\ndf.shape возвращает пару значений в порядке (количество строк, количество столбцов) . Например, результат (12, 10) означает, что в таблице 12 строк и 10 столбцов. Частая ошибка — поменять эти два числа местами.\n\nlist(df.columns) преобразует набор названий столбцов в обычный список Python. Порядок элементов совпадает с порядком столбцов в DataFrame.\n\nselect_dtypes(include='number') выбирает числовые столбцы по типам данных pandas, а select_dtypes(include='object') — столбцы типа object . Тип object часто содержит текстовые значения; категориальность определяется смыслом данных и/или типом category . При этом команда проверяет технический тип столбца, но не решает, подходит ли он для модели: это необходимо определить отдельно по смыслу данных.\n\nПосле select_dtypes(...) указано свойство .columns , поэтому результатом будут названия выбранных столбцов, а не все их значения.\n\n### СЛАЙД 07. Практические задания\n\nЗадания построены так, чтобы результат можно было проверить автоматически: программа должна вывести конкретную строку. Не добавляйте лишние пояснения в print , если работаете в режиме тренажёра. Даже дополнительная подпись перед правильным значением может привести к несовпадению с ожидаемым выводом.\n\nНазвания столбцов в заданиях требуется выводить через запятую без пробелов. Для этого список названий можно объединить в строку с помощью ','.join(...) . Порядок столбцов необходимо сохранить таким же, как в исходной таблице или в сформированном списке признаков.\n\nВ заданиях 4 и 5 классификация выполняется по типам данных в DataFrame. В задании 6 требуется дополнительный смысловой анализ: из автоматически найденных столбцов нужно выбрать только те, которые допустимо использовать как входные признаки.\n\nНапример, request_id попадёт в список числовых столбцов, потому что хранит числа, но в список признаков задания 6 не войдёт. Столбец category относится к категориальным, однако он также исключается, если является ответом, который требуется предсказывать. Исходный столбец text тоже не используется в указанном списке: вместо него представлены уже выделенные характеристики текста, например его длина и наличие определённых слов.\n\nПеред отправкой решения полезно проверить три условия: числа в размере таблицы выведены в правильном порядке, названия соединены без лишних пробелов, а список признаков не содержит идентификатор и целевой ответ.\n\n### СЛАЙД 08. Задание с кодом ИИ\n\nВ одном из заданий вы исправляете код, который как будто предложил ИИ. Это не тест на доверие к ИИ, а тренировка внимательности: помощник может предложить синтаксически правильный код, но человек должен проверить, не попал ли в признаки служебный номер или готовый ответ.\n\nИсходный код\n\n\n\n```python\nfeatures = ['student_id', 'age', 'gender', 'country', 'grade', 'sleep_hours',\n'screen_time_hours', 'uses_ai_for_study', 'stress_level_1_10',\n'exam_preparation', 'wellness_group']\n```\n\n\n\nВ предложенном списке нужно проверить роль каждого элемента. student_id является служебным идентификатором ученика, поэтому его следует убрать. wellness_group является целевым столбцом: именно его значение должна определять будущая модель, поэтому готовый ответ также нельзя оставлять во входных признаках.\n\nПосле исправления в списке остаются характеристики ученика, которые используются как входные данные: возраст, пол, страна, оценка, продолжительность сна, экранное время, использование ИИ для учёбы, уровень стресса и подготовка к экзаменам. Их порядок должен соответствовать ожидаемому выводу задания.\n\nТипичная ошибка — удалить только wellness_group , но оставить student_id , поскольку идентификатор имеет числовой вид. Другая ошибка — удалить все категориальные столбцы. Категориальный тип сам по себе не делает признак недопустимым: решение об исключении принимается по роли столбца, а не только по его типу.\n\n### СЛАЙД 09. Парная мини-проверка\n\nПосле выполнения заданий обменяйтесь с партнёром списками признаков для одной таблицы. Один участник проверяет, нет ли в списке служебного идентификатора, второй — нет ли в списке целевого столбца. Дополнительно проверьте, сохранился ли требуемый порядок названий и нет ли лишних пробелов в строке вывода.\n\nИтог пары: один исправленный список признаков и короткий комментарий, что было изменено. Комментарий должен называть не только удалённый столбец, но и причину удаления, например: « student_id исключён, потому что это служебный идентификатор».\n\nЧто сдать\n\nзаполненный ноутбук или решения в редакторе платформы;\n\nвыводы программ по каждому заданию в точном формате;\n\nкороткий текстовый вывод: какие столбцы числовые, какие категориальные, какой столбец можно считать целью;\n\nисправленный список признаков без служебного идентификатора и целевого столбца;\n\nкраткое объяснение, почему числовой тип столбца ещё не означает, что этот столбец подходит для обучения модели.\n\n### СЛАЙД 10. Итог урока\n\nТаблица становится полезной для ИИ только после того, как человек понял её структуру: где объекты, где столбцы, какие данные числовые, какие категориальные, какие столбцы можно дать на вход будущей модели, а какие нужно убрать. Pandas здесь не обучает модель — он помогает открыть и проверить таблицу, определить типы данных и подготовить список столбцов к дальнейшему анализу.\n\nАвтоматический выбор по типу данных является только первым шагом. После него требуется смысловая проверка: идентификатор может быть числовым, цель может быть категориальной, а оба столбца при этом должны быть исключены из features . Корректно подготовленный список входных признаков содержит данные, доступные модели для предсказания, но не содержит готового ответа.\n\n### СЛАЙД 11. Материалы к практике\n\nДля работы понадобятся CSV-файлы с табличными данными и стартовый Jupyter Notebook. CSV-файл содержит данные в текстовом табличном формате, а Notebook позволяет последовательно выполнять команды pandas и сразу просматривать результат каждой операции.\n\nПеред началом работы загрузите CSV-файлы в среду, где будет открыт Notebook. При чтении таблицы важно указать корректный путь к файлу: имя в коде должно совпадать с именем загруженного файла, включая расширение .csv .\n\n### СЛАЙД 12. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 13. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Табличные данные и признаки объектов\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Задание №1\n\n\n### Задание 1. Создать DataFrame из словаря списков\n\n\n#### Цель\n\nПроверить, что обучающийся умеет создать небольшую таблицу pandas и вывести её размер.\n\nУсловие / входные данные\n\nДан словарь students_dict с 4 учениками и 5 столбцами. Каждый ключ словаря — это столбец таблицы:\n\n\n```\nimport pandas as pd\n\nstudents_dict = {\n    \"student\": [\"Аня\", \"Илья\", \"Мария\", \"Тимур\"],\n    \"sleep_hours\": [7.5, 6.0, 8.0, 5.5],\n    \"screen_time_hours\": [4.0, 7.0, 3.5, 8.5],\n    \"uses_ai_for_study\": [\"Yes\", \"Sometimes\", \"No\", \"Yes\"],\n    \"stress_level_1_10\": [4, 7, 3, 8],\n}\n```\n\nНапишите программу, которая создаёт DataFrame и выводит количество строк и столбцов через пробел.\n\nОжидаемый результат\n\n\n```\n4 5\n```\n\nКритерии оценки\n\nDataFrame создан через pd.DataFrame(); размер получен через shape; stdout содержит только два числа через пробел.\n\n\n#### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.\n\n\n### Задание №2\n\n\n### Задание 2. Открыть CSV с обращениями\n\n\n#### Цель\n\nНаучиться открывать CSV-файл и получать размер таблицы.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv . Напишите программу, которая открывает CSV и выводит количество строк и столбцов через пробел.\n\nОжидаемый результат\n\n\n```\n12 10\n```\n\nКритерии оценки\n\nФайл открыт через pd.read_csv() ; вывод соответствует размеру таблицы; лишний текст не выводится.\n\n\n#### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.\n\n\n### Задание №3\n\n\n### Задание 3. Вывести названия столбцов\n\n\n#### Цель\n\nЗакрепить работу со структурой DataFrame.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv . Откройте таблицу и выведите названия столбцов через запятую без пробелов.\n\nОжидаемый результат\n\n\n```\nrequest_id,text,text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority,category\n```\n\nКритерии оценки\n\nИспользован список столбцов df.columns ; порядок столбцов сохранён; вывод — одна строка.\n\n\n#### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.\n\n\n### Задание №4\n\n\n### Задание 4. Найти числовые столбцы\n\nЦель\n\nРазличить числовые и категориальные признаки в таблице.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv. Выведите названия числовых столбцов через запятую без пробелов.\n\nОжидаемый результат\n\n\n```\nrequest_id,text_length,has_question,has_payment_word,has_delivery_word,urgency_score\n```\n\nКритерии оценки\n\nИспользован select_dtypes или явный корректный список; категориальные столбцы не попали в вывод.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.\n\n\n### Задание №5\n\n\n### Задание 5. Найти категориальные столбцы\n\n\n#### Цель\n\nНаучиться находить текстовые/категориальные столбцы перед анализом.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv . Выведите названия категориальных столбцов через запятую без пробелов.\n\nОжидаемый результат\n\n\n```\ntext,source,priority,category\n```\n\nКритерии оценки\n\nКатегориальные столбцы определены корректно; stdout содержит только строку со столбцами.\n\n\n#### Особенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.\n\n\n### Задание №6\n\n\n### Задание 6. Собрать список входных признаков\n\nЦель\n\nСформировать список столбцов для будущего анализа без служебного номера и ответа.\n\nУсловие / входные данные\n\nФайл support_requests_10_11_spo.csv . Служебный столбец: request_id . Целевой столбец: category . Сырой текст text пока не берём в признаки. Выведите список входных признаков через запятую без пробелов.\n\nОжидаемый результат\n\n\n```\ntext_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority\n```\n\nКритерии оценки\n\nВ список не попали request_id , text и category ; порядок признаков сохранён.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.\n\n\n### Задание №7\n\n\n### Задание 7. Открыть большой учебный датасет\n\nЦель\n\nПоказать, что та же логика работает с более крупной таблицей.\n\nУсловие / входные данные\n\nФайл global_high_school_student_lifestyle_wellness_edu_10_11_spo.csv . Откройте CSV и выведите количество строк и столбцов через пробел.\n\nОжидаемый результат\n\n\n```\n500 11\n```\n\nКритерии оценки\n\nФайл открыт через pd.read_csv() ; вывод соответствует размеру таблицы; лишний текст не выводится.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.\n\n\n### Задание №8\n\n\n### Задание 8. Исправить код, предложенный ИИ\n\nЦель\n\nНаучиться проверять код, сгенерированный ИИ, и исправлять неверный список признаков.\n\nУсловие / входные данные\n\nИИ предложил список features для датасета о школьниках, но включил student_id и wellness_group. Исправьте список features и выведите его через запятую без пробелов. Цель — wellness_group; student_id не использовать как содержательный признак.\n\nОжидаемый результат\n\n\n```\nage,gender,country,grade,sleep_hours,screen_time_hours,uses_ai_for_study,stress_level_1_10,exam_preparation\n```\n\nКритерии оценки\n\nИз списка удалены student_id и wellness_group; признаки выведены в правильном порядке; stdout содержит только одну строку.\n\nОсобенности\n\nОбязательное практическое задание. Проверяется по результату выполнения кода.\n\n\n### Таблицы из теоретической части\n\n\n| Элемент | Как понимать |\n| --- | --- |\n| DataFrame | таблица pandas внутри Python; у неё есть строки, столбцы и типы данных |\n| строка | один объект или один пример, например одно обращение или один ученик |\n| столбец | свойство объекта или результат, который требуется определить |\n| числовой столбец | столбец с числами: длина текста, оценка срочности, часы сна; числа могут быть целыми или дробными |\n| категориальный столбец | столбец с категориями: источник, приоритет, группа; значения обозначают варианты, а не измеряемую величину |\n| features / X | столбцы, которые можно подать на вход будущей модели для получения предсказания |\n| target / y | столбец с правильным ответом, который модель должна научиться определять по входным признакам |\n\n\n### Файлы данных\n\nПеред запуском программы скопируйте нужные файлы из папки «Данные» в рабочую папку рядом с программой. Имена файлов совпадают с именами в исходных примерах.\n\nglobal_high_school_student_lifestyle_wellness_edu_10_11_spo.csv\nsupport_requests_10_11_spo.csv",
   "theory": [
     {
       "title": "Табличные данные и признаки объектов",
@@ -744,5 +1119,43 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "output",
+    "tables",
+    "statistics",
+    "csv",
+    "features",
+    "target",
+    "loops",
+    "conditions",
+    "logic"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M01-L12-lecture.pdf",
+      "name": "Табличные данные и признаки объектов — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "2e7efc67f547af3acc515407e8bb6a56afcac14148912717627f949a15cf6dd8",
+      "source": {
+        "path": "Снимки страниц.json / 16cd5063712ad81cac86edda, dccc9aa859bda96eb4eaaa25",
+        "sha256": "d8bddd1c826f9cc0bc9c4f5361d18ff10e7520b7657c0615b9bec649c5d27534"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M01-L12-presentation.pdf",
+      "name": "Табличные данные и признаки объектов — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 13,
+      "sha256": "f4fb5aabc979c39779abe631c824eade7f052f73c7c53f8ac6b0712e092b253f",
+      "source": {
+        "path": "Модуль 1/Занятие 12/Презентация — итоговая.pptx",
+        "sha256": "91ec8d5dd485cc5570e41f6f98cc3e0aa6a63d73688d1e979552531280fb1564"
+      }
+    }
   }
 }

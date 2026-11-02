@@ -10,7 +10,7 @@
   "slideCount": 12,
   "fileCount": 4,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Оценка качества классификации - accuracy  В этом занятии рассматривается тема «Оценка качества классификации - accuracy». Будем опираться на примеры курса и пр",
+  "description": "В этом занятии рассматривается тема «Оценка качества классификации - accuracy». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "file",
       "moduleId": 3,
       "lessonId": "M03-L07",
-      "statement": "#### Уровень 1\n\nПо таблице с правильными классами и предсказаниями вручную отметить верные ответы, посчитать их количество, найти accuracy и записать результат в процентах.\n\n\n#### Уровень 2\n\nПо таблице с предсказаниями двух моделей вручную посчитать accuracy для каждой модели и определить, какая модель справилась лучше на этой проверочной таблице.\n\n\n#### Уровень 3\n\nВ Python загрузить CSV-файл, создать столбец is_correct, рассчитать accuracy через pandas, затем проверить результат через accuracy_score. Для СПО дополнительно можно посчитать accuracy модели на датасете Iris и сравнить несколько значений max_depth у дерева решений.\n\n\n### Уровень 1. Ручной расчёт accuracy\n\nДана таблица с правильными классами и предсказаниями модели. Отметьте, где модель ответила верно, посчитайте долю верных ответов и запишите результат в процентах.\n\n\n| object_id | true_label | predicted_label | верно? |\n| --- | --- | --- | --- |\n| 1 | spam | spam |  |\n| 2 | normal | normal |  |\n| 3 | unclear | spam |  |\n| 4 | spam | spam |  |\n| 5 | normal | unclear |  |\n| 6 | unclear | unclear |  |\n| 7 | spam | normal |  |\n| 8 | normal | normal |  |\n| 9 | spam | spam |  |\n| 10 | unclear | unclear |  |\n| 11 | normal | normal |  |\n| 12 | spam | spam |  |\n\nЗапишите: верных ответов ___ из 12. Accuracy = ___ / 12 = ___ = ___ %.\n\n\n### Уровень 2. Сравнение двух моделей\n\nПосчитайте accuracy для модели A и модели B. Сделайте вывод, какая модель справилась лучше на этой таблице.\n\n\n| object_id | true_label | model_A_prediction | model_B_prediction |\n| --- | --- | --- | --- |\n| 1 | spam | spam | spam |\n| 2 | normal | normal | normal |\n| 3 | unclear | spam | unclear |\n| 4 | spam | spam | spam |\n| 5 | normal | spam | normal |\n| 6 | unclear | unclear | normal |\n| 7 | spam | normal | spam |\n| 8 | normal | normal | normal |\n| 9 | spam | spam | unclear |\n| 10 | unclear | unclear | unclear |\n| 11 | normal | normal | normal |\n| 12 | spam | unclear | spam |\n\nМодель A: ___ верных ответов из 12, accuracy = ___ %.\n\nМодель B: ___ верных ответов из 12, accuracy = ___ %.\n\nВывод: ________________________________________________________________\n\n\n### Уровень 3. Расчёт accuracy в Python\n\nОткройте ноутбук lesson_3_7_accuracy.ipynb. Загрузите CSV-файлы, создайте столбец is_correct, рассчитайте accuracy через pandas и проверьте результат через accuracy_score. Для СПО дополнительно сравните несколько значений max_depth у дерева решений на датасете Iris.\n\n\n### Критерии самопроверки\n\n- в уровне 1 верно отмечены совпадения и ошибки;\n\n- accuracy записана как дробь, десятичное число и процент;\n\n- в уровне 2 вывод сформулирован аккуратно: «на этой таблице», а не «всегда»;\n\n- в уровне 3 результат pandas совпадает с accuracy_score.\n\n\n#### Материалы к заданию",
+      "statement": "# Практическое задание\n\n## Содержание\n\n- Практическая работа по уровням\n\n- Уровень 1. Ручной расчёт accuracy\n\n- Уровень 2. Сравнение двух моделей\n\n- Уровень 3. Расчёт accuracy в Python\n\n- Критерии самопроверки\n\n## Практическая работа по уровням\n\n### Уровень 1\n\nПо таблице с правильными классами и предсказаниями вручную отметить верные ответы, посчитать их количество, найти accuracy и записать результат в процентах.\n\n### Уровень 2\n\nПо таблице с предсказаниями двух моделей вручную посчитать accuracy для каждой модели и определить, какая модель справилась лучше на этой проверочной таблице.\n\n### Уровень 3\n\nВ Python загрузить CSV-файл, создать столбец is_correct, рассчитать accuracy через pandas, затем проверить результат через accuracy_score. Для СПО дополнительно можно посчитать accuracy модели на датасете Iris и сравнить несколько значений max_depth у дерева решений.\n\n## Уровень 1. Ручной расчёт accuracy\n\nДана таблица с правильными классами и предсказаниями модели. Отметьте, где модель ответила верно, посчитайте долю верных ответов и запишите результат в процентах.\n\n| object_id | true_label | predicted_label | верно? |\n| --- | --- | --- | --- |\n| 1 | spam | spam |  |\n| 2 | normal | normal |  |\n| 3 | unclear | spam |  |\n| 4 | spam | spam |  |\n| 5 | normal | unclear |  |\n| 6 | unclear | unclear |  |\n| 7 | spam | normal |  |\n| 8 | normal | normal |  |\n| 9 | spam | spam |  |\n| 10 | unclear | unclear |  |\n| 11 | normal | normal |  |\n| 12 | spam | spam |  |\n\nЗапишите: верных ответов ___ из 12. Accuracy = ___ / 12 = ___ = ___ %.\n\n## Уровень 2. Сравнение двух моделей\n\nПосчитайте accuracy для модели A и модели B. Сделайте вывод, какая модель справилась лучше на этой таблице.\n\n| object_id | true_label | model_A_prediction | model_B_prediction |\n| --- | --- | --- | --- |\n| 1 | spam | spam | spam |\n| 2 | normal | normal | normal |\n| 3 | unclear | spam | unclear |\n| 4 | spam | spam | spam |\n| 5 | normal | spam | normal |\n| 6 | unclear | unclear | normal |\n| 7 | spam | normal | spam |\n| 8 | normal | normal | normal |\n| 9 | spam | spam | unclear |\n| 10 | unclear | unclear | unclear |\n| 11 | normal | normal | normal |\n| 12 | spam | unclear | spam |\n\nМодель A: ___ верных ответов из 12, accuracy = ___ %.\n\nМодель B: ___ верных ответов из 12, accuracy = ___ %.\n\nВывод: ________________________________________________________________\n\n## Уровень 3. Расчёт accuracy в Python\n\nОткройте ноутбук lesson_3_7_accuracy.ipynb. Загрузите CSV-файлы, создайте столбец is_correct, рассчитайте accuracy через pandas и проверьте результат через accuracy_score. Для СПО дополнительно сравните несколько значений max_depth у дерева решений на датасете Iris.\n\n## Критерии самопроверки\n\n- в уровне 1 верно отмечены совпадения и ошибки;\n\n- accuracy записана как дробь, десятичное число и процент;\n\n- в уровне 2 вывод сформулирован аккуратно: «на этой таблице», а не «всегда»;\n\n- в уровне 3 результат pandas совпадает с accuracy_score.\n\n### Материалы к заданию\n\n- lesson_3_7_accuracy.ipynb (20.8 КБ)\n\n- classification_results_level_1.csv (0.2 КБ)\n\n- classification_results_two_models.csv (0.3 КБ)\n\n- iris_accuracy_dataset.csv (3.8 КБ)",
       "origin": "ismart",
       "ismartLink": {
         "id": "bfd14010dabf9a699710b7d6",
@@ -38,17 +38,147 @@
         "cab0ba49430b7cf4.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L07",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\nfrom sklearn.metrics import accuracy_score\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\ndf = pd.read_csv('classification_results_level_1.csv')\ndf['is_correct'] = df['true_label'] == df['predicted_label']\npandas_accuracy = df['is_correct'].mean()\nsklearn_accuracy = accuracy_score(df['true_label'],df['predicted_label'])\nassert pandas_accuracy == sklearn_accuracy == 9/12\nprint('Уровень 1:',pandas_accuracy,sklearn_accuracy)\ntwo = pd.read_csv('classification_results_two_models.csv')\nfor name in ['A','B']:\n    print(name,round(accuracy_score(two['true_label'],two['model_'+name+'_prediction']),4))\niris = pd.read_csv('iris_accuracy_dataset.csv')\nX,y = iris.drop(columns='species'),iris['species']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nscores = {}\nfor depth in [1,2,3,4,5]:\n    model = DecisionTreeClassifier(max_depth=depth,random_state=42).fit(X_train,y_train)\n    scores[depth] = accuracy_score(y_test,model.predict(X_test))\n    print('max_depth=',depth,'accuracy=',round(scores[depth],4))\nprint('Лучшие глубины:',[depth for depth,score in scores.items() if score == max(scores.values())])",
+        "answer": "",
+        "explanation": "В уровне 1 обе реализации дают 0.75, у A≈0.6667, у B≈0.8333. Для Iris сравниваются пять глубин на одном разбиении. При нескольких равных максимумах выводятся все, а не произвольный единственный победитель. Выбор по этому test превращает его в валидационную часть; окончательную оценку выбранной глубины нужно делать на новых данных.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Уровень 1: 0.75 0.75\nA 0.6667\nB 0.8333\nmax_depth= 1 accuracy= 0.6579\nmax_depth= 2 accuracy= 0.9211\nmax_depth= 3 accuracy= 0.8947\nmax_depth= 4 accuracy= 0.9211\nmax_depth= 5 accuracy= 0.8947\nЛучшие глубины: [2, 4]"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 6,
+            "text": "Вычисляем `df['true_label'] == df['predicted_label']` и сохраняем результат в `df['is_correct']`."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `df['is_correct'].mean()` и сохраняем результат в `pandas_accuracy`."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `accuracy_score(df['true_label'], df['predicted_label'])` и сохраняем результат в `sklearn_accuracy`."
+          },
+          {
+            "line": 9,
+            "text": "Проверяем инвариант `pandas_accuracy == sklearn_accuracy == 9 / 12`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 10,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 11,
+            "text": "Читаем учебный CSV в таблицу two. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 12,
+            "text": "Перебираем `['A', 'B']`; очередное значение доступно через `name`."
+          },
+          {
+            "line": 13,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 14,
+            "text": "Читаем учебный CSV в таблицу iris. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 15,
+            "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 16,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 17,
+            "text": "Создаём словарь `scores` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 18,
+            "text": "Перебираем `[1, 2, 3, 4, 5]`; очередное значение доступно через `depth`."
+          },
+          {
+            "line": 19,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+          },
+          {
+            "line": 20,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в scores[depth]."
+          },
+          {
+            "line": 21,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 22,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "csv",
+          "tables",
+          "statistics",
+          "metrics",
+          "split"
+        ],
+        "id": "T-bfd14010dabf9a699710b7d6-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 07/Практика для студентов.md",
-        "sha256": "a50d6ecae4645151ba15b6a03d510a1e6c55461fa7c638d77827e97219a9504e"
+        "elementId": "bfd14010dabf9a699710b7d6",
+        "archive": "Снимки страниц.json",
+        "sha256": "ccc6520b990144a0923c5d9ae88591902c822575790949442115e9e2de44711d"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "csv",
+        "tables",
+        "statistics",
+        "metrics",
+        "split"
+      ]
     },
     {
       "id": "T-6ab90ceaa1f5b9575b4e7134",
@@ -57,7 +187,7 @@
       "type": "free_response",
       "moduleId": 3,
       "lessonId": "M03-L07",
-      "statement": "### Уровень 1. Ручной расчёт accuracy\n\nУсловие\n\nДана таблица с правильными классами и предсказаниями модели. Отметьте, где модель ответила верно, посчитайте долю верных ответов и запишите результат в процентах.\n\n\n| object_id | true_label | predicted_label | верно? |\n| --- | --- | --- | --- |\n| 1 | spam | spam |  |\n| 2 | normal | normal |  |\n| 3 | unclear | spam |  |\n| 4 | spam | spam |  |\n| 5 | normal | unclear |  |\n| 6 | unclear | unclear |  |\n| 7 | spam | normal |  |\n| 8 | normal | normal |  |\n| 9 | spam | spam |  |\n| 10 | unclear | unclear |  |\n| 11 | normal | normal |  |\n| 12 | spam | spam |  |\n\nОтвет\n\nЗапишите: верных ответов ___ из 12. Accuracy = ___ / 12 = ___ = ___ %.",
+      "statement": "## Уровень 1. Ручной расчёт accuracy\n\nУсловие\n\nДана таблица с правильными классами и предсказаниями модели. Отметьте, где модель ответила верно, посчитайте долю верных ответов и запишите результат в процентах.\n\n| object_id | true_label | predicted_label | верно? |\n| --- | --- | --- | --- |\n| 1 | spam | spam |  |\n| 2 | normal | normal |  |\n| 3 | unclear | spam |  |\n| 4 | spam | spam |  |\n| 5 | normal | unclear |  |\n| 6 | unclear | unclear |  |\n| 7 | spam | normal |  |\n| 8 | normal | normal |  |\n| 9 | spam | spam |  |\n| 10 | unclear | unclear |  |\n| 11 | normal | normal |  |\n| 12 | spam | spam |  |\n\nОтвет\n\nЗапишите: верных ответов ___ из 12. Accuracy = ___ / 12 = ___ = ___ %.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab90ceaa1f5b9575b4e7134",
@@ -75,17 +205,37 @@
         "cab0ba49430b7cf4.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L07",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Верные строки: 1, 2, 4, 6, 8, 9, 10, 11, 12. Ошибки: 3, 5, 7.\n9 верных из 12. Accuracy=9/12=0.75=75%.",
+        "explanation": "Сравниваем истинную и предсказанную метку в каждой строке. В знаменателе все 12 объектов, а не только spam или только правильные ответы.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "metrics"
+        ],
+        "id": "T-6ab90ceaa1f5b9575b4e7134-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 07/Практика для студентов.md",
-        "sha256": "a50d6ecae4645151ba15b6a03d510a1e6c55461fa7c638d77827e97219a9504e"
+        "elementId": "6ab90ceaa1f5b9575b4e7134",
+        "archive": "Снимки страниц.json",
+        "sha256": "eb3b6ffcc4ce0af95367413e1d53621c84e4350f8b926d7f790ab86cb4b1a8f1"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "metrics"
+      ]
     },
     {
       "id": "T-6ab90ceda1f5b9575b4e7135",
@@ -94,7 +244,7 @@
       "type": "free_response",
       "moduleId": 3,
       "lessonId": "M03-L07",
-      "statement": "### Уровень 2. Сравнение двух моделей\n\nУсловие\n\nПосчитайте accuracy для модели A и модели B. Сделайте вывод, какая модель справилась лучше на этой таблице.\n\n\n| object_id | true_label | model_A_prediction | model_B_prediction |\n| --- | --- | --- | --- |\n| 1 | spam | spam | spam |\n| 2 | normal | normal | normal |\n| 3 | unclear | spam | unclear |\n| 4 | spam | spam | spam |\n| 5 | normal | spam | normal |\n| 6 | unclear | unclear | normal |\n| 7 | spam | normal | spam |\n| 8 | normal | normal | normal |\n| 9 | spam | spam | unclear |\n| 10 | unclear | unclear | unclear |\n| 11 | normal | normal | normal |\n| 12 | spam | unclear | spam |\n\nОтвет\n\nМодель A: ___ верных ответов из 12, accuracy = ___ %.\n\nМодель B: ___ верных ответов из 12, accuracy = ___ %.\n\nВывод: ________________________________________________________________",
+      "statement": "## Уровень 2. Сравнение двух моделей\n\nУсловие\n\nПосчитайте accuracy для модели A и модели B. Сделайте вывод, какая модель справилась лучше на этой таблице.\n\n| object_id | true_label | model_A_prediction | model_B_prediction |\n| --- | --- | --- | --- |\n| 1 | spam | spam | spam |\n| 2 | normal | normal | normal |\n| 3 | unclear | spam | unclear |\n| 4 | spam | spam | spam |\n| 5 | normal | spam | normal |\n| 6 | unclear | unclear | normal |\n| 7 | spam | normal | spam |\n| 8 | normal | normal | normal |\n| 9 | spam | spam | unclear |\n| 10 | unclear | unclear | unclear |\n| 11 | normal | normal | normal |\n| 12 | spam | unclear | spam |\n\nОтвет\n\nМодель A: ___ верных ответов из 12, accuracy = ___ %.\n\nМодель B: ___ верных ответов из 12, accuracy = ___ %.\n\nВывод: ________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab90ceda1f5b9575b4e7135",
@@ -112,17 +262,37 @@
         "cab0ba49430b7cf4.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L07",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Модель A: 8 верных из 12, accuracy=2/3≈66.67%.\nМодель B: 10 из 12, accuracy=5/6≈83.33%.\nНа этой таблице лучше B: на 2 верных ответа больше, разница≈16.67 п.п.",
+        "explanation": "У A ошибки в строках 3, 5, 7, 12; у B —6, 9. Вывод относится к одной проверочной таблице, а не к превосходству на всех новых данных.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "metrics"
+        ],
+        "id": "T-6ab90ceda1f5b9575b4e7135-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 07/Практика для студентов.md",
-        "sha256": "a50d6ecae4645151ba15b6a03d510a1e6c55461fa7c638d77827e97219a9504e"
+        "elementId": "6ab90ceda1f5b9575b4e7135",
+        "archive": "Снимки страниц.json",
+        "sha256": "10d184eaf0d8683eaf116e357166c6cea4f37bf3cdd316a68c40732a5bee9afd"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "metrics"
+      ]
     },
     {
       "id": "T-6ab90cf0a1f5b9575b4e7136",
@@ -131,7 +301,7 @@
       "type": "file",
       "moduleId": 3,
       "lessonId": "M03-L07",
-      "statement": "### Уровень 3. Расчёт accuracy в Python\n\nВариативное задание (уровень 3)\n\nУсловие\n\nОткройте ноутбук lesson_3_7_accuracy.ipynb. Загрузите CSV-файлы, создайте столбец is_correct, рассчитайте accuracy через pandas и проверьте результат через accuracy_score. Для СПО дополнительно сравните несколько значений max_depth у дерева решений на датасете Iris.\n\nВходные данные\n\nНоутбук lesson_3_7_accuracy.ipynb и CSV-файлы к нему (скачайте их из материалов к заданию и положите в одну папку с ноутбуком):\n\n- classification_results_level_1.csv — таблица уровня 1 (12 объектов: true\\_label, predicted\\_label);\n\n- classification_results_two_models.csv — таблица уровня 2 (12 объектов: true\\_label, model\\_A_prediction, model\\_B_prediction);\n\n- iris_accuracy_dataset.csv — датасет Iris для дерева решений (дополнительно для СПО).\n\nОжидаемый результат\n\nЗначение accuracy, посчитанное через pandas (is_correct), совпадает со значением accuracy_score и с ручным расчётом уровней 1–2. Для СПО дополнительно — accuracy дерева решений при нескольких значениях max_depth и короткий вывод: какая глубина дала лучший результат на этой тестовой части.\n\nУровень 1: pandas = ___, accuracy_score = ___, ручной расчёт = ___.\n\nМодель A: accuracy_score = ___; модель B: accuracy_score = ___.\n\nmax_depth и accuracy: ________________________________________________\n\nВывод: ________________________________________________________________",
+      "statement": "## Уровень 3. Расчёт accuracy в Python\n\nВариативное задание (уровень 3)\n\nУсловие\n\nОткройте ноутбук lesson_3_7_accuracy.ipynb. Загрузите CSV-файлы, создайте столбец is_correct, рассчитайте accuracy через pandas и проверьте результат через accuracy_score. Для СПО дополнительно сравните несколько значений max_depth у дерева решений на датасете Iris.\n\nВходные данные\n\nНоутбук `lesson_3_7_accuracy.ipynb` и CSV-файлы к нему (скачайте их из материалов к заданию и положите в одну папку с ноутбуком):\n\n- `classification_results_level_1.csv` — таблица уровня 1 (12 объектов: true\\_label, predicted\\_label);\n\n- `classification_results_two_models.csv` — таблица уровня 2 (12 объектов: true\\_label, model\\_A_prediction, model\\_B_prediction);\n\n- `iris_accuracy_dataset.csv` — датасет Iris для дерева решений (дополнительно для СПО).\n\nОжидаемый результат\n\nЗначение accuracy, посчитанное через pandas (is_correct), совпадает со значением accuracy_score и с ручным расчётом уровней 1–2. Для СПО дополнительно — accuracy дерева решений при нескольких значениях max_depth и короткий вывод: какая глубина дала лучший результат на этой тестовой части.\n\nУровень 1: pandas = ___, accuracy_score = ___, ручной расчёт = ___.\n\nМодель A: accuracy_score = ___; модель B: accuracy_score = ___.\n\nmax_depth и accuracy: ________________________________________________\n\nВывод: ________________________________________________________________\n\n### Материалы к заданию\n\n- lesson_3_7_accuracy.ipynb (20.8 КБ)\n\n- classification_results_level_1.csv (0.2 КБ)\n\n- classification_results_two_models.csv (0.3 КБ)\n\n- iris_accuracy_dataset.csv (3.8 КБ)",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab90cf0a1f5b9575b4e7136",
@@ -149,24 +319,153 @@
         "cab0ba49430b7cf4.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L07",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\nfrom sklearn.metrics import accuracy_score\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\ndf = pd.read_csv('classification_results_level_1.csv')\ndf['is_correct'] = df['true_label'] == df['predicted_label']\npandas_accuracy = df['is_correct'].mean()\nsklearn_accuracy = accuracy_score(df['true_label'],df['predicted_label'])\nassert pandas_accuracy == sklearn_accuracy == 9/12\nprint('Уровень 1:',pandas_accuracy,sklearn_accuracy)\ntwo = pd.read_csv('classification_results_two_models.csv')\nfor name in ['A','B']:\n    print(name,round(accuracy_score(two['true_label'],two['model_'+name+'_prediction']),4))\niris = pd.read_csv('iris_accuracy_dataset.csv')\nX,y = iris.drop(columns='species'),iris['species']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nscores = {}\nfor depth in [1,2,3,4,5]:\n    model = DecisionTreeClassifier(max_depth=depth,random_state=42).fit(X_train,y_train)\n    scores[depth] = accuracy_score(y_test,model.predict(X_test))\n    print('max_depth=',depth,'accuracy=',round(scores[depth],4))\nprint('Лучшие глубины:',[depth for depth,score in scores.items() if score == max(scores.values())])",
+        "answer": "",
+        "explanation": "В уровне 1 обе реализации дают 0.75, у A≈0.6667, у B≈0.8333. Для Iris сравниваются пять глубин на одном разбиении. При нескольких равных максимумах выводятся все, а не произвольный единственный победитель. Выбор по этому test превращает его в валидационную часть; окончательную оценку выбранной глубины нужно делать на новых данных.\n\nЛучшие глубины 2 и 4, обе 0.9211. Для учебного выбора предпочитаю 2 как более простое дерево с равным результатом.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Уровень 1: 0.75 0.75\nA 0.6667\nB 0.8333\nmax_depth= 1 accuracy= 0.6579\nmax_depth= 2 accuracy= 0.9211\nmax_depth= 3 accuracy= 0.8947\nmax_depth= 4 accuracy= 0.9211\nmax_depth= 5 accuracy= 0.8947\nЛучшие глубины: [2, 4]"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 6,
+            "text": "Вычисляем `df['true_label'] == df['predicted_label']` и сохраняем результат в `df['is_correct']`."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `df['is_correct'].mean()` и сохраняем результат в `pandas_accuracy`."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `accuracy_score(df['true_label'], df['predicted_label'])` и сохраняем результат в `sklearn_accuracy`."
+          },
+          {
+            "line": 9,
+            "text": "Проверяем инвариант `pandas_accuracy == sklearn_accuracy == 9 / 12`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 10,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 11,
+            "text": "Читаем учебный CSV в таблицу two. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 12,
+            "text": "Перебираем `['A', 'B']`; очередное значение доступно через `name`."
+          },
+          {
+            "line": 13,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 14,
+            "text": "Читаем учебный CSV в таблицу iris. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 15,
+            "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 16,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 17,
+            "text": "Создаём словарь `scores` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 18,
+            "text": "Перебираем `[1, 2, 3, 4, 5]`; очередное значение доступно через `depth`."
+          },
+          {
+            "line": 19,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+          },
+          {
+            "line": 20,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в scores[depth]."
+          },
+          {
+            "line": 21,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 22,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "csv",
+          "tables",
+          "statistics",
+          "metrics",
+          "split"
+        ],
+        "id": "T-6ab90cf0a1f5b9575b4e7136-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 07/Практика для студентов.md",
-        "sha256": "a50d6ecae4645151ba15b6a03d510a1e6c55461fa7c638d77827e97219a9504e"
+        "elementId": "6ab90cf0a1f5b9575b4e7136",
+        "archive": "Снимки страниц.json",
+        "sha256": "56686ce4545e7453b8fbc8c461d9f6260ba32658ae9d77182c74165afdd3ed7e"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "csv",
+        "tables",
+        "statistics",
+        "metrics",
+        "split"
+      ]
     }
   ],
-  "lecture": "# Оценка качества классификации - accuracy\n\n### СЛАЙД 01. Оценка качества классификации - accuracy\n\nВ этом занятии рассматривается тема «Оценка качества классификации - accuracy». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Цель урока\n\nНаучить сравнивать предсказания модели с правильными ответами и рассчитывать долю верных ответов.\n\nОтдельная задача урока - научить аккуратно интерпретировать полученное число: accuracy относится к тому набору данных, на котором проводилась проверка.\n\nПланируемые результаты\n\nобучающийся различает правильный класс и предсказанный класс;\n\nотмечает верные и неверные ответы в таблице;\n\nрассчитывает accuracy как долю верных ответов;\n\nзаписывает результат дробью, десятичным числом и процентом;\n\nобъясняет полученное значение применительно к проверочным данным;\n\nдля старших групп - рассчитывает accuracy в Python по готовому коду.\n\n### СЛАЙД 03. Ключевая идея\n\nМодель недостаточно просто запустить. Один удачный прогноз ничего не доказывает. Нужно взять набор проверочных примеров, сравнить предсказания с правильными ответами и посчитать, в какой доле строк модель была права.\n\nПравильный класс - это заранее известный ответ для проверочного объекта. Предсказанный класс - ответ, который выдала модель. Предсказание считается верным только тогда, когда эти два класса совпадают.\n\nЧем больше проверочных примеров рассмотрено, тем полнее можно оценить поведение модели на выбранных данных. При этом сами примеры должны соответствовать задаче, для которой проверяется классификатор.\n\n### СЛАЙД 04. Что такое accuracy\n\nAccuracy - это доля верных ответов модели среди всех проверенных примеров. В самом простом виде формула записывается так:\n\naccuracy = количество верных ответов / общее количество ответов\n\nЗначение accuracy находится в диапазоне от 0 до 1. Значение 0 означает, что среди проверенных примеров нет ни одного верного ответа, а значение 1 - что все ответы верны. Чтобы представить результат в процентах, десятичное значение умножают на 100%.\n\nНапример, если модель дала 8 правильных ответов из 10, то accuracy = 8 / 10 = 0.8 = 80%. Это значит, что на этой проверочной таблице модель ответила верно в восьми случаях из десяти.\n\nВажно не путать количество правильных ответов и accuracy. Число 8 показывает количество верных ответов, а 0.8, или 80%, - их долю среди всех проверенных примеров.\n\nЕсли проверочных примеров нет, вычислить accuracy по этой формуле нельзя: в знаменателе получится ноль. Поэтому перед расчётом необходимо убедиться, что проверочная таблица не пустая.\n\n### СЛАЙД 05. Пример ручного расчёта · таблица 1/3\n\nСравним данные в таблице.\nОбъект Правильный класс Предсказание Верно? 1 spam spam да 2 normal normal да 3 unclear spam нет 4 spam spam да 5 normal unclear нет\n\nВ таблице нужно пройти по строкам и отметить, совпал ли правильный класс с предсказанием. После этого считаем количество верных ответов и делим его на общее количество строк.\n\nВ строках 1, 2 и 4 классы совпали, поэтому верных ответов 3. Всего в таблице 5 объектов. Получаем:\n\naccuracy = 3 / 5 = 0.6 = 60%\n\nСледовательно, на этой проверочной таблице модель правильно классифицировала три объекта из пяти. Оставшиеся два ответа неверны, но при расчёте accuracy не учитывается, какие именно классы модель перепутала: для каждой строки важно только совпадение или несовпадение ответа.\n\nЧастая ошибка при ручном расчёте - делить количество верных ответов только на количество ошибок или на количество объектов одного класса. В знаменателе должно находиться общее количество всех проверенных строк.\n\nДля проверки понимания можно закрыть последний столбец таблицы, самостоятельно отметить совпадения, а затем записать результат в трёх формах: обычной дробью, десятичным числом и процентом.\n\n### СЛАЙД 06. Пример ручного расчёта · таблица 2/3\n\nПосмотрите на продолжение таблицы. 3 unclear spam нет 4 spam spam да\n\n### СЛАЙД 07. Пример ручного расчёта · таблица 3/3\n\nПосмотрите на продолжение таблицы. 5 normal unclear нет\n\n### СЛАЙД 08. Accuracy в Python\n\nДля старших групп полезно сначала повторить ручную логику средствами pandas: сравнить два столбца, создать столбец is_correct, посчитать сумму верных ответов и разделить её на количество строк.\n\nПример на слайде:\ndf['is_correct'] = df['true_label'] == df['predicted_label']\n\nПример на слайде:\ncorrect_count = df['is_correct'].sum()\n\nПример на слайде:\naccuracy = correct_count / len(df)\n\nВ первой строке значения столбцов сравниваются попарно. Для каждой строки получается логическое значение: True при совпадении классов и False при несовпадении. Новый столбец is_correct поэтому хранит результат проверки каждого отдельного предсказания.\n\nПри суммировании логических значений True учитывается как 1, а False - как 0. Поэтому переменная correct_count содержит количество верных ответов. Функция len(df) возвращает общее количество строк, и последняя операция воспроизводит формулу accuracy.\n\nДля приведённой выше таблицы столбец is_correct содержал бы три значения True и два значения False. Поэтому correct_count был бы равен 3, len(df) - 5, а accuracy - 0.6.\n\nПри сравнении текстовых меток важно, чтобы обозначения классов были записаны согласованно. Например, значения spam и Spam являются разными строками и при прямом сравнении не совпадут, даже если различие появилось только из-за регистра букв.\n\nПеред выполнением деления также нужно проверить, что df содержит хотя бы одну строку. Для пустого DataFrame выражение correct_count / len(df) приведёт к делению на ноль и не даст корректной оценки качества.\n\nПосле этого можно показать функцию accuracy_score из sklearn.metrics. Важно, чтобы обучающиеся понимали: готовая функция делает тот же самый смысловой расчёт.\n\nРезультат ручного вычисления и результат accuracy_score для одних и тех же правильных и предсказанных классов должны совпадать. Такое сравнение помогает проверить, что столбцы выбраны в верном порядке и содержат ответы для одних и тех же объектов.\n\n### СЛАЙД 09. Почему вывод должен быть аккуратным\n\nAccuracy показывает результат на конкретной проверочной таблице. Нельзя по одной маленькой таблице утверждать, что модель всегда хорошая или всегда плохая. Корректная формулировка звучит так: на этих проверочных данных модель дала такую-то долю верных ответов.\n\nНапример, результат 60% в рассмотренном примере означает только то, что модель дала 3 верных ответа из 5 представленных. Если изменить набор проверочных объектов, значение accuracy также может измениться.\n\nКроме того, одинаковая accuracy может получиться при разных ошибках. Две модели могут дать одинаковое количество верных ответов, но ошибиться на разных объектах или перепутать разные классы. Поэтому таблицу с отдельными предсказаниями полезно сохранять и анализировать вместе с итоговым числом.\n\nПри сравнении нескольких моделей их accuracy следует вычислять на одном и том же наборе проверочных данных. Иначе различие результатов может быть связано не только с моделями, но и с разной сложностью примеров.\n\n### СЛАЙД 10. Итог\n\nК концу урока обучающиеся понимают, что качество классификации можно проверить через сравнение правильных ответов и предсказаний. Accuracy становится первым понятным числом, которое показывает долю верных ответов модели.\n\nРасчёт выполняется в три шага: отметить совпадения классов, подсчитать количество совпадений и разделить его на общее количество проверенных объектов. Результат можно записать дробью, десятичным числом или процентом, обязательно указав, к каким проверочным данным он относится.\n\n### СЛАЙД 11. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 12. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Оценка качества классификации - accuracy\n\n### СЛАЙД 01. Оценка качества классификации - accuracy\n\nВ этом занятии рассматривается тема «Оценка качества классификации - accuracy». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Цель урока\n\nНаучить сравнивать предсказания модели с правильными ответами и рассчитывать долю верных ответов.\n\nОтдельная задача урока - научить аккуратно интерпретировать полученное число: accuracy относится к тому набору данных, на котором проводилась проверка.\n\nПланируемые результаты\n\nобучающийся различает правильный класс и предсказанный класс;\n\nотмечает верные и неверные ответы в таблице;\n\nрассчитывает accuracy как долю верных ответов;\n\nзаписывает результат дробью, десятичным числом и процентом;\n\nобъясняет полученное значение применительно к проверочным данным;\n\nдля старших групп - рассчитывает accuracy в Python по готовому коду.\n\n### СЛАЙД 03. Ключевая идея\n\nМодель недостаточно просто запустить. Один удачный прогноз ничего не доказывает. Нужно взять набор проверочных примеров, сравнить предсказания с правильными ответами и посчитать, в какой доле строк модель была права.\n\nПравильный класс - это заранее известный ответ для проверочного объекта. Предсказанный класс - ответ, который выдала модель. Предсказание считается верным только тогда, когда эти два класса совпадают.\n\nЧем больше проверочных примеров рассмотрено, тем полнее можно оценить поведение модели на выбранных данных. При этом сами примеры должны соответствовать задаче, для которой проверяется классификатор.\n\n### СЛАЙД 04. Что такое accuracy\n\nAccuracy - это доля верных ответов модели среди всех проверенных примеров. В самом простом виде формула записывается так:\n\naccuracy = количество верных ответов / общее количество ответов\n\nЗначение accuracy находится в диапазоне от 0 до 1. Значение 0 означает, что среди проверенных примеров нет ни одного верного ответа, а значение 1 - что все ответы верны. Чтобы представить результат в процентах, десятичное значение умножают на 100%.\n\nНапример, если модель дала 8 правильных ответов из 10, то accuracy = 8 / 10 = 0.8 = 80%. Это значит, что на этой проверочной таблице модель ответила верно в восьми случаях из десяти.\n\nВажно не путать количество правильных ответов и accuracy. Число 8 показывает количество верных ответов, а 0.8, или 80%, - их долю среди всех проверенных примеров.\n\nЕсли проверочных примеров нет, вычислить accuracy по этой формуле нельзя: в знаменателе получится ноль. Поэтому перед расчётом необходимо убедиться, что проверочная таблица не пустая.\n\n### СЛАЙД 05. Пример ручного расчёта · таблица 1/3\n\nСравним данные в таблице.\nОбъект Правильный класс Предсказание Верно? 1 spam spam да 2 normal normal да 3 unclear spam нет 4 spam spam да 5 normal unclear нет\n\nВ таблице нужно пройти по строкам и отметить, совпал ли правильный класс с предсказанием. После этого считаем количество верных ответов и делим его на общее количество строк.\n\nВ строках 1, 2 и 4 классы совпали, поэтому верных ответов 3. Всего в таблице 5 объектов. Получаем:\n\naccuracy = 3 / 5 = 0.6 = 60%\n\nСледовательно, на этой проверочной таблице модель правильно классифицировала три объекта из пяти. Оставшиеся два ответа неверны, но при расчёте accuracy не учитывается, какие именно классы модель перепутала: для каждой строки важно только совпадение или несовпадение ответа.\n\nЧастая ошибка при ручном расчёте - делить количество верных ответов только на количество ошибок или на количество объектов одного класса. В знаменателе должно находиться общее количество всех проверенных строк.\n\nДля проверки понимания можно закрыть последний столбец таблицы, самостоятельно отметить совпадения, а затем записать результат в трёх формах: обычной дробью, десятичным числом и процентом.\n\n### СЛАЙД 06. Пример ручного расчёта · таблица 2/3\n\nПосмотрите на продолжение таблицы. 3 unclear spam нет 4 spam spam да\n\n### СЛАЙД 07. Пример ручного расчёта · таблица 3/3\n\nПосмотрите на продолжение таблицы. 5 normal unclear нет\n\n### СЛАЙД 08. Accuracy в Python\n\nДля старших групп полезно сначала повторить ручную логику средствами pandas: сравнить два столбца, создать столбец is_correct, посчитать сумму верных ответов и разделить её на количество строк.\n\n\n\n```python\ndf['is_correct'] = df['true_label'] == df['predicted_label']\n```\n\n\n\n\n\n```python\ncorrect_count = df['is_correct'].sum()\n```\n\n\n\n\n\n```python\naccuracy = correct_count / len(df)\n```\n\n\n\nВ первой строке значения столбцов сравниваются попарно. Для каждой строки получается логическое значение: True при совпадении классов и False при несовпадении. Новый столбец is_correct поэтому хранит результат проверки каждого отдельного предсказания.\n\nПри суммировании логических значений True учитывается как 1, а False - как 0. Поэтому переменная correct_count содержит количество верных ответов. Функция len(df) возвращает общее количество строк, и последняя операция воспроизводит формулу accuracy.\n\nДля приведённой выше таблицы столбец is_correct содержал бы три значения True и два значения False. Поэтому correct_count был бы равен 3, len(df) - 5, а accuracy - 0.6.\n\nПри сравнении текстовых меток важно, чтобы обозначения классов были записаны согласованно. Например, значения spam и Spam являются разными строками и при прямом сравнении не совпадут, даже если различие появилось только из-за регистра букв.\n\nПеред выполнением деления также нужно проверить, что df содержит хотя бы одну строку. Для пустого DataFrame выражение correct_count / len(df) приведёт к делению на ноль и не даст корректной оценки качества.\n\nПосле этого можно показать функцию accuracy_score из sklearn.metrics. Важно, чтобы обучающиеся понимали: готовая функция делает тот же самый смысловой расчёт.\n\nРезультат ручного вычисления и результат accuracy_score для одних и тех же правильных и предсказанных классов должны совпадать. Такое сравнение помогает проверить, что столбцы выбраны в верном порядке и содержат ответы для одних и тех же объектов.\n\n### СЛАЙД 09. Почему вывод должен быть аккуратным\n\nAccuracy показывает результат на конкретной проверочной таблице. Нельзя по одной маленькой таблице утверждать, что модель всегда хорошая или всегда плохая. Корректная формулировка звучит так: на этих проверочных данных модель дала такую-то долю верных ответов.\n\nНапример, результат 60% в рассмотренном примере означает только то, что модель дала 3 верных ответа из 5 представленных. Если изменить набор проверочных объектов, значение accuracy также может измениться.\n\nКроме того, одинаковая accuracy может получиться при разных ошибках. Две модели могут дать одинаковое количество верных ответов, но ошибиться на разных объектах или перепутать разные классы. Поэтому таблицу с отдельными предсказаниями полезно сохранять и анализировать вместе с итоговым числом.\n\nПри сравнении нескольких моделей их accuracy следует вычислять на одном и том же наборе проверочных данных. Иначе различие результатов может быть связано не только с моделями, но и с разной сложностью примеров.\n\n### СЛАЙД 10. Итог\n\nК концу урока обучающиеся понимают, что качество классификации можно проверить через сравнение правильных ответов и предсказаний. Accuracy становится первым понятным числом, которое показывает долю верных ответов модели.\n\nРасчёт выполняется в три шага: отметить совпадения классов, подсчитать количество совпадений и разделить его на общее количество проверенных объектов. Результат можно записать дробью, десятичным числом или процентом, обязательно указав, к каким проверочным данным он относится.\n\n### СЛАЙД 11. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 12. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Оценка качества классификации - accuracy\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Практическое задание\n\n\n### Практическая работа по уровням\n\n\n#### Уровень 1\n\nПо таблице с правильными классами и предсказаниями вручную отметить верные ответы, посчитать их количество, найти accuracy и записать результат в процентах.\n\n\n#### Уровень 2\n\nПо таблице с предсказаниями двух моделей вручную посчитать accuracy для каждой модели и определить, какая модель справилась лучше на этой проверочной таблице.\n\n\n#### Уровень 3\n\nВ Python загрузить CSV-файл, создать столбец is_correct, рассчитать accuracy через pandas, затем проверить результат через accuracy_score. Для СПО дополнительно можно посчитать accuracy модели на датасете Iris и сравнить несколько значений max_depth у дерева решений.\n\n\n### Уровень 1. Ручной расчёт accuracy\n\nДана таблица с правильными классами и предсказаниями модели. Отметьте, где модель ответила верно, посчитайте долю верных ответов и запишите результат в процентах.\n\n\n| object_id | true_label | predicted_label | верно? |\n| --- | --- | --- | --- |\n| 1 | spam | spam |  |\n| 2 | normal | normal |  |\n| 3 | unclear | spam |  |\n| 4 | spam | spam |  |\n| 5 | normal | unclear |  |\n| 6 | unclear | unclear |  |\n| 7 | spam | normal |  |\n| 8 | normal | normal |  |\n| 9 | spam | spam |  |\n| 10 | unclear | unclear |  |\n| 11 | normal | normal |  |\n| 12 | spam | spam |  |\n\nЗапишите: верных ответов ___ из 12. Accuracy = ___ / 12 = ___ = ___ %.\n\n\n### Уровень 2. Сравнение двух моделей\n\nПосчитайте accuracy для модели A и модели B. Сделайте вывод, какая модель справилась лучше на этой таблице.\n\n\n| object_id | true_label | model_A_prediction | model_B_prediction |\n| --- | --- | --- | --- |\n| 1 | spam | spam | spam |\n| 2 | normal | normal | normal |\n| 3 | unclear | spam | unclear |\n| 4 | spam | spam | spam |\n| 5 | normal | spam | normal |\n| 6 | unclear | unclear | normal |\n| 7 | spam | normal | spam |\n| 8 | normal | normal | normal |\n| 9 | spam | spam | unclear |\n| 10 | unclear | unclear | unclear |\n| 11 | normal | normal | normal |\n| 12 | spam | unclear | spam |\n\nМодель A: ___ верных ответов из 12, accuracy = ___ %.\n\nМодель B: ___ верных ответов из 12, accuracy = ___ %.\n\nВывод: ________________________________________________________________\n\n\n### Уровень 3. Расчёт accuracy в Python\n\nОткройте ноутбук lesson_3_7_accuracy.ipynb. Загрузите CSV-файлы, создайте столбец is_correct, рассчитайте accuracy через pandas и проверьте результат через accuracy_score. Для СПО дополнительно сравните несколько значений max_depth у дерева решений на датасете Iris.\n\n\n### Критерии самопроверки\n\n- в уровне 1 верно отмечены совпадения и ошибки;\n\n- accuracy записана как дробь, десятичное число и процент;\n\n- в уровне 2 вывод сформулирован аккуратно: «на этой таблице», а не «всегда»;\n\n- в уровне 3 результат pandas совпадает с accuracy_score.\n\n\n#### Материалы к заданию\n\n\n### Задание №1\n\n\n### Уровень 1. Ручной расчёт accuracy\n\nУсловие\n\nДана таблица с правильными классами и предсказаниями модели. Отметьте, где модель ответила верно, посчитайте долю верных ответов и запишите результат в процентах.\n\n\n| object_id | true_label | predicted_label | верно? |\n| --- | --- | --- | --- |\n| 1 | spam | spam |  |\n| 2 | normal | normal |  |\n| 3 | unclear | spam |  |\n| 4 | spam | spam |  |\n| 5 | normal | unclear |  |\n| 6 | unclear | unclear |  |\n| 7 | spam | normal |  |\n| 8 | normal | normal |  |\n| 9 | spam | spam |  |\n| 10 | unclear | unclear |  |\n| 11 | normal | normal |  |\n| 12 | spam | spam |  |\n\nОтвет\n\nЗапишите: верных ответов ___ из 12. Accuracy = ___ / 12 = ___ = ___ %.\n\n\n### Задание №2\n\n\n### Уровень 2. Сравнение двух моделей\n\nУсловие\n\nПосчитайте accuracy для модели A и модели B. Сделайте вывод, какая модель справилась лучше на этой таблице.\n\n\n| object_id | true_label | model_A_prediction | model_B_prediction |\n| --- | --- | --- | --- |\n| 1 | spam | spam | spam |\n| 2 | normal | normal | normal |\n| 3 | unclear | spam | unclear |\n| 4 | spam | spam | spam |\n| 5 | normal | spam | normal |\n| 6 | unclear | unclear | normal |\n| 7 | spam | normal | spam |\n| 8 | normal | normal | normal |\n| 9 | spam | spam | unclear |\n| 10 | unclear | unclear | unclear |\n| 11 | normal | normal | normal |\n| 12 | spam | unclear | spam |\n\nОтвет\n\nМодель A: ___ верных ответов из 12, accuracy = ___ %.\n\nМодель B: ___ верных ответов из 12, accuracy = ___ %.\n\nВывод: ________________________________________________________________\n\n\n### Задание №3\n\n\n### Уровень 3. Расчёт accuracy в Python\n\nВариативное задание (уровень 3)\n\nУсловие\n\nОткройте ноутбук lesson_3_7_accuracy.ipynb. Загрузите CSV-файлы, создайте столбец is_correct, рассчитайте accuracy через pandas и проверьте результат через accuracy_score. Для СПО дополнительно сравните несколько значений max_depth у дерева решений на датасете Iris.\n\nВходные данные\n\nНоутбук lesson_3_7_accuracy.ipynb и CSV-файлы к нему (скачайте их из материалов к заданию и положите в одну папку с ноутбуком):\n\n- classification_results_level_1.csv — таблица уровня 1 (12 объектов: true\\_label, predicted\\_label);\n\n- classification_results_two_models.csv — таблица уровня 2 (12 объектов: true\\_label, model\\_A_prediction, model\\_B_prediction);\n\n- iris_accuracy_dataset.csv — датасет Iris для дерева решений (дополнительно для СПО).\n\nОжидаемый результат\n\nЗначение accuracy, посчитанное через pandas (is_correct), совпадает со значением accuracy_score и с ручным расчётом уровней 1–2. Для СПО дополнительно — accuracy дерева решений при нескольких значениях max_depth и короткий вывод: какая глубина дала лучший результат на этой тестовой части.\n\nУровень 1: pandas = ___, accuracy_score = ___, ручной расчёт = ___.\n\nМодель A: accuracy_score = ___; модель B: accuracy_score = ___.\n\nmax_depth и accuracy: ________________________________________________\n\nВывод: ________________________________________________________________\n\n\n### Таблицы из теоретической части\n\n\n| Объект | Правильный класс | Предсказание | Верно? |\n| --- | --- | --- | --- |\n| 1 | spam | spam | да |\n| 2 | normal | normal | да |\n| 3 | unclear | spam | нет |\n| 4 | spam | spam | да |\n| 5 | normal | unclear | нет |\n\n\n### Файлы данных\n\nПеред запуском программы скопируйте нужные файлы из папки «Данные» в рабочую папку рядом с программой. Имена файлов совпадают с именами в исходных примерах.\n\nclassification_results_two_models.csv\niris_accuracy_dataset.csv\nclassification_results_level_1.csv",
   "theory": [
     {
       "title": "Оценка качества классификации - accuracy",
@@ -493,5 +792,43 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "output",
+    "loops",
+    "conditions",
+    "logic",
+    "csv",
+    "tables",
+    "statistics",
+    "metrics",
+    "split"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M03-L07-lecture.pdf",
+      "name": "Оценка качества классификации - accuracy — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "538685fa15e4fcbd8827403a4699a151448b553d3438cc8171e64dfde44b3ffe",
+      "source": {
+        "path": "Снимки страниц.json / 48b8ac342374ae84748b7b7c",
+        "sha256": "7f786be0a71aa81badf3b35fcd3da856ec16554fc6c124640f810e0c1fa00073"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M03-L07-presentation.pdf",
+      "name": "Оценка качества классификации - accuracy — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 12,
+      "sha256": "4f8b26aab83de759181fd3961ec033fe3b015fe31ba26d78f31d464dc9bf3d93",
+      "source": {
+        "path": "Модуль 3/Занятие 07/Презентация — итоговая.pptx",
+        "sha256": "9637516d954b122eec2bbcbdc09831f1b9c5462f55d5f57f9cf4712235cf728d"
+      }
+    }
   }
 }

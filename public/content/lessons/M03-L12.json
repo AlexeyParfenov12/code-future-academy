@@ -10,7 +10,7 @@
   "slideCount": 15,
   "fileCount": 0,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Переобучение и проверка модели на новых данных  В этом занятии рассматривается тема «Переобучение и проверка модели на новых данных». Будем опираться на пример",
+  "description": "В этом занятии рассматривается тема «Переобучение и проверка модели на новых данных». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L12",
-      "statement": "Рекомендуемое время: 10 мин. · Максимум: 2 балл(а/ов).\n\nЦель\n\nЦель: получить две независимые части данных и убедиться, что размеры и доли классов выглядят разумно.\n\nЧто нужно сделать\n\n- Заполните пропуски TODO в коде.\n\n- Запустите ячейку и запишите размеры выборок.\n\n- Проверьте, что доля класса 1 в train и test близка благодаря параметру stratify=y .\n\nИсходный код\n\n\n```\nX_train, X_test, y_train, y_test = train_test_split(\nX,\ny,\ntest_size=TODO,\nrandom_state=42,\nstratify=TODO,\n)\n\nprint('X_train:', X_train.shape)\nprint('X_test: ', X_test.shape)\nprint('Доля класса 1 в train:', round(y_train.mean(), 3))\nprint('Доля класса 1 в test: ', round(y_test.mean(), 3))\n\nassert X_train.shape == (420, 20)\nassert X_test.shape == (180, 20)\n```\n\nЗапишите результат\n\n________________________________________________________________________________",
+      "statement": "# Задание №1. Разделите данные и проверьте выборки\n\n*Рекомендуемое время: 10 мин. · Максимум: 2 балл(а/ов).*\n\nЦель\n\nЦель: получить две независимые части данных и убедиться, что размеры и доли классов выглядят разумно.\n\nЧто нужно сделать\n\n- Заполните пропуски `TODO` в коде.\n\n- Запустите ячейку и запишите размеры выборок.\n\n- Проверьте, что доля класса 1 в `train` и `test` близка благодаря параметру `stratify=y`.\n\nИсходный код\n\n```python\nX_train, X_test, y_train, y_test = train_test_split(\nX,\ny,\ntest_size=TODO,\nrandom_state=42,\nstratify=TODO,\n)\n\nprint('X_train:', X_train.shape)\nprint('X_test: ', X_test.shape)\nprint('Доля класса 1 в train:', round(y_train.mean(), 3))\nprint('Доля класса 1 в test: ', round(y_test.mean(), 3))\n\nassert X_train.shape == (420, 20)\nassert X_test.shape == (180, 20)\n```\n\nЗапишите результат\n\n________________________________________________________________________________\n\n________________________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba90be48825a15986fe205",
@@ -33,17 +33,103 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\nprint('X_train:',X_train.shape)\nprint('X_test:',X_test.shape)\nprint('Доля1 train:',round(y_train.mean(),3))\nprint('Доля1 test:',round(y_test.mean(),3))\nassert X_train.shape == (420,20) and X_test.shape == (180,20)",
+        "answer": "",
+        "explanation": "test_size=0.30 выделяет 180 из 600 объектов, остальные 420 используются для обучения. stratify=y сохраняет близкие доли бинарных классов. Ни одна модель ещё не обучалась на test.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "X_train: (420, 20)\nX_test: (180, 20)\nДоля1 train: 0.49\nДоля1 test: 0.489"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 9,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 10,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 11,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 12,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 13,
+            "text": "Проверяем инвариант `X_train.shape == (420, 20) and X_test.shape == (180, 20)`. При нарушении программа сообщит об ошибке."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "statistics",
+          "metrics",
+          "split",
+          "classification"
+        ],
+        "id": "T-6aba90be48825a15986fe205-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 12/Практика для студентов.md",
-        "sha256": "5087935f373f2f6ade8326d76dc29f97f5d3379b1c42ab5c5e15321fc3678ea3"
+        "elementId": "6aba90be48825a15986fe205",
+        "archive": "Снимки страниц.json",
+        "sha256": "7879a4472033b157811dca0adc60e51f3a2bd11c9ab8bf2c9a93b30dc5c32e4e"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "statistics",
+        "metrics",
+        "split",
+        "classification"
+      ]
     },
     {
       "id": "T-6aba90be48825a15986fe208",
@@ -52,7 +138,7 @@
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L12",
-      "statement": "Рекомендуемое время: 12 мин. · Максимум: 3 балл(а/ов).\n\nЦель\n\nЦель: получить модель с ограниченной сложностью и измерить качество на обеих выборках.\n\nЧто нужно сделать\n\n- Создайте DecisionTreeClassifier с max_depth=3 и random_state=42 .\n\n- Обучите модель только на X_train и y_train .\n\n- Получите предсказания для train и test .\n\n- Вычислите accuracy и разрыв train_acc − test_acc .\n\nИсходный код\n\n\n```\ntree_limited = DecisionTreeClassifier(\nmax_depth=TODO,\nrandom_state=42,\n)\n\ntree_limited.fit(TODO, TODO)\n\ntrain_pred_limited = tree_limited.predict(TODO)\ntest_pred_limited = tree_limited.predict(TODO)\n\ntrain_acc_limited = accuracy_score(y_train, train_pred_limited)\ntest_acc_limited = accuracy_score(y_test, test_pred_limited)\ngap_limited = train_acc_limited - test_acc_limited\n\nprint('Train accuracy:', round(train_acc_limited, 3))\nprint('Test accuracy: ', round(test_acc_limited, 3))\nprint('Разрыв: ', round(gap_limited, 3))\n\nassert 0.75 <= train_acc_limited <= 0.85\nassert 0.65 <= test_acc_limited <= 0.77\n```\n\n________________________________________________________________________________",
+      "statement": "# Задание №2. Обучите ограниченное дерево решений\n\n*Рекомендуемое время: 12 мин. · Максимум: 3 балл(а/ов).*\n\nЦель\n\nЦель: получить модель с ограниченной сложностью и измерить качество на обеих выборках.\n\nЧто нужно сделать\n\n- Создайте `DecisionTreeClassifier` с `max_depth=3` и `random_state=42`.\n\n- Обучите модель только на `X_train` и `y_train`.\n\n- Получите предсказания для `train` и `test`.\n\n- Вычислите `accuracy` и разрыв `train_acc − test_acc`.\n\nИсходный код\n\n```python\ntree_limited = DecisionTreeClassifier(\nmax_depth=TODO,\nrandom_state=42,\n)\n\ntree_limited.fit(TODO, TODO)\n\ntrain_pred_limited = tree_limited.predict(TODO)\ntest_pred_limited = tree_limited.predict(TODO)\n\ntrain_acc_limited = accuracy_score(y_train, train_pred_limited)\ntest_acc_limited = accuracy_score(y_test, test_pred_limited)\ngap_limited = train_acc_limited - test_acc_limited\n\nprint('Train accuracy:', round(train_acc_limited, 3))\nprint('Test accuracy: ', round(test_acc_limited, 3))\nprint('Разрыв: ', round(gap_limited, 3))\n\nassert 0.75 <= train_acc_limited <= 0.85\nassert 0.65 <= test_acc_limited <= 0.77\n```\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba90be48825a15986fe208",
@@ -65,17 +151,109 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ntree_limited = DecisionTreeClassifier(max_depth=3,random_state=42).fit(X_train,y_train)\ntrain_acc_limited = accuracy_score(y_train,tree_limited.predict(X_train))\ntest_acc_limited = accuracy_score(y_test,tree_limited.predict(X_test))\ngap_limited = train_acc_limited-test_acc_limited\nprint('Train:',round(train_acc_limited,3),'Test:',round(test_acc_limited,3),'Разрыв:',round(gap_limited,3))\nassert .75 <= train_acc_limited <= .85\nassert .65 <= test_acc_limited <= .77",
+        "answer": "",
+        "explanation": "Дерево ограничено тремя последовательными проверками. Обучение использует только train; обе метрики считаются на соответствующих входах и метках. Разрыв не заменяет сами уровни качества: две одинаково низкие точности не означают хорошую модель.\n\nTrain≈0.798, test≈0.711, разрыв≈0.087.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Train: 0.798 Test: 0.711 Разрыв: 0.087"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 9,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_limited."
+          },
+          {
+            "line": 10,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_limited."
+          },
+          {
+            "line": 11,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_limited."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `train_acc_limited - test_acc_limited` и сохраняем результат в `gap_limited`."
+          },
+          {
+            "line": 13,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 14,
+            "text": "Проверяем инвариант `0.75 <= train_acc_limited <= 0.85`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 15,
+            "text": "Проверяем инвариант `0.65 <= test_acc_limited <= 0.77`. При нарушении программа сообщит об ошибке."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "metrics",
+          "split",
+          "classification"
+        ],
+        "id": "T-6aba90be48825a15986fe208-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 12/Практика для студентов.md",
-        "sha256": "5087935f373f2f6ade8326d76dc29f97f5d3379b1c42ab5c5e15321fc3678ea3"
+        "elementId": "6aba90be48825a15986fe208",
+        "archive": "Снимки страниц.json",
+        "sha256": "f33f0e2f169d4adbeb29cfb2cd2b37f5afd45ddca93245cda58615d9ae6fbfad"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "metrics",
+        "split",
+        "classification"
+      ]
     },
     {
       "id": "T-6aba90be48825a15986fe20b",
@@ -84,7 +262,7 @@
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L12",
-      "statement": "Рекомендуемое время: 12 мин. · Максимум: 3 балл(а/ов).\n\nЦель\n\nЦель: увидеть, как слишком гибкая модель подстраивается под обучающие данные.\n\nИсходный код\n\n\n```\ntree_deep = DecisionTreeClassifier(\nmax_depth=None,\nrandom_state=42,\n)\n\ntree_deep.fit(TODO, TODO)\n\ntrain_acc_deep = accuracy_score(\ny_train,\ntree_deep.predict(TODO),\n)\ntest_acc_deep = accuracy_score(\ny_test,\ntree_deep.predict(TODO),\n)\ngap_deep = TODO\n\nprint('Train accuracy:', round(train_acc_deep, 3))\nprint('Test accuracy: ', round(test_acc_deep, 3))\nprint('Разрыв: ', round(gap_deep, 3))\nprint('Фактическая глубина:', tree_deep.get_depth())\nprint('Количество листьев:', tree_deep.get_n_leaves())\n\nassert train_acc_deep >= 0.99\nassert gap_deep >= 0.20\n```\n\nСравните модели\n\n\n| Модель | Accuracy train | Accuracy test | Разрыв | Предварительный вывод |\n| --- | --- | --- | --- | --- |\n| Ограниченное дерево | ________ | ________ | ________ | ________________ |\n| Глубокое дерево | ________ | ________ | ________ | ________________ |",
+      "statement": "# Задание №3. Обучите дерево без ограничения глубины\n\n*Рекомендуемое время: 12 мин. · Максимум: 3 балл(а/ов).*\n\nЦель\n\nЦель: увидеть, как слишком гибкая модель подстраивается под обучающие данные.\n\nИсходный код\n\n```python\ntree_deep = DecisionTreeClassifier(\nmax_depth=None,\nrandom_state=42,\n)\n\ntree_deep.fit(TODO, TODO)\n\ntrain_acc_deep = accuracy_score(\ny_train,\ntree_deep.predict(TODO),\n)\ntest_acc_deep = accuracy_score(\ny_test,\ntree_deep.predict(TODO),\n)\ngap_deep = TODO\n\nprint('Train accuracy:', round(train_acc_deep, 3))\nprint('Test accuracy: ', round(test_acc_deep, 3))\nprint('Разрыв: ', round(gap_deep, 3))\nprint('Фактическая глубина:', tree_deep.get_depth())\nprint('Количество листьев:', tree_deep.get_n_leaves())\n\nassert train_acc_deep >= 0.99\nassert gap_deep >= 0.20\n```\n\nСравните модели\n\n| Модель | Accuracy train | Accuracy test | Разрыв | Предварительный вывод |\n| --- | --- | --- | --- | --- |\n| Ограниченное дерево | ________ | ________ | ________ | ________________ |\n| Глубокое дерево | ________ | ________ | ________ | ________________ |",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba90be48825a15986fe20b",
@@ -97,17 +275,129 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ntree_limited = DecisionTreeClassifier(max_depth=3,random_state=42).fit(X_train,y_train)\ntrain_acc_limited = accuracy_score(y_train,tree_limited.predict(X_train))\ntest_acc_limited = accuracy_score(y_test,tree_limited.predict(X_test))\ngap_limited = train_acc_limited-test_acc_limited\ntree_deep = DecisionTreeClassifier(max_depth=None,random_state=42).fit(X_train,y_train)\ntrain_acc_deep = accuracy_score(y_train,tree_deep.predict(X_train))\ntest_acc_deep = accuracy_score(y_test,tree_deep.predict(X_test))\ngap_deep = train_acc_deep-test_acc_deep\nprint('Ограниченная:',round(train_acc_limited,3),round(test_acc_limited,3),round(gap_limited,3))\nprint('Глубокая:',round(train_acc_deep,3),round(test_acc_deep,3),round(gap_deep,3))\nprint('Глубина:',tree_deep.get_depth(),'листьев:',tree_deep.get_n_leaves())\nassert train_acc_deep >= .99 and gap_deep >= .20",
+        "answer": "",
+        "explanation": "Неограниченное дерево подстраивается под шум обучающей части: train близок к 1, но test заметно ниже. Сравнение с ограниченным деревом проводится при тех же данных. Это признаки переобучения, а не подтверждение качества по идеальной обучающей доле.\n\nГлубокое дерево: train1.0, test≈0.694, разрыв≈0.306, глубина 13, 62 листа. Ограниченное дерево имело разрыв≈0.087.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Ограниченная: 0.798 0.711 0.087\nГлубокая: 1.0 0.694 0.306\nГлубина: 13 листьев: 62"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 9,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_limited."
+          },
+          {
+            "line": 10,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_limited."
+          },
+          {
+            "line": 11,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_limited."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `train_acc_limited - test_acc_limited` и сохраняем результат в `gap_limited`."
+          },
+          {
+            "line": 13,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_deep."
+          },
+          {
+            "line": 14,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_deep."
+          },
+          {
+            "line": 15,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_deep."
+          },
+          {
+            "line": 16,
+            "text": "Вычисляем `train_acc_deep - test_acc_deep` и сохраняем результат в `gap_deep`."
+          },
+          {
+            "line": 17,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 18,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 19,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 20,
+            "text": "Проверяем инвариант `train_acc_deep >= 0.99 and gap_deep >= 0.2`. При нарушении программа сообщит об ошибке."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "metrics",
+          "split",
+          "classification"
+        ],
+        "id": "T-6aba90be48825a15986fe20b-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 12/Практика для студентов.md",
-        "sha256": "5087935f373f2f6ade8326d76dc29f97f5d3379b1c42ab5c5e15321fc3678ea3"
+        "elementId": "6aba90be48825a15986fe20b",
+        "archive": "Снимки страниц.json",
+        "sha256": "552b22be06ebfe3587a607ee6432069dcde5297b4283c1685de566783e4905fe"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "metrics",
+        "split",
+        "classification"
+      ]
     },
     {
       "id": "T-6aba90be48825a15986fe20e",
@@ -116,7 +406,7 @@
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L12",
-      "statement": "Рекомендуемое время: 14 мин. · Максимум: 4 балл(а/ов).\n\nЦель\n\nЦель: формализовать учебное правило и проверить его автоматическими тестами.\n\nУчебное правило\n\nЕсли train_accuracy ≥ 0,90 и разрыв между train и test не меньше 0,10, возвращаем «Есть признаки переобучения». Если обе точности ниже 0,70, возвращаем «Возможно недообучение». В остальных случаях — «Явных признаков переобучения нет».\n\nИсходный код\n\n\n```\ndef diagnose_model(train_accuracy, test_accuracy, gap_threshold=0.10):\ngap = TODO\n\nif TODO:\nreturn 'Есть признаки переобучения'\nelif TODO:\nreturn 'Возможно недообучение'\nelse:\nreturn 'Явных признаков переобучения нет'\n\n\nassert diagnose_model(0.99, 0.70) == 'Есть признаки переобучения'\nassert diagnose_model(0.62, 0.60) == 'Возможно недообучение'\nassert diagnose_model(0.82, 0.76) == 'Явных признаков переобучения нет'\n\nprint(diagnose_model(train_acc_limited, test_acc_limited))\nprint(diagnose_model(train_acc_deep, test_acc_deep))\n```\n\nОбъясните одним предложением, почему функция использует сразу два условия для переобучения: высокий train и большой разрыв\n\n________________________________________________________________________________",
+      "statement": "# Задание №4. Напишите функцию диагностики\n\n*Рекомендуемое время: 14 мин. · Максимум: 4 балл(а/ов).*\n\nЦель\n\nЦель: формализовать учебное правило и проверить его автоматическими тестами.\n\nУчебное правило\n\nЕсли `train_accuracy ≥ 0,90` и разрыв между `train` и `test` не меньше 0,10, возвращаем «Есть признаки переобучения». Если обе точности ниже 0,70, возвращаем «Возможно недообучение». В остальных случаях — «Явных признаков переобучения нет».\n\nИсходный код\n\n```python\ndef diagnose_model(train_accuracy, test_accuracy, gap_threshold=0.10):\ngap = TODO\n\nif TODO:\nreturn 'Есть признаки переобучения'\nelif TODO:\nreturn 'Возможно недообучение'\nelse:\nreturn 'Явных признаков переобучения нет'\n\nassert diagnose_model(0.99, 0.70) == 'Есть признаки переобучения'\nassert diagnose_model(0.62, 0.60) == 'Возможно недообучение'\nassert diagnose_model(0.82, 0.76) == 'Явных признаков переобучения нет'\n\nprint(diagnose_model(train_acc_limited, test_acc_limited))\nprint(diagnose_model(train_acc_deep, test_acc_deep))\n```\n\nОбъясните одним предложением, почему функция использует сразу два условия для переобучения: высокий train и большой разрыв\n\n________________________________________________________________________________\n\n________________________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba90be48825a15986fe20e",
@@ -129,17 +419,175 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ntree_limited = DecisionTreeClassifier(max_depth=3,random_state=42).fit(X_train,y_train)\ntrain_acc_limited = accuracy_score(y_train,tree_limited.predict(X_train))\ntest_acc_limited = accuracy_score(y_test,tree_limited.predict(X_test))\ngap_limited = train_acc_limited-test_acc_limited\ntree_deep = DecisionTreeClassifier(max_depth=None,random_state=42).fit(X_train,y_train)\ntrain_acc_deep = accuracy_score(y_train,tree_deep.predict(X_train))\ntest_acc_deep = accuracy_score(y_test,tree_deep.predict(X_test))\ngap_deep = train_acc_deep-test_acc_deep\ndef diagnose_model(train_accuracy,test_accuracy,gap_threshold=.10):\n    gap = train_accuracy-test_accuracy\n    if train_accuracy >= .90 and gap+1e-12 >= gap_threshold:\n        return 'Есть признаки переобучения'\n    elif train_accuracy < .70 and test_accuracy < .70:\n        return 'Возможно недообучение'\n    return 'Явных признаков переобучения нет'\nassert diagnose_model(.99,.70) == 'Есть признаки переобучения'\nassert diagnose_model(.62,.60) == 'Возможно недообучение'\nassert diagnose_model(.82,.76) == 'Явных признаков переобучения нет'\nassert diagnose_model(.90,.80) == 'Есть признаки переобучения'\nprint(diagnose_model(train_acc_limited,test_acc_limited))\nprint(diagnose_model(train_acc_deep,test_acc_deep))",
+        "answer": "",
+        "explanation": "Нужно одновременно высокое качество на обучении и заметное отставание на новых данных: одна высокая или одна низкая точность недостаточна. Два сравнения для недообучения строгие (<0.70). Малый допуск 1e−12 компенсирует двоичное представление разности 0.90−0.80 на включённой границе 0.10.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Явных признаков переобучения нет\nЕсть признаки переобучения"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 9,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_limited."
+          },
+          {
+            "line": 10,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_limited."
+          },
+          {
+            "line": 11,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_limited."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `train_acc_limited - test_acc_limited` и сохраняем результат в `gap_limited`."
+          },
+          {
+            "line": 13,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_deep."
+          },
+          {
+            "line": 14,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_deep."
+          },
+          {
+            "line": 15,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_deep."
+          },
+          {
+            "line": 16,
+            "text": "Вычисляем `train_acc_deep - test_acc_deep` и сохраняем результат в `gap_deep`."
+          },
+          {
+            "line": 17,
+            "text": "Определяем функцию `diagnose_model` с параметрами `train_accuracy, test_accuracy, gap_threshold=0.1`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 18,
+            "text": "Вычисляем `train_accuracy - test_accuracy` и сохраняем результат в `gap`."
+          },
+          {
+            "line": 19,
+            "text": "Проверяем условие `train_accuracy >= 0.9 and gap + 1e-12 >= gap_threshold`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 20,
+            "text": "Возвращаем из функции `'Есть признаки переобучения'`."
+          },
+          {
+            "line": 21,
+            "text": "Проверяем условие `train_accuracy < 0.7 and test_accuracy < 0.7`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 22,
+            "text": "Возвращаем из функции `'Возможно недообучение'`."
+          },
+          {
+            "line": 23,
+            "text": "Возвращаем из функции `'Явных признаков переобучения нет'`."
+          },
+          {
+            "line": 24,
+            "text": "Проверяем инвариант `diagnose_model(0.99, 0.7) == 'Есть признаки переобучения'`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 25,
+            "text": "Проверяем инвариант `diagnose_model(0.62, 0.6) == 'Возможно недообучение'`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 26,
+            "text": "Проверяем инвариант `diagnose_model(0.82, 0.76) == 'Явных признаков переобучения нет'`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 27,
+            "text": "Проверяем инвариант `diagnose_model(0.9, 0.8) == 'Есть признаки переобучения'`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 28,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 29,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "conditions",
+          "logic",
+          "functions",
+          "metrics",
+          "split",
+          "classification",
+          "features",
+          "target"
+        ],
+        "id": "T-6aba90be48825a15986fe20e-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 12/Практика для студентов.md",
-        "sha256": "5087935f373f2f6ade8326d76dc29f97f5d3379b1c42ab5c5e15321fc3678ea3"
+        "elementId": "6aba90be48825a15986fe20e",
+        "archive": "Снимки страниц.json",
+        "sha256": "f01b383ccaad1912ac03c2fb2b9533ab17013633f575c6a1fe22bd2709f82cf6"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "conditions",
+        "logic",
+        "functions",
+        "metrics",
+        "split",
+        "classification",
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6aba90be48825a15986fe211",
@@ -148,7 +596,7 @@
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L12",
-      "statement": "Рекомендуемое время: 16 мин. · Максимум: 4 балл(а/ов).\n\nЦель\n\nЦель: построить график и определить, при какой сложности модель начинает слишком сильно подстраиваться под обучение.\n\nЧто нужно сделать\n\n- Для каждой глубины от 1 до 15 обучите новое дерево.\n\n- Сохраните accuracy на train и test в отдельные списки.\n\n- Постройте две линии на одном графике.\n\n- Найдите глубину с максимальным test accuracy .\n\nИсходный код\n\n\n```\ndepths = range(1, 16)\ntrain_scores = []\ntest_scores = []\n\nfor depth in depths:\nmodel = DecisionTreeClassifier(\nmax_depth=TODO,\nrandom_state=42,\n)\nmodel.fit(TODO, TODO)\n\ntrain_scores.append(\naccuracy_score(y_train, model.predict(X_train))\n)\ntest_scores.append(\naccuracy_score(y_test, model.predict(X_test))\n)\n\nbest_depth = list(depths)[int(np.argmax(test_scores))]\nprint('Лучшая глубина по test accuracy:', best_depth)\nprint('Лучшее test accuracy:', round(max(test_scores), 3))\n\nplt.figure(figsize=(9, 5))\nplt.plot(list(depths), train_scores, marker='o', label='Train')\nplt.plot(list(depths), test_scores, marker='o', label='Test')\nplt.xlabel('max_depth')\nplt.ylabel('Accuracy')\nplt.title('Качество в зависимости от глубины дерева')\nplt.grid(alpha=0.3)\nplt.legend()\nplt.show()\n```\n\nОриентир: Ваш график должен иметь похожую форму, но сначала постройте его самостоятельно\n\nОтветьте по графику\n\n- Как меняется качество на обучающей выборке при увеличении глубины?\n\n- Почему тестовое качество не растёт бесконечно вместе с обучающим?\n\n- С какой глубины разрыв становится особенно заметным?\n\n________________________________________________________________________________",
+      "statement": "# Задание №5. Исследуйте влияние глубины дерева\n\n*Рекомендуемое время: 16 мин. · Максимум: 4 балл(а/ов).*\n\nЦель\n\nЦель: построить график и определить, при какой сложности модель начинает слишком сильно подстраиваться под обучение.\n\nЧто нужно сделать\n\n- Для каждой глубины от 1 до 15 обучите новое дерево.\n\n- Сохраните `accuracy` на `train` и `test` в отдельные списки.\n\n- Постройте две линии на одном графике.\n\n- Найдите глубину с максимальным `test accuracy`.\n\nИсходный код\n\n```python\ndepths = range(1, 16)\ntrain_scores = []\ntest_scores = []\n\nfor depth in depths:\nmodel = DecisionTreeClassifier(\nmax_depth=TODO,\nrandom_state=42,\n)\nmodel.fit(TODO, TODO)\n\ntrain_scores.append(\naccuracy_score(y_train, model.predict(X_train))\n)\ntest_scores.append(\naccuracy_score(y_test, model.predict(X_test))\n)\n\nbest_depth = list(depths)[int(np.argmax(test_scores))]\nprint('Лучшая глубина по test accuracy:', best_depth)\nprint('Лучшее test accuracy:', round(max(test_scores), 3))\n\nplt.figure(figsize=(9, 5))\nplt.plot(list(depths), train_scores, marker='o', label='Train')\nplt.plot(list(depths), test_scores, marker='o', label='Test')\nplt.xlabel('max_depth')\nplt.ylabel('Accuracy')\nplt.title('Качество в зависимости от глубины дерева')\nplt.grid(alpha=0.3)\nplt.legend()\nplt.show()\n```\n\n*Ориентир: Ваш график должен иметь похожую форму, но сначала постройте его самостоятельно*\n\nОтветьте по графику\n\n- Как меняется качество на обучающей выборке при увеличении глубины?\n\n- Почему тестовое качество не растёт бесконечно вместе с обучающим?\n\n- С какой глубины разрыв становится особенно заметным?\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba90be48825a15986fe211",
@@ -161,17 +609,151 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ndepths = list(range(1,16))\ntrain_scores,test_scores = [],[]\nfor depth in depths:\n    model = DecisionTreeClassifier(max_depth=depth,random_state=42).fit(X_train,y_train)\n    train_scores.append(accuracy_score(y_train,model.predict(X_train)))\n    test_scores.append(accuracy_score(y_test,model.predict(X_test)))\n    print(depth,round(train_scores[-1],3),round(test_scores[-1],3),round(train_scores[-1]-test_scores[-1],3))\nbest = depths[int(np.argmax(test_scores))]\nprint('Лучшая глубина:',best,'Test:',round(max(test_scores),3))\nplt.plot(depths,train_scores,marker='o',label='Train')\nplt.plot(depths,test_scores,marker='o',label='Test')\nplt.xlabel('max_depth')\nplt.ylabel('Accuracy')\nplt.title('Глубина и качество')\nplt.legend()\nplt.grid(True)\nplt.show()",
+        "answer": "",
+        "explanation": "Обучающая точность в целом повышается с усложнением дерева, а тестовая колеблется и не растёт бесконечно. Таблица показывает начало заметного разрыва. В этом учебном задании глубина выбирается по test, поэтому эта часть фактически используется как валидационная; для честной окончательной оценки понадобится ещё одна независимая часть.\n\nМаксимальное test≈0.7333 при глубинах 8 и 10; argmax выбирает первую, 8. Примерно с 5 разрыв больше 0.20, с 6train уже выше 0.90.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "1 0.65 0.578 0.072\n2 0.698 0.644 0.053\n3 0.798 0.711 0.087\n4 0.829 0.689 0.14\n5 0.881 0.678 0.203\n6 0.931 0.711 0.22\n7 0.969 0.728 0.241\n8 0.983 0.733 0.25\n9 0.99 0.717 0.274\n10 0.99 0.733 0.257\n11 0.995 0.711 0.284\n12 0.998 0.678 0.32\n13 1.0 0.694 0.306\n14 1.0 0.694 0.306\n15 1.0 0.694 0.306\nЛучшая глубина: 8 Test: 0.733"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `list(range(1, 16))` и сохраняем результат в `depths`."
+          },
+          {
+            "line": 10,
+            "text": "Создаём набор значений `(train_scores, test_scores)` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 11,
+            "text": "Перебираем `depths`; очередное значение доступно через `depth`."
+          },
+          {
+            "line": 12,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+          },
+          {
+            "line": 13,
+            "text": "Выполняем `train_scores.append` с переданными аргументами."
+          },
+          {
+            "line": 14,
+            "text": "Выполняем `test_scores.append` с переданными аргументами."
+          },
+          {
+            "line": 15,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 16,
+            "text": "Вычисляем `depths[int(np.argmax(test_scores))]` и сохраняем результат в `best`."
+          },
+          {
+            "line": 17,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 18,
+            "text": "Выполняем `plt.plot` с переданными аргументами."
+          },
+          {
+            "line": 19,
+            "text": "Выполняем `plt.plot` с переданными аргументами."
+          },
+          {
+            "line": 20,
+            "text": "Выполняем `plt.xlabel` с переданными аргументами."
+          },
+          {
+            "line": 21,
+            "text": "Выполняем `plt.ylabel` с переданными аргументами."
+          },
+          {
+            "line": 22,
+            "text": "Выполняем `plt.title` с переданными аргументами."
+          },
+          {
+            "line": 23,
+            "text": "Выполняем `plt.legend` с переданными аргументами."
+          },
+          {
+            "line": 24,
+            "text": "Выполняем `plt.grid` с переданными аргументами."
+          },
+          {
+            "line": 25,
+            "text": "Выполняем `plt.show` с переданными аргументами."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "metrics",
+          "split",
+          "classification"
+        ],
+        "id": "T-6aba90be48825a15986fe211-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 12/Практика для студентов.md",
-        "sha256": "5087935f373f2f6ade8326d76dc29f97f5d3379b1c42ab5c5e15321fc3678ea3"
+        "elementId": "6aba90be48825a15986fe211",
+        "archive": "Снимки страниц.json",
+        "sha256": "40df9ef1e6b10b6fb605b83b0bf6ce6321fb91e34461d40eed0aa38ff8edddae"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "metrics",
+        "split",
+        "classification"
+      ]
     },
     {
       "id": "T-6aba90be48825a15986fe214",
@@ -180,7 +762,7 @@
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L12",
-      "statement": "Рекомендуемое время: 12 мин. · Максимум: 3 балл(а/ов).\n\nЦель\n\nЦель: ограничить сложность дерева с помощью max_depth и min_samples_leaf и сравнить результат с глубокой моделью.\n\nЧто нужно сделать\n\n- Подберите значения max_depth и min_samples_leaf вместо TODO .\n\n- Добейтесь, чтобы разрыв стал меньше, чем у глубокого дерева, а accuracy на тесте — выше, чем у глубокого дерева: должны выполниться все проверки assert .\n\nИсходный код\n\n\n```\ntree_regularized = DecisionTreeClassifier(\nmax_depth=TODO,\nmin_samples_leaf=TODO,\nrandom_state=42,\n)\n\ntree_regularized.fit(X_train, y_train)\n\ntrain_acc_reg = accuracy_score(\ny_train,\ntree_regularized.predict(X_train),\n)\ntest_acc_reg = accuracy_score(\ny_test,\ntree_regularized.predict(X_test),\n)\ngap_reg = train_acc_reg - test_acc_reg\n\nprint('Train accuracy:', round(train_acc_reg, 3))\nprint('Test accuracy: ', round(test_acc_reg, 3))\nprint('Разрыв: ', round(gap_reg, 3))\nprint(diagnose_model(train_acc_reg, test_acc_reg))\n\nassert 0.80 <= train_acc_reg <= 0.90\nassert 0.70 <= test_acc_reg <= 0.80\nassert gap_reg < gap_deep\nassert test_acc_reg > test_acc_deep\n```\n\nЗаполните итоговую таблицу\n\n\n| Модель | Train | Test | Разрыв | Глубина | Вывод |\n| --- | --- | --- | --- | --- | --- |\n| Ограниченная | ____ | ____ | ____ | ____ | ________________ |\n| Глубокая | ____ | ____ | ____ | ____ | ________________ |\n| Регуляризованная | ____ | ____ | ____ | ____ | ________________ |",
+      "statement": "# Задание №6. Уменьшите переобучение\n\n*Рекомендуемое время: 12 мин. · Максимум: 3 балл(а/ов).*\n\nЦель\n\nЦель: ограничить сложность дерева с помощью `max_depth` и `min_samples_leaf` и сравнить результат с глубокой моделью.\n\nЧто нужно сделать\n\n- Подберите значения `max_depth` и `min_samples_leaf` вместо `TODO`.\n\n- Добейтесь, чтобы разрыв стал меньше, чем у глубокого дерева, а `accuracy` на тесте — выше, чем у глубокого дерева: должны выполниться все проверки `assert`.\n\nИсходный код\n\n```python\ntree_regularized = DecisionTreeClassifier(\nmax_depth=TODO,\nmin_samples_leaf=TODO,\nrandom_state=42,\n)\n\ntree_regularized.fit(X_train, y_train)\n\ntrain_acc_reg = accuracy_score(\ny_train,\ntree_regularized.predict(X_train),\n)\ntest_acc_reg = accuracy_score(\ny_test,\ntree_regularized.predict(X_test),\n)\ngap_reg = train_acc_reg - test_acc_reg\n\nprint('Train accuracy:', round(train_acc_reg, 3))\nprint('Test accuracy: ', round(test_acc_reg, 3))\nprint('Разрыв: ', round(gap_reg, 3))\nprint(diagnose_model(train_acc_reg, test_acc_reg))\n\nassert 0.80 <= train_acc_reg <= 0.90\nassert 0.70 <= test_acc_reg <= 0.80\nassert gap_reg < gap_deep\nassert test_acc_reg > test_acc_deep\n```\n\nЗаполните итоговую таблицу\n\n| Модель | Train | Test | Разрыв | Глубина | Вывод |\n| --- | --- | --- | --- | --- | --- |\n| Ограниченная | ____ | ____ | ____ | ____ | ________________ |\n| Глубокая | ____ | ____ | ____ | ____ | ________________ |\n| Регуляризованная | ____ | ____ | ____ | ____ | ________________ |",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba90be48825a15986fe214",
@@ -193,24 +775,197 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ntree_limited = DecisionTreeClassifier(max_depth=3,random_state=42).fit(X_train,y_train)\ntrain_acc_limited = accuracy_score(y_train,tree_limited.predict(X_train))\ntest_acc_limited = accuracy_score(y_test,tree_limited.predict(X_test))\ngap_limited = train_acc_limited-test_acc_limited\ntree_deep = DecisionTreeClassifier(max_depth=None,random_state=42).fit(X_train,y_train)\ntrain_acc_deep = accuracy_score(y_train,tree_deep.predict(X_train))\ntest_acc_deep = accuracy_score(y_test,tree_deep.predict(X_test))\ngap_deep = train_acc_deep-test_acc_deep\ndef diagnose_model(train_accuracy,test_accuracy,gap_threshold=.10):\n    gap = train_accuracy-test_accuracy\n    if train_accuracy >= .90 and gap+1e-12 >= gap_threshold:\n        return 'Есть признаки переобучения'\n    elif train_accuracy < .70 and test_accuracy < .70:\n        return 'Возможно недообучение'\n    return 'Явных признаков переобучения нет'\ntree_regularized = DecisionTreeClassifier(max_depth=5,min_samples_leaf=10,random_state=42).fit(X_train,y_train)\ntrain_acc_reg = accuracy_score(y_train,tree_regularized.predict(X_train))\ntest_acc_reg = accuracy_score(y_test,tree_regularized.predict(X_test))\ngap_reg = train_acc_reg-test_acc_reg\nfor name,train,test,gap,depth in [\n    ('Ограниченная',train_acc_limited,test_acc_limited,gap_limited,tree_limited.get_depth()),\n    ('Глубокая',train_acc_deep,test_acc_deep,gap_deep,tree_deep.get_depth()),\n    ('Регуляризованная',train_acc_reg,test_acc_reg,gap_reg,tree_regularized.get_depth())]:\n    print(name,round(train,3),round(test,3),round(gap,3),depth,diagnose_model(train,test))\nassert .80 <= train_acc_reg <= .90\nassert .70 <= test_acc_reg <= .80\nassert gap_reg < gap_deep\nassert test_acc_reg > test_acc_deep",
+        "answer": "",
+        "explanation": "max_depth=5 ограничивает длину пути, min_samples_leaf=10 не позволяет создавать листья по единичным объектам. Проверки из исходного условия выполняются: разрыв меньше глубокого дерева, а качество на тесте выше. Регуляризация может слегка уменьшить train ради лучшего переноса на новые данные.\n\nРегуляризация дала train≈0.845, test0.750, разрыв≈0.095: лучше test и меньше разрыв, чем 0.694/0.306 глубокого дерева.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Ограниченная 0.798 0.711 0.087 3 Явных признаков переобучения нет\nГлубокая 1.0 0.694 0.306 13 Есть признаки переобучения\nРегуляризованная 0.845 0.75 0.095 5 Явных признаков переобучения нет"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 9,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_limited."
+          },
+          {
+            "line": 10,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_limited."
+          },
+          {
+            "line": 11,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_limited."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `train_acc_limited - test_acc_limited` и сохраняем результат в `gap_limited`."
+          },
+          {
+            "line": 13,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_deep."
+          },
+          {
+            "line": 14,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_deep."
+          },
+          {
+            "line": 15,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_deep."
+          },
+          {
+            "line": 16,
+            "text": "Вычисляем `train_acc_deep - test_acc_deep` и сохраняем результат в `gap_deep`."
+          },
+          {
+            "line": 17,
+            "text": "Определяем функцию `diagnose_model` с параметрами `train_accuracy, test_accuracy, gap_threshold=0.1`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 18,
+            "text": "Вычисляем `train_accuracy - test_accuracy` и сохраняем результат в `gap`."
+          },
+          {
+            "line": 19,
+            "text": "Проверяем условие `train_accuracy >= 0.9 and gap + 1e-12 >= gap_threshold`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 20,
+            "text": "Возвращаем из функции `'Есть признаки переобучения'`."
+          },
+          {
+            "line": 21,
+            "text": "Проверяем условие `train_accuracy < 0.7 and test_accuracy < 0.7`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 22,
+            "text": "Возвращаем из функции `'Возможно недообучение'`."
+          },
+          {
+            "line": 23,
+            "text": "Возвращаем из функции `'Явных признаков переобучения нет'`."
+          },
+          {
+            "line": 24,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_regularized."
+          },
+          {
+            "line": 25,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_reg."
+          },
+          {
+            "line": 26,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_reg."
+          },
+          {
+            "line": 27,
+            "text": "Вычисляем `train_acc_reg - test_acc_reg` и сохраняем результат в `gap_reg`."
+          },
+          {
+            "line": 28,
+            "text": "Перебираем `[('Ограниченная', train_acc_limited, test_acc_limited, gap_limited, tree_limited.get_depth()), ('Глубокая', train_acc_deep, test_acc_deep, gap_deep, tree_deep.get_depth()), ('Регуляризованная', train_acc_reg, test_acc_reg, gap_reg, tree_regularized.get_depth())]`; очередное значение доступно через `(name, train, test, gap, depth)`."
+          },
+          {
+            "line": 32,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 33,
+            "text": "Проверяем инвариант `0.8 <= train_acc_reg <= 0.9`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 34,
+            "text": "Проверяем инвариант `0.7 <= test_acc_reg <= 0.8`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 35,
+            "text": "Проверяем инвариант `gap_reg < gap_deep`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 36,
+            "text": "Проверяем инвариант `test_acc_reg > test_acc_deep`. При нарушении программа сообщит об ошибке."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions",
+          "metrics",
+          "split",
+          "classification",
+          "features"
+        ],
+        "id": "T-6aba90be48825a15986fe214-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 12/Практика для студентов.md",
-        "sha256": "5087935f373f2f6ade8326d76dc29f97f5d3379b1c42ab5c5e15321fc3678ea3"
+        "elementId": "6aba90be48825a15986fe214",
+        "archive": "Снимки страниц.json",
+        "sha256": "d1986247863258659711b10c3917ae67f8710453aea4f8628ba63e6acab76ee3"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions",
+        "metrics",
+        "split",
+        "classification",
+        "features"
+      ]
     }
   ],
-  "lecture": "# Переобучение и проверка модели на новых данных\n\n### СЛАЙД 01. Переобучение и проверка модели на новых данных\n\nВ этом занятии рассматривается тема «Переобучение и проверка модели на новых данных». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Вступление\n\nПривет! Представьте ученика, который выучил ответы на тренировочный вариант, но не понял способ решения. На знакомых вопросах он получает максимальный балл, а на новых — ошибается. С моделью машинного обучения может произойти то же самое. Сегодня Вы научитесь замечать такую ситуацию по результатам на обучающих и новых данных, а затем уменьшать переобучение модели.\n\nГлавная трудность состоит в том, что качество на данных, уже использованных при обучении, может создавать ложное ощущение успеха. Поэтому модель необходимо проверять на отдельной части набора, которую она не видела во время настройки. Такое сравнение показывает не только способность запоминать примеры, но и способность переносить найденные закономерности на новые объекты.\n\nСравним данные в таблице.\nПосле занятия Вы сможете разделять данные на обучающую и тестовую части; вычислять качество модели на обеих выборках; сравнивать результаты; распознавать признаки переобучения; объяснять, почему высокая точность на обучающих данных ещё не гарантирует полезность модели.\n\nОсновной вопрос занятия\n\nНасколько хорошо модель решает задачу на объектах, которые не участвовали в её обучении? Ответ на этот вопрос важнее, чем максимальное значение качества на обучающей выборке.\n\n### СЛАЙД 03. 1. Обучающая и тестовая выборки\n\nОбучающая выборка используется для настройки модели: алгоритм ищет закономерности между признаками X и правильными ответами y . Тестовая выборка временно откладывается и применяется только после обучения. Поэтому она имитирует новые данные, которые система встретит после запуска.\n\nПри разделении исходного набора признаки и ответы должны оставаться согласованными: строке X_train соответствует ответ из y_train , а строке X_test — ответ из y_test . Модель обучают на паре X_train и y_train , а затем отдельно получают предсказания для обучающих и тестовых признаков.\n\nЕсли тестовые объекты или их правильные ответы повлияли на обучение, оценка перестаёт быть независимой. Такая ситуация называется утечкой данных: модель получает информацию, которой у неё не должно быть при работе с действительно новыми объектами.\n\nВажно\n\nТестовая выборка предназначена для проверки, а не для настройки модели. Нельзя обучать модель на X_test и y_test , а затем представлять результат на этих же данных как качество на новых объектах.\n\n### СЛАЙД 04. 2. Что такое переобучение\n\nПереобучение — ситуация, когда модель слишком точно подстроилась под обучающие примеры, включая случайный шум и единичные особенности. Она хорошо воспроизводит уже виденные данные, но хуже работает на новых.\n\nДля дерева решений риск переобучения обычно возрастает при чрезмерном усложнении структуры. Глубокое дерево может создавать множество узких правил, подходящих только для небольших групп обучающих объектов. Ограничение глубины и других параметров сложности помогает сосредоточиться на более общих закономерностях.\n\nОднако высокая обучающая точность сама по себе ещё не доказывает переобучение. Диагноз появляется только после сравнения с качеством на независимых данных: если обе оценки высоки и близки, модель может успешно обобщать найденные закономерности.\n\nСравним данные в таблице.\nБытовая аналогия Модель похожа на ученика, который запомнил конкретные ответы, но не освоил правило. На знакомом варианте результат почти идеален, а новая формулировка вызывает затруднение.\n\n### СЛАЙД 05. 3. Как заметить переобучение · таблица 1/2\n\nДля первичной диагностики вычисляют одну и ту же метрику на двух выборках. В этом занятии используется accuracy — доля объектов, для которых модель правильно определила класс.\n\naccuracy = количество правильных предсказаний / общее количество предсказаний\n\nЗначение accuracy находится в диапазоне от 0 до 1. Например, результат 0,80 означает, что модель дала правильный ответ для 80% проверенных объектов. Для сопоставления оценок рассчитывается разрыв:\n\ngap = train_accuracy − test_accuracy\n\nПоложительный и большой разрыв означает, что на знакомых данных модель работает заметно лучше, чем на новых. При этом важно учитывать не только разрыв, но и сами значения метрики.\n\nСравним данные в таблице.\nНаблюдение Возможная интерпретация Высокое качество на train и заметно более низкое на test Есть признаки переобучения Низкое качество и на train , и на test Модель может быть слишком простой или данные недостаточно информативны Сопоставимое приемлемое качество на train и test Явных признаков переобучения нет\n\nВажно: универсального порога разницы нет. В этом практикуме для учебной диагностики используется условный порог 0,10, но в реальном проекте допустимый разрыв зависит от задачи, объёма данных, выбранной метрики и цены ошибки.\n\nНебольшой разрыв также не гарантирует хорошую модель. Например, близкие, но низкие значения на обеих выборках могут указывать на то, что модель не смогла обнаружить полезную закономерность. Поэтому формулировка «переобучения не видно» не равна формулировке «модель имеет высокое качество».\n\nЧастая ошибка\n\nНельзя сравнивать разные метрики, например accuracy на обучающей выборке и другую метрику на тестовой. Для вычисления разрыва метод оценки и условия проверки должны быть одинаковыми.\n\n### СЛАЙД 06. 3. Как заметить переобучение · таблица 2/2\n\nПосмотрите на продолжение таблицы. Сопоставимое приемлемое качество на train и test Явных признаков переобучения нет\n\n### СЛАЙД 07. 4. Решённый мини-пример\n\nМодель получила accuracy 0,98 на обучающей выборке и 0,71 на тестовой. Разрыв равен 0,98 − 0,71 = 0,27 . Обучающий результат очень высокий, а разрыв велик. Это сильный сигнал переобучения: модель хорошо запомнила обучающие данные, но значительно хуже переносит найденные правила на новые объекты.\n\nДля сравнения рассмотрим другой результат: train accuracy = 0,84 , test accuracy = 0,81 . Разрыв составляет 0,03. По учебному порогу явных признаков переобучения нет, хотя окончательная оценка полезности модели всё равно зависит от требований конкретной задачи.\n\nМини-проверка\n\nЕсли train accuracy = 0,63 , а test accuracy = 0,61 , можно ли назвать модель качественной только потому, что разрыв равен 0,02? Обоснуйте ответ, учитывая оба значения метрики.\n\n### СЛАЙД 08. 1. Установка библиотек\n\nВ Google Colab библиотеки обычно уже установлены. В локальной среде выполните команду в терминале:\n\nКоманда установки\n\nПример на слайде:\npip install scikit-learn pandas matplotlib\n\nБиблиотека scikit-learn потребуется для создания данных, разделения выборки, обучения дерева решений и вычисления метрики. pandas удобно использовать для оформления результатов, а matplotlib — для построения графиков.\n\nСравним данные в таблице.\nПравило выполнения Запускайте ячейки по порядку. Не переобучайте модель на тестовой выборке и не меняйте random_state=42 до выполнения обязательной части: это нужно для воспроизводимости результатов.\n\nФиксированное значение random_state позволяет повторно получить одинаковую генерацию и одинаковое случайное разделение данных. Благодаря этому различия между моделями можно связывать с их параметрами, а не со случайно изменившимся составом выборок.\n\n### СЛАЙД 09. 2. Импорт инструментов\n\nПример на слайде:\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\n\nПосле выполнения ячейки импортированные инструменты становятся доступны в следующих ячейках блокнота. Если среда была перезапущена, импорт и создание данных необходимо выполнить заново до обращения к переменным и моделям.\n\n### СЛАЙД 10. 3. Учебный набор данных\n\nМы создадим синтетический набор для бинарной классификации. Каждая строка описывает объект двадцатью числовыми признаками. Целевая переменная принимает значение 0 или 1. Часть признаков действительно связана с классом, а часть содержит избыточность и шум. Это позволяет увидеть переобучение без скачивания внешнего файла.\n\nПример на слайде:\nX, y = make_classification(\nn_samples=600,\nn_features=20,\nn_informative=5,\nn_redundant=5,\nn_repeated=0,\nn_classes=2,\nflip_y=0.12,\nclass_sep=0.8,\nrandom_state=42,\n)\n\nПараметр n_samples=600 задаёт число объектов, а n_features=20 — число признаков каждого объекта. Из них пять признаков являются информативными, ещё пять создаются как избыточные, а остальные не несут такой же прямой полезной информации для разделения классов.\n\nПараметр flip_y=0.12 добавляет шум в целевые значения, а class_sep=0.8 управляет разделимостью классов. Наличие шума делает учебную задачу подходящей для наблюдения за тем, как слишком сложная модель подстраивается под отдельные обучающие примеры.\n\nПроверьте данные перед обучением\n\nУбедитесь, что число строк в X совпадает с числом ответов в y . После разделения сумма размеров обучающей и тестовой частей должна равняться исходным 600 объектам.\n\n### СЛАЙД 11. 4. Честное разделение данных\n\nРазделите набор до обучения любой модели. Параметр stratify=y помогает сохранить примерно одинаковое соотношение классов 0 и 1 в обучающей и тестовой частях. Это особенно важно, когда классы представлены неравномерно.\n\nПример на слайде:\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.30,\n    random_state=42,\n    stratify=y,\n)\n\nПри test_size=0.30 тестовая часть содержит 30% объектов, а обучающая — оставшиеся 70%. Для 600 объектов это 180 тестовых и 420 обучающих примеров. Эти размеры можно проверить через атрибут shape .\n\nПример на слайде:\nprint(X_train.shape, X_test.shape)\nprint(y_train.shape, y_test.shape)\n\nОжидаемые размеры признаков: (420, 20) для X_train и (180, 20) для X_test . Целевые массивы должны содержать соответственно 420 и 180 значений.\n\n### СЛАЙД 12. Чек-лист самопроверки\n\n☐ Я использовал одну и ту же разбивку данных для сравниваемых моделей.\n\n☐ Я обучал модели только на X_train и y_train .\n\n☐ Я посчитал accuracy отдельно для train и test .\n\n☐ Я вычислил разрыв train_accuracy − test_accuracy .\n\n☐ Я не сделал вывод о переобучении только по одному показателю.\n\n☐ Моя функция диагностики проходит все assert -проверки.\n\n☐ На графике есть подписи осей, легенда и заголовок.\n\n☐ В выводе объяснено, почему переобучение опасно на новых данных.\n\n☐ Число предсказаний совпадает с числом правильных ответов в каждой вычисляемой метрике.\n\n☐ Я сохранил фиксированное значение random_state в обязательной части.\n\n☐ Я проверил порядок выполнения ячеек после перезапуска среды.\n\n☐ В итоговом выводе приведены конкретные значения метрик и разрыва.\n\nФинальная мини-проверка\n\nОтветьте одним предложением: почему результат accuracy = 1.0 на обучающей выборке нельзя использовать как единственное доказательство качества модели?\n\n### СЛАЙД 13. Что сдавать\n\nФайл .ipynb или .py с выполненными обязательными заданиями.\n\nЗаполненную итоговую таблицу с показателями трёх моделей.\n\nГрафик зависимости accuracy от глубины дерева.\n\nИтоговый вывод объёмом 5–7 предложений.\n\nПеред отправкой выполните файл целиком в правильном порядке и убедитесь, что все используемые переменные создаются в самом решении. В блокноте должны быть видны результаты вычисления метрик и построенный график, а названия моделей в таблице должны соответствовать моделям в коде.\n\nСравним данные в таблице.\nКлючевая мысль урока Качество модели оценивают не по тому, насколько хорошо она запомнила обучение, а по тому, насколько надёжно она работает на новых данных.\n\nИтоговый ориентир\n\nХороший эксперимент разделяет обучение и проверку, использует одинаковые условия для сравнения моделей и подтверждает вывод несколькими связанными показателями: обучающей точностью, тестовой точностью и разрывом между ними.\n\n### СЛАЙД 14. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 15. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Переобучение и проверка модели на новых данных\n\n### СЛАЙД 01. Переобучение и проверка модели на новых данных\n\nВ этом занятии рассматривается тема «Переобучение и проверка модели на новых данных». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Вступление\n\nПривет! Представьте ученика, который выучил ответы на тренировочный вариант, но не понял способ решения. На знакомых вопросах он получает максимальный балл, а на новых — ошибается. С моделью машинного обучения может произойти то же самое. Сегодня Вы научитесь замечать такую ситуацию по результатам на обучающих и новых данных, а затем уменьшать переобучение модели.\n\nГлавная трудность состоит в том, что качество на данных, уже использованных при обучении, может создавать ложное ощущение успеха. Поэтому модель необходимо проверять на отдельной части набора, которую она не видела во время настройки. Такое сравнение показывает не только способность запоминать примеры, но и способность переносить найденные закономерности на новые объекты.\n\nСравним данные в таблице.\nПосле занятия Вы сможете разделять данные на обучающую и тестовую части; вычислять качество модели на обеих выборках; сравнивать результаты; распознавать признаки переобучения; объяснять, почему высокая точность на обучающих данных ещё не гарантирует полезность модели.\n\nОсновной вопрос занятия\n\nНасколько хорошо модель решает задачу на объектах, которые не участвовали в её обучении? Ответ на этот вопрос важнее, чем максимальное значение качества на обучающей выборке.\n\n### СЛАЙД 03. 1. Обучающая и тестовая выборки\n\nОбучающая выборка используется для настройки модели: алгоритм ищет закономерности между признаками X и правильными ответами y . Тестовая выборка временно откладывается и применяется только после обучения. Поэтому она имитирует новые данные, которые система встретит после запуска.\n\nПри разделении исходного набора признаки и ответы должны оставаться согласованными: строке X_train соответствует ответ из y_train , а строке X_test — ответ из y_test . Модель обучают на паре X_train и y_train , а затем отдельно получают предсказания для обучающих и тестовых признаков.\n\nЕсли тестовые объекты или их правильные ответы повлияли на обучение, оценка перестаёт быть независимой. Такая ситуация называется утечкой данных: модель получает информацию, которой у неё не должно быть при работе с действительно новыми объектами.\n\nВажно\n\nТестовая выборка предназначена для проверки, а не для настройки модели. Нельзя обучать модель на X_test и y_test , а затем представлять результат на этих же данных как качество на новых объектах.\n\n### СЛАЙД 04. 2. Что такое переобучение\n\nПереобучение — ситуация, когда модель слишком точно подстроилась под обучающие примеры, включая случайный шум и единичные особенности. Она хорошо воспроизводит уже виденные данные, но хуже работает на новых.\n\nДля дерева решений риск переобучения обычно возрастает при чрезмерном усложнении структуры. Глубокое дерево может создавать множество узких правил, подходящих только для небольших групп обучающих объектов. Ограничение глубины и других параметров сложности помогает сосредоточиться на более общих закономерностях.\n\nОднако высокая обучающая точность сама по себе ещё не доказывает переобучение. Диагноз появляется только после сравнения с качеством на независимых данных: если обе оценки высоки и близки, модель может успешно обобщать найденные закономерности.\n\nСравним данные в таблице.\nБытовая аналогия Модель похожа на ученика, который запомнил конкретные ответы, но не освоил правило. На знакомом варианте результат почти идеален, а новая формулировка вызывает затруднение.\n\n### СЛАЙД 05. 3. Как заметить переобучение · таблица 1/2\n\nДля первичной диагностики вычисляют одну и ту же метрику на двух выборках. В этом занятии используется accuracy — доля объектов, для которых модель правильно определила класс.\n\naccuracy = количество правильных предсказаний / общее количество предсказаний\n\nЗначение accuracy находится в диапазоне от 0 до 1. Например, результат 0,80 означает, что модель дала правильный ответ для 80% проверенных объектов. Для сопоставления оценок рассчитывается разрыв:\n\ngap = train_accuracy − test_accuracy\n\nПоложительный и большой разрыв означает, что на знакомых данных модель работает заметно лучше, чем на новых. При этом важно учитывать не только разрыв, но и сами значения метрики.\n\nСравним данные в таблице.\nНаблюдение Возможная интерпретация Высокое качество на train и заметно более низкое на test Есть признаки переобучения Низкое качество и на train , и на test Модель может быть слишком простой или данные недостаточно информативны Сопоставимое приемлемое качество на train и test Явных признаков переобучения нет\n\nВажно: универсального порога разницы нет. В этом практикуме для учебной диагностики используется условный порог 0,10, но в реальном проекте допустимый разрыв зависит от задачи, объёма данных, выбранной метрики и цены ошибки.\n\nНебольшой разрыв также не гарантирует хорошую модель. Например, близкие, но низкие значения на обеих выборках могут указывать на то, что модель не смогла обнаружить полезную закономерность. Поэтому формулировка «переобучения не видно» не равна формулировке «модель имеет высокое качество».\n\nЧастая ошибка\n\nНельзя сравнивать разные метрики, например accuracy на обучающей выборке и другую метрику на тестовой. Для вычисления разрыва метод оценки и условия проверки должны быть одинаковыми.\n\n### СЛАЙД 06. 3. Как заметить переобучение · таблица 2/2\n\nПосмотрите на продолжение таблицы. Сопоставимое приемлемое качество на train и test Явных признаков переобучения нет\n\n### СЛАЙД 07. 4. Решённый мини-пример\n\nМодель получила accuracy 0,98 на обучающей выборке и 0,71 на тестовой. Разрыв равен 0,98 − 0,71 = 0,27 . Обучающий результат очень высокий, а разрыв велик. Это сильный сигнал переобучения: модель хорошо запомнила обучающие данные, но значительно хуже переносит найденные правила на новые объекты.\n\nДля сравнения рассмотрим другой результат: train accuracy = 0,84 , test accuracy = 0,81 . Разрыв составляет 0,03. По учебному порогу явных признаков переобучения нет, хотя окончательная оценка полезности модели всё равно зависит от требований конкретной задачи.\n\nМини-проверка\n\nЕсли train accuracy = 0,63 , а test accuracy = 0,61 , можно ли назвать модель качественной только потому, что разрыв равен 0,02? Обоснуйте ответ, учитывая оба значения метрики.\n\n### СЛАЙД 08. 1. Установка библиотек\n\nВ Google Colab библиотеки обычно уже установлены. В локальной среде выполните команду в терминале:\n\nКоманда установки\n\n```text\npip install scikit-learn pandas matplotlib\n```\n\nБиблиотека scikit-learn потребуется для создания данных, разделения выборки, обучения дерева решений и вычисления метрики. pandas удобно использовать для оформления результатов, а matplotlib — для построения графиков.\n\nСравним данные в таблице.\nПравило выполнения Запускайте ячейки по порядку. Не переобучайте модель на тестовой выборке и не меняйте random_state=42 до выполнения обязательной части: это нужно для воспроизводимости результатов.\n\nФиксированное значение random_state позволяет повторно получить одинаковую генерацию и одинаковое случайное разделение данных. Благодаря этому различия между моделями можно связывать с их параметрами, а не со случайно изменившимся составом выборок.\n\n### СЛАЙД 09. 2. Импорт инструментов\n\n\n\n```python\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\n```\n\n\n\nПосле выполнения ячейки импортированные инструменты становятся доступны в следующих ячейках блокнота. Если среда была перезапущена, импорт и создание данных необходимо выполнить заново до обращения к переменным и моделям.\n\n### СЛАЙД 10. 3. Учебный набор данных\n\nМы создадим синтетический набор для бинарной классификации. Каждая строка описывает объект двадцатью числовыми признаками. Целевая переменная принимает значение 0 или 1. Часть признаков действительно связана с классом, а часть содержит избыточность и шум. Это позволяет увидеть переобучение без скачивания внешнего файла.\n\n\n\n```python\nX, y = make_classification(\nn_samples=600,\nn_features=20,\nn_informative=5,\nn_redundant=5,\nn_repeated=0,\nn_classes=2,\nflip_y=0.12,\nclass_sep=0.8,\nrandom_state=42,\n)\n```\n\n\n\nПараметр n_samples=600 задаёт число объектов, а n_features=20 — число признаков каждого объекта. Из них пять признаков являются информативными, ещё пять создаются как избыточные, а остальные не несут такой же прямой полезной информации для разделения классов.\n\nПараметр flip_y=0.12 добавляет шум в целевые значения, а class_sep=0.8 управляет разделимостью классов. Наличие шума делает учебную задачу подходящей для наблюдения за тем, как слишком сложная модель подстраивается под отдельные обучающие примеры.\n\nПроверьте данные перед обучением\n\nУбедитесь, что число строк в X совпадает с числом ответов в y . После разделения сумма размеров обучающей и тестовой частей должна равняться исходным 600 объектам.\n\n### СЛАЙД 11. 4. Честное разделение данных\n\nРазделите набор до обучения любой модели. Параметр stratify=y помогает сохранить примерно одинаковое соотношение классов 0 и 1 в обучающей и тестовой частях. Это особенно важно, когда классы представлены неравномерно.\n\n\n\n```python\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.30,\n    random_state=42,\n    stratify=y,\n)\n```\n\n\n\nПри test_size=0.30 тестовая часть содержит 30% объектов, а обучающая — оставшиеся 70%. Для 600 объектов это 180 тестовых и 420 обучающих примеров. Эти размеры можно проверить через атрибут shape .\n\n\n\n```python\nprint(X_train.shape, X_test.shape)\nprint(y_train.shape, y_test.shape)\n```\n\n\n\nОжидаемые размеры признаков: (420, 20) для X_train и (180, 20) для X_test . Целевые массивы должны содержать соответственно 420 и 180 значений.\n\n### СЛАЙД 12. Чек-лист самопроверки\n\n☐ Я использовал одну и ту же разбивку данных для сравниваемых моделей.\n\n☐ Я обучал модели только на X_train и y_train .\n\n☐ Я посчитал accuracy отдельно для train и test .\n\n☐ Я вычислил разрыв train_accuracy − test_accuracy .\n\n☐ Я не сделал вывод о переобучении только по одному показателю.\n\n☐ Моя функция диагностики проходит все assert -проверки.\n\n☐ На графике есть подписи осей, легенда и заголовок.\n\n☐ В выводе объяснено, почему переобучение опасно на новых данных.\n\n☐ Число предсказаний совпадает с числом правильных ответов в каждой вычисляемой метрике.\n\n☐ Я сохранил фиксированное значение random_state в обязательной части.\n\n☐ Я проверил порядок выполнения ячеек после перезапуска среды.\n\n☐ В итоговом выводе приведены конкретные значения метрик и разрыва.\n\nФинальная мини-проверка\n\nОтветьте одним предложением: почему результат accuracy = 1.0 на обучающей выборке нельзя использовать как единственное доказательство качества модели?\n\n### СЛАЙД 13. Что сдавать\n\nФайл .ipynb или .py с выполненными обязательными заданиями.\n\nЗаполненную итоговую таблицу с показателями трёх моделей.\n\nГрафик зависимости accuracy от глубины дерева.\n\nИтоговый вывод объёмом 5–7 предложений.\n\nПеред отправкой выполните файл целиком в правильном порядке и убедитесь, что все используемые переменные создаются в самом решении. В блокноте должны быть видны результаты вычисления метрик и построенный график, а названия моделей в таблице должны соответствовать моделям в коде.\n\nСравним данные в таблице.\nКлючевая мысль урока Качество модели оценивают не по тому, насколько хорошо она запомнила обучение, а по тому, насколько надёжно она работает на новых данных.\n\nИтоговый ориентир\n\nХороший эксперимент разделяет обучение и проверку, использует одинаковые условия для сравнения моделей и подтверждает вывод несколькими связанными показателями: обучающей точностью, тестовой точностью и разрывом между ними.\n\n### СЛАЙД 14. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 15. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Переобучение и проверка модели на новых данных\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Задание №1. Разделите данные и проверьте выборки\n\nРекомендуемое время: 10 мин. · Максимум: 2 балл(а/ов).\n\nЦель\n\nЦель: получить две независимые части данных и убедиться, что размеры и доли классов выглядят разумно.\n\nЧто нужно сделать\n\n- Заполните пропуски TODO в коде.\n\n- Запустите ячейку и запишите размеры выборок.\n\n- Проверьте, что доля класса 1 в train и test близка благодаря параметру stratify=y .\n\nИсходный код\n\n\n```\nX_train, X_test, y_train, y_test = train_test_split(\nX,\ny,\ntest_size=TODO,\nrandom_state=42,\nstratify=TODO,\n)\n\nprint('X_train:', X_train.shape)\nprint('X_test: ', X_test.shape)\nprint('Доля класса 1 в train:', round(y_train.mean(), 3))\nprint('Доля класса 1 в test: ', round(y_test.mean(), 3))\n\nassert X_train.shape == (420, 20)\nassert X_test.shape == (180, 20)\n```\n\nЗапишите результат\n\n________________________________________________________________________________\n\n\n### Задание №2. Обучите ограниченное дерево решений\n\nРекомендуемое время: 12 мин. · Максимум: 3 балл(а/ов).\n\nЦель\n\nЦель: получить модель с ограниченной сложностью и измерить качество на обеих выборках.\n\nЧто нужно сделать\n\n- Создайте DecisionTreeClassifier с max_depth=3 и random_state=42 .\n\n- Обучите модель только на X_train и y_train .\n\n- Получите предсказания для train и test .\n\n- Вычислите accuracy и разрыв train_acc − test_acc .\n\nИсходный код\n\n\n```\ntree_limited = DecisionTreeClassifier(\nmax_depth=TODO,\nrandom_state=42,\n)\n\ntree_limited.fit(TODO, TODO)\n\ntrain_pred_limited = tree_limited.predict(TODO)\ntest_pred_limited = tree_limited.predict(TODO)\n\ntrain_acc_limited = accuracy_score(y_train, train_pred_limited)\ntest_acc_limited = accuracy_score(y_test, test_pred_limited)\ngap_limited = train_acc_limited - test_acc_limited\n\nprint('Train accuracy:', round(train_acc_limited, 3))\nprint('Test accuracy: ', round(test_acc_limited, 3))\nprint('Разрыв: ', round(gap_limited, 3))\n\nassert 0.75 <= train_acc_limited <= 0.85\nassert 0.65 <= test_acc_limited <= 0.77\n```\n\n________________________________________________________________________________\n\n\n### Задание №3. Обучите дерево без ограничения глубины\n\nРекомендуемое время: 12 мин. · Максимум: 3 балл(а/ов).\n\nЦель\n\nЦель: увидеть, как слишком гибкая модель подстраивается под обучающие данные.\n\nИсходный код\n\n\n```\ntree_deep = DecisionTreeClassifier(\nmax_depth=None,\nrandom_state=42,\n)\n\ntree_deep.fit(TODO, TODO)\n\ntrain_acc_deep = accuracy_score(\ny_train,\ntree_deep.predict(TODO),\n)\ntest_acc_deep = accuracy_score(\ny_test,\ntree_deep.predict(TODO),\n)\ngap_deep = TODO\n\nprint('Train accuracy:', round(train_acc_deep, 3))\nprint('Test accuracy: ', round(test_acc_deep, 3))\nprint('Разрыв: ', round(gap_deep, 3))\nprint('Фактическая глубина:', tree_deep.get_depth())\nprint('Количество листьев:', tree_deep.get_n_leaves())\n\nassert train_acc_deep >= 0.99\nassert gap_deep >= 0.20\n```\n\nСравните модели\n\n\n| Модель | Accuracy train | Accuracy test | Разрыв | Предварительный вывод |\n| --- | --- | --- | --- | --- |\n| Ограниченное дерево | ________ | ________ | ________ | ________________ |\n| Глубокое дерево | ________ | ________ | ________ | ________________ |\n\n\n### Задание №4. Напишите функцию диагностики\n\nРекомендуемое время: 14 мин. · Максимум: 4 балл(а/ов).\n\nЦель\n\nЦель: формализовать учебное правило и проверить его автоматическими тестами.\n\nУчебное правило\n\nЕсли train_accuracy ≥ 0,90 и разрыв между train и test не меньше 0,10, возвращаем «Есть признаки переобучения». Если обе точности ниже 0,70, возвращаем «Возможно недообучение». В остальных случаях — «Явных признаков переобучения нет».\n\nИсходный код\n\n\n```\ndef diagnose_model(train_accuracy, test_accuracy, gap_threshold=0.10):\ngap = TODO\n\nif TODO:\nreturn 'Есть признаки переобучения'\nelif TODO:\nreturn 'Возможно недообучение'\nelse:\nreturn 'Явных признаков переобучения нет'\n\n\nassert diagnose_model(0.99, 0.70) == 'Есть признаки переобучения'\nassert diagnose_model(0.62, 0.60) == 'Возможно недообучение'\nassert diagnose_model(0.82, 0.76) == 'Явных признаков переобучения нет'\n\nprint(diagnose_model(train_acc_limited, test_acc_limited))\nprint(diagnose_model(train_acc_deep, test_acc_deep))\n```\n\nОбъясните одним предложением, почему функция использует сразу два условия для переобучения: высокий train и большой разрыв\n\n________________________________________________________________________________\n\n\n### Задание №5. Исследуйте влияние глубины дерева\n\nРекомендуемое время: 16 мин. · Максимум: 4 балл(а/ов).\n\nЦель\n\nЦель: построить график и определить, при какой сложности модель начинает слишком сильно подстраиваться под обучение.\n\nЧто нужно сделать\n\n- Для каждой глубины от 1 до 15 обучите новое дерево.\n\n- Сохраните accuracy на train и test в отдельные списки.\n\n- Постройте две линии на одном графике.\n\n- Найдите глубину с максимальным test accuracy .\n\nИсходный код\n\n\n```\ndepths = range(1, 16)\ntrain_scores = []\ntest_scores = []\n\nfor depth in depths:\nmodel = DecisionTreeClassifier(\nmax_depth=TODO,\nrandom_state=42,\n)\nmodel.fit(TODO, TODO)\n\ntrain_scores.append(\naccuracy_score(y_train, model.predict(X_train))\n)\ntest_scores.append(\naccuracy_score(y_test, model.predict(X_test))\n)\n\nbest_depth = list(depths)[int(np.argmax(test_scores))]\nprint('Лучшая глубина по test accuracy:', best_depth)\nprint('Лучшее test accuracy:', round(max(test_scores), 3))\n\nplt.figure(figsize=(9, 5))\nplt.plot(list(depths), train_scores, marker='o', label='Train')\nplt.plot(list(depths), test_scores, marker='o', label='Test')\nplt.xlabel('max_depth')\nplt.ylabel('Accuracy')\nplt.title('Качество в зависимости от глубины дерева')\nplt.grid(alpha=0.3)\nplt.legend()\nplt.show()\n```\n\nОриентир: Ваш график должен иметь похожую форму, но сначала постройте его самостоятельно\n\nОтветьте по графику\n\n- Как меняется качество на обучающей выборке при увеличении глубины?\n\n- Почему тестовое качество не растёт бесконечно вместе с обучающим?\n\n- С какой глубины разрыв становится особенно заметным?\n\n________________________________________________________________________________\n\n\n### Задание №6. Уменьшите переобучение\n\nРекомендуемое время: 12 мин. · Максимум: 3 балл(а/ов).\n\nЦель\n\nЦель: ограничить сложность дерева с помощью max_depth и min_samples_leaf и сравнить результат с глубокой моделью.\n\nЧто нужно сделать\n\n- Подберите значения max_depth и min_samples_leaf вместо TODO .\n\n- Добейтесь, чтобы разрыв стал меньше, чем у глубокого дерева, а accuracy на тесте — выше, чем у глубокого дерева: должны выполниться все проверки assert .\n\nИсходный код\n\n\n```\ntree_regularized = DecisionTreeClassifier(\nmax_depth=TODO,\nmin_samples_leaf=TODO,\nrandom_state=42,\n)\n\ntree_regularized.fit(X_train, y_train)\n\ntrain_acc_reg = accuracy_score(\ny_train,\ntree_regularized.predict(X_train),\n)\ntest_acc_reg = accuracy_score(\ny_test,\ntree_regularized.predict(X_test),\n)\ngap_reg = train_acc_reg - test_acc_reg\n\nprint('Train accuracy:', round(train_acc_reg, 3))\nprint('Test accuracy: ', round(test_acc_reg, 3))\nprint('Разрыв: ', round(gap_reg, 3))\nprint(diagnose_model(train_acc_reg, test_acc_reg))\n\nassert 0.80 <= train_acc_reg <= 0.90\nassert 0.70 <= test_acc_reg <= 0.80\nassert gap_reg < gap_deep\nassert test_acc_reg > test_acc_deep\n```\n\nЗаполните итоговую таблицу\n\n\n| Модель | Train | Test | Разрыв | Глубина | Вывод |\n| --- | --- | --- | --- | --- | --- |\n| Ограниченная | ____ | ____ | ____ | ____ | ________________ |\n| Глубокая | ____ | ____ | ____ | ____ | ________________ |\n| Регуляризованная | ____ | ____ | ____ | ____ | ________________ |\n\n\n### Таблицы из теоретической части\n\n\n| После занятия Вы сможете разделять данные на обучающую и тестовую части; вычислять качество модели на обеих выборках; сравнивать результаты; распознавать признаки переобучения; объяснять, почему высокая точность на обучающих данных ещё не гарантирует полезность модели. |\n| --- |\n\n\n| Бытовая аналогия Модель похожа на ученика, который запомнил конкретные ответы, но не освоил правило. На знакомом варианте результат почти идеален, а новая формулировка вызывает затруднение. |\n| --- |\n\n\n| Наблюдение | Возможная интерпретация |\n| --- | --- |\n| Высокое качество на train и заметно более низкое на test | Есть признаки переобучения |\n| Низкое качество и на train , и на test | Модель может быть слишком простой или данные недостаточно информативны |\n| Сопоставимое приемлемое качество на train и test | Явных признаков переобучения нет |\n\n\n| Правило выполнения Запускайте ячейки по порядку. Не переобучайте модель на тестовой выборке и не меняйте random_state=42 до выполнения обязательной части: это нужно для воспроизводимости результатов. |\n| --- |\n\n\n| Ключевая мысль урока Качество модели оценивают не по тому, насколько хорошо она запомнила обучение, а по тому, насколько надёжно она работает на новых данных. |\n| --- |",
   "theory": [
     {
       "title": "Переобучение и проверка модели на новых данных",
@@ -312,5 +1067,45 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "output",
+    "statistics",
+    "metrics",
+    "split",
+    "classification",
+    "conditions",
+    "logic",
+    "functions",
+    "features",
+    "target",
+    "loops"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M03-L12-lecture.pdf",
+      "name": "Переобучение и проверка модели на новых данных — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "02a8acc7aad2d669907ceaf28bc3b690832a847f9473c74c1a57e85fa7b728d6",
+      "source": {
+        "path": "Снимки страниц.json / e3329b6b778b119f74f20720",
+        "sha256": "168915aa95e2b499e76cd9cd0e6c249e3515a071ebd8a5f543c6e928c6bc1c3f"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M03-L12-presentation.pdf",
+      "name": "Переобучение и проверка модели на новых данных — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 15,
+      "sha256": "918f53acdef85ef27ebdb2cc42f9eb209bd655f2cfee2f0a7714a5ee78dde3a1",
+      "source": {
+        "path": "Модуль 3/Занятие 12/Презентация — итоговая.pptx",
+        "sha256": "810bd55161745cf31f935596dd627efe3e0ef614fb393003ebbdf2decfe7a5cd"
+      }
+    }
   }
 }

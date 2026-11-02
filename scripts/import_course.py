@@ -405,11 +405,17 @@ def build(source: Path, private: Path, approvals: Path | None = None, rights_con
             search.extend({'id':t['id'],'title':t['title'],'context':'Практика · '+r['number'],'url':f"/lesson/{r['id']}/task/{t['id']}",'body':t['statement']} for t in lesson['tasks'])
         dump(stage/'search-index.json',search)
         dump(stage/'import-report.json',report);dump(private/'import-report-full.json',report)
+        from reference_content import project_reference
+        project_reference(stage, root, private, PROJECT/'content/solutions')
         destination=PROJECT/'public/content'
         if destination.exists():
             if destination.is_symlink() or destination.resolve().parent!=(PROJECT/'public').resolve():raise ValueError('Unsafe output directory')
             shutil.rmtree(destination)
         shutil.copytree(stage,destination)
+        import subprocess
+        subprocess.run([__import__('sys').executable,'scripts/build-project-example.py'],cwd=PROJECT,check=True)
+        subprocess.run(['node','scripts/fit-slides.mjs'],cwd=PROJECT,check=True)
+        subprocess.run(['node','scripts/build-documents.mjs','--sources',str(private/'document-sources.json')],cwd=PROJECT,check=True)
         print(json.dumps({'counts':counts,'discrepancies':discrepancies,'warnings':len(warnings),'contentSha256':sha((destination/'index.json').read_bytes())},ensure_ascii=False))
         return report
 

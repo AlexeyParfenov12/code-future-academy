@@ -6,53 +6,21 @@
   "title": "Классификация изображений на готовом наборе данных",
   "originalTitle": "Тема 13. Занятие 13. Классификация изображений на готовом наборе данных",
   "kind": "lesson",
-  "taskCount": 7,
+  "taskCount": 6,
   "slideCount": 28,
   "fileCount": 0,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Классификация изображений на готовом наборе данных  В этом занятии рассматривается тема «Классификация изображений на готовом наборе данных». Будем опираться н",
+  "description": "В этом занятии рассматривается тема «Классификация изображений на готовом наборе данных». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
-      "id": "T-6a5db640e0ea2a68129a2313",
-      "number": 1,
-      "title": "Дополнительное задание 1. Дерево решений",
-      "type": "code",
-      "moduleId": 3,
-      "lessonId": "M03-L13",
-      "statement": "### Сравнение KNN с деревом решений\n\nУсловие\n\nСравните KNN с готовой моделью DecisionTreeClassifier . Используйте random_state=42 и max_depth=12 .\n\nКод для выполнения\n\n\n```\nfrom sklearn.tree import DecisionTreeClassifier\n\ntree = DecisionTreeClassifier(max_depth=12, random_state=42)\ntree.fit(X_train, y_train)\ntree_pred = tree.predict(X_test)\n\nprint('Decision tree accuracy:', accuracy_score(y_test, tree_pred))\nprint('Decision tree errors:', np.sum(tree_pred != y_test))\n```\n\nСравнение моделей\n\n\n| Модель | Accuracy | Количество ошибок |\n| --- | --- | --- |\n| KNN (k=3) | ____________ | ____________ |\n| Decision Tree (max_depth=12) | ____________ | ____________ |\n\nВывод\n\nКакая модель точнее? Почему одной точности недостаточно для окончательного выбора?\n\n________________________________________________________________________________\n\n\n### Задача №7\n\n\n### Устойчивость вывода\n\nУсловие\n\nИзмените random_state разделения данных на 1, 7 и 100. Для каждого значения снова сравните k=1 и k=3 .\n\nКод для выполнения\n\n\n```\nrandom_states = [1, 7, 100]\nresults = []\n\nfor rs in random_states:\n    X_train, X_test, y_train, y_test = train_test_split(\n        X, y, test_size=0.25, random_state=rs, stratify=y\n    )\n\n    for k in [1, 3]:\n        model = KNeighborsClassifier(n_neighbors=k)\n        model.fit(X_train, y_train)\n        pred = model.predict(X_test)\n        acc = accuracy_score(y_test, pred)\n        results.append((rs, k, acc))\n        print(f'random_state={rs}, k={k}: accuracy={acc:.4f}')\n```\n\nРезультаты\n\n\n| random_state | k=1 accuracy | k=3 accuracy | Победитель |\n| --- | --- | --- | --- |\n| 1 | ____________ | ____________ | ____________ |\n| 7 | ____________ | ____________ | ____________ |\n| 100 | ____________ | ____________ | ____________ |\n\nВывод\n\nСовпадает ли победитель во всех разбиениях? Сделайте вывод, почему качество модели лучше проверять не на одном случайном разделении.\n\n________________________________________________________________________________\n\nВажно\n\nПри изменении random_state меняется состав обучающей и тестовой выборок. Небольшие колебания accuracy — норма. Если победитель меняется, вывод о лучшем значении k следует формулировать осторожно.",
-      "origin": "author",
-      "ismartLink": {
-        "id": "6a5db640e0ea2a68129a2313",
-        "label": "Дополнительное задание 1. Дерево решений",
-        "kind": "Дополнительное задание 1. Дерево решений",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/0a6167bcc5a598531f655066/element/6a5db640e0ea2a68129a2313",
-        "status": "unverified",
-        "unitId": "0a6167bcc5a598531f655066",
-        "elementId": "6a5db640e0ea2a68129a2313"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 3/Занятие 13/Практика для студентов.md",
-        "sha256": "0f41112e3b48a5f3aa3e0f5d083c31f4e8d7b8234de403f897e8e187cb6a1ddd"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
       "id": "T-6a5db625e0ea2a68129a230e",
-      "number": 2,
+      "number": 1,
       "title": "Задача №1",
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L13",
-      "statement": "Задача №1 (2 из 8)\nТема 13. Занятие 13. Классификация изображений на готовом наборе данных\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nПрактическое задание №1\nПаспорт набора данных\nЧто нужно сделать\nЗапустите ячейки импорта библиотек и загрузки данных (ячейки 1–2 из шаблона). Заполните таблицу по фактическому выводу программы.\nПоказатель\tВаш ответ\nКоличество изображений\t____________________________\nРазмер одного изображения\t____________________________\nКоличество признаков в X\t____________________________\nКоличество классов\t____________________________\nМинимальная и максимальная яркость\t____________________________\nОбъясните одним предложением: что означает одна строка X?\n________________________________________________________________________________\n________________________________________________________________________________\nСамопроверка в блокноте\nassert X.shape == (1797, 64)\nassert digits.images.shape == (1797, 8, 8)\nassert len(np.unique(y)) == 10\nassert X.min() == 0 and X.max() == 16\nprint('Задача 1: проверка пройдена')",
+      "statement": "# Практическое задание №1\n\n## Паспорт набора данных\n\nЧто нужно сделать\n\nЗапустите ячейки импорта библиотек и загрузки данных (ячейки 1–2 из шаблона). Заполните таблицу по фактическому выводу программы.\n\n| Показатель | Ваш ответ |\n| --- | --- |\n| Количество изображений | ____________________________ |\n| Размер одного изображения | ____________________________ |\n| Количество признаков в X | ____________________________ |\n| Количество классов | ____________________________ |\n| Минимальная и максимальная яркость | ____________________________ |\n\n**Объясните одним предложением:** что означает одна строка `X`?\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\nСамопроверка в блокноте\n\n```text\nassert X.shape == (1797, 64)\nassert digits.images.shape == (1797, 8, 8)\nassert len(np.unique(y)) == 10\nassert X.min() == 0 and X.max() == 16\nprint('Задача 1: проверка пройдена')\n```",
       "origin": "ismart",
       "ismartLink": {
         "id": "6a5db625e0ea2a68129a230e",
@@ -65,26 +33,50 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L13",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Изображений: 1797.\nРазмер: 8×8 пикселей.\nПризнаков в X: 64.\nКлассов: 10 (цифры 0–9).\nЯркость: от 0 до 16.\nОдна строка X содержит 64 яркости одного изображения, развёрнутого из матрицы 8×8.",
+        "explanation": "Набор load_digits встроен в scikit-learn и не скачивает случайные картинки. Признаки — значения пикселей; целевая метка — изображённая цифра. Это не изображения 28×28 из MNIST.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "output",
+          "features",
+          "target"
+        ],
+        "id": "T-6a5db625e0ea2a68129a230e-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 13/Страницы",
-        "elementId": "6a5db625e0ea2a68129a230e"
+        "elementId": "6a5db625e0ea2a68129a230e",
+        "archive": "Снимки страниц.json",
+        "sha256": "c8a064bace9db3c4134dbb45a53202d2fc9b2c1c61787d80c8a2cc5f25469691"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6a5db62ae0ea2a68129a230f",
-      "number": 3,
+      "number": 2,
       "title": "Задача №2",
       "type": "choice",
       "moduleId": 3,
       "lessonId": "M03-L13",
-      "statement": "Задача №2 (3 из 8)\nТема 13. Занятие 13. Классификация изображений на готовом наборе данных\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nПрактическое задание №2\nЧто произойдёт с кодом и исправление\nУсловие\nДан фрагмент кода с четырьмя ошибками, связанными с признаками, метками, обучением и оценкой. Определите, что произойдёт при его выполнении, и перепишите его корректно.\nИсходный код\nX_train, X_test, y_train, y_test = train_test_split(\n    y, X, test_size=0.25, random_state=42, stratify=y\n)\n\nmodel = KNeighborsClassifier(n_neighbors=3)\nmodel.fit(X_test, y_train)\ny_pred = model.predict(y_test)\naccuracy = accuracy_score(y_pred, X_test)\nШаг 1. Что произойдёт?\nВыберите правильный вариант:\nА) Код выполнится, accuracy будет вычислена\nБ) Ошибка возникнет уже при вызове train_test_split из-за неверного порядка аргументов\nВ) train_test_split выполнится, а при вызове fit возникнет ошибка: из-за перепутанного порядка X и y в X_test окажутся метки, а обучение идёт на тестовой части с метками обучающей\nГ) Код выполнится без ошибок, но accuracy будет вычислена неверно\nВаш ответ: ________\nОбоснование: ________________________________________________________________\n________________________________________________________________________________\nШаг 2. Исправленный код\nНапишите полностью исправленный вариант кода:\nШаг 3. Какие размеры выборок?\nПри test_size=0.25 и исходном наборе из 1797 объектов:\nX_train.shape = ______________\nX_test.shape = ______________\ny_train.shape = ______________\ny_test.shape = ______________\nПочему тестовая часть не равна ровно 449 объектам?\n________________________________________________________________________________\nПодсказка\nМетод fit принимает признаки и правильные метки. predict получает только признаки. accuracy_score сравнивает правильные и предсказанные классы.\nК шагу 3: сначала вычислите четверть от общего количества объектов. Учтите, что число строк выборки должно быть целым, а затем проверьте, что размеры обучающей и тестовой частей в сумме дают 1797.\nСамопроверка\nПосле исправления проследите цепочку данных: X передаётся в признаки, y — в метки, модель обучается на части train, прогноз строится для X_test, а качество оценивается сравнением с y_test.",
+      "statement": "# Практическое задание №2\n\n## Что произойдёт с кодом и исправление\n\nУсловие\n\nДан фрагмент кода с четырьмя ошибками, связанными с признаками, метками, обучением и оценкой. Определите, что произойдёт при его выполнении, и перепишите его корректно.\n\nИсходный код\n\n```python\nX_train, X_test, y_train, y_test = train_test_split(\n    y, X, test_size=0.25, random_state=42, stratify=y\n)\n\nmodel = KNeighborsClassifier(n_neighbors=3)\nmodel.fit(X_test, y_train)\ny_pred = model.predict(y_test)\naccuracy = accuracy_score(y_pred, X_test)\n```\n\nШаг 1. Что произойдёт?\n\nВыберите правильный вариант:\n\n- А) Код выполнится, accuracy будет вычислена\n\n- Б) Ошибка возникнет уже при вызове train_test_split из-за неверного порядка аргументов\n\n- В) train_test_split выполнится, а при вызове fit возникнет ошибка: из-за перепутанного порядка X и y в X_test окажутся метки, а обучение идёт на тестовой части с метками обучающей\n\n- Г) Код выполнится без ошибок, но accuracy будет вычислена неверно\n\n**Ваш ответ:** ________\n\nОбоснование: ________________________________________________________________\n\n________________________________________________________________________________\n\nШаг 2. Исправленный код\n\nНапишите полностью исправленный вариант кода:\n\n```text\n\n```\n\nШаг 3. Какие размеры выборок?\n\nПри `test_size=0.25` и исходном наборе из 1797 объектов:\n\n`X_train.shape` = ______________\n\n`X_test.shape` = ______________\n\n`y_train.shape` = ______________\n\n`y_test.shape` = ______________\n\nПочему тестовая часть не равна ровно 449 объектам?\n\n________________________________________________________________________________\n\nПодсказка\n\nМетод `fit` принимает признаки и правильные метки. `predict` получает только признаки. `accuracy_score` сравнивает правильные и предсказанные классы.\n\nК шагу 3: сначала вычислите четверть от общего количества объектов. Учтите, что число строк выборки должно быть целым, а затем проверьте, что размеры обучающей и тестовой частей в сумме дают 1797.\n\nСамопроверка\n\nПосле исправления проследите цепочку данных: `X` передаётся в признаки, `y` — в метки, модель обучается на части `train`, прогноз строится для `X_test`, а качество оценивается сравнением с `y_test`.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6a5db62ae0ea2a68129a230f",
@@ -97,26 +89,122 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = KNeighborsClassifier(n_neighbors=3).fit(X_train,y_train)\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test,y_pred)\nprint('X_train:',X_train.shape,'X_test:',X_test.shape)\nprint('y_train:',y_train.shape,'y_test:',y_test.shape)\nprint(f'Accuracy: {accuracy:.4f}')",
+        "answer": "",
+        "explanation": "Правильный вариант В: train_test_split способен разделить два массива даже при перепутанном порядке, но дальнейший fit получает метки вместо двумерных признаков и несовместимые части. Исправление: разделять X, y; fit(X_train, y_train); predict(X_test); accuracy_score(y_test, y_pred). Тестовая доля ceil(1797×0.25)=450, train1347.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "X_train: (1347, 64) X_test: (450, 64)\ny_train: (1347,) y_test: (450,)\nAccuracy: 0.9844"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 10,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+          },
+          {
+            "line": 11,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в y_pred."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `accuracy_score(y_test, y_pred)` и сохраняем результат в `accuracy`."
+          },
+          {
+            "line": 13,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 14,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 15,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "metrics",
+          "split",
+          "classification",
+          "features",
+          "target"
+        ],
+        "id": "T-6a5db62ae0ea2a68129a230f-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 13/Страницы",
-        "elementId": "6a5db62ae0ea2a68129a230f"
+        "elementId": "6a5db62ae0ea2a68129a230f",
+        "archive": "Снимки страниц.json",
+        "sha256": "1fe82fa675a90aaf55d36418c244ef39265207c04989dab4ec8999416add481b"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "metrics",
+        "split",
+        "classification",
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6a5db630e0ea2a68129a2310",
-      "number": 4,
+      "number": 3,
       "title": "Задача №3",
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L13",
-      "statement": "Задача №3 (4 из 8)\nТема 13. Занятие 13. Классификация изображений на готовом наборе данных\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nПрактическое задание №3\nБазовая модель\nЧто нужно сделать\nЗапустите исправленный код обучения и прогноза. Запишите результаты с четырьмя знаками после запятой.\nКод для выполнения\nmodel = KNeighborsClassifier(n_neighbors=3)\nmodel.fit(X_train, y_train)\ny_pred = model.predict(X_test)\n\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy:.4f}')\nprint('Ошибок:', np.sum(y_pred != y_test))\nРезультаты\nПоказатель\tРезультат\nAccuracy\t____________________________\nКоличество объектов в тестовой выборке\t____________________________\nКоличество правильных прогнозов\t____________________________\nКоличество ошибок\t____________________________\nРасчёт вручную\nРассчитайте accuracy по формуле:\naccuracy = число правильных прогнозов / число тестовых объектов\nВаш расчёт: ______________ / ______________ = ______________\nВывод\nМожно ли считать модель качественной только потому, что accuracy выше 0,98? Обоснуйте.\n________________________________________________________________________________\n________________________________________________________________________________\n________________________________________________________________________________\nСамопроверка\nassert len(y_pred) == len(y_test) == 450\nassert 0.97 <= accuracy <= 1.0\nassert int(np.sum(y_pred != y_test)) < 20\nprint('Задача 3: базовая модель построена')",
+      "statement": "# Практическое задание №3\n\n## Базовая модель\n\nЧто нужно сделать\n\nЗапустите исправленный код обучения и прогноза. Запишите результаты с четырьмя знаками после запятой.\n\nКод для выполнения\n\n```python\nmodel = KNeighborsClassifier(n_neighbors=3)\nmodel.fit(X_train, y_train)\ny_pred = model.predict(X_test)\n\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy:.4f}')\nprint('Ошибок:', np.sum(y_pred != y_test))\n```\n\nРезультаты\n\n| Показатель | Результат |\n| --- | --- |\n| Accuracy | ____________________________ |\n| Количество объектов в тестовой выборке | ____________________________ |\n| Количество правильных прогнозов | ____________________________ |\n| Количество ошибок | ____________________________ |\n\nРасчёт вручную\n\nРассчитайте `accuracy` по формуле:\n\n**accuracy = число правильных прогнозов / число тестовых объектов**\n\nВаш расчёт: ______________ / ______________ = ______________\n\nВывод\n\nМожно ли считать модель качественной только потому, что `accuracy` выше 0,98? Обоснуйте.\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\nСамопроверка\n\n```text\nassert len(y_pred) == len(y_test) == 450\nassert 0.97 <= accuracy <= 1.0\nassert int(np.sum(y_pred != y_test)) < 20\nprint('Задача 3: базовая модель построена')\n```",
       "origin": "ismart",
       "ismartLink": {
         "id": "6a5db630e0ea2a68129a2310",
@@ -129,26 +217,122 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = KNeighborsClassifier(n_neighbors=3).fit(X_train,y_train)\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test,y_pred)\nerrors = int(np.sum(y_pred != y_test))\nprint(f'Accuracy: {accuracy:.4f}')\nprint('Тестовых:',len(y_test),'верных:',len(y_test)-errors,'ошибок:',errors)\nassert len(y_test) == 450 and 0.97 <= accuracy <= 1 and errors < 20",
+        "answer": "",
+        "explanation": "Доля верных вычисляется на 450 тестовых изображениях. Даже accuracy>0.98 не гарантирует качество на фотографиях с телефона: встроенные 8×8 изображения и реальные условия различаются. Нужно проверить матрицу ошибок, новые источники изображений и цену конкретной ошибки.\n\nВерных 443 из 450, ошибок 7: 443/450≈0.9844.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Accuracy: 0.9844\nТестовых: 450 верных: 443 ошибок: 7"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 10,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+          },
+          {
+            "line": 11,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в y_pred."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `accuracy_score(y_test, y_pred)` и сохраняем результат в `accuracy`."
+          },
+          {
+            "line": 13,
+            "text": "Вычисляем `int(np.sum(y_pred != y_test))` и сохраняем результат в `errors`."
+          },
+          {
+            "line": 14,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 15,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 16,
+            "text": "Проверяем инвариант `len(y_test) == 450 and 0.97 <= accuracy <= 1 and (errors < 20)`. При нарушении программа сообщит об ошибке."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "metrics",
+          "split",
+          "classification"
+        ],
+        "id": "T-6a5db630e0ea2a68129a2310-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 13/Страницы",
-        "elementId": "6a5db630e0ea2a68129a2310"
+        "elementId": "6a5db630e0ea2a68129a2310",
+        "archive": "Снимки страниц.json",
+        "sha256": "e9ac516953986f643f89a290229b09ba92712161c2af53e37355e3737f623137"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "metrics",
+        "split",
+        "classification"
+      ]
     },
     {
       "id": "T-6a5db635e0ea2a68129a2311",
-      "number": 5,
+      "number": 4,
       "title": "Задача №4",
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L13",
-      "statement": "Задача №4 (5 из 8)\nРазработчик интеллектуальных решений. Базовый уровень для студентов СПО (онлайн)\nМодуль 3. Алгоритмы и модели искусственного интеллекта\nТема 13. Занятие 13. Классификация изображений на готовом наборе данных\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nПрактическое задание №4\nГде модель ошибается?\nЧто нужно сделать\nПостройте матрицу ошибок с помощью ячейки 5 из шаблона и выполните анализ.\nКод для матрицы ошибок\ncm = confusion_matrix(y_test, y_pred)\nprint(cm)\nprint(classification_report(y_test, y_pred, digits=3))\n\nConfusionMatrixDisplay(cm, display_labels=digits.target_names).plot(\n    cmap='Blues', values_format='d'\n)\nplt.title('Матрица ошибок KNN')\nplt.show()\nАнализ матрицы ошибок\nВопрос\tВаш вывод\nСколько правильных прогнозов для класса 8?\t____________________________\nСколько изображений класса 8 распознано неверно?\t____________________________\nС какими классами модель путает цифру 8?\t____________________________\nКакие ещё истинные классы имеют ошибки?\t____________________________\nСколько всего ошибочных прогнозов (сумма чисел вне главной диагонали)?\t____________________________\nПросмотр ошибочных изображений\nwrong_indices = np.where(y_pred != y_test)[0]\n\nfig, axes = plt.subplots(2, 4, figsize=(10, 5))\nfor ax in axes.ravel():\n    ax.axis('off')\n\nfor ax, index in zip(axes.ravel(), wrong_indices[:8]):\n    ax.imshow(X_test[index].reshape(8, 8), cmap='gray_r')\n    ax.set_title(f'Истина {y_test[index]} → прогноз {y_pred[index]}')\n    ax.axis('off')\n\nplt.tight_layout()\nplt.show()\nМини-протокол ошибок\nВыберите две ошибки и заполните таблицу:\nОшибка\tИстинный класс\tПрогноз\tЧто могло затруднить распознавание\n1\t______\t______\t________________________________________\n2\t______\t______\t________________________________________\nВажно\nПричину ошибки нельзя считать доказанной только по изображению. Формулируйте наблюдение осторожно: «возможно, контур похож на...», «цифра написана нетипично», «часть линии выражена слабо».",
+      "statement": "# Практическое задание №4\n\n## Где модель ошибается?\n\nЧто нужно сделать\n\nПостройте матрицу ошибок с помощью ячейки 5 из шаблона и выполните анализ.\n\nКод для матрицы ошибок\n\n```python\ncm = confusion_matrix(y_test, y_pred)\nprint(cm)\nprint(classification_report(y_test, y_pred, digits=3))\n\nConfusionMatrixDisplay(cm, display_labels=digits.target_names).plot(\n    cmap='Blues', values_format='d'\n)\nplt.title('Матрица ошибок KNN')\nplt.show()\n```\n\nАнализ матрицы ошибок\n\n| Вопрос | Ваш вывод |\n| --- | --- |\n| Сколько правильных прогнозов для класса 8? | ____________________________ |\n| Сколько изображений класса 8 распознано неверно? | ____________________________ |\n| С какими классами модель путает цифру 8? | ____________________________ |\n| Какие ещё истинные классы имеют ошибки? | ____________________________ |\n| Сколько всего ошибочных прогнозов (сумма чисел вне главной диагонали)? | ____________________________ |\n\nПросмотр ошибочных изображений\n\n```python\nwrong_indices = np.where(y_pred != y_test)[0]\n\nfig, axes = plt.subplots(2, 4, figsize=(10, 5))\nfor ax in axes.ravel():\n    ax.axis('off')\n\nfor ax, index in zip(axes.ravel(), wrong_indices[:8]):\n    ax.imshow(X_test[index].reshape(8, 8), cmap='gray_r')\n    ax.set_title(f'Истина {y_test[index]} → прогноз {y_pred[index]}')\n    ax.axis('off')\n\nplt.tight_layout()\nplt.show()\n```\n\nМини-протокол ошибок\n\nВыберите две ошибки и заполните таблицу:\n\n| Ошибка | Истинный класс | Прогноз | Что могло затруднить распознавание |\n| --- | --- | --- | --- |\n| 1 | ______ | ______ | ________________________________________ |\n| 2 | ______ | ______ | ________________________________________ |\n\nВажно\n\nПричину ошибки нельзя считать доказанной только по изображению. Формулируйте наблюдение осторожно: «возможно, контур похож на...», «цифра написана нетипично», «часть линии выражена слабо».",
       "origin": "ismart",
       "ismartLink": {
         "id": "6a5db635e0ea2a68129a2311",
@@ -161,26 +345,196 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = KNeighborsClassifier(n_neighbors=3).fit(X_train,y_train)\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test,y_pred)\ncm = confusion_matrix(y_test,y_pred,labels=list(range(10)))\nprint(cm)\nprint(classification_report(y_test,y_pred,digits=3))\nprint('8 верно:',cm[8,8],'ошибок:',int(cm[8].sum()-cm[8,8]))\nprint('8 путается с:',[(j,int(cm[8,j])) for j in range(10) if j != 8 and cm[8,j]])\nprint('Классы с ошибками:',[i for i in range(10) if cm[i].sum() != cm[i,i]])\nprint('Всего вне диагонали:',int(cm.sum()-np.trace(cm)))\nConfusionMatrixDisplay(cm,display_labels=digits.target_names).plot(cmap='Blues',values_format='d')\nplt.title('Матрица ошибок KNN, k=3')\nplt.show()\nwrong_indices = np.where(y_pred != y_test)[0]\nfig,axes = plt.subplots(2,4,figsize=(10,5))\nfor ax in axes.ravel():\n    ax.axis('off')\nfor ax,index in zip(axes.ravel(),wrong_indices[:8]):\n    ax.imshow(X_test[index].reshape(8,8),cmap='gray_r')\n    ax.set_title(f'{y_test[index]} → {y_pred[index]}')\nfor index in wrong_indices[:2]:\n    print('Протокол: истинная',y_test[index],'прогноз',y_pred[index],'индекс test',index)\nplt.tight_layout()\nplt.show()",
+        "answer": "",
+        "explanation": "Код отвечает на все числовые вопросы по строке 8 и выводит первые две ошибки для протокола. При просмотре размытых 8×8 контуров возможные объяснения — слабое замыкание петли или похожий наклон штрихов; это гипотезы, которые нужно связать с конкретным изображением. Матрица показывает частоты, но сама не доказывает причину неправильного распознавания.\n\nДля 8: 39 верных из 43, 4 ошибки—три 8→1 иодна 8→6. Ещё ошибаются истинные 5 и 9; всего 7. Первые случаи протокола 8→1 и 9→8. Возможные причины—слабая/незамкнутая петля и похожий контур; по одному изображению причина не доказывается.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "[[45  0  0  0  0  0  0  0  0  0]\n [ 0 46  0  0  0  0  0  0  0  0]\n [ 0  0 44  0  0  0  0  0  0  0]\n [ 0  0  0 46  0  0  0  0  0  0]\n [ 0  0  0  0 45  0  0  0  0  0]\n [ 0  0  0  0  0 45  0  0  0  1]\n [ 0  0  0  0  0  0 45  0  0  0]\n [ 0  0  0  0  0  0  0 45  0  0]\n [ 0  3  0  0  0  0  1  0 39  0]\n [ 0  0  0  0  1  0  0  0  1 43]]\n              precision    recall  f1-score   support\n\n           0      1.000     1.000     1.000        45\n           1      0.939     1.000     0.968        46\n           2      1.000     1.000     1.000        44\n           3      1.000     1.000     1.000        46\n           4      0.978     1.000     0.989        45\n           5      1.000     0.978     0.989        46\n           6      0.978     1.000     0.989        45\n           7      1.000     1.000     1.000        45\n           8      0.975     0.907     0.940        43\n           9      0.977     0.956     0.966        45\n\n    accuracy                          0.984       450\n   macro avg      0.985     0.984     0.984       450\nweighted avg      0.985     0.984     0.984       450\n\n8 верно: 39 ошибок: 4\n8 путается с: [(1, 3), (6, 1)]\nКлассы с ошибками: [5, 8, 9]\nВсего вне диагонали: 7\nПротокол: истинная 8 прогноз 1 индекс test 25\nПротокол: истинная 9 прогноз 8 индекс test 194"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 10,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+          },
+          {
+            "line": 11,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в y_pred."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `accuracy_score(y_test, y_pred)` и сохраняем результат в `accuracy`."
+          },
+          {
+            "line": 13,
+            "text": "Вычисляем `confusion_matrix(y_test, y_pred, labels=list(range(10)))` и сохраняем результат в `cm`."
+          },
+          {
+            "line": 14,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 15,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 16,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 17,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 18,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 19,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 20,
+            "text": "Выполняем `ConfusionMatrixDisplay(cm, display_labels=digits.target_names).plot` с переданными аргументами."
+          },
+          {
+            "line": 21,
+            "text": "Выполняем `plt.title` с переданными аргументами."
+          },
+          {
+            "line": 22,
+            "text": "Выполняем `plt.show` с переданными аргументами."
+          },
+          {
+            "line": 23,
+            "text": "Вычисляем `np.where(y_pred != y_test)[0]` и сохраняем результат в `wrong_indices`."
+          },
+          {
+            "line": 24,
+            "text": "Вычисляем `plt.subplots(2, 4, figsize=(10, 5))` и сохраняем результат в `(fig, axes)`."
+          },
+          {
+            "line": 25,
+            "text": "Перебираем `axes.ravel()`; очередное значение доступно через `ax`."
+          },
+          {
+            "line": 26,
+            "text": "Выполняем `ax.axis` с переданными аргументами."
+          },
+          {
+            "line": 27,
+            "text": "Перебираем `zip(axes.ravel(), wrong_indices[:8])`; очередное значение доступно через `(ax, index)`."
+          },
+          {
+            "line": 28,
+            "text": "Выполняем `ax.imshow` с переданными аргументами."
+          },
+          {
+            "line": 29,
+            "text": "Выполняем `ax.set_title` с переданными аргументами."
+          },
+          {
+            "line": 30,
+            "text": "Перебираем `wrong_indices[:2]`; очередное значение доступно через `index`."
+          },
+          {
+            "line": 31,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 32,
+            "text": "Выполняем `plt.tight_layout` с переданными аргументами."
+          },
+          {
+            "line": 33,
+            "text": "Выполняем `plt.show` с переданными аргументами."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "metrics",
+          "split",
+          "classification"
+        ],
+        "id": "T-6a5db635e0ea2a68129a2311-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 13/Страницы",
-        "elementId": "6a5db635e0ea2a68129a2311"
+        "elementId": "6a5db635e0ea2a68129a2311",
+        "archive": "Снимки страниц.json",
+        "sha256": "f54d4130337767cf0c9a829d4a6ce7c00e2e043342e161f56587d182a4c7e324"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "metrics",
+        "split",
+        "classification"
+      ]
     },
     {
       "id": "T-6a5db63be0ea2a68129a2312",
-      "number": 6,
+      "number": 5,
       "title": "Задача №5",
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L13",
-      "statement": "Задача №5 (6 из 8)\nРазработчик интеллектуальных решений. Базовый уровень для студентов СПО (онлайн)\nМодуль 3. Алгоритмы и модели искусственного интеллекта\nТема 13. Занятие 13. Классификация изображений на готовом наборе данных\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nПрактическое задание №5\nЭксперимент с параметром k\nЧто нужно сделать\nПроверьте, как число соседей влияет на accuracy. Запустите код эксперимента и заполните таблицу.\nКод эксперимента\nk_values = [1, 3, 5, 7, 9, 11, 15]\nscores = []\n\nfor k in k_values:\n    current_model = KNeighborsClassifier(n_neighbors=k)\n    current_model.fit(X_train, y_train)\n    current_pred = current_model.predict(X_test)\n    scores.append(accuracy_score(y_test, current_pred))\n\nfor k, score in zip(k_values, scores):\n    print(f'k={k:2d}: accuracy={score:.4f}')\n\nbest_score = max(scores)\nbest_k_values = [k for k, score in zip(k_values, scores) if score == best_score]\nprint('Лучший результат:', best_score)\nprint('Значения k с лучшим результатом:', best_k_values)\n\nplt.plot(k_values, scores, marker='o')\nplt.xlabel('k')\nplt.ylabel('accuracy')\nplt.title('Влияние k на качество KNN')\nplt.grid(True)\nplt.show()\nРезультаты эксперимента\nk\tAccuracy\n1\t____________\n3\t____________\n5\t____________\n7\t____________\n9\t____________\n11\t____________\n15\t____________\nЛучший результат: ______________\nЗначения k с лучшим результатом: ______________\nИтоговый аналитический вывод\nСформулируйте вывод по шаблону:\nШаблон вывода\nНа тестовой выборке из ___ изображений базовая модель при k=3 получила accuracy ___. Она допустила ___ ошибок. Чаще всего затруднения возникали с классом ___. В эксперименте лучший результат показали значения k = ___. Поэтому для данного фиксированного разбиения я выбираю k = ___, потому что ___. Вывод относится именно к этому набору данных и способу разделения.\n________________________________________________________________________________\n________________________________________________________________________________\n________________________________________________________________________________\n________________________________________________________________________________\n________________________________________________________________________________\n________________________________________________________________________________\nСамопроверка\nassert len(scores) == len(k_values) == 7\nassert all(0 <= score <= 1 for score in scores)\nassert max(scores) >= accuracy\nassert set(best_k_values).issubset(set(k_values))\nprint('Задача 5: эксперимент завершён')",
+      "statement": "# Практическое задание №5\n\n## Эксперимент с параметром k\n\nЧто нужно сделать\n\nПроверьте, как число соседей влияет на `accuracy`. Запустите код эксперимента и заполните таблицу.\n\nКод эксперимента\n\n```python\nk_values = [1, 3, 5, 7, 9, 11, 15]\nscores = []\n\nfor k in k_values:\n    current_model = KNeighborsClassifier(n_neighbors=k)\n    current_model.fit(X_train, y_train)\n    current_pred = current_model.predict(X_test)\n    scores.append(accuracy_score(y_test, current_pred))\n\nfor k, score in zip(k_values, scores):\n    print(f'k={k:2d}: accuracy={score:.4f}')\n\nbest_score = max(scores)\nbest_k_values = [k for k, score in zip(k_values, scores) if score == best_score]\nprint('Лучший результат:', best_score)\nprint('Значения k с лучшим результатом:', best_k_values)\n\nplt.plot(k_values, scores, marker='o')\nplt.xlabel('k')\nplt.ylabel('accuracy')\nplt.title('Влияние k на качество KNN')\nplt.grid(True)\nplt.show()\n```\n\nРезультаты эксперимента\n\n| k | Accuracy |\n| --- | --- |\n| 1 | ____________ |\n| 3 | ____________ |\n| 5 | ____________ |\n| 7 | ____________ |\n| 9 | ____________ |\n| 11 | ____________ |\n| 15 | ____________ |\n\n**Лучший результат:** ______________\n\n**Значения k с лучшим результатом:** ______________\n\nИтоговый аналитический вывод\n\nСформулируйте вывод по шаблону:\n\nШаблон вывода\n\nНа тестовой выборке из ___ изображений базовая модель при `k=3` получила `accuracy` ___. Она допустила ___ ошибок. Чаще всего затруднения возникали с классом ___. В эксперименте лучший результат показали значения `k` = ___. Поэтому для данного фиксированного разбиения я выбираю `k` = ___, потому что ___. Вывод относится именно к этому набору данных и способу разделения.\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\nСамопроверка\n\n```text\nassert len(scores) == len(k_values) == 7\nassert all(0 <= score <= 1 for score in scores)\nassert max(scores) >= accuracy\nassert set(best_k_values).issubset(set(k_values))\nprint('Задача 5: эксперимент завершён')\n```",
       "origin": "ismart",
       "ismartLink": {
         "id": "6a5db63be0ea2a68129a2312",
@@ -193,17 +547,171 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = KNeighborsClassifier(n_neighbors=3).fit(X_train,y_train)\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test,y_pred)\nk_values = [1,3,5,7,9,11,15]\nscores = []\nfor k in k_values:\n    current = KNeighborsClassifier(n_neighbors=k).fit(X_train,y_train)\n    score = accuracy_score(y_test,current.predict(X_test))\n    scores.append(score)\n    print(f'k={k}: accuracy={score:.4f}')\nbest_k_values = [k for k,score in zip(k_values,scores) if score == max(scores)]\nprint('Лучшие k:',best_k_values)\nprint('Выбранное k:',min(best_k_values))\nplt.plot(k_values,scores,marker='o')\nplt.xlabel('k')\nplt.ylabel('Accuracy')\nplt.title('Число соседей и качество на фиксированном test')\nplt.grid(True)\nplt.show()\nassert len(scores)==7 and max(scores)>=accuracy",
+        "answer": "",
+        "explanation": "Сравниваем семь значений k на одном разбиении 1347/450. Код сохраняет все равные максимумы; для однозначного учебного выбора берём наименьшее k среди них. Это результат фиксированного разбиения, а не универсальное лучшее k. Многократный подбор по test требует новой независимой оценки выбранной модели.\n\nЛучшие k: 1, 3, 5, все 0.9844. По выбранному правилу берём 1 как наименьшее среди равных. Класс 8 дал 4 из 7 ошибок.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "k=1: accuracy=0.9844\nk=3: accuracy=0.9844\nk=5: accuracy=0.9844\nk=7: accuracy=0.9800\nk=9: accuracy=0.9756\nk=11: accuracy=0.9778\nk=15: accuracy=0.9689\nЛучшие k: [1, 3, 5]\nВыбранное k: 1"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 10,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+          },
+          {
+            "line": 11,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в y_pred."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `accuracy_score(y_test, y_pred)` и сохраняем результат в `accuracy`."
+          },
+          {
+            "line": 13,
+            "text": "Создаём набор значений `k_values` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 14,
+            "text": "Создаём набор значений `scores` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 15,
+            "text": "Перебираем `k_values`; очередное значение доступно через `k`."
+          },
+          {
+            "line": 16,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+          },
+          {
+            "line": 17,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в score."
+          },
+          {
+            "line": 18,
+            "text": "Выполняем `scores.append` с переданными аргументами."
+          },
+          {
+            "line": 19,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 20,
+            "text": "Вычисляем `[k for k, score in zip(k_values, scores) if score == max(scores)]` и сохраняем результат в `best_k_values`."
+          },
+          {
+            "line": 21,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 22,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 23,
+            "text": "Выполняем `plt.plot` с переданными аргументами."
+          },
+          {
+            "line": 24,
+            "text": "Выполняем `plt.xlabel` с переданными аргументами."
+          },
+          {
+            "line": 25,
+            "text": "Выполняем `plt.ylabel` с переданными аргументами."
+          },
+          {
+            "line": 26,
+            "text": "Выполняем `plt.title` с переданными аргументами."
+          },
+          {
+            "line": 27,
+            "text": "Выполняем `plt.grid` с переданными аргументами."
+          },
+          {
+            "line": 28,
+            "text": "Выполняем `plt.show` с переданными аргументами."
+          },
+          {
+            "line": 29,
+            "text": "Проверяем инвариант `len(scores) == 7 and max(scores) >= accuracy`. При нарушении программа сообщит об ошибке."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "metrics",
+          "split",
+          "classification"
+        ],
+        "id": "T-6a5db63be0ea2a68129a2312-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 13/Страницы",
-        "elementId": "6a5db63be0ea2a68129a2312"
+        "elementId": "6a5db63be0ea2a68129a2312",
+        "archive": "Снимки страниц.json",
+        "sha256": "54ae923cf197662e9e68e14bbf7bdf4b820d6b6aeb325eb938a4f4fcc71dc554"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "metrics",
+        "split",
+        "classification"
+      ]
     },
     {
       "id": "T-6a5db646e0ea2a68129a2314",
@@ -212,7 +720,7 @@
       "type": "code",
       "moduleId": 3,
       "lessonId": "M03-L13",
-      "statement": "Задача №7 (8 из 8)\nРазработчик интеллектуальных решений. Базовый уровень для студентов СПО (онлайн)\nМодуль 3. Алгоритмы и модели искусственного интеллекта\nТема 13. Занятие 13. Классификация изображений на готовом наборе данных\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nДополнительное задание №2\nУстойчивость вывода\nУсловие\nИзмените random_state разделения данных на 1, 7 и 100. Для каждого значения снова сравните k=1 и k=3.\nКод для выполнения\nrandom_states = [1, 7, 100]\nresults = []\n\nfor rs in random_states:\n    X_train, X_test, y_train, y_test = train_test_split(\n        X, y, test_size=0.25, random_state=rs, stratify=y\n    )\n\n    for k in [1, 3]:\n        model = KNeighborsClassifier(n_neighbors=k)\n        model.fit(X_train, y_train)\n        pred = model.predict(X_test)\n        acc = accuracy_score(y_test, pred)\n        results.append((rs, k, acc))\n        print(f'random_state={rs}, k={k}: accuracy={acc:.4f}')\nРезультаты\nrandom_state\tk=1 accuracy\tk=3 accuracy\tПобедитель\n1\t____________\t____________\t____________\n7\t____________\t____________\t____________\n100\t____________\t____________\t____________\nВывод\nСовпадает ли победитель во всех разбиениях? Сделайте вывод, почему качество модели лучше проверять не на одном случайном разделении.\n________________________________________________________________________________\n________________________________________________________________________________\n________________________________________________________________________________\n________________________________________________________________________________\nВажно\nПри изменении random_state меняется состав обучающей и тестовой выборок. Небольшие колебания accuracy — норма. Если победитель меняется, вывод о лучшем значении k следует формулировать осторожно.",
+      "statement": "# Дополнительное задание №2\n\n## Устойчивость вывода\n\nУсловие\n\nИзмените `random_state` разделения данных на 1, 7 и 100. Для каждого значения снова сравните `k=1` и `k=3`.\n\nКод для выполнения\n\n```python\nrandom_states = [1, 7, 100]\nresults = []\n\nfor rs in random_states:\n    X_train, X_test, y_train, y_test = train_test_split(\n        X, y, test_size=0.25, random_state=rs, stratify=y\n    )\n\n    for k in [1, 3]:\n        model = KNeighborsClassifier(n_neighbors=k)\n        model.fit(X_train, y_train)\n        pred = model.predict(X_test)\n        acc = accuracy_score(y_test, pred)\n        results.append((rs, k, acc))\n        print(f'random_state={rs}, k={k}: accuracy={acc:.4f}')\n```\n\nРезультаты\n\n| random_state | k=1 accuracy | k=3 accuracy | Победитель |\n| --- | --- | --- | --- |\n| 1 | ____________ | ____________ | ____________ |\n| 7 | ____________ | ____________ | ____________ |\n| 100 | ____________ | ____________ | ____________ |\n\nВывод\n\nСовпадает ли победитель во всех разбиениях? Сделайте вывод, почему качество модели лучше проверять не на одном случайном разделении.\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\n________________________________________________________________________________\n\nВажно\n\nПри изменении `random_state` меняется состав обучающей и тестовой выборок. Небольшие колебания accuracy — норма. Если победитель меняется, вывод о лучшем значении k следует формулировать осторожно.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6a5db646e0ea2a68129a2314",
@@ -225,24 +733,129 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M03-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nfor rs in [1,7,100]:\n    train_x,test_x,train_y,test_y = train_test_split(X,y,test_size=.25,random_state=rs,stratify=y)\n    scores = {}\n    for k in [1,3]:\n        current = KNeighborsClassifier(n_neighbors=k).fit(train_x,train_y)\n        scores[k] = accuracy_score(test_y,current.predict(test_x))\n        print(f'random_state={rs}, k={k}: accuracy={scores[k]:.4f}')\n    print('Победитель:', 'равенство' if scores[1]==scores[3] else max(scores,key=scores.get))",
+        "answer": "",
+        "explanation": "Для каждого random_state создаётся новая общая пара выборок для обоих k. Меняется состав данных, поэтому меняются доли верных и потенциальный победитель. Таблица делает эти колебания явными; один удачный split недостаточен для окончательного выбора гиперпараметра.\n\nПри random_state1 и 7 лучше k=3, при 100 равенство. Единственного строго лучшего k во всех разбиениях нет.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "random_state=1, k=1: accuracy=0.9822\nrandom_state=1, k=3: accuracy=0.9844\nПобедитель: 3\nrandom_state=7, k=1: accuracy=0.9889\nrandom_state=7, k=3: accuracy=0.9911\nПобедитель: 3\nrandom_state=100, k=1: accuracy=0.9867\nrandom_state=100, k=3: accuracy=0.9867\nПобедитель: равенство"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+          },
+          {
+            "line": 10,
+            "text": "Перебираем `[1, 7, 100]`; очередное значение доступно через `rs`."
+          },
+          {
+            "line": 11,
+            "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=rs, stratify=y)` и сохраняем результат в `(train_x, test_x, train_y, test_y)`."
+          },
+          {
+            "line": 12,
+            "text": "Создаём словарь `scores` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 13,
+            "text": "Перебираем `[1, 3]`; очередное значение доступно через `k`."
+          },
+          {
+            "line": 14,
+            "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+          },
+          {
+            "line": 15,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в scores[k]."
+          },
+          {
+            "line": 16,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 17,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "metrics",
+          "split",
+          "classification"
+        ],
+        "id": "T-6a5db646e0ea2a68129a2314-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 3/Занятие 13/Страницы",
-        "elementId": "6a5db646e0ea2a68129a2314"
+        "elementId": "6a5db646e0ea2a68129a2314",
+        "archive": "Снимки страниц.json",
+        "sha256": "b42a36ff94b66ddaff0b5da54ea0a642d14122d291a039f7da69deea422585d6"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "metrics",
+        "split",
+        "classification"
+      ]
     }
   ],
-  "lecture": "# Классификация изображений на готовом наборе данных\n\n### СЛАЙД 01. Классификация изображений на готовом наборе данных\n\nВ этом занятии рассматривается тема «Классификация изображений на готовом наборе данных». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Классификация изображений на готовом наборе данных\n\nПрактическое занятие по классификации изображений и оценке качества модели машинного обучения.\n\n### СЛАЙД 03. 2. Планируемые результаты\n\nПосле занятия вы сможете:\n\nобъяснять, как изображение превращается в числовой набор признаков;\n\nразличать признаки X и целевую переменную y ;\n\nразделять данные на обучающую и тестовую части без утечки данных;\n\nобучать готовый классификатор K ближайших соседей;\n\nрассчитывать accuracy и читать матрицу ошибок;\n\nнаходить классы и отдельные изображения, на которых модель ошибается чаще;\n\nсравнивать варианты модели и формулировать вывод о качестве классификации.\n\nРезультат считается осмысленным, если он подтверждён числами. Например, недостаточно написать «модель работает хорошо»: необходимо указать accuracy, количество ошибок и классы, которые модель путает.\n\nГлавная идея. Высокая точность — это только начало анализа. Важно понять, какие классы модель путает, сколько ошибок она делает и почему выбранный вариант модели можно считать приемлемым.\n\n### СЛАЙД 04. 3. Что понадобится\n\nкомпьютер с доступом к Google Colab либо установленным Jupyter Notebook;\n\nбраузер; интернет нужен только для открытия Colab, сам набор digits загружается из библиотеки scikit-learn;\n\nрабочий файл занятия или новый блокнот;\n\nвнимательность при копировании имён переменных: X — признаки, y — правильные классы.\n\nПеред началом работы убедитесь, что ячейка с импортом библиотек выполняется без сообщений об ошибке. Если блокнот был перезапущен, ячейки необходимо снова выполнить сверху вниз: значения переменных хранятся в памяти только в течение текущего сеанса.\n\nЛокальный запуск. Если библиотек нет, выполните в терминале: pip install scikit-learn matplotlib numpy . В Google Colab эти библиотеки обычно уже доступны.\n\nОбратите внимание. Python различает регистр символов. Переменные X и x считаются разными, как и X_train и x_train .\n\n### СЛАЙД 05. 6. Вступление\n\nПредставьте сервис, который должен распознать цифру на фотографии почтового индекса или в отсканированном бланке. На вход поступает изображение, а на выходе требуется один класс — цифра от 0 до 9. Сегодня вы не будете создавать сложную нейронную сеть с нуля. Вместо этого вы запустите готовый, воспроизводимый шаблон машинного обучения и сосредоточитесь на главном: как проверить, хорошо ли модель классифицирует изображения и где именно она ошибается.\n\nДля человека цифра воспринимается как целостный образ, но алгоритму необходимо представить её в числовом виде. Поэтому путь от изображения к ответу включает несколько последовательных этапов: подготовку признаков, обучение на примерах с известными ответами, получение прогнозов и независимую проверку качества.\n\nПроверка на тех же изображениях, которые использовались при обучении, не показывает, насколько хорошо модель распознаёт новые объекты. Для честной оценки часть примеров заранее откладывают и не используют при обучении.\n\nРисунок 1. Последовательность работы от данных до оценки качества\n\n### СЛАЙД 06. 7.1. Изображение как данные\n\nКомпьютер получает не «картинку цифры», а таблицу чисел. В наборе digits каждое изображение чёрно-белое и имеет размер 8 × 8 пикселей. Каждый пиксель задаётся числом яркости от 0 до 16. Чтобы передать изображение обычному классификатору, таблицу 8 × 8 разворачивают в строку из 64 признаков.\n\nПоложение значения в строке сохраняет положение соответствующего пикселя на исходном изображении. Например, первый признак относится к первому пикселю, а последний — к последнему. При разворачивании меняется форма хранения данных, но сами значения яркости не изменяются.\n\nОдна строка таблицы X описывает один объект, а один элемент массива y содержит правильный класс этого объекта. Поэтому количество строк в X должно совпадать с количеством элементов в y .\n\nРисунок 2. Преобразование изображения в вектор признаков\n\nНе путайте. digits.images хранит изображения формы (1797, 8, 8) , а digits.data — те же изображения в виде таблицы формы (1797, 64) .\n\nМини-проверка. Если в наборе 100 изображений размером 8 × 8, таблица признаков будет иметь 100 строк и 64 столбца. Число строк определяется количеством объектов, а число столбцов — количеством признаков каждого объекта.\n\n### СЛАЙД 07. 7.2. Готовый набор digits · таблица 1/3\n\nНабор digits уже содержит и признаки, и правильные ответы. Это позволяет сосредоточиться на логике классификации, не выполняя отдельную загрузку файлов и ручную разметку изображений.\n\nРисунок 3. По одному примеру каждого класса\n\nСравним данные в таблице.\nХарактеристика Значение Что означает Количество объектов 1797 Столько изображений доступно в наборе. Размер изображения 8 × 8 В изображении 64 пикселя. Количество признаков 64 Каждый признак — яркость одного пикселя. Классы 0–9 Правильная метка — изображённая цифра. Диапазон яркости 0–16 0 — фон, большие значения — более яркая линия цифры.\n\nМассив digits.target_names содержит названия возможных классов. В данном случае они совпадают с числами от 0 до 9. При этом метка класса не является яркостью и не входит в 64 признака изображения: она хранится отдельно как правильный ответ.\n\n### СЛАЙД 08. 7.2. Готовый набор digits · таблица 2/3\n\nПосмотрите на продолжение таблицы. Количество признаков 64 Каждый признак — яркость одного пикселя. Классы 0–9 Правильная метка — изображённая цифра.\n\n### СЛАЙД 09. 7.2. Готовый набор digits · таблица 3/3\n\nПосмотрите на продолжение таблицы. Диапазон яркости 0–16 0 — фон, большие значения — более яркая линия цифры.\n\n### СЛАЙД 10. 7.3. Как работает K ближайших соседей\n\nKNN (K-Nearest Neighbors) сравнивает новое изображение с известными примерами. Модель находит k наиболее похожих объектов обучающей выборки и выбирает класс, который встречается среди них чаще. В практикуме стартовое значение k равно 3.\n\nПохожесть определяется по расстоянию между векторами признаков. Если значения соответствующих пикселей у двух изображений близки, расстояние между такими объектами обычно меньше. Следовательно, соседями становятся не изображения, расположенные рядом в таблице, а объекты с близкими числовыми признаками.\n\nНапример, если среди трёх ближайших соседей два объекта относятся к классу 5, а один — к классу 3, модель выберет класс 5. Это решение основано на большинстве среди найденных соседей.\n\nАналогия. Чтобы определить неизвестный музыкальный жанр, можно найти три наиболее похожие песни в своей коллекции и посмотреть, к какому жанру относится большинство из них.\n\nПараметр k задаётся до обучения, поэтому его называют гиперпараметром. При слишком малом k отдельный необычный пример может сильно повлиять на ответ. При слишком большом k в голосовании могут участвовать менее похожие изображения. Подходящее значение проверяют экспериментально на одних и тех же данных и по одинаковым правилам оценки.\n\nВажно. В отличие от многих моделей, KNN в основном сохраняет обучающие примеры, а основная вычислительная работа выполняется при поиске соседей во время прогнозирования.\n\n### СЛАЙД 11. 7.4. Как оценивать качество · таблица 1/2\n\nОдной метрики не всегда достаточно для содержательного вывода. Общая доля правильных ответов показывает масштаб качества, матрица ошибок раскрывает направления путаницы, а просмотр отдельных изображений помогает увидеть возможные причины ошибок.\n\nAccuracy = количество правильных прогнозов / количество всех тестовых объектов\n\nНапример, если модель правильно классифицировала 90 объектов из 100, её accuracy равна 0,9, или 90 %. Оставшиеся 10 объектов являются ошибками. Значение accuracy всегда находится в диапазоне от 0 до 1.\n\nСравним данные в таблице.\nИнструмент Что показывает Ограничение Accuracy Доля правильных прогнозов среди всех тестовых примеров. Не показывает, какие именно классы модель путает. Матрица ошибок Сколько объектов каждого истинного класса отнесено к каждому предсказанному классу. Нужно внимательно читать строки и столбцы. Список ошибок Конкретные изображения, на которых прогноз неверен. Это качественный анализ; по нескольким примерам нельзя делать общий вывод без метрик. Precision, recall, F1 Качество отдельно по каждому классу. Для первого анализа достаточно понимать, что значения ближе к 1 лучше.\n\nПравило чтения матрицы. Строка — истинный класс, столбец — прогноз модели. Главная диагональ содержит правильные ответы, остальные клетки — ошибки.\n\nНапример, значение 4 в строке класса 7 и столбце класса 1 означает, что четыре изображения настоящей цифры 7 модель ошибочно распознала как 1. Обратная ошибка — цифра 1 распознана как 7 — находилась бы в другой клетке.\n\nЧастая ошибка. Нельзя вычислять accuracy, сравнивая признаки X_test с прогнозами. Метрика сравнивает два массива классов одинаковой длины: правильные ответы y_test и прогнозы y_pred .\n\n### СЛАЙД 12. 7.4. Как оценивать качество · таблица 2/2\n\nПосмотрите на продолжение таблицы. Список ошибок Конкретные изображения, на которых прогноз неверен. Это качественный анализ; по нескольким примерам нельзя делать общий вывод без метрик. Precision, recall, F1 Качество отдельно по каждому классу. Для первого анализа достаточно понимать, что значения ближе к 1 лучше.\n\n### СЛАЙД 13. 7.5. Обучающая и тестовая выборки\n\nОбучающая выборка используется методом fit , а тестовая — только после обучения, когда модель уже настроена. Такое разделение имитирует работу с новыми изображениями, правильные ответы для которых модель заранее не видела.\n\nПараметр stratify=y помогает сохранить в обеих частях примерно те же доли классов, что и в исходном наборе. Это особенно важно, когда необходимо сравнивать качество распознавания разных цифр.\n\nrandom_state=42 фиксирует случайное разделение. При повторном запуске с теми же данными и параметрами в обучающую и тестовую части попадут те же объекты, поэтому результаты можно сопоставлять.\n\nУтечка данных. Если тестовые объекты или сведения о них влияют на обучение, итоговая оценка может оказаться завышенной. Тестовую часть следует использовать для проверки, а не для подгонки модели.\n\n8. Готовый шаблон\n\nСоздайте новый блокнот. Выполняйте ячейки по порядку. Не меняйте random_state=42 и test_size=0.25 : это позволит всем получить сопоставимые результаты.\n\nПосле каждой ячейки проверяйте, появились ли ожидаемые переменные и нет ли сообщения об ошибке. Если изменить раннюю ячейку, следует повторно выполнить и все зависящие от неё ячейки ниже.\n\n### СЛАЙД 14. Ячейка 1. Импорт библиотек и загрузка данных\n\nПервая ячейка подключает инструменты для вычислений, визуализации, разделения данных, обучения KNN и оценки качества. Команды print позволяют проверить формы массивов до начала обучения.\n\nПример на слайде:\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import (\naccuracy_score,\nconfusion_matrix,\nConfusionMatrixDisplay,\nclassification_report,\n)\n\ndigits = load_digits()\nX = digits.data\ny = digits.target\n\nprint('X:', X.shape)\nprint('y:', y.shape)\nprint('images:', digits.images.shape)\nprint('classes:', digits.target_names)\n\nВ выводе число объектов должно совпадать у X , y и digits.images . Различаться будут остальные измерения: у таблицы признаков 64 столбца, а изображения представлены двумя измерениями 8 × 8.\n\n### СЛАЙД 15. Ячейка 2. Просмотр изображений\n\nВизуальная проверка помогает связать числовую метку с изображением и убедиться, что классы интерпретируются правильно. Для каждой цифры выбирается первый объект с соответствующей меткой.\n\nПример на слайде:\nfig, axes = plt.subplots(2, 5, figsize=(9, 4))\nfor digit, ax in enumerate(axes.ravel()):\nindex = np.where(y == digit)[0][0]\nax.imshow(digits.images[index], cmap='gray_r')\nax.set_title(f'Класс {digit}')\nax.axis('off')\nplt.tight_layout()\nplt.show()\n\nЭта ячейка не обучает модель и не изменяет данные. Она только отображает по одному примеру каждого класса от 0 до 9.\n\n### СЛАЙД 16. Ячейка 3. Разделение данных\n\nЗдесь признаки и метки разделяются одновременно. Благодаря этому каждой строке X_train соответствует метка с тем же индексом в y_train , а каждой строке X_test — метка в y_test .\n\nПример на слайде:\nX_train, X_test, y_train, y_test = train_test_split(\nX,\ny,\ntest_size=0.25,\nrandom_state=42,\nstratify=y,\n)\n\nprint(X_train.shape, X_test.shape)\nprint(y_train.shape, y_test.shape)\n\nПроверка формы. У обучающих признаков и обучающих меток должно совпадать количество объектов. То же правило действует для тестовых признаков и тестовых меток.\n\n### СЛАЙД 17. Ячейка 4. Обучение и прогноз\n\nМетод fit получает обучающие признаки и известные классы. После этого predict определяет классы тестовых изображений, не получая правильных ответов y_test .\n\nПример на слайде:\nmodel = KNeighborsClassifier(n_neighbors=3)\nmodel.fit(X_train, y_train)\ny_pred = model.predict(X_test)\n\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy:.4f}')\nprint('Ошибок:', np.sum(y_pred != y_test))\n\nВыражение y_pred != y_test создаёт массив логических значений: True отмечает ошибочный прогноз, а False — правильный. Сумма такого массива даёт количество ошибок.\n\n### СЛАЙД 18. Ячейка 5. Матрица ошибок и отчёт\n\nОбщая accuracy дополняется подробной информацией по классам. Сначала строится числовая матрица, затем печатается отчёт и создаётся её графическое представление.\n\nПример на слайде:\ncm = confusion_matrix(y_test, y_pred)\nprint(cm)\nprint(classification_report(y_test, y_pred, digits=3))\n\nConfusionMatrixDisplay(cm, display_labels=digits.target_names).plot(\ncmap='Blues', values_format='d'\n)\nplt.title('Матрица ошибок KNN')\nplt.show()\n\nПри анализе сначала рассмотрите главную диагональ, затем найдите наибольшие значения вне диагонали. Они укажут, какие пары истинных и предсказанных классов требуют внимания.\n\nВажно. Параметр digits=3 в classification_report задаёт количество знаков после запятой в отчёте и не связан с набором digits или количеством соседей.\n\n9. Практические задачи\n\nПорядок сложности. Задача 1 — самая простая. Выполняйте задачи последовательно: результат предыдущей используется в следующей.\n\nВ ответах отделяйте наблюдение от объяснения. Наблюдение содержит конкретное число, форму массива или клетку матрицы, а объяснение показывает, почему этот результат получен и что он означает.\n\n### СЛАЙД 19. 10. Дополнительные задания\n\nСтатус. Дополнительные задания выполняются после основных и не снижают оценку при невыполнении.\n\nДополнительные эксперименты следует проводить при неизменном разделении данных. Тогда различия в результате будут связаны с настройкой модели, а не с тем, что в тестовую выборку попали другие изображения.\n\nСравните несколько значений k . Для каждого значения запишите accuracy и количество ошибок.\n\nНайдите значение k с наибольшей accuracy на используемой тестовой выборке. Если результаты равны, укажите все варианты с одинаковым качеством.\n\nДля двух вариантов модели сравните не только accuracy, но и матрицы ошибок. Определите, одинаковые ли классы вызывают затруднения.\n\nВыведите индексы тестовых объектов, для которых y_pred не совпадает с y_test , и просмотрите несколько соответствующих изображений.\n\nОграничение вывода. Лучшее значение k в одном разделении данных нельзя автоматически объявлять лучшим для любых изображений. Корректная формулировка должна указывать, на каких данных и по какой метрике выполнено сравнение.\n\n### СЛАЙД 20. 11. Итоговый контроль\n\nВ каждом вопросе выберите один вариант и кратко объясните выбор с помощью определения или правила из урока.\n\n1. Что хранится в одной строке digits.data ?\n\nА) имя файла\n\nБ) 64 значения яркости пикселей одного изображения\n\nВ) десять вероятностей классов\n\nГ) матрица ошибок\n\n2. Почему нельзя обучать модель на X_test ?\n\nА) тестовые данные нужны для независимой оценки\n\nБ) X_test всегда содержит строки\n\nВ) KNN не принимает тестовые данные\n\nГ) потому что тестовая выборка больше обучающей\n\n3. В матрице ошибок значение C[8, 1] равно 3. Что это означает?\n\nА) три изображения цифры 1 распознаны как 8\n\nБ) три изображения цифры 8 распознаны как 1\n\nВ) модель три раза обучалась\n\nГ) accuracy равна 0,3\n\n4. Почему при одинаковой accuracy две модели могут вести себя по-разному?\n\nА) они могут ошибаться на разных классах и разных объектах\n\nБ) accuracy содержит номер модели\n\nВ) классы всегда меняются местами\n\nГ) такого быть не может\n\n5. Какой вывод является корректным?\n\nА) k=1 навсегда лучше всех моделей\n\nБ) лучший k определяется результатом на конкретных данных и должен проверяться устойчиво\n\nВ) чем больше k , тем accuracy всегда выше\n\nГ) матрица ошибок не нужна при высокой accuracy\n\nМини-проверка. Перед завершением контроля убедитесь, что в вопросе о матрице ошибок вы сначала определили истинный класс по строке, а затем предсказанный класс по столбцу.\n\n### СЛАЙД 21. 12. Критерии оценивания · таблица 1/3\n\nСравним данные в таблице.\nЗадача Максимум Что проверяется Задача 1 2 балла Корректный паспорт данных и объяснение строки X . Задача 2 2 балла Верный прогноз размеров и исправление логики кода. Задача 3 2 балла Рабочая модель, метрики и осмысленный комментарий. Задача 4 2 балла Корректное чтение матрицы и анализ ошибок. Задача 5 2 балла Эксперимент, сравнение и доказательный итоговый вывод.\n\nМаксимум — 10 баллов. Рекомендуемый проходной результат — 6 баллов при обязательном выполнении задач 1–3.\n\nПолный балл за вывод предполагает не только правильное число, но и его интерпретацию. Например, запись значения accuracy без пояснения не показывает, понимается ли смысл метрики.\n\nДоказательный вывод. Укажите настройку модели, полученную метрику, количество ошибок и хотя бы одно наблюдение по матрице ошибок. Избегайте абсолютных формулировок «всегда» и «для любых данных», если эксперимент проводился только на одной выборке.\n\n### СЛАЙД 22. 12. Критерии оценивания · таблица 2/3\n\nПосмотрите на продолжение таблицы. Задача 3 2 балла Рабочая модель, метрики и осмысленный комментарий. Задача 4 2 балла Корректное чтение матрицы и анализ ошибок.\n\n### СЛАЙД 23. 12. Критерии оценивания · таблица 3/3\n\nПосмотрите на продолжение таблицы. Задача 5 2 балла Эксперимент, сравнение и доказательный итоговый вывод.\n\n### СЛАЙД 24. 13. Чек-лист самопроверки\n\n☐ Все ячейки выполняются сверху вниз без ошибок.\n\n☐ Формы X_train и X_test соответствуют ожидаемым.\n\n☐ Модель обучается только на X_train и y_train .\n\n☐ Accuracy рассчитана на y_test и y_pred .\n\n☐ В отчёте указано количество ошибок, а не только accuracy.\n\n☐ Матрица ошибок прочитана по правилу «строка — истина, столбец — прогноз».\n\n☐ Названы классы, на которых модель ошибается.\n\n☐ Эксперимент с k выполнен для всех семи значений.\n\n☐ Итоговый вывод содержит числа и ограничение применимости результата.\n\n☐ Файл сохранён с понятным названием.\n\nЕсли один из пунктов не выполнен, вернитесь к соответствующей ячейке или разделу анализа. После повторного запуска проверьте, что новые значения действительно используются в последующих вычислениях.\n\n### СЛАЙД 25. 14. Итоги урока\n\nТеперь вы умеете. представлять изображение как вектор числовых признаков, запускать готовый классификатор, проверять его на тестовых данных, рассчитывать accuracy, читать матрицу ошибок, находить сложные классы и сравнивать настройки модели.\n\nКлассификация не завершается получением одного числа. Полный анализ связывает устройство данных, условия эксперимента и несколько способов оценки: общую accuracy, количество ошибок, распределение ошибок по классам и просмотр отдельных неверно распознанных объектов.\n\nЗапишите три коротких ответа:\n\n1. Что было самым понятным?\n\n2. Какой результат вас удивил?\n\n3. Какой следующий эксперимент вы бы провели?\n\n________________________________________________________________________________\n\nВ третьем ответе желательно указать, какой параметр будет изменён, что останется неизменным и по какой метрике будут сравниваться результаты.\n\n### СЛАЙД 26. 15. Мини-глоссарий\n\nСравним данные в таблице.\nТермин Простое объяснение Изображение Матрица чисел, каждое из которых описывает яркость пикселя. Признак Числовая характеристика объекта; здесь — значение яркости пикселя. Класс Категория, которую должна предсказать модель; здесь — цифра от 0 до 9. Обучающая выборка Данные, на которых модель находит закономерности. Тестовая выборка Отложенные данные для честной проверки качества. KNN Алгоритм, определяющий класс по ближайшим похожим примерам. Accuracy Доля правильных прогнозов. Матрица ошибок Таблица, показывающая правильные ответы и путаницу между классами. Гиперпараметр k Настройка KNN: сколько ближайших соседей учитывать. Утечка данных Ситуация, когда сведения из тестовой части влияют на обучение и оценка становится нечестной.\n\nСвязь терминов можно представить как последовательность: каждый объект описывается признаками и имеет класс; обучающая выборка используется для настройки KNN; тестовая выборка нужна для расчёта accuracy и построения матрицы ошибок; гиперпараметр k определяет правило голосования соседей.\n\n16. Источники и справочные материалы\n\nСправочные страницы полезны для уточнения параметров функций, форматов входных данных и возвращаемых значений. При обращении к документации сопоставляйте обозначения из примеров с переменными текущего блокнота.\n\nscikit-learn: load_digits : https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load\\_digits.html — описание набора изображений цифр\n\nscikit-learn: accuracy_score : https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy\\_score.html — определение метрики accuracy\n\nscikit-learn: confusion_matrix : https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion\\_matrix.html — правило построения матрицы ошибок\n\n### СЛАЙД 27. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 28. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Классификация изображений на готовом наборе данных\n\n### СЛАЙД 01. Классификация изображений на готовом наборе данных\n\nВ этом занятии рассматривается тема «Классификация изображений на готовом наборе данных». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Классификация изображений на готовом наборе данных\n\nПрактическое занятие по классификации изображений и оценке качества модели машинного обучения.\n\n### СЛАЙД 03. 2. Планируемые результаты\n\nПосле занятия вы сможете:\n\nобъяснять, как изображение превращается в числовой набор признаков;\n\nразличать признаки X и целевую переменную y ;\n\nразделять данные на обучающую и тестовую части без утечки данных;\n\nобучать готовый классификатор K ближайших соседей;\n\nрассчитывать accuracy и читать матрицу ошибок;\n\nнаходить классы и отдельные изображения, на которых модель ошибается чаще;\n\nсравнивать варианты модели и формулировать вывод о качестве классификации.\n\nРезультат считается осмысленным, если он подтверждён числами. Например, недостаточно написать «модель работает хорошо»: необходимо указать accuracy, количество ошибок и классы, которые модель путает.\n\nГлавная идея. Высокая точность — это только начало анализа. Важно понять, какие классы модель путает, сколько ошибок она делает и почему выбранный вариант модели можно считать приемлемым.\n\n### СЛАЙД 04. 3. Что понадобится\n\nкомпьютер с доступом к Google Colab либо установленным Jupyter Notebook;\n\nбраузер; интернет нужен только для открытия Colab, сам набор digits загружается из библиотеки scikit-learn;\n\nрабочий файл занятия или новый блокнот;\n\nвнимательность при копировании имён переменных: X — признаки, y — правильные классы.\n\nПеред началом работы убедитесь, что ячейка с импортом библиотек выполняется без сообщений об ошибке. Если блокнот был перезапущен, ячейки необходимо снова выполнить сверху вниз: значения переменных хранятся в памяти только в течение текущего сеанса.\n\nЛокальный запуск. Если библиотек нет, выполните в терминале: pip install scikit-learn matplotlib numpy . В Google Colab эти библиотеки обычно уже доступны.\n\nОбратите внимание. Python различает регистр символов. Переменные X и x считаются разными, как и X_train и x_train .\n\n### СЛАЙД 05. 6. Вступление\n\nПредставьте сервис, который должен распознать цифру на фотографии почтового индекса или в отсканированном бланке. На вход поступает изображение, а на выходе требуется один класс — цифра от 0 до 9. Сегодня вы не будете создавать сложную нейронную сеть с нуля. Вместо этого вы запустите готовый, воспроизводимый шаблон машинного обучения и сосредоточитесь на главном: как проверить, хорошо ли модель классифицирует изображения и где именно она ошибается.\n\nДля человека цифра воспринимается как целостный образ, но алгоритму необходимо представить её в числовом виде. Поэтому путь от изображения к ответу включает несколько последовательных этапов: подготовку признаков, обучение на примерах с известными ответами, получение прогнозов и независимую проверку качества.\n\nПроверка на тех же изображениях, которые использовались при обучении, не показывает, насколько хорошо модель распознаёт новые объекты. Для честной оценки часть примеров заранее откладывают и не используют при обучении.\n\nРисунок 1. Последовательность работы от данных до оценки качества\n\n### СЛАЙД 06. 7.1. Изображение как данные\n\nКомпьютер получает не «картинку цифры», а таблицу чисел. В наборе digits каждое изображение чёрно-белое и имеет размер 8 × 8 пикселей. Каждый пиксель задаётся числом яркости от 0 до 16. Чтобы передать изображение обычному классификатору, таблицу 8 × 8 разворачивают в строку из 64 признаков.\n\nПоложение значения в строке сохраняет положение соответствующего пикселя на исходном изображении. Например, первый признак относится к первому пикселю, а последний — к последнему. При разворачивании меняется форма хранения данных, но сами значения яркости не изменяются.\n\nОдна строка таблицы X описывает один объект, а один элемент массива y содержит правильный класс этого объекта. Поэтому количество строк в X должно совпадать с количеством элементов в y .\n\nРисунок 2. Преобразование изображения в вектор признаков\n\nНе путайте. digits.images хранит изображения формы (1797, 8, 8) , а digits.data — те же изображения в виде таблицы формы (1797, 64) .\n\nМини-проверка. Если в наборе 100 изображений размером 8 × 8, таблица признаков будет иметь 100 строк и 64 столбца. Число строк определяется количеством объектов, а число столбцов — количеством признаков каждого объекта.\n\n### СЛАЙД 07. 7.2. Готовый набор digits · таблица 1/3\n\nНабор digits уже содержит и признаки, и правильные ответы. Это позволяет сосредоточиться на логике классификации, не выполняя отдельную загрузку файлов и ручную разметку изображений.\n\nРисунок 3. По одному примеру каждого класса\n\nСравним данные в таблице.\nХарактеристика Значение Что означает Количество объектов 1797 Столько изображений доступно в наборе. Размер изображения 8 × 8 В изображении 64 пикселя. Количество признаков 64 Каждый признак — яркость одного пикселя. Классы 0–9 Правильная метка — изображённая цифра. Диапазон яркости 0–16 0 — фон, большие значения — более яркая линия цифры.\n\nМассив digits.target_names содержит названия возможных классов. В данном случае они совпадают с числами от 0 до 9. При этом метка класса не является яркостью и не входит в 64 признака изображения: она хранится отдельно как правильный ответ.\n\n### СЛАЙД 08. 7.2. Готовый набор digits · таблица 2/3\n\nПосмотрите на продолжение таблицы. Количество признаков 64 Каждый признак — яркость одного пикселя. Классы 0–9 Правильная метка — изображённая цифра.\n\n### СЛАЙД 09. 7.2. Готовый набор digits · таблица 3/3\n\nПосмотрите на продолжение таблицы. Диапазон яркости 0–16 0 — фон, большие значения — более яркая линия цифры.\n\n### СЛАЙД 10. 7.3. Как работает K ближайших соседей\n\nKNN (K-Nearest Neighbors) сравнивает новое изображение с известными примерами. Модель находит k наиболее похожих объектов обучающей выборки и выбирает класс, который встречается среди них чаще. В практикуме стартовое значение k равно 3.\n\nПохожесть определяется по расстоянию между векторами признаков. Если значения соответствующих пикселей у двух изображений близки, расстояние между такими объектами обычно меньше. Следовательно, соседями становятся не изображения, расположенные рядом в таблице, а объекты с близкими числовыми признаками.\n\nНапример, если среди трёх ближайших соседей два объекта относятся к классу 5, а один — к классу 3, модель выберет класс 5. Это решение основано на большинстве среди найденных соседей.\n\nАналогия. Чтобы определить неизвестный музыкальный жанр, можно найти три наиболее похожие песни в своей коллекции и посмотреть, к какому жанру относится большинство из них.\n\nПараметр k задаётся до обучения, поэтому его называют гиперпараметром. При слишком малом k отдельный необычный пример может сильно повлиять на ответ. При слишком большом k в голосовании могут участвовать менее похожие изображения. Подходящее значение проверяют экспериментально на одних и тех же данных и по одинаковым правилам оценки.\n\nВажно. В отличие от многих моделей, KNN в основном сохраняет обучающие примеры, а основная вычислительная работа выполняется при поиске соседей во время прогнозирования.\n\n### СЛАЙД 11. 7.4. Как оценивать качество · таблица 1/2\n\nОдной метрики не всегда достаточно для содержательного вывода. Общая доля правильных ответов показывает масштаб качества, матрица ошибок раскрывает направления путаницы, а просмотр отдельных изображений помогает увидеть возможные причины ошибок.\n\nAccuracy = количество правильных прогнозов / количество всех тестовых объектов\n\nНапример, если модель правильно классифицировала 90 объектов из 100, её accuracy равна 0,9, или 90 %. Оставшиеся 10 объектов являются ошибками. Значение accuracy всегда находится в диапазоне от 0 до 1.\n\nСравним данные в таблице.\nИнструмент Что показывает Ограничение Accuracy Доля правильных прогнозов среди всех тестовых примеров. Не показывает, какие именно классы модель путает. Матрица ошибок Сколько объектов каждого истинного класса отнесено к каждому предсказанному классу. Нужно внимательно читать строки и столбцы. Список ошибок Конкретные изображения, на которых прогноз неверен. Это качественный анализ; по нескольким примерам нельзя делать общий вывод без метрик. Precision, recall, F1 Качество отдельно по каждому классу. Для первого анализа достаточно понимать, что значения ближе к 1 лучше.\n\nПравило чтения матрицы. Строка — истинный класс, столбец — прогноз модели. Главная диагональ содержит правильные ответы, остальные клетки — ошибки.\n\nНапример, значение 4 в строке класса 7 и столбце класса 1 означает, что четыре изображения настоящей цифры 7 модель ошибочно распознала как 1. Обратная ошибка — цифра 1 распознана как 7 — находилась бы в другой клетке.\n\nЧастая ошибка. Нельзя вычислять accuracy, сравнивая признаки X_test с прогнозами. Метрика сравнивает два массива классов одинаковой длины: правильные ответы y_test и прогнозы y_pred .\n\n### СЛАЙД 12. 7.4. Как оценивать качество · таблица 2/2\n\nПосмотрите на продолжение таблицы. Список ошибок Конкретные изображения, на которых прогноз неверен. Это качественный анализ; по нескольким примерам нельзя делать общий вывод без метрик. Precision, recall, F1 Качество отдельно по каждому классу. Для первого анализа достаточно понимать, что значения ближе к 1 лучше.\n\n### СЛАЙД 13. 7.5. Обучающая и тестовая выборки\n\nОбучающая выборка используется методом fit , а тестовая — только после обучения, когда модель уже настроена. Такое разделение имитирует работу с новыми изображениями, правильные ответы для которых модель заранее не видела.\n\nПараметр stratify=y помогает сохранить в обеих частях примерно те же доли классов, что и в исходном наборе. Это особенно важно, когда необходимо сравнивать качество распознавания разных цифр.\n\nrandom_state=42 фиксирует случайное разделение. При повторном запуске с теми же данными и параметрами в обучающую и тестовую части попадут те же объекты, поэтому результаты можно сопоставлять.\n\nУтечка данных. Если тестовые объекты или сведения о них влияют на обучение, итоговая оценка может оказаться завышенной. Тестовую часть следует использовать для проверки, а не для подгонки модели.\n\n8. Готовый шаблон\n\nСоздайте новый блокнот. Выполняйте ячейки по порядку. Не меняйте random_state=42 и test_size=0.25 : это позволит всем получить сопоставимые результаты.\n\nПосле каждой ячейки проверяйте, появились ли ожидаемые переменные и нет ли сообщения об ошибке. Если изменить раннюю ячейку, следует повторно выполнить и все зависящие от неё ячейки ниже.\n\n### СЛАЙД 14. Ячейка 1. Импорт библиотек и загрузка данных\n\nПервая ячейка подключает инструменты для вычислений, визуализации, разделения данных, обучения KNN и оценки качества. Команды print позволяют проверить формы массивов до начала обучения.\n\n\n\n```python\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import (\naccuracy_score,\nconfusion_matrix,\nConfusionMatrixDisplay,\nclassification_report,\n)\n\ndigits = load_digits()\nX = digits.data\ny = digits.target\n\nprint('X:', X.shape)\nprint('y:', y.shape)\nprint('images:', digits.images.shape)\nprint('classes:', digits.target_names)\n```\n\n\n\nВ выводе число объектов должно совпадать у X , y и digits.images . Различаться будут остальные измерения: у таблицы признаков 64 столбца, а изображения представлены двумя измерениями 8 × 8.\n\n### СЛАЙД 15. Ячейка 2. Просмотр изображений\n\nВизуальная проверка помогает связать числовую метку с изображением и убедиться, что классы интерпретируются правильно. Для каждой цифры выбирается первый объект с соответствующей меткой.\n\n```python\nfig, axes = plt.subplots(2, 5, figsize=(9, 4))\nfor digit, ax in enumerate(axes.ravel()):\nindex = np.where(y == digit)[0][0]\nax.imshow(digits.images[index], cmap='gray_r')\nax.set_title(f'Класс {digit}')\nax.axis('off')\nplt.tight_layout()\nplt.show()\n```\n\nЭта ячейка не обучает модель и не изменяет данные. Она только отображает по одному примеру каждого класса от 0 до 9.\n\n### СЛАЙД 16. Ячейка 3. Разделение данных\n\nЗдесь признаки и метки разделяются одновременно. Благодаря этому каждой строке X_train соответствует метка с тем же индексом в y_train , а каждой строке X_test — метка в y_test .\n\n\n\n```python\nX_train, X_test, y_train, y_test = train_test_split(\nX,\ny,\ntest_size=0.25,\nrandom_state=42,\nstratify=y,\n)\n\nprint(X_train.shape, X_test.shape)\nprint(y_train.shape, y_test.shape)\n```\n\n\n\nПроверка формы. У обучающих признаков и обучающих меток должно совпадать количество объектов. То же правило действует для тестовых признаков и тестовых меток.\n\n### СЛАЙД 17. Ячейка 4. Обучение и прогноз\n\nМетод fit получает обучающие признаки и известные классы. После этого predict определяет классы тестовых изображений, не получая правильных ответов y_test .\n\n\n\n```python\nmodel = KNeighborsClassifier(n_neighbors=3)\nmodel.fit(X_train, y_train)\ny_pred = model.predict(X_test)\n\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy:.4f}')\nprint('Ошибок:', np.sum(y_pred != y_test))\n```\n\n\n\nВыражение y_pred != y_test создаёт массив логических значений: True отмечает ошибочный прогноз, а False — правильный. Сумма такого массива даёт количество ошибок.\n\n### СЛАЙД 18. Ячейка 5. Матрица ошибок и отчёт\n\nОбщая accuracy дополняется подробной информацией по классам. Сначала строится числовая матрица, затем печатается отчёт и создаётся её графическое представление.\n\n\n\n```python\ncm = confusion_matrix(y_test, y_pred)\nprint(cm)\nprint(classification_report(y_test, y_pred, digits=3))\n\nConfusionMatrixDisplay(cm, display_labels=digits.target_names).plot(\n    cmap='Blues', values_format='d'\n)\nplt.title('Матрица ошибок KNN')\nplt.show()\n```\n\n\n\nПри анализе сначала рассмотрите главную диагональ, затем найдите наибольшие значения вне диагонали. Они укажут, какие пары истинных и предсказанных классов требуют внимания.\n\nВажно. Параметр digits=3 в classification_report задаёт количество знаков после запятой в отчёте и не связан с набором digits или количеством соседей.\n\n9. Практические задачи\n\nПорядок сложности. Задача 1 — самая простая. Выполняйте задачи последовательно: результат предыдущей используется в следующей.\n\nВ ответах отделяйте наблюдение от объяснения. Наблюдение содержит конкретное число, форму массива или клетку матрицы, а объяснение показывает, почему этот результат получен и что он означает.\n\n### СЛАЙД 19. 10. Дополнительные задания\n\nСтатус. Дополнительные задания выполняются после основных и не снижают оценку при невыполнении.\n\nДополнительные эксперименты следует проводить при неизменном разделении данных. Тогда различия в результате будут связаны с настройкой модели, а не с тем, что в тестовую выборку попали другие изображения.\n\nСравните несколько значений k . Для каждого значения запишите accuracy и количество ошибок.\n\nНайдите значение k с наибольшей accuracy на используемой тестовой выборке. Если результаты равны, укажите все варианты с одинаковым качеством.\n\nДля двух вариантов модели сравните не только accuracy, но и матрицы ошибок. Определите, одинаковые ли классы вызывают затруднения.\n\nВыведите индексы тестовых объектов, для которых y_pred не совпадает с y_test , и просмотрите несколько соответствующих изображений.\n\nОграничение вывода. Лучшее значение k в одном разделении данных нельзя автоматически объявлять лучшим для любых изображений. Корректная формулировка должна указывать, на каких данных и по какой метрике выполнено сравнение.\n\n### СЛАЙД 20. 11. Итоговый контроль\n\nВ каждом вопросе выберите один вариант и кратко объясните выбор с помощью определения или правила из урока.\n\n1. Что хранится в одной строке digits.data ?\n\nА) имя файла\n\nБ) 64 значения яркости пикселей одного изображения\n\nВ) десять вероятностей классов\n\nГ) матрица ошибок\n\n2. Почему нельзя обучать модель на X_test ?\n\nА) тестовые данные нужны для независимой оценки\n\nБ) X_test всегда содержит строки\n\nВ) KNN не принимает тестовые данные\n\nГ) потому что тестовая выборка больше обучающей\n\n3. В матрице ошибок значение C[8, 1] равно 3. Что это означает?\n\nА) три изображения цифры 1 распознаны как 8\n\nБ) три изображения цифры 8 распознаны как 1\n\nВ) модель три раза обучалась\n\nГ) accuracy равна 0,3\n\n4. Почему при одинаковой accuracy две модели могут вести себя по-разному?\n\nА) они могут ошибаться на разных классах и разных объектах\n\nБ) accuracy содержит номер модели\n\nВ) классы всегда меняются местами\n\nГ) такого быть не может\n\n5. Какой вывод является корректным?\n\nА) k=1 навсегда лучше всех моделей\n\nБ) лучший k определяется результатом на конкретных данных и должен проверяться устойчиво\n\nВ) чем больше k , тем accuracy всегда выше\n\nГ) матрица ошибок не нужна при высокой accuracy\n\nМини-проверка. Перед завершением контроля убедитесь, что в вопросе о матрице ошибок вы сначала определили истинный класс по строке, а затем предсказанный класс по столбцу.\n\n### СЛАЙД 21. 12. Критерии оценивания · таблица 1/3\n\nСравним данные в таблице.\nЗадача Максимум Что проверяется Задача 1 2 балла Корректный паспорт данных и объяснение строки X . Задача 2 2 балла Верный прогноз размеров и исправление логики кода. Задача 3 2 балла Рабочая модель, метрики и осмысленный комментарий. Задача 4 2 балла Корректное чтение матрицы и анализ ошибок. Задача 5 2 балла Эксперимент, сравнение и доказательный итоговый вывод.\n\nМаксимум — 10 баллов. Рекомендуемый проходной результат — 6 баллов при обязательном выполнении задач 1–3.\n\nПолный балл за вывод предполагает не только правильное число, но и его интерпретацию. Например, запись значения accuracy без пояснения не показывает, понимается ли смысл метрики.\n\nДоказательный вывод. Укажите настройку модели, полученную метрику, количество ошибок и хотя бы одно наблюдение по матрице ошибок. Избегайте абсолютных формулировок «всегда» и «для любых данных», если эксперимент проводился только на одной выборке.\n\n### СЛАЙД 22. 12. Критерии оценивания · таблица 2/3\n\nПосмотрите на продолжение таблицы. Задача 3 2 балла Рабочая модель, метрики и осмысленный комментарий. Задача 4 2 балла Корректное чтение матрицы и анализ ошибок.\n\n### СЛАЙД 23. 12. Критерии оценивания · таблица 3/3\n\nПосмотрите на продолжение таблицы. Задача 5 2 балла Эксперимент, сравнение и доказательный итоговый вывод.\n\n### СЛАЙД 24. 13. Чек-лист самопроверки\n\n☐ Все ячейки выполняются сверху вниз без ошибок.\n\n☐ Формы X_train и X_test соответствуют ожидаемым.\n\n☐ Модель обучается только на X_train и y_train .\n\n☐ Accuracy рассчитана на y_test и y_pred .\n\n☐ В отчёте указано количество ошибок, а не только accuracy.\n\n☐ Матрица ошибок прочитана по правилу «строка — истина, столбец — прогноз».\n\n☐ Названы классы, на которых модель ошибается.\n\n☐ Эксперимент с k выполнен для всех семи значений.\n\n☐ Итоговый вывод содержит числа и ограничение применимости результата.\n\n☐ Файл сохранён с понятным названием.\n\nЕсли один из пунктов не выполнен, вернитесь к соответствующей ячейке или разделу анализа. После повторного запуска проверьте, что новые значения действительно используются в последующих вычислениях.\n\n### СЛАЙД 25. 14. Итоги урока\n\nТеперь вы умеете. представлять изображение как вектор числовых признаков, запускать готовый классификатор, проверять его на тестовых данных, рассчитывать accuracy, читать матрицу ошибок, находить сложные классы и сравнивать настройки модели.\n\nКлассификация не завершается получением одного числа. Полный анализ связывает устройство данных, условия эксперимента и несколько способов оценки: общую accuracy, количество ошибок, распределение ошибок по классам и просмотр отдельных неверно распознанных объектов.\n\nЗапишите три коротких ответа:\n\n1. Что было самым понятным?\n\n2. Какой результат вас удивил?\n\n3. Какой следующий эксперимент вы бы провели?\n\n________________________________________________________________________________\n\nВ третьем ответе желательно указать, какой параметр будет изменён, что останется неизменным и по какой метрике будут сравниваться результаты.\n\n### СЛАЙД 26. 15. Мини-глоссарий\n\nСравним данные в таблице.\nТермин Простое объяснение Изображение Матрица чисел, каждое из которых описывает яркость пикселя. Признак Числовая характеристика объекта; здесь — значение яркости пикселя. Класс Категория, которую должна предсказать модель; здесь — цифра от 0 до 9. Обучающая выборка Данные, на которых модель находит закономерности. Тестовая выборка Отложенные данные для честной проверки качества. KNN Алгоритм, определяющий класс по ближайшим похожим примерам. Accuracy Доля правильных прогнозов. Матрица ошибок Таблица, показывающая правильные ответы и путаницу между классами. Гиперпараметр k Настройка KNN: сколько ближайших соседей учитывать. Утечка данных Ситуация, когда сведения из тестовой части влияют на обучение и оценка становится нечестной.\n\nСвязь терминов можно представить как последовательность: каждый объект описывается признаками и имеет класс; обучающая выборка используется для настройки KNN; тестовая выборка нужна для расчёта accuracy и построения матрицы ошибок; гиперпараметр k определяет правило голосования соседей.\n\n16. Источники и справочные материалы\n\nСправочные страницы полезны для уточнения параметров функций, форматов входных данных и возвращаемых значений. При обращении к документации сопоставляйте обозначения из примеров с переменными текущего блокнота.\n\nscikit-learn: load_digits : https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load\\_digits.html — описание набора изображений цифр\n\nscikit-learn: accuracy_score : https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy\\_score.html — определение метрики accuracy\n\nscikit-learn: confusion_matrix : https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion\\_matrix.html — правило построения матрицы ошибок\n\n### СЛАЙД 27. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 28. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Классификация изображений на готовом наборе данных\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Задача №1\n\n\n### Паспорт набора данных\n\nЧто нужно сделать\n\nЗапустите ячейки импорта библиотек и загрузки данных (ячейки 1–2 из шаблона). Заполните таблицу по фактическому выводу программы.\n\n\n| Показатель | Ваш ответ |\n| --- | --- |\n| Количество изображений | ____________________________ |\n| Размер одного изображения | ____________________________ |\n| Количество признаков в X | ____________________________ |\n| Количество классов | ____________________________ |\n| Минимальная и максимальная яркость | ____________________________ |\n\nОбъясните одним предложением: что означает одна строка X ?\n\n________________________________________________________________________________\n\nСамопроверка в блокноте\n\n\n```\nassert X.shape == (1797, 64)\nassert digits.images.shape == (1797, 8, 8)\nassert len(np.unique(y)) == 10\nassert X.min() == 0 and X.max() == 16\nprint('Задача 1: проверка пройдена')\n```\n\n\n### Задача №2\n\n\n### Что произойдёт с кодом и исправление\n\nУсловие\n\nДан фрагмент кода с четырьмя ошибками, связанными с признаками, метками, обучением и оценкой. Определите, что произойдёт при его выполнении, и перепишите его корректно.\n\nИсходный код\n\n\n```\nX_train, X_test, y_train, y_test = train_test_split(\n    y, X, test_size=0.25, random_state=42, stratify=y\n)\n\nmodel = KNeighborsClassifier(n_neighbors=3)\nmodel.fit(X_test, y_train)\ny_pred = model.predict(y_test)\naccuracy = accuracy_score(y_pred, X_test)\n```\n\nШаг 1. Что произойдёт?\n\nВыберите правильный вариант:\n\n- А) Код выполнится, accuracy будет вычислена\n\n- Б) Ошибка возникнет уже при вызове train_test_split из-за неверного порядка аргументов\n\n- В) train_test_split выполнится, а при вызове fit возникнет ошибка: из-за перепутанного порядка X и y в X_test окажутся метки, а обучение идёт на тестовой части с метками обучающей\n\n- Г) Код выполнится без ошибок, но accuracy будет вычислена неверно\n\nВаш ответ: ________\n\nОбоснование: ________________________________________________________________\n\n________________________________________________________________________________\n\nШаг 2. Исправленный код\n\nНапишите полностью исправленный вариант кода:\n\nШаг 3. Какие размеры выборок?\n\nПри test_size=0.25 и исходном наборе из 1797 объектов:\n\nX_train.shape = ______________\n\nX_test.shape = ______________\n\ny_train.shape = ______________\n\ny_test.shape = ______________\n\nПочему тестовая часть не равна ровно 449 объектам?\n\n________________________________________________________________________________\n\nПодсказка\n\nМетод fit принимает признаки и правильные метки. predict получает только признаки. accuracy_score сравнивает правильные и предсказанные классы.\n\nК шагу 3: сначала вычислите четверть от общего количества объектов. Учтите, что число строк выборки должно быть целым, а затем проверьте, что размеры обучающей и тестовой частей в сумме дают 1797.\n\nСамопроверка\n\nПосле исправления проследите цепочку данных: X передаётся в признаки, y — в метки, модель обучается на части train , прогноз строится для X_test , а качество оценивается сравнением с y_test .\n\n\n### Задача №3\n\n\n### Базовая модель\n\nЧто нужно сделать\n\nЗапустите исправленный код обучения и прогноза. Запишите результаты с четырьмя знаками после запятой.\n\nКод для выполнения\n\n\n```\nmodel = KNeighborsClassifier(n_neighbors=3)\nmodel.fit(X_train, y_train)\ny_pred = model.predict(X_test)\n\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy:.4f}')\nprint('Ошибок:', np.sum(y_pred != y_test))\n```\n\nРезультаты\n\n\n| Показатель | Результат |\n| --- | --- |\n| Accuracy | ____________________________ |\n| Количество объектов в тестовой выборке | ____________________________ |\n| Количество правильных прогнозов | ____________________________ |\n| Количество ошибок | ____________________________ |\n\nРасчёт вручную\n\nРассчитайте accuracy по формуле:\n\naccuracy = число правильных прогнозов / число тестовых объектов\n\nВаш расчёт: ______________ / ______________ = ______________\n\nВывод\n\nМожно ли считать модель качественной только потому, что accuracy выше 0,98? Обоснуйте.\n\n________________________________________________________________________________\n\nСамопроверка\n\n\n```\nassert len(y_pred) == len(y_test) == 450\nassert 0.97 <= accuracy <= 1.0\nassert int(np.sum(y_pred != y_test)) < 20\nprint('Задача 3: базовая модель построена')\n```\n\n\n### Задача №4\n\n\n### Где модель ошибается?\n\nЧто нужно сделать\n\nПостройте матрицу ошибок с помощью ячейки 5 из шаблона и выполните анализ.\n\nКод для матрицы ошибок\n\n\n```\ncm = confusion_matrix(y_test, y_pred)\nprint(cm)\nprint(classification_report(y_test, y_pred, digits=3))\n\nConfusionMatrixDisplay(cm, display_labels=digits.target_names).plot(\n    cmap='Blues', values_format='d'\n)\nplt.title('Матрица ошибок KNN')\nplt.show()\n```\n\nАнализ матрицы ошибок\n\n\n| Вопрос | Ваш вывод |\n| --- | --- |\n| Сколько правильных прогнозов для класса 8? | ____________________________ |\n| Сколько изображений класса 8 распознано неверно? | ____________________________ |\n| С какими классами модель путает цифру 8? | ____________________________ |\n| Какие ещё истинные классы имеют ошибки? | ____________________________ |\n| Сколько всего ошибочных прогнозов (сумма чисел вне главной диагонали)? | ____________________________ |\n\nПросмотр ошибочных изображений\n\n\n```\nwrong_indices = np.where(y_pred != y_test)[0]\n\nfig, axes = plt.subplots(2, 4, figsize=(10, 5))\nfor ax in axes.ravel():\n    ax.axis('off')\n\nfor ax, index in zip(axes.ravel(), wrong_indices[:8]):\n    ax.imshow(X_test[index].reshape(8, 8), cmap='gray_r')\n    ax.set_title(f'Истина {y_test[index]} → прогноз {y_pred[index]}')\n    ax.axis('off')\n\nplt.tight_layout()\nplt.show()\n```\n\nМини-протокол ошибок\n\nВыберите две ошибки и заполните таблицу:\n\n\n| Ошибка | Истинный класс | Прогноз | Что могло затруднить распознавание |\n| --- | --- | --- | --- |\n| 1 | ______ | ______ | ________________________________________ |\n| 2 | ______ | ______ | ________________________________________ |\n\nВажно\n\nПричину ошибки нельзя считать доказанной только по изображению. Формулируйте наблюдение осторожно: «возможно, контур похож на...», «цифра написана нетипично», «часть линии выражена слабо».\n\n\n### Задача №5\n\n\n### Эксперимент с параметром k\n\nЧто нужно сделать\n\nПроверьте, как число соседей влияет на accuracy . Запустите код эксперимента и заполните таблицу.\n\nКод эксперимента\n\n\n```\nk_values = [1, 3, 5, 7, 9, 11, 15]\nscores = []\n\nfor k in k_values:\n    current_model = KNeighborsClassifier(n_neighbors=k)\n    current_model.fit(X_train, y_train)\n    current_pred = current_model.predict(X_test)\n    scores.append(accuracy_score(y_test, current_pred))\n\nfor k, score in zip(k_values, scores):\n    print(f'k={k:2d}: accuracy={score:.4f}')\n\nbest_score = max(scores)\nbest_k_values = [k for k, score in zip(k_values, scores) if score == best_score]\nprint('Лучший результат:', best_score)\nprint('Значения k с лучшим результатом:', best_k_values)\n\nplt.plot(k_values, scores, marker='o')\nplt.xlabel('k')\nplt.ylabel('accuracy')\nplt.title('Влияние k на качество KNN')\nplt.grid(True)\nplt.show()\n```\n\nРезультаты эксперимента\n\n\n| k | Accuracy |\n| --- | --- |\n| 1 | ____________ |\n| 3 | ____________ |\n| 5 | ____________ |\n| 7 | ____________ |\n| 9 | ____________ |\n| 11 | ____________ |\n| 15 | ____________ |\n\nЛучший результат: ______________\n\nЗначения k с лучшим результатом: ______________\n\nИтоговый аналитический вывод\n\nСформулируйте вывод по шаблону:\n\nШаблон вывода\n\nНа тестовой выборке из ___ изображений базовая модель при k=3 получила accuracy ___. Она допустила ___ ошибок. Чаще всего затруднения возникали с классом ___. В эксперименте лучший результат показали значения k = ___. Поэтому для данного фиксированного разбиения я выбираю k = ___, потому что ___. Вывод относится именно к этому набору данных и способу разделения.\n\n________________________________________________________________________________\n\nСамопроверка\n\n\n```\nassert len(scores) == len(k_values) == 7\nassert all(0 <= score <= 1 for score in scores)\nassert max(scores) >= accuracy\nassert set(best_k_values).issubset(set(k_values))\nprint('Задача 5: эксперимент завершён')\n```\n\n\n### Дополнительное задание 1. Дерево решений\n\n\n### Сравнение KNN с деревом решений\n\nУсловие\n\nСравните KNN с готовой моделью DecisionTreeClassifier . Используйте random_state=42 и max_depth=12 .\n\nКод для выполнения\n\n\n```\nfrom sklearn.tree import DecisionTreeClassifier\n\ntree = DecisionTreeClassifier(max_depth=12, random_state=42)\ntree.fit(X_train, y_train)\ntree_pred = tree.predict(X_test)\n\nprint('Decision tree accuracy:', accuracy_score(y_test, tree_pred))\nprint('Decision tree errors:', np.sum(tree_pred != y_test))\n```\n\nСравнение моделей\n\n\n| Модель | Accuracy | Количество ошибок |\n| --- | --- | --- |\n| KNN (k=3) | ____________ | ____________ |\n| Decision Tree (max_depth=12) | ____________ | ____________ |\n\nВывод\n\nКакая модель точнее? Почему одной точности недостаточно для окончательного выбора?\n\n________________________________________________________________________________\n\n\n### Задача №7\n\n\n### Устойчивость вывода\n\nУсловие\n\nИзмените random_state разделения данных на 1, 7 и 100. Для каждого значения снова сравните k=1 и k=3 .\n\nКод для выполнения\n\n\n```\nrandom_states = [1, 7, 100]\nresults = []\n\nfor rs in random_states:\n    X_train, X_test, y_train, y_test = train_test_split(\n        X, y, test_size=0.25, random_state=rs, stratify=y\n    )\n\n    for k in [1, 3]:\n        model = KNeighborsClassifier(n_neighbors=k)\n        model.fit(X_train, y_train)\n        pred = model.predict(X_test)\n        acc = accuracy_score(y_test, pred)\n        results.append((rs, k, acc))\n        print(f'random_state={rs}, k={k}: accuracy={acc:.4f}')\n```\n\nРезультаты\n\n\n| random_state | k=1 accuracy | k=3 accuracy | Победитель |\n| --- | --- | --- | --- |\n| 1 | ____________ | ____________ | ____________ |\n| 7 | ____________ | ____________ | ____________ |\n| 100 | ____________ | ____________ | ____________ |\n\nВывод\n\nСовпадает ли победитель во всех разбиениях? Сделайте вывод, почему качество модели лучше проверять не на одном случайном разделении.\n\n________________________________________________________________________________\n\nВажно\n\nПри изменении random_state меняется состав обучающей и тестовой выборок. Небольшие колебания accuracy — норма. Если победитель меняется, вывод о лучшем значении k следует формулировать осторожно.\n\n\n### Таблицы из теоретической части\n\n\n| Характеристика | Значение | Что означает |\n| --- | --- | --- |\n| Количество объектов | 1797 | Столько изображений доступно в наборе. |\n| Размер изображения | 8 × 8 | В изображении 64 пикселя. |\n| Количество признаков | 64 | Каждый признак — яркость одного пикселя. |\n| Классы | 0–9 | Правильная метка — изображённая цифра. |\n| Диапазон яркости | 0–16 | 0 — фон, большие значения — более яркая линия цифры. |\n\n\n| Инструмент | Что показывает | Ограничение |\n| --- | --- | --- |\n| Accuracy | Доля правильных прогнозов среди всех тестовых примеров. | Не показывает, какие именно классы модель путает. |\n| Матрица ошибок | Сколько объектов каждого истинного класса отнесено к каждому предсказанному классу. | Нужно внимательно читать строки и столбцы. |\n| Список ошибок | Конкретные изображения, на которых прогноз неверен. | Это качественный анализ; по нескольким примерам нельзя делать общий вывод без метрик. |\n| Precision, recall, F1 | Качество отдельно по каждому классу. | Для первого анализа достаточно понимать, что значения ближе к 1 лучше. |\n\n\n| Задача | Максимум | Что проверяется |\n| --- | --- | --- |\n| Задача 1 | 2 балла | Корректный паспорт данных и объяснение строки X . |\n| Задача 2 | 2 балла | Верный прогноз размеров и исправление логики кода. |\n| Задача 3 | 2 балла | Рабочая модель, метрики и осмысленный комментарий. |\n| Задача 4 | 2 балла | Корректное чтение матрицы и анализ ошибок. |\n| Задача 5 | 2 балла | Эксперимент, сравнение и доказательный итоговый вывод. |\n\n\n| Термин | Простое объяснение |\n| --- | --- |\n| Изображение | Матрица чисел, каждое из которых описывает яркость пикселя. |\n| Признак | Числовая характеристика объекта; здесь — значение яркости пикселя. |\n| Класс | Категория, которую должна предсказать модель; здесь — цифра от 0 до 9. |\n| Обучающая выборка | Данные, на которых модель находит закономерности. |\n| Тестовая выборка | Отложенные данные для честной проверки качества. |\n| KNN | Алгоритм, определяющий класс по ближайшим похожим примерам. |\n| Accuracy | Доля правильных прогнозов. |\n| Матрица ошибок | Таблица, показывающая правильные ответы и путаницу между классами. |\n| Гиперпараметр k | Настройка KNN: сколько ближайших соседей учитывать. |\n| Утечка данных | Ситуация, когда сведения из тестовой части влияют на обучение и оценка становится нечестной. |",
   "theory": [
     {
       "title": "Классификация изображений на готовом наборе данных",
@@ -366,5 +979,43 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "output",
+    "features",
+    "target",
+    "metrics",
+    "split",
+    "classification",
+    "loops",
+    "conditions",
+    "logic"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M03-L13-lecture.pdf",
+      "name": "Классификация изображений на готовом наборе данных — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "2c11aeadce28cf9d22c6394e98524daff5542a33e2b89e35e6e4315995bfcb7c",
+      "source": {
+        "path": "Снимки страниц.json / 2ab91143dde60e3f08c5b06a",
+        "sha256": "d562ebbf53eef794b70c6bb90cdcdae34b38b9bd5fe39c2cadc9667e9e616725"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M03-L13-presentation.pdf",
+      "name": "Классификация изображений на готовом наборе данных — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 28,
+      "sha256": "ad5592d944fa1749da0a8324fe5abde9b0b448ea3e09d4a10e5411109c3f955a",
+      "source": {
+        "path": "Модуль 3/Занятие 13/Презентация — итоговая.pptx",
+        "sha256": "e47b678d4b94a69c614ac22513dfe2f0e83c148ac849fb16ec8bf51fd6858e2d"
+      }
+    }
   }
 }

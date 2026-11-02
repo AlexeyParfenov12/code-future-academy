@@ -10,7 +10,7 @@
   "slideCount": 8,
   "fileCount": 0,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Условия в Python - принятие решений  В этом занятии рассматривается тема «Условия в Python - принятие решений». Будем опираться на примеры курса и проверять ре",
+  "description": "В этом занятии рассматривается тема «Условия в Python - принятие решений». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "choice",
       "moduleId": 1,
       "lessonId": "M01-L06",
-      "statement": "Прочитайте код. Не запуская его, определите: что выведет программа при вводе yellow ?\n\n\n```\ncolor = input('Введите цвет сигнала: ')\n\nif color == 'red':\n    print('Стоп!')\nelif color == 'yellow':\n    print('Приготовиться')\nelif color == 'green':\n    print('Движение разрешено')\nelse:\n    print('Неизвестный сигнал')\n```\n\nВыбери все верные утверждения\n\nА) Стоп!\n\nБ) Приготовиться\n\nВ) Движение разрешено\n\nГ) Неизвестный сигнал",
+      "statement": "Прочитайте код. Не запуская его, определите: что выведет программа при вводе `yellow`?\n\n```text\ncolor = input('Введите цвет сигнала: ')\n\nif color == 'red':\n    print('Стоп!')\nelif color == 'yellow':\n    print('Приготовиться')\nelif color == 'green':\n    print('Движение разрешено')\nelse:\n    print('Неизвестный сигнал')\n```\n\n- А) Стоп!\n- Б) Приготовиться\n- В) Движение разрешено\n- Г) Неизвестный сигнал",
       "origin": "ismart",
       "ismartLink": {
         "id": "6a56c85851ad6c611651ce12",
@@ -33,442 +33,58 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Б) Приготовиться",
+        "explanation": "Значение yellow не совпадает с red, зато совпадает с условием elif. Поэтому выполняется только эта ветка и выводится «Приготовиться».",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6a56c85851ad6c611651ce12-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
+        "elementId": "6a56c85851ad6c611651ce12",
+        "archive": "Снимки страниц.json",
+        "sha256": "5211294bc9c5693e217fbc83e3a4b1369475e643567b5bf9a7a60cfac8618bea"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
-    },
-    {
-      "id": "T-6a56c85851ad6c611651ce14",
-      "number": 2,
-      "title": "Задание 2. Чётное или нечётное число",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "Условие\n\nДана программа, которая проверяет число на чётность:\n\nИсходный код\n\n\n```\nn = int(input('Введите число: '))\n\nif n % 2 == 0:\n    print('Чётное')\nelse:\n    print('Нечётное')\n```\n\nЧто нужно сделать\n\nИзмените код: добавьте отдельный вывод для числа 0 — Число равно нулю . Ноль не должен попадать ни в чётные, ни в нечётные.\n\nПроверьте программу на значениях: 0 , 4 , 7 , -3 .",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6a56c85851ad6c611651ce14",
-        "label": "Задание 2. Чётное или нечётное число",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce14",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6a56c85851ad6c611651ce14"
       },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6a56c85851ad6c611651ce15",
-      "number": 3,
-      "title": "Задание 3. Оценка за тест",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "#### Тип задания: найди и исправь ошибку\n\nВ данной программе допущена логическая ошибка: при вводе балла 90 выводится 'Хорошо' вместо 'Отлично' . Исходный код программы:\n\n\n```\nscore = int(input('Введите балл (0–100): '))\n\nif score >= 75:\n    print('Хорошо')\nelif score >= 60:\n    print('Удовлетворительно')\nelif score >= 90:\n    print('Отлично')\nelse:\n    print('Неудовлетворительно')\n```\n\nПодсказка\n\nЗадание",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6a56c85851ad6c611651ce15",
-        "label": "Задание 3. Оценка за тест",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce15",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6a56c85851ad6c611651ce15"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6a56c85851ad6c611651ce16",
-      "number": 4,
-      "title": "Задание 4. Категория возраста",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "Напишите программу, которая запрашивает возраст и выводит категорию:\n\n- меньше 0 → Ошибка: некорректный возраст ;\n\n- 0 – 12 → Ребёнок ;\n\n- 13 – 17 → Подросток ;\n\n- 18 – 64 → Взрослый ;\n\n- 65 и старше → Пожилой .\n\nИспользуйте input() для ввода и int() для преобразования.\n\nПроверьте программу на значениях: -1 , 0 , 12 , 13 , 17 , 18 , 64 , 65 .",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6a56c85851ad6c611651ce16",
-        "label": "Задание 4. Категория возраста",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce16",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6a56c85851ad6c611651ce16"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6a56c85851ad6c611651ce17",
-      "number": 5,
-      "title": "Задание 5. Доступ в систему",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "Условие\n\nНапишите программу с нуля. Программа запрашивает логин и пароль.\n\nЧто нужно сделать\n\nВ начале программы задайте значение is_blocked = False . Логика проверки:\n\n- Если аккаунт заблокирован ( is_blocked == True ) → выведите Аккаунт заблокирован ;\n\n- Если логин admin И пароль qwerty123 → выведите Добро пожаловать! ;\n\n- Иначе → выведите Неверный логин или пароль .\n\nВнимание\n\nПроверку блокировки ( is_blocked ) сделайте первой — до проверки логина и пароля.\n\nЧто нужно сделать\n\nПроверьте работоспособность программы для следующих случаев:\n\n- (а) is_blocked = True (даже если введены верные данные);\n\n- (б) неверный пароль;\n\n- (в) верные данные ( is_blocked = False ).\n\nКак устроены автотесты\n\nПрограмма запрашивает через input() только логин и пароль. Если во входных данных теста есть третья строка True или False — это значение is_blocked : проверяющая программа сама подставит его в строку is_blocked = False . Вводить его через input() не нужно.",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6a56c85851ad6c611651ce17",
-        "label": "Задание 5. Доступ в систему",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce17",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6a56c85851ad6c611651ce17"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6a56c85851ad6c611651ce18",
-      "number": 6,
-      "title": "Задание 6. Наибольшее из двух чисел",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "Условие\n\nНапишите программу с нуля. Программа запрашивает два целых числа a и b (преобразуйте ввод с помощью int() ), затем выводит наибольшее. Если числа равны — выводит Числа равны .\n\nЧто нужно сделать\n\nНе используйте функцию max() — только if / elif / else .\n\nПроверьте программу на значениях: (5, 3) , (3, 5) , (7, 7) , (-2, -5) .",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6a56c85851ad6c611651ce18",
-        "label": "Задание 6. Наибольшее из двух чисел",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce18",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6a56c85851ad6c611651ce18"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6a56c85851ad6c611651ce19",
-      "number": 7,
-      "title": "Задание 7. Индекс массы тела (ИМТ)",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "Программа запрашивает массу тела в кг и рост в метрах, вычисляет ИМТ по формуле: ИМТ = масса / (рост * рост) и выводит категорию:\n\n- ИМТ < 18.5 → Дефицит массы\n\n- 18.5 ≤ ИМТ < 25.0 → Норма\n\n- 25.0 ≤ ИМТ < 30.0 → Избыточный вес\n\n- ИМТ ≥ 30.0 → Ожирение\n\nВыведите результат в формате: ИМТ = X.XX, категория: Y\n\nИспользуйте float() для ввода и round() для округления ИМТ до 2 знаков после запятой.\n\nПример ввода 1:\n\n\n```\n50\n1.75\n```\n\nОжидаемый результат 1:\n\n\n```\nИМТ = 16.33, категория: Дефицит массы\n```\n\nПример ввода 2:\n\n\n```\n80\n1.75\n```\n\nОжидаемый результат 2:\n\n\n```\nИМТ = 26.12, категория: Избыточный вес\n```\n\nПример ввода 3:\n\n\n```\n100\n1.70\n```\n\nОжидаемый результат 3:\n\n\n```\nИМТ = 34.6, категория: Ожирение\n```",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6a56c85851ad6c611651ce19",
-        "label": "Задание 7. Индекс массы тела (ИМТ)",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce19",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6a56c85851ad6c611651ce19"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6ab484d02fec6247cc6ab528",
-      "number": 8,
-      "title": "Задание 8. Тариф за интернет",
-      "type": "choice",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "Задание. Анализ программы: вложенные условия\n\nЦель\n\nнаучиться анализировать вложенные условные операторы и предсказывать результаты\n\nУсловие\n\nПроанализируй следующую программу и определи, что она выведет при gb = 12 и user_type = 'home':\n\ngb = 12\n\nuser_type = 'home'\n\nif user_type == 'business':\n\nif gb <= 5:\n\nprice = 450\n\nelif gb <= 20:\n\nprice = 750\n\nelse:\n\nprice = 1200\n\nelse:\n\nif gb <= 5:\n\nprice = 300\n\nelif gb <= 20:\n\nprice = 500\n\nelse:\n\nprice = 800\n\nprint('Стоимость:', price, 'руб.')\n\n💡 Подсказка 1: Структура вложенных условий\n\nВ программе есть внешнее if-else, которое проверяет user_type. Внутри каждой ветки есть ещё одно if-elif-else, которое проверяет gb. Сначала проверь внешнее условие!\n\n💡 Подсказка 2: Проверка внешнего условия\n\nПроверь: user_type == 'business'? У нас user_type = 'home', поэтому это условие ЛОЖЬ. Значит, программа перейдёт в ветку else (нижняя часть кода)\n\n💡 Подсказка 3: Внутренние условия для 'home'\n\nВ ветке else программа проверяет три варианта:\n\n1. Если gb <= 5 → price = 300\n\n2. Если gb <= 20 → price = 500\n\n3. Иначе → price = 800\n\nТеперь проверь, какое из этих условий выполняется\n\nВыбери все верные утверждения\n\nСтоимость: 500 руб.\n\nСтоимость: 450 руб.\n\nСтоимость: 750 руб.\n\nСтоимость: 800 руб.",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6ab484d02fec6247cc6ab528",
-        "label": "Задание 8. Тариф за интернет",
-        "kind": "Вопрос",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab484d02fec6247cc6ab528",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6ab484d02fec6247cc6ab528"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6ab485e32fec6247cc6ab52d",
-      "number": 9,
-      "title": "Задание 9. Сезон по месяцу - расширьте программу",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "### Задание. Определение времени года\n\nЦель\n\nМодифицировать программу определения сезона, добавив недостающие сезоны и валидацию входных данных.\n\nУсловие\n\nДана программа, определяющая зиму и лето. Требуется:\n\n- Добавить определение весны (3–5) и осени (9–11)\n\n- Обработать некорректный ввод (месяцы вне диапазона 1–12)\n\n- Убрать обобщающий else\n\nИсходный код:\n\n\n```\nmonth = int(input('Введите номер месяца (1–12): '))\n\nif month == 12 or month == 1 or month == 2:\n    print('Зима')\nelif month >= 6 and month <= 8:\n    print('Лето')\nelse:\n    print('Другой сезон')\n```\n\nПроверить на: 1, 3, 6, 9, 12, 0, 13\n\nОжидаемый результат\n\n\n```\nЗима\nВесна\nЛето\nОсень\nЗима\nНекорректный месяц\nНекорректный месяц\n```\n\n💡 Подсказка 1: Первая проверка — валидация\n\nВалидация должна быть первой: если месяц вне [1, 12], выводите об ошибке. Остальные проверки происходят только для корректных месяцев\n\n💡 Подсказка 2: Граничные месяцы\n\nЗима охватывает месяцы из двух лет (12 предыдущего, 1 и 2 текущего). Для остальных сезонов можно использовать диапазоны. Рассмотрите, использовать ли in для зимы\n\n💡 Подсказка 3: Цепочка условий\n\nИспользуйте если-иначе если для четырёх сезонов. После if-валидации нужны четыре elif — по одному на каждый сезон. Без else в конце",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6ab485e32fec6247cc6ab52d",
-        "label": "Задание 9. Сезон по месяцу - расширьте программу",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab485e32fec6247cc6ab52d",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6ab485e32fec6247cc6ab52d"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6ab4865b2fec6247cc6ab532",
-      "number": 10,
-      "title": "Задание 10. Классификатор погоды",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "### Задание. Поиск и исправление ошибок\n\nЦель\n\nНайти и исправить синтаксическую и логическую ошибки в коде программы определения погоды.\n\nУсловие\n\nВ программе две ошибки: одна синтаксическая (пропущен символ), другая логическая (неверный оператор). Найдите обе и исправьте.\n\nИсходный код с ошибками:\n\n\n```\ntemp = float(input('Температура (°C): '))\nis_raining = input('Идёт дождь? (да/нет): ')\n\nif temp >= 20 and is_raining == 'нет'\n    weather = 'Тепло и солнечно'\nelif temp >= 20 and is_raining == 'да':\n    weather = 'Тепло, но дождь'\nelif temp >= 0 and is_raining = 'нет':\n    weather = 'Прохладно и ясно'\nelif temp >= 0 and is_raining == 'да':\n    weather = 'Прохладно и дождливо'\nelse:\n    weather = 'Мороз'\n\nprint('Погода:', weather)\n```\n\nПроверить исправленный код на: (25, 'нет'), (25, 'да'), (10, 'нет'), (-5, 'нет')\n\nОжидаемый результат\n\n\n```\nПогода: Тепло и солнечно\nПогода: Тепло, но дождь\nПогода: Прохладно и ясно\nПогода: Мороз\n```\n\n💡 Подсказка 1: Синтаксическая ошибка\n\nПосмотрите на строку 4: if temp >= 20 and is_raining == 'нет' . В Python каждое условие должно заканчиваться двоеточием. Какой символ пропущен?\n\n💡 Подсказка 2: Логическая ошибка\n\nНа строке 8: elif temp >= 0 and is_raining = 'нет': . Оператор = — это присваивание. В условиях нужен оператор сравнения == . Python остановит такую программу с сообщением SyntaxError, но по смыслу это логическая ошибка: вместо проверки равенства записано присваивание.\n\n💡 Подсказка 3: Проверка логики\n\nПосле исправления синтаксиса программа должна компилироваться. Убедитесь, что логика условий правильная: первые две проверяют temp >= 20, следующие две — 0 <= temp < 20, else — отрицательные температуры",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6ab4865b2fec6247cc6ab532",
-        "label": "Задание 10. Классификатор погоды",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab4865b2fec6247cc6ab532",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6ab4865b2fec6247cc6ab532"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6ab487702fec6247cc6ab53d",
-      "number": 11,
-      "title": "Задание 11. Категория школьника по успеваемости",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "### Задание. Классификация студентов\n\nЦель\n\nРеализовать многоуровневую систему классификации с несколькими независимыми критериями.\n\nУсловие\n\nПрограмма определяет категорию студента по среднему баллу и количеству пропусков:\n\n- балл ≥ 4.5 И пропуски ≤ 5 → 'Отличник'\n\n- балл ≥ 3.5 И пропуски ≤ 10 → 'Хорошист'\n\n- балл ≥ 3.0 → 'Троечник'\n\n- балл < 3.0 И пропуски > 20 → 'Группа риска'\n\n- иначе → 'Требует внимания'\n\nВходные данные: средний балл (float) и количество пропусков (int)\n\nПроверить на: (4.8, 3), (4.0, 8), (3.2, 15), (2.5, 25), (2.8, 5)\n\nОжидаемый результат\n\n\n```\nОтличник\nХорошист\nТроечник\nГруппа риска\nТребует внимания\n```\n\n💡 Подсказка 1: Порядок условий важен\n\nПроверяйте более специфичные условия (с несколькими критериями) до общих. Студент с баллом 4.8 и 3 пропусками должен быть отличником, а не просто хорошистом\n\n💡 Подсказка 2: Учитывайте оба критерия\n\nНекоторые категории требуют проверки обоих условий (балл И пропуски). Рассмотрите, нужно ли использовать and или проверить все возможные комбинации\n\n💡 Подсказка 3: Граничные случаи\n\nОбратите внимание на студента с баллом 2.8 и 5 пропусками: он не в группе риска (пропусков ≤ 20), но требует внимания (балл < 3.0). Последовательность проверок определяет результат",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6ab487702fec6247cc6ab53d",
-        "label": "Задание 11. Категория школьника по успеваемости",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab487702fec6247cc6ab53d",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6ab487702fec6247cc6ab53d"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6ab488f82fec6247cc6ab543",
-      "number": 12,
-      "title": "Задание 12. Скидка в магазине",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "### Задание. Расчёт скидки в интернет-магазине\n\nЦель\n\nРеализовать систему скидок с расчётом итоговой стоимости покупки.\n\nУсловие\n\nПрограмма читает статус клиента и сумму покупки (две строки через input() : сначала статус, затем сумма) и рассчитывает скидку:\n\n- VIP + сумма ≥ 5000 → 20% скидка\n\n- VIP + сумма < 5000 → 10% скидка\n\n- Обычный + сумма ≥ 3000 → 5% скидка\n\n- Обычный + сумма < 3000 → 0% скидка\n\nТребуется вывести: исходную сумму, процент скидки, размер скидки в рублях и итоговую сумму (всё в одной строке, суммы — с двумя знаками после запятой).\n\nВходные данные: статус ( vip или обычный ) и сумма (float)\n\nПроверить на: ('vip', 6000), ('vip', 2000), ('обычный', 4000), ('обычный', 1500)\n\nПример\n\nВвод\n\n\n```\nvip\n6000\n```\n\nВывод\n\n\n```\nИсходная сумма: 6000.00, Скидка: 20%, Сумма скидки: 1200.00, Итого: 4800.00\n```\n\nОжидаемый результат для всех четырёх случаев\n\n\n```\nИсходная сумма: 6000.00, Скидка: 20%, Сумма скидки: 1200.00, Итого: 4800.00\nИсходная сумма: 2000.00, Скидка: 10%, Сумма скидки: 200.00, Итого: 1800.00\nИсходная сумма: 4000.00, Скидка: 5%, Сумма скидки: 200.00, Итого: 3800.00\nИсходная сумма: 1500.00, Скидка: 0%, Сумма скидки: 0.00, Итого: 1500.00\n```\n\n💡 Подсказка 1: Структура условий\n\nПроверьте сначала статус (vip/обычный), потом сумму. Каждому статусу соответствует два порога суммы. Используйте if-elif для всех четырёх случаев или вложенные условия\n\n💡 Подсказка 2: Расчёты\n\nСумма скидки = исходная_сумма * (процент_скидки / 100). Итоговая сумма = исходная_сумма - сумма_скидки\n\n💡 Подсказка 3: Формат вывода\n\nДля вывода сумм с двумя знаками после запятой используйте f-строку с форматом {amount:.2f} , например print(f\"Исходная сумма: {amount:.2f}, ...\")",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6ab488f82fec6247cc6ab543",
-        "label": "Задание 12. Скидка в магазине",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab488f82fec6247cc6ab543",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6ab488f82fec6247cc6ab543"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6ab489892fec6247cc6ab548",
-      "number": 13,
-      "title": "Задание 13. Определение четверти координатной плоскости",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "### Задача: Определение квадранта координатной системы\n\nОписание задачи\n\nНапишите программу, которая запрашивает у пользователя координаты точки (вещественные числа x и y) и определяет, в каком квадранте координатной системы находится эта точка.\n\nПравила определения положения:\n\n- x > 0 и y > 0 → I четверть\n\n- x < 0 и y > 0 → II четверть\n\n- x < 0 и y < 0 → III четверть\n\n- x > 0 и y < 0 → IV четверть\n\n- x == 0 и y == 0 → Начало координат\n\n- x == 0 (y ≠ 0) → На оси Y\n\n- y == 0 (x ≠ 0) → На оси X\n\n✓ Примеры использования:\n\n\n| Координаты | Результат |\n| --- | --- |\n| x = 3, y = 4 | I четверть |\n| x = -2, y = 5 | II четверть |\n| x = -1, y = -3 | III четверть |\n| x = 2, y = -1 | IV четверть |\n| x = 0, y = 0 | Начало координат |\n| x = 0, y = 3 | На оси Y |\n| x = 4, y = 0 | На оси X |\n\n\n### 💡 Подсказки для решения\n\nПодсказка 1: Порядок проверки условий\n\nОбратите внимание на порядок проверки условий. Сначала проверяйте центр координат (0, 0), затем оси, потом квадранты. Это предотвратит ошибки, когда точка одновременно удовлетворяет нескольким условиям.\n\n\n```\n# Неправильный порядок приведёт к ошибке:\nif x > 0 and y > 0:  # Сначала квадрант\n    ...\nelif x == 0:  # Потом ось (слишком поздно!)\n    ...\n\n# Правильно: центр → оси → квадранты\nif x == 0 and y == 0:\n    ...\nelif x == 0:  # Теперь все точки на оси Y перехватываются\n    ...\n```\n\nПодсказка 2: Особые случаи на осях\n\nНа осях координат одна из координат всегда равна нулю. Важно различать точку в центре (0, 0) от точек на оси Y (x = 0, y ≠ 0) и оси X (y = 0, x ≠ 0). Используйте логические операторы and и or правильно.\n\n\n```\n# На оси Y: x = 0, но y может быть любым\nif x == 0 and y != 0:\n    result = \"На оси Y\"\n\n# На оси X: y = 0, но x может быть любым\nelif y == 0 and x != 0:\n    result = \"На оси X\"\n```",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6ab489892fec6247cc6ab548",
-        "label": "Задание 13. Определение четверти координатной плоскости",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab489892fec6247cc6ab548",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6ab489892fec6247cc6ab548"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
-    },
-    {
-      "id": "T-6ab489982fec6247cc6ab549",
-      "number": 14,
-      "title": "Задание 14. Классификатор товара",
-      "type": "code",
-      "moduleId": 1,
-      "lessonId": "M01-L06",
-      "statement": "Условие задачи",
-      "origin": "ismart",
-      "ismartLink": {
-        "id": "6ab489982fec6247cc6ab549",
-        "label": "Задание 14. Классификатор товара",
-        "kind": "Практика",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab489982fec6247cc6ab549",
-        "status": "unverified",
-        "unitId": "e220c537bad6171e76f6d5f2",
-        "elementId": "6ab489982fec6247cc6ab549"
-      },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 06/Практика для студентов.md",
-        "sha256": "fed1f62f6adbad7128eba2edb136b0b40f4c12d4f5cd2aed533075aff721fd7a"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
     },
     {
       "id": "T-6a56c85851ad6c611651ce13",
-      "number": 15,
+      "number": 1,
       "title": "Задание 1. Светофор. Дополнительный вопрос",
       "type": "free_response",
       "moduleId": 1,
       "lessonId": "M01-L06",
-      "statement": "Прочитайте код. Не запуская его, определите: что выведет программа при вводе blue? Почему?\ncolor = input('Введите цвет сигнала: ')\n\nif color == 'red':\n    print('Стоп!')\nelif color == 'yellow':\n    print('Приготовиться')\nelif color == 'green':\n    print('Движение разрешено')\nelse:\n    print('Неизвестный сигнал')\n\nВведи ответ в свободной форме",
+      "statement": "Прочитайте код. Не запуская его, определите: что выведет программа при вводе `blue`? Почему?\n\n```text\ncolor = input('Введите цвет сигнала: ')\n\nif color == 'red':\n    print('Стоп!')\nelif color == 'yellow':\n    print('Приготовиться')\nelif color == 'green':\n    print('Движение разрешено')\nelse:\n    print('Неизвестный сигнал')\n```",
       "origin": "ismart",
       "ismartLink": {
         "id": "6a56c85851ad6c611651ce13",
@@ -481,24 +97,1659 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Неизвестный сигнал",
+        "explanation": "blue не совпадает ни с одним из трёх явно проверяемых цветов. Выполняется заключительная ветка else. В ответе нужен именно вывод программы.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6a56c85851ad6c611651ce13-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 06/Страницы",
-        "elementId": "6a56c85851ad6c611651ce13"
+        "elementId": "6a56c85851ad6c611651ce13",
+        "archive": "Снимки страниц.json",
+        "sha256": "1fc4ab0534702d26db0c57746de6eab1514431f64f47ae5ab55f5deb0be5f48d"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6a56c85851ad6c611651ce14",
+      "number": 2,
+      "title": "Задание 2. Чётное или нечётное число",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "Условие\n\nДана программа, которая проверяет число на чётность:\n\nИсходный код\n\n```python\nn = int(input('Введите число: '))\n\nif n % 2 == 0:\n    print('Чётное')\nelse:\n    print('Нечётное')\n```\n\nЧто нужно сделать\n\nИзмените код: добавьте отдельный вывод для числа `0` — `Число равно нулю`. Ноль не должен попадать ни в чётные, ни в нечётные.\n\nПроверьте программу на значениях: `0`, `4`, `7`, `-3`.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a56c85851ad6c611651ce14",
+        "label": "Задание 2. Чётное или нечётное число",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce14",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6a56c85851ad6c611651ce14"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "n = int(input('Введите число: '))\nif n == 0:\n    print('Число равно нулю')\nelif n % 2 == 0:\n    print('Чётное')\nelse:\n    print('Нечётное')",
+        "answer": "",
+        "explanation": "Ноль проверяется первым. Для остальных целых чисел остаток от деления на 2 равен нулю только у чётных. Отрицательные числа подчиняются тому же правилу.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 4,
+        "examples": [
+          {
+            "input": "0",
+            "output": "Введите число: Число равно нулю"
+          },
+          {
+            "input": "4",
+            "output": "Введите число: Чётное"
+          },
+          {
+            "input": "7",
+            "output": "Введите число: Нечётное"
+          },
+          {
+            "input": "-3",
+            "output": "Введите число: Нечётное"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в n. int преобразует строку в целое число."
+          },
+          {
+            "line": 2,
+            "text": "Проверяем условие `n == 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `n % 2 == 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 7,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6a56c85851ad6c611651ce14-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6a56c85851ad6c611651ce14",
+        "archive": "Снимки страниц.json",
+        "sha256": "0936ee32e6948abb8c2911462cecaeabc39a6d635ea2b378991095a331261788"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6a56c85851ad6c611651ce15",
+      "number": 3,
+      "title": "Задание 3. Оценка за тест",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "## Задание 3. Оценка за тест\n\n#### Тип задания: найди и исправь ошибку\n\nВ данной программе допущена логическая ошибка: при вводе балла `90` выводится `'Хорошо'` вместо `'Отлично'`.\n\nИсходный код программы:\n\n```text\nscore = int(input('Введите балл (0–100): '))\n\nif score >= 75:\n    print('Хорошо')\nelif score >= 60:\n    print('Удовлетворительно')\nelif score >= 90:\n    print('Отлично')\nelse:\n    print('Неудовлетворительно')\n```\n\nПодсказка\n\nPython останавливается на первой истинной ветке. Подумайте, как это влияет на порядок проверок при возрастающих значениях.\n\nЗадание\n\nНайдите причину ошибки и исправьте её. Затем проверьте исправленную программу на значениях: `55`, `65`, `80`, `90`, `100`.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a56c85851ad6c611651ce15",
+        "label": "Задание 3. Оценка за тест",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce15",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6a56c85851ad6c611651ce15"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "score = int(input('Введите балл (0–100): '))\nif score >= 90:\n    print('Отлично')\nelif score >= 75:\n    print('Хорошо')\nelif score >= 60:\n    print('Удовлетворительно')\nelse:\n    print('Неудовлетворительно')",
+        "answer": "",
+        "explanation": "Проверки идут от самого высокого порога к низкому. Если сначала проверить 75, балл 90 попадёт в «Хорошо» и до следующей ветки программа уже не дойдёт.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 5,
+        "examples": [
+          {
+            "input": "55",
+            "output": "Введите балл (0–100): Неудовлетворительно"
+          },
+          {
+            "input": "65",
+            "output": "Введите балл (0–100): Удовлетворительно"
+          },
+          {
+            "input": "80",
+            "output": "Введите балл (0–100): Хорошо"
+          },
+          {
+            "input": "90",
+            "output": "Введите балл (0–100): Отлично"
+          },
+          {
+            "input": "100",
+            "output": "Введите балл (0–100): Отлично"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в score. int преобразует строку в целое число."
+          },
+          {
+            "line": 2,
+            "text": "Проверяем условие `score >= 90`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `score >= 75`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `score >= 60`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 9,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6a56c85851ad6c611651ce15-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6a56c85851ad6c611651ce15",
+        "archive": "Снимки страниц.json",
+        "sha256": "3bd5b671879c4d9ccd8ec235c114645e0ebd467d4534fde6dbb8d4568bc74223"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6a56c85851ad6c611651ce16",
+      "number": 4,
+      "title": "Задание 4. Категория возраста",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "Напишите программу, которая запрашивает возраст и выводит категорию:\n\n- меньше `0` → `Ошибка: некорректный возраст`;\n\n- `0`–`12` → `Ребёнок`;\n\n- `13`–`17` → `Подросток`;\n\n- `18`–`64` → `Взрослый`;\n\n- `65` и старше → `Пожилой`.\n\nИспользуйте `input()` для ввода и `int()` для преобразования.\n\nПроверьте программу на значениях: `-1`, `0`, `12`, `13`, `17`, `18`, `64`, `65`.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a56c85851ad6c611651ce16",
+        "label": "Задание 4. Категория возраста",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce16",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6a56c85851ad6c611651ce16"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "age = int(input())\nif age < 0:\n    print('Ошибка: некорректный возраст')\nelif age <= 12:\n    print('Ребёнок')\nelif age <= 17:\n    print('Подросток')\nelif age <= 64:\n    print('Взрослый')\nelse:\n    print('Пожилой')",
+        "answer": "",
+        "explanation": "После исключения отрицательного возраста последовательно проверяем верхние границы. Нижние границы уже обеспечены ложностью предыдущих веток. Возраст 13 — подросток, 18 — взрослый, 65 — пожилой.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 8,
+        "examples": [
+          {
+            "input": "-1",
+            "output": "Ошибка: некорректный возраст"
+          },
+          {
+            "input": "0",
+            "output": "Ребёнок"
+          },
+          {
+            "input": "12",
+            "output": "Ребёнок"
+          },
+          {
+            "input": "13",
+            "output": "Подросток"
+          },
+          {
+            "input": "17",
+            "output": "Подросток"
+          },
+          {
+            "input": "18",
+            "output": "Взрослый"
+          },
+          {
+            "input": "64",
+            "output": "Взрослый"
+          },
+          {
+            "input": "65",
+            "output": "Пожилой"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в age. int преобразует строку в целое число."
+          },
+          {
+            "line": 2,
+            "text": "Проверяем условие `age < 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `age <= 12`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `age <= 17`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 8,
+            "text": "Проверяем условие `age <= 64`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 9,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 11,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6a56c85851ad6c611651ce16-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6a56c85851ad6c611651ce16",
+        "archive": "Снимки страниц.json",
+        "sha256": "fe0ef2314252ead4ff3d50cfcc261fa16c592362798e9fb5ce8665ac67562b3f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6a56c85851ad6c611651ce17",
+      "number": 5,
+      "title": "Задание 5. Доступ в систему",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "Условие\n\nНапишите программу с нуля. Программа запрашивает логин и пароль.\n\nЧто нужно сделать\n\nВ начале программы задайте значение `is_blocked = False`. Логика проверки:\n\n- Если аккаунт заблокирован (`is_blocked == True`) → выведите `Аккаунт заблокирован`;\n\n- Если логин `admin` И пароль `qwerty123` → выведите `Добро пожаловать!`;\n\n- Иначе → выведите `Неверный логин или пароль`.\n\nВнимание\n\nПроверку блокировки (`is_blocked`) сделайте первой — до проверки логина и пароля.\n\nЧто нужно сделать\n\nПроверьте работоспособность программы для следующих случаев:\n\n- **(а)** `is_blocked = True` (даже если введены верные данные);\n\n- **(б)** неверный пароль;\n\n- **(в)** верные данные (`is_blocked = False`).\n\nКак устроены автотесты\n\nПрограмма запрашивает через `input()` только логин и пароль. Если во входных данных теста есть третья строка `True` или `False` — это значение `is_blocked`: проверяющая программа сама подставит его в строку `is_blocked = False`. Вводить его через `input()` не нужно.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a56c85851ad6c611651ce17",
+        "label": "Задание 5. Доступ в систему",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce17",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6a56c85851ad6c611651ce17"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "is_blocked = False\nlogin = input()\npassword = input()\nif is_blocked:\n    print('Аккаунт заблокирован')\nelif login == 'admin' and password == 'qwerty123':\n    print('Добро пожаловать!')\nelse:\n    print('Неверный логин или пароль')",
+        "answer": "",
+        "explanation": "Сначала проверяется блокировка, затем одновременное совпадение логина и пароля. Вводятся только две строки. Флаг задан отдельной переменной: третью строку читать не нужно, её подставляет проверяющая среда. Ветка блокировки дополнительно проверена заменой False на True.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 2,
+        "examples": [
+          {
+            "input": "admin\nqwerty123",
+            "output": "Добро пожаловать!"
+          },
+          {
+            "input": "admin\nwrong",
+            "output": "Неверный логин или пароль"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Вычисляем `False` и сохраняем результат в `is_blocked`."
+          },
+          {
+            "line": 2,
+            "text": "Читаем входные данные и сохраняем их в login. input возвращает строку."
+          },
+          {
+            "line": 3,
+            "text": "Читаем входные данные и сохраняем их в password. input возвращает строку."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `is_blocked`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `login == 'admin' and password == 'qwerty123'`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 9,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6a56c85851ad6c611651ce17-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6a56c85851ad6c611651ce17",
+        "archive": "Снимки страниц.json",
+        "sha256": "571e2769627bea3794d5fcb9feb366d0639b08618e0c71c0c3fca4b678c4a121"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6a56c85851ad6c611651ce18",
+      "number": 6,
+      "title": "Задание 6. Наибольшее из двух чисел",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "Условие\n\nНапишите программу с нуля. Программа запрашивает два целых числа `a` и `b` (преобразуйте ввод с помощью `int()`), затем выводит наибольшее. Если числа равны — выводит `Числа равны`.\n\nЧто нужно сделать\n\nНе используйте функцию `max()` — только `if` / `elif` / `else`.\n\nПроверьте программу на значениях: `(5, 3)`, `(3, 5)`, `(7, 7)`, `(-2, -5)`.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a56c85851ad6c611651ce18",
+        "label": "Задание 6. Наибольшее из двух чисел",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce18",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6a56c85851ad6c611651ce18"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "a = int(input())\nb = int(input())\nif a > b:\n    print(a)\nelif b > a:\n    print(b)\nelse:\n    print('Числа равны')",
+        "answer": "",
+        "explanation": "Сравниваем числа в обе стороны. Если ни одно не больше другого, они равны. max не используется; отрицательные значения сравниваются обычным образом.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 4,
+        "examples": [
+          {
+            "input": "5\n3",
+            "output": "5"
+          },
+          {
+            "input": "3\n5",
+            "output": "5"
+          },
+          {
+            "input": "7\n7",
+            "output": "Числа равны"
+          },
+          {
+            "input": "-2\n-5",
+            "output": "-2"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в a. int преобразует строку в целое число."
+          },
+          {
+            "line": 2,
+            "text": "Читаем входные данные и сохраняем их в b. int преобразует строку в целое число."
+          },
+          {
+            "line": 3,
+            "text": "Проверяем условие `a > b`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 4,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 5,
+            "text": "Проверяем условие `b > a`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 6,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 8,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6a56c85851ad6c611651ce18-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6a56c85851ad6c611651ce18",
+        "archive": "Снимки страниц.json",
+        "sha256": "204209bcadcdd77a57eb257a2d8cd773ef499784bf6d84c596a8674231638cce"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6a56c85851ad6c611651ce19",
+      "number": 7,
+      "title": "Задание 7. Индекс массы тела (ИМТ)",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "Программа запрашивает массу тела в кг и рост в метрах, вычисляет ИМТ по формуле: `ИМТ = масса / (рост * рост)` и выводит категорию:\n\n- `ИМТ < 18.5` → `Дефицит массы`\n\n- `18.5 ≤ ИМТ < 25.0` → `Норма`\n\n- `25.0 ≤ ИМТ < 30.0` → `Избыточный вес`\n\n- `ИМТ ≥ 30.0` → `Ожирение`\n\nВыведите результат в формате: `ИМТ = X.XX, категория: Y`\n\nИспользуйте `float()` для ввода и `round()` для округления ИМТ до 2 знаков после запятой.\n\nПример ввода 1:\n\n```text\n50\n1.75\n```\n\nОжидаемый результат 1:\n\n```text\nИМТ = 16.33, категория: Дефицит массы\n```\n\nПример ввода 2:\n\n```text\n80\n1.75\n```\n\nОжидаемый результат 2:\n\n```text\nИМТ = 26.12, категория: Избыточный вес\n```\n\nПример ввода 3:\n\n```text\n100\n1.70\n```\n\nОжидаемый результат 3:\n\n```text\nИМТ = 34.6, категория: Ожирение\n```",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a56c85851ad6c611651ce19",
+        "label": "Задание 7. Индекс массы тела (ИМТ)",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6a56c85851ad6c611651ce19",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6a56c85851ad6c611651ce19"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "mass = float(input())\nheight = float(input())\nbmi = mass / (height * height)\nif bmi < 18.5:\n    category = 'Дефицит массы'\nelif bmi < 25:\n    category = 'Норма'\nelif bmi < 30:\n    category = 'Избыточный вес'\nelse:\n    category = 'Ожирение'\nprint(f'ИМТ = {round(bmi, 2)}, категория: {category}')",
+        "answer": "",
+        "explanation": "Для классификации используется неокруглённое значение, чтобы округление не переносило число через границу. round нужен только при выводе. В исходных примерах 34.6 выводится без конечного нуля, поэтому формат .2f здесь не применяется. Рост по условию положителен. Это реализация учебной классификации.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 4,
+        "examples": [
+          {
+            "input": "50\n1.75",
+            "output": "ИМТ = 16.33, категория: Дефицит массы"
+          },
+          {
+            "input": "80\n1.75",
+            "output": "ИМТ = 26.12, категория: Избыточный вес"
+          },
+          {
+            "input": "100\n1.70",
+            "output": "ИМТ = 34.6, категория: Ожирение"
+          },
+          {
+            "input": "25\n1",
+            "output": "ИМТ = 25.0, категория: Избыточный вес"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в mass. float позволяет вводить дробное число."
+          },
+          {
+            "line": 2,
+            "text": "Читаем входные данные и сохраняем их в height. float позволяет вводить дробное число."
+          },
+          {
+            "line": 3,
+            "text": "Вычисляем `mass / (height * height)` и сохраняем результат в `bmi`."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `bmi < 18.5`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Вычисляем `'Дефицит массы'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `bmi < 25`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `'Норма'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 8,
+            "text": "Проверяем условие `bmi < 30`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `'Избыточный вес'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 11,
+            "text": "Вычисляем `'Ожирение'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 12,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6a56c85851ad6c611651ce19-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6a56c85851ad6c611651ce19",
+        "archive": "Снимки страниц.json",
+        "sha256": "2d7bb2560988bbc00e6b25f67c2aa3ae2737a6501e8c0e5261209b680e8bb021"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6ab484d02fec6247cc6ab528",
+      "number": 8,
+      "title": "Задание 8. Тариф за интернет",
+      "type": "choice",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "## Задание. Анализ программы: вложенные условия\n\n**Цель**\n\nнаучиться анализировать вложенные условные операторы и предсказывать результаты\n\nУсловие\n\nПроанализируй следующую программу и определи, что она выведет при `gb = 12` и `user_type = 'home'`:\n\n```python\ngb = 12\nuser_type = 'home'\n\nif user_type == 'business':\n    if gb <= 5:\n        price = 450\n    elif gb <= 20:\n        price = 750\n    else:\n        price = 1200\nelse:\n    if gb <= 5:\n        price = 300\n    elif gb <= 20:\n        price = 500\n    else:\n        price = 800\n\nprint('Стоимость:', price, 'руб.')\n```\n\n💡 Подсказка 1: Структура вложенных условий\n\nВ программе есть внешнее `if-else`, которое проверяет `user_type`. Внутри каждой ветки есть ещё одно `if-elif-else`, которое проверяет `gb`. Сначала проверь внешнее условие!\n\n💡 Подсказка 2: Проверка внешнего условия\n\nПроверь: `user_type == 'business'`? У нас `user_type = 'home'`, поэтому это условие ЛОЖЬ. Значит, программа перейдёт в ветку `else` (нижняя часть кода)\n\n💡 Подсказка 3: Внутренние условия для 'home'\n\nВ ветке `else` программа проверяет три варианта:\n1. Если `gb <= 5` → price = 300\n2. Если `gb <= 20` → price = 500\n3. Иначе → price = 800\nТеперь проверь, какое из этих условий выполняется",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6ab484d02fec6247cc6ab528",
+        "label": "Задание 8. Тариф за интернет",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab484d02fec6247cc6ab528",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6ab484d02fec6247cc6ab528"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Стоимость: 500 руб.",
+        "explanation": "home не равно business, поэтому выбирается нижняя внешняя ветка. 12 больше 5, но не больше 20: price получает 500. print разделяет аргументы пробелами.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6ab484d02fec6247cc6ab528-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6ab484d02fec6247cc6ab528",
+        "archive": "Снимки страниц.json",
+        "sha256": "20acf85089577cfa5d3c453473db4d3d8d067a9a98573873f7d328ef2dc251eb"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6ab485e32fec6247cc6ab52d",
+      "number": 9,
+      "title": "Задание 9. Сезон по месяцу - расширьте программу",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "## Задание. Определение времени года\n\n**Цель**\n\nМодифицировать программу определения сезона, добавив недостающие сезоны и валидацию входных данных.\n\nУсловие\n\nДана программа, определяющая зиму и лето. Требуется:\n\n- Добавить определение весны (3–5) и осени (9–11)\n\n- Обработать некорректный ввод (месяцы вне диапазона 1–12)\n\n- Убрать обобщающий `else`\n\n**Исходный код:**\n\n```python\nmonth = int(input('Введите номер месяца (1–12): '))\n\nif month == 12 or month == 1 or month == 2:\n    print('Зима')\nelif month >= 6 and month <= 8:\n    print('Лето')\nelse:\n    print('Другой сезон')\n```\n\n**Проверить на: 1, 3, 6, 9, 12, 0, 13**\n\nОжидаемый результат\n\n```text\nЗима\nВесна\nЛето\nОсень\nЗима\nНекорректный месяц\nНекорректный месяц\n```\n\n💡 Подсказка 1: Первая проверка — валидация\n\nВалидация должна быть первой: если месяц вне [1, 12], выводите об ошибке. Остальные проверки происходят только для корректных месяцев\n\n💡 Подсказка 2: Граничные месяцы\n\nЗима охватывает месяцы из двух лет (12 предыдущего, 1 и 2 текущего). Для остальных сезонов можно использовать диапазоны. Рассмотрите, использовать ли `in` для зимы\n\n💡 Подсказка 3: Цепочка условий\n\nИспользуйте если-иначе если для четырёх сезонов. После if-валидации нужны четыре elif — по одному на каждый сезон. Без else в конце",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6ab485e32fec6247cc6ab52d",
+        "label": "Задание 9. Сезон по месяцу - расширьте программу",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab485e32fec6247cc6ab52d",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6ab485e32fec6247cc6ab52d"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "month = int(input('Введите номер месяца (1–12): '))\nif month < 1 or month > 12:\n    print('Некорректный месяц')\nelif month == 12 or month == 1 or month == 2:\n    print('Зима')\nelif 3 <= month <= 5:\n    print('Весна')\nelif 6 <= month <= 8:\n    print('Лето')\nelif 9 <= month <= 11:\n    print('Осень')",
+        "answer": "",
+        "explanation": "Сначала исключаем месяцы вне диапазона. Затем четыре явные ветки описывают сезоны. Зима охватывает 12, 1 и 2, поэтому для неё используется or; обобщающего else нет.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 7,
+        "examples": [
+          {
+            "input": "1",
+            "output": "Введите номер месяца (1–12): Зима"
+          },
+          {
+            "input": "3",
+            "output": "Введите номер месяца (1–12): Весна"
+          },
+          {
+            "input": "6",
+            "output": "Введите номер месяца (1–12): Лето"
+          },
+          {
+            "input": "9",
+            "output": "Введите номер месяца (1–12): Осень"
+          },
+          {
+            "input": "12",
+            "output": "Введите номер месяца (1–12): Зима"
+          },
+          {
+            "input": "0",
+            "output": "Введите номер месяца (1–12): Некорректный месяц"
+          },
+          {
+            "input": "13",
+            "output": "Введите номер месяца (1–12): Некорректный месяц"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в month. int преобразует строку в целое число."
+          },
+          {
+            "line": 2,
+            "text": "Проверяем условие `month < 1 or month > 12`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `month == 12 or month == 1 or month == 2`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `3 <= month <= 5`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 8,
+            "text": "Проверяем условие `6 <= month <= 8`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 9,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 10,
+            "text": "Проверяем условие `9 <= month <= 11`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 11,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6ab485e32fec6247cc6ab52d-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6ab485e32fec6247cc6ab52d",
+        "archive": "Снимки страниц.json",
+        "sha256": "ef4f875ff64e38c515d03300a2f4eb42905a75879e6f31b9e146d5d3ca1ca091"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6ab4865b2fec6247cc6ab532",
+      "number": 10,
+      "title": "Задание 10. Классификатор погоды",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "## Задание. Поиск и исправление ошибок\n\n**Цель**\n\nНайти и исправить синтаксическую и логическую ошибки в коде программы определения погоды.\n\nУсловие\n\nВ программе две ошибки: одна синтаксическая (пропущен символ), другая логическая (неверный оператор). Найдите обе и исправьте.\n\n**Исходный код с ошибками:**\n\n```python\ntemp = float(input('Температура (°C): '))\nis_raining = input('Идёт дождь? (да/нет): ')\n\nif temp >= 20 and is_raining == 'нет'\n    weather = 'Тепло и солнечно'\nelif temp >= 20 and is_raining == 'да':\n    weather = 'Тепло, но дождь'\nelif temp >= 0 and is_raining = 'нет':\n    weather = 'Прохладно и ясно'\nelif temp >= 0 and is_raining == 'да':\n    weather = 'Прохладно и дождливо'\nelse:\n    weather = 'Мороз'\n\nprint('Погода:', weather)\n```\n\n**Проверить исправленный код на: (25, 'нет'), (25, 'да'), (10, 'нет'), (-5, 'нет')**\n\nОжидаемый результат\n\n```text\nПогода: Тепло и солнечно\nПогода: Тепло, но дождь\nПогода: Прохладно и ясно\nПогода: Мороз\n```\n\n💡 Подсказка 1: Синтаксическая ошибка\n\nПосмотрите на строку 4: `if temp >= 20 and is_raining == 'нет'`. В Python каждое условие должно заканчиваться двоеточием. Какой символ пропущен?\n\n💡 Подсказка 2: Логическая ошибка\n\nНа строке 8: `elif temp >= 0 and is_raining = 'нет':`. Оператор `=` — это присваивание. В условиях нужен оператор сравнения `==`. Python остановит такую программу с сообщением SyntaxError, но по смыслу это логическая ошибка: вместо проверки равенства записано присваивание.\n\n💡 Подсказка 3: Проверка логики\n\nПосле исправления синтаксиса программа должна компилироваться. Убедитесь, что логика условий правильная: первые две проверяют temp >= 20, следующие две — 0 <= temp < 20, else — отрицательные температуры",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6ab4865b2fec6247cc6ab532",
+        "label": "Задание 10. Классификатор погоды",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab4865b2fec6247cc6ab532",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6ab4865b2fec6247cc6ab532"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "temp = float(input('Температура (°C): '))\nis_raining = input('Идёт дождь? (да/нет): ')\nif temp >= 20 and is_raining == 'нет':\n    weather = 'Тепло и солнечно'\nelif temp >= 20 and is_raining == 'да':\n    weather = 'Тепло, но дождь'\nelif temp >= 0 and is_raining == 'нет':\n    weather = 'Прохладно и ясно'\nelif temp >= 0 and is_raining == 'да':\n    weather = 'Прохладно и дождливо'\nelse:\n    weather = 'Мороз'\nprint('Погода:', weather)",
+        "answer": "",
+        "explanation": "Две синтаксические правки: двоеточие после первого if и сравнение == вместо присваивания =. После веток temp >= 20 следующие условия фактически обслуживают диапазон от 0 до 20.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 4,
+        "examples": [
+          {
+            "input": "25\nнет",
+            "output": "Температура (°C): Идёт дождь? (да/нет): Погода: Тепло и солнечно"
+          },
+          {
+            "input": "25\nда",
+            "output": "Температура (°C): Идёт дождь? (да/нет): Погода: Тепло, но дождь"
+          },
+          {
+            "input": "10\nнет",
+            "output": "Температура (°C): Идёт дождь? (да/нет): Погода: Прохладно и ясно"
+          },
+          {
+            "input": "-5\nнет",
+            "output": "Температура (°C): Идёт дождь? (да/нет): Погода: Мороз"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в temp. float позволяет вводить дробное число."
+          },
+          {
+            "line": 2,
+            "text": "Читаем входные данные и сохраняем их в is_raining. input возвращает строку."
+          },
+          {
+            "line": 3,
+            "text": "Проверяем условие `temp >= 20 and is_raining == 'нет'`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 4,
+            "text": "Вычисляем `'Тепло и солнечно'` и сохраняем результат в `weather`."
+          },
+          {
+            "line": 5,
+            "text": "Проверяем условие `temp >= 20 and is_raining == 'да'`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 6,
+            "text": "Вычисляем `'Тепло, но дождь'` и сохраняем результат в `weather`."
+          },
+          {
+            "line": 7,
+            "text": "Проверяем условие `temp >= 0 and is_raining == 'нет'`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `'Прохладно и ясно'` и сохраняем результат в `weather`."
+          },
+          {
+            "line": 9,
+            "text": "Проверяем условие `temp >= 0 and is_raining == 'да'`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 10,
+            "text": "Вычисляем `'Прохладно и дождливо'` и сохраняем результат в `weather`."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `'Мороз'` и сохраняем результат в `weather`."
+          },
+          {
+            "line": 13,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6ab4865b2fec6247cc6ab532-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6ab4865b2fec6247cc6ab532",
+        "archive": "Снимки страниц.json",
+        "sha256": "95745034cbdde868840fa5b1da2f9a28a4f6b385cc1fb3e86d94d658e6b8f502"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6ab487702fec6247cc6ab53d",
+      "number": 11,
+      "title": "Задание 11. Категория школьника по успеваемости",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "## Задание. Классификация студентов\n\n**Цель**\n\nРеализовать многоуровневую систему классификации с несколькими независимыми критериями.\n\nУсловие\n\nПрограмма определяет категорию студента по среднему баллу и количеству пропусков:\n\n- балл ≥ 4.5 **И** пропуски ≤ 5 → `'Отличник'`\n\n- балл ≥ 3.5 **И** пропуски ≤ 10 → `'Хорошист'`\n\n- балл ≥ 3.0 → `'Троечник'`\n\n- балл < 3.0 **И** пропуски > 20 → `'Группа риска'`\n\n- иначе → `'Требует внимания'`\n\n**Входные данные:** средний балл (float) и количество пропусков (int)\n\n**Проверить на: (4.8, 3), (4.0, 8), (3.2, 15), (2.5, 25), (2.8, 5)**\n\nОжидаемый результат\n\n```text\nОтличник\nХорошист\nТроечник\nГруппа риска\nТребует внимания\n```\n\n💡 Подсказка 1: Порядок условий важен\n\nПроверяйте более специфичные условия (с несколькими критериями) до общих. Студент с баллом 4.8 и 3 пропусками должен быть отличником, а не просто хорошистом\n\n💡 Подсказка 2: Учитывайте оба критерия\n\nНекоторые категории требуют проверки обоих условий (балл **И** пропуски). Рассмотрите, нужно ли использовать `and` или проверить все возможные комбинации\n\n💡 Подсказка 3: Граничные случаи\n\nОбратите внимание на студента с баллом 2.8 и 5 пропусками: он не в группе риска (пропусков ≤ 20), но требует внимания (балл < 3.0). Последовательность проверок определяет результат",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6ab487702fec6247cc6ab53d",
+        "label": "Задание 11. Категория школьника по успеваемости",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab487702fec6247cc6ab53d",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6ab487702fec6247cc6ab53d"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "average = float(input())\nabsences = int(input())\nif average >= 4.5 and absences <= 5:\n    print('Отличник')\nelif average >= 3.5 and absences <= 10:\n    print('Хорошист')\nelif average >= 3.0:\n    print('Троечник')\nelif average < 3.0 and absences > 20:\n    print('Группа риска')\nelse:\n    print('Требует внимания')",
+        "answer": "",
+        "explanation": "Условия проверяются ровно в порядке приоритета из задания. Первые две категории требуют одновременно подходящего балла и числа пропусков. При балле ниже 3 и малом количестве пропусков остаётся последняя ветка.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 5,
+        "examples": [
+          {
+            "input": "4.8\n3",
+            "output": "Отличник"
+          },
+          {
+            "input": "4\n8",
+            "output": "Хорошист"
+          },
+          {
+            "input": "3.2\n15",
+            "output": "Троечник"
+          },
+          {
+            "input": "2.5\n25",
+            "output": "Группа риска"
+          },
+          {
+            "input": "2.8\n5",
+            "output": "Требует внимания"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в average. float позволяет вводить дробное число."
+          },
+          {
+            "line": 2,
+            "text": "Читаем входные данные и сохраняем их в absences. int преобразует строку в целое число."
+          },
+          {
+            "line": 3,
+            "text": "Проверяем условие `average >= 4.5 and absences <= 5`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 4,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 5,
+            "text": "Проверяем условие `average >= 3.5 and absences <= 10`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 6,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 7,
+            "text": "Проверяем условие `average >= 3.0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 8,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 9,
+            "text": "Проверяем условие `average < 3.0 and absences > 20`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 10,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 12,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6ab487702fec6247cc6ab53d-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6ab487702fec6247cc6ab53d",
+        "archive": "Снимки страниц.json",
+        "sha256": "88931276d31d470e6f1dc577e6861f50fbac8584cace783c2e85224e3128f821"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6ab488f82fec6247cc6ab543",
+      "number": 12,
+      "title": "Задание 12. Скидка в магазине",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "## Задание. Расчёт скидки в интернет-магазине\n\n**Цель**\n\nРеализовать систему скидок с расчётом итоговой стоимости покупки.\n\nУсловие\n\nПрограмма читает статус клиента и сумму покупки (две строки через `input()`: сначала статус, затем сумма) и рассчитывает скидку:\n\n- VIP + сумма ≥ 5000 → 20% скидка\n\n- VIP + сумма < 5000 → 10% скидка\n\n- Обычный + сумма ≥ 3000 → 5% скидка\n\n- Обычный + сумма < 3000 → 0% скидка\n\n**Требуется вывести:** исходную сумму, процент скидки, размер скидки в рублях и итоговую сумму (всё в одной строке, суммы — с двумя знаками после запятой).\n\n**Входные данные:** статус (`vip` или `обычный`) и сумма (float)\n\n**Проверить на: ('vip', 6000), ('vip', 2000), ('обычный', 4000), ('обычный', 1500)**\n\nПример\n\n**Ввод**\n\n```text\nvip\n6000\n```\n\n**Вывод**\n\n```text\nИсходная сумма: 6000.00, Скидка: 20%, Сумма скидки: 1200.00, Итого: 4800.00\n```\n\nОжидаемый результат для всех четырёх случаев\n\n```text\nИсходная сумма: 6000.00, Скидка: 20%, Сумма скидки: 1200.00, Итого: 4800.00\nИсходная сумма: 2000.00, Скидка: 10%, Сумма скидки: 200.00, Итого: 1800.00\nИсходная сумма: 4000.00, Скидка: 5%, Сумма скидки: 200.00, Итого: 3800.00\nИсходная сумма: 1500.00, Скидка: 0%, Сумма скидки: 0.00, Итого: 1500.00\n```\n\n💡 Подсказка 1: Структура условий\n\nПроверьте сначала статус (vip/обычный), потом сумму. Каждому статусу соответствует два порога суммы. Используйте `if-elif` для всех четырёх случаев или вложенные условия\n\n💡 Подсказка 2: Расчёты\n\nСумма скидки = исходная_сумма * (процент_скидки / 100). Итоговая сумма = исходная_сумма - сумма_скидки\n\n💡 Подсказка 3: Формат вывода\n\nДля вывода сумм с двумя знаками после запятой используйте f-строку с форматом `{amount:.2f}`, например `print(f\"Исходная сумма: {amount:.2f}, ...\")`",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6ab488f82fec6247cc6ab543",
+        "label": "Задание 12. Скидка в магазине",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab488f82fec6247cc6ab543",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6ab488f82fec6247cc6ab543"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "status = input()\namount = float(input())\nif status == 'vip':\n    if amount >= 5000:\n        percent = 20\n    else:\n        percent = 10\nelse:\n    if amount >= 3000:\n        percent = 5\n    else:\n        percent = 0\ndiscount = amount * percent / 100\ntotal = amount - discount\nprint(f'Исходная сумма: {amount:.2f}, Скидка: {percent}%, Сумма скидки: {discount:.2f}, Итого: {total:.2f}')",
+        "answer": "",
+        "explanation": "Внешняя проверка выбирает статус, внутренняя — соответствующий порог. Скидку переводим из процентов в рубли, вычитаем из исходной суммы. Формат .2f обеспечивает ровно два знака у всех сумм.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 6,
+        "examples": [
+          {
+            "input": "vip\n6000",
+            "output": "Исходная сумма: 6000.00, Скидка: 20%, Сумма скидки: 1200.00, Итого: 4800.00"
+          },
+          {
+            "input": "vip\n2000",
+            "output": "Исходная сумма: 2000.00, Скидка: 10%, Сумма скидки: 200.00, Итого: 1800.00"
+          },
+          {
+            "input": "обычный\n4000",
+            "output": "Исходная сумма: 4000.00, Скидка: 5%, Сумма скидки: 200.00, Итого: 3800.00"
+          },
+          {
+            "input": "обычный\n1500",
+            "output": "Исходная сумма: 1500.00, Скидка: 0%, Сумма скидки: 0.00, Итого: 1500.00"
+          },
+          {
+            "input": "vip\n5000",
+            "output": "Исходная сумма: 5000.00, Скидка: 20%, Сумма скидки: 1000.00, Итого: 4000.00"
+          },
+          {
+            "input": "обычный\n3000",
+            "output": "Исходная сумма: 3000.00, Скидка: 5%, Сумма скидки: 150.00, Итого: 2850.00"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в status. input возвращает строку."
+          },
+          {
+            "line": 2,
+            "text": "Читаем входные данные и сохраняем их в amount. float позволяет вводить дробное число."
+          },
+          {
+            "line": 3,
+            "text": "Проверяем условие `status == 'vip'`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `amount >= 5000`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Вычисляем `20` и сохраняем результат в `percent`."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `10` и сохраняем результат в `percent`."
+          },
+          {
+            "line": 9,
+            "text": "Проверяем условие `amount >= 3000`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 10,
+            "text": "Вычисляем `5` и сохраняем результат в `percent`."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `0` и сохраняем результат в `percent`."
+          },
+          {
+            "line": 13,
+            "text": "Вычисляем `amount * percent / 100` и сохраняем результат в `discount`."
+          },
+          {
+            "line": 14,
+            "text": "Вычисляем `amount - discount` и сохраняем результат в `total`."
+          },
+          {
+            "line": 15,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6ab488f82fec6247cc6ab543-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6ab488f82fec6247cc6ab543",
+        "archive": "Снимки страниц.json",
+        "sha256": "ddeb71808c404def8aafa3e5ea4fcf361ecb10b893a885a49ff5d2c50aa3f29d"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6ab489892fec6247cc6ab548",
+      "number": 13,
+      "title": "Задание 13. Определение четверти координатной плоскости",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "## Задача: Определение квадранта координатной системы\n\nОписание задачи\n\nНапишите программу, которая запрашивает у пользователя координаты точки (вещественные числа x и y) и определяет, в каком квадранте координатной системы находится эта точка.\n\nПравила определения положения:\n\n- x > 0 и y > 0 → `I четверть`\n\n- x < 0 и y > 0 → `II четверть`\n\n- x < 0 и y < 0 → `III четверть`\n\n- x > 0 и y < 0 → `IV четверть`\n\n- x == 0 и y == 0 → `Начало координат`\n\n- x == 0 (y ≠ 0) → `На оси Y`\n\n- y == 0 (x ≠ 0) → `На оси X`\n\n✓ Примеры использования:\n\n| Координаты | Результат |\n| --- | --- |\n| x = 3, y = 4 | I четверть |\n| x = -2, y = 5 | II четверть |\n| x = -1, y = -3 | III четверть |\n| x = 2, y = -1 | IV четверть |\n| x = 0, y = 0 | Начало координат |\n| x = 0, y = 3 | На оси Y |\n| x = 4, y = 0 | На оси X |\n\n## 💡 Подсказки для решения\n\nПодсказка 1: Порядок проверки условий\n\nОбратите внимание на порядок проверки условий. Сначала проверяйте центр координат (0, 0), затем оси, потом квадранты. Это предотвратит ошибки, когда точка одновременно удовлетворяет нескольким условиям.\n\n```python\n# Неправильный порядок приведёт к ошибке:\nif x > 0 and y > 0:  # Сначала квадрант\n    ...\nelif x == 0:  # Потом ось (слишком поздно!)\n    ...\n\n# Правильно: центр → оси → квадранты\nif x == 0 and y == 0:\n    ...\nelif x == 0:  # Теперь все точки на оси Y перехватываются\n    ...\n```\n\nПодсказка 2: Особые случаи на осях\n\nНа осях координат одна из координат всегда равна нулю. Важно различать точку в центре (0, 0) от точек на оси Y (x = 0, y ≠ 0) и оси X (y = 0, x ≠ 0). Используйте логические операторы `and` и `or` правильно.\n\n```python\n# На оси Y: x = 0, но y может быть любым\nif x == 0 and y != 0:\n    result = \"На оси Y\"\n\n# На оси X: y = 0, но x может быть любым\nelif y == 0 and x != 0:\n    result = \"На оси X\"\n```",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6ab489892fec6247cc6ab548",
+        "label": "Задание 13. Определение четверти координатной плоскости",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab489892fec6247cc6ab548",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6ab489892fec6247cc6ab548"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "x = float(input())\ny = float(input())\nif x == 0 and y == 0:\n    print('Начало координат')\nelif x == 0:\n    print('На оси Y')\nelif y == 0:\n    print('На оси X')\nelif x > 0 and y > 0:\n    print('I четверть')\nelif x < 0 and y > 0:\n    print('II четверть')\nelif x < 0 and y < 0:\n    print('III четверть')\nelse:\n    print('IV четверть')",
+        "answer": "",
+        "explanation": "Точки на осях не принадлежат четвертям. Поэтому начало координат и нулевые координаты проверяются раньше знаков. Оставшиеся четыре сочетания знаков однозначно задают четверть.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 7,
+        "examples": [
+          {
+            "input": "1\n1",
+            "output": "I четверть"
+          },
+          {
+            "input": "-1\n1",
+            "output": "II четверть"
+          },
+          {
+            "input": "-1\n-1",
+            "output": "III четверть"
+          },
+          {
+            "input": "1\n-1",
+            "output": "IV четверть"
+          },
+          {
+            "input": "0\n0",
+            "output": "Начало координат"
+          },
+          {
+            "input": "0\n2",
+            "output": "На оси Y"
+          },
+          {
+            "input": "2\n0",
+            "output": "На оси X"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в x. float позволяет вводить дробное число."
+          },
+          {
+            "line": 2,
+            "text": "Читаем входные данные и сохраняем их в y. float позволяет вводить дробное число."
+          },
+          {
+            "line": 3,
+            "text": "Проверяем условие `x == 0 and y == 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 4,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 5,
+            "text": "Проверяем условие `x == 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 6,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 7,
+            "text": "Проверяем условие `y == 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 8,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 9,
+            "text": "Проверяем условие `x > 0 and y > 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 10,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 11,
+            "text": "Проверяем условие `x < 0 and y > 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 12,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 13,
+            "text": "Проверяем условие `x < 0 and y < 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 14,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 16,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic"
+        ],
+        "id": "T-6ab489892fec6247cc6ab548-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6ab489892fec6247cc6ab548",
+        "archive": "Снимки страниц.json",
+        "sha256": "f6770425d83cca7eb4dfbdd6905f8d7169ccbc5b796ef9ea916a1e541d5ce46e"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic"
+      ]
+    },
+    {
+      "id": "T-6ab489982fec6247cc6ab549",
+      "number": 14,
+      "title": "Задание 14. Классификатор товара",
+      "type": "code",
+      "moduleId": 1,
+      "lessonId": "M01-L06",
+      "statement": "Условие задачи\n\n## Задание 14. Классификатор товара (итоговое задание)\n\nНапишите программу, которая определяет категорию товара по трём признакам.\n\nВходные данные.\n\nПрограмма получает три строки:\n\n- `price` — цена в рублях (число);\n\n- `rating` — рейтинг от 1.0 до 5.0 (дробное число);\n\n- `in_stock` — наличие товара: `да` или `нет` (маленькими буквами).\n\nПравила классификации.\n\nУсловия проверяются строго по порядку, срабатывает первое подходящее:\n\n| № | Условие | Категория |\n| --- | --- | --- |\n| 1 | in_stock равно нет | Нет в наличии |\n| 2 | price < 500 и rating >= 4.0 | Выгодная покупка |\n| 3 | price >= 500 и price < 3000 и rating >= 4.5 | Хороший выбор |\n| 4 | price >= 3000 и rating >= 4.5 | Премиум |\n| 5 | rating < 3.0 | Низкое качество |\n| 6 | иначе | Стандарт |\n\nВыходные данные.\n\nОдна строка в формате:\n\n```text\nКатегория товара: <категория>\n```\n\nНазвание категории пишется точно как в таблице.\n\nПодсказки:\n\n- `input()` возвращает строку, поэтому цену и рейтинг нужно преобразовать: `float(input())`.\n\n- Используйте `if` / `elif` / `else`, чтобы условия проверялись по порядку.\n\n- Обратите внимание на границы: `< 500` и `>= 500`, `>= 4.5`, `< 3.0`.\n\nПрограмма будет проверена на 6 наборах данных, по одному на каждую категорию.\n\nПеред отправкой протестируйте программу на 6 граничных наборах (`price`, `rating`, `in_stock`): `500, 4.5, нет`; `499, 4.0, да`; `500, 4.5, да`; `3000, 4.5, да`; `500, 2.9, да`; `500, 3.0, да`. Каждый набор должен дать свою категорию из таблицы.\n\nПример 1\n\nВходные данные:\n\n```text\n350\n4.2\nда\n```\n\nВыходные данные:\n\n```text\nКатегория товара: Выгодная покупка\n```\n\nПример 2\n\nВходные данные:\n\n```text\n1500\n4.8\nнет\n```\n\nВыходные данные:\n\n```text\nКатегория товара: Нет в наличии\n```\n\nВо втором примере у товара хорошие цена и рейтинг, но его нет в наличии. Правило 1 проверяется первым, поэтому категория — «Нет в наличии».",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6ab489982fec6247cc6ab549",
+        "label": "Задание 14. Классификатор товара",
+        "kind": "Практика",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/e220c537bad6171e76f6d5f2/element/6ab489982fec6247cc6ab549",
+        "status": "unverified",
+        "unitId": "e220c537bad6171e76f6d5f2",
+        "elementId": "6ab489982fec6247cc6ab549"
+      },
+      "files": [],
+      "variants": [],
+      "solution": {
+        "lessonId": "M01-L06",
+        "status": "published",
+        "kind": "code",
+        "code": "price = float(input())\nrating = float(input())\nin_stock = input()\nif in_stock == 'нет':\n    category = 'Нет в наличии'\nelif price < 500 and rating >= 4:\n    category = 'Выгодная покупка'\nelif 500 <= price < 3000 and rating >= 4.5:\n    category = 'Хороший выбор'\nelif price >= 3000 and rating >= 4.5:\n    category = 'Премиум'\nelif rating < 3:\n    category = 'Низкое качество'\nelse:\n    category = 'Стандарт'\nprint('Категория товара:', category)",
+        "answer": "",
+        "explanation": "Отсутствие товара имеет высший приоритет. Далее проверяются непересекающиеся ценовые диапазоны с минимальным рейтингом. Цена 500 относится ко второму, 3000 — к третьему диапазону; рейтинг ровно 3 не является низким.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 6,
+        "examples": [
+          {
+            "input": "500\n4.5\nнет",
+            "output": "Категория товара: Нет в наличии"
+          },
+          {
+            "input": "499\n4\nда",
+            "output": "Категория товара: Выгодная покупка"
+          },
+          {
+            "input": "500\n4.5\nда",
+            "output": "Категория товара: Хороший выбор"
+          },
+          {
+            "input": "3000\n4.5\nда",
+            "output": "Категория товара: Премиум"
+          },
+          {
+            "input": "500\n2.9\nда",
+            "output": "Категория товара: Низкое качество"
+          },
+          {
+            "input": "500\n3\nда",
+            "output": "Категория товара: Стандарт"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Читаем входные данные и сохраняем их в price. float позволяет вводить дробное число."
+          },
+          {
+            "line": 2,
+            "text": "Читаем входные данные и сохраняем их в rating. float позволяет вводить дробное число."
+          },
+          {
+            "line": 3,
+            "text": "Читаем входные данные и сохраняем их в in_stock. input возвращает строку."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `in_stock == 'нет'`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Вычисляем `'Нет в наличии'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `price < 500 and rating >= 4`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `'Выгодная покупка'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 8,
+            "text": "Проверяем условие `500 <= price < 3000 and rating >= 4.5`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `'Хороший выбор'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 10,
+            "text": "Проверяем условие `price >= 3000 and rating >= 4.5`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 11,
+            "text": "Вычисляем `'Премиум'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 12,
+            "text": "Проверяем условие `rating < 3`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 13,
+            "text": "Вычисляем `'Низкое качество'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 15,
+            "text": "Вычисляем `'Стандарт'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 16,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "input",
+          "conversion",
+          "types",
+          "variables",
+          "output",
+          "conditions",
+          "logic",
+          "features",
+          "target"
+        ],
+        "id": "T-6ab489982fec6247cc6ab549-S1"
+      },
+      "solutionStatus": "published",
+      "source": {
+        "elementId": "6ab489982fec6247cc6ab549",
+        "archive": "Снимки страниц.json",
+        "sha256": "6c5bc665992a4e296efad63fbf8bca2c17dc73595a975d2a5f65a4f1de759289"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "public_distribution_confirmed",
+        "status": "published"
+      },
+      "relatedTopics": [
+        "input",
+        "conversion",
+        "types",
+        "variables",
+        "output",
+        "conditions",
+        "logic",
+        "features",
+        "target"
+      ]
     }
   ],
-  "lecture": "# Условия в Python - принятие решений\n\n### СЛАЙД 01. Условия в Python - принятие решений\n\nВ этом занятии рассматривается тема «Условия в Python - принятие решений». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Зачем нужны условия\n\nПривет! На этом занятии ты научишься объяснять компьютеру, как принимать решения.\n\nПредставь: ты разрабатываешь систему, которая определяет, кому положена скидка, кого пустить на мероприятие или к какой категории относится товар. Человек читает условия и понимает их смысл. Программа — нет. Она проверяет значения переменных и выбирает ветку кода.\n\nИменно это умеет условный оператор if . Из нескольких таких условий можно составить простой классификатор по правилам : программа относит объект к категории по заданным признакам. Это ещё не машинное обучение — правила здесь пишет человек. Но так легче понять, что делает модель ИИ: она тоже относит объекты к классам, только закономерности находит сама по данным.\n\nПосле этого занятия ты сможешь:\n\nписать цепочки if / elif / else ;\n\nсоставлять условия с and , or , not ;\n\nсоздавать программу, которая определяет категорию объекта по его признакам.\n\n### СЛАЙД 03. Синтаксис if / elif / else\n\nУсловный оператор выбирает, какой блок кода выполнить, в зависимости от значения переменной.\n\nПример программы:\n\nПример на слайде:\ntemperature = float(input('Введите температуру: '))\n\nif temperature > 37.5:\n    print('Повышенная температура')\nelif temperature < 36.0:\n    print('Пониженная температура')\nelse:\n    print('Норма')\n\nВнимание\n\nДвоеточие в конце строки с условием и отступ в 4 пробела — обязательны.\n\nОбратите внимание на граничные значения. Условия записаны строго: > 37.5 и < 36.0 . Поэтому при вводе ровно 37.5 или ровно 36.0 ни одно из них не выполнится, и программа выведет «Норма». Если граничное значение должно относиться к другой категории, используйте >= или <= .\n\nВвод и тип данных. Функция input() всегда возвращает строку. Чтобы сравнивать введённое значение с числом, его преобразуют: int() — в целое число, float() — в дробное. Если пользователь введёт не число (например, «тридцать»), float() завершится ошибкой ValueError и программа остановится. Поэтому вводите данные в том формате, который указан в задании.\n\nВеток elif может быть несколько. Python проверяет их сверху вниз и выполняет только первую ветку с истинным условием — остальные уже не проверяются:\n\nПример на слайде:\nscore = 75\n\nif score >= 90:\n    print('Отлично')\nelif score >= 70:\n    print('Хорошо')\nelif score >= 50:\n    print('Удовлетворительно')\nelse:\n    print('Неудовлетворительно')\n# Выведет: Хорошо\n\nПри score = 75 условие score >= 50 тоже истинно, но эта ветка не выполнится: Python уже выбрал ветку «Хорошо».\n\n### СЛАЙД 04. Составные условия · таблица 1/2\n\nЛюбое условие в Python даёт одно из двух логических значений : True (истина) или False (ложь). Например, 5 > 3 — это True , а 2 == 7 — False . Логические значения можно хранить и в переменных: has_ticket = True , is_blocked = False . Такой тип данных называется bool .\n\nИногда нужно проверить сразу несколько условий. Для этого используются логические операторы:\n\nСравним данные в таблице.\nОператор Смысл Пример and Оба условия истинны age >= 18 and has_ticket or Хотя бы одно истинно score < 0 or score > 100 not Инверсия (отрицание) not is_blocked\n\nПеременная has_ticket уже хранит True или False , поэтому сравнивать её с True не нужно: записи has_ticket и has_ticket == True дают одинаковый результат, но первая короче и понятнее.\n\nПорядок выполнения. Если в одном условии несколько логических операторов, Python сначала выполняет not , затем and , затем or . Чтобы условие читалось однозначно, расставляйте скобки:\n\nПример на слайде:\nage = 15\nhas_parent = False\nis_vip = True\n\n# and выполняется раньше or:\nprint(is_vip or age >= 18 and has_parent)    # True  — то же, что is_vip or (age >= 18 and has_parent)\nprint((is_vip or age >= 18) and has_parent)  # False — скобки изменили порядок\n\nОператоры сравнения\n\nСравним данные в таблице.\nОператор Значение Оператор Значение == равно != не равно > больше < меньше >= больше или равно <= меньше или равно\n\nВнимание\n\n= — это присваивание (записать значение в переменную), а == — сравнение (проверить, равны ли значения). Запись if x = 5: — синтаксическая ошибка, правильно if x == 5: .\n\n### СЛАЙД 05. Составные условия · таблица 2/2\n\nПосмотрите на продолжение таблицы. not Инверсия (отрицание) not is_blocked\n\n### СЛАЙД 06. Важные правила\n\nПосле if / elif / else всегда стоит двоеточие.\n\nТело блока сдвигается на 4 пробела вправо (отступ).\n\nPython проверяет ветки сверху вниз и останавливается на первой истинной.\n\nПорядок elif важен: ставьте более специфичные условия раньше.\n\nelse — «запасная» ветка, она выполняется, если ничего не сработало.\n\nГлавное правило: Python проверяет ветки сверху вниз и останавливается на первой истинной. Поэтому порядок условий имеет значение!\n\n### СЛАЙД 07. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 08. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Условия в Python - принятие решений\n\n### СЛАЙД 01. Условия в Python - принятие решений\n\nВ этом занятии рассматривается тема «Условия в Python - принятие решений». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Зачем нужны условия\n\nПривет! На этом занятии ты научишься объяснять компьютеру, как принимать решения.\n\nПредставь: ты разрабатываешь систему, которая определяет, кому положена скидка, кого пустить на мероприятие или к какой категории относится товар. Человек читает условия и понимает их смысл. Программа — нет. Она проверяет значения переменных и выбирает ветку кода.\n\nИменно это умеет условный оператор if . Из нескольких таких условий можно составить простой классификатор по правилам : программа относит объект к категории по заданным признакам. Это ещё не машинное обучение — правила здесь пишет человек. Но так легче понять, что делает модель ИИ: она тоже относит объекты к классам, только закономерности находит сама по данным.\n\nПосле этого занятия ты сможешь:\n\nписать цепочки if / elif / else ;\n\nсоставлять условия с and , or , not ;\n\nсоздавать программу, которая определяет категорию объекта по его признакам.\n\n### СЛАЙД 03. Синтаксис if / elif / else\n\nУсловный оператор выбирает, какой блок кода выполнить, в зависимости от значения переменной.\n\nПример программы:\n\n\n\n```python\ntemperature = float(input('Введите температуру: '))\n\nif temperature > 37.5:\n    print('Повышенная температура')\nelif temperature < 36.0:\n    print('Пониженная температура')\nelse:\n    print('Норма')\n```\n\n\n\nВнимание\n\nДвоеточие в конце строки с условием и отступ в 4 пробела — обязательны.\n\nОбратите внимание на граничные значения. Условия записаны строго: > 37.5 и < 36.0 . Поэтому при вводе ровно 37.5 или ровно 36.0 ни одно из них не выполнится, и программа выведет «Норма». Если граничное значение должно относиться к другой категории, используйте >= или <= .\n\nВвод и тип данных. Функция `input()` всегда возвращает строку. Чтобы сравнивать введённое значение с числом, его преобразуют: `int()` — в целое число, `float()` — в дробное. Если пользователь введёт не число (например, «тридцать»), `float()` завершится ошибкой ValueError и программа остановится. Поэтому вводите данные в том формате, который указан в задании.\n\nВеток elif может быть несколько. Python проверяет их сверху вниз и выполняет только первую ветку с истинным условием — остальные уже не проверяются:\n\n\n\n```python\nscore = 75\n\nif score >= 90:\n    print('Отлично')\nelif score >= 70:\n    print('Хорошо')\nelif score >= 50:\n    print('Удовлетворительно')\nelse:\n    print('Неудовлетворительно')\n# Выведет: Хорошо\n```\n\n\n\nПри score = 75 условие score >= 50 тоже истинно, но эта ветка не выполнится: Python уже выбрал ветку «Хорошо».\n\n### СЛАЙД 04. Составные условия · таблица 1/2\n\nЛюбое условие в Python даёт одно из двух логических значений : True (истина) или False (ложь). Например, 5 > 3 — это True , а 2 == 7 — False . Логические значения можно хранить и в переменных: has_ticket = True , is_blocked = False . Такой тип данных называется bool .\n\nИногда нужно проверить сразу несколько условий. Для этого используются логические операторы:\n\nСравним данные в таблице.\nОператор Смысл Пример and Оба условия истинны age >= 18 and has_ticket or Хотя бы одно истинно score < 0 or score > 100 not Инверсия (отрицание) not is_blocked\n\nПеременная has_ticket уже хранит True или False , поэтому сравнивать её с True не нужно: записи has_ticket и has_ticket == True дают одинаковый результат, но первая короче и понятнее.\n\nПорядок выполнения. Если в одном условии несколько логических операторов, Python сначала выполняет not , затем and , затем or . Чтобы условие читалось однозначно, расставляйте скобки:\n\n\n\n```python\nage = 15\nhas_parent = False\nis_vip = True\n\n# and выполняется раньше or:\nprint(is_vip or age >= 18 and has_parent)    # True  — то же, что is_vip or (age >= 18 and has_parent)\nprint((is_vip or age >= 18) and has_parent)  # False — скобки изменили порядок\n```\n\n\n\nОператоры сравнения\n\nСравним данные в таблице.\nОператор Значение Оператор Значение == равно != не равно > больше < меньше >= больше или равно <= меньше или равно\n\nВнимание\n\n= — это присваивание (записать значение в переменную), а == — сравнение (проверить, равны ли значения). Запись if x = 5: — синтаксическая ошибка, правильно if x == 5: .\n\n### СЛАЙД 05. Составные условия · таблица 2/2\n\nПосмотрите на продолжение таблицы. not Инверсия (отрицание) not is_blocked\n\n### СЛАЙД 06. Важные правила\n\nПосле if / elif / else всегда стоит двоеточие.\n\nТело блока сдвигается на 4 пробела вправо (отступ).\n\nPython проверяет ветки сверху вниз и останавливается на первой истинной.\n\nПорядок elif важен: ставьте более специфичные условия раньше.\n\nelse — «запасная» ветка, она выполняется, если ничего не сработало.\n\nГлавное правило: Python проверяет ветки сверху вниз и останавливается на первой истинной. Поэтому порядок условий имеет значение!\n\n### СЛАЙД 07. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 08. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Условия в Python - принятие решений\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Задание 1. Светофор\n\nПрочитайте код. Не запуская его, определите: что выведет программа при вводе yellow ?\n\n\n```\ncolor = input('Введите цвет сигнала: ')\n\nif color == 'red':\n    print('Стоп!')\nelif color == 'yellow':\n    print('Приготовиться')\nelif color == 'green':\n    print('Движение разрешено')\nelse:\n    print('Неизвестный сигнал')\n```\n\nВыбери все верные утверждения\n\nА) Стоп!\n\nБ) Приготовиться\n\nВ) Движение разрешено\n\nГ) Неизвестный сигнал\n\n\n### Задание 1. Светофор. Дополнительный вопрос\n\nПрочитайте код. Не запуская его, определите: что выведет программа при вводе blue ? Почему?\n\n\n```\ncolor = input('Введите цвет сигнала: ')\n\nif color == 'red':\n    print('Стоп!')\nelif color == 'yellow':\n    print('Приготовиться')\nelif color == 'green':\n    print('Движение разрешено')\nelse:\n    print('Неизвестный сигнал')\n```\n\n\n### Задание 2. Чётное или нечётное число\n\nУсловие\n\nДана программа, которая проверяет число на чётность:\n\nИсходный код\n\n\n```\nn = int(input('Введите число: '))\n\nif n % 2 == 0:\n    print('Чётное')\nelse:\n    print('Нечётное')\n```\n\nЧто нужно сделать\n\nИзмените код: добавьте отдельный вывод для числа 0 — Число равно нулю . Ноль не должен попадать ни в чётные, ни в нечётные.\n\nПроверьте программу на значениях: 0 , 4 , 7 , -3 .\n\n\n### Задание 3. Оценка за тест\n\n\n### Задание 3. Оценка за тест\n\n\n#### Тип задания: найди и исправь ошибку\n\nВ данной программе допущена логическая ошибка: при вводе балла 90 выводится 'Хорошо' вместо 'Отлично' . Исходный код программы:\n\n\n```\nscore = int(input('Введите балл (0–100): '))\n\nif score >= 75:\n    print('Хорошо')\nelif score >= 60:\n    print('Удовлетворительно')\nelif score >= 90:\n    print('Отлично')\nelse:\n    print('Неудовлетворительно')\n```\n\nПодсказка\n\nЗадание\n\n\n### Задание 4. Категория возраста\n\nНапишите программу, которая запрашивает возраст и выводит категорию:\n\n- меньше 0 → Ошибка: некорректный возраст ;\n\n- 0 – 12 → Ребёнок ;\n\n- 13 – 17 → Подросток ;\n\n- 18 – 64 → Взрослый ;\n\n- 65 и старше → Пожилой .\n\nИспользуйте input() для ввода и int() для преобразования.\n\nПроверьте программу на значениях: -1 , 0 , 12 , 13 , 17 , 18 , 64 , 65 .\n\n\n### Задание 5. Доступ в систему\n\nУсловие\n\nНапишите программу с нуля. Программа запрашивает логин и пароль.\n\nЧто нужно сделать\n\nВ начале программы задайте значение is_blocked = False . Логика проверки:\n\n- Если аккаунт заблокирован ( is_blocked == True ) → выведите Аккаунт заблокирован ;\n\n- Если логин admin И пароль qwerty123 → выведите Добро пожаловать! ;\n\n- Иначе → выведите Неверный логин или пароль .\n\nВнимание\n\nПроверку блокировки ( is_blocked ) сделайте первой — до проверки логина и пароля.\n\nЧто нужно сделать\n\nПроверьте работоспособность программы для следующих случаев:\n\n- (а) is_blocked = True (даже если введены верные данные);\n\n- (б) неверный пароль;\n\n- (в) верные данные ( is_blocked = False ).\n\nКак устроены автотесты\n\nПрограмма запрашивает через input() только логин и пароль. Если во входных данных теста есть третья строка True или False — это значение is_blocked : проверяющая программа сама подставит его в строку is_blocked = False . Вводить его через input() не нужно.\n\n\n### Задание 6. Наибольшее из двух чисел\n\nУсловие\n\nНапишите программу с нуля. Программа запрашивает два целых числа a и b (преобразуйте ввод с помощью int() ), затем выводит наибольшее. Если числа равны — выводит Числа равны .\n\nЧто нужно сделать\n\nНе используйте функцию max() — только if / elif / else .\n\nПроверьте программу на значениях: (5, 3) , (3, 5) , (7, 7) , (-2, -5) .\n\n\n### Задание 7. Индекс массы тела (ИМТ)\n\nПрограмма запрашивает массу тела в кг и рост в метрах, вычисляет ИМТ по формуле: ИМТ = масса / (рост * рост) и выводит категорию:\n\n- ИМТ < 18.5 → Дефицит массы\n\n- 18.5 ≤ ИМТ < 25.0 → Норма\n\n- 25.0 ≤ ИМТ < 30.0 → Избыточный вес\n\n- ИМТ ≥ 30.0 → Ожирение\n\nВыведите результат в формате: ИМТ = X.XX, категория: Y\n\nИспользуйте float() для ввода и round() для округления ИМТ до 2 знаков после запятой.\n\nПример ввода 1:\n\n\n```\n50\n1.75\n```\n\nОжидаемый результат 1:\n\n\n```\nИМТ = 16.33, категория: Дефицит массы\n```\n\nПример ввода 2:\n\n\n```\n80\n1.75\n```\n\nОжидаемый результат 2:\n\n\n```\nИМТ = 26.12, категория: Избыточный вес\n```\n\nПример ввода 3:\n\n\n```\n100\n1.70\n```\n\nОжидаемый результат 3:\n\n\n```\nИМТ = 34.6, категория: Ожирение\n```\n\n\n### Задание 8. Тариф за интернет\n\nЗадание. Анализ программы: вложенные условия\n\nЦель\n\nнаучиться анализировать вложенные условные операторы и предсказывать результаты\n\nУсловие\n\nПроанализируй следующую программу и определи, что она выведет при gb = 12 и user_type = 'home':\n\ngb = 12\n\nuser_type = 'home'\n\nif user_type == 'business':\n\nif gb <= 5:\n\nprice = 450\n\nelif gb <= 20:\n\nprice = 750\n\nelse:\n\nprice = 1200\n\nelse:\n\nif gb <= 5:\n\nprice = 300\n\nelif gb <= 20:\n\nprice = 500\n\nelse:\n\nprice = 800\n\nprint('Стоимость:', price, 'руб.')\n\n💡 Подсказка 1: Структура вложенных условий\n\nВ программе есть внешнее if-else, которое проверяет user_type. Внутри каждой ветки есть ещё одно if-elif-else, которое проверяет gb. Сначала проверь внешнее условие!\n\n💡 Подсказка 2: Проверка внешнего условия\n\nПроверь: user_type == 'business'? У нас user_type = 'home', поэтому это условие ЛОЖЬ. Значит, программа перейдёт в ветку else (нижняя часть кода)\n\n💡 Подсказка 3: Внутренние условия для 'home'\n\nВ ветке else программа проверяет три варианта:\n\n1. Если gb <= 5 → price = 300\n\n2. Если gb <= 20 → price = 500\n\n3. Иначе → price = 800\n\nТеперь проверь, какое из этих условий выполняется\n\nВыбери все верные утверждения\n\nСтоимость: 500 руб.\n\nСтоимость: 450 руб.\n\nСтоимость: 750 руб.\n\nСтоимость: 800 руб.\n\n\n### Задание 9. Сезон по месяцу - расширьте программу\n\n\n### Задание. Определение времени года\n\nЦель\n\nМодифицировать программу определения сезона, добавив недостающие сезоны и валидацию входных данных.\n\nУсловие\n\nДана программа, определяющая зиму и лето. Требуется:\n\n- Добавить определение весны (3–5) и осени (9–11)\n\n- Обработать некорректный ввод (месяцы вне диапазона 1–12)\n\n- Убрать обобщающий else\n\nИсходный код:\n\n\n```\nmonth = int(input('Введите номер месяца (1–12): '))\n\nif month == 12 or month == 1 or month == 2:\n    print('Зима')\nelif month >= 6 and month <= 8:\n    print('Лето')\nelse:\n    print('Другой сезон')\n```\n\nПроверить на: 1, 3, 6, 9, 12, 0, 13\n\nОжидаемый результат\n\n\n```\nЗима\nВесна\nЛето\nОсень\nЗима\nНекорректный месяц\nНекорректный месяц\n```\n\n💡 Подсказка 1: Первая проверка — валидация\n\nВалидация должна быть первой: если месяц вне [1, 12], выводите об ошибке. Остальные проверки происходят только для корректных месяцев\n\n💡 Подсказка 2: Граничные месяцы\n\nЗима охватывает месяцы из двух лет (12 предыдущего, 1 и 2 текущего). Для остальных сезонов можно использовать диапазоны. Рассмотрите, использовать ли in для зимы\n\n💡 Подсказка 3: Цепочка условий\n\nИспользуйте если-иначе если для четырёх сезонов. После if-валидации нужны четыре elif — по одному на каждый сезон. Без else в конце\n\n\n### Задание 10. Классификатор погоды\n\n\n### Задание. Поиск и исправление ошибок\n\nЦель\n\nНайти и исправить синтаксическую и логическую ошибки в коде программы определения погоды.\n\nУсловие\n\nВ программе две ошибки: одна синтаксическая (пропущен символ), другая логическая (неверный оператор). Найдите обе и исправьте.\n\nИсходный код с ошибками:\n\n\n```\ntemp = float(input('Температура (°C): '))\nis_raining = input('Идёт дождь? (да/нет): ')\n\nif temp >= 20 and is_raining == 'нет'\n    weather = 'Тепло и солнечно'\nelif temp >= 20 and is_raining == 'да':\n    weather = 'Тепло, но дождь'\nelif temp >= 0 and is_raining = 'нет':\n    weather = 'Прохладно и ясно'\nelif temp >= 0 and is_raining == 'да':\n    weather = 'Прохладно и дождливо'\nelse:\n    weather = 'Мороз'\n\nprint('Погода:', weather)\n```\n\nПроверить исправленный код на: (25, 'нет'), (25, 'да'), (10, 'нет'), (-5, 'нет')\n\nОжидаемый результат\n\n\n```\nПогода: Тепло и солнечно\nПогода: Тепло, но дождь\nПогода: Прохладно и ясно\nПогода: Мороз\n```\n\n💡 Подсказка 1: Синтаксическая ошибка\n\nПосмотрите на строку 4: if temp >= 20 and is_raining == 'нет' . В Python каждое условие должно заканчиваться двоеточием. Какой символ пропущен?\n\n💡 Подсказка 2: Логическая ошибка\n\nНа строке 8: elif temp >= 0 and is_raining = 'нет': . Оператор = — это присваивание. В условиях нужен оператор сравнения == . Python остановит такую программу с сообщением SyntaxError, но по смыслу это логическая ошибка: вместо проверки равенства записано присваивание.\n\n💡 Подсказка 3: Проверка логики\n\nПосле исправления синтаксиса программа должна компилироваться. Убедитесь, что логика условий правильная: первые две проверяют temp >= 20, следующие две — 0 <= temp < 20, else — отрицательные температуры\n\n\n### Задание 11. Категория школьника по успеваемости\n\n\n### Задание. Классификация студентов\n\nЦель\n\nРеализовать многоуровневую систему классификации с несколькими независимыми критериями.\n\nУсловие\n\nПрограмма определяет категорию студента по среднему баллу и количеству пропусков:\n\n- балл ≥ 4.5 И пропуски ≤ 5 → 'Отличник'\n\n- балл ≥ 3.5 И пропуски ≤ 10 → 'Хорошист'\n\n- балл ≥ 3.0 → 'Троечник'\n\n- балл < 3.0 И пропуски > 20 → 'Группа риска'\n\n- иначе → 'Требует внимания'\n\nВходные данные: средний балл (float) и количество пропусков (int)\n\nПроверить на: (4.8, 3), (4.0, 8), (3.2, 15), (2.5, 25), (2.8, 5)\n\nОжидаемый результат\n\n\n```\nОтличник\nХорошист\nТроечник\nГруппа риска\nТребует внимания\n```\n\n💡 Подсказка 1: Порядок условий важен\n\nПроверяйте более специфичные условия (с несколькими критериями) до общих. Студент с баллом 4.8 и 3 пропусками должен быть отличником, а не просто хорошистом\n\n💡 Подсказка 2: Учитывайте оба критерия\n\nНекоторые категории требуют проверки обоих условий (балл И пропуски). Рассмотрите, нужно ли использовать and или проверить все возможные комбинации\n\n💡 Подсказка 3: Граничные случаи\n\nОбратите внимание на студента с баллом 2.8 и 5 пропусками: он не в группе риска (пропусков ≤ 20), но требует внимания (балл < 3.0). Последовательность проверок определяет результат\n\n\n### Задание 12. Скидка в магазине\n\n\n### Задание. Расчёт скидки в интернет-магазине\n\nЦель\n\nРеализовать систему скидок с расчётом итоговой стоимости покупки.\n\nУсловие\n\nПрограмма читает статус клиента и сумму покупки (две строки через input() : сначала статус, затем сумма) и рассчитывает скидку:\n\n- VIP + сумма ≥ 5000 → 20% скидка\n\n- VIP + сумма < 5000 → 10% скидка\n\n- Обычный + сумма ≥ 3000 → 5% скидка\n\n- Обычный + сумма < 3000 → 0% скидка\n\nТребуется вывести: исходную сумму, процент скидки, размер скидки в рублях и итоговую сумму (всё в одной строке, суммы — с двумя знаками после запятой).\n\nВходные данные: статус ( vip или обычный ) и сумма (float)\n\nПроверить на: ('vip', 6000), ('vip', 2000), ('обычный', 4000), ('обычный', 1500)\n\nПример\n\nВвод\n\n\n```\nvip\n6000\n```\n\nВывод\n\n\n```\nИсходная сумма: 6000.00, Скидка: 20%, Сумма скидки: 1200.00, Итого: 4800.00\n```\n\nОжидаемый результат для всех четырёх случаев\n\n\n```\nИсходная сумма: 6000.00, Скидка: 20%, Сумма скидки: 1200.00, Итого: 4800.00\nИсходная сумма: 2000.00, Скидка: 10%, Сумма скидки: 200.00, Итого: 1800.00\nИсходная сумма: 4000.00, Скидка: 5%, Сумма скидки: 200.00, Итого: 3800.00\nИсходная сумма: 1500.00, Скидка: 0%, Сумма скидки: 0.00, Итого: 1500.00\n```\n\n💡 Подсказка 1: Структура условий\n\nПроверьте сначала статус (vip/обычный), потом сумму. Каждому статусу соответствует два порога суммы. Используйте if-elif для всех четырёх случаев или вложенные условия\n\n💡 Подсказка 2: Расчёты\n\nСумма скидки = исходная_сумма * (процент_скидки / 100). Итоговая сумма = исходная_сумма - сумма_скидки\n\n💡 Подсказка 3: Формат вывода\n\nДля вывода сумм с двумя знаками после запятой используйте f-строку с форматом {amount:.2f} , например print(f\"Исходная сумма: {amount:.2f}, ...\")\n\n\n### Задание 13. Определение четверти координатной плоскости\n\n\n### Задача: Определение квадранта координатной системы\n\nОписание задачи\n\nНапишите программу, которая запрашивает у пользователя координаты точки (вещественные числа x и y) и определяет, в каком квадранте координатной системы находится эта точка.\n\nПравила определения положения:\n\n- x > 0 и y > 0 → I четверть\n\n- x < 0 и y > 0 → II четверть\n\n- x < 0 и y < 0 → III четверть\n\n- x > 0 и y < 0 → IV четверть\n\n- x == 0 и y == 0 → Начало координат\n\n- x == 0 (y ≠ 0) → На оси Y\n\n- y == 0 (x ≠ 0) → На оси X\n\n✓ Примеры использования:\n\n\n| Координаты | Результат |\n| --- | --- |\n| x = 3, y = 4 | I четверть |\n| x = -2, y = 5 | II четверть |\n| x = -1, y = -3 | III четверть |\n| x = 2, y = -1 | IV четверть |\n| x = 0, y = 0 | Начало координат |\n| x = 0, y = 3 | На оси Y |\n| x = 4, y = 0 | На оси X |\n\n\n### 💡 Подсказки для решения\n\nПодсказка 1: Порядок проверки условий\n\nОбратите внимание на порядок проверки условий. Сначала проверяйте центр координат (0, 0), затем оси, потом квадранты. Это предотвратит ошибки, когда точка одновременно удовлетворяет нескольким условиям.\n\n\n```\n# Неправильный порядок приведёт к ошибке:\nif x > 0 and y > 0:  # Сначала квадрант\n    ...\nelif x == 0:  # Потом ось (слишком поздно!)\n    ...\n\n# Правильно: центр → оси → квадранты\nif x == 0 and y == 0:\n    ...\nelif x == 0:  # Теперь все точки на оси Y перехватываются\n    ...\n```\n\nПодсказка 2: Особые случаи на осях\n\nНа осях координат одна из координат всегда равна нулю. Важно различать точку в центре (0, 0) от точек на оси Y (x = 0, y ≠ 0) и оси X (y = 0, x ≠ 0). Используйте логические операторы and и or правильно.\n\n\n```\n# На оси Y: x = 0, но y может быть любым\nif x == 0 and y != 0:\n    result = \"На оси Y\"\n\n# На оси X: y = 0, но x может быть любым\nelif y == 0 and x != 0:\n    result = \"На оси X\"\n```\n\n\n### Задание 14. Классификатор товара\n\nУсловие задачи\n\n\n### Задание 14. Классификатор товара (итоговое задание)\n\nНапишите программу, которая определяет категорию товара по трём признакам.\n\nВходные данные.\n\nПрограмма получает три строки:\n\n- price — цена в рублях (число);\n\n- rating — рейтинг от 1.0 до 5.0 (дробное число);\n\n- in_stock — наличие товара: да или нет (маленькими буквами).\n\nПравила классификации.\n\nУсловия проверяются строго по порядку, срабатывает первое подходящее:\n\n\n| № | Условие | Категория |\n| --- | --- | --- |\n| 1 | in_stock равно нет | Нет в наличии |\n| 2 | price < 500 и rating >= 4.0 | Выгодная покупка |\n| 3 | price >= 500 и price < 3000 и rating >= 4.5 | Хороший выбор |\n| 4 | price >= 3000 и rating >= 4.5 | Премиум |\n| 5 | rating < 3.0 | Низкое качество |\n| 6 | иначе | Стандарт |\n\nВыходные данные.\n\nОдна строка в формате:\n\n\n```\nКатегория товара: <категория>\n```\n\nНазвание категории пишется точно как в таблице.\n\nПодсказки:\n\n- input() возвращает строку, поэтому цену и рейтинг нужно преобразовать: float(input()) .\n\n- Используйте if / elif / else , чтобы условия проверялись по порядку.\n\n- Обратите внимание на границы: < 500 и >= 500 , >= 4.5 , < 3.0 .\n\nПрограмма будет проверена на 6 наборах данных, по одному на каждую категорию.\n\nПеред отправкой протестируйте программу на 6 граничных наборах ( price , rating , in_stock ): 500, 4.5, нет ; 499, 4.0, да ; 500, 4.5, да ; 3000, 4.5, да ; 500, 2.9, да ; 500, 3.0, да . Каждый набор должен дать свою категорию из таблицы.\n\nПример 1\n\nВходные данные:\n\n\n```\n350\n4.2\nда\n```\n\nВыходные данные:\n\n\n```\nКатегория товара: Выгодная покупка\n```\n\nПример 2\n\nВходные данные:\n\n\n```\n1500\n4.8\nнет\n```\n\nВыходные данные:\n\n\n```\nКатегория товара: Нет в наличии\n```\n\nВо втором примере у товара хорошие цена и рейтинг, но его нет в наличии. Правило 1 проверяется первым, поэтому категория — «Нет в наличии».\n\n\n### Таблицы из теоретической части\n\n\n| Оператор | Смысл | Пример |\n| --- | --- | --- |\n| and | Оба условия истинны | age >= 18 and has_ticket |\n| or | Хотя бы одно истинно | score < 0 or score > 100 |\n| not | Инверсия (отрицание) | not is_blocked |\n\n\n| Оператор | Значение | Оператор | Значение |\n| --- | --- | --- | --- |\n| == | равно | != | не равно |\n| > | больше | < | меньше |\n| >= | больше или равно | <= | меньше или равно |",
   "theory": [
     {
       "title": "Теоретический материал",
@@ -674,5 +1925,43 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "input",
+    "conversion",
+    "types",
+    "variables",
+    "output",
+    "conditions",
+    "logic",
+    "features",
+    "target"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M01-L06-lecture.pdf",
+      "name": "Условия в Python - принятие решений — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "053ba5aaaafae3aab498dd1153982020b080a892bba77b56d58dbf7120395d20",
+      "source": {
+        "path": "Снимки страниц.json / 6a56c85851ad6c611651ce0e",
+        "sha256": "9f4809641958cef90a81b5509f5cfed83827d58f48653929ef7377150ea649d6"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M01-L06-presentation.pdf",
+      "name": "Условия в Python - принятие решений — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 8,
+      "sha256": "bd9666ed0da1792201b6803cfd1e87bd11a4b2ba4161949f7bf3a043e1a7d27a",
+      "source": {
+        "path": "Модуль 1/Занятие 06/Презентация — итоговая.pptx",
+        "sha256": "8e21c34f3616ed4a62c252eaef74255b177121179d2b25361c602ba05fbc45de"
+      }
+    }
   }
 }

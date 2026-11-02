@@ -4,14 +4,14 @@
   "sourceDate": "2026-11-02",
   "counts": {
     "modules": 5,
-    "sections": 82,
+    "sections": 74,
     "lessons": 74,
-    "controls": 8,
+    "controls": 0,
     "presentations": 74,
     "slides": 1239,
     "lectures": 74,
-    "tasks": 723,
-    "officialPracticalElements": 653,
+    "tasks": 381,
+    "officialPracticalElements": 381,
     "dataFiles": 49,
     "fileBindings": 67,
     "linksMapped": 743,
@@ -19,9 +19,11 @@
     "teacherSections": 73,
     "sourcePages": 743,
     "variantViews": 284,
-    "additionalPractices": 16,
+    "additionalPractices": 0,
     "attachmentUrls": 156,
-    "attachmentMetadataUrls": 155
+    "attachmentMetadataUrls": 155,
+    "publishedSolutions": 381,
+    "sourceSections": 82
   },
   "expected": {
     "date": "2026-11-02",
@@ -62,6 +64,10 @@
     {
       "lessonId": "M03-L16",
       "message": "Занятия 3.16 и 3.17 — отдельные элементы с одинаковым названием."
+    },
+    {
+      "lessonId": "M02-L17",
+      "message": "В исходном виджете задания 3.1 часть подписей диапазонов повреждена. Пропуски сохранены явно; ответ поясняет выбранные интервалы."
     }
   ],
   "duplicates": [],
@@ -75,7 +81,7 @@
     "audience": "public",
     "studentMaterials": "public_distribution_confirmed",
     "teacherMaterials": "excluded_from_public_build",
-    "solutions": "explicit_review_and_rights_confirmation_required",
+    "solutions": "381_individually_reviewed_ordinary_practice_answers_authorized",
     "ismartLinks": "all_unverified_no_student_session",
     "pptx": "notes_comments_and_personal_metadata_removed",
     "originals": "unchanged_outside_project",
@@ -83,13 +89,49 @@
   },
   "manualReview": [
     "Проверить кандидаты ссылок в авторизованной студенческой сессии.",
-    "Рассмотреть решения по одному; контрольные ключи и варианты остаются закрытыми.",
-    "Сверить отрисовку всех слайдов с PowerPoint перед публичным выпуском."
+    "Веб-превью презентаций проверены по геометрии; попиксельная сверка с PowerPoint не заявляется."
   ],
   "rendering": {
     "renderer": "DrawingML geometry and rich text → script-free SVG; browser text fitting",
     "slideCount": 1239,
     "adjustedBlocks": 18,
     "overflowingBlocks": 0
+  },
+  "sourceCounts": {
+    "modules": 5,
+    "sections": 82,
+    "lessons": 74,
+    "controls": 8,
+    "presentations": 74,
+    "slides": 1239,
+    "lectures": 74,
+    "tasks": 723,
+    "officialPracticalElements": 653,
+    "dataFiles": 49,
+    "fileBindings": 67,
+    "linksMapped": 743,
+    "verifiedStudentLinks": 0,
+    "teacherSections": 73,
+    "sourcePages": 743,
+    "variantViews": 284,
+    "additionalPractices": 16,
+    "attachmentUrls": 156,
+    "attachmentMetadataUrls": 155
+  },
+  "projection": {
+    "excludedControls": [
+      "M01-C1-4",
+      "M01-C5-13",
+      "M02-C1-2",
+      "M02-C2-9",
+      "M03-C1-7",
+      "M03-C8-11",
+      "M04-C1-3",
+      "M04-C4-5"
+    ],
+    "authorPractice": "excluded_from_public_files",
+    "ordinaryPracticeSolutionsPermission": "confirmed_by_owner_2026-11-02",
+    "assessmentKeys": "excluded",
+    "rawRegistry": "kept_private"
   }
 }

@@ -6,11 +6,11 @@
   "title": "Создание первого прототипа прикладного ИИ-решения",
   "originalTitle": "Тема 8. Занятие 8. Создание первого прототипа прикладного ИИ-решения",
   "kind": "lesson",
-  "taskCount": 8,
+  "taskCount": 7,
   "slideCount": 33,
   "fileCount": 0,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Создание первого прототипа прикладного ИИ-решения  В этом занятии рассматривается тема «Создание первого прототипа прикладного ИИ-решения». Будем опираться на",
+  "description": "В этом занятии рассматривается тема «Создание первого прототипа прикладного ИИ-решения». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "choice",
       "moduleId": 4,
       "lessonId": "M04-L08",
-      "statement": "Метод count списка подсчитывает количество элементов, которые точно равны переданному значению. Перед выбором ответа просмотрите элементы списка по порядку и отметьте каждое совпадение.\n\nИсходный код\n\n\n```\nclasses = [\"доступ\", \"сеть\", \"доступ\", \"ПО\"]\nprint(classes.count(\"доступ\"))\n```\n\nОбратите внимание\n\ncount не возвращает число разных классов и не изменяет сам список. Он считает только вхождения указанной строки.",
+      "statement": "## Вопрос 1. Что выведет код?\n\nМетод `count` списка подсчитывает количество элементов, которые точно равны переданному значению. Перед выбором ответа просмотрите элементы списка по порядку и отметьте каждое совпадение.\n\nИсходный код\n\n```python\nclasses = [\"доступ\", \"сеть\", \"доступ\", \"ПО\"]\nprint(classes.count(\"доступ\"))\n```\n\nОбратите внимание\n\n`count` не возвращает число разных классов и не изменяет сам список. Он считает только вхождения указанной строки.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab7a0a7b0a3edd62a27386c",
@@ -33,17 +33,37 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L08",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "2",
+        "explanation": "Строка«доступ» встречается в позициях 0 и 2, поэтому count возвращает 2. Это не число разных классов и не длина списка.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "output"
+        ],
+        "id": "T-6ab7a0a7b0a3edd62a27386c-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 08/Практика для студентов.md",
-        "sha256": "d531b3084181e404d31a05adb11717be297a314936a0e91cc897420309d1d356"
+        "elementId": "6ab7a0a7b0a3edd62a27386c",
+        "archive": "Снимки страниц.json",
+        "sha256": "a5eb6f7d533f495dd70a85b5834be17a6d2f5edb7df60eeb1d6e4d186bc940b0"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output"
+      ]
     },
     {
       "id": "T-6ab7a0b1b0a3edd62a27386d",
@@ -52,7 +72,7 @@
       "type": "debug",
       "moduleId": 4,
       "lessonId": "M04-L08",
-      "statement": "Условие\n\nВ коде есть синтаксическая и логическая ошибки. Исправьте его так, чтобы модель обучалась по тексту и правильным меткам.\n\nПроверьте два независимых условия: элементы списка шагов Pipeline должны быть корректно разделены, а в метод fit сначала должны передаваться входные признаки, затем целевые метки. В этой задаче входным признаком является текст заявки, а целевой переменной — label .\n\nИсходный код\n\n\n```\nmodel = Pipeline([\n    (\"vectorizer\", TfidfVectorizer(ngram_range=(1, 2)))\n    (\"classifier\", LinearSVC(random_state=42))\n])\nmodel.fit(train_df[\"label\"], train_df[\"text\"])\n```\n\nЗапишите исправленный фрагмент\n\n__________________________________________________________________\n\nОбратите внимание\n\nПосле исправления объясните назначение каждого аргумента метода fit . Такая проверка помогает убедиться, что код исправлен осмысленно, а не только перестал выдавать сообщение об ошибке.",
+      "statement": "## Вопрос 2. Найдите и исправьте ошибки\n\nУсловие\n\nВ коде есть синтаксическая и логическая ошибки. Исправьте его так, чтобы модель обучалась по тексту и правильным меткам.\n\nПроверьте два независимых условия: элементы списка шагов `Pipeline` должны быть корректно разделены, а в метод `fit` сначала должны передаваться входные признаки, затем целевые метки. В этой задаче входным признаком является текст заявки, а целевой переменной — `label`.\n\nИсходный код\n\n```python\nmodel = Pipeline([\n    (\"vectorizer\", TfidfVectorizer(ngram_range=(1, 2)))\n    (\"classifier\", LinearSVC(random_state=42))\n])\nmodel.fit(train_df[\"label\"], train_df[\"text\"])\n```\n\nЗапишите исправленный фрагмент\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\nОбратите внимание\n\nПосле исправления объясните назначение каждого аргумента метода `fit`. Такая проверка помогает убедиться, что код исправлен осмысленно, а не только перестал выдавать сообщение об ошибке.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab7a0b1b0a3edd62a27386d",
@@ -65,17 +85,175 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L08",
+        "status": "published",
+        "kind": "code",
+        "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\nprint('Обучено:',len(train_df),'текстов')",
+        "answer": "Между шагами Pipeline нужна запятая. fit получает сначала train_df[\"text\"], затем train_df[\"label\"].",
+        "explanation": "Входы — тексты, метки — классы. Перестановка этих аргументов решала бы другую задачу. В полном копируемом примере добавлены импорты и исходные 32 обучающие записи, чтобы код запускался самостоятельно.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Обучено: 32 текстов"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 43,
+            "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 57,
+            "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 58,
+            "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+          },
+          {
+            "line": 60,
+            "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 61,
+            "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+          },
+          {
+            "line": 62,
+            "text": "Выполняем `model.fit` с переданными аргументами."
+          },
+          {
+            "line": 63,
+            "text": "Возвращаем из функции `model`."
+          },
+          {
+            "line": 65,
+            "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 66,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+          },
+          {
+            "line": 67,
+            "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+          },
+          {
+            "line": 69,
+            "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 70,
+            "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+          },
+          {
+            "line": 71,
+            "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+          },
+          {
+            "line": 72,
+            "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+          },
+          {
+            "line": 73,
+            "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+          },
+          {
+            "line": 75,
+            "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+          },
+          {
+            "line": 76,
+            "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+          },
+          {
+            "line": 77,
+            "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+          },
+          {
+            "line": 78,
+            "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+          },
+          {
+            "line": 79,
+            "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+          },
+          {
+            "line": 80,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "conditions",
+          "logic",
+          "functions",
+          "tables",
+          "metrics",
+          "classification",
+          "features",
+          "target"
+        ],
+        "id": "T-6ab7a0b1b0a3edd62a27386d-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 08/Практика для студентов.md",
-        "sha256": "d531b3084181e404d31a05adb11717be297a314936a0e91cc897420309d1d356"
+        "elementId": "6ab7a0b1b0a3edd62a27386d",
+        "archive": "Снимки страниц.json",
+        "sha256": "d567ea196bd6f9c0d348d2268dc93409d4fdf4886ee149ed282283a93efd3103"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "conditions",
+        "logic",
+        "functions",
+        "tables",
+        "metrics",
+        "classification",
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6ab79f67b0a3edd62a273867",
@@ -84,7 +262,7 @@
       "type": "code",
       "moduleId": 4,
       "lessonId": "M04-L08",
-      "statement": "### Задача 1. Проверить подготовленный набор данных\n\nУсловие\n\nСоздайте две таблицы train_df и test_df по данным из приложения 1. Проверьте количество строк, названия столбцов, пропуски, дубликаты пар «текст — класс» и распределение классов. Не смешивайте обучающие и проверочные записи.\n\nМинимальный код проверки\n\n\n```\ntrain_df = pd.DataFrame(train_records, columns=[\"text\", \"label\"])\ntest_df = pd.DataFrame(test_records, columns=[\"text\", \"label\"])\nprint(train_df.shape)\nprint(test_df.shape)\nprint(train_df.isna().sum())\nprint(train_df.duplicated(subset=[\"text\", \"label\"]).sum())\nprint(train_df[\"label\"].value_counts())\n```\n\n10.1. Запишите ожидаемое количество обучающих и проверочных строк, количество классов и вывод о балансе.\n\n__________________________________________________________________",
+      "statement": "## Задача 1. Проверить подготовленный набор данных\n\nУсловие\n\nСоздайте две таблицы train_df и test_df по данным из приложения 1. Проверьте количество строк, названия столбцов, пропуски, дубликаты пар «текст — класс» и распределение классов. Не смешивайте обучающие и проверочные записи.\n\nМинимальный код проверки\n\n```python\ntrain_df = pd.DataFrame(train_records, columns=[\"text\", \"label\"])\ntest_df = pd.DataFrame(test_records, columns=[\"text\", \"label\"])\nprint(train_df.shape)\nprint(test_df.shape)\nprint(train_df.isna().sum())\nprint(train_df.duplicated(subset=[\"text\", \"label\"]).sum())\nprint(train_df[\"label\"].value_counts())\n```\n\n10.1. Запишите ожидаемое количество обучающих и проверочных строк, количество классов и вывод о балансе.\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab79f67b0a3edd62a273867",
@@ -97,17 +275,179 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L08",
+        "status": "published",
+        "kind": "code",
+        "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nprint('Train/test:',train_df.shape,test_df.shape)\nprint('Пропусков:',int(train_df.isna().sum().sum()),int(test_df.isna().sum().sum()))\nprint('Дубли:',int(train_df.duplicated(subset=['text','label']).sum()))\nprint(train_df['label'].value_counts().sort_index().to_string())",
+        "answer": "",
+        "explanation": "В обучении 32 строки, в тесте 12, классов 4. В train по 8 на класс, в test по 3: наборы сбалансированы. Пропусков и полных парных дублей нет. Обучающие и проверочные списки создаются раздельно и не объединяются.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Train/test: (32, 2) (12, 2)\nПропусков: 0 0\nДубли: 0\nlabel\nПО              8\nдоступ          8\nоборудование    8\nсеть            8"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 43,
+            "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 57,
+            "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 58,
+            "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+          },
+          {
+            "line": 60,
+            "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 61,
+            "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+          },
+          {
+            "line": 62,
+            "text": "Выполняем `model.fit` с переданными аргументами."
+          },
+          {
+            "line": 63,
+            "text": "Возвращаем из функции `model`."
+          },
+          {
+            "line": 65,
+            "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 66,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+          },
+          {
+            "line": 67,
+            "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+          },
+          {
+            "line": 69,
+            "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 70,
+            "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+          },
+          {
+            "line": 71,
+            "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+          },
+          {
+            "line": 72,
+            "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+          },
+          {
+            "line": 73,
+            "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+          },
+          {
+            "line": 75,
+            "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+          },
+          {
+            "line": 76,
+            "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+          },
+          {
+            "line": 77,
+            "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+          },
+          {
+            "line": 78,
+            "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+          },
+          {
+            "line": 79,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 80,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 81,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 82,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "conditions",
+          "logic",
+          "functions",
+          "tables",
+          "metrics",
+          "classification"
+        ],
+        "id": "T-6ab79f67b0a3edd62a273867-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 08/Практика для студентов.md",
-        "sha256": "d531b3084181e404d31a05adb11717be297a314936a0e91cc897420309d1d356"
+        "elementId": "6ab79f67b0a3edd62a273867",
+        "archive": "Снимки страниц.json",
+        "sha256": "73d7cf0bb0a3750206e5cec619faa280a865f17f964e9603ed9e1d096acf0be0"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "conditions",
+        "logic",
+        "functions",
+        "tables",
+        "metrics",
+        "classification"
+      ]
     },
     {
       "id": "T-6ab79f6bb0a3edd62a273868",
@@ -116,7 +456,7 @@
       "type": "code",
       "moduleId": 4,
       "lessonId": "M04-L08",
-      "statement": "### Задача 2. Подготовить тексты и собрать конвейер\n\nУсловие\n\nДобавьте функцию normalize_text, примените её к обоим наборам и создайте Pipeline из TF-IDF и LinearSVC. Важно: модель обучается только на train_df. Не подбирайте решение по правильным ответам test_df.\n\nТела функций normalize_text и build_model напишите самостоятельно по подсказкам в комментариях шаблона. Функции evaluate_model и route_request даны готовыми — они понадобятся в задачах 3–5.\n\nШаблон функций\n\n\n```\nimport re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score, f1_score, confusion_matrix\n\n\ndef normalize_text(text):\n    # 1. Приведите text к строке, переведите в нижний регистр\n    #    и уберите пробелы в начале и в конце.\n    # 2. Замените повторяющиеся пробельные символы одним пробелом (re.sub).\n    # 3. Верните обработанный текст.\n    pass\n\n\ndef build_model(train_df):\n    # 1. Создайте Pipeline из двух шагов:\n    #    (\"vectorizer\", TfidfVectorizer(ngram_range=(1, 2))) и\n    #    (\"classifier\", LinearSVC(random_state=42)).\n    # 2. Обучите его только на train_df[\"text\"] (признаки) и train_df[\"label\"] (метки).\n    # 3. Верните обученную модель.\n    pass\n\n\ndef evaluate_model(model, test_df):\n    predictions = model.predict(test_df[\"text\"])\n    accuracy = accuracy_score(test_df[\"label\"], predictions)\n    macro_f1 = f1_score(\n        test_df[\"label\"], predictions, average=\"macro\"\n    )\n    matrix = confusion_matrix(\n        test_df[\"label\"],\n        predictions,\n        labels=[\"доступ\", \"сеть\", \"оборудование\", \"ПО\"]\n    )\n    return predictions, accuracy, macro_f1, matrix\n\n\ndef route_request(model, text, review_threshold=0.35):\n    clean_text = normalize_text(text)\n    scores = model.decision_function([clean_text])[0]\n    order = np.argsort(scores)[::-1]\n    best_index = order[0]\n    second_index = order[1]\n    label = model.classes_[best_index]\n    margin = float(scores[best_index] - scores[second_index])\n\n    if margin >= review_threshold:\n        route_mode = \"автоматически\"\n    else:\n        route_mode = \"проверка специалистом\"\n\n    return {\n        \"label\": label,\n        \"margin\": round(margin, 3),\n        \"route_mode\": route_mode\n    }\n```\n\n10.2. Запишите код своих функций normalize_text и build_model. Объясните своими словами, почему Pipeline снижает риск несогласованной обработки обучающих и новых текстов.\n\n__________________________________________________________________",
+      "statement": "## Задача 2. Подготовить тексты и собрать конвейер\n\nУсловие\n\nДобавьте функцию normalize_text, примените её к обоим наборам и создайте Pipeline из TF-IDF и LinearSVC. Важно: модель обучается только на train_df. Не подбирайте решение по правильным ответам test_df.\n\nТела функций `normalize_text` и `build_model` напишите самостоятельно по подсказкам в комментариях шаблона. Функции `evaluate_model` и `route_request` даны готовыми — они понадобятся в задачах 3–5.\n\nШаблон функций\n\n```python\nimport re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score, f1_score, confusion_matrix\n\ndef normalize_text(text):\n    # 1. Приведите text к строке, переведите в нижний регистр\n    #    и уберите пробелы в начале и в конце.\n    # 2. Замените повторяющиеся пробельные символы одним пробелом (re.sub).\n    # 3. Верните обработанный текст.\n    pass\n\ndef build_model(train_df):\n    # 1. Создайте Pipeline из двух шагов:\n    #    (\"vectorizer\", TfidfVectorizer(ngram_range=(1, 2))) и\n    #    (\"classifier\", LinearSVC(random_state=42)).\n    # 2. Обучите его только на train_df[\"text\"] (признаки) и train_df[\"label\"] (метки).\n    # 3. Верните обученную модель.\n    pass\n\ndef evaluate_model(model, test_df):\n    predictions = model.predict(test_df[\"text\"])\n    accuracy = accuracy_score(test_df[\"label\"], predictions)\n    macro_f1 = f1_score(\n        test_df[\"label\"], predictions, average=\"macro\"\n    )\n    matrix = confusion_matrix(\n        test_df[\"label\"],\n        predictions,\n        labels=[\"доступ\", \"сеть\", \"оборудование\", \"ПО\"]\n    )\n    return predictions, accuracy, macro_f1, matrix\n\ndef route_request(model, text, review_threshold=0.35):\n    clean_text = normalize_text(text)\n    scores = model.decision_function([clean_text])[0]\n    order = np.argsort(scores)[::-1]\n    best_index = order[0]\n    second_index = order[1]\n    label = model.classes_[best_index]\n    margin = float(scores[best_index] - scores[second_index])\n\n    if margin >= review_threshold:\n        route_mode = \"автоматически\"\n    else:\n        route_mode = \"проверка специалистом\"\n\n    return {\n        \"label\": label,\n        \"margin\": round(margin, 3),\n        \"route_mode\": route_mode\n    }\n```\n\n10.2. Запишите код своих функций normalize_text и build_model. Объясните своими словами, почему Pipeline снижает риск несогласованной обработки обучающих и новых текстов.\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab79f6bb0a3edd62a273868",
@@ -129,17 +469,183 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L08",
+        "status": "published",
+        "kind": "code",
+        "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\nassert normalize_text('  VPN\\n  НЕ РАБОТАЕТ ') == 'vpn не работает'\nprint('Шаги:',list(model.named_steps))\nprint('Пример:',normalize_text('  VPN\\n  НЕ РАБОТАЕТ '))",
+        "answer": "",
+        "explanation": "normalize_text приводит к строке, нижнему регистру и одному пробелу. build_model обучает TF-IDF+LinearSVC только на train. Pipeline сохраняет один словарь и порядок признаков для обучения и новых текстов. Функции evaluate_model и route_request включены полностью, чтобы следующие шаги были воспроизводимы.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Шаги: ['vectorizer', 'classifier']\nПример: vpn не работает"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 43,
+            "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 57,
+            "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 58,
+            "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+          },
+          {
+            "line": 60,
+            "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 61,
+            "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+          },
+          {
+            "line": 62,
+            "text": "Выполняем `model.fit` с переданными аргументами."
+          },
+          {
+            "line": 63,
+            "text": "Возвращаем из функции `model`."
+          },
+          {
+            "line": 65,
+            "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 66,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+          },
+          {
+            "line": 67,
+            "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+          },
+          {
+            "line": 69,
+            "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 70,
+            "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+          },
+          {
+            "line": 71,
+            "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+          },
+          {
+            "line": 72,
+            "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+          },
+          {
+            "line": 73,
+            "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+          },
+          {
+            "line": 75,
+            "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+          },
+          {
+            "line": 76,
+            "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+          },
+          {
+            "line": 77,
+            "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+          },
+          {
+            "line": 78,
+            "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+          },
+          {
+            "line": 79,
+            "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+          },
+          {
+            "line": 80,
+            "text": "Проверяем инвариант `normalize_text('  VPN\\n  НЕ РАБОТАЕТ ') == 'vpn не работает'`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 81,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 82,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "conditions",
+          "logic",
+          "functions",
+          "tables",
+          "metrics",
+          "classification",
+          "features",
+          "target"
+        ],
+        "id": "T-6ab79f6bb0a3edd62a273868-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 08/Практика для студентов.md",
-        "sha256": "d531b3084181e404d31a05adb11717be297a314936a0e91cc897420309d1d356"
+        "elementId": "6ab79f6bb0a3edd62a273868",
+        "archive": "Снимки страниц.json",
+        "sha256": "e7f297d32e69369f51267dd1e6de1c437c9a208fb4084b07271f82cca7b31bb3"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "conditions",
+        "logic",
+        "functions",
+        "tables",
+        "metrics",
+        "classification",
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6ab79f6eb0a3edd62a273869",
@@ -148,7 +654,7 @@
       "type": "code",
       "moduleId": 4,
       "lessonId": "M04-L08",
-      "statement": "### Задача 3. Обучить прототип и получить прогнозы\n\nУсловие\n\nСоздайте модель функцией build_model, обучите её и выполните прогноз на test_df. Сформируйте таблицу с правильным классом и прогнозом. Выведите строки, в которых классы не совпали.\n\nЗапуск обучения и проверки\n\n\n```\ntrain_df = pd.DataFrame(train_records, columns=[\"text\", \"label\"])\ntest_df = pd.DataFrame(test_records, columns=[\"text\", \"label\"])\n\ntrain_df[\"text\"] = train_df[\"text\"].apply(normalize_text)\ntest_df[\"text\"] = test_df[\"text\"].apply(normalize_text)\n\nmodel = build_model(train_df)\npredictions, accuracy, macro_f1, matrix = evaluate_model(\n    model, test_df\n)\n\ntest_result = test_df.copy()\ntest_result[\"prediction\"] = predictions\nprint(test_result)\nprint(\"Accuracy:\", round(accuracy, 3))\nprint(\"Macro F1:\", round(macro_f1, 3))\nprint(\"Матрица ошибок:\")\nprint(matrix)\n```\n\nВывод ошибочных прогнозов\n\n\n```\nerrors = test_result[\n    test_result[\"label\"] != test_result[\"prediction\"]\n]\nprint(errors)\n```\n\n10.3. Запишите полученные accuracy и macro F1. Укажите количество ошибок.\n\n__________________________________________________________________",
+      "statement": "## Задача 3. Обучить прототип и получить прогнозы\n\nУсловие\n\nСоздайте модель функцией build_model, обучите её и выполните прогноз на test_df. Сформируйте таблицу с правильным классом и прогнозом. Выведите строки, в которых классы не совпали.\n\nЗапуск обучения и проверки\n\n```python\ntrain_df = pd.DataFrame(train_records, columns=[\"text\", \"label\"])\ntest_df = pd.DataFrame(test_records, columns=[\"text\", \"label\"])\n\ntrain_df[\"text\"] = train_df[\"text\"].apply(normalize_text)\ntest_df[\"text\"] = test_df[\"text\"].apply(normalize_text)\n\nmodel = build_model(train_df)\npredictions, accuracy, macro_f1, matrix = evaluate_model(\n    model, test_df\n)\n\ntest_result = test_df.copy()\ntest_result[\"prediction\"] = predictions\nprint(test_result)\nprint(\"Accuracy:\", round(accuracy, 3))\nprint(\"Macro F1:\", round(macro_f1, 3))\nprint(\"Матрица ошибок:\")\nprint(matrix)\n```\n\nВывод ошибочных прогнозов\n\n```text\nerrors = test_result[\n    test_result[\"label\"] != test_result[\"prediction\"]\n]\nprint(errors)\n```\n\n10.3. Запишите полученные accuracy и macro F1. Укажите количество ошибок.\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab79f6eb0a3edd62a273869",
@@ -161,17 +667,195 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L08",
+        "status": "published",
+        "kind": "code",
+        "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\npredictions,accuracy,macro_f1,matrix = evaluate_model(model,test_df)\nresult = test_df.assign(prediction=predictions)\nprint(result.to_string(index=False))\nprint('Accuracy:',round(accuracy,3),'Macro F1:',round(macro_f1,3))\nprint('Ошибок:',int((result['label']!=result['prediction']).sum()))\nprint('Ошибочные строки:')\nprint(result[result['label']!=result['prediction']].to_string(index=False))",
+        "answer": "",
+        "explanation": "Метки test используются только после predict для оценки. Вывод содержит все 12 прогнозов, две метрики и реальные ошибочные строки. Не подгоняем число ошибок под формулировку вопроса: оно проверяется фактическим сравнением строк.\n\nAccuracy10/12≈0.833, macroF1≈0.831, ошибок 2.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "                                            text        label   prediction\nпользователь забыл пароль от рабочего компьютера       доступ       доступ\n   после отпуска пропал доступ к рабочей системе       доступ       доступ\n      нужно изменить права доступа к общей папке       доступ           ПО\n      сетевой кабель подключен, но интернета нет         сеть         сеть\n           не удается подключиться к точке wi-fi         сеть         сеть\n    vpn соединение разрывается каждые пять минут         сеть         сеть\n                       принтер зажевывает бумагу оборудование оборудование\n                           ноутбук не заряжается оборудование оборудование\n        требуется заменить неисправную гарнитуру оборудование       доступ\n                word сообщает об ошибке лицензии           ПО           ПО\n      программа зависает при формировании отчета           ПО           ПО\n  не удается установить корпоративное приложение           ПО           ПО\nAccuracy: 0.833 Macro F1: 0.831\nОшибок: 2\nОшибочные строки:\n                                      text        label prediction\nнужно изменить права доступа к общей папке       доступ         ПО\n  требуется заменить неисправную гарнитуру оборудование     доступ"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 43,
+            "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 57,
+            "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 58,
+            "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+          },
+          {
+            "line": 60,
+            "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 61,
+            "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+          },
+          {
+            "line": 62,
+            "text": "Выполняем `model.fit` с переданными аргументами."
+          },
+          {
+            "line": 63,
+            "text": "Возвращаем из функции `model`."
+          },
+          {
+            "line": 65,
+            "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 66,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+          },
+          {
+            "line": 67,
+            "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+          },
+          {
+            "line": 69,
+            "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 70,
+            "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+          },
+          {
+            "line": 71,
+            "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+          },
+          {
+            "line": 72,
+            "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+          },
+          {
+            "line": 73,
+            "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+          },
+          {
+            "line": 75,
+            "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+          },
+          {
+            "line": 76,
+            "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+          },
+          {
+            "line": 77,
+            "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+          },
+          {
+            "line": 78,
+            "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+          },
+          {
+            "line": 79,
+            "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+          },
+          {
+            "line": 80,
+            "text": "Вычисляем `evaluate_model(model, test_df)` и сохраняем результат в `(predictions, accuracy, macro_f1, matrix)`."
+          },
+          {
+            "line": 81,
+            "text": "Вычисляем `test_df.assign(prediction=predictions)` и сохраняем результат в `result`."
+          },
+          {
+            "line": 82,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 83,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 84,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 85,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 86,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "conditions",
+          "logic",
+          "functions",
+          "tables",
+          "metrics",
+          "classification"
+        ],
+        "id": "T-6ab79f6eb0a3edd62a273869-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 08/Практика для студентов.md",
-        "sha256": "d531b3084181e404d31a05adb11717be297a314936a0e91cc897420309d1d356"
+        "elementId": "6ab79f6eb0a3edd62a273869",
+        "archive": "Снимки страниц.json",
+        "sha256": "6862e429a7784af48849121c39bb18a167d1ae06997170019b4f9c150206bef8"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "conditions",
+        "logic",
+        "functions",
+        "tables",
+        "metrics",
+        "classification"
+      ]
     },
     {
       "id": "T-6ab79f72b0a3edd62a27386a",
@@ -180,7 +864,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L08",
-      "statement": "1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадача 4. Проанализировать матрицу ошибок\n\nУсловие\n\nМатрица строится в порядке классов «доступ», «сеть», «оборудование», «ПО». Строка показывает истинный класс, столбец — прогноз. Найдите, какие два тестовых обращения классифицированы неверно. Объясните вероятную причину: недостаток похожих примеров, неоднозначные слова или слишком маленький набор.\n\n10.4. Запишите матрицу ошибок и два кратких вывода по ней.\n\n__________________________________________________________________",
+      "statement": "## Задача 4. Проанализировать матрицу ошибок\n\nУсловие\n\nМатрица строится в порядке классов «доступ», «сеть», «оборудование», «ПО». Строка показывает истинный класс, столбец — прогноз. Найдите, какие два тестовых обращения классифицированы неверно. Объясните вероятную причину: недостаток похожих примеров, неоднозначные слова или слишком маленький набор.\n\n10.4. Запишите матрицу ошибок и два кратких вывода по ней.\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab79f72b0a3edd62a27386a",
@@ -193,17 +877,187 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L08",
+        "status": "published",
+        "kind": "code",
+        "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\npredictions,accuracy,macro_f1,matrix = evaluate_model(model,test_df)\nresult = test_df.assign(prediction=predictions)\nprint('Порядок: доступ,сеть,оборудование,ПО')\nprint(matrix)\nprint(result[result['label']!=result['prediction']].to_string(index=False))",
+        "answer": "",
+        "explanation": "Строки матрицы — истинные классы, столбцы — прогнозы в указанном порядке. Непривычные слова вроде«гарнитура» или«лицензия» могут отсутствовать среди 32 обучающих сообщений; это гипотеза о нехватке покрытия, а не доказанная единственная причина ошибки. Конкретные тексты и направления ошибок приведены в результате запуска.\n\n«Нужно изменить права доступа к общей папке»: доступ→ПО. «Требуется заменить неисправную гарнитуру»: оборудование→доступ. Для покрытия этих формулировок нужны новые обучающие примеры, без копирования теста.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Порядок: доступ,сеть,оборудование,ПО\n[[2 0 0 1]\n [0 3 0 0]\n [1 0 2 0]\n [0 0 0 3]]\n                                      text        label prediction\nнужно изменить права доступа к общей папке       доступ         ПО\n  требуется заменить неисправную гарнитуру оборудование     доступ"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 43,
+            "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 57,
+            "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 58,
+            "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+          },
+          {
+            "line": 60,
+            "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 61,
+            "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+          },
+          {
+            "line": 62,
+            "text": "Выполняем `model.fit` с переданными аргументами."
+          },
+          {
+            "line": 63,
+            "text": "Возвращаем из функции `model`."
+          },
+          {
+            "line": 65,
+            "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 66,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+          },
+          {
+            "line": 67,
+            "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+          },
+          {
+            "line": 69,
+            "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 70,
+            "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+          },
+          {
+            "line": 71,
+            "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+          },
+          {
+            "line": 72,
+            "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+          },
+          {
+            "line": 73,
+            "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+          },
+          {
+            "line": 75,
+            "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+          },
+          {
+            "line": 76,
+            "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+          },
+          {
+            "line": 77,
+            "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+          },
+          {
+            "line": 78,
+            "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+          },
+          {
+            "line": 79,
+            "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+          },
+          {
+            "line": 80,
+            "text": "Вычисляем `evaluate_model(model, test_df)` и сохраняем результат в `(predictions, accuracy, macro_f1, matrix)`."
+          },
+          {
+            "line": 81,
+            "text": "Вычисляем `test_df.assign(prediction=predictions)` и сохраняем результат в `result`."
+          },
+          {
+            "line": 82,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 83,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 84,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "conditions",
+          "logic",
+          "functions",
+          "tables",
+          "metrics",
+          "classification"
+        ],
+        "id": "T-6ab79f72b0a3edd62a27386a-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 08/Практика для студентов.md",
-        "sha256": "d531b3084181e404d31a05adb11717be297a314936a0e91cc897420309d1d356"
+        "elementId": "6ab79f72b0a3edd62a27386a",
+        "archive": "Снимки страниц.json",
+        "sha256": "0e9349106565539bd4fe5be06c153b8c07dfe024a1530a2c506603debef5c055"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "conditions",
+        "logic",
+        "functions",
+        "tables",
+        "metrics",
+        "classification"
+      ]
     },
     {
       "id": "T-6ab79f74b0a3edd62a27386b",
@@ -212,7 +1066,7 @@
       "type": "code",
       "moduleId": 4,
       "lessonId": "M04-L08",
-      "statement": "### Задача 5. Добавить безопасную маршрутизацию\n\nУсловие\n\nИспользуйте функцию route_request . Она сравнивает два лучших значения функции решения. Если разница меньше 0,35, заявка должна быть передана специалисту — назначается режим ручной проверки manual\\_review (в выводе функции ему соответствует route_mode = «проверка специалистом»). Проверьте все 12 тестовых записей и четыре новых примера.\n\nПроверка прикладной функции\n\n\n```\nexamples = [\n    \"Не могу подключиться к VPN\",\n    \"Принтер печатает пустые страницы\",\n    \"Система просит пароль и не пускает\",\n    \"Программа не запускается\"\n]\n\nfor text in examples:\n    result = route_request(model, text)\n    print(text, \"->\", result)\n```\n\nПроверка режима автоматической и ручной маршрутизации\n\n\n```\nrouted = test_df.copy()\nrouted[\"prediction\"] = model.predict(routed[\"text\"])\n\nroutes = routed[\"text\"].apply(\n    lambda text: route_request(model, text)\n)\nrouted[\"margin\"] = routes.apply(lambda x: x[\"margin\"])\nrouted[\"route_mode\"] = routes.apply(lambda x: x[\"route_mode\"])\nprint(routed)\n```\n\n10.5. Сколько тестовых заявок модель обработала автоматически? Сколько отправила специалисту? Были ли ошибки среди автоматически обработанных заявок? Какие из четырёх новых примеров получили режим manual_review?\n\n__________________________________________________________________",
+      "statement": "## Задача 5. Добавить безопасную маршрутизацию\n\nУсловие\n\nИспользуйте функцию `route_request`. Она сравнивает два лучших значения функции решения. Если разница меньше 0,35, заявка должна быть передана специалисту — назначается режим ручной проверки manual\\_review (в выводе функции ему соответствует `route_mode` = «проверка специалистом»). Проверьте все 12 тестовых записей и четыре новых примера.\n\nПроверка прикладной функции\n\n```python\nexamples = [\n    \"Не могу подключиться к VPN\",\n    \"Принтер печатает пустые страницы\",\n    \"Система просит пароль и не пускает\",\n    \"Программа не запускается\"\n]\n\nfor text in examples:\n    result = route_request(model, text)\n    print(text, \"->\", result)\n```\n\nПроверка режима автоматической и ручной маршрутизации\n\n```python\nrouted = test_df.copy()\nrouted[\"prediction\"] = model.predict(routed[\"text\"])\n\nroutes = routed[\"text\"].apply(\n    lambda text: route_request(model, text)\n)\nrouted[\"margin\"] = routes.apply(lambda x: x[\"margin\"])\nrouted[\"route_mode\"] = routes.apply(lambda x: x[\"route_mode\"])\nprint(routed)\n```\n\n10.5. Сколько тестовых заявок модель обработала автоматически? Сколько отправила специалисту? Были ли ошибки среди автоматически обработанных заявок? Какие из четырёх новых примеров получили режим manual_review?\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________\n\n__________________________________________________________________",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab79f74b0a3edd62a27386b",
@@ -225,56 +1079,227 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L08",
+        "status": "published",
+        "kind": "code",
+        "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\npredictions,accuracy,macro_f1,matrix = evaluate_model(model,test_df)\nresult = test_df.assign(prediction=predictions)\nautomatic = manual = auto_errors = 0\nfor row in test_df.itertuples():\n    result = route_request(model,row.text)\n    print(row.text,'→',result)\n    if result['route_mode']=='автоматически':\n        automatic += 1\n        auto_errors += result['label'] != row.label\n    else:\n        manual += 1\nprint('Автоматически:',automatic,'Специалисту:',manual,'Автоошибок:',auto_errors)\nfor text in ['Не могу подключиться к VPN','Принтер печатает пустые страницы','Система просит пароль и не пускает','Программа не запускается']:\n    print('Новый:',text,'→',route_request(model,text))",
+        "answer": "",
+        "explanation": "Разница двух лучших значений decision_function сравнивается с 0.35 до округления. Это margin, не вероятность и не процент уверенности. Код проверяет все 12 тестовых и 4 новых сообщения, считает автоматические ошибки отдельно. Ручная передача уменьшает автоматизацию, но может снизить риск ошибочного назначения; порог проверяется на отдельных данных.\n\nАвтоматически 8, специалисту 4; автоматических ошибок среди этих 8 нет. Из четырёх новых примеров только VPN передан специалисту(margin≈0.055). Это не вероятность и не гарантия будущего качества.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "пользователь забыл пароль от рабочего компьютера → {'label': 'доступ', 'margin': 0.415, 'route_mode': 'автоматически'}\nпосле отпуска пропал доступ к рабочей системе → {'label': 'доступ', 'margin': 0.254, 'route_mode': 'проверка специалистом'}\nнужно изменить права доступа к общей папке → {'label': 'ПО', 'margin': 0.069, 'route_mode': 'проверка специалистом'}\nсетевой кабель подключен, но интернета нет → {'label': 'сеть', 'margin': 0.424, 'route_mode': 'автоматически'}\nне удается подключиться к точке wi-fi → {'label': 'сеть', 'margin': 0.715, 'route_mode': 'автоматически'}\nvpn соединение разрывается каждые пять минут → {'label': 'сеть', 'margin': 0.642, 'route_mode': 'автоматически'}\nпринтер зажевывает бумагу → {'label': 'оборудование', 'margin': 0.492, 'route_mode': 'автоматически'}\nноутбук не заряжается → {'label': 'оборудование', 'margin': 0.723, 'route_mode': 'автоматически'}\nтребуется заменить неисправную гарнитуру → {'label': 'доступ', 'margin': 0.333, 'route_mode': 'проверка специалистом'}\nword сообщает об ошибке лицензии → {'label': 'ПО', 'margin': 0.001, 'route_mode': 'проверка специалистом'}\nпрограмма зависает при формировании отчета → {'label': 'ПО', 'margin': 0.768, 'route_mode': 'автоматически'}\nне удается установить корпоративное приложение → {'label': 'ПО', 'margin': 0.549, 'route_mode': 'автоматически'}\nАвтоматически: 8 Специалисту: 4 Автоошибок: 0\nНовый: Не могу подключиться к VPN → {'label': 'доступ', 'margin': 0.055, 'route_mode': 'проверка специалистом'}\nНовый: Принтер печатает пустые страницы → {'label': 'оборудование', 'margin': 0.711, 'route_mode': 'автоматически'}\nНовый: Система просит пароль и не пускает → {'label': 'доступ', 'margin': 0.381, 'route_mode': 'автоматически'}\nНовый: Программа не запускается → {'label': 'ПО', 'margin': 0.738, 'route_mode': 'автоматически'}"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 3,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 4,
+            "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 5,
+            "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 6,
+            "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 7,
+            "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 43,
+            "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 57,
+            "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 58,
+            "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+          },
+          {
+            "line": 60,
+            "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 61,
+            "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+          },
+          {
+            "line": 62,
+            "text": "Выполняем `model.fit` с переданными аргументами."
+          },
+          {
+            "line": 63,
+            "text": "Возвращаем из функции `model`."
+          },
+          {
+            "line": 65,
+            "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 66,
+            "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+          },
+          {
+            "line": 67,
+            "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+          },
+          {
+            "line": 69,
+            "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 70,
+            "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+          },
+          {
+            "line": 71,
+            "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+          },
+          {
+            "line": 72,
+            "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+          },
+          {
+            "line": 73,
+            "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+          },
+          {
+            "line": 75,
+            "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+          },
+          {
+            "line": 76,
+            "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+          },
+          {
+            "line": 77,
+            "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+          },
+          {
+            "line": 78,
+            "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+          },
+          {
+            "line": 79,
+            "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+          },
+          {
+            "line": 80,
+            "text": "Вычисляем `evaluate_model(model, test_df)` и сохраняем результат в `(predictions, accuracy, macro_f1, matrix)`."
+          },
+          {
+            "line": 81,
+            "text": "Вычисляем `test_df.assign(prediction=predictions)` и сохраняем результат в `result`."
+          },
+          {
+            "line": 82,
+            "text": "Вычисляем `0` и сохраняем результат в `automatic, manual, auto_errors`."
+          },
+          {
+            "line": 83,
+            "text": "Перебираем `test_df.itertuples()`; очередное значение доступно через `row`."
+          },
+          {
+            "line": 84,
+            "text": "Вычисляем `route_request(model, row.text)` и сохраняем результат в `result`."
+          },
+          {
+            "line": 85,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 86,
+            "text": "Проверяем условие `result['route_mode'] == 'автоматически'`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 87,
+            "text": "Обновляем `automatic` операцией `+=` с `1`; прежнее значение участвует в вычислении."
+          },
+          {
+            "line": 88,
+            "text": "Обновляем `auto_errors` операцией `+=` с `result['label'] != row.label`; прежнее значение участвует в вычислении."
+          },
+          {
+            "line": 90,
+            "text": "Обновляем `manual` операцией `+=` с `1`; прежнее значение участвует в вычислении."
+          },
+          {
+            "line": 91,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 92,
+            "text": "Перебираем `['Не могу подключиться к VPN', 'Принтер печатает пустые страницы', 'Система просит пароль и не пускает', 'Программа не запускается']`; очередное значение доступно через `text`."
+          },
+          {
+            "line": 93,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions",
+          "tables",
+          "metrics",
+          "classification"
+        ],
+        "id": "T-6ab79f74b0a3edd62a27386b-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 08/Практика для студентов.md",
-        "sha256": "d531b3084181e404d31a05adb11717be297a314936a0e91cc897420309d1d356"
+        "elementId": "6ab79f74b0a3edd62a27386b",
+        "archive": "Снимки страниц.json",
+        "sha256": "e9c4a31e41478794059b15ceccd94d3581831e9a7d39d938038aef0df6f32e54"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
-    },
-    {
-      "id": "T-6ab7a0bbb0a3edd62a27386e",
-      "number": 8,
-      "title": "Дополнительные задания",
-      "type": "free_response",
-      "moduleId": 4,
-      "lessonId": "M04-L08",
-      "statement": "Условие\n\nДополнительные задания изменяют отдельные части прототипа. Чтобы сравнение оставалось корректным, сохраняйте неизменными проверочный набор и способ расчёта метрик, если в условии не указано иное.\n\nЗадание 1\n\nДобавьте класс «прочее» и не менее шести размеченных примеров. Объясните, почему слишком широкий класс может ухудшить интерпретацию.\n\nПроверьте, объединяют ли добавленные примеры понятное направление или лишь не подходят к четырём исходным классам. Если внутри класса нет общей закономерности, модель может связывать с ним случайные и плохо интерпретируемые признаки.\n\nЗадание 2\n\nСравните word TF-IDF с символьными n-граммами analyzer=\"char_wb\", ngram_range=(3, 5) . Используйте тот же проверочный набор и не выбирайте вариант только по одному удачному запуску.\n\nЗапишите для обоих вариантов одинаковый набор показателей: accuracy, macro F1 и характер ошибок. Символьные n-граммы могут учитывать части слов и варианты написания, но вывод о преимуществе должен опираться на результаты сравнения.\n\nЗадание 3\n\nДобавьте поле приоритета как отдельное правило после классификации: слово «срочно» не должно менять направление заявки, но может повысить приоритет ручного рассмотрения.\n\nРазделите два результата явно: класс отвечает за направление обработки, а приоритет — за порядок рассмотрения. Это не позволит одному слову подменить решение другой задачи.",
-      "origin": "author",
-      "ismartLink": {
-        "id": "6ab7a0bbb0a3edd62a27386e",
-        "label": "Задание №6",
-        "kind": "Свободный ответ (учитель)",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/904d6425ecb902ea77d5892d/element/6ab7a0bbb0a3edd62a27386e",
-        "status": "unverified",
-        "unitId": "904d6425ecb902ea77d5892d",
-        "elementId": "6ab7a0bbb0a3edd62a27386e"
       },
-      "files": [],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 4/Занятие 08/Практика для студентов.md",
-        "sha256": "d531b3084181e404d31a05adb11717be297a314936a0e91cc897420309d1d356"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions",
+        "tables",
+        "metrics",
+        "classification"
+      ]
     }
   ],
-  "lecture": "# Создание первого прототипа прикладного ИИ-решения\n\n### СЛАЙД 01. Создание первого прототипа прикладного ИИ-решения\n\nВ этом занятии рассматривается тема «Создание первого прототипа прикладного ИИ-решения». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. 3. Что понадобится\n\nкомпьютер с Python 3 и средой Jupyter Notebook, Google Colab или другой учебной IDE;\n\nбиблиотеки pandas, numpy и scikit-learn;\n\nэтот документ: учебные данные и код включены в приложение;\n\nпапка для сохранения файла прототипа и отчёта.\n\nПеред началом работы рекомендуется убедиться, что выбранная среда запускает простую ячейку Python и позволяет импортировать перечисленные библиотеки. Такая предварительная проверка помогает отделить проблемы настройки среды от ошибок в коде модели.\n\nУстановка библиотек\n\nВ локальной среде выполните команду: pip install pandas numpy scikit-learn. В Google Colab эти библиотеки обычно уже доступны. Устанавливать дополнительные генеративные модели для занятия не требуется.\n\nЕсли после установки импорт не выполняется, проверьте, что команда установки и ноутбук используют одно и то же окружение Python. После установки библиотек иногда требуется перезапустить ядро среды.\n\nПравило работы с данными\n\nИспользуйте только синтетические примеры из документа. Не переносите в прототип реальные ФИО, телефоны, адреса, логины, тексты служебных заявок и иную конфиденциальную информацию.\n\nДаже единичный реальный пример может содержать сведения, которые нельзя сохранять в учебном ноутбуке или передавать через сторонний сервис. Замена имени не всегда делает текст безопасным: в нём могут остаться адрес, должность, номер обращения или другие косвенные идентификаторы.\n\n### СЛАЙД 03. 6.1. Что считается прототипом\n\nПрототип — это ограниченная версия решения, которая позволяет проверить главную гипотезу. Для нашего кейса гипотеза звучит так: «По короткому тексту заявки можно с приемлемой точностью определить направление обработки, а неоднозначные случаи передавать специалисту». Прототип считается завершённым, если он принимает текст, выдаёт класс, проверяется на отложенных примерах и показывает понятный режим маршрутизации.\n\nОграниченность прототипа означает, что он решает только заявленную задачу. В данном случае модель определяет направление обработки, но не устанавливает причину неисправности, не выбирает конкретного исполнителя и не закрывает заявку. Такое разделение не позволяет приписывать модели функции, которые не проверялись на занятии.\n\nПроверка гипотезы должна завершаться выводом, основанным на наблюдаемых результатах: выполнены ли критерии приемки, какие ошибки обнаружены и в каких случаях автоматический прогноз нельзя использовать без участия специалиста.\n\nОбратите внимание\n\nФраза «модель обучилась без ошибок» описывает только технический запуск. Она не подтверждает качество классификации и не заменяет проверку на независимых данных.\n\n### СЛАЙД 04. 6.2. Из каких частей состоит текстовый классификатор · таблица 1/3\n\nСначала текст нормализуется: переводится в единый регистр, удаляются лишние пробелы. Затем векторизатор превращает слова и сочетания слов в числовые признаки. После этого классификатор находит закономерности между признаками и метками классов. При проверке модель получает тексты, которых не использовала при обучении, и формирует прогнозы.\n\nТакую последовательность удобно оформлять как единый конвейер Pipeline. Тогда преобразование текста и классификация выполняются в установленном порядке, а для нового текста применяются те же настройки векторизатора, которые были получены на обучающей части.\n\nTF-IDF придаёт больший вес словам и сочетаниям, которые помогают различать документы, и меньший вес словам, часто встречающимся во многих текстах. Например, признаки «забыл пароль» могут быть полезны для класса «доступ», а «VPN разрывается» — для класса «сеть». При этом модель работает с числовыми признаками, а не понимает смысл заявки так, как его понимает специалист.\n\nСравним данные в таблице.\nКомпонент Роль в прототипе Текст заявки Входные данные пользователя. Метка класса Правильное направление обработки, заданное в учебном наборе. TF-IDF Преобразует слова и сочетания слов в числовые признаки. LinearSVC Строит границы между классами по текстовым признакам. Проверочный набор Показывает работу на ранее не использованных примерах. Порог ручной проверки Не позволяет автоматически маршрутизировать сомнительный результат.\n\nМетка класса используется как правильный ответ только при обучении и оценивании. При обработке новой заявки правильная метка заранее неизвестна: модель получает текст и должна сформировать прогноз на основе ранее найденных закономерностей.\n\nЧастая ошибка — сначала настроить векторизатор на всех данных, а затем разделить признаки на обучение и проверку. В этом случае информация о проверочных текстах косвенно участвует в подготовке признаков. Чтобы избежать такой утечки данных, Pipeline следует обучать только на обучающей части.\n\n### СЛАЙД 05. 6.2. Из каких частей состоит текстовый классификатор · таблица 2/3\n\nПосмотрите на продолжение таблицы. TF-IDF Преобразует слова и сочетания слов в числовые признаки. LinearSVC Строит границы между классами по текстовым признакам.\n\n### СЛАЙД 06. 6.2. Из каких частей состоит текстовый классификатор · таблица 3/3\n\nПосмотрите на продолжение таблицы. Проверочный набор Показывает работу на ранее не использованных примерах. Порог ручной проверки Не позволяет автоматически маршрутизировать сомнительный результат.\n\n### СЛАЙД 07. 6.3. Как будем проверять качество\n\nAccuracy показывает долю всех правильных прогнозов. Macro F1 сначала рассчитывает F1 для каждого класса, а затем усредняет результаты, поэтому помогает заметить, что один из классов распознаётся хуже других. Матрица ошибок показывает, какие истинные классы модель перепутала с какими прогнозами. Для учебного прототипа используются заранее определённые критерии приемки: accuracy не ниже 0,75; в каждом классе есть хотя бы один правильный прогноз; сомнительные случаи можно отправить на ручную проверку.\n\nНапример, если из 12 проверочных заявок модель правильно классифицировала 9, то accuracy равна 9 / 12 = 0,75. Однако этого числа недостаточно для полного вывода: девять правильных ответов могут быть распределены между классами неравномерно.\n\nF1 объединяет precision и recall одного класса. Precision показывает, какая доля прогнозов данного класса оказалась правильной, а recall — какая доля реальных объектов этого класса была найдена. Macro F1 придаёт каждому классу одинаковый вес независимо от количества его примеров.\n\nВ матрице ошибок строки обычно соответствуют истинным классам, а столбцы — прогнозам модели, но конкретный порядок зависит от параметров функции построения. Поэтому названия классов необходимо указывать и сохранять в одном порядке: иначе правильные числа можно неверно интерпретировать.\n\nВажно\n\nВысокая метрика на маленьком учебном наборе не доказывает готовность решения к эксплуатации. Для реального сервиса потребуются больше данных, проверка на новых периодах, контроль смещения классов, журналирование и ответственность специалиста.\n\nКритерий 0,75 относится только к данному учебному тесту. Его нельзя автоматически переносить на другой набор данных или использовать как универсальную границу качества для производственной системы.\n\nМини-проверка. Если общая accuracy соответствует критерию, но для одного класса нет ни одного правильного прогноза, прототип не проходит заданные критерии приемки. В отчёте необходимо зафиксировать оба результата, а не только итоговую accuracy.\n\n### СЛАЙД 08. 7. Постановка прикладного кейса · таблица 1/4\n\nДо выбора алгоритма необходимо определить границы задачи. Это позволяет понять, что именно считается входом и результатом, кто использует прогноз и какое последствие может иметь ошибка.\n\nСравним данные в таблице.\nЭлемент постановки Описание Пользователь Оператор или специалист первой линии технической поддержки. Проблема Заявки поступают в общий поток и требуют первичной маршрутизации. Вход Короткий текст заявки на русском языке. Выход Один из классов: доступ, сеть, оборудование, ПО. Ограничение Модель не закрывает заявку и не назначает исполнителя без правил организации. Риск ошибки Неверное направление увеличит время решения; сомнительный результат нужно проверить вручную. Критерий приемки Accuracy не ниже 0,75 на учебном тесте и отсутствие автоматической обработки результатов с малым запасом решения.\n\nНекоторые тексты могут содержать признаки нескольких направлений. Например, сообщение о том, что программа не открывается из-за отсутствия доступа, затрагивает и ПО, и доступ. Если правила разметки не позволяют однозначно выбрать класс, такую заявку безопаснее передать специалисту, а неоднозначность отметить при анализе ошибок.\n\nКритерий приемки следует определить до просмотра результата модели. Если изменять порог или требуемую метрику после получения прогнозов только ради успешного прохождения проверки, оценка перестанет быть объективной.\n\n### СЛАЙД 09. 7. Постановка прикладного кейса · таблица 2/4\n\nПосмотрите на продолжение таблицы. Вход Короткий текст заявки на русском языке. Выход Один из классов: доступ, сеть, оборудование, ПО.\n\n### СЛАЙД 10. 7. Постановка прикладного кейса · таблица 3/4\n\nПосмотрите на продолжение таблицы. Ограничение Модель не закрывает заявку и не назначает исполнителя без правил организации. Риск ошибки Неверное направление увеличит время решения; сомнительный результат нужно проверить вручную.\n\n### СЛАЙД 11. 7. Постановка прикладного кейса · таблица 4/4\n\nПосмотрите на продолжение таблицы. Критерий приемки Accuracy не ниже 0,75 на учебном тесте и отсутствие автоматической обработки результатов с малым запасом решения.\n\n### СЛАЙД 12. 8. План работы на 90 минут · таблица 1/3\n\nЭтапы расположены в зависимости друг от друга: оценивать качество можно только после проверки данных и обучения модели, а правило ручной маршрутизации — после получения оценок уверенности или запаса решения. Если на раннем этапе обнаружена ошибка в данных, её следует исправить до перехода к следующим шагам.\n\nСравним данные в таблице.\nЭтап Время Результат Актуализация и постановка задачи 10 мин Понята цель и критерии приемки. Знакомство с данными 10 мин Проверены столбцы, классы и баланс. Сборка базовой модели 25 мин Обучен текстовый классификатор. Проверка качества 20 мин Рассчитаны метрики и разобраны ошибки. Прикладная функция и ручная проверка 15 мин Создан безопасный режим маршрутизации. Отчёт, самопроверка, итог 10 мин Зафиксирован результат прототипа.\n\nПосле каждого этапа полезно сохранять короткий проверяемый результат: количество записей, список классов, значения метрик или перечень ошибочных прогнозов. Это упрощает поиск причины, если последующая ячейка выдаст неожиданный результат.\n\n### СЛАЙД 13. 8. План работы на 90 минут · таблица 2/3\n\nПосмотрите на продолжение таблицы. Сборка базовой модели 25 мин Обучен текстовый классификатор. Проверка качества 20 мин Рассчитаны метрики и разобраны ошибки.\n\n### СЛАЙД 14. 8. План работы на 90 минут · таблица 3/3\n\nПосмотрите на продолжение таблицы. Прикладная функция и ручная проверка 15 мин Создан безопасный режим маршрутизации. Отчёт, самопроверка, итог 10 мин Зафиксирован результат прототипа.\n\n### СЛАЙД 15. 10. Основные практические задания\n\nПорядок выполнения\n\nВыполняйте задания по порядку. Задача 1 создаёт ситуацию успеха и проверяет структуру данных. Следующие задачи последовательно добавляют модель, оценивание и безопасный режим использования.\n\nНе переходите к обучению, если количество записей, названия столбцов или метки классов отличаются от ожидаемых. Ошибка структуры данных может не вызвать исключение, но привести к неверной оценке всего прототипа.\n\nПри повторном запуске ноутбука выполняйте ячейки сверху вниз. Если запускать их в случайном порядке, в памяти могут остаться старые переменные или ранее обученная версия модели, из-за чего результат будет трудно воспроизвести.\n\nДля каждого этапа фиксируйте не только факт выполнения, но и наблюдаемый результат: размер набора, распределение классов, значения метрик, тексты ошибочных прогнозов и решение о ручной проверке.\n\n### СЛАЙД 16. 11. Критерии приемки прототипа · таблица 1/3\n\nКритерии приемки превращают общее впечатление от работы модели в набор проверяемых условий. Прототип принимается не по одному удачному примеру, а по совокупности требований к данным, коду, качеству и безопасному применению.\n\nСравним данные в таблице.\nКритерий Условие Ваш результат Целостность данных 32 обучающие и 12 проверочных записей, нет пропусков и полных дубликатов. Работоспособность Код выполняется без ошибок, модель выдаёт один из четырёх допустимых классов. Качество Accuracy не ниже 0,75; macro F1 рассчитан и записан. Анализ ошибок Найдены неверные прогнозы и предложено объяснение. Безопасность процесса Результаты с margin ниже 0,35 передаются специалисту. Ограничения В отчёте указано, почему прототип нельзя сразу внедрять в реальную службу.\n\nВ столбце «Ваш результат» записывайте конкретное подтверждение: число записей, значение метрики, количество ошибок или результат проверки условия. Ответы «выполнено» и «всё работает» без чисел и наблюдений недостаточны для воспроизводимого отчёта.\n\nMargin отражает запас между наиболее предпочтительным и ближайшим альтернативным решением модели. В рамках данного прототипа значение ниже 0,35 считается основанием для ручной проверки. Низкий margin не доказывает, что прогноз ошибочен, но показывает, что автоматическая маршрутизация недостаточно надёжна по принятому правилу.\n\nВажно\n\nПорог 0,35 является правилом данного учебного прототипа. Для реального процесса его необходимо проверять на репрезентативных данных с учётом стоимости ошибочной маршрутизации и нагрузки на специалистов.\n\n### СЛАЙД 17. 11. Критерии приемки прототипа · таблица 2/3\n\nПосмотрите на продолжение таблицы. Качество Accuracy не ниже 0,75; macro F1 рассчитан и записан.  Анализ ошибок Найдены неверные прогнозы и предложено объяснение. \n\n### СЛАЙД 18. 11. Критерии приемки прототипа · таблица 3/3\n\nПосмотрите на продолжение таблицы. Безопасность процесса Результаты с margin ниже 0,35 передаются специалисту.  Ограничения В отчёте указано, почему прототип нельзя сразу внедрять в реальную службу. \n\n### СЛАЙД 19. 12. Шаблон отчёта о прототипе\n\nОтчёт должен позволять другому участнику понять, что было сделано, на каких данных получен результат и почему сделан итоговый вывод. Значения метрик следует записывать вместе с условиями их получения, а ограничения — связывать с возможными последствиями.\n\nСравним данные в таблице.\nРаздел Что необходимо записать 1. Название и пользователь Кому помогает решение и в каком процессе. 2. Вход и выход Какой текст поступает и какой результат выдаётся. 3. Данные Количество записей, классы, разделение на обучение и проверку. 4. Алгоритм Нормализация, TF-IDF, LinearSVC, порог ручной проверки. 5. Метрики Accuracy, macro F1, матрица ошибок. 6. Ошибки Какие заявки перепутаны и почему. 7. Критерии приемки Какие выполнены, какие требуют доработки. 8. Ограничения и риски Маленький учебный набор, возможное изменение языка заявок, необходимость контроля специалиста. 9. Следующий шаг Какие данные или функции нужно добавить во второй версии.\n\nПри объяснении ошибок отделяйте наблюдение от предположения. Наблюдение содержит истинный класс и прогноз модели; предположение описывает возможную причину, например отсутствие похожих словосочетаний в обучающем наборе или пересечение признаков двух классов.\n\nВывод по прототипу: ________________________________________________________________________________________________________________________________________________________________________________________________________________________________\n\nВ выводе укажите, прошёл ли прототип критерии приемки, какие результаты это подтверждают и какое ограничение остаётся наиболее существенным. Итог не должен сводиться только к значению accuracy.\n\n### СЛАЙД 20. 13. Критерии оценивания · таблица 1/4\n\nОценивание учитывает весь цикл разработки. Поэтому высокая метрика не компенсирует отсутствие проверки данных, анализа ошибок или правил ручного контроля.\n\nСравним данные в таблице.\nЭлемент работы Максимум Актуализация и анализ кода 2 балла Проверка и описание данных 3 балла Сборка и обучение модели 4 балла Расчёт и интерпретация метрик 4 балла Функция безопасной маршрутизации 4 балла Отчёт, ограничения и вывод 3 балла Итого 20 баллов\n\nРекомендуемая шкала: 17–20 баллов — высокий уровень; 13–16 — достаточный; 9–12 — базовый; менее 9 — требуется доработка обязательных элементов.\n\nПеред сдачей сопоставьте работу с каждым элементом оценивания отдельно. Например, вывод таблицы метрик подтверждает расчёт, но для баллов за интерпретацию необходимо также объяснить, что полученные значения означают для данного кейса.\n\n### СЛАЙД 21. 13. Критерии оценивания · таблица 2/4\n\nПосмотрите на продолжение таблицы. Сборка и обучение модели 4 балла Расчёт и интерпретация метрик 4 балла\n\n### СЛАЙД 22. 13. Критерии оценивания · таблица 3/4\n\nПосмотрите на продолжение таблицы. Функция безопасной маршрутизации 4 балла Отчёт, ограничения и вывод 3 балла\n\n### СЛАЙД 23. 13. Критерии оценивания · таблица 4/4\n\nПосмотрите на продолжение таблицы. Итого 20 баллов\n\n### СЛАЙД 24. 15. Чек-лист самопроверки\n\nЧек-лист следует проходить после запуска всех ячеек в чистом окружении. Такая проверка показывает, воспроизводится ли результат без переменных и объектов, оставшихся от предыдущих экспериментов.\n\nЯ не обучал модель на проверочных данных.\n\nЯ проверил количество записей, пропуски, дубликаты и баланс классов.\n\nМой код запускается последовательно сверху вниз.\n\nЯ сохранил порядок классов при построении матрицы ошибок.\n\nЯ не называю прототип полностью готовой системой.\n\nЯ указал, какие решения остаются за специалистом.\n\nВ отчёте есть числа, ошибки и следующий шаг, а не только общий текст.\n\nЕсли хотя бы один обязательный пункт не выполнен, укажите это как ограничение и исправьте соответствующий этап. Не следует заменять отсутствующий результат предположением о том, что проверка, вероятно, прошла бы успешно.\n\n### СЛАЙД 25. 16. Итог занятия\n\nНа занятии Вы прошли минимальный цикл создания прикладного ИИ-прототипа: от постановки задачи и подготовленного датасета до обученной модели, проверки на новых данных и безопасной передачи сомнительных случаев специалисту. Главный результат — не отдельная метрика, а рабочий и проверяемый фрагмент процесса, для которого понятны пользователь, вход, выход, критерии приемки и ограничения.\n\nНадёжность такого прототипа складывается из нескольких элементов. Качественные данные задают примеры правильных решений, модель находит в них закономерности, независимая проверка показывает ограничения, а ручной контроль снижает риск автоматической обработки неоднозначной заявки. Исключение любого из этих элементов уменьшает обоснованность результата.\n\n16.1. Какой элемент прототипа сильнее всего влияет на доверие пользователя: модель, данные, проверка качества или правила ручного контроля? Обоснуйте ответ.\n\n__________________________________________________________________\n\nВ обосновании приведите не только выбранный элемент, но и причинную связь: какую ошибку он помогает обнаружить или предотвратить и что произойдёт, если его исключить.\n\n### СЛАЙД 26. Приложение 1. Учебный набор данных (1/3)\n\nНабор синтетический: в нём нет реальных персональных данных или обращений конкретных сотрудников. Он предназначен только для учебного прототипа.\n\nОбучающая часть содержит по восемь примеров каждого из четырёх классов, а проверочная — по три. Такое распределение позволяет отдельно проверить каждый класс и не смешивать обучение с итоговой оценкой.\n\nСтолбец ID используется для однозначной ссылки на запись при анализе ошибок. Он не описывает содержание заявки и не должен использоваться как текстовый признак модели. Столбец «Часть» определяет назначение записи: обучение или независимая проверка.\n\n### СЛАЙД 27. Приложение 1. Учебный набор данных (2/3)\n\nСравним данные в таблице.\nID Текст заявки Класс Часть TR-01 Не могу войти в учетную запись после смены пароля доступ обучение TR-02 Система пишет неверный пароль при входе доступ обучение TR-03 Заблокирована учетная запись пользователя доступ обучение TR-04 Не приходит код подтверждения для авторизации доступ обучение TR-05 Нужно восстановить доступ к корпоративному порталу доступ обучение TR-06 Не открывается личный кабинет сотрудника доступ обучение TR-07 Требуется создать учетную запись новому сотруднику доступ обучение TR-08 Авторизация завершается ошибкой доступ обучение TR-09 На рабочем месте нет подключения к интернету сеть обучение TR-10 Wi-Fi постоянно отключается сеть обучение TR-11 Не работает VPN из дома сеть обучение TR-12 Очень медленно загружаются сайты сеть обучение TR-13 Пропадает сетевое соединение во время звонка сеть обучение TR-14 Компьютер не видит корпоративную сеть сеть обучение TR-15 Высокая задержка при подключении к серверу сеть обучение TR-16 Не открываются внутренние сайты по сети сеть обучение TR-17 Принтер не печатает документы оборудование обучение TR-18 Монитор не включается оборудование обучение TR-19 Клавиатура не реагирует на нажатия оборудование обучение TR-20 Ноутбук сильно перегревается оборудование обучение TR-21 Сканер не распознается компьютером оборудование обучение TR-22 Мышь работает с перебоями оборудование обучение TR-23 На экране появились полосы оборудование обучение TR-24 Не работает веб-камера оборудование обучение TR-25 Программа 1С закрывается с ошибкой ПО обучение TR-26 Не устанавливается обновление приложения ПО обучение TR-27 Excel зависает при открытии файла ПО обучение TR-28 Нужно установить офисный пакет ПО обучение TR-29 Антивирус блокирует рабочую программу ПО обучение TR-30 Приложение не запускается после обновления ПО обучение TR-31 В программе пропала кнопка сохранения ПО обучение TR-32 Не открывается PDF в рабочем приложении ПО обучение TE-01 Пользователь забыл пароль от рабочего компьютера доступ проверка TE-02 После отпуска пропал доступ к рабочей системе доступ проверка TE-03 Нужно изменить права доступа к общей папке доступ проверка TE-04 Сетевой кабель подключен, но интернета нет сеть проверка TE-05 Не удается подключиться к точке Wi-Fi сеть проверка TE-06 VPN соединение разрывается каждые пять минут сеть проверка TE-07 Принтер зажевывает бумагу оборудование проверка TE-08 Ноутбук не заряжается оборудование проверка TE-09 Требуется заменить неисправную гарнитуру оборудование проверка TE-10 Word сообщает об ошибке лицензии ПО проверка TE-11 Программа зависает при формировании отчета ПО проверка TE-12 Не удается установить корпоративное приложение ПО проверка\n\n### СЛАЙД 28. Приложение 1. Учебный набор данных (3/3)\n\nМини-проверка. До обучения подтвердите, что в обучающей части 32 записи, в проверочной — 12, а множество меток в обеих частях содержит четыре ожидаемых класса: доступ, сеть, оборудование и ПО.\n\n### СЛАЙД 29. Приложение 2. Код создания списков данных (1/2)\n\nКаждая запись представлена кортежем из двух элементов: текста заявки и правильной метки класса. При создании DataFrame этим позициям необходимо назначить соответствующие названия столбцов, например text и label.\n\nСписки train_records и test_records уже разделены по назначению. Не объединяйте их перед обучением: test_records должен оставаться независимым источником данных для итоговой проверки.\n\nПример на слайде:\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\nПример на слайде:\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\n\n### СЛАЙД 30. Приложение 2. Код создания списков данных (2/2)\n\nПосле создания таблиц проверьте их форму, названия столбцов и распределение label. Полезно также убедиться, что между обучающим и проверочным наборами нет полных совпадений пар «текст — метка».\n\n### СЛАЙД 31. Создание первого прототипа прикладного ИИ-решения\n\nНа предыдущих занятиях Вы готовили данные и выбирали подход к решению. Теперь эти решения нужно превратить в работающий фрагмент проекта. Прототип не обязан охватывать весь реальный процесс. Его задача — показать, что ключевая идея реализуема, входные данные можно обработать, результат можно проверить, а ограничения можно описать до внедрения.\n\nПрактическая реализация позволяет проверить предположения, которые могли казаться убедительными на этапе планирования. Например, после запуска прототипа может выясниться, что некоторых примеров недостаточно, формулировки заявок неоднозначны или выбранные признаки не помогают различать близкие категории. Поэтому прототип нужен не только для демонстрации результата, но и для раннего обнаружения таких проблем.\n\nВ этом практикуме Вы создадите классификатор заявок службы технической поддержки. Он будет относить короткое сообщение к одному из четырёх направлений: «доступ», «сеть», «оборудование» или «ПО». Например, сообщение «Не могу войти в учётную запись» должно быть отнесено к направлению «доступ», а сообщение «Компьютер не подключается к Wi-Fi» — к направлению «сеть».\n\nКлассификатор получает текст заявки на вход и возвращает одну из заранее заданных категорий. Категория в данном случае обозначает предполагаемое направление обработки, а не готовое решение проблемы. Сообщения пользователей могут содержать опечатки, лишние подробности или признаки сразу нескольких направлений, поэтому результат классификации необходимо оценивать на примерах, которые не использовались при настройке прототипа.\n\nТакой прототип может помогать первичной маршрутизации, но не должен самостоятельно закрывать заявки или принимать критические решения. Если сообщение неоднозначно или классификатор ошибся, заявку должен проверить специалист. В описании результата важно указать не только удачные примеры, но и ситуации, в которых модель может работать ненадёжно.\n\nОбратите внимание: работоспособность прототипа не означает готовность системы к внедрению. Для полноценного использования потребуются более разнообразные данные, проверка качества, обработка ошибок и понятный способ передачи спорных заявок человеку.\n\nПеред началом работы полезно сформулировать критерий проверки: для каждого тестового сообщения должна быть известна ожидаемая категория, которую затем можно сравнить с ответом классификатора. Это позволит оценивать прототип по результатам, а не только по тому, запускается ли программа без ошибок.\n\n### СЛАЙД 32. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 33. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Создание первого прототипа прикладного ИИ-решения\n\n### СЛАЙД 01. Создание первого прототипа прикладного ИИ-решения\n\nВ этом занятии рассматривается тема «Создание первого прототипа прикладного ИИ-решения». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. 3. Что понадобится\n\nкомпьютер с Python 3 и средой Jupyter Notebook, Google Colab или другой учебной IDE;\n\nбиблиотеки pandas, numpy и scikit-learn;\n\nэтот документ: учебные данные и код включены в приложение;\n\nпапка для сохранения файла прототипа и отчёта.\n\nПеред началом работы рекомендуется убедиться, что выбранная среда запускает простую ячейку Python и позволяет импортировать перечисленные библиотеки. Такая предварительная проверка помогает отделить проблемы настройки среды от ошибок в коде модели.\n\nУстановка библиотек\n\nВ локальной среде выполните команду: pip install pandas numpy scikit-learn. В Google Colab эти библиотеки обычно уже доступны. Устанавливать дополнительные генеративные модели для занятия не требуется.\n\nЕсли после установки импорт не выполняется, проверьте, что команда установки и ноутбук используют одно и то же окружение Python. После установки библиотек иногда требуется перезапустить ядро среды.\n\nПравило работы с данными\n\nИспользуйте только синтетические примеры из документа. Не переносите в прототип реальные ФИО, телефоны, адреса, логины, тексты служебных заявок и иную конфиденциальную информацию.\n\nДаже единичный реальный пример может содержать сведения, которые нельзя сохранять в учебном ноутбуке или передавать через сторонний сервис. Замена имени не всегда делает текст безопасным: в нём могут остаться адрес, должность, номер обращения или другие косвенные идентификаторы.\n\n### СЛАЙД 03. 6.1. Что считается прототипом\n\nПрототип — это ограниченная версия решения, которая позволяет проверить главную гипотезу. Для нашего кейса гипотеза звучит так: «По короткому тексту заявки можно с приемлемой точностью определить направление обработки, а неоднозначные случаи передавать специалисту». Прототип считается завершённым, если он принимает текст, выдаёт класс, проверяется на отложенных примерах и показывает понятный режим маршрутизации.\n\nОграниченность прототипа означает, что он решает только заявленную задачу. В данном случае модель определяет направление обработки, но не устанавливает причину неисправности, не выбирает конкретного исполнителя и не закрывает заявку. Такое разделение не позволяет приписывать модели функции, которые не проверялись на занятии.\n\nПроверка гипотезы должна завершаться выводом, основанным на наблюдаемых результатах: выполнены ли критерии приемки, какие ошибки обнаружены и в каких случаях автоматический прогноз нельзя использовать без участия специалиста.\n\nОбратите внимание\n\nФраза «модель обучилась без ошибок» описывает только технический запуск. Она не подтверждает качество классификации и не заменяет проверку на независимых данных.\n\n### СЛАЙД 04. 6.2. Из каких частей состоит текстовый классификатор · таблица 1/3\n\nСначала текст нормализуется: переводится в единый регистр, удаляются лишние пробелы. Затем векторизатор превращает слова и сочетания слов в числовые признаки. После этого классификатор находит закономерности между признаками и метками классов. При проверке модель получает тексты, которых не использовала при обучении, и формирует прогнозы.\n\nТакую последовательность удобно оформлять как единый конвейер Pipeline. Тогда преобразование текста и классификация выполняются в установленном порядке, а для нового текста применяются те же настройки векторизатора, которые были получены на обучающей части.\n\nTF-IDF придаёт больший вес словам и сочетаниям, которые помогают различать документы, и меньший вес словам, часто встречающимся во многих текстах. Например, признаки «забыл пароль» могут быть полезны для класса «доступ», а «VPN разрывается» — для класса «сеть». При этом модель работает с числовыми признаками, а не понимает смысл заявки так, как его понимает специалист.\n\nСравним данные в таблице.\nКомпонент Роль в прототипе Текст заявки Входные данные пользователя. Метка класса Правильное направление обработки, заданное в учебном наборе. TF-IDF Преобразует слова и сочетания слов в числовые признаки. LinearSVC Строит границы между классами по текстовым признакам. Проверочный набор Показывает работу на ранее не использованных примерах. Порог ручной проверки Не позволяет автоматически маршрутизировать сомнительный результат.\n\nМетка класса используется как правильный ответ только при обучении и оценивании. При обработке новой заявки правильная метка заранее неизвестна: модель получает текст и должна сформировать прогноз на основе ранее найденных закономерностей.\n\nЧастая ошибка — сначала настроить векторизатор на всех данных, а затем разделить признаки на обучение и проверку. В этом случае информация о проверочных текстах косвенно участвует в подготовке признаков. Чтобы избежать такой утечки данных, Pipeline следует обучать только на обучающей части.\n\n### СЛАЙД 05. 6.2. Из каких частей состоит текстовый классификатор · таблица 2/3\n\nПосмотрите на продолжение таблицы. TF-IDF Преобразует слова и сочетания слов в числовые признаки. LinearSVC Строит границы между классами по текстовым признакам.\n\n### СЛАЙД 06. 6.2. Из каких частей состоит текстовый классификатор · таблица 3/3\n\nПосмотрите на продолжение таблицы. Проверочный набор Показывает работу на ранее не использованных примерах. Порог ручной проверки Не позволяет автоматически маршрутизировать сомнительный результат.\n\n### СЛАЙД 07. 6.3. Как будем проверять качество\n\nAccuracy показывает долю всех правильных прогнозов. Macro F1 сначала рассчитывает F1 для каждого класса, а затем усредняет результаты, поэтому помогает заметить, что один из классов распознаётся хуже других. Матрица ошибок показывает, какие истинные классы модель перепутала с какими прогнозами. Для учебного прототипа используются заранее определённые критерии приемки: accuracy не ниже 0,75; в каждом классе есть хотя бы один правильный прогноз; сомнительные случаи можно отправить на ручную проверку.\n\nНапример, если из 12 проверочных заявок модель правильно классифицировала 9, то accuracy равна 9 / 12 = 0,75. Однако этого числа недостаточно для полного вывода: девять правильных ответов могут быть распределены между классами неравномерно.\n\nF1 объединяет precision и recall одного класса. Precision показывает, какая доля прогнозов данного класса оказалась правильной, а recall — какая доля реальных объектов этого класса была найдена. Macro F1 придаёт каждому классу одинаковый вес независимо от количества его примеров.\n\nВ матрице ошибок строки обычно соответствуют истинным классам, а столбцы — прогнозам модели, но конкретный порядок зависит от параметров функции построения. Поэтому названия классов необходимо указывать и сохранять в одном порядке: иначе правильные числа можно неверно интерпретировать.\n\nВажно\n\nВысокая метрика на маленьком учебном наборе не доказывает готовность решения к эксплуатации. Для реального сервиса потребуются больше данных, проверка на новых периодах, контроль смещения классов, журналирование и ответственность специалиста.\n\nКритерий 0,75 относится только к данному учебному тесту. Его нельзя автоматически переносить на другой набор данных или использовать как универсальную границу качества для производственной системы.\n\nМини-проверка. Если общая accuracy соответствует критерию, но для одного класса нет ни одного правильного прогноза, прототип не проходит заданные критерии приемки. В отчёте необходимо зафиксировать оба результата, а не только итоговую accuracy.\n\n### СЛАЙД 08. 7. Постановка прикладного кейса · таблица 1/4\n\nДо выбора алгоритма необходимо определить границы задачи. Это позволяет понять, что именно считается входом и результатом, кто использует прогноз и какое последствие может иметь ошибка.\n\nСравним данные в таблице.\nЭлемент постановки Описание Пользователь Оператор или специалист первой линии технической поддержки. Проблема Заявки поступают в общий поток и требуют первичной маршрутизации. Вход Короткий текст заявки на русском языке. Выход Один из классов: доступ, сеть, оборудование, ПО. Ограничение Модель не закрывает заявку и не назначает исполнителя без правил организации. Риск ошибки Неверное направление увеличит время решения; сомнительный результат нужно проверить вручную. Критерий приемки Accuracy не ниже 0,75 на учебном тесте и отсутствие автоматической обработки результатов с малым запасом решения.\n\nНекоторые тексты могут содержать признаки нескольких направлений. Например, сообщение о том, что программа не открывается из-за отсутствия доступа, затрагивает и ПО, и доступ. Если правила разметки не позволяют однозначно выбрать класс, такую заявку безопаснее передать специалисту, а неоднозначность отметить при анализе ошибок.\n\nКритерий приемки следует определить до просмотра результата модели. Если изменять порог или требуемую метрику после получения прогнозов только ради успешного прохождения проверки, оценка перестанет быть объективной.\n\n### СЛАЙД 09. 7. Постановка прикладного кейса · таблица 2/4\n\nПосмотрите на продолжение таблицы. Вход Короткий текст заявки на русском языке. Выход Один из классов: доступ, сеть, оборудование, ПО.\n\n### СЛАЙД 10. 7. Постановка прикладного кейса · таблица 3/4\n\nПосмотрите на продолжение таблицы. Ограничение Модель не закрывает заявку и не назначает исполнителя без правил организации. Риск ошибки Неверное направление увеличит время решения; сомнительный результат нужно проверить вручную.\n\n### СЛАЙД 11. 7. Постановка прикладного кейса · таблица 4/4\n\nПосмотрите на продолжение таблицы. Критерий приемки Accuracy не ниже 0,75 на учебном тесте и отсутствие автоматической обработки результатов с малым запасом решения.\n\n### СЛАЙД 12. 8. План работы на 90 минут · таблица 1/3\n\nЭтапы расположены в зависимости друг от друга: оценивать качество можно только после проверки данных и обучения модели, а правило ручной маршрутизации — после получения оценок уверенности или запаса решения. Если на раннем этапе обнаружена ошибка в данных, её следует исправить до перехода к следующим шагам.\n\nСравним данные в таблице.\nЭтап Время Результат Актуализация и постановка задачи 10 мин Понята цель и критерии приемки. Знакомство с данными 10 мин Проверены столбцы, классы и баланс. Сборка базовой модели 25 мин Обучен текстовый классификатор. Проверка качества 20 мин Рассчитаны метрики и разобраны ошибки. Прикладная функция и ручная проверка 15 мин Создан безопасный режим маршрутизации. Отчёт, самопроверка, итог 10 мин Зафиксирован результат прототипа.\n\nПосле каждого этапа полезно сохранять короткий проверяемый результат: количество записей, список классов, значения метрик или перечень ошибочных прогнозов. Это упрощает поиск причины, если последующая ячейка выдаст неожиданный результат.\n\n### СЛАЙД 13. 8. План работы на 90 минут · таблица 2/3\n\nПосмотрите на продолжение таблицы. Сборка базовой модели 25 мин Обучен текстовый классификатор. Проверка качества 20 мин Рассчитаны метрики и разобраны ошибки.\n\n### СЛАЙД 14. 8. План работы на 90 минут · таблица 3/3\n\nПосмотрите на продолжение таблицы. Прикладная функция и ручная проверка 15 мин Создан безопасный режим маршрутизации. Отчёт, самопроверка, итог 10 мин Зафиксирован результат прототипа.\n\n### СЛАЙД 15. 10. Основные практические задания\n\nПорядок выполнения\n\nВыполняйте задания по порядку. Задача 1 создаёт ситуацию успеха и проверяет структуру данных. Следующие задачи последовательно добавляют модель, оценивание и безопасный режим использования.\n\nНе переходите к обучению, если количество записей, названия столбцов или метки классов отличаются от ожидаемых. Ошибка структуры данных может не вызвать исключение, но привести к неверной оценке всего прототипа.\n\nПри повторном запуске ноутбука выполняйте ячейки сверху вниз. Если запускать их в случайном порядке, в памяти могут остаться старые переменные или ранее обученная версия модели, из-за чего результат будет трудно воспроизвести.\n\nДля каждого этапа фиксируйте не только факт выполнения, но и наблюдаемый результат: размер набора, распределение классов, значения метрик, тексты ошибочных прогнозов и решение о ручной проверке.\n\n### СЛАЙД 16. 11. Критерии приемки прототипа · таблица 1/3\n\nКритерии приемки превращают общее впечатление от работы модели в набор проверяемых условий. Прототип принимается не по одному удачному примеру, а по совокупности требований к данным, коду, качеству и безопасному применению.\n\nСравним данные в таблице.\nКритерий Условие Ваш результат Целостность данных 32 обучающие и 12 проверочных записей, нет пропусков и полных дубликатов. Работоспособность Код выполняется без ошибок, модель выдаёт один из четырёх допустимых классов. Качество Accuracy не ниже 0,75; macro F1 рассчитан и записан. Анализ ошибок Найдены неверные прогнозы и предложено объяснение. Безопасность процесса Результаты с margin ниже 0,35 передаются специалисту. Ограничения В отчёте указано, почему прототип нельзя сразу внедрять в реальную службу.\n\nВ столбце «Ваш результат» записывайте конкретное подтверждение: число записей, значение метрики, количество ошибок или результат проверки условия. Ответы «выполнено» и «всё работает» без чисел и наблюдений недостаточны для воспроизводимого отчёта.\n\nMargin отражает запас между наиболее предпочтительным и ближайшим альтернативным решением модели. В рамках данного прототипа значение ниже 0,35 считается основанием для ручной проверки. Низкий margin не доказывает, что прогноз ошибочен, но показывает, что автоматическая маршрутизация недостаточно надёжна по принятому правилу.\n\nВажно\n\nПорог 0,35 является правилом данного учебного прототипа. Для реального процесса его необходимо проверять на репрезентативных данных с учётом стоимости ошибочной маршрутизации и нагрузки на специалистов.\n\n### СЛАЙД 17. 11. Критерии приемки прототипа · таблица 2/3\n\nПосмотрите на продолжение таблицы. Качество Accuracy не ниже 0,75; macro F1 рассчитан и записан.  Анализ ошибок Найдены неверные прогнозы и предложено объяснение. \n\n### СЛАЙД 18. 11. Критерии приемки прототипа · таблица 3/3\n\nПосмотрите на продолжение таблицы. Безопасность процесса Результаты с margin ниже 0,35 передаются специалисту.  Ограничения В отчёте указано, почему прототип нельзя сразу внедрять в реальную службу. \n\n### СЛАЙД 19. 12. Шаблон отчёта о прототипе\n\nОтчёт должен позволять другому участнику понять, что было сделано, на каких данных получен результат и почему сделан итоговый вывод. Значения метрик следует записывать вместе с условиями их получения, а ограничения — связывать с возможными последствиями.\n\nСравним данные в таблице.\nРаздел Что необходимо записать 1. Название и пользователь Кому помогает решение и в каком процессе. 2. Вход и выход Какой текст поступает и какой результат выдаётся. 3. Данные Количество записей, классы, разделение на обучение и проверку. 4. Алгоритм Нормализация, TF-IDF, LinearSVC, порог ручной проверки. 5. Метрики Accuracy, macro F1, матрица ошибок. 6. Ошибки Какие заявки перепутаны и почему. 7. Критерии приемки Какие выполнены, какие требуют доработки. 8. Ограничения и риски Маленький учебный набор, возможное изменение языка заявок, необходимость контроля специалиста. 9. Следующий шаг Какие данные или функции нужно добавить во второй версии.\n\nПри объяснении ошибок отделяйте наблюдение от предположения. Наблюдение содержит истинный класс и прогноз модели; предположение описывает возможную причину, например отсутствие похожих словосочетаний в обучающем наборе или пересечение признаков двух классов.\n\nВывод по прототипу: ________________________________________________________________________________________________________________________________________________________________________________________________________________________________\n\nВ выводе укажите, прошёл ли прототип критерии приемки, какие результаты это подтверждают и какое ограничение остаётся наиболее существенным. Итог не должен сводиться только к значению accuracy.\n\n### СЛАЙД 20. 13. Критерии оценивания · таблица 1/4\n\nОценивание учитывает весь цикл разработки. Поэтому высокая метрика не компенсирует отсутствие проверки данных, анализа ошибок или правил ручного контроля.\n\nСравним данные в таблице.\nЭлемент работы Максимум Актуализация и анализ кода 2 балла Проверка и описание данных 3 балла Сборка и обучение модели 4 балла Расчёт и интерпретация метрик 4 балла Функция безопасной маршрутизации 4 балла Отчёт, ограничения и вывод 3 балла Итого 20 баллов\n\nРекомендуемая шкала: 17–20 баллов — высокий уровень; 13–16 — достаточный; 9–12 — базовый; менее 9 — требуется доработка обязательных элементов.\n\nПеред сдачей сопоставьте работу с каждым элементом оценивания отдельно. Например, вывод таблицы метрик подтверждает расчёт, но для баллов за интерпретацию необходимо также объяснить, что полученные значения означают для данного кейса.\n\n### СЛАЙД 21. 13. Критерии оценивания · таблица 2/4\n\nПосмотрите на продолжение таблицы. Сборка и обучение модели 4 балла Расчёт и интерпретация метрик 4 балла\n\n### СЛАЙД 22. 13. Критерии оценивания · таблица 3/4\n\nПосмотрите на продолжение таблицы. Функция безопасной маршрутизации 4 балла Отчёт, ограничения и вывод 3 балла\n\n### СЛАЙД 23. 13. Критерии оценивания · таблица 4/4\n\nПосмотрите на продолжение таблицы. Итого 20 баллов\n\n### СЛАЙД 24. 15. Чек-лист самопроверки\n\nЧек-лист следует проходить после запуска всех ячеек в чистом окружении. Такая проверка показывает, воспроизводится ли результат без переменных и объектов, оставшихся от предыдущих экспериментов.\n\nЯ не обучал модель на проверочных данных.\n\nЯ проверил количество записей, пропуски, дубликаты и баланс классов.\n\nМой код запускается последовательно сверху вниз.\n\nЯ сохранил порядок классов при построении матрицы ошибок.\n\nЯ не называю прототип полностью готовой системой.\n\nЯ указал, какие решения остаются за специалистом.\n\nВ отчёте есть числа, ошибки и следующий шаг, а не только общий текст.\n\nЕсли хотя бы один обязательный пункт не выполнен, укажите это как ограничение и исправьте соответствующий этап. Не следует заменять отсутствующий результат предположением о том, что проверка, вероятно, прошла бы успешно.\n\n### СЛАЙД 25. 16. Итог занятия\n\nНа занятии Вы прошли минимальный цикл создания прикладного ИИ-прототипа: от постановки задачи и подготовленного датасета до обученной модели, проверки на новых данных и безопасной передачи сомнительных случаев специалисту. Главный результат — не отдельная метрика, а рабочий и проверяемый фрагмент процесса, для которого понятны пользователь, вход, выход, критерии приемки и ограничения.\n\nНадёжность такого прототипа складывается из нескольких элементов. Качественные данные задают примеры правильных решений, модель находит в них закономерности, независимая проверка показывает ограничения, а ручной контроль снижает риск автоматической обработки неоднозначной заявки. Исключение любого из этих элементов уменьшает обоснованность результата.\n\n16.1. Какой элемент прототипа сильнее всего влияет на доверие пользователя: модель, данные, проверка качества или правила ручного контроля? Обоснуйте ответ.\n\n__________________________________________________________________\n\nВ обосновании приведите не только выбранный элемент, но и причинную связь: какую ошибку он помогает обнаружить или предотвратить и что произойдёт, если его исключить.\n\n### СЛАЙД 26. Приложение 1. Учебный набор данных (1/3)\n\nНабор синтетический: в нём нет реальных персональных данных или обращений конкретных сотрудников. Он предназначен только для учебного прототипа.\n\nОбучающая часть содержит по восемь примеров каждого из четырёх классов, а проверочная — по три. Такое распределение позволяет отдельно проверить каждый класс и не смешивать обучение с итоговой оценкой.\n\nСтолбец ID используется для однозначной ссылки на запись при анализе ошибок. Он не описывает содержание заявки и не должен использоваться как текстовый признак модели. Столбец «Часть» определяет назначение записи: обучение или независимая проверка.\n\n### СЛАЙД 27. Приложение 1. Учебный набор данных (2/3)\n\nСравним данные в таблице.\nID Текст заявки Класс Часть TR-01 Не могу войти в учетную запись после смены пароля доступ обучение TR-02 Система пишет неверный пароль при входе доступ обучение TR-03 Заблокирована учетная запись пользователя доступ обучение TR-04 Не приходит код подтверждения для авторизации доступ обучение TR-05 Нужно восстановить доступ к корпоративному порталу доступ обучение TR-06 Не открывается личный кабинет сотрудника доступ обучение TR-07 Требуется создать учетную запись новому сотруднику доступ обучение TR-08 Авторизация завершается ошибкой доступ обучение TR-09 На рабочем месте нет подключения к интернету сеть обучение TR-10 Wi-Fi постоянно отключается сеть обучение TR-11 Не работает VPN из дома сеть обучение TR-12 Очень медленно загружаются сайты сеть обучение TR-13 Пропадает сетевое соединение во время звонка сеть обучение TR-14 Компьютер не видит корпоративную сеть сеть обучение TR-15 Высокая задержка при подключении к серверу сеть обучение TR-16 Не открываются внутренние сайты по сети сеть обучение TR-17 Принтер не печатает документы оборудование обучение TR-18 Монитор не включается оборудование обучение TR-19 Клавиатура не реагирует на нажатия оборудование обучение TR-20 Ноутбук сильно перегревается оборудование обучение TR-21 Сканер не распознается компьютером оборудование обучение TR-22 Мышь работает с перебоями оборудование обучение TR-23 На экране появились полосы оборудование обучение TR-24 Не работает веб-камера оборудование обучение TR-25 Программа 1С закрывается с ошибкой ПО обучение TR-26 Не устанавливается обновление приложения ПО обучение TR-27 Excel зависает при открытии файла ПО обучение TR-28 Нужно установить офисный пакет ПО обучение TR-29 Антивирус блокирует рабочую программу ПО обучение TR-30 Приложение не запускается после обновления ПО обучение TR-31 В программе пропала кнопка сохранения ПО обучение TR-32 Не открывается PDF в рабочем приложении ПО обучение TE-01 Пользователь забыл пароль от рабочего компьютера доступ проверка TE-02 После отпуска пропал доступ к рабочей системе доступ проверка TE-03 Нужно изменить права доступа к общей папке доступ проверка TE-04 Сетевой кабель подключен, но интернета нет сеть проверка TE-05 Не удается подключиться к точке Wi-Fi сеть проверка TE-06 VPN соединение разрывается каждые пять минут сеть проверка TE-07 Принтер зажевывает бумагу оборудование проверка TE-08 Ноутбук не заряжается оборудование проверка TE-09 Требуется заменить неисправную гарнитуру оборудование проверка TE-10 Word сообщает об ошибке лицензии ПО проверка TE-11 Программа зависает при формировании отчета ПО проверка TE-12 Не удается установить корпоративное приложение ПО проверка\n\n### СЛАЙД 28. Приложение 1. Учебный набор данных (3/3)\n\nМини-проверка. До обучения подтвердите, что в обучающей части 32 записи, в проверочной — 12, а множество меток в обеих частях содержит четыре ожидаемых класса: доступ, сеть, оборудование и ПО.\n\n### СЛАЙД 29. Приложение 2. Код создания списков данных (1/2)\n\nКаждая запись представлена кортежем из двух элементов: текста заявки и правильной метки класса. При создании DataFrame этим позициям необходимо назначить соответствующие названия столбцов, например text и label.\n\nСписки train_records и test_records уже разделены по назначению. Не объединяйте их перед обучением: test_records должен оставаться независимым источником данных для итоговой проверки.\n\n\n\n```python\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n```\n\n\n\n\n\n```python\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\n```\n\n\n\n### СЛАЙД 30. Приложение 2. Код создания списков данных (2/2)\n\nПосле создания таблиц проверьте их форму, названия столбцов и распределение label. Полезно также убедиться, что между обучающим и проверочным наборами нет полных совпадений пар «текст — метка».\n\n### СЛАЙД 31. Создание первого прототипа прикладного ИИ-решения\n\nНа предыдущих занятиях Вы готовили данные и выбирали подход к решению. Теперь эти решения нужно превратить в работающий фрагмент проекта. Прототип не обязан охватывать весь реальный процесс. Его задача — показать, что ключевая идея реализуема, входные данные можно обработать, результат можно проверить, а ограничения можно описать до внедрения.\n\nПрактическая реализация позволяет проверить предположения, которые могли казаться убедительными на этапе планирования. Например, после запуска прототипа может выясниться, что некоторых примеров недостаточно, формулировки заявок неоднозначны или выбранные признаки не помогают различать близкие категории. Поэтому прототип нужен не только для демонстрации результата, но и для раннего обнаружения таких проблем.\n\nВ этом практикуме Вы создадите классификатор заявок службы технической поддержки. Он будет относить короткое сообщение к одному из четырёх направлений: «доступ», «сеть», «оборудование» или «ПО». Например, сообщение «Не могу войти в учётную запись» должно быть отнесено к направлению «доступ», а сообщение «Компьютер не подключается к Wi-Fi» — к направлению «сеть».\n\nКлассификатор получает текст заявки на вход и возвращает одну из заранее заданных категорий. Категория в данном случае обозначает предполагаемое направление обработки, а не готовое решение проблемы. Сообщения пользователей могут содержать опечатки, лишние подробности или признаки сразу нескольких направлений, поэтому результат классификации необходимо оценивать на примерах, которые не использовались при настройке прототипа.\n\nТакой прототип может помогать первичной маршрутизации, но не должен самостоятельно закрывать заявки или принимать критические решения. Если сообщение неоднозначно или классификатор ошибся, заявку должен проверить специалист. В описании результата важно указать не только удачные примеры, но и ситуации, в которых модель может работать ненадёжно.\n\nОбратите внимание: работоспособность прототипа не означает готовность системы к внедрению. Для полноценного использования потребуются более разнообразные данные, проверка качества, обработка ошибок и понятный способ передачи спорных заявок человеку.\n\nПеред началом работы полезно сформулировать критерий проверки: для каждого тестового сообщения должна быть известна ожидаемая категория, которую затем можно сравнить с ответом классификатора. Это позволит оценивать прототип по результатам, а не только по тому, запускается ли программа без ошибок.\n\n### СЛАЙД 32. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 33. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Создание первого прототипа прикладного ИИ-решения\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Вопрос №1\n\n\n### Вопрос 1. Что выведет код?\n\nМетод count списка подсчитывает количество элементов, которые точно равны переданному значению. Перед выбором ответа просмотрите элементы списка по порядку и отметьте каждое совпадение.\n\nИсходный код\n\n\n```\nclasses = [\"доступ\", \"сеть\", \"доступ\", \"ПО\"]\nprint(classes.count(\"доступ\"))\n```\n\nОбратите внимание\n\ncount не возвращает число разных классов и не изменяет сам список. Он считает только вхождения указанной строки.\n\n\n### Вопрос №2\n\n\n### Вопрос 2. Найдите и исправьте ошибки\n\nУсловие\n\nВ коде есть синтаксическая и логическая ошибки. Исправьте его так, чтобы модель обучалась по тексту и правильным меткам.\n\nПроверьте два независимых условия: элементы списка шагов Pipeline должны быть корректно разделены, а в метод fit сначала должны передаваться входные признаки, затем целевые метки. В этой задаче входным признаком является текст заявки, а целевой переменной — label .\n\nИсходный код\n\n\n```\nmodel = Pipeline([\n    (\"vectorizer\", TfidfVectorizer(ngram_range=(1, 2)))\n    (\"classifier\", LinearSVC(random_state=42))\n])\nmodel.fit(train_df[\"label\"], train_df[\"text\"])\n```\n\nЗапишите исправленный фрагмент\n\n__________________________________________________________________\n\nОбратите внимание\n\nПосле исправления объясните назначение каждого аргумента метода fit . Такая проверка помогает убедиться, что код исправлен осмысленно, а не только перестал выдавать сообщение об ошибке.\n\n\n### Задание №1\n\n\n### Задача 1. Проверить подготовленный набор данных\n\nУсловие\n\nСоздайте две таблицы train_df и test_df по данным из приложения 1. Проверьте количество строк, названия столбцов, пропуски, дубликаты пар «текст — класс» и распределение классов. Не смешивайте обучающие и проверочные записи.\n\nМинимальный код проверки\n\n\n```\ntrain_df = pd.DataFrame(train_records, columns=[\"text\", \"label\"])\ntest_df = pd.DataFrame(test_records, columns=[\"text\", \"label\"])\nprint(train_df.shape)\nprint(test_df.shape)\nprint(train_df.isna().sum())\nprint(train_df.duplicated(subset=[\"text\", \"label\"]).sum())\nprint(train_df[\"label\"].value_counts())\n```\n\n10.1. Запишите ожидаемое количество обучающих и проверочных строк, количество классов и вывод о балансе.\n\n__________________________________________________________________\n\n\n### Задание №2\n\n\n### Задача 2. Подготовить тексты и собрать конвейер\n\nУсловие\n\nДобавьте функцию normalize_text, примените её к обоим наборам и создайте Pipeline из TF-IDF и LinearSVC. Важно: модель обучается только на train_df. Не подбирайте решение по правильным ответам test_df.\n\nТела функций normalize_text и build_model напишите самостоятельно по подсказкам в комментариях шаблона. Функции evaluate_model и route_request даны готовыми — они понадобятся в задачах 3–5.\n\nШаблон функций\n\n\n```\nimport re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score, f1_score, confusion_matrix\n\n\ndef normalize_text(text):\n    # 1. Приведите text к строке, переведите в нижний регистр\n    #    и уберите пробелы в начале и в конце.\n    # 2. Замените повторяющиеся пробельные символы одним пробелом (re.sub).\n    # 3. Верните обработанный текст.\n    pass\n\n\ndef build_model(train_df):\n    # 1. Создайте Pipeline из двух шагов:\n    #    (\"vectorizer\", TfidfVectorizer(ngram_range=(1, 2))) и\n    #    (\"classifier\", LinearSVC(random_state=42)).\n    # 2. Обучите его только на train_df[\"text\"] (признаки) и train_df[\"label\"] (метки).\n    # 3. Верните обученную модель.\n    pass\n\n\ndef evaluate_model(model, test_df):\n    predictions = model.predict(test_df[\"text\"])\n    accuracy = accuracy_score(test_df[\"label\"], predictions)\n    macro_f1 = f1_score(\n        test_df[\"label\"], predictions, average=\"macro\"\n    )\n    matrix = confusion_matrix(\n        test_df[\"label\"],\n        predictions,\n        labels=[\"доступ\", \"сеть\", \"оборудование\", \"ПО\"]\n    )\n    return predictions, accuracy, macro_f1, matrix\n\n\ndef route_request(model, text, review_threshold=0.35):\n    clean_text = normalize_text(text)\n    scores = model.decision_function([clean_text])[0]\n    order = np.argsort(scores)[::-1]\n    best_index = order[0]\n    second_index = order[1]\n    label = model.classes_[best_index]\n    margin = float(scores[best_index] - scores[second_index])\n\n    if margin >= review_threshold:\n        route_mode = \"автоматически\"\n    else:\n        route_mode = \"проверка специалистом\"\n\n    return {\n        \"label\": label,\n        \"margin\": round(margin, 3),\n        \"route_mode\": route_mode\n    }\n```\n\n10.2. Запишите код своих функций normalize_text и build_model. Объясните своими словами, почему Pipeline снижает риск несогласованной обработки обучающих и новых текстов.\n\n__________________________________________________________________\n\n\n### Задание №3\n\n\n### Задача 3. Обучить прототип и получить прогнозы\n\nУсловие\n\nСоздайте модель функцией build_model, обучите её и выполните прогноз на test_df. Сформируйте таблицу с правильным классом и прогнозом. Выведите строки, в которых классы не совпали.\n\nЗапуск обучения и проверки\n\n\n```\ntrain_df = pd.DataFrame(train_records, columns=[\"text\", \"label\"])\ntest_df = pd.DataFrame(test_records, columns=[\"text\", \"label\"])\n\ntrain_df[\"text\"] = train_df[\"text\"].apply(normalize_text)\ntest_df[\"text\"] = test_df[\"text\"].apply(normalize_text)\n\nmodel = build_model(train_df)\npredictions, accuracy, macro_f1, matrix = evaluate_model(\n    model, test_df\n)\n\ntest_result = test_df.copy()\ntest_result[\"prediction\"] = predictions\nprint(test_result)\nprint(\"Accuracy:\", round(accuracy, 3))\nprint(\"Macro F1:\", round(macro_f1, 3))\nprint(\"Матрица ошибок:\")\nprint(matrix)\n```\n\nВывод ошибочных прогнозов\n\n\n```\nerrors = test_result[\n    test_result[\"label\"] != test_result[\"prediction\"]\n]\nprint(errors)\n```\n\n10.3. Запишите полученные accuracy и macro F1. Укажите количество ошибок.\n\n__________________________________________________________________\n\n\n### Задание №4\n\n1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадача 4. Проанализировать матрицу ошибок\n\nУсловие\n\nМатрица строится в порядке классов «доступ», «сеть», «оборудование», «ПО». Строка показывает истинный класс, столбец — прогноз. Найдите, какие два тестовых обращения классифицированы неверно. Объясните вероятную причину: недостаток похожих примеров, неоднозначные слова или слишком маленький набор.\n\n10.4. Запишите матрицу ошибок и два кратких вывода по ней.\n\n__________________________________________________________________\n\n\n### Задание №5\n\n\n### Задача 5. Добавить безопасную маршрутизацию\n\nУсловие\n\nИспользуйте функцию route_request . Она сравнивает два лучших значения функции решения. Если разница меньше 0,35, заявка должна быть передана специалисту — назначается режим ручной проверки manual\\_review (в выводе функции ему соответствует route_mode = «проверка специалистом»). Проверьте все 12 тестовых записей и четыре новых примера.\n\nПроверка прикладной функции\n\n\n```\nexamples = [\n    \"Не могу подключиться к VPN\",\n    \"Принтер печатает пустые страницы\",\n    \"Система просит пароль и не пускает\",\n    \"Программа не запускается\"\n]\n\nfor text in examples:\n    result = route_request(model, text)\n    print(text, \"->\", result)\n```\n\nПроверка режима автоматической и ручной маршрутизации\n\n\n```\nrouted = test_df.copy()\nrouted[\"prediction\"] = model.predict(routed[\"text\"])\n\nroutes = routed[\"text\"].apply(\n    lambda text: route_request(model, text)\n)\nrouted[\"margin\"] = routes.apply(lambda x: x[\"margin\"])\nrouted[\"route_mode\"] = routes.apply(lambda x: x[\"route_mode\"])\nprint(routed)\n```\n\n10.5. Сколько тестовых заявок модель обработала автоматически? Сколько отправила специалисту? Были ли ошибки среди автоматически обработанных заявок? Какие из четырёх новых примеров получили режим manual_review?\n\n__________________________________________________________________\n\n\n### Задание №6\n\n\n### Дополнительные задания\n\nУсловие\n\nДополнительные задания изменяют отдельные части прототипа. Чтобы сравнение оставалось корректным, сохраняйте неизменными проверочный набор и способ расчёта метрик, если в условии не указано иное.\n\nЗадание 1\n\nДобавьте класс «прочее» и не менее шести размеченных примеров. Объясните, почему слишком широкий класс может ухудшить интерпретацию.\n\nПроверьте, объединяют ли добавленные примеры понятное направление или лишь не подходят к четырём исходным классам. Если внутри класса нет общей закономерности, модель может связывать с ним случайные и плохо интерпретируемые признаки.\n\nЗадание 2\n\nСравните word TF-IDF с символьными n-граммами analyzer=\"char_wb\", ngram_range=(3, 5) . Используйте тот же проверочный набор и не выбирайте вариант только по одному удачному запуску.\n\nЗапишите для обоих вариантов одинаковый набор показателей: accuracy, macro F1 и характер ошибок. Символьные n-граммы могут учитывать части слов и варианты написания, но вывод о преимуществе должен опираться на результаты сравнения.\n\nЗадание 3\n\nДобавьте поле приоритета как отдельное правило после классификации: слово «срочно» не должно менять направление заявки, но может повысить приоритет ручного рассмотрения.\n\nРазделите два результата явно: класс отвечает за направление обработки, а приоритет — за порядок рассмотрения. Это не позволит одному слову подменить решение другой задачи.\n\n\n### Таблицы из теоретической части\n\n\n| Компонент | Роль в прототипе |\n| --- | --- |\n| Текст заявки | Входные данные пользователя. |\n| Метка класса | Правильное направление обработки, заданное в учебном наборе. |\n| TF-IDF | Преобразует слова и сочетания слов в числовые признаки. |\n| LinearSVC | Строит границы между классами по текстовым признакам. |\n| Проверочный набор | Показывает работу на ранее не использованных примерах. |\n| Порог ручной проверки | Не позволяет автоматически маршрутизировать сомнительный результат. |\n\n\n| Элемент постановки | Описание |\n| --- | --- |\n| Пользователь | Оператор или специалист первой линии технической поддержки. |\n| Проблема | Заявки поступают в общий поток и требуют первичной маршрутизации. |\n| Вход | Короткий текст заявки на русском языке. |\n| Выход | Один из классов: доступ, сеть, оборудование, ПО. |\n| Ограничение | Модель не закрывает заявку и не назначает исполнителя без правил организации. |\n| Риск ошибки | Неверное направление увеличит время решения; сомнительный результат нужно проверить вручную. |\n| Критерий приемки | Accuracy не ниже 0,75 на учебном тесте и отсутствие автоматической обработки результатов с малым запасом решения. |\n\n\n| Этап | Время | Результат |\n| --- | --- | --- |\n| Актуализация и постановка задачи | 10 мин | Понята цель и критерии приемки. |\n| Знакомство с данными | 10 мин | Проверены столбцы, классы и баланс. |\n| Сборка базовой модели | 25 мин | Обучен текстовый классификатор. |\n| Проверка качества | 20 мин | Рассчитаны метрики и разобраны ошибки. |\n| Прикладная функция и ручная проверка | 15 мин | Создан безопасный режим маршрутизации. |\n| Отчёт, самопроверка, итог | 10 мин | Зафиксирован результат прототипа. |\n\n\n| Критерий | Условие | Ваш результат |\n| --- | --- | --- |\n| Целостность данных | 32 обучающие и 12 проверочных записей, нет пропусков и полных дубликатов. |  |\n| Работоспособность | Код выполняется без ошибок, модель выдаёт один из четырёх допустимых классов. |  |\n| Качество | Accuracy не ниже 0,75; macro F1 рассчитан и записан. |  |\n| Анализ ошибок | Найдены неверные прогнозы и предложено объяснение. |  |\n| Безопасность процесса | Результаты с margin ниже 0,35 передаются специалисту. |  |\n| Ограничения | В отчёте указано, почему прототип нельзя сразу внедрять в реальную службу. |  |\n\n\n| Раздел | Что необходимо записать |\n| --- | --- |\n| 1. Название и пользователь | Кому помогает решение и в каком процессе. |\n| 2. Вход и выход | Какой текст поступает и какой результат выдаётся. |\n| 3. Данные | Количество записей, классы, разделение на обучение и проверку. |\n| 4. Алгоритм | Нормализация, TF-IDF, LinearSVC, порог ручной проверки. |\n| 5. Метрики | Accuracy, macro F1, матрица ошибок. |\n| 6. Ошибки | Какие заявки перепутаны и почему. |\n| 7. Критерии приемки | Какие выполнены, какие требуют доработки. |\n| 8. Ограничения и риски | Маленький учебный набор, возможное изменение языка заявок, необходимость контроля специалиста. |\n| 9. Следующий шаг | Какие данные или функции нужно добавить во второй версии. |\n\n\n| Элемент работы | Максимум |\n| --- | --- |\n| Актуализация и анализ кода | 2 балла |\n| Проверка и описание данных | 3 балла |\n| Сборка и обучение модели | 4 балла |\n| Расчёт и интерпретация метрик | 4 балла |\n| Функция безопасной маршрутизации | 4 балла |\n| Отчёт, ограничения и вывод | 3 балла |\n| Итого | 20 баллов |\n\n\n| ID | Текст заявки | Класс | Часть |\n| --- | --- | --- | --- |\n| TR-01 | Не могу войти в учетную запись после смены пароля | доступ | обучение |\n| TR-02 | Система пишет неверный пароль при входе | доступ | обучение |\n| TR-03 | Заблокирована учетная запись пользователя | доступ | обучение |\n| TR-04 | Не приходит код подтверждения для авторизации | доступ | обучение |\n| TR-05 | Нужно восстановить доступ к корпоративному порталу | доступ | обучение |\n| TR-06 | Не открывается личный кабинет сотрудника | доступ | обучение |\n| TR-07 | Требуется создать учетную запись новому сотруднику | доступ | обучение |\n| TR-08 | Авторизация завершается ошибкой | доступ | обучение |\n| TR-09 | На рабочем месте нет подключения к интернету | сеть | обучение |\n| TR-10 | Wi-Fi постоянно отключается | сеть | обучение |\n| TR-11 | Не работает VPN из дома | сеть | обучение |\n| TR-12 | Очень медленно загружаются сайты | сеть | обучение |\n| TR-13 | Пропадает сетевое соединение во время звонка | сеть | обучение |\n| TR-14 | Компьютер не видит корпоративную сеть | сеть | обучение |\n| TR-15 | Высокая задержка при подключении к серверу | сеть | обучение |\n| TR-16 | Не открываются внутренние сайты по сети | сеть | обучение |\n| TR-17 | Принтер не печатает документы | оборудование | обучение |\n| TR-18 | Монитор не включается | оборудование | обучение |\n| TR-19 | Клавиатура не реагирует на нажатия | оборудование | обучение |\n| TR-20 | Ноутбук сильно перегревается | оборудование | обучение |\n| TR-21 | Сканер не распознается компьютером | оборудование | обучение |\n| TR-22 | Мышь работает с перебоями | оборудование | обучение |\n| TR-23 | На экране появились полосы | оборудование | обучение |\n| TR-24 | Не работает веб-камера | оборудование | обучение |\n| TR-25 | Программа 1С закрывается с ошибкой | ПО | обучение |\n| TR-26 | Не устанавливается обновление приложения | ПО | обучение |\n| TR-27 | Excel зависает при открытии файла | ПО | обучение |\n| TR-28 | Нужно установить офисный пакет | ПО | обучение |\n| TR-29 | Антивирус блокирует рабочую программу | ПО | обучение |\n| TR-30 | Приложение не запускается после обновления | ПО | обучение |\n| TR-31 | В программе пропала кнопка сохранения | ПО | обучение |\n| TR-32 | Не открывается PDF в рабочем приложении | ПО | обучение |\n| TE-01 | Пользователь забыл пароль от рабочего компьютера | доступ | проверка |\n| TE-02 | После отпуска пропал доступ к рабочей системе | доступ | проверка |\n| TE-03 | Нужно изменить права доступа к общей папке | доступ | проверка |\n| TE-04 | Сетевой кабель подключен, но интернета нет | сеть | проверка |\n| TE-05 | Не удается подключиться к точке Wi-Fi | сеть | проверка |\n| TE-06 | VPN соединение разрывается каждые пять минут | сеть | проверка |\n| TE-07 | Принтер зажевывает бумагу | оборудование | проверка |\n| TE-08 | Ноутбук не заряжается | оборудование | проверка |\n| TE-09 | Требуется заменить неисправную гарнитуру | оборудование | проверка |\n| TE-10 | Word сообщает об ошибке лицензии | ПО | проверка |\n| TE-11 | Программа зависает при формировании отчета | ПО | проверка |\n| TE-12 | Не удается установить корпоративное приложение | ПО | проверка |",
   "theory": [
     {
       "title": "Создание первого прототипа прикладного ИИ-решения",
@@ -421,5 +1446,44 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "output",
+    "conditions",
+    "logic",
+    "functions",
+    "tables",
+    "metrics",
+    "classification",
+    "features",
+    "target",
+    "loops"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M04-L08-lecture.pdf",
+      "name": "Создание первого прототипа прикладного ИИ-решения — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "78f871ff50793b004f98b98acc584675160eeaee299c3d16cb037aefcd13f4b5",
+      "source": {
+        "path": "Снимки страниц.json / e042f7fc3e427c078704cd56, 073a12dcfbea4042e6082292",
+        "sha256": "43b313466f010eb7ea7dc5ac75aa97a3dcf947f9f45b8829a7c53988e18738fa"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M04-L08-presentation.pdf",
+      "name": "Создание первого прототипа прикладного ИИ-решения — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 33,
+      "sha256": "cec68c36ee958ca560424bf4f42c3627a0793f7f3c78fc6dff99e77a8cec20ae",
+      "source": {
+        "path": "Модуль 4/Занятие 08/Презентация — итоговая.pptx",
+        "sha256": "8a059ca86fe026df3a9811fd4853c0ca5957df77335fa54ef31db033ad404aac"
+      }
+    }
   }
 }

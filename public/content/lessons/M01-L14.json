@@ -6,11 +6,11 @@
   "title": "Разметка данных для задач ИИ",
   "originalTitle": "Тема 14. Занятие 14. Разметка данных для задач ИИ",
   "kind": "lesson",
-  "taskCount": 9,
+  "taskCount": 8,
   "slideCount": 14,
   "fileCount": 5,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Разметка данных для задач ИИ  В этом занятии рассматривается тема «Разметка данных для задач ИИ». Будем опираться на примеры курса и проверять результат на кон",
+  "description": "В этом занятии рассматривается тема «Разметка данных для задач ИИ». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L14",
-      "statement": "Основной файл практики — messages_for_labeling_1_14.csv. В нём есть текст сообщения, два простых признака и пустой столбец label. Результат работы — заполненный столбец label, подсчёт меток и проверка согласованности разметчиков.\n\nПрактические задания к уроку 1.14\n\nРазметка данных для задач ИИ\n\nКаждое задание содержит действие с измеримым результатом. Для автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nЗадания для платформы к уроку 1.14\n\nПроверка по схеме “код → stdout → ожидаемый вывод”\n\nВсе задания предполагают единый редактор кода. Проверяется только stdout. В выводе не должно быть поясняющего текста, кавычек или лишних пробелов.\n\n\n### 1. Размер таблицы сообщений\n\nТип: программная задача, уровень 1.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nОткрыть CSV и вывести количество строк и столбцов.\n\nОжидаемый вывод:\n\n\n```\n12 5\n```\n\nКлюч проверки: точное совпадение stdout. Открыт CSV; использовано shape; выведены два числа через пробел.\n\n\n#### Материалы к заданию",
+      "statement": "# Практическое задание\n\n## Практическая работа в Jupyter Notebook\n\nОсновной файл практики — messages_for_labeling_1_14.csv. В нём есть текст сообщения, два простых признака и пустой столбец label. Результат работы — заполненный столбец label, подсчёт меток и проверка согласованности разметчиков.\n\n**Практические задания к уроку 1.14**\n\n*Разметка данных для задач ИИ*\n\nКаждое задание содержит действие с измеримым результатом. Для автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\n**Задания для платформы к уроку 1.14**\n\n*Проверка по схеме “код → stdout → ожидаемый вывод”*\n\nВсе задания предполагают единый редактор кода. Проверяется только stdout. В выводе не должно быть поясняющего текста, кавычек или лишних пробелов.\n\n## 1. Размер таблицы сообщений\n\nТип: программная задача, уровень 1.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nОткрыть CSV и вывести количество строк и столбцов.\n\nОжидаемый вывод:\n\n```text\n12 5\n```\n\nКлюч проверки: точное совпадение stdout. Открыт CSV; использовано shape; выведены два числа через пробел.\n\n### Материалы к заданию\n\n- annotations_by_students_1_14.csv (1.0 КБ)\n\n- image_pairs_for_labeling_1_14.csv (843 Б)\n\n- lesson_1_14_labeling_data_start.ipynb (5.9 КБ)\n\n- messages_for_labeling_1_14.csv (1.1 КБ)",
       "origin": "ismart",
       "ismartLink": {
         "id": "cc32c931bd92cbe1e1fe8e0b",
@@ -39,17 +39,65 @@
         "acc5a9de2fff66af.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L14",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\nprint(*df.shape)",
+        "answer": "",
+        "explanation": "shape показывает число сообщений и число полей, включая пока пустую метку label.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "12 5"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics",
+          "features",
+          "target"
+        ],
+        "id": "T-cc32c931bd92cbe1e1fe8e0b-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 14/Практика для студентов.md",
-        "sha256": "dfc371391acd024ad104f03856a5776272e631dd3a46a69a4a0b03cc6811c49d"
+        "elementId": "cc32c931bd92cbe1e1fe8e0b",
+        "archive": "Снимки страниц.json",
+        "sha256": "256c2384d65812bfbe5e501da2e39fec0626442a9fcf5cc94321a381db3ad2c0"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics",
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6abc41bfd2698c58da3f22e9",
@@ -58,7 +106,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L14",
-      "statement": "1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 2. Пустые метки\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 1.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nПосчитать, сколько строк пока не имеет метки label.\n\nОжидаемый вывод:\n\n12\n\nКлюч проверки: точное совпадение stdout. Корректно учтены пустые значения в label; выведено одно число.\n\nМатериалы к заданию",
+      "statement": "# Задание 2. Пустые метки\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 1.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nПосчитать, сколько строк пока не имеет метки label.\n\nОжидаемый вывод:\n\n```text\n12\n```\n\nКлюч проверки: точное совпадение stdout. Корректно учтены пустые значения в label; выведено одно число.\n\n### Материалы к заданию\n\n- messages_for_labeling_1_14.csv (1.1 КБ)",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abc41bfd2698c58da3f22e9",
@@ -77,17 +125,61 @@
         "acc5a9de2fff66af.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L14",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\nprint(df['label'].isna().sum())",
+        "answer": "",
+        "explanation": "Пустые значения CSV read_csv читает как пропуски. Проверяем только столбец label, а не всю таблицу.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "12"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6abc41bfd2698c58da3f22e9-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 14/Практика для студентов.md",
-        "sha256": "dfc371391acd024ad104f03856a5776272e631dd3a46a69a4a0b03cc6811c49d"
+        "elementId": "6abc41bfd2698c58da3f22e9",
+        "archive": "Снимки страниц.json",
+        "sha256": "1fb0e8fbb41aff134390ae0f9c5300e7dceefc646ef3b42e931d3bbd6e04efb9"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6abc41bfd2698c58da3f22ec",
@@ -96,7 +188,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L14",
-      "statement": "Для автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nЗаполнить label по правилу и вывести количество меток.\n\nПравило разметки — в элементе «Инструкция к практике».\n\nОжидаемый вывод:\n\n\n```\nneeds_review=2;normal=5;spam=5\n```\n\nКлюч проверки: точное совпадение stdout. Правило применено ко всем строкам; порядок вывода: needs_review, normal, spam.\n\n\n#### Материалы к заданию",
+      "statement": "# Задание 3. Автоматическая разметка по инструкции\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nЗаполнить label по правилу и вывести количество меток.\n\nПравило разметки — в элементе «Инструкция к практике».\n\nОжидаемый вывод:\n\n```text\nneeds_review=2;normal=5;spam=5\n```\n\nКлюч проверки: точное совпадение stdout. Правило применено ко всем строкам; порядок вывода: needs_review, normal, spam.\n\n### Материалы к заданию\n\n- messages_for_labeling_1_14.csv (1.1 КБ)",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abc41bfd2698c58da3f22ec",
@@ -115,17 +207,105 @@
         "acc5a9de2fff66af.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L14",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\ndef make_label(row):\n    link = row['has_link'] == 'yes'\n    prize = row['has_money_or_prize_word'] == 'yes'\n    if link and prize:\n        return 'spam'\n    if not link and not prize:\n        return 'normal'\n    return 'needs_review'\n\ndf['label'] = df.apply(make_label, axis=1)\nprint(';'.join(f'{label}={(df[\"label\"] == label).sum()}' for label in ['needs_review', 'normal', 'spam']))",
+        "answer": "",
+        "explanation": "Инструкция задаёт AND для спама: одновременно ссылка и призовое слово. Одновременное отсутствие обоих признаков означает normal. Оба смешанных случая — needs_review. apply с axis=1 передаёт функции строку.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "needs_review=2;normal=5;spam=5"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Определяем функцию `make_label` с параметрами `row`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 4,
+            "text": "Вычисляем `row['has_link'] == 'yes'` и сохраняем результат в `link`."
+          },
+          {
+            "line": 5,
+            "text": "Вычисляем `row['has_money_or_prize_word'] == 'yes'` и сохраняем результат в `prize`."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `link and prize`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Возвращаем из функции `'spam'`."
+          },
+          {
+            "line": 8,
+            "text": "Проверяем условие `not link and (not prize)`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 9,
+            "text": "Возвращаем из функции `'normal'`."
+          },
+          {
+            "line": 10,
+            "text": "Возвращаем из функции `'needs_review'`."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `df.apply(make_label, axis=1)` и сохраняем результат в `df['label']`."
+          },
+          {
+            "line": 13,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6abc41bfd2698c58da3f22ec-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 14/Практика для студентов.md",
-        "sha256": "dfc371391acd024ad104f03856a5776272e631dd3a46a69a4a0b03cc6811c49d"
+        "elementId": "6abc41bfd2698c58da3f22ec",
+        "archive": "Снимки страниц.json",
+        "sha256": "077ec2684179757f09ea4cfa7f1fb16924bc674738293fe99ec874632ef4bf70"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6abc41bfd2698c58da3f22ef",
@@ -134,7 +314,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L14",
-      "statement": "1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 4. Спорные сообщения\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nВывести id строк, получивших needs_review.\n\nОжидаемый вывод:\n\n5,9\n\nКлюч проверки: точное совпадение stdout. Найдены только спорные id; вывод через запятую без пробелов.\n\nМатериалы к заданию",
+      "statement": "# Задание 4. Спорные сообщения\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nВывести id строк, получивших needs_review.\n\nОжидаемый вывод:\n\n```text\n5,9\n```\n\nКлюч проверки: точное совпадение stdout. Найдены только спорные id; вывод через запятую без пробелов.\n\n### Материалы к заданию\n\n- messages_for_labeling_1_14.csv (1.1 КБ)",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abc41bfd2698c58da3f22ef",
@@ -153,17 +333,103 @@
         "acc5a9de2fff66af.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L14",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\ndef make_label(row):\n    link = row['has_link'] == 'yes'\n    prize = row['has_money_or_prize_word'] == 'yes'\n    if link and prize:\n        return 'spam'\n    if not link and not prize:\n        return 'normal'\n    return 'needs_review'\n\ndf['label'] = df.apply(make_label, axis=1)\nprint(','.join(df.loc[df['label'] == 'needs_review', 'id'].astype(str)))",
+        "answer": "",
+        "explanation": "Сначала применяем ту же полную инструкцию разметки. Затем выбираем id только спорных строк. Порядок строк файла сохраняется.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "5,9"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Определяем функцию `make_label` с параметрами `row`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 4,
+            "text": "Вычисляем `row['has_link'] == 'yes'` и сохраняем результат в `link`."
+          },
+          {
+            "line": 5,
+            "text": "Вычисляем `row['has_money_or_prize_word'] == 'yes'` и сохраняем результат в `prize`."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `link and prize`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Возвращаем из функции `'spam'`."
+          },
+          {
+            "line": 8,
+            "text": "Проверяем условие `not link and (not prize)`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 9,
+            "text": "Возвращаем из функции `'normal'`."
+          },
+          {
+            "line": 10,
+            "text": "Возвращаем из функции `'needs_review'`."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `df.apply(make_label, axis=1)` и сохраняем результат в `df['label']`."
+          },
+          {
+            "line": 13,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "conditions",
+          "logic",
+          "functions",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6abc41bfd2698c58da3f22ef-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 14/Практика для студентов.md",
-        "sha256": "dfc371391acd024ad104f03856a5776272e631dd3a46a69a4a0b03cc6811c49d"
+        "elementId": "6abc41bfd2698c58da3f22ef",
+        "archive": "Снимки страниц.json",
+        "sha256": "242c5ea29b00bbe09e1b7fee3af056a852906afc37af2663d44faae94e6a25d3"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "conditions",
+        "logic",
+        "functions",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6abc41bfd2698c58da3f22f2",
@@ -172,7 +438,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L14",
-      "statement": "1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 5. Согласованность разметчиков\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл annotations_by_students_1_14.csv.\n\nУсловие:\n\nПосчитать, в скольких строках три разметчика дали одинаковую метку.\n\nОжидаемый вывод:\n\n8\n\nКлюч проверки: точное совпадение stdout. Сравнены annotator_1, annotator_2, annotator_3; выведено одно число.\n\nМатериалы к заданию",
+      "statement": "# Задание 5. Согласованность разметчиков\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл annotations_by_students_1_14.csv.\n\nУсловие:\n\nПосчитать, в скольких строках три разметчика дали одинаковую метку.\n\nОжидаемый вывод:\n\n```text\n8\n```\n\nКлюч проверки: точное совпадение stdout. Сравнены annotator_1, annotator_2, annotator_3; выведено одно число.\n\n### Материалы к заданию\n\n- annotations_by_students_1_14.csv (1.0 КБ)",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abc41bfd2698c58da3f22f2",
@@ -191,17 +457,65 @@
         "acc5a9de2fff66af.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L14",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('annotations_by_students_1_14.csv')\nagree = (df['annotator_1'] == df['annotator_2']) & (df['annotator_2'] == df['annotator_3'])\nprint(agree.sum())",
+        "answer": "",
+        "explanation": "Для полного согласия нужны два равенства одновременно: первый разметчик совпал со вторым, второй с третьим. Попарные совпадения только двух участников недостаточны.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "8"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Вычисляем `(df['annotator_1'] == df['annotator_2']) & (df['annotator_2'] == df['annotator_3'])` и сохраняем результат в `agree`."
+          },
+          {
+            "line": 4,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6abc41bfd2698c58da3f22f2-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 14/Практика для студентов.md",
-        "sha256": "dfc371391acd024ad104f03856a5776272e631dd3a46a69a4a0b03cc6811c49d"
+        "elementId": "6abc41bfd2698c58da3f22f2",
+        "archive": "Снимки страниц.json",
+        "sha256": "ea60e79d802741137375d9cb5d67c42453d3651d6b8e0953ee09b241ea71b38f"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6abc41bfd2698c58da3f22f5",
@@ -210,7 +524,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L14",
-      "statement": "1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 6. Разногласия разметчиков\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл annotations_by_students_1_14.csv.\n\nУсловие:\n\nВывести id строк, где разметчики не совпали.\n\nОжидаемый вывод:\n\n5,9\n\nКлюч проверки: точное совпадение stdout. Выведены id спорных строк через запятую без пробелов.\n\nМатериалы к заданию",
+      "statement": "# Задание 6. Разногласия разметчиков\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл annotations_by_students_1_14.csv.\n\nУсловие:\n\nВывести id строк, где разметчики не совпали.\n\nОжидаемый вывод:\n\n```text\n5,9\n```\n\nКлюч проверки: точное совпадение stdout. Выведены id спорных строк через запятую без пробелов.\n\n### Материалы к заданию\n\n- annotations_by_students_1_14.csv (1.0 КБ)",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abc41bfd2698c58da3f22f5",
@@ -229,17 +543,65 @@
         "acc5a9de2fff66af.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L14",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('annotations_by_students_1_14.csv')\nagree = (df['annotator_1'] == df['annotator_2']) & (df['annotator_2'] == df['annotator_3'])\nprint(','.join(df.loc[~agree, 'id'].astype(str)))",
+        "answer": "",
+        "explanation": "Инверсия маски полного согласия выбирает все строки хотя бы с одним разногласием. Выводим их идентификаторы через запятую.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "5,9"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Вычисляем `(df['annotator_1'] == df['annotator_2']) & (df['annotator_2'] == df['annotator_3'])` и сохраняем результат в `agree`."
+          },
+          {
+            "line": 4,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6abc41bfd2698c58da3f22f5-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 14/Практика для студентов.md",
-        "sha256": "dfc371391acd024ad104f03856a5776272e631dd3a46a69a4a0b03cc6811c49d"
+        "elementId": "6abc41bfd2698c58da3f22f5",
+        "archive": "Снимки страниц.json",
+        "sha256": "1726e05d3d5de65062d864d6473c393695fbaa713a3c9b54a9f316e6835e3a4f"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6abc41bfd2698c58da3f22f8",
@@ -248,7 +610,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L14",
-      "statement": "1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 7. Разметка пар изображений\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл image_pairs_for_labeling_1_14.csv.\n\nУсловие:\n\nПо описаниям выбрать вариант, лучше соответствующий запросу.\n\nОжидаемый вывод:\n\nB,A,A,A\n\nКлюч проверки: точное совпадение stdout. Выведены метки A/B в порядке строк через запятую без пробелов.\n\nМатериалы к заданию",
+      "statement": "# Задание 7. Разметка пар изображений\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл image_pairs_for_labeling_1_14.csv.\n\nУсловие:\n\nПо описаниям выбрать вариант, лучше соответствующий запросу.\n\nОжидаемый вывод:\n\n```text\nB,A,A,A\n```\n\nКлюч проверки: точное совпадение stdout. Выведены метки A/B в порядке строк через запятую без пробелов.\n\n### Материалы к заданию\n\n- image_pairs_for_labeling_1_14.csv (843 Б)",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abc41bfd2698c58da3f22f8",
@@ -267,17 +629,69 @@
         "acc5a9de2fff66af.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L14",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('image_pairs_for_labeling_1_14.csv')\nchoices = {1:'B',2:'A',3:'A',4:'A'}\ndf['best_match'] = df['id'].map(choices)\nprint(','.join(df['best_match']))",
+        "answer": "",
+        "explanation": "Это ручная семантическая разметка четырёх описаний, а не обученная модель. В первой паре только B содержит и школьника, и робота; во второй A — кота на подоконнике с городом; в третьей A посвящена сну; в четвёртой A сохраняет цвета велосипеда и стены. После выбора заполняем best_match и выводим метки в порядке строк.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "B,A,A,A"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Создаём словарь `choices` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 4,
+            "text": "Вычисляем `df['id'].map(choices)` и сохраняем результат в `df['best_match']`."
+          },
+          {
+            "line": 5,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6abc41bfd2698c58da3f22f8-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 14/Практика для студентов.md",
-        "sha256": "dfc371391acd024ad104f03856a5776272e631dd3a46a69a4a0b03cc6811c49d"
+        "elementId": "6abc41bfd2698c58da3f22f8",
+        "archive": "Снимки страниц.json",
+        "sha256": "0663c02e2cf38d0e9d55744d168f0d5c54a9ecbe61c688f28c2afd20717fc6a1"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6abc41bfd2698c58da3f22fb",
@@ -286,7 +700,7 @@
       "type": "debug",
       "moduleId": 1,
       "lessonId": "M01-L14",
-      "statement": "Для автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nИсправить функцию, которая неверно относит все примеры с призовыми словами к spam.\n\nОжидаемый вывод:\n\n\n```\nneeds_review=2;normal=5;spam=5\n```\n\nКлюч проверки: точное совпадение stdout. Спорные случаи не отнесены к spam; подсчёт совпадает с эталоном.\n\nСтартовый ошибочный фрагмент:\n\n\n```\ndef make_label(row):\n    if row['has_money_or_prize_word'] == 'yes':\n        return 'spam'\n    return 'normal'\n```\n\n\n#### Материалы к заданию",
+      "statement": "# Задание 8. Исправление кода ИИ\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nИсправить функцию, которая неверно относит все примеры с призовыми словами к spam.\n\nОжидаемый вывод:\n\n```text\nneeds_review=2;normal=5;spam=5\n```\n\nКлюч проверки: точное совпадение stdout. Спорные случаи не отнесены к spam; подсчёт совпадает с эталоном.\n\nСтартовый ошибочный фрагмент:\n\n```python\ndef make_label(row):\n    if row['has_money_or_prize_word'] == 'yes':\n        return 'spam'\n    return 'normal'\n```\n\n### Материалы к заданию\n\n- messages_for_labeling_1_14.csv (1.1 КБ)",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abc41bfd2698c58da3f22fb",
@@ -305,62 +719,111 @@
         "acc5a9de2fff66af.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L14",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\ndef make_label(row):\n    link = row['has_link'] == 'yes'\n    prize = row['has_money_or_prize_word'] == 'yes'\n    if link and prize:\n        return 'spam'\n    if not link and not prize:\n        return 'normal'\n    return 'needs_review'\n\ndf['label'] = df.apply(make_label, axis=1)\nprint(';'.join(f'{label}={(df[\"label\"] == label).sum()}' for label in ['needs_review', 'normal', 'spam']))",
+        "answer": "",
+        "explanation": "Ошибочная функция проверяла только призовое слово. Исправление учитывает также ссылку и отдельную категорию сомнительных сочетаний. Наличие одного признака не означает spam.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "needs_review=2;normal=5;spam=5"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Определяем функцию `make_label` с параметрами `row`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 4,
+            "text": "Вычисляем `row['has_link'] == 'yes'` и сохраняем результат в `link`."
+          },
+          {
+            "line": 5,
+            "text": "Вычисляем `row['has_money_or_prize_word'] == 'yes'` и сохраняем результат в `prize`."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `link and prize`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Возвращаем из функции `'spam'`."
+          },
+          {
+            "line": 8,
+            "text": "Проверяем условие `not link and (not prize)`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 9,
+            "text": "Возвращаем из функции `'normal'`."
+          },
+          {
+            "line": 10,
+            "text": "Возвращаем из функции `'needs_review'`."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `df.apply(make_label, axis=1)` и сохраняем результат в `df['label']`."
+          },
+          {
+            "line": 13,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6abc41bfd2698c58da3f22fb-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 14/Практика для студентов.md",
-        "sha256": "dfc371391acd024ad104f03856a5776272e631dd3a46a69a4a0b03cc6811c49d"
+        "elementId": "6abc41bfd2698c58da3f22fb",
+        "archive": "Снимки страниц.json",
+        "sha256": "24857ed017c7d772fc47e321d30478cfb837544e1c1e9fd1ae07a9ecd7027725"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
-    },
-    {
-      "id": "T-6abc41bfd2698c58da3f22fe",
-      "number": 9,
-      "title": "Дополнительное групповое задание уровня 3",
-      "type": "free_response",
-      "moduleId": 1,
-      "lessonId": "M01-L14",
-      "statement": "| Поле | Описание |\n| --- | --- |\n| Уровень сложности | 3 — самостоятельный выбор подхода |\n| Цель | Согласовать инструкцию разметки и оценить вклад участников группы. |\n| Условие | Команда из 3 человек размечает 12 сообщений, затем сравнивает результат с правилом и фиксирует спорные случаи. Роли: разметчик, проверяющий, аналитик. |\n| Ожидаемый результат | Заполненный CSV, список спорных id, краткая таблица вклада участников. |\n| Критерии оценки | Есть роли, файл с метками, список спорных id, вклад каждого участника описан конкретно. |\n\n\n#### Материалы к заданию",
-      "origin": "author",
-      "ismartLink": {
-        "id": "6abc41bfd2698c58da3f22fe",
-        "label": "Дополнительное групповое задание уровня 3",
-        "kind": "Дополнительное групповое задание уровня 3",
-        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/8a4b96577f7de3a024899b7e/element/6abc41bfd2698c58da3f22fe",
-        "status": "unverified",
-        "unitId": "8a4b96577f7de3a024899b7e",
-        "elementId": "6abc41bfd2698c58da3f22fe"
       },
-      "files": [
-        "d114aca146e6a018.csv",
-        "450b53eac07e2765.csv",
-        "2b28d4de07ffe77e.ipynb",
-        "f29fa65b0f7710f7.csv",
-        "acc5a9de2fff66af.csv"
-      ],
-      "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
-      "source": {
-        "path": "Модуль 1/Занятие 14/Практика для студентов.md",
-        "sha256": "dfc371391acd024ad104f03856a5776272e631dd3a46a69a4a0b03cc6811c49d"
-      },
-      "publication": {
-        "audience": "student",
-        "rights": "public_distribution_confirmed",
-        "status": "published"
-      }
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     }
   ],
   "lecture": "# Разметка данных для задач ИИ\n\n### СЛАЙД 01. Разметка данных для задач ИИ\n\nВ этом занятии рассматривается тема «Разметка данных для задач ИИ». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Ключевые понятия · таблица 1/2\n\nПри работе с размеченным датасетом важно различать сам объект, его свойства и правильный ответ. Например, текст сообщения является входным признаком объекта, а значение spam в столбце label — его меткой.\n\nСравним данные в таблице.\nПонятие Что означает Пример Объект Один пример из датасета одно сообщение Класс Категория, к которой относится объект spam / normal / needs_review Метка Правильный ответ, добавленный человеком или правилом label = spam Инструкция разметчика Правила, по которым ставятся метки когда ставить spam, normal, needs_review\n\nКласс описывает один из возможных вариантов ответа, а метка показывает, какой именно класс назначен конкретному объекту. Поэтому список классов общий для задачи, но у каждого размеченного сообщения есть собственная метка.\n\nЗначение needs_review не означает, что объект можно не размечать. Это отдельный класс для случаев, в которых по инструкции нельзя уверенно выбрать между основными категориями. Пустая ячейка в столбце label , напротив, показывает, что метка ещё не назначена.\n\nИнструкция должна применяться ко всему датасету одинаково. Если правило изменилось, необходимо проверить уже размеченные объекты: часть прежних меток может перестать соответствовать новой версии инструкции.\n\n### СЛАЙД 03. Ключевые понятия · таблица 2/2\n\nПосмотрите на продолжение таблицы. Метка Правильный ответ, добавленный человеком или правилом label = spam Инструкция разметчика Правила, по которым ставятся метки когда ставить spam, normal, needs_review\n\n### СЛАЙД 04. Практические задания · таблица 1/4\n\nВ отличие от свободного обсуждения, задания ниже дают измеримый результат: программа должна вывести конкретное число или строку. Это позволяет проверять часть работы автоматически.\n\nПеред выполнением заданий полезно проверить названия столбцов и размер таблицы. Такая проверка помогает убедиться, что открыт нужный файл и программа обращается к существующему столбцу label . Пустые метки следует считать до заполнения столбца, иначе результат изменится.\n\nСравним данные в таблице.\n№ Уровень Что нужно сделать Ожидаемый результат 1 1 Открыть таблицу сообщений и вывести размер 12 5 2 1 Посчитать пустые метки в label 12 3 2 Разметить сообщения по правилу и вывести количество классов needs_review=2;normal=5;spam=5 4 2 Вывести id сообщений, требующих проверки 5,9 5 2 Посчитать полные совпадения трёх разметчиков 8 6 2 Вывести id сообщений с разногласиями 5,9 7 2 Выбрать лучший вариант для пар изображений B,A,A,A 8 2 Исправить ошибочный код разметки, предложенный ИИ needs_review=2;normal=5;spam=5\n\nПри сравнении с ожидаемым результатом важны не только сами значения, но и формат вывода. Например, в задании 3 названия классов, знак = , числа и разделители должны образовать строку needs_review=2;normal=5;spam=5 . Лишние пояснения в выводе могут помешать автоматической проверке.\n\nВ заданиях 5 и 6 сравниваются ответы трёх разметчиков. Полным совпадением считается случай, когда все трое назначили объекту одну и ту же метку. Если хотя бы одна метка отличается, объект относится к сообщениям с разногласиями и требует отдельного анализа.\n\nПри исправлении кода, предложенного ИИ, необходимо проверять не только отсутствие синтаксических ошибок. Программа может выполняться, но неверно применять условие разметки. Надёжная проверка включает сопоставление логики кода с инструкцией и сравнение результата с ожидаемым распределением классов.\n\n### СЛАЙД 05. Практические задания · таблица 2/4\n\nПосмотрите на продолжение таблицы. 3 2 Разметить сообщения по правилу и вывести количество классов needs_review=2;normal=5;spam=5 4 2 Вывести id сообщений, требующих проверки 5,9\n\n### СЛАЙД 06. Практические задания · таблица 3/4\n\nПосмотрите на продолжение таблицы. 5 2 Посчитать полные совпадения трёх разметчиков 8 6 2 Вывести id сообщений с разногласиями 5,9\n\n### СЛАЙД 07. Практические задания · таблица 4/4\n\nПосмотрите на продолжение таблицы. 7 2 Выбрать лучший вариант для пар изображений B,A,A,A 8 2 Исправить ошибочный код разметки, предложенный ИИ needs_review=2;normal=5;spam=5\n\n### СЛАЙД 08. Групповая мини-задача\n\nВ группе из трёх человек распределите роли: разметчик, проверяющий, аналитик. Разметчик применяет инструкцию, проверяющий ищет спорные случаи, аналитик фиксирует итоговые метки и расхождения. Итог группы — таблица с метками и список id для дополнительной проверки.\n\nРазметчик должен указывать метку для каждого объекта, не изменяя правила по ходу работы. Проверяющий сопоставляет решение с инструкцией и отдельно отмечает случаи, для которых возможны разные толкования. Аналитик не просто подсчитывает ответы, а связывает каждое расхождение с конкретным id , чтобы объект можно было быстро найти в исходной таблице.\n\nПосле первого прохода участники сравнивают результаты. Если метки расходятся, решение следует обсуждать через пункты инструкции и признаки объекта, а не через мнение большинства. Если инструкция не даёт однозначного ответа, объект сохраняется в списке для дополнительной проверки.\n\nМини-проверка: если два участника выбрали spam , а третий — normal , можно ли считать разметку полностью согласованной? Нет: хотя одна метка получила большинство голосов, полного совпадения трёх ответов нет.\n\n### СЛАЙД 09. Частые ошибки\n\nРазмечать пример только по одному слову, не проверяя правило полностью. Отдельное слово может встречаться в сообщениях разных классов, поэтому необходимо учитывать все условия инструкции.\n\nСтавить spam там, где нет ссылки, но есть слово про приз или оплату. Наличие тематического слова само по себе не заменяет проверку обязательных признаков, указанных в правиле.\n\nНе использовать needs_review для спорных случаев. Попытка любой ценой выбрать spam или normal скрывает неопределённость и может добавить в датасет ошибочную метку.\n\nМенять инструкцию в середине работы. В результате одинаковые объекты могут получить разные метки только из-за того, что размечались в разное время.\n\nПутать метку с обычным входным признаком. Текст, наличие ссылки и другие свойства используются для принятия решения, а значение в label хранит итог этого решения.\n\nСчитать решение большинства полным совпадением. Для полного совпадения все разметчики должны выбрать одну и ту же метку.\n\nПроверять только итоговое количество классов. Верное распределение по количеству ещё не гарантирует, что метки назначены правильным объектам: две ошибочно переставленные метки могут не изменить общие числа.\n\n### СЛАЙД 10. Итог урока\n\nРазметка превращает набор сырых примеров в учебный датасет. Инструкция делает работу разметчиков согласованной. Проверка расхождений помогает находить спорные случаи. Чем аккуратнее метки, тем надёжнее данные для будущей модели.\n\nКачественный процесс разметки включает несколько последовательных действий: применение единой инструкции, фиксацию меток, поиск несовпадений и повторную проверку спорных объектов. При этом пустая метка, класс needs_review и разногласие между разметчиками обозначают разные ситуации и не должны смешиваться.\n\nПеред завершением работы необходимо проверить, что каждый объект имеет допустимую метку, одинаковые правила применены ко всем строкам, а id спорных сообщений сохранены для дальнейшего анализа. Такая проверка позволяет обнаружить ошибки до того, как датасет будет использован для обучения модели.\n\n### СЛАЙД 11. Разметка данных для задач ИИ · таблица 1/2\n\nВ этом практикуме используется фиксированная инструкция. Она нужна, чтобы разные разметчики принимали решения по одним и тем же правилам, а результат можно было проверить автоматически.\n\nДля каждого примера учитываются только два признака: наличие ссылки ( has_link ) и наличие слова, связанного с деньгами или призом ( has_money_or_prize_word ). Значение yes означает, что признак обнаружен, а no — что он не обнаружен.\n\nСравним данные в таблице.\nУсловие Метка has_link = yes и has_money_or_prize_word = yes spam has_link = no и has_money_or_prize_word = no normal любая другая ситуация needs_review\n\nТаким образом, метка spam ставится только тогда, когда одновременно обнаружены оба признака: и ссылка, и слово о деньгах или призе. Например, сообщение со ссылкой и упоминанием выигрыша по этой инструкции получает метку spam .\n\nМетка normal ставится только при одновременном отсутствии обоих признаков. Если в сообщении нет ссылки и нет слов, связанных с деньгами или призом, результатом будет normal .\n\nМетка needs_review означает, что пример спорный: его нельзя уверенно отнести к spam или normal только по двум признакам. Такой пример лучше отправить на дополнительную проверку, а не угадывать. К этой категории относятся обе смешанные ситуации: ссылка есть, но слова о деньгах или призе нет; либо такого рода слово есть, но ссылки нет.\n\nВажно:\n\nналичие только одного признака недостаточно для метки spam . Частая ошибка — считать любое сообщение со ссылкой спамом. В рамках этой инструкции такое сообщение получит needs_review , если второй признак отсутствует.\n\nПри разметке следует использовать названия меток точно в указанном виде: spam , normal или needs_review . Изменение регистра, пробелы или другие варианты написания могут помешать автоматической проверке.\n\nМини-проверка:\n\nесли has_link = yes , а has_money_or_prize_word = no , нужно выбрать needs_review , потому что выполнено условие «любая другая ситуация».\n\nМатериалы к практике\n\nДля выполнения заданий используются CSV-файлы с данными и стартовый Jupyter Notebook в формате IPYNB. При работе с файлами важно применять одну и ту же инструкцию ко всем примерам и сохранять метки в точном написании.\n\n### СЛАЙД 12. Разметка данных для задач ИИ · таблица 2/2\n\nПосмотрите на продолжение таблицы. любая другая ситуация needs_review\n\n### СЛАЙД 13. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 14. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Разметка данных для задач ИИ\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Практическое задание\n\n\n### Практическая работа в Jupyter Notebook\n\nОсновной файл практики — messages_for_labeling_1_14.csv. В нём есть текст сообщения, два простых признака и пустой столбец label. Результат работы — заполненный столбец label, подсчёт меток и проверка согласованности разметчиков.\n\nПрактические задания к уроку 1.14\n\nРазметка данных для задач ИИ\n\nКаждое задание содержит действие с измеримым результатом. Для автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nЗадания для платформы к уроку 1.14\n\nПроверка по схеме “код → stdout → ожидаемый вывод”\n\nВсе задания предполагают единый редактор кода. Проверяется только stdout. В выводе не должно быть поясняющего текста, кавычек или лишних пробелов.\n\n\n### 1. Размер таблицы сообщений\n\nТип: программная задача, уровень 1.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nОткрыть CSV и вывести количество строк и столбцов.\n\nОжидаемый вывод:\n\n\n```\n12 5\n```\n\nКлюч проверки: точное совпадение stdout. Открыт CSV; использовано shape; выведены два числа через пробел.\n\n\n#### Материалы к заданию\n\n\n### Задание 2. Пустые метки\n\n1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 2. Пустые метки\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 1.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nПосчитать, сколько строк пока не имеет метки label.\n\nОжидаемый вывод:\n\n12\n\nКлюч проверки: точное совпадение stdout. Корректно учтены пустые значения в label; выведено одно число.\n\nМатериалы к заданию\n\n\n### Задание 3. Автоматическая разметка по инструкции\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nЗаполнить label по правилу и вывести количество меток.\n\nПравило разметки — в элементе «Инструкция к практике».\n\nОжидаемый вывод:\n\n\n```\nneeds_review=2;normal=5;spam=5\n```\n\nКлюч проверки: точное совпадение stdout. Правило применено ко всем строкам; порядок вывода: needs_review, normal, spam.\n\n\n#### Материалы к заданию\n\n\n### Задание 4. Спорные сообщения\n\n1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 4. Спорные сообщения\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nВывести id строк, получивших needs_review.\n\nОжидаемый вывод:\n\n5,9\n\nКлюч проверки: точное совпадение stdout. Найдены только спорные id; вывод через запятую без пробелов.\n\nМатериалы к заданию\n\n\n### Задание 5. Согласованность разметчиков\n\n1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 5. Согласованность разметчиков\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл annotations_by_students_1_14.csv.\n\nУсловие:\n\nПосчитать, в скольких строках три разметчика дали одинаковую метку.\n\nОжидаемый вывод:\n\n8\n\nКлюч проверки: точное совпадение stdout. Сравнены annotator_1, annotator_2, annotator_3; выведено одно число.\n\nМатериалы к заданию\n\n\n### Задание 6. Разногласия разметчиков\n\n1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 6. Разногласия разметчиков\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл annotations_by_students_1_14.csv.\n\nУсловие:\n\nВывести id строк, где разметчики не совпали.\n\nОжидаемый вывод:\n\n5,9\n\nКлюч проверки: точное совпадение stdout. Выведены id спорных строк через запятую без пробелов.\n\nМатериалы к заданию\n\n\n### Задание 7. Разметка пар изображений\n\n1\n\nОбщий объем до 50 Мб\n\nЗанято: 0 Кб\n\nЗадание 7. Разметка пар изображений\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл image_pairs_for_labeling_1_14.csv.\n\nУсловие:\n\nПо описаниям выбрать вариант, лучше соответствующий запросу.\n\nОжидаемый вывод:\n\nB,A,A,A\n\nКлюч проверки: точное совпадение stdout. Выведены метки A/B в порядке строк через запятую без пробелов.\n\nМатериалы к заданию\n\n\n### Задание 8. Исправление кода ИИ\n\nДля автоматической проверки используется stdout: программа должна вывести только указанный результат без лишнего текста.\n\nТип: программная задача, уровень 2.\n\nВходные данные:\n\nфайл messages_for_labeling_1_14.csv.\n\nУсловие:\n\nИсправить функцию, которая неверно относит все примеры с призовыми словами к spam.\n\nОжидаемый вывод:\n\n\n```\nneeds_review=2;normal=5;spam=5\n```\n\nКлюч проверки: точное совпадение stdout. Спорные случаи не отнесены к spam; подсчёт совпадает с эталоном.\n\nСтартовый ошибочный фрагмент:\n\n\n```\ndef make_label(row):\n    if row['has_money_or_prize_word'] == 'yes':\n        return 'spam'\n    return 'normal'\n```\n\n\n#### Материалы к заданию\n\n\n### Дополнительное групповое задание уровня 3\n\n\n| Поле | Описание |\n| --- | --- |\n| Уровень сложности | 3 — самостоятельный выбор подхода |\n| Цель | Согласовать инструкцию разметки и оценить вклад участников группы. |\n| Условие | Команда из 3 человек размечает 12 сообщений, затем сравнивает результат с правилом и фиксирует спорные случаи. Роли: разметчик, проверяющий, аналитик. |\n| Ожидаемый результат | Заполненный CSV, список спорных id, краткая таблица вклада участников. |\n| Критерии оценки | Есть роли, файл с метками, список спорных id, вклад каждого участника описан конкретно. |\n\n\n#### Материалы к заданию\n\n\n### Таблицы из теоретической части\n\n\n| Понятие | Что означает | Пример |\n| --- | --- | --- |\n| Объект | Один пример из датасета | одно сообщение |\n| Класс | Категория, к которой относится объект | spam / normal / needs_review |\n| Метка | Правильный ответ, добавленный человеком или правилом | label = spam |\n| Инструкция разметчика | Правила, по которым ставятся метки | когда ставить spam, normal, needs_review |\n\n\n| № | Уровень | Что нужно сделать | Ожидаемый результат |\n| --- | --- | --- | --- |\n| 1 | 1 | Открыть таблицу сообщений и вывести размер | 12 5 |\n| 2 | 1 | Посчитать пустые метки в label | 12 |\n| 3 | 2 | Разметить сообщения по правилу и вывести количество классов | needs_review=2;normal=5;spam=5 |\n| 4 | 2 | Вывести id сообщений, требующих проверки | 5,9 |\n| 5 | 2 | Посчитать полные совпадения трёх разметчиков | 8 |\n| 6 | 2 | Вывести id сообщений с разногласиями | 5,9 |\n| 7 | 2 | Выбрать лучший вариант для пар изображений | B,A,A,A |\n| 8 | 2 | Исправить ошибочный код разметки, предложенный ИИ | needs_review=2;normal=5;spam=5 |\n\n\n| Условие | Метка |\n| --- | --- |\n| has_link = yes и has_money_or_prize_word = yes | spam |\n| has_link = no и has_money_or_prize_word = no | normal |\n| любая другая ситуация | needs_review |\n\n\n### Файлы данных\n\nПеред запуском программы скопируйте нужные файлы из папки «Данные» в рабочую папку рядом с программой. Имена файлов совпадают с именами в исходных примерах.\n\nannotations_by_students_1_14.csv\nimage_pairs_for_labeling_1_14.csv\nmessages_for_labeling_1_14.csv\nmessages_labeled_example_1_14.csv",
   "theory": [
     {
       "title": "Разметка данных для задач ИИ",
@@ -823,5 +1286,44 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "output",
+    "csv",
+    "tables",
+    "statistics",
+    "features",
+    "target",
+    "loops",
+    "conditions",
+    "logic",
+    "functions"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M01-L14-lecture.pdf",
+      "name": "Разметка данных для задач ИИ — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "479b871c4ee75c008c1ea4e1f2bfc26a803b1506d4c9496734f4297a95b1b27f",
+      "source": {
+        "path": "Снимки страниц.json / 652668241d2fa17c97ebbdaf, 0764f61f40da07bb76abc27b",
+        "sha256": "e4c382b2f73db2f8b1d46880bc1d83261bc062a3856cf333588f38eacf8eb924"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M01-L14-presentation.pdf",
+      "name": "Разметка данных для задач ИИ — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 14,
+      "sha256": "5bde442e57ac67b9c5b1b21a31da5b935629bc07f3bdb77e42f04a496792becc",
+      "source": {
+        "path": "Модуль 1/Занятие 14/Презентация — итоговая.pptx",
+        "sha256": "1c1e0edc1f06a2d01b4b4864251ae36f005bcc3f56e232354ce4777a86aed0f8"
+      }
+    }
   }
 }

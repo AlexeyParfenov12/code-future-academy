@@ -10,7 +10,7 @@
   "slideCount": 10,
   "fileCount": 3,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Качество данных - ошибки, пропуски, дубли  В этом занятии рассматривается тема «Качество данных - ошибки, пропуски, дубли». Будем опираться на примеры курса и",
+  "description": "В этом занятии рассматривается тема «Качество данных - ошибки, пропуски, дубли». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L13",
-      "statement": "Формулировка\n\nНапишите программу, которая открывает таблицу student_wellness_dirty_1_13.csv и выводит количество строк и столбцов через пробел.\n\nОжидаемый stdout\n\n\n```\n15 8\n```\n\nКритерии\n\nИспользован pd.read_csv(); размер получен через shape; выведены только два числа через пробел.",
+      "statement": "## Задание 1. Размер грязной таблицы\n\nФормулировка\n\nНапишите программу, которая открывает таблицу `student_wellness_dirty_1_13.csv` и выводит количество строк и столбцов через пробел.\n\nОжидаемый stdout\n\n```text\n15 8\n```\n\nКритерии\n\nИспользован pd.read_csv(); размер получен через shape; выведены только два числа через пробел.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab29f359bcb29e47d96b7ca",
@@ -37,17 +37,61 @@
         "1734550e29e1017e.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(*df.shape)",
+        "answer": "",
+        "explanation": "Размер таблицы получаем из shape. Первая строка CSV служит заголовком и не считается записью.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "15 8"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab29f359bcb29e47d96b7ca-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 13/Практика для студентов.md",
-        "sha256": "ab4dd84e3cb6ed98cefc14bc19b07f47a7628139b526ce5a6b40e6b7e51d95c7"
+        "elementId": "6ab29f359bcb29e47d96b7ca",
+        "archive": "Снимки страниц.json",
+        "sha256": "1b5f01c1208da23f379867fc55aa6bd27b96a46be1d990c7da5647780de81d98"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab29f779bcb29e47d96b7cb",
@@ -56,7 +100,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L13",
-      "statement": "Формулировка\n\nНапишите программу, которая выводит общее количество пропусков во всей таблице.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n3\n```\n\nКритерии\n\nПрименена проверка isna(); результат сведен к одному числу; stdout содержит только число.",
+      "statement": "## Задание 2. Общее число пропусков\n\nФормулировка\n\nНапишите программу, которая выводит общее количество пропусков во всей таблице.\n\nИсходные данные: файл `student_wellness_dirty_1_13.csv`.\n\nОжидаемый stdout\n\n```text\n3\n```\n\nКритерии\n\nПрименена проверка isna(); результат сведен к одному числу; stdout содержит только число.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab29f779bcb29e47d96b7cb",
@@ -73,17 +117,61 @@
         "1734550e29e1017e.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(df.isna().sum().sum())",
+        "answer": "",
+        "explanation": "isna даёт таблицу булевых индикаторов. Первая сумма считает пропуски по столбцам, вторая складывает эти количества.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "3"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab29f779bcb29e47d96b7cb-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 13/Практика для студентов.md",
-        "sha256": "ab4dd84e3cb6ed98cefc14bc19b07f47a7628139b526ce5a6b40e6b7e51d95c7"
+        "elementId": "6ab29f779bcb29e47d96b7cb",
+        "archive": "Снимки страниц.json",
+        "sha256": "16b093ffecb863149722733e16061589ce06c305ec9ec1127b0f77015b5e9fe6"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab29ff69bcb29e47d96b7cc",
@@ -92,7 +180,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L13",
-      "statement": "Формулировка\n\nНапишите программу, которая выводит количество полных дублей в таблице.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n1\n```\n\nКритерии\n\nИспользован duplicated().sum() ; stdout содержит только число дублей.",
+      "statement": "## Задание 3. Количество полных дублей\n\nФормулировка\n\nНапишите программу, которая выводит количество полных дублей в таблице.\n\nИсходные данные: файл `student_wellness_dirty_1_13.csv`.\n\nОжидаемый stdout\n\n```text\n1\n```\n\nКритерии\n\nИспользован `duplicated().sum()`; stdout содержит только число дублей.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab29ff69bcb29e47d96b7cc",
@@ -109,17 +197,61 @@
         "1734550e29e1017e.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(df.duplicated().sum())",
+        "answer": "",
+        "explanation": "duplicated помечает повторные полные строки, оставляя первое вхождение False. Сумма True — число лишних копий.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "1"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab29ff69bcb29e47d96b7cc-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 13/Практика для студентов.md",
-        "sha256": "ab4dd84e3cb6ed98cefc14bc19b07f47a7628139b526ce5a6b40e6b7e51d95c7"
+        "elementId": "6ab29ff69bcb29e47d96b7cc",
+        "archive": "Снимки страниц.json",
+        "sha256": "32f01887302189622f92acf3b0a2a2a28a8e72e9563d2f451acbebe35b918bf7"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab2a03d9bcb29e47d96b7cd",
@@ -128,7 +260,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L13",
-      "statement": "Формулировка\n\nНапишите программу, которая выводит максимальное значение в столбце age (метод max() ) как целое число.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n150\n```\n\nКритерии\n\nВыбран столбец age; найден максимум; результат приведен к int для стабильного вывода.",
+      "statement": "## Задание 4. Максимальный возраст\n\nФормулировка\n\nНапишите программу, которая выводит максимальное значение в столбце age (метод `max()`) как целое число.\n\nИсходные данные: файл `student_wellness_dirty_1_13.csv`.\n\nОжидаемый stdout\n\n```text\n150\n```\n\nКритерии\n\nВыбран столбец age; найден максимум; результат приведен к int для стабильного вывода.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab2a03d9bcb29e47d96b7cd",
@@ -145,17 +277,61 @@
         "1734550e29e1017e.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(int(df['age'].max()))",
+        "answer": "",
+        "explanation": "max показывает аномальное значение 150. Пока это диагностика исходной таблицы: до вычисления максимума ничего не очищаем.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "150"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab2a03d9bcb29e47d96b7cd-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 13/Практика для студентов.md",
-        "sha256": "ab4dd84e3cb6ed98cefc14bc19b07f47a7628139b526ce5a6b40e6b7e51d95c7"
+        "elementId": "6ab2a03d9bcb29e47d96b7cd",
+        "archive": "Снимки страниц.json",
+        "sha256": "aa0a7e715d4ec88de6021c3c1aee003b1ac9678597445ecc274aa2df326d8270"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab2a10f402619005f00ed6a",
@@ -164,7 +340,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L13",
-      "statement": "Формулировка\n\nНапишите программу, которая считает строки, где screen_time_hours меньше 0, и выводит это количество. Для подсчёта примените метод sum() к результату сравнения.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n1\n```\n\nКритерии\n\nИспользована фильтрация по условию; посчитано количество строк; stdout содержит одно число.",
+      "statement": "## Задание 5. Отрицательное экранное время\n\nФормулировка\n\nНапишите программу, которая считает строки, где `screen_time_hours` меньше 0, и выводит это количество. Для подсчёта примените метод `sum()` к результату сравнения.\n\nИсходные данные: файл `student_wellness_dirty_1_13.csv`.\n\nОжидаемый stdout\n\n```text\n1\n```\n\nКритерии\n\nИспользована фильтрация по условию; посчитано количество строк; stdout содержит одно число.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab2a10f402619005f00ed6a",
@@ -181,17 +357,61 @@
         "1734550e29e1017e.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint((df['screen_time_hours'] < 0).sum())",
+        "answer": "",
+        "explanation": "Сравнение выполняется для каждой строки. True считается единицей, поэтому сумма даёт количество отрицательных значений.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "1"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab2a10f402619005f00ed6a-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 13/Практика для студентов.md",
-        "sha256": "ab4dd84e3cb6ed98cefc14bc19b07f47a7628139b526ce5a6b40e6b7e51d95c7"
+        "elementId": "6ab2a10f402619005f00ed6a",
+        "archive": "Снимки страниц.json",
+        "sha256": "75c395f22dc6d0fd7792d0cdadec95425a4ea429e5210e87b0430ad8694e17c0"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab2a156402619005f00ed6b",
@@ -200,7 +420,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L13",
-      "statement": "Формулировка\n\nНапишите программу, которая выводит уникальные непустые значения stress_level (методы dropna() и unique() ) в алфавитном порядке через запятую.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\nhigh,hight,low,medium,medum\n```\n\nКритерии\n\nПолучены уникальные непустые значения; они отсортированы; вывод через запятую без пробелов.",
+      "statement": "## Задание 6. Категории уровня стресса до очистки\n\nФормулировка\n\nНапишите программу, которая выводит уникальные непустые значения `stress_level` (методы `dropna()` и `unique()`) в алфавитном порядке через запятую.\n\nИсходные данные: файл `student_wellness_dirty_1_13.csv`.\n\nОжидаемый stdout\n\n```text\nhigh,hight,low,medium,medum\n```\n\nКритерии\n\nПолучены уникальные непустые значения; они отсортированы; вывод через запятую без пробелов.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab2a156402619005f00ed6b",
@@ -217,17 +437,61 @@
         "1734550e29e1017e.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(','.join(sorted(df['stress_level'].dropna().unique())))",
+        "answer": "",
+        "explanation": "Сначала убираем пропуски, затем повторы. sorted задаёт алфавитный порядок, join выводит строку без добавочных пробелов.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "high,hight,low,medium,medum"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab2a156402619005f00ed6b-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 13/Практика для студентов.md",
-        "sha256": "ab4dd84e3cb6ed98cefc14bc19b07f47a7628139b526ce5a6b40e6b7e51d95c7"
+        "elementId": "6ab2a156402619005f00ed6b",
+        "archive": "Снимки страниц.json",
+        "sha256": "25829c9e890d078352dbbff593563c1974da35fb7e1f14722f6ad53288422a11"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab2a1a6402619005f00ed6c",
@@ -236,7 +500,7 @@
       "type": "debug",
       "moduleId": 1,
       "lessonId": "M01-L13",
-      "statement": "Формулировка\n\nИИ предложил неверную очистку и заменил правильное medium на medum. Напишите программу, которая с помощью replace() исправляет medum -> medium и hight -> high, а затем выводит уникальные значения stress\\_level ( unique() ) в алфавитном порядке через запятую.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\nhigh,low,medium\n```\n\nКритерии\n\nОшибочные категории исправлены в нужную сторону; вывод отсортирован; stdout содержит только строку категорий.",
+      "statement": "## Задание 7. Исправление категорий stress_level\n\nФормулировка\n\nИИ предложил неверную очистку и заменил правильное medium на medum. Напишите программу, которая с помощью `replace()` исправляет medum -> medium и hight -> high, а затем выводит уникальные значения stress\\_level (`unique()`) в алфавитном порядке через запятую.\n\nИсходные данные: файл `student_wellness_dirty_1_13.csv`.\n\nОжидаемый stdout\n\n```text\nhigh,low,medium\n```\n\nКритерии\n\nОшибочные категории исправлены в нужную сторону; вывод отсортирован; stdout содержит только строку категорий.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab2a1a6402619005f00ed6c",
@@ -253,17 +517,65 @@
         "1734550e29e1017e.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\ndf['stress_level'] = df['stress_level'].replace({'medum': 'medium', 'hight': 'high'})\nprint(','.join(sorted(df['stress_level'].dropna().unique())))",
+        "answer": "",
+        "explanation": "Исправляем опечатки в правильную сторону. Уже верные high и medium сохраняются; после замены уникальных категорий остаётся три.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "high,low,medium"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Вычисляем `df['stress_level'].replace({'medum': 'medium', 'hight': 'high'})` и сохраняем результат в `df['stress_level']`."
+          },
+          {
+            "line": 4,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab2a1a6402619005f00ed6c-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 13/Практика для студентов.md",
-        "sha256": "ab4dd84e3cb6ed98cefc14bc19b07f47a7628139b526ce5a6b40e6b7e51d95c7"
+        "elementId": "6ab2a1a6402619005f00ed6c",
+        "archive": "Снимки страниц.json",
+        "sha256": "c3e8b911ed4c33dd7c410d00149164007518604bcab02e6e3946a1d02b5d2354"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab2a21a402619005f00ed6d",
@@ -272,7 +584,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L13",
-      "statement": "Формулировка\n\nНапишите программу, которая удаляет полные дубли и выводит новый размер таблицы: строки и столбцы через пробел.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n14 8\n```\n\nКритерии\n\nПрименен drop_duplicates(); исходная таблица не изменяется случайно; выведены два числа через пробел.",
+      "statement": "## Задание 8. Удаление дублей\n\nФормулировка\n\nНапишите программу, которая удаляет полные дубли и выводит новый размер таблицы: строки и столбцы через пробел.\n\nИсходные данные: файл `student_wellness_dirty_1_13.csv`.\n\nОжидаемый stdout\n\n```text\n14 8\n```\n\nКритерии\n\nПрименен drop_duplicates(); исходная таблица не изменяется случайно; выведены два числа через пробел.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab2a21a402619005f00ed6d",
@@ -289,17 +601,65 @@
         "1734550e29e1017e.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nclean = df.drop_duplicates()\nprint(*clean.shape)",
+        "answer": "",
+        "explanation": "drop_duplicates возвращает таблицу без повторных полных строк. Число столбцов сохраняется, число строк уменьшается на один.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "14 8"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Вычисляем `df.drop_duplicates()` и сохраняем результат в `clean`."
+          },
+          {
+            "line": 4,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab2a21a402619005f00ed6d-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 13/Практика для студентов.md",
-        "sha256": "ab4dd84e3cb6ed98cefc14bc19b07f47a7628139b526ce5a6b40e6b7e51d95c7"
+        "elementId": "6ab2a21a402619005f00ed6d",
+        "archive": "Снимки страниц.json",
+        "sha256": "15a3735fb7cb6181f60d2f2d7deb215992833afa05f5b07ab47e5eead76c0508"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     },
     {
       "id": "T-6ab2a269402619005f00ed6e",
@@ -308,7 +668,7 @@
       "type": "file",
       "moduleId": 1,
       "lessonId": "M01-L13",
-      "statement": "Формулировка\n\nУдалите дубли. Исправьте категории YES и да в uses_ai_for_study на yes, medum на medium, hight на high. Значения age вне диапазона 10..25, sleep_hours вне 0..16 и screen_time_hours вне 0..16 замените на пропуск. Выведите общее число пропусков после очистки.\n\nИспользуйте drop_duplicates() , replace() и для подсчёта пропусков — isna() .\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n6\n```\n\nКритерии\n\nУдалены дубли; исправлены категории; неправдоподобные числа заменены на пропуск; stdout содержит только итоговое число.",
+      "statement": "## Задание 9. Полная базовая очистка по правилам\n\nФормулировка\n\nУдалите дубли. Исправьте категории YES и да в uses_ai_for_study на yes, medum на medium, hight на high. Значения age вне диапазона 10..25, sleep_hours вне 0..16 и screen_time_hours вне 0..16 замените на пропуск. Выведите общее число пропусков после очистки.\n\nИспользуйте `drop_duplicates()`, `replace()` и для подсчёта пропусков — `isna()`.\n\nИсходные данные: файл `student_wellness_dirty_1_13.csv`.\n\nОжидаемый stdout\n\n```text\n6\n```\n\nКритерии\n\nУдалены дубли; исправлены категории; неправдоподобные числа заменены на пропуск; stdout содержит только итоговое число.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6ab2a269402619005f00ed6e",
@@ -325,24 +685,93 @@
         "1734550e29e1017e.csv"
       ],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L13",
+        "status": "published",
+        "kind": "code",
+        "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\ndf = df.drop_duplicates().copy()\ndf['uses_ai_for_study'] = df['uses_ai_for_study'].replace({'YES': 'yes', 'да': 'yes'})\ndf['stress_level'] = df['stress_level'].replace({'medum': 'medium', 'hight': 'high'})\nfor column, low, high in [('age', 10, 25), ('sleep_hours', 0, 16), ('screen_time_hours', 0, 16)]:\n    invalid = ~df[column].between(low, high)\n    df.loc[invalid, column] = float('nan')\nprint(df.isna().sum().sum())",
+        "answer": "",
+        "explanation": "Сначала исключаем дубли, затем унифицируем категории. between включает обе границы; всё за ними заменяем пропуском. Исходные пропуски тоже сохраняются. Итоговая сумма isna учитывает и старые, и новые пустые ячейки.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "6"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+          },
+          {
+            "line": 3,
+            "text": "Вычисляем `df.drop_duplicates().copy()` и сохраняем результат в `df`."
+          },
+          {
+            "line": 4,
+            "text": "Вычисляем `df['uses_ai_for_study'].replace({'YES': 'yes', 'да': 'yes'})` и сохраняем результат в `df['uses_ai_for_study']`."
+          },
+          {
+            "line": 5,
+            "text": "Вычисляем `df['stress_level'].replace({'medum': 'medium', 'hight': 'high'})` и сохраняем результат в `df['stress_level']`."
+          },
+          {
+            "line": 6,
+            "text": "Перебираем `[('age', 10, 25), ('sleep_hours', 0, 16), ('screen_time_hours', 0, 16)]`; очередное значение доступно через `(column, low, high)`."
+          },
+          {
+            "line": 7,
+            "text": "Вычисляем `~df[column].between(low, high)` и сохраняем результат в `invalid`."
+          },
+          {
+            "line": 8,
+            "text": "Вычисляем `float('nan')` и сохраняем результат в `df.loc[invalid, column]`."
+          },
+          {
+            "line": 9,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "csv",
+          "tables",
+          "statistics"
+        ],
+        "id": "T-6ab2a269402619005f00ed6e-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 13/Практика для студентов.md",
-        "sha256": "ab4dd84e3cb6ed98cefc14bc19b07f47a7628139b526ce5a6b40e6b7e51d95c7"
+        "elementId": "6ab2a269402619005f00ed6e",
+        "archive": "Снимки страниц.json",
+        "sha256": "e11ee42def4145f280eb6db700f4392ccd2222b0e6e2e75b6afea95461603210"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "csv",
+        "tables",
+        "statistics"
+      ]
     }
   ],
-  "lecture": "# Качество данных - ошибки, пропуски, дубли\n\n### СЛАЙД 01. Качество данных - ошибки, пропуски, дубли\n\nВ этом занятии рассматривается тема «Качество данных - ошибки, пропуски, дубли». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Команды pandas, которые понадобятся\n\nДля проверки используется библиотека pandas. После чтения CSV-файла данные сохраняются в объекте DataFrame — таблице со строками и именованными столбцами.\n\nПример на слайде:\nimport pandas as pd\n\nПример на слайде:\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\n\nПример на слайде:\ndf.isna().sum()\n\nПример на слайде:\ndf.duplicated().sum()\n\nПример на слайде:\ndf['stress_level'].unique()\n\nПример на слайде:\ndf.drop_duplicates()\n\nПример на слайде:\ndf['stress_level'].replace({'medum':'medium'})\n\nКоманды решают разные задачи:\n\ndf.isna() отмечает пропущенные ячейки значениями True, а последовательные вызовы sum() позволяют подсчитать их;\n\ndf.duplicated() отмечает строки, которые полностью повторяют уже встречавшиеся строки;\n\nunique() возвращает набор различных значений выбранного столбца и помогает заметить лишние варианты написания;\n\ndrop_duplicates() создаёт таблицу без повторяющихся строк;\n\nreplace() заменяет значения по указанному словарю соответствий.\n\nБольшинство операций pandas в этих примерах возвращают новый результат, но сами по себе не изменяют исходный DataFrame. Поэтому результат очистки нужно присвоить переменной или столбцу. Например, вызов df.drop_duplicates() позволяет увидеть таблицу без дублей, а запись clean = df.drop_duplicates().copy() сохраняет очищенную таблицу в переменной clean.\n\nПри подсчёте важно следить за количеством вызовов sum(). Выражение df.isna().sum() показывает число пропусков отдельно в каждом столбце, а df.isna().sum().sum() даёт одно число — общее количество пропущенных ячеек во всей таблице.\n\n### СЛАЙД 03. Практические задания\n\nВ этом уроке задания разделены на уровень 1 и уровень 2. Уровень 1 выполняется по образцу. Уровень 2 выполняется в изменённых условиях: нужно применить похожую команду к другому столбцу или объединить несколько действий.\n\nПеред выполнением заданий полезно сначала загрузить исходный файл в переменную df и не перезаписывать её. Тогда результаты до очистки можно будет сравнить с таблицей clean после очистки. Такое сравнение помогает убедиться, что нужные строки или значения действительно изменились, а остальные данные сохранились.\n\nСравним данные в таблице.\n№ Уровень Название Что должна вывести программа 1 1 Размер грязной таблицы 15 8 2 1 Общее число пропусков 3 3 2 Количество полных дублей 1 4 2 Максимальный возраст 150 5 2 Отрицательное экранное время 1 6 2 Категории уровня стресса до очистки high,hight,low,medium,medum 7 2 Исправление категорий stress_level high,low,medium 8 2 Удаление дублей 14 8 9 2 Полная базовая очистка по правилам 6\n\nРазмер таблицы задаётся двумя числами: количеством строк и количеством столбцов. Поэтому результат 15 8 означает, что в исходной таблице 15 строк и 8 столбцов. После удаления одного полного дубля ожидаемый размер становится 14 8: число строк уменьшается, а набор столбцов остаётся прежним.\n\nЗадания на максимальный возраст и отрицательное экранное время проверяют не пропуски, а логические ограничения. Максимум помогает быстро заметить слишком большое значение, а условие screen_time_hours < 0 выделяет значения, которые не могут обозначать продолжительность.\n\nПри проверке категорий порядок значений может зависеть от способа их получения и сортировки. Существенно, чтобы до очистки были обнаружены варианты high, hight, low, medium и medum, а после замен остались только high, low и medium.\n\n### СЛАЙД 04. Пример: проверяем пропуски\n\nПример на слайде:\nimport pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(df.isna().sum().sum())\n\nЕсли программа выводит 3, значит в таблице найдено три пропущенных значения. Важно не только получить число, но и понять смысл: три ячейки не содержат информации, поэтому дальнейший анализ без проверки может быть неточным.\n\nОбщее число не показывает, в каких именно столбцах находятся пропуски. Для уточнения можно отдельно рассмотреть результат df.isna().sum(): он содержит количество пустых ячеек для каждого столбца. Это помогает выбрать правило обработки с учётом смысла конкретного признака.\n\nЧастая ошибка — считать, что число 3 означает три неполные строки. На самом деле подсчитываются ячейки. Несколько пропусков могут находиться как в трёх разных строках, так и в одной строке.\n\nМини-проверка: какой результат нужен для поиска проблемного столбца — общее число df.isna().sum().sum() или подсчёт по столбцам df.isna().sum()? Для поиска столбца нужен второй вариант.\n\n### СЛАЙД 05. Аккуратная очистка\n\nОчистка не означает, что нужно угадывать правильные значения. Если возраст указан как 150, нельзя просто заменить его на 15 без источника. Надёжнее пометить такое значение как неизвестное. Очевидные опечатки категорий можно исправить по правилу: medum → medium, hight → high.\n\nПеред заменой необходимо сформулировать правило. Для возраста в примере допустимым считается диапазон от 10 до 25 лет включительно. Значения меньше 10 и больше 25 помечаются как неизвестные, а граничные значения 10 и 25 сохраняются.\n\nПример на слайде:\nclean = df.drop_duplicates().copy()\nclean['stress_level'] = clean['stress_level'].replace({'medum':'medium', 'hight':'high'})\nclean.loc[(clean['age'] < 10) | (clean['age'] > 25), 'age'] = pd.NA\n\nОчистка выполняется последовательно. Сначала удаляются полные дубли и создаётся независимая копия таблицы clean. Затем в столбце stress_level исправляются два известных варианта опечаток. После этого loc выбирает строки с возрастом вне допустимого диапазона и записывает pd.NA только в столбец age этих строк.\n\nЗнак | в условии означает «или»: значение считается проблемным, если возраст меньше 10 или больше 25. Каждая часть условия заключена в скобки, потому что pandas сравнивает значения столбца поэлементно.\n\nЗамена на pd.NA не восстанавливает настоящий возраст школьника. Она честно фиксирует, что после проверки корректное значение неизвестно. В дальнейшем такие ячейки можно отдельно подсчитать и учесть при анализе.\n\nНе следует удалять строку только потому, что в одной ячейке обнаружена проблема: вместе с ней будет потеряна корректная информация из остальных столбцов. Удаление строки допустимо лишь тогда, когда это предусмотрено правилом анализа. В данном примере сомнительный возраст заменяется пропуском, а сама строка сохраняется.\n\nПосле очистки нужна повторная проверка: следует снова посмотреть размер таблицы, число дублей, уникальные категории stress_level и значения, выходящие за допустимые диапазоны. Очистка считается завершённой не после выполнения команд, а после подтверждения, что правила сработали ожидаемым образом.\n\n### СЛАЙД 06. Итог урока\n\nгрязная таблица может дать неверный анализ;\n\nпропуски, дубли, опечатки и странные числа ищутся разными командами;\n\nпропуск и недопустимое значение — разные виды проблем и требуют разных проверок;\n\nочистка должна идти по понятным правилам;\n\nисходную таблицу полезно сохранять отдельно, чтобы сравнивать данные до и после обработки;\n\nпосле исправлений необходимо повторно проверить размер, пропуски, дубли, категории и числовые диапазоны;\n\nмодель ИИ учится на тех данных, которые ей дали; если данные плохие, результат тоже может быть ненадёжным.\n\nБазовый порядок работы с данными выглядит так: загрузить таблицу, изучить её размер и содержимое, найти проблемы, применить обоснованные правила очистки и проверить результат. Такой порядок делает изменения воспроизводимыми: другой участник команды сможет понять, какие значения были изменены и почему.\n\n### СЛАЙД 07. Цели практикума\n\nоткрыть CSV-файл с учебной грязной таблицей и убедиться, что данные прочитаны в ожидаемом виде;\n\nпроверить размер таблицы, названия столбцов и типы представленных в них значений;\n\nнайти пропуски, дубли, ошибки категорий и странные числа;\n\nразличать отсутствие значения, повтор записи и несогласованный вариант написания категории;\n\nисправить простые проблемы по понятным правилам и проверить результат после каждого изменения;\n\nсравнить количество строк или набор значений до и после очистки;\n\nполучить таблицу, более пригодную для дальнейшего анализа;\n\nпонять, почему качество данных влияет на будущую работу ИИ: модель обучается на переданных ей примерах, поэтому ошибки и несогласованности в них могут повлиять на найденные закономерности.\n\nВо время практикума полезно разделять обнаружение и исправление проблемы. Сначала программа должна показать, что именно найдено, а затем отдельное действие меняет данные. После исправления проверка запускается повторно: это помогает убедиться, что проблема устранена и другие записи не были изменены случайно.\n\n### СЛАЙД 08. Материалы к практике\n\nДля работы понадобятся ноутбук с заданиями и два CSV-файла. Исходная грязная таблица используется для поиска проблем, а частично очищенная версия — для следующих этапов проверки и обработки. Файлы следует сохранить с исходными именами, чтобы пути к ним в учебном коде оставались корректными.\n\nПеред началом работы необходимо проверить, что оба CSV-файла доступны из ноутбука. Если файл не найден, программа не сможет открыть таблицу, а проверка качества данных не начнётся.\n\n### СЛАЙД 09. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 10. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Качество данных - ошибки, пропуски, дубли\n\n### СЛАЙД 01. Качество данных - ошибки, пропуски, дубли\n\nВ этом занятии рассматривается тема «Качество данных - ошибки, пропуски, дубли». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Команды pandas, которые понадобятся\n\nДля проверки используется библиотека pandas. После чтения CSV-файла данные сохраняются в объекте DataFrame — таблице со строками и именованными столбцами.\n\n```python\nimport pandas as pd\n```\n\n\n\n```python\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\n```\n\n\n\n```python\ndf.isna().sum()\n```\n\n\n\n```python\ndf.duplicated().sum()\n```\n\n\n\n\n\n```python\ndf['stress_level'].unique()\n```\n\n\n\n\n\n```python\ndf.drop_duplicates()\n```\n\n\n\n\n\n```python\ndf['stress_level'].replace({'medum':'medium'})\n```\n\n\n\nКоманды решают разные задачи:\n\ndf.isna() отмечает пропущенные ячейки значениями True, а последовательные вызовы `sum()` позволяют подсчитать их;\n\ndf.duplicated() отмечает строки, которые полностью повторяют уже встречавшиеся строки;\n\nunique() возвращает набор различных значений выбранного столбца и помогает заметить лишние варианты написания;\n\ndrop_duplicates() создаёт таблицу без повторяющихся строк;\n\nreplace() заменяет значения по указанному словарю соответствий.\n\nБольшинство операций pandas в этих примерах возвращают новый результат, но сами по себе не изменяют исходный DataFrame. Поэтому результат очистки нужно присвоить переменной или столбцу. Например, вызов df.drop_duplicates() позволяет увидеть таблицу без дублей, а запись clean = df.drop_duplicates().copy() сохраняет очищенную таблицу в переменной clean.\n\nПри подсчёте важно следить за количеством вызовов `sum()`. Выражение df.isna().`sum()` показывает число пропусков отдельно в каждом столбце, а df.isna().`sum()`.`sum()` даёт одно число — общее количество пропущенных ячеек во всей таблице.\n\n### СЛАЙД 03. Практические задания\n\nВ этом уроке задания разделены на уровень 1 и уровень 2. Уровень 1 выполняется по образцу. Уровень 2 выполняется в изменённых условиях: нужно применить похожую команду к другому столбцу или объединить несколько действий.\n\nПеред выполнением заданий полезно сначала загрузить исходный файл в переменную df и не перезаписывать её. Тогда результаты до очистки можно будет сравнить с таблицей clean после очистки. Такое сравнение помогает убедиться, что нужные строки или значения действительно изменились, а остальные данные сохранились.\n\nСравним данные в таблице.\n№ Уровень Название Что должна вывести программа 1 1 Размер грязной таблицы 15 8 2 1 Общее число пропусков 3 3 2 Количество полных дублей 1 4 2 Максимальный возраст 150 5 2 Отрицательное экранное время 1 6 2 Категории уровня стресса до очистки high,hight,low,medium,medum 7 2 Исправление категорий stress_level high,low,medium 8 2 Удаление дублей 14 8 9 2 Полная базовая очистка по правилам 6\n\nРазмер таблицы задаётся двумя числами: количеством строк и количеством столбцов. Поэтому результат 15 8 означает, что в исходной таблице 15 строк и 8 столбцов. После удаления одного полного дубля ожидаемый размер становится 14 8: число строк уменьшается, а набор столбцов остаётся прежним.\n\nЗадания на максимальный возраст и отрицательное экранное время проверяют не пропуски, а логические ограничения. Максимум помогает быстро заметить слишком большое значение, а условие screen_time_hours < 0 выделяет значения, которые не могут обозначать продолжительность.\n\nПри проверке категорий порядок значений может зависеть от способа их получения и сортировки. Существенно, чтобы до очистки были обнаружены варианты high, hight, low, medium и medum, а после замен остались только high, low и medium.\n\n### СЛАЙД 04. Пример: проверяем пропуски\n\n\n\n```python\nimport pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(df.isna().sum().sum())\n```\n\n\n\nЕсли программа выводит 3, значит в таблице найдено три пропущенных значения. Важно не только получить число, но и понять смысл: три ячейки не содержат информации, поэтому дальнейший анализ без проверки может быть неточным.\n\nОбщее число не показывает, в каких именно столбцах находятся пропуски. Для уточнения можно отдельно рассмотреть результат df.isna().`sum()`: он содержит количество пустых ячеек для каждого столбца. Это помогает выбрать правило обработки с учётом смысла конкретного признака.\n\nЧастая ошибка — считать, что число 3 означает три неполные строки. На самом деле подсчитываются ячейки. Несколько пропусков могут находиться как в трёх разных строках, так и в одной строке.\n\nМини-проверка: какой результат нужен для поиска проблемного столбца — общее число df.isna().`sum()`.`sum()` или подсчёт по столбцам df.isna().`sum()`? Для поиска столбца нужен второй вариант.\n\n### СЛАЙД 05. Аккуратная очистка\n\nОчистка не означает, что нужно угадывать правильные значения. Если возраст указан как 150, нельзя просто заменить его на 15 без источника. Надёжнее пометить такое значение как неизвестное. Очевидные опечатки категорий можно исправить по правилу: medum → medium, hight → high.\n\nПеред заменой необходимо сформулировать правило. Для возраста в примере допустимым считается диапазон от 10 до 25 лет включительно. Значения меньше 10 и больше 25 помечаются как неизвестные, а граничные значения 10 и 25 сохраняются.\n\n\n\n```python\nclean = df.drop_duplicates().copy()\nclean['stress_level'] = clean['stress_level'].replace({'medum':'medium', 'hight':'high'})\nclean.loc[(clean['age'] < 10) | (clean['age'] > 25), 'age'] = pd.NA\n```\n\n\n\nОчистка выполняется последовательно. Сначала удаляются полные дубли и создаётся независимая копия таблицы clean. Затем в столбце stress_level исправляются два известных варианта опечаток. После этого loc выбирает строки с возрастом вне допустимого диапазона и записывает pd.NA только в столбец age этих строк.\n\nЗнак | в условии означает «или»: значение считается проблемным, если возраст меньше 10 или больше 25. Каждая часть условия заключена в скобки, потому что pandas сравнивает значения столбца поэлементно.\n\nЗамена на pd.NA не восстанавливает настоящий возраст школьника. Она честно фиксирует, что после проверки корректное значение неизвестно. В дальнейшем такие ячейки можно отдельно подсчитать и учесть при анализе.\n\nНе следует удалять строку только потому, что в одной ячейке обнаружена проблема: вместе с ней будет потеряна корректная информация из остальных столбцов. Удаление строки допустимо лишь тогда, когда это предусмотрено правилом анализа. В данном примере сомнительный возраст заменяется пропуском, а сама строка сохраняется.\n\nПосле очистки нужна повторная проверка: следует снова посмотреть размер таблицы, число дублей, уникальные категории stress_level и значения, выходящие за допустимые диапазоны. Очистка считается завершённой не после выполнения команд, а после подтверждения, что правила сработали ожидаемым образом.\n\n### СЛАЙД 06. Итог урока\n\nгрязная таблица может дать неверный анализ;\n\nпропуски, дубли, опечатки и странные числа ищутся разными командами;\n\nпропуск и недопустимое значение — разные виды проблем и требуют разных проверок;\n\nочистка должна идти по понятным правилам;\n\nисходную таблицу полезно сохранять отдельно, чтобы сравнивать данные до и после обработки;\n\nпосле исправлений необходимо повторно проверить размер, пропуски, дубли, категории и числовые диапазоны;\n\nмодель ИИ учится на тех данных, которые ей дали; если данные плохие, результат тоже может быть ненадёжным.\n\nБазовый порядок работы с данными выглядит так: загрузить таблицу, изучить её размер и содержимое, найти проблемы, применить обоснованные правила очистки и проверить результат. Такой порядок делает изменения воспроизводимыми: другой участник команды сможет понять, какие значения были изменены и почему.\n\n### СЛАЙД 07. Цели практикума\n\nоткрыть CSV-файл с учебной грязной таблицей и убедиться, что данные прочитаны в ожидаемом виде;\n\nпроверить размер таблицы, названия столбцов и типы представленных в них значений;\n\nнайти пропуски, дубли, ошибки категорий и странные числа;\n\nразличать отсутствие значения, повтор записи и несогласованный вариант написания категории;\n\nисправить простые проблемы по понятным правилам и проверить результат после каждого изменения;\n\nсравнить количество строк или набор значений до и после очистки;\n\nполучить таблицу, более пригодную для дальнейшего анализа;\n\nпонять, почему качество данных влияет на будущую работу ИИ: модель обучается на переданных ей примерах, поэтому ошибки и несогласованности в них могут повлиять на найденные закономерности.\n\nВо время практикума полезно разделять обнаружение и исправление проблемы. Сначала программа должна показать, что именно найдено, а затем отдельное действие меняет данные. После исправления проверка запускается повторно: это помогает убедиться, что проблема устранена и другие записи не были изменены случайно.\n\n### СЛАЙД 08. Материалы к практике\n\nДля работы понадобятся ноутбук с заданиями и два CSV-файла. Исходная грязная таблица используется для поиска проблем, а частично очищенная версия — для следующих этапов проверки и обработки. Файлы следует сохранить с исходными именами, чтобы пути к ним в учебном коде оставались корректными.\n\nПеред началом работы необходимо проверить, что оба CSV-файла доступны из ноутбука. Если файл не найден, программа не сможет открыть таблицу, а проверка качества данных не начнётся.\n\n### СЛАЙД 09. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 10. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Качество данных - ошибки, пропуски, дубли\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Задание №1\n\n\n### Задание 1. Размер грязной таблицы\n\nФормулировка\n\nНапишите программу, которая открывает таблицу student_wellness_dirty_1_13.csv и выводит количество строк и столбцов через пробел.\n\nОжидаемый stdout\n\n\n```\n15 8\n```\n\nКритерии\n\nИспользован pd.read_csv(); размер получен через shape; выведены только два числа через пробел.\n\n\n### Задание №2\n\n\n### Задание 2. Общее число пропусков\n\nФормулировка\n\nНапишите программу, которая выводит общее количество пропусков во всей таблице.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n3\n```\n\nКритерии\n\nПрименена проверка isna(); результат сведен к одному числу; stdout содержит только число.\n\n\n### Задание №3\n\n\n### Задание 3. Количество полных дублей\n\nФормулировка\n\nНапишите программу, которая выводит количество полных дублей в таблице.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n1\n```\n\nКритерии\n\nИспользован duplicated().sum() ; stdout содержит только число дублей.\n\n\n### Задание №4\n\n\n### Задание 4. Максимальный возраст\n\nФормулировка\n\nНапишите программу, которая выводит максимальное значение в столбце age (метод max() ) как целое число.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n150\n```\n\nКритерии\n\nВыбран столбец age; найден максимум; результат приведен к int для стабильного вывода.\n\n\n### Задание №5\n\n\n### Задание 5. Отрицательное экранное время\n\nФормулировка\n\nНапишите программу, которая считает строки, где screen_time_hours меньше 0, и выводит это количество. Для подсчёта примените метод sum() к результату сравнения.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n1\n```\n\nКритерии\n\nИспользована фильтрация по условию; посчитано количество строк; stdout содержит одно число.\n\n\n### Задание №6\n\n\n### Задание 6. Категории уровня стресса до очистки\n\nФормулировка\n\nНапишите программу, которая выводит уникальные непустые значения stress_level (методы dropna() и unique() ) в алфавитном порядке через запятую.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\nhigh,hight,low,medium,medum\n```\n\nКритерии\n\nПолучены уникальные непустые значения; они отсортированы; вывод через запятую без пробелов.\n\n\n### Задание №7\n\n\n### Задание 7. Исправление категорий stress_level\n\nФормулировка\n\nИИ предложил неверную очистку и заменил правильное medium на medum. Напишите программу, которая с помощью replace() исправляет medum -> medium и hight -> high, а затем выводит уникальные значения stress\\_level ( unique() ) в алфавитном порядке через запятую.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\nhigh,low,medium\n```\n\nКритерии\n\nОшибочные категории исправлены в нужную сторону; вывод отсортирован; stdout содержит только строку категорий.\n\n\n### Задание №8\n\n\n### Задание 8. Удаление дублей\n\nФормулировка\n\nНапишите программу, которая удаляет полные дубли и выводит новый размер таблицы: строки и столбцы через пробел.\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n14 8\n```\n\nКритерии\n\nПрименен drop_duplicates(); исходная таблица не изменяется случайно; выведены два числа через пробел.\n\n\n### Задание №9\n\n\n### Задание 9. Полная базовая очистка по правилам\n\nФормулировка\n\nУдалите дубли. Исправьте категории YES и да в uses_ai_for_study на yes, medum на medium, hight на high. Значения age вне диапазона 10..25, sleep_hours вне 0..16 и screen_time_hours вне 0..16 замените на пропуск. Выведите общее число пропусков после очистки.\n\nИспользуйте drop_duplicates() , replace() и для подсчёта пропусков — isna() .\n\nИсходные данные: файл student_wellness_dirty_1_13.csv .\n\nОжидаемый stdout\n\n\n```\n6\n```\n\nКритерии\n\nУдалены дубли; исправлены категории; неправдоподобные числа заменены на пропуск; stdout содержит только итоговое число.\n\n\n### Таблицы из теоретической части\n\n\n| № | Уровень | Название | Что должна вывести программа |\n| --- | --- | --- | --- |\n| 1 | 1 | Размер грязной таблицы | 15 8 |\n| 2 | 1 | Общее число пропусков | 3 |\n| 3 | 2 | Количество полных дублей | 1 |\n| 4 | 2 | Максимальный возраст | 150 |\n| 5 | 2 | Отрицательное экранное время | 1 |\n| 6 | 2 | Категории уровня стресса до очистки | high,hight,low,medium,medum |\n| 7 | 2 | Исправление категорий stress_level | high,low,medium |\n| 8 | 2 | Удаление дублей | 14 8 |\n| 9 | 2 | Полная базовая очистка по правилам | 6 |\n\n\n### Файлы данных\n\nПеред запуском программы скопируйте нужные файлы из папки «Данные» в рабочую папку рядом с программой. Имена файлов совпадают с именами в исходных примерах.\n\nstudent_wellness_dirty_1_13.csv\nstudent_wellness_partly_clean_1_13.csv",
   "theory": [
     {
       "title": "Качество данных - ошибки, пропуски, дубли",
@@ -731,5 +1160,39 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "output",
+    "csv",
+    "tables",
+    "statistics",
+    "loops"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M01-L13-lecture.pdf",
+      "name": "Качество данных - ошибки, пропуски, дубли — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "e07128beadd3cd5ce0efbb07950cf6fa14d4e96ae90e097289e6d4185adf224d",
+      "source": {
+        "path": "Снимки страниц.json / 84ead9c52c1e2fd5a06de687, be104f0c63194e4162d060bf",
+        "sha256": "1476d7a760358c0e9b7ad7b2027acf589579f83cdd05df83346bb9fbf8a42846"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M01-L13-presentation.pdf",
+      "name": "Качество данных - ошибки, пропуски, дубли — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 10,
+      "sha256": "01213d526ca522c6c54867a7ed8f7e22fa8c595307bbc65a23f4e69121e04fba",
+      "source": {
+        "path": "Модуль 1/Занятие 13/Презентация — итоговая.pptx",
+        "sha256": "604525347551f89d0b9806db9bf080d3f9fc75f96ec6650628db7d5eddbe4bc6"
+      }
+    }
   }
 }

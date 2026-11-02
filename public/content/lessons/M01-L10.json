@@ -10,7 +10,7 @@
   "slideCount": 17,
   "fileCount": 0,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Функции - разбиение программы на части  В этом занятии рассматривается тема «Функции - разбиение программы на части». Будем опираться на примеры курса и провер",
+  "description": "В этом занятии рассматривается тема «Функции - разбиение программы на части». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "choice",
       "moduleId": 1,
       "lessonId": "M01-L10",
-      "statement": "Задача 1. Что выведет программа – функции высшего порядка (2 из 8)\nТема 10. Занятие 10. Функции - разбиение программы на части\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nУсловие\nПрочитайте код. Не запуская его, определите вывод.\ndef apply_filter(table, func):\n    result = []\n    for row in table:\n        if func(row): result.append(row)\n    return result\n\ncatalog = [\n    {\"name\": \"Наушники\",  \"price\": 1500, \"rating\": 4.7},\n    {\"name\": \"Мышь\",       \"price\":  890, \"rating\": 3.9},\n    {\"name\": \"Кабель\",     \"price\":  200, \"rating\": 4.2},\n]\nres = apply_filter(catalog, lambda p: p[\"rating\"] >= 4.0)\nprint(len(res), res[0][\"name\"])",
+      "statement": "Условие\n\nПрочитайте код. Не запуская его, определите вывод.\n\n```text\ndef apply_filter(table, func):\n    result = []\n    for row in table:\n        if func(row): result.append(row)\n    return result\n\ncatalog = [\n    {\"name\": \"Наушники\",  \"price\": 1500, \"rating\": 4.7},\n    {\"name\": \"Мышь\",       \"price\":  890, \"rating\": 3.9},\n    {\"name\": \"Кабель\",     \"price\":  200, \"rating\": 4.2},\n]\nres = apply_filter(catalog, lambda p: p[\"rating\"] >= 4.0)\nprint(len(res), res[0][\"name\"])\n```",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abd1ae04e1f7c3d9fefabab",
@@ -33,17 +33,45 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L10",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "2 Наушники",
+        "explanation": "Фильтр сохраняет записи с рейтингом не ниже 4.0: Наушники и Кабель. Длина результата 2, первая запись — Наушники. print выводит аргументы через пробел.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions"
+        ],
+        "id": "T-6abd1ae04e1f7c3d9fefabab-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 10/Страницы",
-        "elementId": "6abd1ae04e1f7c3d9fefabab"
+        "elementId": "6abd1ae04e1f7c3d9fefabab",
+        "archive": "Снимки страниц.json",
+        "sha256": "fb77df0b80ddfa6bb2f347a9d16fba5f155d899fe222e32b383315eac8b501fa"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions"
+      ]
     },
     {
       "id": "T-6abd1b044e1f7c3d9fefabac",
@@ -52,7 +80,7 @@
       "type": "code",
       "moduleId": 1,
       "lessonId": "M01-L10",
-      "statement": "Задача 2. Функция применения к датасету – внеси изменение (3 из 8)\nТема 10. Занятие 10. Функции - разбиение программы на части\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nУсловие\nФункция apply_to_column применяет функцию func к одному полю всех строк. Сейчас она перезаписывает это поле.\ndef apply_to_column(table, field, func):\n    for row in table:\n        row[field] = func(row[field])\n    return table\n\nproducts = [\n    {\"name\": \"Товар А\", \"price\": 1000},\n    {\"name\": \"Товар Б\", \"price\": 2500},\n]\n# Применить скидку 10% – умножить цену на 0.9\napply_to_column(products, \"price\", lambda x: round(x * 0.9, 2))\nfor p in products:\n    print(p)\nЧто нужно сделать\nДобавьте параметр new_field со значением по умолчанию \"result\".\nЗаписывайте результат в поле new_field. Исходное поле должно остаться без изменений.\nИзмените вызов: apply_to_column(products, \"price\", lambda x: round(x * 0.9, 2), new_field=\"sale_price\").\nОжидаемый результат\n{'name': 'Товар А', 'price': 1000, 'sale_price': 900.0}\n{'name': 'Товар Б', 'price': 2500, 'sale_price': 2250.0}\nПодсказка\nlambda x: round(x * 0.9, 2) — короткая функция без имени: получает x и возвращает x, умноженный на 0,9 и округлённый до двух знаков.\nНовое поле словаря создаётся присваиванием: row[new_field] = ....",
+      "statement": "Условие\n\nФункция `apply_to_column` применяет функцию `func` к одному полю всех строк. Сейчас она перезаписывает это поле.\n\n```python\ndef apply_to_column(table, field, func):\n    for row in table:\n        row[field] = func(row[field])\n    return table\n\nproducts = [\n    {\"name\": \"Товар А\", \"price\": 1000},\n    {\"name\": \"Товар Б\", \"price\": 2500},\n]\n# Применить скидку 10% – умножить цену на 0.9\napply_to_column(products, \"price\", lambda x: round(x * 0.9, 2))\nfor p in products:\n    print(p)\n```\n\nЧто нужно сделать\n\n- Добавьте параметр `new_field` со значением по умолчанию `\"result\"`.\n\n- Записывайте результат в поле `new_field`. Исходное поле должно остаться без изменений.\n\n- Измените вызов: `apply_to_column(products, \"price\", lambda x: round(x * 0.9, 2), new_field=\"sale_price\")`.\n\nОжидаемый результат\n\n```text\n{'name': 'Товар А', 'price': 1000, 'sale_price': 900.0}\n{'name': 'Товар Б', 'price': 2500, 'sale_price': 2250.0}\n```\n\nПодсказка\n\n- `lambda x: round(x * 0.9, 2)` — короткая функция без имени: получает `x` и возвращает `x`, умноженный на 0,9 и округлённый до двух знаков.\n\n- Новое поле словаря создаётся присваиванием: `row[new_field] = ...`.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abd1b044e1f7c3d9fefabac",
@@ -65,17 +93,79 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L10",
+        "status": "published",
+        "kind": "code",
+        "code": "def apply_to_column(table, field, func, new_field=\"result\"):\n    for row in table:\n        row[new_field] = func(row[field])\n    return table\n\nproducts = [\n    {\"name\": \"Товар А\", \"price\": 1000},\n    {\"name\": \"Товар Б\", \"price\": 2500},\n]\n# Применить скидку 10% – умножить цену на 0.9\napply_to_column(products, \"price\", lambda x: round(x * 0.9, 2), new_field=\"sale_price\")\nfor p in products:\n    print(p)",
+        "answer": "",
+        "explanation": "Параметр new_field определяет, куда записать результат. Читаем исходное поле field, но записываем в новый ключ: цена не меняется. Именованный аргумент sale_price переопределяет значение по умолчанию result.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "{'name': 'Товар А', 'price': 1000, 'sale_price': 900.0}\n{'name': 'Товар Б', 'price': 2500, 'sale_price': 2250.0}"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Определяем функцию `apply_to_column` с параметрами `table, field, func, new_field='result'`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 2,
+            "text": "Перебираем `table`; очередное значение доступно через `row`."
+          },
+          {
+            "line": 3,
+            "text": "Вычисляем `func(row[field])` и сохраняем результат в `row[new_field]`."
+          },
+          {
+            "line": 4,
+            "text": "Возвращаем из функции `table`."
+          },
+          {
+            "line": 6,
+            "text": "Создаём набор значений `products` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 11,
+            "text": "Выполняем `apply_to_column` с переданными аргументами."
+          },
+          {
+            "line": 12,
+            "text": "Перебираем `products`; очередное значение доступно через `p`."
+          },
+          {
+            "line": 13,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "functions"
+        ],
+        "id": "T-6abd1b044e1f7c3d9fefabac-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 10/Страницы",
-        "elementId": "6abd1b044e1f7c3d9fefabac"
+        "elementId": "6abd1b044e1f7c3d9fefabac",
+        "archive": "Снимки страниц.json",
+        "sha256": "1513b8fea58bc21c3e1193fbdb5a42f72471e6a07a2687b3a410af794d395464"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "functions"
+      ]
     },
     {
       "id": "T-6abd1b424e1f7c3d9fefabad",
@@ -84,7 +174,7 @@
       "type": "code",
       "moduleId": 1,
       "lessonId": "M01-L10",
-      "statement": "Задача 3. Найди ошибки: функция обработки словаря (4 из 8)\nТема 10. Занятие 10. Функции - разбиение программы на части\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nУсловие\nФункция total_in_stock должна вернуть сумму цен товаров, которые есть в наличии, а get_max_price — максимальную цену. В коде три ошибки. Найдите и исправьте их.\ndef total_in_stock(items):\n    total = 0\n    for item in items:\n        if item[in_stock]:\n            total += item[\"price\"]\n    return total\n\ndef get_max_price(items)\n    max_price = 0\n    for item in items:\n        if item[\"price\"] > max_price\n            max_price = item[\"price\"]\n    return max_price\n\nshop = [{\"name\": \"Чай\", \"price\": 150, \"in_stock\": True}, {\"name\": \"Кофе\", \"price\": 200, \"in_stock\": False}, {\"name\": \"Сок\", \"price\": 90, \"in_stock\": True}]\nprint(total_in_stock(shop))\nprint(get_max_price(shop))\nОжидаемый результат\n240\n200\nПодсказка\nКлюч словаря — это строка. Как записывается строка в Python?\nПроверьте, чем заканчиваются строки с def и if.",
+      "statement": "Условие\n\nФункция `total_in_stock` должна вернуть сумму цен товаров, которые есть в наличии, а `get_max_price` — максимальную цену. В коде три ошибки. Найдите и исправьте их.\n\n```python\ndef total_in_stock(items):\n    total = 0\n    for item in items:\n        if item[in_stock]:\n            total += item[\"price\"]\n    return total\n\ndef get_max_price(items)\n    max_price = 0\n    for item in items:\n        if item[\"price\"] > max_price\n            max_price = item[\"price\"]\n    return max_price\n\nshop = [{\"name\": \"Чай\", \"price\": 150, \"in_stock\": True}, {\"name\": \"Кофе\", \"price\": 200, \"in_stock\": False}, {\"name\": \"Сок\", \"price\": 90, \"in_stock\": True}]\nprint(total_in_stock(shop))\nprint(get_max_price(shop))\n```\n\nОжидаемый результат\n\n```text\n240\n200\n```\n\nПодсказка\n\n- Ключ словаря — это строка. Как записывается строка в Python?\n\n- Проверьте, чем заканчиваются строки с `def` и `if`.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abd1b424e1f7c3d9fefabad",
@@ -97,17 +187,111 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L10",
+        "status": "published",
+        "kind": "code",
+        "code": "def total_in_stock(items):\n    total = 0\n    for item in items:\n        if item[\"in_stock\"]:\n            total += item[\"price\"]\n    return total\n\ndef get_max_price(items):\n    max_price = 0\n    for item in items:\n        if item[\"price\"] > max_price:\n            max_price = item[\"price\"]\n    return max_price\n\nshop = [{\"name\": \"Чай\", \"price\": 150, \"in_stock\": True}, {\"name\": \"Кофе\", \"price\": 200, \"in_stock\": False}, {\"name\": \"Сок\", \"price\": 90, \"in_stock\": True}]\nprint(total_in_stock(shop))\nprint(get_max_price(shop))",
+        "answer": "",
+        "explanation": "Ключ in_stock должен быть строкой. После def и if обязательны двоеточия. Суммируются только Чай и Сок (150 + 90), а максимум ищется по всему каталогу, включая отсутствующий Кофе за 200.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "240\n200"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Определяем функцию `total_in_stock` с параметрами `items`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 2,
+            "text": "Вычисляем `0` и сохраняем результат в `total`."
+          },
+          {
+            "line": 3,
+            "text": "Перебираем `items`; очередное значение доступно через `item`."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `item['in_stock']`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Обновляем `total` операцией `+=` с `item['price']`; прежнее значение участвует в вычислении."
+          },
+          {
+            "line": 6,
+            "text": "Возвращаем из функции `total`."
+          },
+          {
+            "line": 8,
+            "text": "Определяем функцию `get_max_price` с параметрами `items`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `0` и сохраняем результат в `max_price`."
+          },
+          {
+            "line": 10,
+            "text": "Перебираем `items`; очередное значение доступно через `item`."
+          },
+          {
+            "line": 11,
+            "text": "Проверяем условие `item['price'] > max_price`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `item['price']` и сохраняем результат в `max_price`."
+          },
+          {
+            "line": 13,
+            "text": "Возвращаем из функции `max_price`."
+          },
+          {
+            "line": 15,
+            "text": "Создаём набор значений `shop` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 16,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 17,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions"
+        ],
+        "id": "T-6abd1b424e1f7c3d9fefabad-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 10/Страницы",
-        "elementId": "6abd1b424e1f7c3d9fefabad"
+        "elementId": "6abd1b424e1f7c3d9fefabad",
+        "archive": "Снимки страниц.json",
+        "sha256": "6f4a3efdf9dc9e8911de1948ef606f10992c15b76c8a060f916863ef0c4e0ba6"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions"
+      ]
     },
     {
       "id": "T-6abd1b6e4e1f7c3d9fefabae",
@@ -116,7 +300,7 @@
       "type": "code",
       "moduleId": 1,
       "lessonId": "M01-L10",
-      "statement": "Задача 4. Функции обработки списка (5 из 8)\nРазработчик интеллектуальных решений. Базовый уровень для студентов СПО (онлайн)\nМодуль 1. Python, данные и алгоритмическое мышление для ИИ\nТема 10. Занятие 10. Функции - разбиение программы на части\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nУсловие\nНапишите три функции для работы со списком чисел.\nЧто нужно сделать\ncount_positive(numbers) — возвращает количество положительных чисел.\naverage(numbers) — возвращает среднее значение. Если список пуст — возвращает None.\nfilter_above(numbers, threshold) — возвращает новый список из чисел больше threshold.\nНе используйте встроенные функции sum(), len(), max(), min() — только цикл for.\nВыведите результаты четырёх вызовов в таком порядке:\nprint(count_positive([3, -1, 0, 7, -2, 5]))\nprint(average([10, 20, 30]))\nprint(filter_above([1, 5, 3, 8, 2], 4))\nprint(average([]))\nОжидаемый результат\n3\n20.0\n[5, 8]\nNone\nПодсказка\nДля среднего считайте в цикле две величины: сумму и количество.\nПустой список: если после цикла количество равно 0, верните None.",
+      "statement": "Условие\n\nНапишите три функции для работы со списком чисел.\n\nЧто нужно сделать\n\n- `count_positive(numbers)` — возвращает количество положительных чисел.\n\n- `average(numbers)` — возвращает среднее значение. Если список пуст — возвращает `None`.\n\n- `filter_above(numbers, threshold)` — возвращает новый список из чисел больше `threshold`.\n\nНе используйте встроенные функции `sum()`, `len()`, `max()`, `min()` — только цикл `for`.\n\nВыведите результаты четырёх вызовов в таком порядке:\n\n```text\nprint(count_positive([3, -1, 0, 7, -2, 5]))\nprint(average([10, 20, 30]))\nprint(filter_above([1, 5, 3, 8, 2], 4))\nprint(average([]))\n```\n\nОжидаемый результат\n\n```text\n3\n20.0\n[5, 8]\nNone\n```\n\nПодсказка\n\n- Для среднего считайте в цикле две величины: сумму и количество.\n\n- Пустой список: если после цикла количество равно 0, верните `None`.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abd1b6e4e1f7c3d9fefabae",
@@ -129,17 +313,147 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L10",
+        "status": "published",
+        "kind": "code",
+        "code": "def count_positive(numbers):\n    count = 0\n    for number in numbers:\n        if number > 0:\n            count += 1\n    return count\n\ndef average(numbers):\n    total = count = 0\n    for number in numbers:\n        total += number\n        count += 1\n    if count == 0:\n        return None\n    return total / count\n\ndef filter_above(numbers, threshold):\n    result = []\n    for number in numbers:\n        if number > threshold:\n            result.append(number)\n    return result\n\nprint(count_positive([3, -1, 0, 7, -2, 5]))\nprint(average([10, 20, 30]))\nprint(filter_above([1, 5, 3, 8, 2], 4))\nprint(average([]))",
+        "answer": "",
+        "explanation": "Встроенные sum, len, min, max не используются. Счётчики и сумма обновляются в for. Ноль не положителен, равенство порогу не проходит фильтр. Проверка пустого набора предотвращает деление на ноль и возвращает None.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "3\n20.0\n[5, 8]\nNone"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Определяем функцию `count_positive` с параметрами `numbers`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 2,
+            "text": "Вычисляем `0` и сохраняем результат в `count`."
+          },
+          {
+            "line": 3,
+            "text": "Перебираем `numbers`; очередное значение доступно через `number`."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `number > 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Обновляем `count` операцией `+=` с `1`; прежнее значение участвует в вычислении."
+          },
+          {
+            "line": 6,
+            "text": "Возвращаем из функции `count`."
+          },
+          {
+            "line": 8,
+            "text": "Определяем функцию `average` с параметрами `numbers`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 9,
+            "text": "Вычисляем `0` и сохраняем результат в `total, count`."
+          },
+          {
+            "line": 10,
+            "text": "Перебираем `numbers`; очередное значение доступно через `number`."
+          },
+          {
+            "line": 11,
+            "text": "Обновляем `total` операцией `+=` с `number`; прежнее значение участвует в вычислении."
+          },
+          {
+            "line": 12,
+            "text": "Обновляем `count` операцией `+=` с `1`; прежнее значение участвует в вычислении."
+          },
+          {
+            "line": 13,
+            "text": "Проверяем условие `count == 0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 14,
+            "text": "Возвращаем из функции `None`."
+          },
+          {
+            "line": 15,
+            "text": "Возвращаем из функции `total / count`."
+          },
+          {
+            "line": 17,
+            "text": "Определяем функцию `filter_above` с параметрами `numbers, threshold`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 18,
+            "text": "Создаём набор значений `result` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 19,
+            "text": "Перебираем `numbers`; очередное значение доступно через `number`."
+          },
+          {
+            "line": 20,
+            "text": "Проверяем условие `number > threshold`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 21,
+            "text": "Выполняем `result.append` с переданными аргументами."
+          },
+          {
+            "line": 22,
+            "text": "Возвращаем из функции `result`."
+          },
+          {
+            "line": 24,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 25,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 26,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 27,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions"
+        ],
+        "id": "T-6abd1b6e4e1f7c3d9fefabae-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 10/Страницы",
-        "elementId": "6abd1b6e4e1f7c3d9fefabae"
+        "elementId": "6abd1b6e4e1f7c3d9fefabae",
+        "archive": "Снимки страниц.json",
+        "sha256": "11c82291e591e1f6f56cdff5831ab57e9f5f3c2b7bc0ebd4b9f09c2f1543f95a"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions"
+      ]
     },
     {
       "id": "T-6abd1ba94e1f7c3d9fefabaf",
@@ -148,7 +462,7 @@
       "type": "code",
       "moduleId": 1,
       "lessonId": "M01-L10",
-      "statement": "Задача 5. Декомпозиция: анализ датасета студентов (6 из 8)\nРазработчик интеллектуальных решений. Базовый уровень для студентов СПО (онлайн)\nМодуль 1. Python, данные и алгоритмическое мышление для ИИ\nТема 10. Занятие 10. Функции - разбиение программы на части\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nУсловие\nРазработайте программу «Анализ датасета студентов» из шести функций. Ниже приведена заготовка: в ней уже есть данные (функция get_dataset()) и основная программа. Скопируйте заготовку в редактор и напишите тела остальных пяти функций, в которых сейчас стоит pass. Основную программу не меняйте.\ndef get_dataset():\n    return [\n        {\"name\": \"Аня\", \"score\": 92, \"attendance\": 95, \"project\": True},\n        {\"name\": \"Боря\", \"score\": 58, \"attendance\": 70, \"project\": False},\n        {\"name\": \"Вика\", \"score\": 76, \"attendance\": 88, \"project\": True},\n        {\"name\": \"Гоша\", \"score\": 64, \"attendance\": 60, \"project\": False},\n        {\"name\": \"Даша\", \"score\": 87, \"attendance\": 82, \"project\": True},\n    ]\n\n\ndef classify(row):\n    # верните метку класса по правилу из условия\n    pass\n\n\ndef add_classes(table):\n    # добавьте ключ \"class\" в каждую запись\n    pass\n\n\ndef stats(table, field):\n    # верните минимум, максимум и среднее (округлить до 2 знаков)\n    pass\n\n\ndef filter_by_class(table, cls):\n    # верните записи с классом cls\n    pass\n\n\ndef print_table(table):\n    # выведите каждую запись одной строкой\n    pass\n\n\ntable = add_classes(get_dataset())\nprint_table(table)\nprint(stats(table, \"score\"))\nprint(stats(table, \"attendance\"))\nprint_table(filter_by_class(table, \"Отличник\"))\nЧто нужно сделать\nget_dataset() — возвращает список из 5 записей (готов в заготовке).\nclassify(row) — возвращает метку класса: score >= 85, attendance >= 80 и есть проект — «Отличник»; иначе score >= 70 и есть проект — «Хорошист»; иначе score >= 60 — «Удовл.»; иначе — «Неудовл.».\nadd_classes(table) — добавляет ключ \"class\" в каждый словарь, вызывая classify, и возвращает таблицу.\nstats(table, field) — возвращает min, max и среднее по числовому полю; среднее округлить до двух знаков.\nfilter_by_class(table, cls) — возвращает записи с указанным классом.\nprint_table(table) — выводит каждую запись одной строкой: имя, балл, посещаемость, проект, класс через пробел.\nОжидаемый результат\nАня 92 95 True Отличник\nБоря 58 70 False Неудовл.\nВика 76 88 True Хорошист\nГоша 64 60 False Удовл.\nДаша 87 82 True Отличник\n(58, 92, 75.4)\n(60, 95, 79.0)\nАня 92 95 True Отличник\nДаша 87 82 True Отличник\nПодсказка\nПравило classify — то же, что в статье занятия, только данные берутся из словаря: row[\"score\"].\nТри значения из функции возвращаются через запятую — print выведет их в скобках.",
+      "statement": "Условие\n\nРазработайте программу «Анализ датасета студентов» из шести функций. Ниже приведена заготовка: в ней уже есть данные (функция `get_dataset()`) и основная программа. Скопируйте заготовку в редактор и напишите тела остальных пяти функций, в которых сейчас стоит `pass`. Основную программу не меняйте.\n\n```python\ndef get_dataset():\n    return [\n        {\"name\": \"Аня\", \"score\": 92, \"attendance\": 95, \"project\": True},\n        {\"name\": \"Боря\", \"score\": 58, \"attendance\": 70, \"project\": False},\n        {\"name\": \"Вика\", \"score\": 76, \"attendance\": 88, \"project\": True},\n        {\"name\": \"Гоша\", \"score\": 64, \"attendance\": 60, \"project\": False},\n        {\"name\": \"Даша\", \"score\": 87, \"attendance\": 82, \"project\": True},\n    ]\n\ndef classify(row):\n    # верните метку класса по правилу из условия\n    pass\n\ndef add_classes(table):\n    # добавьте ключ \"class\" в каждую запись\n    pass\n\ndef stats(table, field):\n    # верните минимум, максимум и среднее (округлить до 2 знаков)\n    pass\n\ndef filter_by_class(table, cls):\n    # верните записи с классом cls\n    pass\n\ndef print_table(table):\n    # выведите каждую запись одной строкой\n    pass\n\ntable = add_classes(get_dataset())\nprint_table(table)\nprint(stats(table, \"score\"))\nprint(stats(table, \"attendance\"))\nprint_table(filter_by_class(table, \"Отличник\"))\n```\n\nЧто нужно сделать\n\n- `get_dataset()` — возвращает список из 5 записей (готов в заготовке).\n\n- `classify(row)` — возвращает метку класса: `score >= 85`, `attendance >= 80` и есть проект — «Отличник»; иначе `score >= 70` и есть проект — «Хорошист»; иначе `score >= 60` — «Удовл.»; иначе — «Неудовл.».\n\n- `add_classes(table)` — добавляет ключ `\"class\"` в каждый словарь, вызывая `classify`, и возвращает таблицу.\n\n- `stats(table, field)` — возвращает `min`, `max` и среднее по числовому полю; среднее округлить до двух знаков.\n\n- `filter_by_class(table, cls)` — возвращает записи с указанным классом.\n\n- `print_table(table)` — выводит каждую запись одной строкой: имя, балл, посещаемость, проект, класс через пробел.\n\nОжидаемый результат\n\n```text\nАня 92 95 True Отличник\nБоря 58 70 False Неудовл.\nВика 76 88 True Хорошист\nГоша 64 60 False Удовл.\nДаша 87 82 True Отличник\n(58, 92, 75.4)\n(60, 95, 79.0)\nАня 92 95 True Отличник\nДаша 87 82 True Отличник\n```\n\nПодсказка\n\n- Правило `classify` — то же, что в статье занятия, только данные берутся из словаря: `row[\"score\"]`.\n\n- Три значения из функции возвращаются через запятую — `print` выведет их в скобках.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abd1ba94e1f7c3d9fefabaf",
@@ -161,17 +475,165 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L10",
+        "status": "published",
+        "kind": "code",
+        "code": "def get_dataset():\n    return [\n        {\"name\": \"Аня\", \"score\": 92, \"attendance\": 95, \"project\": True},\n        {\"name\": \"Боря\", \"score\": 58, \"attendance\": 70, \"project\": False},\n        {\"name\": \"Вика\", \"score\": 76, \"attendance\": 88, \"project\": True},\n        {\"name\": \"Гоша\", \"score\": 64, \"attendance\": 60, \"project\": False},\n        {\"name\": \"Даша\", \"score\": 87, \"attendance\": 82, \"project\": True},\n    ]\n\n\ndef classify(row):\n    if row[\"score\"] >= 85 and row[\"attendance\"] >= 80 and row[\"project\"]:\n        return \"Отличник\"\n    elif row[\"score\"] >= 70 and row[\"project\"]:\n        return \"Хорошист\"\n    elif row[\"score\"] >= 60:\n        return \"Удовл.\"\n    return \"Неудовл.\"\n\n\ndef add_classes(table):\n    for row in table:\n        row[\"class\"] = classify(row)\n    return table\n\n\ndef stats(table, field):\n    values = [row[field] for row in table]\n    return min(values), max(values), round(sum(values) / len(values), 2)\n\n\ndef filter_by_class(table, cls):\n    return [row for row in table if row[\"class\"] == cls]\n\n\ndef print_table(table):\n    for row in table:\n        print(row[\"name\"], row[\"score\"], row[\"attendance\"], row[\"project\"], row[\"class\"])\n\n\ntable = add_classes(get_dataset())\nprint_table(table)\nprint(stats(table, \"score\"))\nprint(stats(table, \"attendance\"))\nprint_table(filter_by_class(table, \"Отличник\"))",
+        "answer": "",
+        "explanation": "Каждая функция отвечает за одну операцию. classify применяет приоритетные правила, add_classes использует её для каждой записи. stats извлекает выбранный числовой столбец и возвращает кортеж трёх показателей. Фильтр сохраняет только выбранный класс. Заготовка данных и основная программа сохранены.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Аня 92 95 True Отличник\nБоря 58 70 False Неудовл.\nВика 76 88 True Хорошист\nГоша 64 60 False Удовл.\nДаша 87 82 True Отличник\n(58, 92, 75.4)\n(60, 95, 79.0)\nАня 92 95 True Отличник\nДаша 87 82 True Отличник"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Определяем функцию `get_dataset` с параметрами ``. Её тело выполняется при вызове."
+          },
+          {
+            "line": 2,
+            "text": "Возвращаем из функции `[{'name': 'Аня', 'score': 92, 'attendance': 95, 'project': True}, {'name': 'Боря', 'score': 58, 'attendance': 70, 'project': False}, {'name': 'Вика', 'score': 76, 'attendance': 88, 'project': True}, {'name': 'Гоша', 'score': 64, 'attendance': 60, 'project': False}, {'name': 'Даша', 'score': 87, 'attendance': 82, 'project': True}]`."
+          },
+          {
+            "line": 11,
+            "text": "Определяем функцию `classify` с параметрами `row`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 12,
+            "text": "Проверяем условие `row['score'] >= 85 and row['attendance'] >= 80 and row['project']`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 13,
+            "text": "Возвращаем из функции `'Отличник'`."
+          },
+          {
+            "line": 14,
+            "text": "Проверяем условие `row['score'] >= 70 and row['project']`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 15,
+            "text": "Возвращаем из функции `'Хорошист'`."
+          },
+          {
+            "line": 16,
+            "text": "Проверяем условие `row['score'] >= 60`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 17,
+            "text": "Возвращаем из функции `'Удовл.'`."
+          },
+          {
+            "line": 18,
+            "text": "Возвращаем из функции `'Неудовл.'`."
+          },
+          {
+            "line": 21,
+            "text": "Определяем функцию `add_classes` с параметрами `table`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 22,
+            "text": "Перебираем `table`; очередное значение доступно через `row`."
+          },
+          {
+            "line": 23,
+            "text": "Вычисляем `classify(row)` и сохраняем результат в `row['class']`."
+          },
+          {
+            "line": 24,
+            "text": "Возвращаем из функции `table`."
+          },
+          {
+            "line": 27,
+            "text": "Определяем функцию `stats` с параметрами `table, field`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 28,
+            "text": "Вычисляем `[row[field] for row in table]` и сохраняем результат в `values`."
+          },
+          {
+            "line": 29,
+            "text": "Возвращаем из функции `(min(values), max(values), round(sum(values) / len(values), 2))`."
+          },
+          {
+            "line": 32,
+            "text": "Определяем функцию `filter_by_class` с параметрами `table, cls`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 33,
+            "text": "Возвращаем из функции `[row for row in table if row['class'] == cls]`."
+          },
+          {
+            "line": 36,
+            "text": "Определяем функцию `print_table` с параметрами `table`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 37,
+            "text": "Перебираем `table`; очередное значение доступно через `row`."
+          },
+          {
+            "line": 38,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 41,
+            "text": "Вычисляем `add_classes(get_dataset())` и сохраняем результат в `table`."
+          },
+          {
+            "line": 42,
+            "text": "Выполняем `print_table` с переданными аргументами."
+          },
+          {
+            "line": 43,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 44,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 45,
+            "text": "Выполняем `print_table` с переданными аргументами."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions",
+          "problem",
+          "prototype",
+          "documentation"
+        ],
+        "id": "T-6abd1ba94e1f7c3d9fefabaf-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 10/Страницы",
-        "elementId": "6abd1ba94e1f7c3d9fefabaf"
+        "elementId": "6abd1ba94e1f7c3d9fefabaf",
+        "archive": "Снимки страниц.json",
+        "sha256": "aa92816dd44e89451aa74bb643cd9de86efa6882593c2e28d65f185a3c999422"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions",
+        "problem",
+        "prototype",
+        "documentation"
+      ]
     },
     {
       "id": "T-6abd1bdd4e1f7c3d9fefabb0",
@@ -180,7 +642,7 @@
       "type": "code",
       "moduleId": 1,
       "lessonId": "M01-L10",
-      "statement": "Задача 6. Функция высшего порядка (7 из 8)\nРазработчик интеллектуальных решений. Базовый уровень для студентов СПО (онлайн)\nМодуль 1. Python, данные и алгоритмическое мышление для ИИ\nТема 10. Занятие 10. Функции - разбиение программы на части\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nУсловие\nНапишите функцию apply_filter(table, condition_func). Она возвращает список строк, для которых condition_func(row) возвращает True.\ncatalog = [\n    {\"name\": \"Наушники\", \"price\": 1500, \"rating\": 4.7, \"in_stock\": True},\n    {\"name\": \"Мышь\", \"price\": 890, \"rating\": 4.8, \"in_stock\": False},\n    {\"name\": \"Кабель\", \"price\": 200, \"rating\": 4.2, \"in_stock\": True},\n    {\"name\": \"Монитор\", \"price\": 12000, \"rating\": 4.9, \"in_stock\": True},\n    {\"name\": \"Веб-камера\", \"price\": 3500, \"rating\": 4.1, \"in_stock\": True},\n]\nЧто нужно сделать\nВызовите функцию три раза с разными условиями:\napply_filter(catalog, lambda p: p[\"rating\"] >= 4.5)\napply_filter(catalog, lambda p: p[\"price\"] < 2000)\napply_filter(catalog, lambda p: p[\"in_stock\"] and p[\"rating\"] > 4.0)\nДля каждого вызова выведите названия отфильтрованных товаров одной строкой через запятую и пробел.\nОжидаемый результат\nНаушники, Мышь, Монитор\nНаушники, Мышь, Кабель\nНаушники, Кабель, Монитор, Веб-камера\nПодсказка\nФункцию можно передать в другую функцию как обычное значение. Внутри её вызывают по имени параметра: condition_func(row).\nСтроку из названий удобно собрать так: \", \".join(...).",
+      "statement": "Условие\n\nНапишите функцию `apply_filter(table, condition_func)`. Она возвращает список строк, для которых `condition_func(row)` возвращает `True`.\n\n```python\ncatalog = [\n    {\"name\": \"Наушники\", \"price\": 1500, \"rating\": 4.7, \"in_stock\": True},\n    {\"name\": \"Мышь\", \"price\": 890, \"rating\": 4.8, \"in_stock\": False},\n    {\"name\": \"Кабель\", \"price\": 200, \"rating\": 4.2, \"in_stock\": True},\n    {\"name\": \"Монитор\", \"price\": 12000, \"rating\": 4.9, \"in_stock\": True},\n    {\"name\": \"Веб-камера\", \"price\": 3500, \"rating\": 4.1, \"in_stock\": True},\n]\n```\n\nЧто нужно сделать\n\nВызовите функцию три раза с разными условиями:\n\n```python\napply_filter(catalog, lambda p: p[\"rating\"] >= 4.5)\napply_filter(catalog, lambda p: p[\"price\"] < 2000)\napply_filter(catalog, lambda p: p[\"in_stock\"] and p[\"rating\"] > 4.0)\n```\n\nДля каждого вызова выведите названия отфильтрованных товаров одной строкой через запятую и пробел.\n\nОжидаемый результат\n\n```text\nНаушники, Мышь, Монитор\nНаушники, Мышь, Кабель\nНаушники, Кабель, Монитор, Веб-камера\n```\n\nПодсказка\n\n- Функцию можно передать в другую функцию как обычное значение. Внутри её вызывают по имени параметра: `condition_func(row)`.\n\n- Строку из названий удобно собрать так: `\", \".join(...)`.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abd1bdd4e1f7c3d9fefabb0",
@@ -193,17 +655,91 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L10",
+        "status": "published",
+        "kind": "code",
+        "code": "def apply_filter(table, condition_func):\n    result = []\n    for row in table:\n        if condition_func(row):\n            result.append(row)\n    return result\n\ncatalog = [\n    {\"name\": \"Наушники\", \"price\": 1500, \"rating\": 4.7, \"in_stock\": True},\n    {\"name\": \"Мышь\", \"price\": 890, \"rating\": 4.8, \"in_stock\": False},\n    {\"name\": \"Кабель\", \"price\": 200, \"rating\": 4.2, \"in_stock\": True},\n    {\"name\": \"Монитор\", \"price\": 12000, \"rating\": 4.9, \"in_stock\": True},\n    {\"name\": \"Веб-камера\", \"price\": 3500, \"rating\": 4.1, \"in_stock\": True},\n]\nprint(', '.join(p['name'] for p in apply_filter(catalog, lambda p: p['rating'] >= 4.5)))\nprint(', '.join(p['name'] for p in apply_filter(catalog, lambda p: p['price'] < 2000)))\nprint(', '.join(p['name'] for p in apply_filter(catalog, lambda p: p['in_stock'] and p['rating'] > 4.0)))",
+        "answer": "",
+        "explanation": "Функция получает другую функцию как параметр и вызывает её для каждой записи. Данные не изменяются. Три независимых фильтра проверяют рейтинг, цену и наличие с рейтингом. join добавляет запятую и пробел только между названиями.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Наушники, Мышь, Монитор\nНаушники, Мышь, Кабель\nНаушники, Кабель, Монитор, Веб-камера"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Определяем функцию `apply_filter` с параметрами `table, condition_func`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 2,
+            "text": "Создаём набор значений `result` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 3,
+            "text": "Перебираем `table`; очередное значение доступно через `row`."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `condition_func(row)`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Выполняем `result.append` с переданными аргументами."
+          },
+          {
+            "line": 6,
+            "text": "Возвращаем из функции `result`."
+          },
+          {
+            "line": 8,
+            "text": "Создаём набор значений `catalog` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 15,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 16,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 17,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions"
+        ],
+        "id": "T-6abd1bdd4e1f7c3d9fefabb0-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 10/Страницы",
-        "elementId": "6abd1bdd4e1f7c3d9fefabb0"
+        "elementId": "6abd1bdd4e1f7c3d9fefabb0",
+        "archive": "Снимки страниц.json",
+        "sha256": "13049954ac910f79789e94ea8afdae4169039966ad16eb953d3bf9cb3fef10ef"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions"
+      ]
     },
     {
       "id": "T-6abd1c0e4e1f7c3d9fefabb1",
@@ -212,7 +748,7 @@
       "type": "project",
       "moduleId": 1,
       "lessonId": "M01-L10",
-      "statement": "Задача 7. Итоговый проект: каталог товаров (8 из 8)\nРазработчик интеллектуальных решений. Базовый уровень для студентов СПО (онлайн)\nМодуль 1. Python, данные и алгоритмическое мышление для ИИ\nТема 10. Занятие 10. Функции - разбиение программы на части\n\nПредыдущее\nСледующее\n\nPython 3\n\nРешение проверит педагог\n\n1\nОбщий объем до 50 Мб\nЗанято: 0 Кб\n\nУсловие\nСоздайте программу «Каталог товаров» из трёх функций. Каталог уже задан:\ncatalog = [\n    {\"name\": \"Ноутбук\", \"price\": 45000, \"rating\": 4.8, \"in_stock\": True},\n    {\"name\": \"Флешка\", \"price\": 390, \"rating\": 4.3, \"in_stock\": True},\n    {\"name\": \"Коврик\", \"price\": 350, \"rating\": 3.8, \"in_stock\": True},\n    {\"name\": \"Роутер\", \"price\": 3200, \"rating\": 4.1, \"in_stock\": True},\n    {\"name\": \"Планшет\", \"price\": 28000, \"rating\": 4.6, \"in_stock\": False},\n    {\"name\": \"Колонка\", \"price\": 4200, \"rating\": 4.5, \"in_stock\": True},\n]\nЧто нужно сделать\nclassify_product(product) — возвращает метку: «Нет в наличии» / «Выгодная покупка» / «Хороший выбор» / «Стандарт».\nadd_labels(catalog) — применяет classify_product к каждому товару и добавляет ключ \"label\".\nprint_catalog(catalog) — выводит каждый товар в формате: «Название | Цена: X | Рейтинг: Y | Метка: Z».\nОсновная программа — не больше 5 строк: каталог → add_labels → print_catalog.\nПравила классификации: in_stock=False — «Нет в наличии»; price < 500 и rating >= 4.0 — «Выгодная покупка»; rating >= 4.5 — «Хороший выбор»; иначе — «Стандарт».\nОжидаемый результат\nНоутбук | Цена: 45000 | Рейтинг: 4.8 | Метка: Хороший выбор\nФлешка | Цена: 390 | Рейтинг: 4.3 | Метка: Выгодная покупка\nКоврик | Цена: 350 | Рейтинг: 3.8 | Метка: Стандарт\nРоутер | Цена: 3200 | Рейтинг: 4.1 | Метка: Стандарт\nПланшет | Цена: 28000 | Рейтинг: 4.6 | Метка: Нет в наличии\nКолонка | Цена: 4200 | Рейтинг: 4.5 | Метка: Хороший выбор\nПодсказка\nПравила проверяйте по порядку: товар не в наличии сразу получает метку «Нет в наличии», остальные условия к нему не применяются.\nПроверьте себя: для ноутбука (45000, 4.8, в наличии) должна получиться метка «Хороший выбор».",
+      "statement": "Условие\n\nСоздайте программу «Каталог товаров» из трёх функций. Каталог уже задан:\n\n```python\ncatalog = [\n    {\"name\": \"Ноутбук\", \"price\": 45000, \"rating\": 4.8, \"in_stock\": True},\n    {\"name\": \"Флешка\", \"price\": 390, \"rating\": 4.3, \"in_stock\": True},\n    {\"name\": \"Коврик\", \"price\": 350, \"rating\": 3.8, \"in_stock\": True},\n    {\"name\": \"Роутер\", \"price\": 3200, \"rating\": 4.1, \"in_stock\": True},\n    {\"name\": \"Планшет\", \"price\": 28000, \"rating\": 4.6, \"in_stock\": False},\n    {\"name\": \"Колонка\", \"price\": 4200, \"rating\": 4.5, \"in_stock\": True},\n]\n```\n\nЧто нужно сделать\n\n- `classify_product(product)` — возвращает метку: «Нет в наличии» / «Выгодная покупка» / «Хороший выбор» / «Стандарт».\n\n- `add_labels(catalog)` — применяет `classify_product` к каждому товару и добавляет ключ `\"label\"`.\n\n- `print_catalog(catalog)` — выводит каждый товар в формате: «Название | Цена: X | Рейтинг: Y | Метка: Z».\n\nОсновная программа — не больше 5 строк: каталог → `add_labels` → `print_catalog`.\n\nПравила классификации: `in_stock=False` — «Нет в наличии»; `price < 500` и `rating >= 4.0` — «Выгодная покупка»; `rating >= 4.5` — «Хороший выбор»; иначе — «Стандарт».\n\nОжидаемый результат\n\n```text\nНоутбук | Цена: 45000 | Рейтинг: 4.8 | Метка: Хороший выбор\nФлешка | Цена: 390 | Рейтинг: 4.3 | Метка: Выгодная покупка\nКоврик | Цена: 350 | Рейтинг: 3.8 | Метка: Стандарт\nРоутер | Цена: 3200 | Рейтинг: 4.1 | Метка: Стандарт\nПланшет | Цена: 28000 | Рейтинг: 4.6 | Метка: Нет в наличии\nКолонка | Цена: 4200 | Рейтинг: 4.5 | Метка: Хороший выбор\n```\n\nПодсказка\n\n- Правила проверяйте по порядку: товар не в наличии сразу получает метку «Нет в наличии», остальные условия к нему не применяются.\n\n- Проверьте себя: для ноутбука (`45000`, `4.8`, в наличии) должна получиться метка «Хороший выбор».",
       "origin": "ismart",
       "ismartLink": {
         "id": "6abd1c0e4e1f7c3d9fefabb1",
@@ -225,24 +761,129 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M01-L10",
+        "status": "published",
+        "kind": "code",
+        "code": "def classify_product(product):\n    if not product['in_stock']:\n        return 'Нет в наличии'\n    if product['price'] < 500 and product['rating'] >= 4.0:\n        return 'Выгодная покупка'\n    if product['rating'] >= 4.5:\n        return 'Хороший выбор'\n    return 'Стандарт'\n\ndef add_labels(catalog):\n    for product in catalog:\n        product['label'] = classify_product(product)\n    return catalog\n\ndef print_catalog(catalog):\n    for p in catalog:\n        print(f\"{p['name']} | Цена: {p['price']} | Рейтинг: {p['rating']} | Метка: {p['label']}\")\n\ncatalog = [\n    {\"name\": \"Ноутбук\", \"price\": 45000, \"rating\": 4.8, \"in_stock\": True},\n    {\"name\": \"Флешка\", \"price\": 390, \"rating\": 4.3, \"in_stock\": True},\n    {\"name\": \"Коврик\", \"price\": 350, \"rating\": 3.8, \"in_stock\": True},\n    {\"name\": \"Роутер\", \"price\": 3200, \"rating\": 4.1, \"in_stock\": True},\n    {\"name\": \"Планшет\", \"price\": 28000, \"rating\": 4.6, \"in_stock\": False},\n    {\"name\": \"Колонка\", \"price\": 4200, \"rating\": 4.5, \"in_stock\": True},\n]\nadd_labels(catalog)\nprint_catalog(catalog)",
+        "answer": "",
+        "explanation": "Отсутствующий товар сразу получает соответствующую метку. Затем приоритет у дешёвого товара с хорошим рейтингом, после него — у рейтинга от 4.5. Основная программа задаёт каталог и вызывает две функции; оформление вывода изолировано в print_catalog.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "Ноутбук | Цена: 45000 | Рейтинг: 4.8 | Метка: Хороший выбор\nФлешка | Цена: 390 | Рейтинг: 4.3 | Метка: Выгодная покупка\nКоврик | Цена: 350 | Рейтинг: 3.8 | Метка: Стандарт\nРоутер | Цена: 3200 | Рейтинг: 4.1 | Метка: Стандарт\nПланшет | Цена: 28000 | Рейтинг: 4.6 | Метка: Нет в наличии\nКолонка | Цена: 4200 | Рейтинг: 4.5 | Метка: Хороший выбор"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Определяем функцию `classify_product` с параметрами `product`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 2,
+            "text": "Проверяем условие `not product['in_stock']`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 3,
+            "text": "Возвращаем из функции `'Нет в наличии'`."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `product['price'] < 500 and product['rating'] >= 4.0`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Возвращаем из функции `'Выгодная покупка'`."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `product['rating'] >= 4.5`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Возвращаем из функции `'Хороший выбор'`."
+          },
+          {
+            "line": 8,
+            "text": "Возвращаем из функции `'Стандарт'`."
+          },
+          {
+            "line": 10,
+            "text": "Определяем функцию `add_labels` с параметрами `catalog`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 11,
+            "text": "Перебираем `catalog`; очередное значение доступно через `product`."
+          },
+          {
+            "line": 12,
+            "text": "Вычисляем `classify_product(product)` и сохраняем результат в `product['label']`."
+          },
+          {
+            "line": 13,
+            "text": "Возвращаем из функции `catalog`."
+          },
+          {
+            "line": 15,
+            "text": "Определяем функцию `print_catalog` с параметрами `catalog`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 16,
+            "text": "Перебираем `catalog`; очередное значение доступно через `p`."
+          },
+          {
+            "line": 17,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 19,
+            "text": "Создаём набор значений `catalog` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 27,
+            "text": "Выполняем `add_labels` с переданными аргументами."
+          },
+          {
+            "line": 28,
+            "text": "Выполняем `print_catalog` с переданными аргументами."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions"
+        ],
+        "id": "T-6abd1c0e4e1f7c3d9fefabb1-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 1/Занятие 10/Страницы",
-        "elementId": "6abd1c0e4e1f7c3d9fefabb1"
+        "elementId": "6abd1c0e4e1f7c3d9fefabb1",
+        "archive": "Снимки страниц.json",
+        "sha256": "b5e15628c0aa55ce32b5ad95e05db9c460b22767c69a4bbb95b081afdf01cec3"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions"
+      ]
     }
   ],
-  "lecture": "# Функции - разбиение программы на части\n\n### СЛАЙД 01. Функции - разбиение программы на части\n\nВ этом занятии рассматривается тема «Функции - разбиение программы на части». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Вступление\n\nПредставь: ты написал программу для подсчета площади круга. Потом тебе понадобилось считать ее три раза – в разных местах кода. Копировать одни и те же строки снова и снова?\n\nФункция – это способ дать имя блоку кода и вызывать его столько раз, сколько нужно. Один раз описал – используй везде. Именно так написаны все серьезные программы: они состоят из функций.\n\nВ рабочих задачах это выглядит так: одна функция проверяет заявку, другая считает стоимость заказа, третья формирует строку отчёта. Каждую можно вызвать для любой заявки или заказа, не переписывая код.\n\nСегодня мы научимся создавать собственные функции, передавать им данные через параметры и получать результат через return – и напишем программу, в которой повторяющиеся действия вынесены в отдельные функции.\n\nПосле этого занятия вы сможете:\n\nопределять функцию с помощью def ;\n\nвызывать функцию и передавать ей аргументы;\n\nвозвращать результат через return ;\n\nиспользовать параметры по умолчанию;\n\nразбивать программу на логические части – функции.\n\n### СЛАЙД 03. Зачем нужны функции · таблица 1/2\n\nСравним данные в таблице.\nБез функций С функциями Один и тот же код копируется несколько раз Код написан один раз, вызывается многократно При ошибке нужно исправлять в каждом месте Исправление в одном месте – работает везде Сложно понять, что делает длинная программа Каждая функция – одна четко названная задача Невозможно повторно использовать код Функцию можно использовать в других программах\n\n### СЛАЙД 04. Зачем нужны функции · таблица 2/2\n\nПосмотрите на продолжение таблицы. Сложно понять, что делает длинная программа Каждая функция – одна четко названная задача Невозможно повторно использовать код Функцию можно использовать в других программах\n\n### СЛАЙД 05. Синтаксис функции\n\nПример на слайде:\ndef имя_функции(параметр1, параметр2):\n    \"\"\"Документация функции (необязательно)\"\"\"\n    # тело функции\n    return результат # необязательно\n\nПример на слайде:\n# Пример: функция приветствия\ndef greet(name):\n    print(f\"Привет, {name}!\")\n\n# Вызов\ngreet(\"Аня\") # Привет, Аня!\ngreet(\"Боря\") # Привет, Боря!\n\ndef – ключевое слово для определения функции.\n\nДвоеточие и отступ 4 пробела – обязательны, как в if и for .\n\nФункцию нужно ОПРЕДЕЛИТЬ (написать def ) до того, как ее ВЫЗВАТЬ.\n\nСтрока в тройных кавычках сразу после def — документация функции. Python не выполняет её как команду: при вызове функции эта строка ничего не делает, но сохраняется вместе с функцией. Её видят коллеги и среды разработки: по ней понятно, что делает функция, не читая её код.\n\nПосмотреть документацию функции можно двумя способами: командой help(имя_функции) или через атрибут имя_функции.__doc__ . Так же работает справка и для встроенных функций, например help(print) .\n\nПример на слайде:\ndef area(r):\n    \"\"\"Возвращает площадь круга радиуса r.\"\"\"\n    return 3.14 * r ** 2\n\nprint(area.__doc__) # Возвращает площадь круга радиуса r.\nhelp(area)          # справка по функции, включая её документацию\n\n### СЛАЙД 06. Параметры и аргументы · таблица 1/2\n\nСравним данные в таблице.\nТермин Определение Пример Параметр Переменная в определении функции def greet(name): ← name Аргумент Значение, передаваемое при вызове greet(\"Аня\") ← \"Аня\" По умолчанию Значение параметра, если не передан аргумент def greet(name=\"друг\"):\n\nПример на слайде:\ndef power(base, exp=2): # exp по умолчанию = 2\n    return base ** exp\n\nprint(power(3)) # 9 – exp = 2 (по умолчанию)\nprint(power(3, 3)) # 27 – exp = 3 (передан явно)\nprint(power(2, 10)) # 1024\n\nПорядок параметров. Параметры со значением по умолчанию записываются после обязательных параметров. Это правило синтаксиса Python: обязательный параметр нельзя записывать после параметра со значением по умолчанию. Если нарушить порядок, Python сообщит об ошибке SyntaxError ещё до запуска программы:\n\nПример на слайде:\n# Ошибка: SyntaxError: non-default argument follows default argument\n# def power(exp=2, base):\n#     return base ** exp\n\n# Правильно: сначала обязательный параметр, затем параметр по умолчанию\ndef power(base, exp=2):\n    return base ** exp\n\nПараметр — как поле в бланке заявки, а аргумент — то, что в это поле вписали для конкретного случая. Бланк один, заполнений может быть сколько угодно.\n\n### СЛАЙД 07. Параметры и аргументы · таблица 2/2\n\nПосмотрите на продолжение таблицы. По умолчанию Значение параметра, если не передан аргумент def greet(name=\"друг\"):\n\n### СЛАЙД 08. Оператор return · таблица 1/2\n\nreturn завершает выполнение функции и возвращает значение вызывающему коду.\n\nПример на слайде:\ndef add(a, b):\n    return a + b # возвращает сумму\n\nresult = add(5, 3) # result = 8\nprint(add(10, 20)) # 30\nprint(add(1, 2) + add(3, 4)) # 10\n\nСравним данные в таблице.\nСитуация Что вернет функция return отсутствует None — специальное значение «нет значения» return без значения None return значение указанное значение return val1, val2 кортеж (val1, val2)\n\nВажно различать print и return . print только показывает значение на экране, а return передаёт его дальше в программу — его можно сохранить в переменную, сложить, записать в отчёт.\n\nРазница хорошо видна на примере двух функций, которые считают одно и то же:\n\nПример на слайде:\ndef show_sum(a, b):\n    print(a + b)   # только выводит результат на экран\n\ndef get_sum(a, b):\n    return a + b   # возвращает результат в программу\n\nx = show_sum(2, 3) # на экран выводится 5\ny = get_sum(2, 3)  # на экран ничего не выводится\nprint(x)           # None — show_sum ничего не вернула\nprint(y)           # 5\nprint(get_sum(2, 3) * 10) # 50 — возвращённое значение можно использовать дальше\n\nЕсли функция возвращает несколько значений через запятую, результатом будет кортеж. Его можно сразу распаковать в несколько переменных — их количество слева должно совпадать с количеством возвращаемых значений:\n\nПример на слайде:\ndef min_max(numbers):\n    return min(numbers), max(numbers)\n\nresult = min_max([4, 9, 1, 7])\nprint(result)    # (1, 9) — кортеж\n\nlow, high = min_max([4, 9, 1, 7])  # распаковка\nprint(low, high) # 1 9\n\n### СЛАЙД 09. Оператор return · таблица 2/2\n\nПосмотрите на продолжение таблицы. return значение указанное значение return val1, val2 кортеж (val1, val2)\n\n### СЛАЙД 10. Локальные переменные\n\nПеременные, которым значение присваивается внутри функции, — локальные : они создаются при каждом вызове функции и недоступны снаружи. Параметры функции тоже являются её локальными переменными.\n\nПример на слайде:\ndef calculate(x):\n    result = x * 2 # локальная переменная\n    return result\n\nprint(calculate(5)) # 10\n# print(result) # ← NameError: result не существует снаружи\n\nПоэтому результат работы функции передают наружу через return , а не через переменную внутри неё.\n\nПри этом функция может читать переменные, созданные вне её (глобальные). Но если внутри функции присвоить значение переменной с тем же именем, Python создаст новую локальную переменную, а внешняя не изменится:\n\nПример на слайде:\nrate = 10 # глобальная переменная\n\ndef price_with_rate(price):\n    return price + rate # чтение глобальной переменной — допустимо\n\ndef change_rate():\n    rate = 20 # новая локальная переменная, глобальная rate не меняется\n\nchange_rate()\nprint(price_with_rate(100)) # 110\nprint(rate)                 # 10\n\nИзменить глобальную переменную изнутри функции можно с помощью слова global , но так делать не рекомендуется: программу становится трудно проверять. Надёжнее передавать данные через параметры и возвращать результат через return .\n\n### СЛАЙД 11. Функции и обработка данных · таблица 1/4\n\nФункции – основа любой обработки данных. Классификатор из прошлого урока можно вынести в функцию:\n\nВажно\n\nЗдесь «классификатор» — это набор правил if / elif , которые человек придумал и записал сам. Это не обучаемая ML-модель: модель машинного обучения не получает готовые правила, а подбирает зависимость по примерам из данных.\n\nПример на слайде:\ndef classify(score, attendance, project):\n    if score >= 85 and attendance >= 80 and project:\n        return \"Отличник\"\n    elif score >= 70 and project:\n        return \"Хорошист\"\n    elif score >= 60:\n        return \"Удовл.\"\n    else:\n        return \"Неудовл.\"\n\n# Применяем к каждому объекту датасета\ndataset = [\n    {\"name\":\"Аня\",\"score\":92,\"attendance\":95,\"project\":True},\n    {\"name\":\"Боря\",\"score\":58,\"attendance\":70,\"project\":False},\n]\nfor row in dataset:\n    row[\"class\"] = classify(row[\"score\"], row[\"attendance\"], row[\"project\"])\n    print(row[\"name\"], \"→\", row[\"class\"])\n\nРезультат выполнения:\n\nПример на слайде:\nАня → Отличник\nБоря → Неудовл.\n\nЧтобы этот код работал, в каждой записи датасета должны быть ключи \"name\" , \"score\" , \"attendance\" и \"project\" , а значения — подходящего типа: name — строка, score и attendance — числа, project — True или False . Если в какой-то записи ключа нет, обращение row[\"score\"] вызовет ошибку KeyError .\n\nТак же устроена обработка рабочих данных: функция получает одну запись — заявку, заказ, позицию на складе — и возвращает для неё метку или результат расчёта. Цикл применяет эту функцию ко всем записям таблицы.\n\nПамятка\n\nСравним данные в таблице.\nЕсли нужно… Используйте… Определить функцию def name(params): Вернуть значение return value Значение по умолчанию def f(x, y=10): (сначала обязательные параметры) Вызвать функцию result = name(args) Несколько возвращаемых return val1, val2 ; распаковка: a, b = f() Принять несколько аргументов def f(a, b, c): Документировать функцию \"\"\"Описание\"\"\" сразу после def ; посмотреть: help(f)\n\n### СЛАЙД 12. Функции и обработка данных · таблица 2/4\n\nПосмотрите на продолжение таблицы. Значение по умолчанию def f(x, y=10): (сначала обязательные параметры) Вызвать функцию result = name(args)\n\n### СЛАЙД 13. Функции и обработка данных · таблица 3/4\n\nПосмотрите на продолжение таблицы. Несколько возвращаемых return val1, val2 ; распаковка: a, b = f() Принять несколько аргументов def f(a, b, c):\n\n### СЛАЙД 14. Функции и обработка данных · таблица 4/4\n\nПосмотрите на продолжение таблицы. Документировать функцию \"\"\"Описание\"\"\" сразу после def ; посмотреть: help(f)\n\n### СЛАЙД 15. Итоги урока\n\nНа этом занятии вы:\n\nнаучились определять функции с помощью def ;\n\nпередавали данные в функцию через параметры и получали результат через return ;\n\nиспользовали параметры по умолчанию;\n\nразбивали программу на логические части;\n\nприменяли функции к обработке данных и датасетов.\n\nФункции – это «кирпичики», из которых складывается программа: программист пишет функции, а потом комбинирует их для решения сложных задач. Библиотеки Python, например pandas и scikit-learn, тоже дают готовые функции, которые можно вызывать в своих программах.\n\n### СЛАЙД 16. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 17. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Функции - разбиение программы на части\n\n### СЛАЙД 01. Функции - разбиение программы на части\n\nВ этом занятии рассматривается тема «Функции - разбиение программы на части». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Вступление\n\nПредставь: ты написал программу для подсчета площади круга. Потом тебе понадобилось считать ее три раза – в разных местах кода. Копировать одни и те же строки снова и снова?\n\nФункция – это способ дать имя блоку кода и вызывать его столько раз, сколько нужно. Один раз описал – используй везде. Именно так написаны все серьезные программы: они состоят из функций.\n\nВ рабочих задачах это выглядит так: одна функция проверяет заявку, другая считает стоимость заказа, третья формирует строку отчёта. Каждую можно вызвать для любой заявки или заказа, не переписывая код.\n\nСегодня мы научимся создавать собственные функции, передавать им данные через параметры и получать результат через return – и напишем программу, в которой повторяющиеся действия вынесены в отдельные функции.\n\nПосле этого занятия вы сможете:\n\nопределять функцию с помощью def ;\n\nвызывать функцию и передавать ей аргументы;\n\nвозвращать результат через return ;\n\nиспользовать параметры по умолчанию;\n\nразбивать программу на логические части – функции.\n\n### СЛАЙД 03. Зачем нужны функции · таблица 1/2\n\nСравним данные в таблице.\nБез функций С функциями Один и тот же код копируется несколько раз Код написан один раз, вызывается многократно При ошибке нужно исправлять в каждом месте Исправление в одном месте – работает везде Сложно понять, что делает длинная программа Каждая функция – одна четко названная задача Невозможно повторно использовать код Функцию можно использовать в других программах\n\n### СЛАЙД 04. Зачем нужны функции · таблица 2/2\n\nПосмотрите на продолжение таблицы. Сложно понять, что делает длинная программа Каждая функция – одна четко названная задача Невозможно повторно использовать код Функцию можно использовать в других программах\n\n### СЛАЙД 05. Синтаксис функции\n\n\n\n```python\ndef имя_функции(параметр1, параметр2):\n    \"\"\"Документация функции (необязательно)\"\"\"\n    # тело функции\n    return результат # необязательно\n```\n\n\n\n\n\n```python\n# Пример: функция приветствия\ndef greet(name):\n    print(f\"Привет, {name}!\")\n\n# Вызов\ngreet(\"Аня\") # Привет, Аня!\ngreet(\"Боря\") # Привет, Боря!\n```\n\n\n\ndef – ключевое слово для определения функции.\n\nДвоеточие и отступ 4 пробела – обязательны, как в if и for .\n\nФункцию нужно ОПРЕДЕЛИТЬ (написать def ) до того, как ее ВЫЗВАТЬ.\n\nСтрока в тройных кавычках сразу после def — документация функции. Python не выполняет её как команду: при вызове функции эта строка ничего не делает, но сохраняется вместе с функцией. Её видят коллеги и среды разработки: по ней понятно, что делает функция, не читая её код.\n\nПосмотреть документацию функции можно двумя способами: командой help(имя_функции) или через атрибут имя_функции.__doc__ . Так же работает справка и для встроенных функций, например help(print) .\n\n\n\n```python\ndef area(r):\n    \"\"\"Возвращает площадь круга радиуса r.\"\"\"\n    return 3.14 * r ** 2\n\nprint(area.__doc__) # Возвращает площадь круга радиуса r.\nhelp(area)          # справка по функции, включая её документацию\n```\n\n\n\n### СЛАЙД 06. Параметры и аргументы · таблица 1/2\n\nСравним данные в таблице.\nТермин Определение Пример Параметр Переменная в определении функции def greet(name): ← name Аргумент Значение, передаваемое при вызове greet(\"Аня\") ← \"Аня\" По умолчанию Значение параметра, если не передан аргумент def greet(name=\"друг\"):\n\n\n\n```python\ndef power(base, exp=2): # exp по умолчанию = 2\n    return base ** exp\n\nprint(power(3)) # 9 – exp = 2 (по умолчанию)\nprint(power(3, 3)) # 27 – exp = 3 (передан явно)\nprint(power(2, 10)) # 1024\n```\n\n\n\nПорядок параметров. Параметры со значением по умолчанию записываются после обязательных параметров. Это правило синтаксиса Python: обязательный параметр нельзя записывать после параметра со значением по умолчанию. Если нарушить порядок, Python сообщит об ошибке SyntaxError ещё до запуска программы:\n\n\n\n```python\n# Ошибка: SyntaxError: non-default argument follows default argument\n# def power(exp=2, base):\n#     return base ** exp\n\n# Правильно: сначала обязательный параметр, затем параметр по умолчанию\ndef power(base, exp=2):\n    return base ** exp\n```\n\n\n\nПараметр — как поле в бланке заявки, а аргумент — то, что в это поле вписали для конкретного случая. Бланк один, заполнений может быть сколько угодно.\n\n### СЛАЙД 07. Параметры и аргументы · таблица 2/2\n\nПосмотрите на продолжение таблицы. По умолчанию Значение параметра, если не передан аргумент def greet(name=\"друг\"):\n\n### СЛАЙД 08. Оператор return · таблица 1/2\n\nreturn завершает выполнение функции и возвращает значение вызывающему коду.\n\n\n\n```python\ndef add(a, b):\n    return a + b # возвращает сумму\n\nresult = add(5, 3) # result = 8\nprint(add(10, 20)) # 30\nprint(add(1, 2) + add(3, 4)) # 10\n```\n\n\n\nСравним данные в таблице.\nСитуация Что вернет функция return отсутствует None — специальное значение «нет значения» return без значения None return значение указанное значение return val1, val2 кортеж (val1, val2)\n\nВажно различать print и return . print только показывает значение на экране, а return передаёт его дальше в программу — его можно сохранить в переменную, сложить, записать в отчёт.\n\nРазница хорошо видна на примере двух функций, которые считают одно и то же:\n\n\n\n```python\ndef show_sum(a, b):\n    print(a + b)   # только выводит результат на экран\n\ndef get_sum(a, b):\n    return a + b   # возвращает результат в программу\n\nx = show_sum(2, 3) # на экран выводится 5\ny = get_sum(2, 3)  # на экран ничего не выводится\nprint(x)           # None — show_sum ничего не вернула\nprint(y)           # 5\nprint(get_sum(2, 3) * 10) # 50 — возвращённое значение можно использовать дальше\n```\n\n\n\nЕсли функция возвращает несколько значений через запятую, результатом будет кортеж. Его можно сразу распаковать в несколько переменных — их количество слева должно совпадать с количеством возвращаемых значений:\n\n\n\n```python\ndef min_max(numbers):\n    return min(numbers), max(numbers)\n\nresult = min_max([4, 9, 1, 7])\nprint(result)    # (1, 9) — кортеж\n\nlow, high = min_max([4, 9, 1, 7])  # распаковка\nprint(low, high) # 1 9\n```\n\n\n\n### СЛАЙД 09. Оператор return · таблица 2/2\n\nПосмотрите на продолжение таблицы. return значение указанное значение return val1, val2 кортеж (val1, val2)\n\n### СЛАЙД 10. Локальные переменные\n\nПеременные, которым значение присваивается внутри функции, — локальные : они создаются при каждом вызове функции и недоступны снаружи. Параметры функции тоже являются её локальными переменными.\n\n\n\n```python\ndef calculate(x):\n    result = x * 2 # локальная переменная\n    return result\n\nprint(calculate(5)) # 10\n# print(result) # ← NameError: result не существует снаружи\n```\n\n\n\nПоэтому результат работы функции передают наружу через return , а не через переменную внутри неё.\n\nПри этом функция может читать переменные, созданные вне её (глобальные). Но если внутри функции присвоить значение переменной с тем же именем, Python создаст новую локальную переменную, а внешняя не изменится:\n\n\n\n```python\nrate = 10 # глобальная переменная\n\ndef price_with_rate(price):\n    return price + rate # чтение глобальной переменной — допустимо\n\ndef change_rate():\n    rate = 20 # новая локальная переменная, глобальная rate не меняется\n\nchange_rate()\nprint(price_with_rate(100)) # 110\nprint(rate)                 # 10\n```\n\n\n\nИзменить глобальную переменную изнутри функции можно с помощью слова global , но так делать не рекомендуется: программу становится трудно проверять. Надёжнее передавать данные через параметры и возвращать результат через return .\n\n### СЛАЙД 11. Функции и обработка данных · таблица 1/4\n\nФункции – основа любой обработки данных. Классификатор из прошлого урока можно вынести в функцию:\n\nВажно\n\nЗдесь «классификатор» — это набор правил if / elif , которые человек придумал и записал сам. Это не обучаемая ML-модель: модель машинного обучения не получает готовые правила, а подбирает зависимость по примерам из данных.\n\n\n\n```python\ndef classify(score, attendance, project):\n    if score >= 85 and attendance >= 80 and project:\n        return \"Отличник\"\n    elif score >= 70 and project:\n        return \"Хорошист\"\n    elif score >= 60:\n        return \"Удовл.\"\n    else:\n        return \"Неудовл.\"\n\n# Применяем к каждому объекту датасета\ndataset = [\n    {\"name\":\"Аня\",\"score\":92,\"attendance\":95,\"project\":True},\n    {\"name\":\"Боря\",\"score\":58,\"attendance\":70,\"project\":False},\n]\nfor row in dataset:\n    row[\"class\"] = classify(row[\"score\"], row[\"attendance\"], row[\"project\"])\n    print(row[\"name\"], \"→\", row[\"class\"])\n```\n\n\n\nРезультат выполнения:\n\n```text\nАня → Отличник\nБоря → Неудовл.\n```\n\nЧтобы этот код работал, в каждой записи датасета должны быть ключи \"name\" , \"score\" , \"attendance\" и \"project\" , а значения — подходящего типа: name — строка, score и attendance — числа, project — True или False . Если в какой-то записи ключа нет, обращение row[\"score\"] вызовет ошибку KeyError .\n\nТак же устроена обработка рабочих данных: функция получает одну запись — заявку, заказ, позицию на складе — и возвращает для неё метку или результат расчёта. Цикл применяет эту функцию ко всем записям таблицы.\n\nПамятка\n\nСравним данные в таблице.\nЕсли нужно… Используйте… Определить функцию def name(params): Вернуть значение return value Значение по умолчанию def f(x, y=10): (сначала обязательные параметры) Вызвать функцию result = name(args) Несколько возвращаемых return val1, val2 ; распаковка: a, b = f() Принять несколько аргументов def f(a, b, c): Документировать функцию \"\"\"Описание\"\"\" сразу после def ; посмотреть: help(f)\n\n### СЛАЙД 12. Функции и обработка данных · таблица 2/4\n\nПосмотрите на продолжение таблицы. Значение по умолчанию def f(x, y=10): (сначала обязательные параметры) Вызвать функцию result = name(args)\n\n### СЛАЙД 13. Функции и обработка данных · таблица 3/4\n\nПосмотрите на продолжение таблицы. Несколько возвращаемых return val1, val2 ; распаковка: a, b = f() Принять несколько аргументов def f(a, b, c):\n\n### СЛАЙД 14. Функции и обработка данных · таблица 4/4\n\nПосмотрите на продолжение таблицы. Документировать функцию \"\"\"Описание\"\"\" сразу после def ; посмотреть: help(f)\n\n### СЛАЙД 15. Итоги урока\n\nНа этом занятии вы:\n\nнаучились определять функции с помощью def ;\n\nпередавали данные в функцию через параметры и получали результат через return ;\n\nиспользовали параметры по умолчанию;\n\nразбивали программу на логические части;\n\nприменяли функции к обработке данных и датасетов.\n\nФункции – это «кирпичики», из которых складывается программа: программист пишет функции, а потом комбинирует их для решения сложных задач. Библиотеки Python, например pandas и scikit-learn, тоже дают готовые функции, которые можно вызывать в своих программах.\n\n### СЛАЙД 16. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 17. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Функции - разбиение программы на части\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Задача 1. Что выведет программа – функции высшего порядка\n\nУсловие\n\nПрочитайте код. Не запуская его, определите вывод.\n\n\n```\ndef apply_filter(table, func):\n    result = []\n    for row in table:\n        if func(row): result.append(row)\n    return result\n\ncatalog = [\n    {\"name\": \"Наушники\",  \"price\": 1500, \"rating\": 4.7},\n    {\"name\": \"Мышь\",       \"price\":  890, \"rating\": 3.9},\n    {\"name\": \"Кабель\",     \"price\":  200, \"rating\": 4.2},\n]\nres = apply_filter(catalog, lambda p: p[\"rating\"] >= 4.0)\nprint(len(res), res[0][\"name\"])\n```\n\n\n### Задача 2. Функция применения к датасету – внеси изменение\n\nУсловие\n\nФункция apply_to_column применяет функцию func к одному полю всех строк. Сейчас она перезаписывает это поле.\n\n\n```\ndef apply_to_column(table, field, func):\n    for row in table:\n        row[field] = func(row[field])\n    return table\n\nproducts = [\n    {\"name\": \"Товар А\", \"price\": 1000},\n    {\"name\": \"Товар Б\", \"price\": 2500},\n]\n# Применить скидку 10% – умножить цену на 0.9\napply_to_column(products, \"price\", lambda x: round(x * 0.9, 2))\nfor p in products:\n    print(p)\n```\n\nЧто нужно сделать\n\n- Добавьте параметр new_field со значением по умолчанию \"result\" .\n\n- Записывайте результат в поле new_field . Исходное поле должно остаться без изменений.\n\n- Измените вызов: apply_to_column(products, \"price\", lambda x: round(x * 0.9, 2), new_field=\"sale_price\") .\n\nОжидаемый результат\n\n\n```\n{'name': 'Товар А', 'price': 1000, 'sale_price': 900.0}\n{'name': 'Товар Б', 'price': 2500, 'sale_price': 2250.0}\n```\n\nПодсказка\n\n- lambda x: round(x * 0.9, 2) — короткая функция без имени: получает x и возвращает x , умноженный на 0,9 и округлённый до двух знаков.\n\n- Новое поле словаря создаётся присваиванием: row[new_field] = ... .\n\n\n### Задача 3. Найди ошибки: функция обработки словаря\n\nУсловие\n\nФункция total_in_stock должна вернуть сумму цен товаров, которые есть в наличии, а get_max_price — максимальную цену. В коде три ошибки. Найдите и исправьте их.\n\n\n```\ndef total_in_stock(items):\n    total = 0\n    for item in items:\n        if item[in_stock]:\n            total += item[\"price\"]\n    return total\n\ndef get_max_price(items)\n    max_price = 0\n    for item in items:\n        if item[\"price\"] > max_price\n            max_price = item[\"price\"]\n    return max_price\n\nshop = [{\"name\": \"Чай\", \"price\": 150, \"in_stock\": True}, {\"name\": \"Кофе\", \"price\": 200, \"in_stock\": False}, {\"name\": \"Сок\", \"price\": 90, \"in_stock\": True}]\nprint(total_in_stock(shop))\nprint(get_max_price(shop))\n```\n\nОжидаемый результат\n\n\n```\n240\n200\n```\n\nПодсказка\n\n- Ключ словаря — это строка. Как записывается строка в Python?\n\n- Проверьте, чем заканчиваются строки с def и if .\n\n\n### Задача 4. Функции обработки списка\n\nУсловие\n\nНапишите три функции для работы со списком чисел.\n\nЧто нужно сделать\n\n- count_positive(numbers) — возвращает количество положительных чисел.\n\n- average(numbers) — возвращает среднее значение. Если список пуст — возвращает None .\n\n- filter_above(numbers, threshold) — возвращает новый список из чисел больше threshold .\n\nНе используйте встроенные функции sum() , len() , max() , min() — только цикл for .\n\nВыведите результаты четырёх вызовов в таком порядке:\n\n\n```\nprint(count_positive([3, -1, 0, 7, -2, 5]))\nprint(average([10, 20, 30]))\nprint(filter_above([1, 5, 3, 8, 2], 4))\nprint(average([]))\n```\n\nОжидаемый результат\n\n\n```\n3\n20.0\n[5, 8]\nNone\n```\n\nПодсказка\n\n- Для среднего считайте в цикле две величины: сумму и количество.\n\n- Пустой список: если после цикла количество равно 0, верните None .\n\n\n### Задача 5. Декомпозиция: анализ датасета студентов\n\nУсловие\n\nРазработайте программу «Анализ датасета студентов» из шести функций. Ниже приведена заготовка: в ней уже есть данные (функция get_dataset() ) и основная программа. Скопируйте заготовку в редактор и напишите тела остальных пяти функций, в которых сейчас стоит pass . Основную программу не меняйте.\n\n\n```\ndef get_dataset():\n    return [\n        {\"name\": \"Аня\", \"score\": 92, \"attendance\": 95, \"project\": True},\n        {\"name\": \"Боря\", \"score\": 58, \"attendance\": 70, \"project\": False},\n        {\"name\": \"Вика\", \"score\": 76, \"attendance\": 88, \"project\": True},\n        {\"name\": \"Гоша\", \"score\": 64, \"attendance\": 60, \"project\": False},\n        {\"name\": \"Даша\", \"score\": 87, \"attendance\": 82, \"project\": True},\n    ]\n\n\ndef classify(row):\n    # верните метку класса по правилу из условия\n    pass\n\n\ndef add_classes(table):\n    # добавьте ключ \"class\" в каждую запись\n    pass\n\n\ndef stats(table, field):\n    # верните минимум, максимум и среднее (округлить до 2 знаков)\n    pass\n\n\ndef filter_by_class(table, cls):\n    # верните записи с классом cls\n    pass\n\n\ndef print_table(table):\n    # выведите каждую запись одной строкой\n    pass\n\n\ntable = add_classes(get_dataset())\nprint_table(table)\nprint(stats(table, \"score\"))\nprint(stats(table, \"attendance\"))\nprint_table(filter_by_class(table, \"Отличник\"))\n```\n\nЧто нужно сделать\n\n- get_dataset() — возвращает список из 5 записей (готов в заготовке).\n\n- classify(row) — возвращает метку класса: score >= 85 , attendance >= 80 и есть проект — «Отличник»; иначе score >= 70 и есть проект — «Хорошист»; иначе score >= 60 — «Удовл.»; иначе — «Неудовл.».\n\n- add_classes(table) — добавляет ключ \"class\" в каждый словарь, вызывая classify , и возвращает таблицу.\n\n- stats(table, field) — возвращает min , max и среднее по числовому полю; среднее округлить до двух знаков.\n\n- filter_by_class(table, cls) — возвращает записи с указанным классом.\n\n- print_table(table) — выводит каждую запись одной строкой: имя, балл, посещаемость, проект, класс через пробел.\n\nОжидаемый результат\n\n\n```\nАня 92 95 True Отличник\nБоря 58 70 False Неудовл.\nВика 76 88 True Хорошист\nГоша 64 60 False Удовл.\nДаша 87 82 True Отличник\n(58, 92, 75.4)\n(60, 95, 79.0)\nАня 92 95 True Отличник\nДаша 87 82 True Отличник\n```\n\nПодсказка\n\n- Правило classify — то же, что в статье занятия, только данные берутся из словаря: row[\"score\"] .\n\n- Три значения из функции возвращаются через запятую — print выведет их в скобках.\n\n\n### Задача 6. Функция высшего порядка\n\nУсловие\n\nНапишите функцию apply_filter(table, condition_func) . Она возвращает список строк, для которых condition_func(row) возвращает True .\n\n\n```\ncatalog = [\n    {\"name\": \"Наушники\", \"price\": 1500, \"rating\": 4.7, \"in_stock\": True},\n    {\"name\": \"Мышь\", \"price\": 890, \"rating\": 4.8, \"in_stock\": False},\n    {\"name\": \"Кабель\", \"price\": 200, \"rating\": 4.2, \"in_stock\": True},\n    {\"name\": \"Монитор\", \"price\": 12000, \"rating\": 4.9, \"in_stock\": True},\n    {\"name\": \"Веб-камера\", \"price\": 3500, \"rating\": 4.1, \"in_stock\": True},\n]\n```\n\nЧто нужно сделать\n\nВызовите функцию три раза с разными условиями:\n\n\n```\napply_filter(catalog, lambda p: p[\"rating\"] >= 4.5)\napply_filter(catalog, lambda p: p[\"price\"] < 2000)\napply_filter(catalog, lambda p: p[\"in_stock\"] and p[\"rating\"] > 4.0)\n```\n\nДля каждого вызова выведите названия отфильтрованных товаров одной строкой через запятую и пробел.\n\nОжидаемый результат\n\n\n```\nНаушники, Мышь, Монитор\nНаушники, Мышь, Кабель\nНаушники, Кабель, Монитор, Веб-камера\n```\n\nПодсказка\n\n- Функцию можно передать в другую функцию как обычное значение. Внутри её вызывают по имени параметра: condition_func(row) .\n\n- Строку из названий удобно собрать так: \", \".join(...) .\n\n\n### Задача 7. Итоговый проект: каталог товаров\n\nУсловие\n\nСоздайте программу «Каталог товаров» из трёх функций. Каталог уже задан:\n\n\n```\ncatalog = [\n    {\"name\": \"Ноутбук\", \"price\": 45000, \"rating\": 4.8, \"in_stock\": True},\n    {\"name\": \"Флешка\", \"price\": 390, \"rating\": 4.3, \"in_stock\": True},\n    {\"name\": \"Коврик\", \"price\": 350, \"rating\": 3.8, \"in_stock\": True},\n    {\"name\": \"Роутер\", \"price\": 3200, \"rating\": 4.1, \"in_stock\": True},\n    {\"name\": \"Планшет\", \"price\": 28000, \"rating\": 4.6, \"in_stock\": False},\n    {\"name\": \"Колонка\", \"price\": 4200, \"rating\": 4.5, \"in_stock\": True},\n]\n```\n\nЧто нужно сделать\n\n- classify_product(product) — возвращает метку: «Нет в наличии» / «Выгодная покупка» / «Хороший выбор» / «Стандарт».\n\n- add_labels(catalog) — применяет classify_product к каждому товару и добавляет ключ \"label\" .\n\n- print_catalog(catalog) — выводит каждый товар в формате: «Название | Цена: X | Рейтинг: Y | Метка: Z».\n\nОсновная программа — не больше 5 строк: каталог → add_labels → print_catalog .\n\nПравила классификации: in_stock=False — «Нет в наличии»; price < 500 и rating >= 4.0 — «Выгодная покупка»; rating >= 4.5 — «Хороший выбор»; иначе — «Стандарт».\n\nОжидаемый результат\n\n\n```\nНоутбук | Цена: 45000 | Рейтинг: 4.8 | Метка: Хороший выбор\nФлешка | Цена: 390 | Рейтинг: 4.3 | Метка: Выгодная покупка\nКоврик | Цена: 350 | Рейтинг: 3.8 | Метка: Стандарт\nРоутер | Цена: 3200 | Рейтинг: 4.1 | Метка: Стандарт\nПланшет | Цена: 28000 | Рейтинг: 4.6 | Метка: Нет в наличии\nКолонка | Цена: 4200 | Рейтинг: 4.5 | Метка: Хороший выбор\n```\n\nПодсказка\n\n- Правила проверяйте по порядку: товар не в наличии сразу получает метку «Нет в наличии», остальные условия к нему не применяются.\n\n- Проверьте себя: для ноутбука ( 45000 , 4.8 , в наличии) должна получиться метка «Хороший выбор».\n\n\n### Таблицы из теоретической части\n\n\n| Без функций | С функциями |\n| --- | --- |\n| Один и тот же код копируется несколько раз | Код написан один раз, вызывается многократно |\n| При ошибке нужно исправлять в каждом месте | Исправление в одном месте – работает везде |\n| Сложно понять, что делает длинная программа | Каждая функция – одна четко названная задача |\n| Невозможно повторно использовать код | Функцию можно использовать в других программах |\n\n\n| Термин | Определение | Пример |\n| --- | --- | --- |\n| Параметр | Переменная в определении функции | def greet(name): ← name |\n| Аргумент | Значение, передаваемое при вызове | greet(\"Аня\") ← \"Аня\" |\n| По умолчанию | Значение параметра, если не передан аргумент | def greet(name=\"друг\"): |\n\n\n| Ситуация | Что вернет функция |\n| --- | --- |\n| return отсутствует | None — специальное значение «нет значения» |\n| return без значения | None |\n| return значение | указанное значение |\n| return val1, val2 | кортеж (val1, val2) |\n\n\n| Если нужно… | Используйте… |\n| --- | --- |\n| Определить функцию | def name(params): |\n| Вернуть значение | return value |\n| Значение по умолчанию | def f(x, y=10): (сначала обязательные параметры) |\n| Вызвать функцию | result = name(args) |\n| Несколько возвращаемых | return val1, val2 ; распаковка: a, b = f() |\n| Принять несколько аргументов | def f(a, b, c): |\n| Документировать функцию | \"\"\"Описание\"\"\" сразу после def ; посмотреть: help(f) |",
   "theory": [
     {
       "title": "Функции - разбиение программы на части",
@@ -355,5 +996,42 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "output",
+    "loops",
+    "conditions",
+    "logic",
+    "functions",
+    "problem",
+    "prototype",
+    "documentation"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M01-L10-lecture.pdf",
+      "name": "Функции - разбиение программы на части — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "38a75073826613a2d22a0baed0722f34142d60e7cf9bc37bf84ae3d1c0471a1f",
+      "source": {
+        "path": "Снимки страниц.json / 98f82b424e3e81ea3f4afc3b",
+        "sha256": "dc717ffd63d1614a08c3277cd2e5421557d7354ab08248a0a34851dcb88e180a"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M01-L10-presentation.pdf",
+      "name": "Функции - разбиение программы на части — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 17,
+      "sha256": "6f0c36af7f4a2a4fc4c2f5bba6d66dac39d6de266a0dd9127db86603213be62d",
+      "source": {
+        "path": "Модуль 1/Занятие 10/Презентация — итоговая.pptx",
+        "sha256": "eb2163daf100a71f8ec571e0d8d320e16f49438c8452fedf76c5994e26795276"
+      }
+    }
   }
 }

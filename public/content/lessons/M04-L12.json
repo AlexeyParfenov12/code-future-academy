@@ -10,7 +10,7 @@
   "slideCount": 17,
   "fileCount": 0,
   "hasLecture": true,
-  "description": "СЛАЙД 01. Самостоятельная работа - тестирование по сценарию пользователя  В этом занятии рассматривается тема «Самостоятельная работа - тестирование по сценарию пользова",
+  "description": "В этом занятии рассматривается тема «Самостоятельная работа - тестирование по сценарию пользователя». Будем опираться на примеры курса и проверять результат на конкретных данных.",
   "tags": [],
   "tasks": [
     {
@@ -20,7 +20,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L12",
-      "statement": "#### Шаг 1. Архитектура и требования\n\nВ этом шаге требуется описать решение до анализа конкретных тестов. Формулировки должны позволять другому проверяющему однозначно определить ожидаемый результат для любого входа из заданного контракта.\n\n\n| Раздел | Ваше описание |\n| --- | --- |\n| Цель пользователя |  |\n| Входные поля и точные типы |  |\n| Допустимые значения role и channel |  |\n| Диапазон и граница confidence |  |\n| Полный формат выхода |  |\n| Нормализация text |  |\n| Правило нескольких категорий |  |\n| Правило критического приоритета |  |\n| Граница автоматизации |  |\n| Критерий успеха сценария |  |",
+      "statement": "### Шаг 1. Архитектура и требования\n\nВ этом шаге требуется описать решение до анализа конкретных тестов. Формулировки должны позволять другому проверяющему однозначно определить ожидаемый результат для любого входа из заданного контракта.\n\n| Раздел | Ваше описание |\n| --- | --- |\n| Цель пользователя |  |\n| Входные поля и точные типы |  |\n| Допустимые значения role и channel |  |\n| Диапазон и граница confidence |  |\n| Полный формат выхода |  |\n| Нормализация text |  |\n| Правило нескольких категорий |  |\n| Правило критического приоритета |  |\n| Граница автоматизации |  |\n| Критерий успеха сценария |  |",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba89da10dbcd0669efe60d",
@@ -33,17 +33,33 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L12",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Цель: направить учебное обращение в нужную очередь с корректными срочностью и способом обработки.\nВход: text: str, непустой после strip; role: str из student/teacher/administrator; channel: str из portal/email/phone; confidence: int или float от 0 до 1, но не bool.\nВыход: словарь category=access/network/equipment/software/other, priority=P1/P2/P3, action=auto_route/operator_review/input_error.\nПорядок: валидация R1 → strip/lower R2 → поиск всех категорий R3–R6 → неоднозначность R7/низкая confidence R8 → независимый приоритет R9/R10.\nДве и более категории: other/operator_review. При confidence<0.60: operator_review с сохранением единственной найденной категории; 0.60 допускает auto_route.\nКритические фразы «сервер недоступен», «утечка данных», «не работает сеть во всём корпусе»: P1 при любой роли/канале и даже ручной проверке. Иначе teacher/administrator/phone→P2, остальные P3.\nУспех: все три выходных поля совпали с заранее заданным ожиданием.",
+        "explanation": "Валидация выполняется до строковых методов. Приоритет не отменяется из-за низкой уверенности. Слово«other» не означает автоматически ошибку ввода: важен action.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [],
+        "id": "T-6aba89da10dbcd0669efe60d-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 12/Практика для студентов.md",
-        "sha256": "a7461d286935a3c28bd9f9616f1640fe2f2fac1738a1cbab89e82b7cc3c91548"
+        "elementId": "6aba89da10dbcd0669efe60d",
+        "archive": "Снимки страниц.json",
+        "sha256": "9fe197dc49a27b8501fa3027532a4f570206c9c33ff0414c0a3bd5ece0fb28ab"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": []
     },
     {
       "id": "T-6aba89da10dbcd0669efe610",
@@ -52,7 +68,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L12",
-      "statement": "#### Шаг 2. Прогноз поведения исходной версии\n\nДля каждого сценария запишите полный результат по требованиям, затем прогноз исходной функции. Если ожидается сбой, укажите «сбой программы».\n\nПолный результат удобно записывать в едином порядке: category/priority/action. В графе «Причина» нужно указать конкретное расхождение между требованием и исходной реализацией, например неверную границу сравнения, отсутствие валидации или неправильное правило приоритета.\n\n\n| № | Сценарий | По требованиям | Исходная функция | Причина |\n| --- | --- | --- | --- | --- |\n| 1 | student, portal; «Не могу войти в учётную запись»; 0.92 |  |  |  |\n| 2 | student, portal; «Нет интернета»; 0.60 |  |  |  |\n| 3 | student, portal; «Сервер недоступен»; 0.95 |  |  |  |\n| 4 | text=None; student, portal; 0.80 |  |  |  |\n\n\n| Какой из четырёх сценариев наиболее важен по последствиям ошибки и почему? |\n| --- |\n| Ваш ответ: |\n\nПри оценке последствий учитывается не только факт несовпадения, но и возможное влияние: потеря критического приоритета, неверная автоматическая маршрутизация или полное прекращение обработки из-за сбоя.",
+      "statement": "### Шаг 2. Прогноз поведения исходной версии\n\nДля каждого сценария запишите полный результат по требованиям, затем прогноз исходной функции. Если ожидается сбой, укажите «сбой программы».\n\nПолный результат удобно записывать в едином порядке: category/priority/action. В графе «Причина» нужно указать конкретное расхождение между требованием и исходной реализацией, например неверную границу сравнения, отсутствие валидации или неправильное правило приоритета.\n\n| № | Сценарий | По требованиям | Исходная функция | Причина |\n| --- | --- | --- | --- | --- |\n| 1 | student, portal; «Не могу войти в учётную запись»; 0.92 |  |  |  |\n| 2 | student, portal; «Нет интернета»; 0.60 |  |  |  |\n| 3 | student, portal; «Сервер недоступен»; 0.95 |  |  |  |\n| 4 | text=None; student, portal; 0.80 |  |  |  |\n\n| Какой из четырёх сценариев наиболее важен по последствиям ошибки и почему? |\n| --- |\n| Ваш ответ: |\n\nПри оценке последствий учитывается не только факт несовпадения, но и возможное влияние: потеря критического приоритета, неверная автоматическая маршрутизация или полное прекращение обработки из-за сбоя.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba89da10dbcd0669efe610",
@@ -65,17 +81,33 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L12",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Трассировка логики ветвей, а не запуск архивного файла с потерянными отступами:\n1. Требуется access/P3/auto_route; исходная логика other/P3/auto_route: не учтены «войти» и форма «учётную запись».\n2. Требуется network/P3/auto_route; исходная other/P3/operator_review: ошибочное<=0.60 и потеря категории.\n3. Требуется network/P1/auto_route; исходная other/P3/auto_route: нет критической фразы и приоритета R9.\n4. Требуется other/P3/input_error; исходная логика вызывает сбой при None.lower().\nПо последствиям особенно важен 3: критическая недоступность сервера теряет срочность. Сценарий 4 также важен для непрерывности обработки.",
+        "explanation": "В сохранённом исходном фрагменте отступы отсутствуют: он не объявляется исправно запускаемой программой. Таблица получена ручным прохождением явно описанных ветвей. Для исправленной реализации ниже применяется полный контракт и реальные автопроверки. Формы слов в сценарии 1 нужно согласовать с перечнем ключевых выражений.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [],
+        "id": "T-6aba89da10dbcd0669efe610-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 12/Практика для студентов.md",
-        "sha256": "a7461d286935a3c28bd9f9616f1640fe2f2fac1738a1cbab89e82b7cc3c91548"
+        "elementId": "6aba89da10dbcd0669efe610",
+        "archive": "Снимки страниц.json",
+        "sha256": "f0808cbc6fdf34aa7ca2d9a32b68a64f75e9c2429e7d085b9742e0b54c82256a"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": []
     },
     {
       "id": "T-6aba89da10dbcd0669efe613",
@@ -84,7 +116,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L12",
-      "statement": "#### Шаг 3. Разработка собственных сценариев\n\nСоздайте четыре сценария. Каждый должен проверять отдельную пользовательскую цель или риск, а не только отдельное ключевое слово.\n\nСценарий должен быть воспроизводимым: другой проверяющий должен суметь передать те же четыре входных параметра и сравнить результат с тем же ожиданием. Неоднозначный сценарий должен содержать признаки не менее двух категорий либо проверять правило низкой уверенности; некорректный сценарий должен нарушать конкретное условие R1.\n\n\n| ID | Тип | Роль и канал | Цель пользователя | Вход и confidence | Ожидаемый полный результат |\n| --- | --- | --- | --- | --- | --- |\n| S1 | Обычный |  |  |  |  |\n| S2 | Критический |  |  |  |  |\n| S3 | Неоднозначный или confidence < 0.60 |  |  |  |  |\n| S4 | Некорректный ввод |  |  |  |  |",
+      "statement": "### Шаг 3. Разработка собственных сценариев\n\nСоздайте четыре сценария. Каждый должен проверять отдельную пользовательскую цель или риск, а не только отдельное ключевое слово.\n\nСценарий должен быть воспроизводимым: другой проверяющий должен суметь передать те же четыре входных параметра и сравнить результат с тем же ожиданием. Неоднозначный сценарий должен содержать признаки не менее двух категорий либо проверять правило низкой уверенности; некорректный сценарий должен нарушать конкретное условие R1.\n\n| ID | Тип | Роль и канал | Цель пользователя | Вход и confidence | Ожидаемый полный результат |\n| --- | --- | --- | --- | --- | --- |\n| S1 | Обычный |  |  |  |  |\n| S2 | Критический |  |  |  |  |\n| S3 | Неоднозначный или confidence < 0.60 |  |  |  |  |\n| S4 | Некорректный ввод |  |  |  |  |",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba89da10dbcd0669efe613",
@@ -97,17 +129,39 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L12",
+        "status": "published",
+        "kind": "project_example",
+        "code": "",
+        "answer": "S1. Обычный: student, portal; «Не могу открыть приложение», confidence 0.90; цель — решить запуск. Ожидание software/P3/auto_route.\nS2. Критический: teacher, email; «Утечка данных», 0.95; цель — срочно остановить инцидент. Ожидание other/P1/auto_route по заданному контракту (критическая фраза вне 4 категорий).\nS3. Неоднозначный: student, email; «Пароль заблокирован и принтер не печатает», 0.90. Ожидание other/P3/operator_review.\nS4. Некорректный: administrator, phone; «Сервер недоступен», confidence=True. Ожидание other/P3/input_error: bool недопустим, валидация выполняется раньше критических правил.",
+        "explanation": "Четыре сценария проверяют разные цели. В S2 не придумывается новая категория security: контракт разрешает other. В S4 ошибочныйвходимеетприоритетнадсодержанием.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "features",
+          "target"
+        ],
+        "id": "T-6aba89da10dbcd0669efe613-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 12/Практика для студентов.md",
-        "sha256": "a7461d286935a3c28bd9f9616f1640fe2f2fac1738a1cbab89e82b7cc3c91548"
+        "elementId": "6aba89da10dbcd0669efe613",
+        "archive": "Снимки страниц.json",
+        "sha256": "19e64cdbed388aca5f882fe3b43765e4ec6a8169794455f1ff4ef5411ac881f8"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "features",
+        "target"
+      ]
     },
     {
       "id": "T-6aba89da10dbcd0669efe616",
@@ -116,7 +170,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L12",
-      "statement": "#### Шаг 4. Сценарное тестирование и показатели\n\nВ графе «Фактически» записывается результат именно проверяемой версии функции. В графе «Успех?» указывается «да» только при точном совпадении всех трёх полей; отсутствие сбоя само по себе не означает успех.\n\n\n| ID | role | channel | text | conf. | Ожидается | Фактически | Успех? |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| T01 | student | portal | Не могу войти: пароль не подходит | 0.92 | access/P3/auto_route |  |  |\n| T02 | teacher | email | Принтер не печатает | 0.88 | equipment/P2/auto_route |  |  |\n| T03 | student | portal | Нет интернета | 0.60 | network/P3/auto_route |  |  |\n| T04 | student | portal | Сервер недоступен | 0.95 | network/P1/auto_route |  |  |\n| T05 | teacher | portal | Нужно обновление программы | 0.58 | software/P2/operator_review |  |  |\n| T06 | student | email | Не входит пароль и не работает интернет | 0.90 | other/P3/operator_review |  |  |\n| T07 | student | portal |  | 0.80 | other/P3/input_error |  |  |\n| T08 | guest | portal | Не могу войти | 0.82 | other/P3/input_error |  |  |\n\nРассчитайте показатели только по T01–T08:\n\n\n| Показатель | Формула | Ваш результат |\n| --- | --- | --- |\n| Scenario Pass Rate | полностью успешные сценарии / 8 × 100 % |  |\n| Critical Recall | правильно обработанные критические / все критические × 100 % |  |\n| Validation Rate | корректно отклонённые некорректные / все некорректные × 100 % |  |\n\nПеред вычислением каждой метрики определите её знаменатель. В Scenario Pass Rate входят все восемь сценариев, в Critical Recall — только сценарии с критическим ожидаемым поведением, а в Validation Rate — только сценарии с некорректными входами. В числитель включаются лишь полностью правильно обработанные случаи соответствующей группы.",
+      "statement": "### Шаг 4. Сценарное тестирование и показатели\n\nВ графе «Фактически» записывается результат именно проверяемой версии функции. В графе «Успех?» указывается «да» только при точном совпадении всех трёх полей; отсутствие сбоя само по себе не означает успех.\n\n| ID | role | channel | text | conf. | Ожидается | Фактически | Успех? |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| T01 | student | portal | Не могу войти: пароль не подходит | 0.92 | access/P3/auto_route |  |  |\n| T02 | teacher | email | Принтер не печатает | 0.88 | equipment/P2/auto_route |  |  |\n| T03 | student | portal | Нет интернета | 0.60 | network/P3/auto_route |  |  |\n| T04 | student | portal | Сервер недоступен | 0.95 | network/P1/auto_route |  |  |\n| T05 | teacher | portal | Нужно обновление программы | 0.58 | software/P2/operator_review |  |  |\n| T06 | student | email | Не входит пароль и не работает интернет | 0.90 | other/P3/operator_review |  |  |\n| T07 | student | portal |  | 0.80 | other/P3/input_error |  |  |\n| T08 | guest | portal | Не могу войти | 0.82 | other/P3/input_error |  |  |\n\n**Рассчитайте показатели только по T01–T08:**\n\n| Показатель | Формула | Ваш результат |\n| --- | --- | --- |\n| Scenario Pass Rate | полностью успешные сценарии / 8 × 100 % |  |\n| Critical Recall | правильно обработанные критические / все критические × 100 % |  |\n| Validation Rate | корректно отклонённые некорректные / все некорректные × 100 % |  |\n\nПеред вычислением каждой метрики определите её знаменатель. В Scenario Pass Rate входят все восемь сценариев, в Critical Recall — только сценарии с критическим ожидаемым поведением, а в Validation Rate — только сценарии с некорректными входами. В числитель включаются лишь полностью правильно обработанные случаи соответствующей группы.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba89da10dbcd0669efe616",
@@ -129,17 +183,33 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L12",
+        "status": "published",
+        "kind": "text",
+        "code": "",
+        "answer": "Ручная трассировка исходной логики по T01–T08:\nT01: access/P3/auto_route —да.\nT02: equipment/P2/auto_route —да.\nT03: other/P3/operator_review —нет.\nT04: other/P3/auto_route —нет.\nT05: other/P3/operator_review —нет.\nT06: access/P3/auto_route —нет.\nT07: other/P3/auto_route —нет.\nT08: other/P3/auto_route —нет.\nScenario Pass Rate=2/8=25%. Critical Recall=0/1=0%. Validation Rate=0/2=0%.\nИсправленная функция из шага 5 проверена отдельно: 8/8, 1/1, 2/2 соответственно.",
+        "explanation": "В исходной сохранённой программе потеряны отступы, поэтому результаты исходной логики названы ручной трассировкой. Строго сравниваются все три поля. Метрики исправленной функции подтверждены assert-проверками, а не подставлены в исходный протокол.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [],
+        "id": "T-6aba89da10dbcd0669efe616-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 12/Практика для студентов.md",
-        "sha256": "a7461d286935a3c28bd9f9616f1640fe2f2fac1738a1cbab89e82b7cc3c91548"
+        "elementId": "6aba89da10dbcd0669efe616",
+        "archive": "Снимки страниц.json",
+        "sha256": "49d9e4f582674c71ab440f8aac719e205fc80932257af11b6752e8ad976941a7"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": []
     },
     {
       "id": "T-6aba89da10dbcd0669efe619",
@@ -148,7 +218,7 @@
       "type": "debug",
       "moduleId": 4,
       "lessonId": "M04-L12",
-      "statement": "#### Шаг 5. Исправление функции и автопроверка\n\nИсправьте функцию, не меняя имя, порядок параметров и ключи результата. При ошибочном входе возвращайте словарь {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"input_error\"}.\n\nВалидация должна выполняться до вызова строковых методов, иначе некорректный text может привести к исключению вместо предусмотренного input_error. После нормализации следует искать все совпавшие категории, а не строить цепочку, которая прекращает поиск на первом совпадении.\n\nРекомендуется определять category, action и priority как связанные, но самостоятельные части результата. Такой порядок помогает не потерять найденную категорию при низкой confidence и не отменить P1 при необходимости ручной проверки.\n\n\n```\ndef process_request(text, role, channel, confidence):\n# 1. Проверка точных типов, диапазона confidence, role и channel\n# 2. Нормализация text через strip().lower()\n# 3. Поиск всех совпавших категорий\n# 4. Определение category и action\n# 5. Определение priority с приоритетом критических фраз\npass\n```\n\nОткрытые автотесты:\n\n\n```\nassert process_request(\n\"Не могу войти: пароль не подходит\", \"student\", \"portal\", 0.92\n) == {\"category\": \"access\", \"priority\": \"P3\", \"action\": \"auto_route\"}\n\nassert process_request(\n\"Нет интернета\", \"student\", \"portal\", 0.60\n) == {\"category\": \"network\", \"priority\": \"P3\", \"action\": \"auto_route\"}\n\nassert process_request(\n\"Сервер недоступен\", \"student\", \"portal\", 0.95\n) == {\"category\": \"network\", \"priority\": \"P1\", \"action\": \"auto_route\"}\n\nassert process_request(\n\"Не входит пароль и не работает интернет\", \"student\", \"email\", 0.90\n) == {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"operator_review\"}\n\nassert process_request(\nNone, \"student\", \"portal\", 0.80\n) == {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"input_error\"}\n```\n\nСкрытые тесты\n\nАвтопроверка использует пустые строки из пробелов, unknown role/channel, confidence -0.01/0/0.59/0.60/1/1.01, bool вместо числа, ключевые слова «доступ», «wi-fi», «ноутбук», «клавиатура», «приложение», а также сочетания нескольких категорий.\n\nПрохождение только открытых примеров не доказывает соблюдение всего контракта. Реализация должна опираться на R1–R10, а не на отдельные строки из тестов.",
+      "statement": "### Шаг 5. Исправление функции и автопроверка\n\nИсправьте функцию, не меняя имя, порядок параметров и ключи результата. При ошибочном входе возвращайте словарь {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"input_error\"}.\n\nВалидация должна выполняться до вызова строковых методов, иначе некорректный text может привести к исключению вместо предусмотренного input_error. После нормализации следует искать все совпавшие категории, а не строить цепочку, которая прекращает поиск на первом совпадении.\n\nРекомендуется определять category, action и priority как связанные, но самостоятельные части результата. Такой порядок помогает не потерять найденную категорию при низкой confidence и не отменить P1 при необходимости ручной проверки.\n\n```text\ndef process_request(text, role, channel, confidence):\n# 1. Проверка точных типов, диапазона confidence, role и channel\n# 2. Нормализация text через strip().lower()\n# 3. Поиск всех совпавших категорий\n# 4. Определение category и action\n# 5. Определение priority с приоритетом критических фраз\npass\n```\n\n**Открытые автотесты:**\n\n```text\nassert process_request(\n\"Не могу войти: пароль не подходит\", \"student\", \"portal\", 0.92\n) == {\"category\": \"access\", \"priority\": \"P3\", \"action\": \"auto_route\"}\n\nassert process_request(\n\"Нет интернета\", \"student\", \"portal\", 0.60\n) == {\"category\": \"network\", \"priority\": \"P3\", \"action\": \"auto_route\"}\n\nassert process_request(\n\"Сервер недоступен\", \"student\", \"portal\", 0.95\n) == {\"category\": \"network\", \"priority\": \"P1\", \"action\": \"auto_route\"}\n\nassert process_request(\n\"Не входит пароль и не работает интернет\", \"student\", \"email\", 0.90\n) == {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"operator_review\"}\n\nassert process_request(\nNone, \"student\", \"portal\", 0.80\n) == {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"input_error\"}\n```\n\nСкрытые тесты\n\nАвтопроверка использует пустые строки из пробелов, unknown role/channel, confidence -0.01/0/0.59/0.60/1/1.01, bool вместо числа, ключевые слова «доступ», «wi-fi», «ноутбук», «клавиатура», «приложение», а также сочетания нескольких категорий.\n\nПрохождение только открытых примеров не доказывает соблюдение всего контракта. Реализация должна опираться на R1–R10, а не на отдельные строки из тестов.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba89da10dbcd0669efe619",
@@ -161,17 +231,207 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L12",
+        "status": "published",
+        "kind": "code",
+        "code": "import re\ndef process_request(text,role,channel,confidence):\n    error={'category':'other','priority':'P3','action':'input_error'}\n    if type(text) is not str or type(role) is not str or type(channel) is not str:\n        return error\n    if type(confidence) not in (int,float) or not 0 <= confidence <= 1:\n        return error\n    if role not in {'student','teacher','administrator'} or channel not in {'portal','email','phone'} or not text.strip():\n        return error\n    text=text.strip().lower()\n    categories=set()\n    # Word boundaries prevent \"доступ\" matching inside \"недоступен\".\n    # Inflected forms cover the explicit scenario \"войти в учётную запись\".\n    if re.search(r'\\b(?:парол\\w*|вход\\w*|доступ\\w*|войти|уч[её]тн\\w*\\s+запис\\w*)\\b',text):\n        categories.add('access')\n    if any(word in text for word in ['сеть','wi-fi','интернет','сервер недоступен']):\n        categories.add('network')\n    if any(word in text for word in ['принтер','ноутбук','компьютер','клавиатура']):\n        categories.add('equipment')\n    if any(word in text for word in ['программа','приложение','обновление','ошибка установки']):\n        categories.add('software')\n    category=next(iter(categories)) if len(categories)==1 else 'other'\n    action='operator_review' if len(categories)>=2 or confidence<.60 else 'auto_route'\n    critical=any(phrase in text for phrase in ['сервер недоступен','утечка данных','не работает сеть во всём корпусе'])\n    priority='P1' if critical else 'P2' if role in {'teacher','administrator'} or channel=='phone' else 'P3'\n    return {'category':category,'priority':priority,'action':action}\n\ntests=[\n('Не могу войти: пароль не подходит','student','portal',.92,('access','P3','auto_route')),\n('Принтер не печатает','teacher','email',.88,('equipment','P2','auto_route')),\n('Нет интернета','student','portal',.60,('network','P3','auto_route')),\n('Сервер недоступен','student','portal',.95,('network','P1','auto_route')),\n('Нужно обновление программы','teacher','portal',.58,('software','P2','operator_review')),\n('Не входит пароль и не работает интернет','student','email',.90,('other','P3','operator_review')),\n('','student','portal',.80,('other','P3','input_error')),\n('Не могу войти','guest','portal',.82,('other','P3','input_error'))]\nfor i,(*args,expected) in enumerate(tests,1):\n    actual=process_request(*args)\n    assert tuple(actual.values())==expected,(i,actual)\n    print(f'T{i:02d}', '/'.join(actual.values()))\nfor bad in [-.01,1.01,True,False,float('nan'),None,'0.8']:\n    assert process_request('Доступ','student','portal',bad)['action']=='input_error'\nfor value in [0,.59,.60,1]:\n    expected='operator_review' if value<.60 else 'auto_route'\n    assert process_request('Доступ','student','portal',value)['action']==expected\nassert process_request(None,'student','portal',.8)['action']=='input_error'\nassert process_request('   ','student','portal',.8)['action']=='input_error'\nassert process_request('Сервер недоступен','teacher','phone',.5)=={'category':'network','priority':'P1','action':'operator_review'}\nassert process_request('Не могу войти в учётную запись','student','portal',.92)['category']=='access'\nprint('8 основных и 15 дополнительных проверок пройдены')",
+        "answer": "",
+        "explanation": "Новая реализация написана по R1–R10, а не восстановлена догадками из потерянных отступов. Проверяются точные типы и диапазон, все категории, действие и независимый приоритет. На 0.60 автоматический режим допустим. Для явного сценария «войти в учётную запись» учтены словоформы; границы слов не дают«недоступен» совпасть с«доступ». Пройдены 8 основных и 15 дополнительных проверок.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "project_tests",
+        "testCount": 1,
+        "examples": [
+          {
+            "input": "",
+            "output": "T01 access/P3/auto_route\nT02 equipment/P2/auto_route\nT03 network/P3/auto_route\nT04 network/P1/auto_route\nT05 software/P2/operator_review\nT06 other/P3/operator_review\nT07 other/P3/input_error\nT08 other/P3/input_error\n8 основных и 15 дополнительных проверок пройдены"
+          }
+        ],
+        "lineExplanations": [
+          {
+            "line": 1,
+            "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+          },
+          {
+            "line": 2,
+            "text": "Определяем функцию `process_request` с параметрами `text, role, channel, confidence`. Её тело выполняется при вызове."
+          },
+          {
+            "line": 3,
+            "text": "Создаём словарь `error` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 4,
+            "text": "Проверяем условие `type(text) is not str or type(role) is not str or type(channel) is not str`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 5,
+            "text": "Возвращаем из функции `error`."
+          },
+          {
+            "line": 6,
+            "text": "Проверяем условие `type(confidence) not in (int, float) or not 0 <= confidence <= 1`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 7,
+            "text": "Возвращаем из функции `error`."
+          },
+          {
+            "line": 8,
+            "text": "Проверяем условие `role not in {'student', 'teacher', 'administrator'} or channel not in {'portal', 'email', 'phone'} or (not text.strip())`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 9,
+            "text": "Возвращаем из функции `error`."
+          },
+          {
+            "line": 10,
+            "text": "Вычисляем `text.strip().lower()` и сохраняем результат в `text`."
+          },
+          {
+            "line": 11,
+            "text": "Вычисляем `set()` и сохраняем результат в `categories`."
+          },
+          {
+            "line": 14,
+            "text": "Проверяем условие `re.search('\\\\b(?:парол\\\\w*|вход\\\\w*|доступ\\\\w*|войти|уч[её]тн\\\\w*\\\\s+запис\\\\w*)\\\\b', text)`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 15,
+            "text": "Выполняем `categories.add` с переданными аргументами."
+          },
+          {
+            "line": 16,
+            "text": "Проверяем условие `any((word in text for word in ['сеть', 'wi-fi', 'интернет', 'сервер недоступен']))`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 17,
+            "text": "Выполняем `categories.add` с переданными аргументами."
+          },
+          {
+            "line": 18,
+            "text": "Проверяем условие `any((word in text for word in ['принтер', 'ноутбук', 'компьютер', 'клавиатура']))`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 19,
+            "text": "Выполняем `categories.add` с переданными аргументами."
+          },
+          {
+            "line": 20,
+            "text": "Проверяем условие `any((word in text for word in ['программа', 'приложение', 'обновление', 'ошибка установки']))`. Блок с отступом выполняется только при истинном условии."
+          },
+          {
+            "line": 21,
+            "text": "Выполняем `categories.add` с переданными аргументами."
+          },
+          {
+            "line": 22,
+            "text": "Вычисляем `next(iter(categories)) if len(categories) == 1 else 'other'` и сохраняем результат в `category`."
+          },
+          {
+            "line": 23,
+            "text": "Вычисляем `'operator_review' if len(categories) >= 2 or confidence < 0.6 else 'auto_route'` и сохраняем результат в `action`."
+          },
+          {
+            "line": 24,
+            "text": "Вычисляем `any((phrase in text for phrase in ['сервер недоступен', 'утечка данных', 'не работает сеть во всём корпусе']))` и сохраняем результат в `critical`."
+          },
+          {
+            "line": 25,
+            "text": "Вычисляем `'P1' if critical else 'P2' if role in {'teacher', 'administrator'} or channel == 'phone' else 'P3'` и сохраняем результат в `priority`."
+          },
+          {
+            "line": 26,
+            "text": "Возвращаем из функции `{'category': category, 'priority': priority, 'action': action}`."
+          },
+          {
+            "line": 28,
+            "text": "Создаём набор значений `tests` для этого примера. Значения используются в следующих вычислениях."
+          },
+          {
+            "line": 37,
+            "text": "Перебираем `enumerate(tests, 1)`; очередное значение доступно через `(i, (*args, expected))`."
+          },
+          {
+            "line": 38,
+            "text": "Вычисляем `process_request(*args)` и сохраняем результат в `actual`."
+          },
+          {
+            "line": 39,
+            "text": "Проверяем инвариант `tuple(actual.values()) == expected`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 40,
+            "text": "Выводим результат в формате, указанном в условии."
+          },
+          {
+            "line": 41,
+            "text": "Перебираем `[-0.01, 1.01, True, False, float('nan'), None, '0.8']`; очередное значение доступно через `bad`."
+          },
+          {
+            "line": 42,
+            "text": "Проверяем инвариант `process_request('Доступ', 'student', 'portal', bad)['action'] == 'input_error'`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 43,
+            "text": "Перебираем `[0, 0.59, 0.6, 1]`; очередное значение доступно через `value`."
+          },
+          {
+            "line": 44,
+            "text": "Вычисляем `'operator_review' if value < 0.6 else 'auto_route'` и сохраняем результат в `expected`."
+          },
+          {
+            "line": 45,
+            "text": "Проверяем инвариант `process_request('Доступ', 'student', 'portal', value)['action'] == expected`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 46,
+            "text": "Проверяем инвариант `process_request(None, 'student', 'portal', 0.8)['action'] == 'input_error'`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 47,
+            "text": "Проверяем инвариант `process_request('   ', 'student', 'portal', 0.8)['action'] == 'input_error'`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 48,
+            "text": "Проверяем инвариант `process_request('Сервер недоступен', 'teacher', 'phone', 0.5) == {'category': 'network', 'priority': 'P1', 'action': 'operator_review'}`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 49,
+            "text": "Проверяем инвариант `process_request('Не могу войти в учётную запись', 'student', 'portal', 0.92)['category'] == 'access'`. При нарушении программа сообщит об ошибке."
+          },
+          {
+            "line": 50,
+            "text": "Выводим результат в формате, указанном в условии."
+          }
+        ],
+        "relatedTopics": [
+          "output",
+          "loops",
+          "conditions",
+          "logic",
+          "functions"
+        ],
+        "id": "T-6aba89da10dbcd0669efe619-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 12/Практика для студентов.md",
-        "sha256": "a7461d286935a3c28bd9f9616f1640fe2f2fac1738a1cbab89e82b7cc3c91548"
+        "elementId": "6aba89da10dbcd0669efe619",
+        "archive": "Снимки страниц.json",
+        "sha256": "682584659451b722e0ffd9903889e0c88dfcb62b730155f0a47e15ea1860d648"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "output",
+        "loops",
+        "conditions",
+        "logic",
+        "functions"
+      ]
     },
     {
       "id": "T-6aba89da10dbcd0669efe61c",
@@ -180,7 +440,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L12",
-      "statement": "#### Шаг 6. Разбор ошибок и повторная проверка\n\nВыберите три ошибки: граничную, валидационную и критичную для пользователя.\n\nСимптом описывает наблюдаемое расхождение, а первопричина — конкретный дефект логики, который его вызвал. Например, неверный результат на границе является симптомом, тогда как использование неподходящего знака сравнения может быть первопричиной.\n\nРетест должен повторять условия, при которых дефект проявился, и сравнивать новый фактический результат с исходным ожиданием. Дополнительный соседний тест полезен для проверки того, что исправление не нарушило поведение рядом с границей.\n\n\n| ID | Симптом | R1–R10 | Первопричина | Последствие | Исправление | Ретест |\n| --- | --- | --- | --- | --- | --- | --- |\n|  |  |  |  |  |  |  |\n|  |  |  |  |  |  |  |\n|  |  |  |  |  |  |  |",
+      "statement": "### Шаг 6. Разбор ошибок и повторная проверка\n\nВыберите три ошибки: граничную, валидационную и критичную для пользователя.\n\nСимптом описывает наблюдаемое расхождение, а первопричина — конкретный дефект логики, который его вызвал. Например, неверный результат на границе является симптомом, тогда как использование неподходящего знака сравнения может быть первопричиной.\n\nРетест должен повторять условия, при которых дефект проявился, и сравнивать новый фактический результат с исходным ожиданием. Дополнительный соседний тест полезен для проверки того, что исправление не нарушило поведение рядом с границей.\n\n| ID | Симптом | R1–R10 | Первопричина | Последствие | Исправление | Ретест |\n| --- | --- | --- | --- | --- | --- | --- |\n|  |  |  |  |  |  |  |\n|  |  |  |  |  |  |  |\n|  |  |  |  |  |  |  |",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba89da10dbcd0669efe61c",
@@ -193,17 +453,33 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L12",
+        "status": "published",
+        "kind": "project_example",
+        "code": "",
+        "answer": "Граничная ошибка T03, R8: при confidence=0.60 исходная логика направляет оператору. Причина — <= вместо < и ранний return. Последствие — лишняя ручная работа и потеря категории. Исправление: сначала определить категорию, затем действие. Ретест: 0.59→review, 0.60→auto, 1→auto.\nВалидационная T07/None, R1–R2: пустой текст классифицируется, а None вызывает сбой. Причина — строковый метод до проверки. Исправление: типы, диапазон, strip, роль и канал проверяются первыми. Ретест: пустота, пробелы, None, guest, True→input_error.\nКритическая T04, R9: «Сервер недоступен» теряет network/P1. Причина — неполный словарь и приоритет только по роли. Исправление: критические фразы независимы от action. Ретест: student/portal/0.95→network/P1/auto; teacher/phone/0.5→network/P1/review.",
+        "explanation": "Карточки содержат симптом, требование, причину, последствие, исправление и ретест. Повторные проверки есть в исполняемом решении шага 5.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [],
+        "id": "T-6aba89da10dbcd0669efe61c-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 12/Практика для студентов.md",
-        "sha256": "a7461d286935a3c28bd9f9616f1640fe2f2fac1738a1cbab89e82b7cc3c91548"
+        "elementId": "6aba89da10dbcd0669efe61c",
+        "archive": "Снимки страниц.json",
+        "sha256": "50a600ca1871991e39c0900d0d5d35eca77485337aaaf430e3905936121e320a"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": []
     },
     {
       "id": "T-6aba89da10dbcd0669efe61f",
@@ -212,7 +488,7 @@
       "type": "free_response",
       "moduleId": 4,
       "lessonId": "M04-L12",
-      "statement": "#### Шаг 7. Улучшения, риски и готовность\n\nУлучшение отличается от исправления дефекта: исправление приводит реализацию в соответствие с уже заданным требованием, а улучшение уточняет проверяемость, устойчивость или дальнейшее развитие решения. Каждое предложение должно быть связано с конкретным риском и способом проверки.\n\n\n| Улучшение | Какой риск уменьшает | Какое требование уточняет | Как проверить |\n| --- | --- | --- | --- |\n|  |  |  |  |\n|  |  |  |  |\n\n\n| Итоговый вывод из 5–7 предложений: какие ошибки найдены, что исправлено, какие риски остались и готов ли проект к учебной демонстрации? |\n| --- |\n| Ваш ответ: |\n\nВывод о готовности должен опираться на результаты тестирования, а не только на факт изменения кода. Следует указать, какие обязательные сценарии прошли после исправления и какие ограничения остаются за рамками текущих требований.",
+      "statement": "### Шаг 7. Улучшения, риски и готовность\n\nУлучшение отличается от исправления дефекта: исправление приводит реализацию в соответствие с уже заданным требованием, а улучшение уточняет проверяемость, устойчивость или дальнейшее развитие решения. Каждое предложение должно быть связано с конкретным риском и способом проверки.\n\n| Улучшение | Какой риск уменьшает | Какое требование уточняет | Как проверить |\n| --- | --- | --- | --- |\n|  |  |  |  |\n|  |  |  |  |\n\n| Итоговый вывод из 5–7 предложений: какие ошибки найдены, что исправлено, какие риски остались и готов ли проект к учебной демонстрации? |\n| --- |\n| Ваш ответ: |\n\nВывод о готовности должен опираться на результаты тестирования, а не только на факт изменения кода. Следует указать, какие обязательные сценарии прошли после исправления и какие ограничения остаются за рамками текущих требований.",
       "origin": "ismart",
       "ismartLink": {
         "id": "6aba89da10dbcd0669efe61f",
@@ -225,24 +501,47 @@
       },
       "files": [],
       "variants": [],
-      "solution": null,
-      "solutionStatus": "unreviewed",
+      "solution": {
+        "lessonId": "M04-L12",
+        "status": "published",
+        "kind": "project_example",
+        "code": "",
+        "answer": "Улучшение 1: версионированный словарь тем и словоформ. Риск — непокрытые формулировки; уточняет R3–R6. Проверка — новые фразы и регрессия старого словаря.\nУлучшение 2: обезличенный журнал причин review и решения оператора. Риск — непонятная нагрузка на человека; уточняет R7–R8. Проверка — полнота причин, доля передач и отсутствие секретов.\nИтог: найдены неверная граница 0.60, отсутствие валидации и потеря критического приоритета. Исправленная функция проверяет вход до строковых методов и собирает все темы. Все 8 обязательных сценариев совпали полностью. Критический случай и валидация прошли 1/1 и 2/2. Дополнительные тесты покрывают bool, NaN, None и границы. Учебная демонстрация готова, но конечный словарь не покрывает весь язык. Рабочее применение требует новых сценариев, согласованных словоформ и оператора.",
+        "explanation": "Улучшения отделены от обязательных исправлений. Вывод подтверждён тестами и ограничен учебным контрактом.",
+        "source": "Самостоятельное решение Code Future Academy по исходному условию",
+        "verification": "source",
+        "testCount": 0,
+        "examples": [],
+        "lineExplanations": [],
+        "relatedTopics": [
+          "problem",
+          "prototype",
+          "documentation"
+        ],
+        "id": "T-6aba89da10dbcd0669efe61f-S1"
+      },
+      "solutionStatus": "published",
       "source": {
-        "path": "Модуль 4/Занятие 12/Практика для студентов.md",
-        "sha256": "a7461d286935a3c28bd9f9616f1640fe2f2fac1738a1cbab89e82b7cc3c91548"
+        "elementId": "6aba89da10dbcd0669efe61f",
+        "archive": "Снимки страниц.json",
+        "sha256": "8980e5c767ae883e3b3fc299b8a6d4b2da7c5406bc126c17d13cd669659ad8c3"
       },
       "publication": {
         "audience": "student",
         "rights": "public_distribution_confirmed",
         "status": "published"
-      }
+      },
+      "relatedTopics": [
+        "problem",
+        "prototype",
+        "documentation"
+      ]
     }
   ],
-  "lecture": "# Самостоятельная работа - тестирование по сценарию пользователя\n\n### СЛАЙД 01. Самостоятельная работа - тестирование по сценарию пользователя\n\nВ этом занятии рассматривается тема «Самостоятельная работа - тестирование по сценарию пользователя». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Самостоятельная работа - тестирование по сценарию пользователя\n\nУчебный проект использует синтетические обращения и не содержит персональных данных.\n\nПри выполнении работы следует использовать только приведённые или самостоятельно составленные учебные обращения. Реальные имена, контакты, номера учётных записей и другие сведения о пользователях для сценарного тестирования не требуются.\n\n### СЛАЙД 03. 2. Семь проверяемых шагов · таблица 1/4\n\nСравним данные в таблице.\n№ Шаг Что нужно сдать 1 Архитектура и требования Входы, выход, допустимые значения, порядок правил и критерий успеха сценария. 2 Прогноз исходной версии Ожидаемый и фактический результат для четырёх сценариев с объяснением. 3 Собственные сценарии Четыре воспроизводимых сценария: обычный, критический, неоднозначный/низкая уверенность и некорректный. 4 Сценарный протокол и метрики Результаты восьми обязательных сценариев и три показателя качества. 5 Исправление и автотесты Исправленная функция process_request или полный псевдокод. 6 Разбор ошибок Три карточки: симптом, нарушенное требование, первопричина, последствие, исправление и ретест. 7 Улучшения и готовность Два улучшения, риски и вывод о готовности к учебной демонстрации.\n\nПоследовательность шагов отражает полный цикл проверки: сначала фиксируется контракт, затем обнаруживаются расхождения, после этого вносятся изменения и подтверждается их результат. Пропуск ожиданий или ретеста делает вывод об исправности решения недоказанным.\n\n### СЛАЙД 04. 2. Семь проверяемых шагов · таблица 2/4\n\nПосмотрите на продолжение таблицы. 3 Собственные сценарии Четыре воспроизводимых сценария: обычный, критический, неоднозначный/низкая уверенность и некорректный. 4 Сценарный протокол и метрики Результаты восьми обязательных сценариев и три показателя качества.\n\n### СЛАЙД 05. 2. Семь проверяемых шагов · таблица 3/4\n\nПосмотрите на продолжение таблицы. 5 Исправление и автотесты Исправленная функция process_request или полный псевдокод. 6 Разбор ошибок Три карточки: симптом, нарушенное требование, первопричина, последствие, исправление и ретест.\n\n### СЛАЙД 06. 2. Семь проверяемых шагов · таблица 4/4\n\nПосмотрите на продолжение таблицы. 7 Улучшения и готовность Два улучшения, риски и вывод о готовности к учебной демонстрации.\n\n### СЛАЙД 07. 3. Рекомендуемое распределение времени\n\nСравним данные в таблице.\nЭтап Время Ознакомление с проектом 10 минут Шаг 1 10 минут Шаг 2 10 минут Шаг 3 10 минут Шаг 4 10 минут Шаг 5 10 минут Шаг 6 10 минут Шаг 7 10 минут Самопроверка и сдача 10 минут\n\nРаспределение является ориентиром. Если ручная трассировка занимает больше времени, полезно сначала заполнить ожидаемые результаты и причины, а затем вернуться к фактическому выполнению. Финальные 10 минут следует сохранить для проверки согласованности таблиц, функции и вывода.\n\n### СЛАЙД 08. 4. Что такое пользовательский сценарий\n\nПользовательский сценарий включает роль, цель, контекст, входные данные, ожидаемый полный результат и критерий успеха. Сценарий считается успешным только при совпадении всех трёх полей результата: category, priority и action.\n\nОдин тестовый вход отвечает на вопрос «что передано функции», а сценарий дополнительно показывает, зачем пользователь обратился и какое завершённое поведение системы считается правильным. Например, правильная категория при неверном приоритете не решает сценарий полностью: обращение будет распознано, но может попасть в неподходящую очередь обработки.\n\nКритерий успеха является строгим: частичное совпадение не засчитывается как успешный сценарий. При этом отдельные совпавшие поля можно учитывать при разборе первопричины, но не при расчёте Scenario Pass Rate.\n\n### СЛАЙД 09. 5. Архитектура проекта CampusSupport Assistant · таблица 1/2\n\nСравним данные в таблице.\nПоле Допустимые значения Назначение text непустая строка после strip() Текст обращения пользователя. role student, teacher, administrator Роль пользователя. channel portal, email, phone Канал обращения. confidence число от 0 до 1; bool недопустим Уверенность модели в выбранной категории.\n\nКонтракт входа включает не только перечень полей, но и их типы, диапазоны и допустимые значения. Например, строка из пробелов формально является строкой, однако после strip() становится пустой и поэтому считается некорректным text.\n\nДля confidence важны обе границы диапазона: значения 0 и 1 допустимы, а значения меньше 0 или больше 1 должны быть отклонены. Значения типа bool недопустимы отдельно, даже несмотря на то, что в Python bool связан с числовыми типами.\n\nФункция возвращает словарь с полями category, priority и action.\n\nСравним данные в таблице.\nПоле результата Допустимые значения category access, network, equipment, software, other priority P1, P2, P3 action auto_route, operator_review, input_error\n\nПоля результата описывают разные стороны решения. category определяет тему обращения, priority — срочность обработки, а action — дальнейший способ обработки. Поэтому значение other не всегда означает ошибку входа: оно может появиться и при неоднозначном тексте, но тогда action должен показывать operator_review, а не input_error.\n\n### СЛАЙД 10. 5. Архитектура проекта CampusSupport Assistant · таблица 2/2\n\nПосмотрите на продолжение таблицы. channel portal, email, phone Канал обращения. confidence число от 0 до 1; bool недопустим Уверенность модели в выбранной категории.\n\n### СЛАЙД 11. 6. Требования к поведению решения\n\nСравним данные в таблице.\nID Требование R1 Если тип входа неверен, confidence вне 0–1, text пуст после strip(), role или channel неизвестны — вернуть other/P3/input_error. R2 Перед анализом выполнить text.strip().lower(). R3 Категория access: пароль, вход, доступ, учётная запись. R4 Категория network: сеть, wi-fi, интернет, сервер недоступен. R5 Категория equipment: принтер, ноутбук, компьютер, клавиатура. R6 Категория software: программа, приложение, обновление, ошибка установки. R7 Если обнаружены две и более категории — category=other и action=operator_review. R8 Если confidence < 0.60 — action=operator_review. При confidence=0.60 автоматическая обработка допустима. R9 Фразы «сервер недоступен», «утечка данных», «не работает сеть во всём корпусе» задают priority=P1 независимо от роли и канала. R10 В остальных случаях teacher, administrator или channel=phone получают P2; остальные — P3. При валидном вводе без R7/R8 action=auto_route.\n\nТребования необходимо применять в согласованном порядке. Сначала проверяется валидность всех входов по R1. Только для валидного обращения выполняются нормализация, поиск категорий, определение действия и приоритета.\n\nR7 и R8 изменяют action по разным причинам: R7 указывает на неоднозначность содержания, а R8 — на недостаточную уверенность. В обоих случаях обращение передаётся оператору, но низкая уверенность сама по себе не требует заменять найденную единственную категорию на other.\n\nПриоритет определяется независимо от action. Поэтому критическая фраза должна дать P1 даже тогда, когда обращение дополнительно требует operator_review из-за нескольких категорий или низкой уверенности. Если критической фразы нет, применяется правило роли и канала из R10.\n\nОбратите внимание на границы\n\nУсловие confidence < 0.60 не включает значение 0.60. Не следует заменять строгий знак < на <=, иначе граничный валидный сценарий будет ошибочно направлен оператору.\n\nТакже нельзя останавливать поиск после первого ключевого слова: для выполнения R7 необходимо собрать все обнаруженные категории и проверить их количество.\n\n### СЛАЙД 12. 7. Исходная версия функции\n\nПример на слайде:\ndef process_request(text, role, channel, confidence):\ntext = text.lower()\nif confidence <= 0.60:\nreturn {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"operator_review\"}\n\nif \"пароль\" in text or \"вход\" in text:\ncategory = \"access\"\nelif \"сеть\" in text or \"интернет\" in text:\ncategory = \"network\"\nelif \"принтер\" in text or \"компьютер\" in text:\ncategory = \"equipment\"\nelif \"программа\" in text or \"обновление\" in text:\ncategory = \"software\"\nelse:\ncategory = \"other\"\n\nif role == \"administrator\":\npriority = \"P1\"\nelif role == \"teacher\":\npriority = \"P2\"\nelse:\npriority = \"P3\"\n\nreturn {\"category\": category, \"priority\": priority, \"action\": \"auto_route\"}\n\nПравило выполнения\n\nСначала определяйте ожидаемый результат по требованиям R1–R10. Только затем выполняйте исходный код или ручную трассировку. Не заменяйте ожидание фактическим ответом ошибочной версии.\n\nПри ручной трассировке записывайте, какие условия проверены, какая ветвь выбрана и на каком return завершилась функция. Если выполнение прерывается исключением до формирования словаря, фактический результат следует обозначить как «сбой программы».\n\nИсходная версия намеренно не полностью соответствует контракту. Ошибки могут находиться не только в списках ключевых слов, но и в порядке операций, знаке сравнения, обработке нескольких совпадений, проверке входов и назначении приоритета.\n\n### СЛАЙД 13. 9. Что нужно отправить преподавателю\n\nшаг 1 — архитектуру и требования;\n\nшаг 2 — таблицу прогнозов;\n\nшаг 3 — четыре собственных сценария;\n\nшаг 4 — протокол T01–T08 и три метрики;\n\nшаг 5 — исправленную функцию или полный псевдокод;\n\nшаг 6 — три карточки ошибок;\n\nшаг 7 — два улучшения и вывод о готовности;\n\nответы на самопроверку или отметку о сверке с ключом.\n\nПеред отправкой следует проверить, что идентификаторы сценариев и требований используются последовательно. Если в карточке ошибки указан ретест, соответствующий фактический результат должен быть доступен в протоколе или приведён в самой карточке.\n\n### СЛАЙД 14. 10. Чек-лист перед сдачей\n\n☐ Я оформил семь отдельных пронумерованных шагов.\n\n☐ Я записал ожидания до запуска исходной функции.\n\n☐ Мои четыре сценария проверяют разные цели и риски.\n\n☐ В протоколе успех означает совпадение всех трёх полей.\n\n☐ Я проверил типы, диапазон confidence и пустой text.\n\n☐ Я учёл границу confidence=0.60 и несколько категорий.\n\n☐ Я подтвердил исправления повторными тестами.\n\n☐ Я отличил обязательные исправления от дальнейших улучшений.\n\n☐ Я проверил, что метрики рассчитаны по правильным группам сценариев.\n\n☐ Я убедился, что итоговый вывод подтверждается протоколом и ретестами.\n\n### СЛАЙД 15. 11. Итог работы\n\nВы выполнили семь самостоятельных действий сценарного тестирования: описали контракт, спрогнозировали поведение, создали сценарии, рассчитали показатели, исправили функцию, разобрали первопричины и предложили улучшения. Такой формат позволяет проверить каждый обязательный результат отдельно.\n\nГлавный результат работы — не только исправленный код, но и прослеживаемая связь между пользовательской целью, требованием, тестом и выводом. Если эта связь сохранена во всех семи шагах, решение можно обоснованно оценивать по наблюдаемому поведению, а найденные ошибки — воспроизводить и проверять после исправления.\n\n### СЛАЙД 16. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 17. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
+  "lecture": "# Самостоятельная работа - тестирование по сценарию пользователя\n\n### СЛАЙД 01. Самостоятельная работа - тестирование по сценарию пользователя\n\nВ этом занятии рассматривается тема «Самостоятельная работа - тестирование по сценарию пользователя». Будем опираться на примеры курса и проверять результат на конкретных данных.\n\n### СЛАЙД 02. Самостоятельная работа - тестирование по сценарию пользователя\n\nУчебный проект использует синтетические обращения и не содержит персональных данных.\n\nПри выполнении работы следует использовать только приведённые или самостоятельно составленные учебные обращения. Реальные имена, контакты, номера учётных записей и другие сведения о пользователях для сценарного тестирования не требуются.\n\n### СЛАЙД 03. 2. Семь проверяемых шагов · таблица 1/4\n\nСравним данные в таблице.\n№ Шаг Что нужно сдать 1 Архитектура и требования Входы, выход, допустимые значения, порядок правил и критерий успеха сценария. 2 Прогноз исходной версии Ожидаемый и фактический результат для четырёх сценариев с объяснением. 3 Собственные сценарии Четыре воспроизводимых сценария: обычный, критический, неоднозначный/низкая уверенность и некорректный. 4 Сценарный протокол и метрики Результаты восьми обязательных сценариев и три показателя качества. 5 Исправление и автотесты Исправленная функция process_request или полный псевдокод. 6 Разбор ошибок Три карточки: симптом, нарушенное требование, первопричина, последствие, исправление и ретест. 7 Улучшения и готовность Два улучшения, риски и вывод о готовности к учебной демонстрации.\n\nПоследовательность шагов отражает полный цикл проверки: сначала фиксируется контракт, затем обнаруживаются расхождения, после этого вносятся изменения и подтверждается их результат. Пропуск ожиданий или ретеста делает вывод об исправности решения недоказанным.\n\n### СЛАЙД 04. 2. Семь проверяемых шагов · таблица 2/4\n\nПосмотрите на продолжение таблицы. 3 Собственные сценарии Четыре воспроизводимых сценария: обычный, критический, неоднозначный/низкая уверенность и некорректный. 4 Сценарный протокол и метрики Результаты восьми обязательных сценариев и три показателя качества.\n\n### СЛАЙД 05. 2. Семь проверяемых шагов · таблица 3/4\n\nПосмотрите на продолжение таблицы. 5 Исправление и автотесты Исправленная функция process_request или полный псевдокод. 6 Разбор ошибок Три карточки: симптом, нарушенное требование, первопричина, последствие, исправление и ретест.\n\n### СЛАЙД 06. 2. Семь проверяемых шагов · таблица 4/4\n\nПосмотрите на продолжение таблицы. 7 Улучшения и готовность Два улучшения, риски и вывод о готовности к учебной демонстрации.\n\n### СЛАЙД 07. 3. Рекомендуемое распределение времени\n\nСравним данные в таблице.\nЭтап Время Ознакомление с проектом 10 минут Шаг 1 10 минут Шаг 2 10 минут Шаг 3 10 минут Шаг 4 10 минут Шаг 5 10 минут Шаг 6 10 минут Шаг 7 10 минут Самопроверка и сдача 10 минут\n\nРаспределение является ориентиром. Если ручная трассировка занимает больше времени, полезно сначала заполнить ожидаемые результаты и причины, а затем вернуться к фактическому выполнению. Финальные 10 минут следует сохранить для проверки согласованности таблиц, функции и вывода.\n\n### СЛАЙД 08. 4. Что такое пользовательский сценарий\n\nПользовательский сценарий включает роль, цель, контекст, входные данные, ожидаемый полный результат и критерий успеха. Сценарий считается успешным только при совпадении всех трёх полей результата: category, priority и action.\n\nОдин тестовый вход отвечает на вопрос «что передано функции», а сценарий дополнительно показывает, зачем пользователь обратился и какое завершённое поведение системы считается правильным. Например, правильная категория при неверном приоритете не решает сценарий полностью: обращение будет распознано, но может попасть в неподходящую очередь обработки.\n\nКритерий успеха является строгим: частичное совпадение не засчитывается как успешный сценарий. При этом отдельные совпавшие поля можно учитывать при разборе первопричины, но не при расчёте Scenario Pass Rate.\n\n### СЛАЙД 09. 5. Архитектура проекта CampusSupport Assistant · таблица 1/2\n\nСравним данные в таблице.\nПоле Допустимые значения Назначение text непустая строка после strip() Текст обращения пользователя. role student, teacher, administrator Роль пользователя. channel portal, email, phone Канал обращения. confidence число от 0 до 1; bool недопустим Уверенность модели в выбранной категории.\n\nКонтракт входа включает не только перечень полей, но и их типы, диапазоны и допустимые значения. Например, строка из пробелов формально является строкой, однако после strip() становится пустой и поэтому считается некорректным text.\n\nДля confidence важны обе границы диапазона: значения 0 и 1 допустимы, а значения меньше 0 или больше 1 должны быть отклонены. Значения типа bool недопустимы отдельно, даже несмотря на то, что в Python bool связан с числовыми типами.\n\nФункция возвращает словарь с полями category, priority и action.\n\nСравним данные в таблице.\nПоле результата Допустимые значения category access, network, equipment, software, other priority P1, P2, P3 action auto_route, operator_review, input_error\n\nПоля результата описывают разные стороны решения. category определяет тему обращения, priority — срочность обработки, а action — дальнейший способ обработки. Поэтому значение other не всегда означает ошибку входа: оно может появиться и при неоднозначном тексте, но тогда action должен показывать operator_review, а не input_error.\n\n### СЛАЙД 10. 5. Архитектура проекта CampusSupport Assistant · таблица 2/2\n\nПосмотрите на продолжение таблицы. channel portal, email, phone Канал обращения. confidence число от 0 до 1; bool недопустим Уверенность модели в выбранной категории.\n\n### СЛАЙД 11. 6. Требования к поведению решения\n\nСравним данные в таблице.\nID Требование R1 Если тип входа неверен, confidence вне 0–1, text пуст после strip(), role или channel неизвестны — вернуть other/P3/input_error. R2 Перед анализом выполнить text.strip().lower(). R3 Категория access: пароль, вход, доступ, учётная запись. R4 Категория network: сеть, wi-fi, интернет, сервер недоступен. R5 Категория equipment: принтер, ноутбук, компьютер, клавиатура. R6 Категория software: программа, приложение, обновление, ошибка установки. R7 Если обнаружены две и более категории — category=other и action=operator_review. R8 Если confidence < 0.60 — action=operator_review. При confidence=0.60 автоматическая обработка допустима. R9 Фразы «сервер недоступен», «утечка данных», «не работает сеть во всём корпусе» задают priority=P1 независимо от роли и канала. R10 В остальных случаях teacher, administrator или channel=phone получают P2; остальные — P3. При валидном вводе без R7/R8 action=auto_route.\n\nТребования необходимо применять в согласованном порядке. Сначала проверяется валидность всех входов по R1. Только для валидного обращения выполняются нормализация, поиск категорий, определение действия и приоритета.\n\nR7 и R8 изменяют action по разным причинам: R7 указывает на неоднозначность содержания, а R8 — на недостаточную уверенность. В обоих случаях обращение передаётся оператору, но низкая уверенность сама по себе не требует заменять найденную единственную категорию на other.\n\nПриоритет определяется независимо от action. Поэтому критическая фраза должна дать P1 даже тогда, когда обращение дополнительно требует operator_review из-за нескольких категорий или низкой уверенности. Если критической фразы нет, применяется правило роли и канала из R10.\n\nОбратите внимание на границы\n\nУсловие confidence < 0.60 не включает значение 0.60. Не следует заменять строгий знак < на <=, иначе граничный валидный сценарий будет ошибочно направлен оператору.\n\nТакже нельзя останавливать поиск после первого ключевого слова: для выполнения R7 необходимо собрать все обнаруженные категории и проверить их количество.\n\n### СЛАЙД 12. 7. Исходная версия функции\n\n```python\ndef process_request(text, role, channel, confidence):\ntext = text.lower()\nif confidence <= 0.60:\nreturn {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"operator_review\"}\n```\n\nif \"пароль\" in text or \"вход\" in text:\ncategory = \"access\"\nelif \"сеть\" in text or \"интернет\" in text:\ncategory = \"network\"\nelif \"принтер\" in text or \"компьютер\" in text:\ncategory = \"equipment\"\nelif \"программа\" in text or \"обновление\" in text:\ncategory = \"software\"\nelse:\ncategory = \"other\"\n\nif role == \"administrator\":\npriority = \"P1\"\nelif role == \"teacher\":\npriority = \"P2\"\nelse:\npriority = \"P3\"\n\nreturn {\"category\": category, \"priority\": priority, \"action\": \"auto_route\"}\n\nПравило выполнения\n\nСначала определяйте ожидаемый результат по требованиям R1–R10. Только затем выполняйте исходный код или ручную трассировку. Не заменяйте ожидание фактическим ответом ошибочной версии.\n\nПри ручной трассировке записывайте, какие условия проверены, какая ветвь выбрана и на каком return завершилась функция. Если выполнение прерывается исключением до формирования словаря, фактический результат следует обозначить как «сбой программы».\n\nИсходная версия намеренно не полностью соответствует контракту. Ошибки могут находиться не только в списках ключевых слов, но и в порядке операций, знаке сравнения, обработке нескольких совпадений, проверке входов и назначении приоритета.\n\n### СЛАЙД 13. 9. Что нужно отправить преподавателю\n\nшаг 1 — архитектуру и требования;\n\nшаг 2 — таблицу прогнозов;\n\nшаг 3 — четыре собственных сценария;\n\nшаг 4 — протокол T01–T08 и три метрики;\n\nшаг 5 — исправленную функцию или полный псевдокод;\n\nшаг 6 — три карточки ошибок;\n\nшаг 7 — два улучшения и вывод о готовности;\n\nответы на самопроверку или отметку о сверке с ключом.\n\nПеред отправкой следует проверить, что идентификаторы сценариев и требований используются последовательно. Если в карточке ошибки указан ретест, соответствующий фактический результат должен быть доступен в протоколе или приведён в самой карточке.\n\n### СЛАЙД 14. 10. Чек-лист перед сдачей\n\n☐ Я оформил семь отдельных пронумерованных шагов.\n\n☐ Я записал ожидания до запуска исходной функции.\n\n☐ Мои четыре сценария проверяют разные цели и риски.\n\n☐ В протоколе успех означает совпадение всех трёх полей.\n\n☐ Я проверил типы, диапазон confidence и пустой text.\n\n☐ Я учёл границу confidence=0.60 и несколько категорий.\n\n☐ Я подтвердил исправления повторными тестами.\n\n☐ Я отличил обязательные исправления от дальнейших улучшений.\n\n☐ Я проверил, что метрики рассчитаны по правильным группам сценариев.\n\n☐ Я убедился, что итоговый вывод подтверждается протоколом и ретестами.\n\n### СЛАЙД 15. 11. Итог работы\n\nВы выполнили семь самостоятельных действий сценарного тестирования: описали контракт, спрогнозировали поведение, создали сценарии, рассчитали показатели, исправили функцию, разобрали первопричины и предложили улучшения. Такой формат позволяет проверить каждый обязательный результат отдельно.\n\nГлавный результат работы — не только исправленный код, но и прослеживаемая связь между пользовательской целью, требованием, тестом и выводом. Если эта связь сохранена во всех семи шагах, решение можно обоснованно оценивать по наблюдаемому поведению, а найденные ошибки — воспроизводить и проверять после исправления.\n\n### СЛАЙД 16. Практическая работа\n\nПерейдём к практической работе. Откройте файл «Практика для студентов». В нём приведены условия и исходные данные. Сначала определим, какой результат требуется, затем разберём решение по шагам. После выполнения проверим его на примерах из условия.\n\n### СЛАЙД 17. Проверка результата\n\nЗавершим занятие проверкой. Сопоставьте полученный результат с исходным условием. Объясните, какие данные использовались и как они привели к ответу. Если решение содержит программу, проверьте её с другим допустимым набором данных. Сохраните работу вместе с выводом, чтобы результат можно было воспроизвести.",
   "lectureChanges": [
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
-  "practice": "# Самостоятельная работа - тестирование по сценарию пользователя\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Задание №1. Архитектура и требования\n\n\n#### Шаг 1. Архитектура и требования\n\nВ этом шаге требуется описать решение до анализа конкретных тестов. Формулировки должны позволять другому проверяющему однозначно определить ожидаемый результат для любого входа из заданного контракта.\n\n\n| Раздел | Ваше описание |\n| --- | --- |\n| Цель пользователя |  |\n| Входные поля и точные типы |  |\n| Допустимые значения role и channel |  |\n| Диапазон и граница confidence |  |\n| Полный формат выхода |  |\n| Нормализация text |  |\n| Правило нескольких категорий |  |\n| Правило критического приоритета |  |\n| Граница автоматизации |  |\n| Критерий успеха сценария |  |\n\n\n### Задание №2. Прогноз поведения исходной версии\n\n\n#### Шаг 2. Прогноз поведения исходной версии\n\nДля каждого сценария запишите полный результат по требованиям, затем прогноз исходной функции. Если ожидается сбой, укажите «сбой программы».\n\nПолный результат удобно записывать в едином порядке: category/priority/action. В графе «Причина» нужно указать конкретное расхождение между требованием и исходной реализацией, например неверную границу сравнения, отсутствие валидации или неправильное правило приоритета.\n\n\n| № | Сценарий | По требованиям | Исходная функция | Причина |\n| --- | --- | --- | --- | --- |\n| 1 | student, portal; «Не могу войти в учётную запись»; 0.92 |  |  |  |\n| 2 | student, portal; «Нет интернета»; 0.60 |  |  |  |\n| 3 | student, portal; «Сервер недоступен»; 0.95 |  |  |  |\n| 4 | text=None; student, portal; 0.80 |  |  |  |\n\n\n| Какой из четырёх сценариев наиболее важен по последствиям ошибки и почему? |\n| --- |\n| Ваш ответ: |\n\nПри оценке последствий учитывается не только факт несовпадения, но и возможное влияние: потеря критического приоритета, неверная автоматическая маршрутизация или полное прекращение обработки из-за сбоя.\n\n\n### Задание №3. Разработка собственных сценариев\n\n\n#### Шаг 3. Разработка собственных сценариев\n\nСоздайте четыре сценария. Каждый должен проверять отдельную пользовательскую цель или риск, а не только отдельное ключевое слово.\n\nСценарий должен быть воспроизводимым: другой проверяющий должен суметь передать те же четыре входных параметра и сравнить результат с тем же ожиданием. Неоднозначный сценарий должен содержать признаки не менее двух категорий либо проверять правило низкой уверенности; некорректный сценарий должен нарушать конкретное условие R1.\n\n\n| ID | Тип | Роль и канал | Цель пользователя | Вход и confidence | Ожидаемый полный результат |\n| --- | --- | --- | --- | --- | --- |\n| S1 | Обычный |  |  |  |  |\n| S2 | Критический |  |  |  |  |\n| S3 | Неоднозначный или confidence < 0.60 |  |  |  |  |\n| S4 | Некорректный ввод |  |  |  |  |\n\n\n### Задание №4. Сценарное тестирование и показатели\n\n\n#### Шаг 4. Сценарное тестирование и показатели\n\nВ графе «Фактически» записывается результат именно проверяемой версии функции. В графе «Успех?» указывается «да» только при точном совпадении всех трёх полей; отсутствие сбоя само по себе не означает успех.\n\n\n| ID | role | channel | text | conf. | Ожидается | Фактически | Успех? |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| T01 | student | portal | Не могу войти: пароль не подходит | 0.92 | access/P3/auto_route |  |  |\n| T02 | teacher | email | Принтер не печатает | 0.88 | equipment/P2/auto_route |  |  |\n| T03 | student | portal | Нет интернета | 0.60 | network/P3/auto_route |  |  |\n| T04 | student | portal | Сервер недоступен | 0.95 | network/P1/auto_route |  |  |\n| T05 | teacher | portal | Нужно обновление программы | 0.58 | software/P2/operator_review |  |  |\n| T06 | student | email | Не входит пароль и не работает интернет | 0.90 | other/P3/operator_review |  |  |\n| T07 | student | portal |  | 0.80 | other/P3/input_error |  |  |\n| T08 | guest | portal | Не могу войти | 0.82 | other/P3/input_error |  |  |\n\nРассчитайте показатели только по T01–T08:\n\n\n| Показатель | Формула | Ваш результат |\n| --- | --- | --- |\n| Scenario Pass Rate | полностью успешные сценарии / 8 × 100 % |  |\n| Critical Recall | правильно обработанные критические / все критические × 100 % |  |\n| Validation Rate | корректно отклонённые некорректные / все некорректные × 100 % |  |\n\nПеред вычислением каждой метрики определите её знаменатель. В Scenario Pass Rate входят все восемь сценариев, в Critical Recall — только сценарии с критическим ожидаемым поведением, а в Validation Rate — только сценарии с некорректными входами. В числитель включаются лишь полностью правильно обработанные случаи соответствующей группы.\n\n\n### Задание №5. Исправление функции и автопроверка\n\n\n#### Шаг 5. Исправление функции и автопроверка\n\nИсправьте функцию, не меняя имя, порядок параметров и ключи результата. При ошибочном входе возвращайте словарь {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"input_error\"}.\n\nВалидация должна выполняться до вызова строковых методов, иначе некорректный text может привести к исключению вместо предусмотренного input_error. После нормализации следует искать все совпавшие категории, а не строить цепочку, которая прекращает поиск на первом совпадении.\n\nРекомендуется определять category, action и priority как связанные, но самостоятельные части результата. Такой порядок помогает не потерять найденную категорию при низкой confidence и не отменить P1 при необходимости ручной проверки.\n\n\n```\ndef process_request(text, role, channel, confidence):\n# 1. Проверка точных типов, диапазона confidence, role и channel\n# 2. Нормализация text через strip().lower()\n# 3. Поиск всех совпавших категорий\n# 4. Определение category и action\n# 5. Определение priority с приоритетом критических фраз\npass\n```\n\nОткрытые автотесты:\n\n\n```\nassert process_request(\n\"Не могу войти: пароль не подходит\", \"student\", \"portal\", 0.92\n) == {\"category\": \"access\", \"priority\": \"P3\", \"action\": \"auto_route\"}\n\nassert process_request(\n\"Нет интернета\", \"student\", \"portal\", 0.60\n) == {\"category\": \"network\", \"priority\": \"P3\", \"action\": \"auto_route\"}\n\nassert process_request(\n\"Сервер недоступен\", \"student\", \"portal\", 0.95\n) == {\"category\": \"network\", \"priority\": \"P1\", \"action\": \"auto_route\"}\n\nassert process_request(\n\"Не входит пароль и не работает интернет\", \"student\", \"email\", 0.90\n) == {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"operator_review\"}\n\nassert process_request(\nNone, \"student\", \"portal\", 0.80\n) == {\"category\": \"other\", \"priority\": \"P3\", \"action\": \"input_error\"}\n```\n\nСкрытые тесты\n\nАвтопроверка использует пустые строки из пробелов, unknown role/channel, confidence -0.01/0/0.59/0.60/1/1.01, bool вместо числа, ключевые слова «доступ», «wi-fi», «ноутбук», «клавиатура», «приложение», а также сочетания нескольких категорий.\n\nПрохождение только открытых примеров не доказывает соблюдение всего контракта. Реализация должна опираться на R1–R10, а не на отдельные строки из тестов.\n\n\n### Задание №6. Разбор ошибок и повторная проверка\n\n\n#### Шаг 6. Разбор ошибок и повторная проверка\n\nВыберите три ошибки: граничную, валидационную и критичную для пользователя.\n\nСимптом описывает наблюдаемое расхождение, а первопричина — конкретный дефект логики, который его вызвал. Например, неверный результат на границе является симптомом, тогда как использование неподходящего знака сравнения может быть первопричиной.\n\nРетест должен повторять условия, при которых дефект проявился, и сравнивать новый фактический результат с исходным ожиданием. Дополнительный соседний тест полезен для проверки того, что исправление не нарушило поведение рядом с границей.\n\n\n| ID | Симптом | R1–R10 | Первопричина | Последствие | Исправление | Ретест |\n| --- | --- | --- | --- | --- | --- | --- |\n|  |  |  |  |  |  |  |\n|  |  |  |  |  |  |  |\n|  |  |  |  |  |  |  |\n\n\n### Задание №7. Улучшения, риски и готовность\n\n\n#### Шаг 7. Улучшения, риски и готовность\n\nУлучшение отличается от исправления дефекта: исправление приводит реализацию в соответствие с уже заданным требованием, а улучшение уточняет проверяемость, устойчивость или дальнейшее развитие решения. Каждое предложение должно быть связано с конкретным риском и способом проверки.\n\n\n| Улучшение | Какой риск уменьшает | Какое требование уточняет | Как проверить |\n| --- | --- | --- | --- |\n|  |  |  |  |\n|  |  |  |  |\n\n\n| Итоговый вывод из 5–7 предложений: какие ошибки найдены, что исправлено, какие риски остались и готов ли проект к учебной демонстрации? |\n| --- |\n| Ваш ответ: |\n\nВывод о готовности должен опираться на результаты тестирования, а не только на факт изменения кода. Следует указать, какие обязательные сценарии прошли после исправления и какие ограничения остаются за рамками текущих требований.\n\n\n### Таблицы из теоретической части\n\n\n| № | Шаг | Что нужно сдать |\n| --- | --- | --- |\n| 1 | Архитектура и требования | Входы, выход, допустимые значения, порядок правил и критерий успеха сценария. |\n| 2 | Прогноз исходной версии | Ожидаемый и фактический результат для четырёх сценариев с объяснением. |\n| 3 | Собственные сценарии | Четыре воспроизводимых сценария: обычный, критический, неоднозначный/низкая уверенность и некорректный. |\n| 4 | Сценарный протокол и метрики | Результаты восьми обязательных сценариев и три показателя качества. |\n| 5 | Исправление и автотесты | Исправленная функция process_request или полный псевдокод. |\n| 6 | Разбор ошибок | Три карточки: симптом, нарушенное требование, первопричина, последствие, исправление и ретест. |\n| 7 | Улучшения и готовность | Два улучшения, риски и вывод о готовности к учебной демонстрации. |\n\n\n| Этап | Время |\n| --- | --- |\n| Ознакомление с проектом | 10 минут |\n| Шаг 1 | 10 минут |\n| Шаг 2 | 10 минут |\n| Шаг 3 | 10 минут |\n| Шаг 4 | 10 минут |\n| Шаг 5 | 10 минут |\n| Шаг 6 | 10 минут |\n| Шаг 7 | 10 минут |\n| Самопроверка и сдача | 10 минут |\n\n\n| Поле | Допустимые значения | Назначение |\n| --- | --- | --- |\n| text | непустая строка после strip() | Текст обращения пользователя. |\n| role | student, teacher, administrator | Роль пользователя. |\n| channel | portal, email, phone | Канал обращения. |\n| confidence | число от 0 до 1; bool недопустим | Уверенность модели в выбранной категории. |\n\n\n| Поле результата | Допустимые значения |\n| --- | --- |\n| category | access, network, equipment, software, other |\n| priority | P1, P2, P3 |\n| action | auto_route, operator_review, input_error |\n\n\n| ID | Требование |\n| --- | --- |\n| R1 | Если тип входа неверен, confidence вне 0–1, text пуст после strip(), role или channel неизвестны — вернуть other/P3/input_error. |\n| R2 | Перед анализом выполнить text.strip().lower(). |\n| R3 | Категория access: пароль, вход, доступ, учётная запись. |\n| R4 | Категория network: сеть, wi-fi, интернет, сервер недоступен. |\n| R5 | Категория equipment: принтер, ноутбук, компьютер, клавиатура. |\n| R6 | Категория software: программа, приложение, обновление, ошибка установки. |\n| R7 | Если обнаружены две и более категории — category=other и action=operator_review. |\n| R8 | Если confidence < 0.60 — action=operator_review. При confidence=0.60 автоматическая обработка допустима. |\n| R9 | Фразы «сервер недоступен», «утечка данных», «не работает сеть во всём корпусе» задают priority=P1 независимо от роли и канала. |\n| R10 | В остальных случаях teacher, administrator или channel=phone получают P2; остальные — P3. При валидном вводе без R7/R8 action=auto_route. |",
   "theory": [
     {
       "title": "Тестирование по сценарию пользователя: теория и инструкция",
@@ -355,5 +654,44 @@
     "audience": "student",
     "rights": "public_distribution_confirmed",
     "status": "published"
+  },
+  "extendedTopics": [
+    "features",
+    "target",
+    "output",
+    "loops",
+    "conditions",
+    "logic",
+    "functions",
+    "problem",
+    "prototype",
+    "documentation"
+  ],
+  "documents": {
+    "lecture": {
+      "url": "/content/documents/M04-L12-lecture.pdf",
+      "name": "Самостоятельная работа - тестирование по сценарию пользователя — лекция.pdf",
+      "label": "PDF-версия исходной лекции",
+      "format": "pdf",
+      "derived": true,
+      "sha256": "1133c1ff19df57205d2be72e6b65e0c3d64ecd0cee25fa0a20cdd08890cfae77",
+      "source": {
+        "path": "Снимки страниц.json / 12e61bdcac8059a34ebfde41",
+        "sha256": "8ebfe2dbba6e941b1af934d0d5c0d2a30c11bc3a8e9129439b074a86a7b91557"
+      }
+    },
+    "presentation": {
+      "url": "/content/documents/M04-L12-presentation.pdf",
+      "name": "Самостоятельная работа - тестирование по сценарию пользователя — презентация.pdf",
+      "label": "Презентация — PDF-копия",
+      "format": "pdf",
+      "derived": true,
+      "pageCount": 17,
+      "sha256": "ead99df4ba05c3c83a44aa81ad234c8b15049074f09ac86a04ccf422cfd93ce7",
+      "source": {
+        "path": "Модуль 4/Занятие 12/Презентация — итоговая.pptx",
+        "sha256": "84224de4924ef52828f4203c632bd7761f0cb08901c16d86fa1bf1bc1b660fb6"
+      }
+    }
   }
 }

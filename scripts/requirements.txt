@@ -1,1 +1,2 @@
-# Importer uses only the Python 3.11+ standard library.
+# Import and source HTML projection, Python 3.11+.
+beautifulsoup4>=4.14,<5
