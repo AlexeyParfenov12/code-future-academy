@@ -1,0 +1,1748 @@
+{
+  "id": "M02-C2-9",
+  "moduleId": 2,
+  "title": "Текущий контроль по темам 2-9 Модуля 2",
+  "kind": "control",
+  "number": "2.К2-9",
+  "tasks": [
+    {
+      "id": "T-6a9564bb4c2de5000736fe56",
+      "number": 1,
+      "title": "Вопрос №1",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe56",
+          "title": "Сохранённое условие",
+          "statement": "Что показывает производная функции?\n\nВыбери все верные утверждения\n\nзначение функции в конкретной точке\n\nплощадь под графиком на интервале\n\nскорость изменения функции в данной точке\n\nрасстояние между двумя точками функции",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe56",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe56",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe56"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe56",
+            "conditionSha256": "57b9595aae3d2c4346377d206ec5fd29d98e4bc70709fa65b37ecba0b3930f24"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe56",
+            "status": "published",
+            "answer": "скорость изменения функции в данной точке",
+            "code": "",
+            "explanation": "Производная — локальная скорость изменения функции по аргументу, то есть наклон касательной. Она не равна площади под графиком.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe5c",
+      "number": 2,
+      "title": "Вопрос №2",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe5c",
+          "title": "Сохранённое условие",
+          "statement": "Чему равна вероятность невозможного события?\n\nВыбери все верные утверждения\n\n1\n\n0.5\n\n0\n\nзависит от условий",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe5c",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe5c",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe5c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe5c",
+            "conditionSha256": "ca73146c44fde1c3e666b84fb4eb69c8cf330868bf2aa0b15e841bb1b123103b"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe5c",
+            "status": "published",
+            "answer": "0",
+            "code": "",
+            "explanation": "Невозможное событие имеет вероятность 0. Значение 1 соответствует достоверному событию.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe62",
+      "number": 3,
+      "title": "Вопрос №3",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe62",
+          "title": "Сохранённое условие",
+          "statement": "Что такое условная вероятность P(A|B)?\n\nВыбери все верные утверждения\n\nвероятность события A, умноженная на вероятность B\n\nвероятность события A при условии, что B уже произошло\n\nсумма вероятностей событий A и B\n\nвероятность противоположного события для A",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe62",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe62",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe62"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe62",
+            "conditionSha256": "f518af59063a71204d070bf2240cebf6ce7e62fb726826955e1eb0498062ead0"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe62",
+            "status": "published",
+            "answer": "вероятность события A при условии, что B уже произошло",
+            "code": "",
+            "explanation": "P(A|B) описывает вероятность A после учёта условия B, если P(B)>0. Знаменатель относится к группе B, а не ко всем наблюдениям.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe68",
+      "number": 4,
+      "title": "Вопрос №4",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe68",
+          "title": "Сохранённое условие",
+          "statement": "Что такое среднее арифметическое (mean)?\n\nВыбери все верные утверждения\n\nнаиболее часто встречающееся значение в наборе\n\nцентральное значение упорядоченного набора\n\nсумма всех значений, делённая на их количество\n\nразность максимального и минимального значений",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe68",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe68",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe68"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe68",
+            "conditionSha256": "62f5a4effe527d7a08686889b95806b316b379baecb9cc77964385934388d936"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe68",
+            "status": "published",
+            "answer": "сумма всех значений, делённая на их количество",
+            "code": "",
+            "explanation": "Складывают все значения и делят на их число. Частоту максимальной повторяемости описывает мода, середину упорядоченного ряда — медиана.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe6e",
+      "number": 5,
+      "title": "Вопрос №5",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe6e",
+          "title": "Сохранённое условие",
+          "statement": "Что такое медиана?\n\nВыбери все верные утверждения\n\nсреднее арифметическое всех значений\n\nнаиболее часто встречающееся значение\n\nзначение, делящее упорядоченный набор на две равные части\n\nразброс значений вокруг среднего",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe6e",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe6e",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe6e"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe6e",
+            "conditionSha256": "944d18a5b604503002e9b714fba00ce6a4f89d62b004ce828c680b036aaa25c7"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe6e",
+            "status": "published",
+            "answer": "значение, делящее упорядоченный набор на две равные части",
+            "code": "",
+            "explanation": "Сначала значения упорядочивают. При нечётном количестве берут центральное, при чётном — среднее двух центральных значений.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe74",
+      "number": 6,
+      "title": "Вопрос №6",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe74",
+          "title": "Сохранённое условие",
+          "statement": "Что такое дисперсия?\n\nВыбери все верные утверждения\n\nсреднее квадратов отклонений значений от среднего, показывающее разброс данных\n\nразность максимального и минимального значений\n\nотношение двух средних значений\n\nколичество уникальных значений в наборе",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe74",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe74",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe74"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe74",
+            "conditionSha256": "c9b009dc816667359c07d50a8fb64d8ce027142c6ea17da6b96651476e671d10"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe74",
+            "status": "published",
+            "answer": "среднее квадратов отклонений значений от среднего, показывающее разброс данных",
+            "code": "",
+            "explanation": "Дисперсия усредняет квадраты отклонений от среднего. Для генерального набора делят на n, для несмещённой выборочной оценки — на n−1.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe7a",
+      "number": 7,
+      "title": "Вопрос №7",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe7a",
+          "title": "Сохранённое условие",
+          "statement": "Для чего в ИИ-задаче нужна функция потерь (ошибка модели)?\n\nВыбери все верные утверждения\n\nдля визуализации данных в диаграммах\n\nдля нормализации признаков перед обучением\n\nдля измерения расхождения между предсказанием и реальным значением\n\nдля выбора алгоритма классификации",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe7a",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe7a",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe7a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe7a",
+            "conditionSha256": "5677b98368c525cfcc4996450e329dd55f62e8b262faddbfc328731600508c10"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe7a",
+            "status": "published",
+            "answer": "для измерения расхождения между предсказанием и реальным значением",
+            "code": "",
+            "explanation": "Функция потерь количественно оценивает несовпадение прогноза и правильного ответа. При обучении подбирают параметры, уменьшающие выбранную потерю.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe80",
+      "number": 8,
+      "title": "Вопрос №8",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe80",
+          "title": "Сохранённое условие",
+          "statement": "Что такое градиентный спуск в ИИ?\n\nВыбери все верные утверждения\n\nалгоритм сортировки данных по возрастанию\n\nметод визуализации функции ошибки\n\nитеративный метод поиска минимума ошибки через обновление параметров\n\nспособ удаления выбросов из обучающих данных",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe80",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe80",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe80"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe80",
+            "conditionSha256": "31d7c0e952b757843c5479046556344bdc11cbbb6e69c8e4a13e5ea1ff440344"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe80",
+            "status": "published",
+            "answer": "итеративный метод поиска минимума ошибки через обновление параметров",
+            "code": "",
+            "explanation": "Градиентный спуск последовательно изменяет параметры против градиента ошибки. Размер шага важен: слишком большой шаг может мешать сходимости.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe86",
+      "number": 9,
+      "title": "Вопрос №9",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe86",
+          "title": "Сохранённое условие",
+          "statement": "Что такое гистограмма?\n\nВыбери все верные утверждения\n\nточечная диаграмма зависимости двух признаков\n\nстолбчатая диаграмма частот, показывающая распределение значений\n\nлинейный график изменения показателя во времени\n\nкруговая диаграмма долей категорий",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe86",
+            "label": "Вопрос №9",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe86",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe86"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe86",
+            "conditionSha256": "d40e9a989c12211bbfa17cba6e63cbf03550092debfcf7c66833102fcc14ae44"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe86",
+            "status": "published",
+            "answer": "столбчатая диаграмма частот, показывающая распределение значений",
+            "code": "",
+            "explanation": "Гистограмма группирует числовые значения по интервалам и показывает их частоты. Её следует отличать от диаграммы рассеяния и временного графика.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe8c",
+      "number": 10,
+      "title": "Вопрос №10",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe8c",
+          "title": "Сохранённое условие",
+          "statement": "Что такое корреляция двух признаков?\n\nВыбери все верные утверждения\n\nразность между средними значениями двух признаков\n\nмера линейной статистической связи между двумя признаками\n\nотношение дисперсий двух признаков\n\nколичество общих значений двух признаков",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe8c",
+            "label": "Вопрос №10",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe8c",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe8c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe8c",
+            "conditionSha256": "8f3201aa5498cb9051daafc4d00c64c5c94dbc72d55f3d519a23a443155b44fb"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe8c",
+            "status": "published",
+            "answer": "мера линейной статистической связи между двумя признаками",
+            "code": "",
+            "explanation": "В контексте вопроса речь о коэффициенте Пирсона, измеряющем линейную связь. Корреляция не доказывает причинность.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe92",
+      "number": 11,
+      "title": "Вопрос №11",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe92",
+          "title": "Сохранённое условие",
+          "statement": "Что означает коэффициент корреляции, близкий к -1?\n\nВыбери все верные утверждения\n\nпризнаки не связаны между собой\n\nсильная положительная связь: оба растут вместе\n\nсильная отрицательная связь: рост одного сопровождается падением другого\n\nслабая случайная связь между признаками",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe92",
+            "label": "Вопрос №11",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe92",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe92"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe92",
+            "conditionSha256": "b8c87aecf395550d7bd6347766396d38ee5a746c3d5eb9b1862635df15b40363"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe92",
+            "status": "published",
+            "answer": "сильная отрицательная связь: рост одного сопровождается падением другого",
+            "code": "",
+            "explanation": "Коэффициент около −1 указывает на сильную обратную линейную связь: большим значениям одного признака обычно соответствуют меньшие другого.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe98",
+      "number": 12,
+      "title": "Вопрос №12",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe98",
+          "title": "Сохранённое условие",
+          "statement": "Что такое минимум функции и как он связан с ИИ?\n\nВыбери все верные утверждения\n\nточка, где функция принимает наибольшее значение\n\nточка, где функция ошибки наименьшая – оптимальные параметры модели\n\nзначение, при котором функция не определена\n\nсреднее значение функции на интервале",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe98",
+            "label": "Вопрос №12",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe98",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe98"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe98",
+            "conditionSha256": "ec497a1e903128f9a72bb2545dc0e6f0d4dd164411d465d5b82be32087ddbbf5"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe98",
+            "status": "published",
+            "answer": "точка, где функция ошибки наименьшая – оптимальные параметры модели",
+            "code": "",
+            "explanation": "Минимум ошибки соответствует наименьшему значению выбранной функции потерь. Вопрос использует слово «точка», но оптимальных наборов параметров может быть несколько.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe9e",
+      "number": 13,
+      "title": "Вопрос №13",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fe9e",
+          "title": "Сохранённое условие",
+          "statement": "Что такое оптимизация в задачах ИИ?\n\nВыбери все верные утверждения\n\nпроцесс удаления лишних признаков из датасета\n\nпоиск параметров модели, при которых ошибка минимальна\n\nпостроение диаграмм по профессиональным данным\n\nпроцедура разметки данных для задач обучения",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fe9e",
+            "label": "Вопрос №13",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe9e",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fe9e"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fe9e",
+            "conditionSha256": "29bbc74f7c463ecc7ab4a9d681a99756685f5cda7b85d0af5a9606ef7de075b3"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fe9e",
+            "status": "published",
+            "answer": "поиск параметров модели, при которых ошибка минимальна",
+            "code": "",
+            "explanation": "Оптимизация подбирает параметры по заданному критерию. Уменьшение ошибки на обучении затем обязательно сопоставляют с качеством на новых данных.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fea4",
+      "number": 14,
+      "title": "Вопрос №14",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fea4",
+          "title": "Сохранённое условие",
+          "statement": "Как рассчитать вероятность события при 100 испытаниях и 35 благоприятных исходах?\n\nВыбери все верные утверждения\n\n35/65 = 0.54\n\n35 × 100 = 3500\n\n100/35 = 2.86\n\n35/100 = 0.35",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fea4",
+            "label": "Вопрос №14",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fea4",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fea4"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fea4",
+            "conditionSha256": "ccee53615ed1eca880e7bba9207c26d41c37151b769fb0cf72a904787adde89a"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fea4",
+            "status": "published",
+            "answer": "35/100 = 0.35",
+            "code": "",
+            "explanation": "Относительная частота равна 35/100=0.35, то есть 35%. Это оценка по наблюдениям; точная вероятность требует предположений об опыте.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feaa",
+      "number": 15,
+      "title": "Вопрос №15",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736feaa",
+          "title": "Сохранённое условие",
+          "statement": "Что такое случайная величина?\n\nВыбери все верные утверждения\n\nпараметр, задаваемый программистом вручную\n\nчисловой результат случайного события, принимающий разные значения с разными вероятностями\n\nпеременная Python с неизвестным типом\n\nкоэффициент в функции ошибки модели",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736feaa",
+            "label": "Вопрос №15",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feaa",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736feaa"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736feaa",
+            "conditionSha256": "cb56ada2f24e4487a45915e9218d8fed9b45f7cf35ffb5134baee51db4a8b552"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736feaa",
+            "status": "published",
+            "answer": "числовой результат случайного события, принимающий разные значения с разными вероятностями",
+            "code": "",
+            "explanation": "Случайная величина связывает возможный исход опыта с числом. Например, число заказов за случайно выбранный день.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feb0",
+      "number": 16,
+      "title": "Вопрос №16",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736feb0",
+          "title": "Сохранённое условие",
+          "statement": "Что такое доверительный интервал?\n\nВыбери все верные утверждения\n\nдиапазон, в котором находятся все значения набора\n\nинтервал, в который с заданной вероятностью попадает истинное значение\n\nразность максимального и минимального значений\n\nсумма дисперсий двух независимых признаков",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736feb0",
+            "label": "Вопрос №16",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feb0",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736feb0"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736feb0",
+            "conditionSha256": "15f67b05d06677f33cb108d3547ee2162153651324030289580544b4c24bd050"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736feb0",
+            "status": "published",
+            "answer": "интервал, в который с заданной вероятностью попадает истинное значение",
+            "code": "",
+            "explanation": "Это ожидаемая учебная формулировка. Строго частотный доверительный интервал строится процедурой, которая при повторении выборок накрывает фиксированный параметр с заданной долей, например 95%; не все наблюдения обязаны лежать внутри.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feb6",
+      "number": 17,
+      "title": "Вопрос №17",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736feb6",
+          "title": "Сохранённое условие",
+          "statement": "Что такое нормализация данных?\n\nВыбери все верные утверждения\n\nудаление строк с пропущенными значениями\n\nзамена категориальных значений числами\n\nперевод числовых признаков к единому масштабу, например от 0 до 1\n\nудаление дублирующихся строк из датасета",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736feb6",
+            "label": "Вопрос №17",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feb6",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736feb6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736feb6",
+            "conditionSha256": "fc5953ecd84813b7745daf00188a63cd0cd0f4f7146b215d3047c4c0176327b9"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736feb6",
+            "status": "published",
+            "answer": "перевод числовых признаков к единому масштабу, например от 0 до 1",
+            "code": "",
+            "explanation": "Масштабирование приводит числовые признаки к сопоставимым шкалам. Параметры преобразования оценивают на обучающей части, чтобы избежать утечки.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fec2",
+      "number": 18,
+      "title": "Вопрос №18",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fec2",
+          "title": "Сохранённое условие",
+          "statement": "Что такое мода в наборе данных?\n\nВыбери все верные утверждения\n\nсреднее значение набора\n\nнаиболее часто встречающееся значение\n\nцентральное значение упорядоченного набора\n\nмаксимальное значение набора",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fec2",
+            "label": "Вопрос №18",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fec2",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fec2"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fec2",
+            "conditionSha256": "b6bd66188f8e4725a78a690c7d16ed620ca490b8a27383e82070555c0281e32b"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fec2",
+            "status": "published",
+            "answer": "наиболее часто встречающееся значение",
+            "code": "",
+            "explanation": "Мода — самое частое значение. У набора может быть несколько мод, если максимальная частота одинакова.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fec8",
+      "number": 19,
+      "title": "Вопрос №19",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fec8",
+          "title": "Сохранённое условие",
+          "statement": "Зачем в профессиональной задаче важно принимать решения \"на основе данных\"?\n\nВыбери все верные утверждения\n\nпотому что любой алгоритм всегда даёт точный ответ\n\nчтобы избежать субъективности и обосновать выбор количественными показателями\n\nпотому что визуальные графики заменяют расчёты\n\nчтобы полностью исключить ошибку в решениях",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fec8",
+            "label": "Вопрос №19",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fec8",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fec8"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fec8",
+            "conditionSha256": "da5a820ba4d482f5cfd7617a8d96c6a02500464625875de56c9fc650bcfe2bfd"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fec8",
+            "status": "published",
+            "answer": "чтобы избежать субъективности и обосновать выбор количественными показателями",
+            "code": "",
+            "explanation": "Данные позволяют количественно обосновать решение и проверить предположения. Они уменьшают произвольность выбора, но не гарантируют отсутствие ошибок и смещений.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fece",
+      "number": 20,
+      "title": "Вопрос №20",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fece",
+          "title": "Сохранённое условие",
+          "statement": "Что показывает положительная корреляция между двумя признаками?\n\nВыбери все верные утверждения\n\nпри увеличении одного признака второй уменьшается\n\nпризнаки статистически не связаны\n\nпри увеличении одного признака второй тоже обычно растёт\n\nоба признака принимают одинаковые значения",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fece",
+            "label": "Вопрос №20",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fece",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fece"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fece",
+            "conditionSha256": "9f731f31d0b7e30a32f52aed70f8475413d7b8feeadecfa5990a42cf24f8defc"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fece",
+            "status": "published",
+            "answer": "при увеличении одного признака второй тоже обычно растёт",
+            "code": "",
+            "explanation": "Положительная связь означает совместную тенденцию к росту. Она не требует равенства значений и не доказывает влияние одного признака на другой.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fed4",
+      "number": 21,
+      "title": "Вопрос №21",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fed4",
+          "title": "Сохранённое условие",
+          "statement": "Что такое ошибка модели в профессиональном контексте?\n\nВыбери все верные утверждения\n\nколичество параметров, которые модель не обучила\n\nвремя, затраченное на обучение модели\n\nрасхождение между предсказанием модели и реальным значением\n\nколичество данных, не использованных в обучении",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fed4",
+            "label": "Вопрос №21",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fed4",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fed4"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fed4",
+            "conditionSha256": "975554c381fb0cc3822c0fd0ab7fe3d3b5ab30bd7c3d3060b1d946a7fa2d3086"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fed4",
+            "status": "published",
+            "answer": "расхождение между предсказанием модели и реальным значением",
+            "code": "",
+            "explanation": "Ошибка сравнивает прогноз с фактом. Её практическая значимость зависит от единиц измерения и последствий неверного решения.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feda",
+      "number": 22,
+      "title": "Вопрос №22",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736feda",
+          "title": "Сохранённое условие",
+          "statement": "Как связаны вероятность и задача классификации в ИИ?\n\nВыбери все верные утверждения\n\nвероятность не применяется в задачах классификации\n\nмодель оценивает вероятность принадлежности объекта к каждому классу\n\nмодель выбирает класс с наименьшей вероятностью\n\nвероятность задаётся вручную до начала обучения",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736feda",
+            "label": "Вопрос №22",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feda",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736feda"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736feda",
+            "conditionSha256": "6b8a23ae8500aca9d1a10ff6cd11b0efc0cc26900a27f710cc1421c4551b5606"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736feda",
+            "status": "published",
+            "answer": "модель оценивает вероятность принадлежности объекта к каждому классу",
+            "code": "",
+            "explanation": "Вероятностный классификатор может оценивать принадлежность к классам. Не каждый классификатор выдаёт вероятности: например, сырые decision_function нельзя автоматически так называть.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fee0",
+      "number": 23,
+      "title": "Вопрос №23",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fee0",
+          "title": "Сохранённое условие",
+          "statement": "Что показывает гистограмма распределения данных?\n\nВыбери все верные утверждения\n\nзависимость между двумя числовыми признаками\n\nдоли категорий в процентах\n\nкакие диапазоны значений встречаются часто, а какие – редко\n\nизменение показателя во времени",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fee0",
+            "label": "Вопрос №23",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fee0",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fee0"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fee0",
+            "conditionSha256": "93ce0380b22117afa424e11637241b4d21302ca51accea2d94a3c1fa35e4dcc9"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fee0",
+            "status": "published",
+            "answer": "какие диапазоны значений встречаются часто, а какие – редко",
+            "code": "",
+            "explanation": "По высоте столбцов видно, какие интервалы представлены чаще. Для неравных ширин интервалов важно различать частоту и плотность.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feec",
+      "number": 24,
+      "title": "Вопрос №24",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736feec",
+          "title": "Сохранённое условие",
+          "statement": "Что такое стандартное отклонение?\n\nВыбери все верные утверждения\n\nсреднее значение всех элементов набора данных\n\nнаибольшее значение, встречающееся в наборе\n\nквадратный корень из дисперсии, показывающий разброс значений\n\nколичество уникальных значений в наборе",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736feec",
+            "label": "Вопрос №24",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feec",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736feec"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736feec",
+            "conditionSha256": "eeec932391376a0d9b82535cd912fcf0d9529e82f70496a3db2feeca8c02dd84"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736feec",
+            "status": "published",
+            "answer": "квадратный корень из дисперсии, показывающий разброс значений",
+            "code": "",
+            "explanation": "Стандартное отклонение равно квадратному корню из дисперсии и выражается в исходных единицах признака.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fef2",
+      "number": 25,
+      "title": "Вопрос №25",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fef2",
+          "title": "Сохранённое условие",
+          "statement": "Как ошибка модели связана с выбором лучшей модели?\n\nВыбери все верные утверждения\n\nлучшей считается модель с максимальной ошибкой\n\nошибка не используется при сравнении моделей\n\nвыбирают модель с минимальной средней ошибкой на проверочных данных\n\nлучшей считается модель с наибольшим числом параметров",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fef2",
+            "label": "Вопрос №25",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fef2",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fef2"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fef2",
+            "conditionSha256": "3bb1c515f203938ff18a454b995b707f040f45c4108d85aa5975c5975fae9b28"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fef2",
+            "status": "published",
+            "answer": "выбирают модель с минимальной средней ошибкой на проверочных данных",
+            "code": "",
+            "explanation": "Сравнивать нужно один и тот же показатель на сопоставимых проверочных данных. Минимальная обучающая ошибка сама по себе не определяет лучшую модель.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fef8",
+      "number": 26,
+      "title": "Вопрос №26",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fef8",
+          "title": "Сохранённое условие",
+          "statement": "Что такое частота события?\n\nВыбери все верные утверждения\n\nмаксимальное значение случайной величины\n\nотношение числа наступлений события к общему числу испытаний\n\nсумма всех вероятностей в пространстве исходов\n\nразность двух вероятностей",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fef8",
+            "label": "Вопрос №26",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fef8",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fef8"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fef8",
+            "conditionSha256": "95acafcb7998a15fe4136c7d4653902b5ae87dd6d8135eae9e9cd22ff03cf5f5"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fef8",
+            "status": "published",
+            "answer": "отношение числа наступлений события к общему числу испытаний",
+            "code": "",
+            "explanation": "В предложенном варианте имеется в виду относительная частота: число наступлений, делённое на число испытаний. Абсолютная частота — само число наступлений.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fefe",
+      "number": 27,
+      "title": "Вопрос №27",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736fefe",
+          "title": "Сохранённое условие",
+          "statement": "Чему равна сумма вероятностей всех возможных исходов одного опыта?\n\nВыбери все верные утверждения\n\n0\n\n0.5\n\nзависит от числа исходов\n\n1",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736fefe",
+            "label": "Вопрос №27",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fefe",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736fefe"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736fefe",
+            "conditionSha256": "7fffa3e6b0b03ea8d2db9b076e0565a47e0fc58037bad47e629aef7325c86c0e"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736fefe",
+            "status": "published",
+            "answer": "1",
+            "code": "",
+            "explanation": "Вероятности полного набора взаимно исключающих исходов суммируются в 1, то есть 100%.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff04",
+      "number": 28,
+      "title": "Вопрос №28",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff04",
+          "title": "Сохранённое условие",
+          "statement": "Как производная связана с обучением ИИ-модели?\n\nВыбери все верные утверждения\n\nпроизводная определяет число итераций обучения\n\nпроизводная показывает, в какую сторону изменить параметр, чтобы ошибка уменьшилась\n\nпроизводная вычисляет среднее значение функции ошибки\n\nпроизводная автоматически выбирает алгоритм классификации",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff04",
+            "label": "Вопрос №28",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff04",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff04"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff04",
+            "conditionSha256": "53e0b19032390a0c0bc051c81db692765ec456478ebe0950f0d7c74458dab1ff"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff04",
+            "status": "published",
+            "answer": "производная показывает, в какую сторону изменить параметр, чтобы ошибка уменьшилась",
+            "code": "",
+            "explanation": "Знак производной подсказывает локальное направление изменения ошибки. Для уменьшения ошибки делают небольшой шаг в противоположную сторону.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff0a",
+      "number": 29,
+      "title": "Вопрос №29",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff0a",
+          "title": "Сохранённое условие",
+          "statement": "Зачем строить график функции при анализе профессиональных данных?\n\nВыбери все верные утверждения\n\nчтобы автоматически исправить ошибки в датасете\n\nчтобы получить точный математический ответ без вычислений\n\nчтобы наглядно увидеть зависимость и характер изменения показателя\n\nчтобы уменьшить размер файла данных",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff0a",
+            "label": "Вопрос №29",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff0a",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff0a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff0a",
+            "conditionSha256": "aaed04d74360f133f30c5dfbac00a0b494e47497e070d785cf58f41f1d2d7e10"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff0a",
+            "status": "published",
+            "answer": "чтобы наглядно увидеть зависимость и характер изменения показателя",
+            "code": "",
+            "explanation": "График помогает увидеть рост, спад, изгиб и возможные экстремумы. Он не исправляет исходные данные и не даёт точного расчёта автоматически.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff10",
+      "number": 30,
+      "title": "Вопрос №30",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff10",
+          "title": "Сохранённое условие",
+          "statement": "Что такое рекомендательная система в профессиональном контексте?\n\nВыбери все верные утверждения\n\nсистема, автоматически удаляющая ошибки в данных\n\nсистема, предлагающая сотруднику или клиенту варианты действий на основе данных\n\nалгоритм сортировки заявок по дате\n\nпрограмма для создания резервных копий",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff10",
+            "label": "Вопрос №30",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff10",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff10"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff10",
+            "conditionSha256": "d6d8787c49e55ef0a74f1913bc7aac1c844cae238983d5883029763088193898"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff10",
+            "status": "published",
+            "answer": "система, предлагающая сотруднику или клиенту варианты действий на основе данных",
+            "code": "",
+            "explanation": "Рекомендации ранжируют подходящие варианты по данным и цели пользователя. Конкретное решение и ограничения остаются частью постановки задачи.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff16",
+      "number": 31,
+      "title": "Вопрос №31",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff16",
+          "title": "Сохранённое условие",
+          "statement": "Что такое прогнозирование спроса как задача ИИ?\n\nВыбери все верные утверждения\n\nклассификация товаров по категориям\n\nразбиение клиентов на группы по похожести\n\nпредсказание числового показателя – будущего объёма заказов – на основе данных\n\nразметка исторических данных вручную",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff16",
+            "label": "Вопрос №31",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff16",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff16"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff16",
+            "conditionSha256": "c1d2110e7869a646fadef50ee71e8eae5cbd80066685da347179aa6b9db4091d"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff16",
+            "status": "published",
+            "answer": "предсказание числового показателя – будущего объёма заказов – на основе данных",
+            "code": "",
+            "explanation": "Будущий объём заказов — числовая цель, поэтому в предложенной постановке это регрессия или прогнозирование числового временного ряда.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff1c",
+      "number": 32,
+      "title": "Вопрос №32",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff1c",
+          "title": "Сохранённое условие",
+          "statement": "Почему статистические показатели важны для принятия решений в профессиональной среде?\n\nВыбери все верные утверждения\n\nони заменяют экспертное мнение специалиста\n\nони дают возможность обосновать решение числами и сравнивать варианты объективно\n\nони используются только для оформления отчётов\n\nони автоматически решают профессиональные задачи",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff1c",
+            "label": "Вопрос №32",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff1c",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff1c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff1c",
+            "conditionSha256": "c4b241db20367bd657c71655cc31ca3da9a64f719dc020d2ee79b614480d0db2"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff1c",
+            "status": "published",
+            "answer": "они дают возможность обосновать решение числами и сравнивать варианты объективно",
+            "code": "",
+            "explanation": "Показатели дают проверяемую основу для сравнения. Они дополняют экспертизу, а не отменяют контекст, ограничения и проверку исходных данных.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff22",
+      "number": 1,
+      "title": "Задание №1",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff22",
+          "title": "Сохранённое условие",
+          "statement": "Что такое производная? Объясните на примере профессиональной задачи.",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff22",
+            "label": "Задание №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff22",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff22"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff22",
+            "conditionSha256": "61c553490e36e384f0114b3063128df9c3a69a417a4bba9944de122dbbde76a0"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff22",
+            "status": "published",
+            "answer": "Производная показывает локальную скорость изменения результата при изменении входа. Например, если стоимость обработки C(x)=100+20x, то C′(x)=20: ещё одна заявка увеличивает стоимость на 20 денежных единиц. У нелинейной зависимости эта скорость может зависеть от x.",
+            "code": "",
+            "explanation": "Единицы производной — единицы результата на единицу аргумента. Значение функции и скорость её изменения — разные величины.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff24",
+      "number": 2,
+      "title": "Задание №2",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff24",
+          "title": "Сохранённое условие",
+          "statement": "Из 200 обращений клиентов 50 оказались жалобами. Вычислите вероятность жалобы.",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff24",
+            "label": "Задание №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff24",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff24"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff24",
+            "conditionSha256": "089dda4f554195895789f5ef0e71074557e67e01d7bc08efea20d036e3c97faa"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff24",
+            "status": "published",
+            "answer": "Вероятностная оценка жалобы по данным: 50/200=0.25, или 25%.",
+            "code": "",
+            "explanation": "Число жалоб делят на число всех обращений. Это относительная частота в данной выборке; перенос на будущий поток требует проверки его сопоставимости.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff26",
+      "number": 3,
+      "title": "Задание №3",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff26",
+          "title": "Сохранённое условие",
+          "statement": "Что такое гистограмма и что из неё можно узнать о профессиональных данных?",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff26",
+            "label": "Задание №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff26",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff26"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff26",
+            "conditionSha256": "c46c6b39ba19920c77fbd3be0b3db2ceb5a4bdd43bac30621cd9128092891780"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff26",
+            "status": "published",
+            "answer": "Гистограмма делит числовой показатель на интервалы и показывает их частоты. Для времени обработки заявок она помогает увидеть типичный диапазон, длинный хвост, несколько групп и возможные выбросы. Вывод зависит от выбранной ширины интервалов.",
+            "code": "",
+            "explanation": "Гистограмма описывает распределение одного числового признака. Она не показывает напрямую причинную связь двух признаков.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff28",
+      "number": 4,
+      "title": "Задание №4",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff28",
+          "title": "Сохранённое условие",
+          "statement": "Объясните идею градиентного спуска простыми словами.",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff28",
+            "label": "Задание №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff28",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff28"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff28",
+            "conditionSha256": "46a64fae471ede4dbdc7fe9603bb6b10b7de28b982e51780efb58df8e3b3ed2c"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff28",
+            "status": "published",
+            "answer": "Градиентный спуск — последовательная настройка параметров в сторону уменьшения ошибки. Сначала измеряют наклон функции ошибки, затем делают небольшой шаг против этого наклона и повторяют процесс. При слишком большом шаге можно перескочить минимум, а при слишком малом обучение идёт медленно.",
+            "code": "",
+            "explanation": "Для одного параметра обновление записывают w_new = w_old − learning_rate × производная ошибки. Метод не гарантирует глобальный минимум для любой функции.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff2a",
+      "number": 5,
+      "title": "Задание №5",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff2a",
+          "title": "Сохранённое условие",
+          "statement": "Чем среднее отличается от медианы? Когда медиана предпочтительнее в профессиональных данных?",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff2a",
+            "label": "Задание №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff2a",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff2a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff2a",
+            "conditionSha256": "6cba3e766b69214c3921c349d49e014b2197837aad7491ad2181cacd32b9053b"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff2a",
+            "status": "published",
+            "answer": "Среднее равно сумме значений, делённой на их количество; медиана — середина упорядоченного ряда. Для [10, 12, 13, 15, 200] среднее 50, медиана 13. При нескольких крайне долгих заявках медиана лучше описывает типичное время, а среднее важно для общей нагрузки.",
+            "code": "",
+            "explanation": "Предпочтение зависит от вопроса. Медиана устойчивее к крайним значениям, но не заменяет анализ всего распределения.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff2c",
+      "number": 6,
+      "title": "Задание №6",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff2c",
+          "title": "Сохранённое условие",
+          "statement": "Что такое корреляция признаков? Приведите пример из профессионального датасета.",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff2c",
+            "label": "Задание №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff2c",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff2c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff2c",
+            "conditionSha256": "3197785936a68a9f217742d731170af45b067097a41bb3e1d1b12726b3b05ace"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff2c",
+            "status": "published",
+            "answer": "Корреляция описывает статистическую связь признаков. Например, в таблице заказов большему расстоянию часто соответствует большее время доставки: ожидается положительная корреляция. Сам коэффициент не доказывает, что только расстояние определяет время: влияют пробки, маршрут и объём заказа.",
+            "code": "",
+            "explanation": "Для линейной связи применяют коэффициент Пирсона и дополняют его диаграммой рассеяния.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff2e",
+      "number": 7,
+      "title": "Задание №7",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff2e",
+          "title": "Сохранённое условие",
+          "statement": "Что означает \"минимум функции ошибки\" при обучении ИИ-модели?",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff2e",
+            "label": "Задание №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff2e",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff2e"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff2e",
+            "conditionSha256": "ea62e3a975496ddc6251d4d141c34d1830ff5ea38c02a5413943212b5198686a"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff2e",
+            "status": "published",
+            "answer": "Минимум функции ошибки — набор параметров, при котором выбранная потеря минимальна в рассматриваемой области. Это цель настройки модели на train. Низкая ошибка обучения не гарантирует хорошего прогноза на новых данных, поэтому отдельно оценивают обобщение.",
+            "code": "",
+            "explanation": "Могут существовать локальные минимумы и несколько равных решений. Важны выбранная функция и ограничения задачи.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff30",
+      "number": 8,
+      "title": "Задание №8",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff30",
+          "title": "Сохранённое условие",
+          "statement": "Что такое дисперсия и что она говорит о профессиональных данных?",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff30",
+            "label": "Задание №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff30",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff30"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff30",
+            "conditionSha256": "ac71718b62a812a8c1d21ada17d994ba451ba32798f5a2f9e7cb2a51c1efd74f"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff30",
+            "status": "published",
+            "answer": "Дисперсия — средний квадрат отклонений от среднего. Для генерального набора D = сумма((x−mean)²)/n. Она показывает разброс времени обработки или суммы заказа; при одинаковом среднем большая дисперсия означает более неоднородные значения.",
+            "code": "",
+            "explanation": "Дисперсия измеряется в квадрате исходных единиц. Для удобной интерпретации часто берут корень — стандартное отклонение.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff32",
+      "number": 9,
+      "title": "Задание №9",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff32",
+          "title": "Сохранённое условие",
+          "statement": "Приведите пример, когда решение \"на основе данных\" оказывается ошибочным в профессиональной задаче.",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff32",
+            "label": "Задание №9",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff32",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff32"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff32",
+            "conditionSha256": "a7ee2c51189148a308046ed02bf52abb2a5e039eb21b9c1e00db297c23d0032e"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff32",
+            "status": "published",
+            "answer": "Пример: магазин прогнозирует спрос только по продажам недели, когда часть товара отсутствовала на складе. Низкие продажи ошибочно интерпретируются как низкий интерес, хотя покупатели не могли купить товар. Исправление — учитывать остатки, сезонность и полноту наблюдений, затем проверять прогноз на сопоставимом периоде.",
+            "code": "",
+            "explanation": "Решение опирается на числа, но данные не отражают нужное явление полностью. Количественная форма сама по себе не делает вывод верным.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff34",
+      "number": 10,
+      "title": "Задание №10",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff34",
+          "title": "Сохранённое условие",
+          "statement": "Что такое условная вероятность? Приведите пример из профессиональной задачи.",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff34",
+            "label": "Задание №10",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff34",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff34"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff34",
+            "conditionSha256": "f31f9722b00a014552f66805264f53baf46067aa8b838ac7d9c0ba05ff682d63"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff34",
+            "status": "published",
+            "answer": "Условная вероятность — вероятность события после учёта дополнительного условия. Если из 40 заявок 20 пришли по телефону и 15 из этих 20 срочные, то P(срочная ",
+            "code": "",
+            "explanation": " телефон)=15/20=0.75. Нельзя делить на все 40 после перехода к условной группе.|При P(B)>0 формула P(A|B)=P(A∩B)/P(B). Условия и числитель должны относиться к одной выборке.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff36",
+      "number": 11,
+      "title": "Задание №11",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff36",
+          "title": "Сохранённое условие",
+          "statement": "Зачем нормализовать данные перед анализом или обучением модели?",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff36",
+            "label": "Задание №11",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff36",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff36"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff36",
+            "conditionSha256": "79cca75fcc74496864cf6c6698ebefcf1eb11798cf38916522da357af98d15d7"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff36",
+            "status": "published",
+            "answer": "Масштабирование делает числовые признаки сопоставимыми. В алгоритмах, зависящих от расстояний или градиентов, сумма в тысячах иначе может подавить длительность в единицах. Например, стандартизация вычитает среднее и делит на стандартное отклонение train. Деревьям такое масштабирование обычно не нужно.",
+            "code": "",
+            "explanation": "Преобразователь обучают только на train и затем применяют к validation/test. Иначе статистики теста попадут в подготовку.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff38",
+      "number": 12,
+      "title": "Задание №12",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff38",
+          "title": "Сохранённое условие",
+          "statement": "Что такое случайная величина в профессиональном контексте? Приведите пример.",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff38",
+            "label": "Задание №12",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff38",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff38"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff38",
+            "conditionSha256": "43792e73794da35b0dca751a8bf17d72207311e87f46676acb8f26c2604654a8"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff38",
+            "status": "published",
+            "answer": "Случайная величина — числовой результат вероятностного опыта. Например, число обращений поддержки за случайно выбранный день может принимать 15, 20, 32 и другие значения с разными вероятностями. По истории оценивают распределение и ожидаемую нагрузку.",
+            "code": "",
+            "explanation": "Нужно указать опыт и смысл значения. Просто неизвестная переменная в коде не всегда является случайной величиной.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff3a",
+      "number": 13,
+      "title": "Задание №13",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff3a",
+          "title": "Сохранённое условие",
+          "statement": "Как по гистограмме определить, есть ли в профессиональных данных выбросы?",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff3a",
+            "label": "Задание №13",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff3a",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff3a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff3a",
+            "conditionSha256": "143f47b27fccc9581e6a13183e75f4b6004c6cd31d101624f9109154a3af9382"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff3a",
+            "status": "published",
+            "answer": "Ищут редкие столбцы далеко от основной группы или длинный хвост распределения. Например, отдельный интервал 800–900 минут при основной массе 10–30 требует проверки. Гистограмму дополняют исходными строками и предметными диапазонами: по одному графику нельзя доказать ошибочность значения.",
+            "code": "",
+            "explanation": "Широкие интервалы могут скрыть необычный случай. Полезно менять интервалы и сравнивать с boxplot или числовыми квантилями.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff3c",
+      "number": 14,
+      "title": "Задание №14",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff3c",
+          "title": "Сохранённое условие",
+          "statement": "Что такое функция потерь? Зачем она нужна при обучении ИИ-модели?",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff3c",
+            "label": "Задание №14",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff3c",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff3c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff3c",
+            "conditionSha256": "ce546ea687c8db1bae8abc1ab2b6da8483c8ae14bbe98a29d8058d26702fb6ab"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff3c",
+            "status": "published",
+            "answer": "Функция потерь задаёт числовую цену несовпадения прогноза и правильного ответа. Например, MAE усредняет абсолютные ошибки прогноза времени. Во время обучения оптимизация меняет параметры, стараясь уменьшить выбранную потерю.",
+            "code": "",
+            "explanation": "Выбор потерь связан с целью и ценой ошибок. Метрика на независимом тесте проверяет результат обучения.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff3e",
+      "number": 15,
+      "title": "Задание №15",
+      "variants": [
+        {
+          "id": "T-6a9564bb4c2de5000736ff3e",
+          "title": "Сохранённое условие",
+          "statement": "Объясните, зачем в профессиональной задаче сравнивать несколько моделей по ошибке.",
+          "ismartLink": {
+            "id": "6a9564bb4c2de5000736ff3e",
+            "label": "Задание №15",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff3e",
+            "status": "unverified",
+            "unitId": "6a9564bb4c2de5000736fe4f",
+            "elementId": "6a9564bb4c2de5000736ff3e"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a9564bb4c2de5000736ff3e",
+            "conditionSha256": "74f88b423425dc97e285bdd8fc40a31c5e615c035d3a3b28cd57855caa812098"
+          },
+          "solution": {
+            "id": "T-6a9564bb4c2de5000736ff3e",
+            "status": "published",
+            "answer": "Сравнение нескольких моделей показывает, даёт ли усложнение реальное улучшение относительно простого baseline. Их оценивают одной метрикой на одном разбиении, учитывают ошибки отдельных групп, скорость и объяснимость. Итоговый test используют после выбора решения, чтобы сохранить независимую оценку.",
+            "code": "",
+            "explanation": "Минимальная обучающая ошибка может означать переобучение. Сравнивать несопоставимые метрики или разные наборы без оговорок нельзя.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,525 @@
+{
+  "id": "M01-C1-4",
+  "moduleId": 1,
+  "title": "Текущий контроль по темам 1-4 Модуля 1",
+  "kind": "control",
+  "number": "1.К1-4",
+  "tasks": [
+    {
+      "id": "T-f22cfdc83c204027f54c9c44",
+      "number": 1,
+      "title": "Вопрос №1",
+      "variants": [
+        {
+          "id": "T-f22cfdc83c204027f54c9c44",
+          "title": "Сохранённое условие",
+          "statement": "Что такое переменная в Python?\n\nВыбери все верные утверждения\n\nспециальная команда для вывода данных на экран\n\nимя, за которым хранится значение\n\nтип файла для хранения профессиональных данных\n\nсинтаксическое правило для описания условий",
+          "ismartLink": {
+            "id": "f22cfdc83c204027f54c9c44",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/f22cfdc83c204027f54c9c44",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "f22cfdc83c204027f54c9c44"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "f22cfdc83c204027f54c9c44",
+            "conditionSha256": "c946788db04148341590e56b490f4c710a286d326b1d22017da16e45d99d7a8d"
+          },
+          "solution": {
+            "id": "T-f22cfdc83c204027f54c9c44",
+            "status": "published",
+            "answer": "имя, за которым хранится значение",
+            "code": "",
+            "explanation": "Переменная связывает имя со значением: например, score = 75. Это не команда вывода и не формат файла.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "851c3ca8bcc592b183ade603bccb18b395ddf64cb66bf336a8bae4ad13fd2c68",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "имя, за которым хранится значение"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-64a0f48f51005cd909feb413",
+      "number": 2,
+      "title": "Вопрос №2",
+      "variants": [
+        {
+          "id": "T-64a0f48f51005cd909feb413",
+          "title": "Сохранённое условие",
+          "statement": "Какой тип данных у значения 3.14 в Python?\n\nВыбери все верные утверждения\n\nint – целочисленный тип\n\nstr – строковый тип\n\nfloat – вещественный тип\n\nbool – логический тип",
+          "ismartLink": {
+            "id": "64a0f48f51005cd909feb413",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/64a0f48f51005cd909feb413",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "64a0f48f51005cd909feb413"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "64a0f48f51005cd909feb413",
+            "conditionSha256": "9c3ab8159d4436adb64440251b02e4535edb0c88d20fdd1c79204d71cb214428"
+          },
+          "solution": {
+            "id": "T-64a0f48f51005cd909feb413",
+            "status": "published",
+            "answer": "float – вещественный тип",
+            "code": "",
+            "explanation": "У литерала 3.14 есть дробная часть; Python создаёт float. int представляет целые числа, str — строки, bool — логические значения.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "dcbc394d9b0cc00949de8fd8bc8e91a78eca41db486750aff061099d29bfd7dd",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "float – вещественный тип"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-b6157225f85c5e2c180e59a0",
+      "number": 3,
+      "title": "Вопрос №3",
+      "variants": [
+        {
+          "id": "T-b6157225f85c5e2c180e59a0",
+          "title": "Сохранённое условие",
+          "statement": "Что выведет программа: print(10 / 4)?\n\nВыбери все верные утверждения\n\n3\n\n2.5\n\n2\n\n0.25",
+          "ismartLink": {
+            "id": "b6157225f85c5e2c180e59a0",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/b6157225f85c5e2c180e59a0",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "b6157225f85c5e2c180e59a0"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "b6157225f85c5e2c180e59a0",
+            "conditionSha256": "b3f80da2ad669a4a076f41caea0c134f2c3c2ea48d544dac6bcc3997ba9607a6"
+          },
+          "solution": {
+            "id": "T-b6157225f85c5e2c180e59a0",
+            "status": "published",
+            "answer": "2.5",
+            "code": "",
+            "explanation": "Оператор / выполняет обычное деление: 10/4 = 2.5. Для целочисленного частного существует отдельный оператор //.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "b8736b999909049671d0ea075a42b308a5fbe2df1854899123fe09eb0ee9de61",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "2.5"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-8398e88fa0115d227e0eefab",
+      "number": 4,
+      "title": "Вопрос №4",
+      "variants": [
+        {
+          "id": "T-8398e88fa0115d227e0eefab",
+          "title": "Сохранённое условие",
+          "statement": "Что такое жизненный цикл ИИ-решения?\n\nВыбери все верные утверждения\n\nнабор Python-библиотек для работы с нейросетями\n\nнабор методов визуализации данных\n\nэтапы: задача, данные, алгоритм, модель, результат, проверка\n\nпроцесс загрузки данных из внешних источников",
+          "ismartLink": {
+            "id": "8398e88fa0115d227e0eefab",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/8398e88fa0115d227e0eefab",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "8398e88fa0115d227e0eefab"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "8398e88fa0115d227e0eefab",
+            "conditionSha256": "cd60f0ec9f441de5ebdf9dc7b01e83ab66e7c01867f82a16f7258837fcda18b3"
+          },
+          "solution": {
+            "id": "T-8398e88fa0115d227e0eefab",
+            "status": "published",
+            "answer": "этапы: задача, данные, алгоритм, модель, результат, проверка",
+            "code": "",
+            "explanation": "Жизненный цикл охватывает постановку задачи, работу с данными, выбор подхода, получение модели и проверку результата, а не только загрузку файлов.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "072ef807bc813045aef951e101a5d808a7963f1c2e3967dec7147d38672b34f2",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "этапы: задача, данные, алгоритм, модель, результат, проверка"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-374be6456f949ac08e145e94",
+      "number": 5,
+      "title": "Вопрос №5",
+      "variants": [
+        {
+          "id": "T-374be6456f949ac08e145e94",
+          "title": "Сохранённое условие",
+          "statement": "Что делает функция print() в Python?\n\nВыбери все верные утверждения\n\nсчитывает данные с клавиатуры\n\nвыводит одно или несколько значений на экран\n\nоткрывает файл для записи данных\n\nсоздаёт новую переменную",
+          "ismartLink": {
+            "id": "374be6456f949ac08e145e94",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/374be6456f949ac08e145e94",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "374be6456f949ac08e145e94"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "374be6456f949ac08e145e94",
+            "conditionSha256": "6a9e15fa0c3c6c25a6832d738f1fc782850230510155e45fa506f8e961ab8d98"
+          },
+          "solution": {
+            "id": "T-374be6456f949ac08e145e94",
+            "status": "published",
+            "answer": "выводит одно или несколько значений на экран",
+            "code": "",
+            "explanation": "print отправляет значения в стандартный вывод; в обычной консоли они отображаются на экране. Ввод выполняет input, создание переменной — присваивание.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "102227bbb7d095983dccc876d84613dd6a5946794484b3d27e65dfe7c576a1be",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "выводит одно или несколько значений на экран"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-ccb24819185fa8403a7b7e1a",
+      "number": 6,
+      "title": "Вопрос №6",
+      "variants": [
+        {
+          "id": "T-ccb24819185fa8403a7b7e1a",
+          "title": "Сохранённое условие",
+          "statement": "Что такое обратная связь на образовательной платформе?\n\nВыбери все верные утверждения\n\nавтоматический тест без участия преподавателя\n\nсистема рейтингов участников по баллам\n\nкомментарии и замечания преподавателя по сданной работе\n\nфункция загрузки файлов на платформу",
+          "ismartLink": {
+            "id": "ccb24819185fa8403a7b7e1a",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/ccb24819185fa8403a7b7e1a",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "ccb24819185fa8403a7b7e1a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "ccb24819185fa8403a7b7e1a",
+            "conditionSha256": "ba2479fc691f7ecf2c81eb6a1ebc1d711701f88481bddbe8b03d0923ba75984e"
+          },
+          "solution": {
+            "id": "T-ccb24819185fa8403a7b7e1a",
+            "status": "published",
+            "answer": "комментарии и замечания преподавателя по сданной работе",
+            "code": "",
+            "explanation": "В контексте курса обратная связь — замечания преподавателя к работе: что получилось и что исправить. Загрузка файлов сама по себе обратной связью не является.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "e744d072287565f2209714fd727bb28b28a4ded5793b12c1815f067d597a7cbb",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "комментарии и замечания преподавателя по сданной работе"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-53c41337e8e79c6af3a5616d",
+      "number": 7,
+      "title": "Вопрос №7",
+      "variants": [
+        {
+          "id": "T-53c41337e8e79c6af3a5616d",
+          "title": "Сохранённое условие",
+          "statement": "Какой порядок этапов жизненного цикла ИИ-решения верный?\n\nВыбери все верные утверждения\n\nданные → алгоритм → задача → проверка → модель → результат\n\nмодель → задача → данные → результат → алгоритм → проверка\n\nзадача → данные → алгоритм → модель → результат → проверка\n\nзадача → модель → результат → данные → алгоритм → проверка",
+          "ismartLink": {
+            "id": "53c41337e8e79c6af3a5616d",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/53c41337e8e79c6af3a5616d",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "53c41337e8e79c6af3a5616d"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "53c41337e8e79c6af3a5616d",
+            "conditionSha256": "371c02392899c27933d10b1aec38b1d8f19e32a5e8e39e2f6bbc9ff936e1d38e"
+          },
+          "solution": {
+            "id": "T-53c41337e8e79c6af3a5616d",
+            "status": "published",
+            "answer": "задача → данные → алгоритм → модель → результат → проверка",
+            "code": "",
+            "explanation": "Сначала определяют задачу, затем данные и алгоритм, получают модель и результат, после чего проверяют качество. Без цели нельзя осмысленно выбирать данные.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "907624927b5c586dd527e7b50c731c7fb8097e1034699ce3e28c023c10efb485",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "задача → данные → алгоритм → модель → результат → проверка"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-5c9f2ee9c601399813f622b9",
+      "number": 8,
+      "title": "Вопрос №8",
+      "variants": [
+        {
+          "id": "T-5c9f2ee9c601399813f622b9",
+          "title": "Сохранённое условие",
+          "statement": "Что лучше описывает роль Python в профессиональных ИИ-задачах?\n\nВыбери все верные утверждения\n\nPython используется только для создания веб-сайтов\n\nPython заменяет математику в задачах анализа данных\n\nPython позволяет обрабатывать данные, описывать алгоритмы и запускать модели\n\nPython хранит данные эффективнее баз данных",
+          "ismartLink": {
+            "id": "5c9f2ee9c601399813f622b9",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/5c9f2ee9c601399813f622b9",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "5c9f2ee9c601399813f622b9"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "5c9f2ee9c601399813f622b9",
+            "conditionSha256": "1e662bcc898acf8ce2d8a6863907419589286542c3a860682d16f41646dd91d4"
+          },
+          "solution": {
+            "id": "T-5c9f2ee9c601399813f622b9",
+            "status": "published",
+            "answer": "Python позволяет обрабатывать данные, описывать алгоритмы и запускать модели",
+            "code": "",
+            "explanation": "Python позволяет автоматизировать подготовку данных, вычисления и работу с моделями. Он не отменяет математику и не ограничивается веб-разработкой.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "ff7bff8c68e827c1568851679472d57bfb366a460aae667b3cc64a6962e3d211",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "Python позволяет обрабатывать данные, описывать алгоритмы и запускать модели"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-b9e518c55395310a85a373cf",
+      "number": 1,
+      "title": "Задание №1",
+      "variants": [
+        {
+          "id": "T-b9e518c55395310a85a373cf",
+          "title": "Сохранённое условие",
+          "statement": "Что такое тип данных str в Python? Приведите пример из профессионального контекста.",
+          "ismartLink": {
+            "id": "b9e518c55395310a85a373cf",
+            "label": "Задание №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/b9e518c55395310a85a373cf",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "b9e518c55395310a85a373cf"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "b9e518c55395310a85a373cf",
+            "conditionSha256": "f03ed6781ccf66e961f544d607a3fb51534142c89ff9efa3be24f4e159e9eb16"
+          },
+          "solution": {
+            "id": "T-b9e518c55395310a85a373cf",
+            "status": "published",
+            "answer": "str — тип данных для строк: последовательностей символов. Например, request_id = \"REQ-0042\" хранит номер заявки, а status = \"ожидает ответа\" — её состояние. Значения в кавычках остаются текстом, даже если состоят из цифр.",
+            "code": "",
+            "explanation": "Строки подходят для названий, описаний и идентификаторов. Арифметические действия с числом и строкой требуют явного преобразования, если оно имеет смысл.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "4d87a2e006f5948dab30618020e9f4b82ca7168630af2b4167a8a9b9ca39f65c",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-bddde60ae3b78d13f241e046",
+      "number": 2,
+      "title": "Задание №2",
+      "variants": [
+        {
+          "id": "T-bddde60ae3b78d13f241e046",
+          "title": "Сохранённое условие",
+          "statement": "Что такое обучающая выборка в ИИ? Зачем она нужна?",
+          "ismartLink": {
+            "id": "bddde60ae3b78d13f241e046",
+            "label": "Задание №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/bddde60ae3b78d13f241e046",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "bddde60ae3b78d13f241e046"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "bddde60ae3b78d13f241e046",
+            "conditionSha256": "db839b3468a2c4d5723864ff89254cbfa26cc115807cc797b1c7f72100b36138"
+          },
+          "solution": {
+            "id": "T-bddde60ae3b78d13f241e046",
+            "status": "published",
+            "answer": "Обучающая выборка — часть примеров, по которым модель подбирает зависимость между входными признаками и ответом. Для классификации обращений она содержит тексты и правильные категории. По этим примерам модель учится распознавать новые обращения; независимую тестовую часть используют для оценки, а не для обучения.",
+            "code": "",
+            "explanation": "В обучении с учителем важны пары X и y. Использование тех же примеров для окончательной оценки может скрыть запоминание.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "7becb937d431a7272d1cc4074d765c8ac7ab9d64e75d61ce946adda7463790c0",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-883c71b1db67c732d5b233aa",
+      "number": 3,
+      "title": "Задание №3",
+      "variants": [
+        {
+          "id": "T-883c71b1db67c732d5b233aa",
+          "title": "Сохранённое условие",
+          "statement": "Приведите пример задачи классификации из вашей профессиональной области.",
+          "ismartLink": {
+            "id": "883c71b1db67c732d5b233aa",
+            "label": "Задание №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/883c71b1db67c732d5b233aa",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "883c71b1db67c732d5b233aa"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "883c71b1db67c732d5b233aa",
+            "conditionSha256": "1a0371b9776af5f70b609b6da0804b0c15e5400ad8f64412f6791e4b54d661a3"
+          },
+          "solution": {
+            "id": "T-883c71b1db67c732d5b233aa",
+            "status": "published",
+            "answer": "Пример для технической поддержки: по тексту обращения определить категорию «доступ», «сеть», «оборудование» или «программное обеспечение». Объект — одна заявка, признаки — слова и фразы её текста, целевой ответ — категория, указанная специалистом.",
+            "code": "",
+            "explanation": "Это классификация, поскольку набор классов задан заранее. Прогноз времени устранения был бы регрессией.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "49e8d2253bddcabb465001fd0cd25558d751a62e58ac7c39588525258818fce1",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-b9213041afed84fe86f42b07",
+      "number": 4,
+      "title": "Задание №4",
+      "variants": [
+        {
+          "id": "T-b9213041afed84fe86f42b07",
+          "title": "Сохранённое условие",
+          "statement": "Объясните \"жизненный цикл ИИ-решения\" своими словами применительно к профессиональной задаче.",
+          "ismartLink": {
+            "id": "b9213041afed84fe86f42b07",
+            "label": "Задание №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/b9213041afed84fe86f42b07",
+            "status": "unverified",
+            "unitId": "fdd4aea6c0a97d47114f9bc8",
+            "elementId": "b9213041afed84fe86f42b07"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "b9213041afed84fe86f42b07",
+            "conditionSha256": "6d2353cd98279d3df466fdc751b84c2447e0000de58e24e2448d882985ba1bd2"
+          },
+          "solution": {
+            "id": "T-b9213041afed84fe86f42b07",
+            "status": "published",
+            "answer": "Пример: сортировка обращений поддержки. 1. Определяем цель — предложить нужную очередь. 2. Собираем разрешённые обезличенные тексты с метками. 3. Готовим признаки и выбираем простой алгоритм. 4. Обучаем модель на train. 5. Получаем категории новых заявок. 6. Проверяем ошибки на test и качество маршрутизации; спорные обращения передаём оператору.",
+            "code": "",
+            "explanation": "Этапы связывают профессиональную цель с данными и проверяемым результатом. После проверки можно вернуться к данным или постановке и повторить цикл.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "01720a9e67e11e15f96f635615309bfa9d179d1e23b75bd3406b9d137e1e045a",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    }
+  ]
+}

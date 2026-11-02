@@ -1,0 +1,304 @@
+{
+  "id": "M05-L01",
+  "moduleId": 5,
+  "title": "Защита итогового проекта",
+  "kind": "final",
+  "number": "5.1",
+  "tasks": [
+    {
+      "id": "T-6a5633ccc45e3a8d3991bcd1",
+      "number": 1,
+      "title": "Задание итогового проекта",
+      "variants": [
+        {
+          "id": "T-6a5633ccc45e3a8d3991bcd1",
+          "title": "Сохранённое условие",
+          "statement": "Итоговая аттестация проводится в форме защиты индивидуального или командного проекта, направленного на решение практической задачи с использованием технологий искусственного интеллекта и анализа данных.\n\nВ ходе защиты обучающийся представляет разработанный проект, демонстрирует полученный результат и объясняет этапы его создания: постановку проблемы, цель проекта, целевую аудиторию, используемые данные, выбранный способ обработки информации, алгоритм принятия решений и полученный результат. Обязательным элементом защиты является демонстрация работоспособности проекта и оценка качества полученного решения с указанием его ограничений.\n\nПродолжительность выступления составляет 3–5 минут. По итогам защиты обучающийся отвечает на вопросы комиссии, подтверждающие понимание принципов работы разработанного решения.\n\nДля выполнения итогового проекта обучающимся предлагается выбрать одну из рекомендуемых тем либо разработать собственную тему по согласованию с преподавателем.\n\n### Витрина проектов\n\n| № | Отрасль | Идея проекта | Что делает ИИ-помощник |\n| --- | --- | --- | --- |\n| 1 | Образование | ИИ-помощник для выбора темы повторения | Анализирует ошибки и рекомендует тему |\n| 2 | Экология | Умный сортировщик отходов | Определяет контейнер для отхода |\n| 3 | Городская среда | Помощник выбора маршрута | Сравнивает маршруты по времени и удобству |\n| 4 | ЗОЖ | Анализ активности за неделю | Находит активные и слабые дни |\n| 5 | Игры | Балансировщик сложности уровня | Подбирает комфортную сложность |\n| 6 | Культура | Рекомендатель фильмов или книг | Советует книгу или фильм по интересам |\n| 7 | Финансы | Помощник выбора покупки | Сравнивает товары по цене и качеству |\n| 8 | Безопасный интернет | Распознавание подозрительных сообщений | Оценивает риск сообщения |\n| 9 | Спорт | ИИ-тренер для выбора упражнения | Рекомендует упражнение под цель |\n| 10 | Школьная столовая | Выбор сбалансированного обеда | Сравнивает обеды по пользе и цене |\n| 11 | Погода | Выбор активности по погоде | Предлагает занятие по погодным условиям |\n| 12 | Школьные мероприятия | Выбор идеи мероприятия | Сравнивает идеи по интересу и сложности |",
+          "ismartLink": {
+            "id": "6a5633ccc45e3a8d3991bcd1",
+            "label": "Задание итогового проекта",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/9b4433838d030441d4c96b8d/element/6a5633ccc45e3a8d3991bcd1",
+            "status": "unverified",
+            "unitId": "9b4433838d030441d4c96b8d",
+            "elementId": "6a5633ccc45e3a8d3991bcd1"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5633ccc45e3a8d3991bcd1",
+            "conditionSha256": "fc57de6d2d2e0469981b4695954805f3de6fadbcbdbef325c18f5d019b2a07ee"
+          },
+          "solution": {
+            "id": "T-6a5633ccc45e3a8d3991bcd1",
+            "status": "published",
+            "answer": "Образец итогового проекта: «Распознавание подозрительных сообщений» — тема 8 из витрины.\nПользователь: участник учебной группы. Цель: предложить ручную проверку подозрительного текста.\nДанные: 40 синтетических train и 10 независимых test, по два класса risk/ordinary.\nПодход: обучаемый на частотах слов наивный Байес; словарь и параметры строятся только на train.\nФактический тест: accuracy=100%; baseline=50%; TP=5, FP=0, FN=0, TN=5.\nПрототип возвращает метку, модельную оценку и действие; подозрительные и неуверенные случаи передаются человеку.\nВ ZIP включены запускаемый код, CSV, фактический отчёт и план защиты на 3–5 минут.\nРезультат относится к маленькому искусственному набору, не доказывает качество реального антифишингового продукта. Требуются новые данные и независимые сценарии.",
+            "code": "# Учебный проект: синтетические сообщения, не производственный фильтр.\nTRAIN = [('срочно сообщите код подтверждения', 'risk'),\n ('пришлите пароль от учётной записи', 'risk'),\n ('переведите деньги для получения выигрыша', 'risk'),\n ('вы выиграли приз отправьте деньги', 'risk'),\n ('сообщите номер карты и код безопасности', 'risk'),\n ('введите пароль по ссылке', 'risk'),\n ('подтвердите карту по неизвестной ссылке', 'risk'),\n ('срочно оплатите комиссию за приз', 'risk'),\n ('пришлите код из сообщения', 'risk'),\n ('ваш аккаунт заблокирован сообщите пароль', 'risk'),\n ('срочно переведите деньги на новый счет', 'risk'),\n ('назовите код доступа оператору', 'risk'),\n ('вы выиграли деньги подтвердите карту', 'risk'),\n ('отправьте пароль для разблокировки', 'risk'),\n ('введите данные карты для получения приза', 'risk'),\n ('оплатите выигрыш переводом', 'risk'),\n ('передайте одноразовый код', 'risk'),\n ('подтвердите логин и пароль', 'risk'),\n ('переведите оплату для получения подарка', 'risk'),\n ('сообщите секретный код', 'risk'),\n ('встреча команды завтра в десять', 'ordinary'),\n ('пожалуйста проверьте расписание занятий', 'ordinary'),\n ('лекция начнется после обеда', 'ordinary'),\n ('отчет по проекту готов', 'ordinary'),\n ('книга доступна в библиотеке', 'ordinary'),\n ('приходите на консультацию по проекту', 'ordinary'),\n ('завтра обсуждаем план работы', 'ordinary'),\n ('проверьте свои результаты в кабинете', 'ordinary'),\n ('занятие перенесено на пятницу', 'ordinary'),\n ('презентация доступна на учебном сайте', 'ordinary'),\n ('напоминаю о собрании группы', 'ordinary'),\n ('спасибо за участие во встрече', 'ordinary'),\n ('готовлю отчет по учебной практике', 'ordinary'),\n ('расписание обновлено на сайте', 'ordinary'),\n ('в библиотеке появились новые книги', 'ordinary'),\n ('команда завершила этап проекта', 'ordinary'),\n ('вопросы обсудим на консультации', 'ordinary'),\n ('план занятий отправлен группе', 'ordinary'),\n ('ждем вас на семинаре', 'ordinary'),\n ('материалы лекции опубликованы', 'ordinary')]\nTEST = [('срочно пришлите пароль', 'risk'),\n ('для выигрыша переведите деньги', 'risk'),\n ('назовите секретный код', 'risk'),\n ('введите карту по ссылке', 'risk'),\n ('передайте одноразовый пароль', 'risk'),\n ('завтра встреча группы', 'ordinary'),\n ('материалы проекта готовы', 'ordinary'),\n ('книга в библиотеке', 'ordinary'),\n ('расписание занятий на сайте', 'ordinary'),\n ('пришлите отчет по проекту', 'ordinary')]\nimport argparse\nimport json\nimport math\nimport re\nfrom collections import Counter\n\ndef tokens(text):\n    if not isinstance(text, str) or not text.strip():\n        raise ValueError(\"Нужен непустой текст\")\n    result = re.findall(r\"[а-яёa-z]+\", text.lower())\n    if not result:\n        raise ValueError(\"В тексте нет слов\")\n    return result\n\nclass NaiveBayes:\n    def fit(self, rows):\n        self.classes = sorted({label for _, label in rows})\n        self.counts = {label: Counter() for label in self.classes}\n        self.documents = Counter(label for _, label in rows)\n        for text, label in rows:\n            self.counts[label].update(tokens(text))\n        self.vocabulary = set().union(*(set(c) for c in self.counts.values()))\n        self.total = {label: sum(c.values()) for label,c in self.counts.items()}\n        self.rows = len(rows)\n        return self\n\n    def predict(self, text):\n        words = tokens(text)\n        log_scores = {}\n        for label in self.classes:\n            score = math.log(self.documents[label] / self.rows)\n            for word in words:\n                if word in self.vocabulary:\n                    score += math.log((self.counts[label][word]+1) /\n                                      (self.total[label]+len(self.vocabulary)))\n            log_scores[label] = score\n        maximum = max(log_scores.values())\n        weights = {label: math.exp(score-maximum) for label,score in log_scores.items()}\n        label = max(weights, key=weights.get)\n        score = weights[label] / sum(weights.values())\n        return {\"label\": label, \"score\": round(score,4),\n                \"action\": \"review\" if label == \"risk\" or score < .80 else \"ordinary\"}\n\ndef evaluate(model):\n    predicted = [model.predict(text)[\"label\"] for text,_ in TEST]\n    actual = [label for _,label in TEST]\n    tp = sum(a == \"risk\" and p == \"risk\" for a,p in zip(actual,predicted))\n    fp = sum(a == \"ordinary\" and p == \"risk\" for a,p in zip(actual,predicted))\n    fn = sum(a == \"risk\" and p == \"ordinary\" for a,p in zip(actual,predicted))\n    tn = sum(a == \"ordinary\" and p == \"ordinary\" for a,p in zip(actual,predicted))\n    return {\"trainRows\":len(TRAIN),\"testRows\":len(TEST),\"accuracy\":(tp+tn)/len(TEST),\n            \"baselineAccuracy\":sum(a == \"ordinary\" for a in actual)/len(TEST),\n            \"tp\":tp,\"fp\":fp,\"fn\":fn,\"tn\":tn}\n\ndef self_test(model):\n    assert model.predict(\"сообщите пароль\")[\"action\"] == \"review\"\n    assert model.predict(\"абракадабра\")[\"action\"] == \"review\"\n    for bad in [\"\", \"   \", None, 123, \"!!!\"]:\n        try:\n            model.predict(bad)\n        except ValueError:\n            pass\n        else:\n            raise AssertionError(\"Не отклонён некорректный вход\")\n\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"--text\")\n    args = parser.parse_args()\n    model = NaiveBayes().fit(TRAIN)\n    self_test(model)\n    if args.text is None:\n        print(json.dumps(evaluate(model),ensure_ascii=False,sort_keys=True))\n    else:\n        try:\n            print(json.dumps(model.predict(args.text),ensure_ascii=False))\n        except ValueError as error:\n            parser.error(str(error))\n",
+            "explanation": "Это законченный запускаемый образец, а не утверждение о выполнении вашей индивидуальной защиты. В программе отдельно проверены типы и пустой ввод, неизвестные слова и передача рискованных сообщений человеку. Обучение модели и её оценка разделены; результаты получены реальным запуском. CSV и пояснения позволяют повторить вычисления.",
+            "kind": "project_example",
+            "verification": "project_tests",
+            "tests": [
+              {
+                "input": "",
+                "expected": "{\"accuracy\": 1.0, \"baselineAccuracy\": 0.5, \"fn\": 0, \"fp\": 0, \"testRows\": 10, \"tn\": 5, \"tp\": 5, \"trainRows\": 40}"
+              }
+            ],
+            "testCount": 1,
+            "sha256": "ecba7528644110a9d2c2ba13f8a2f837f34e515e3ded59c9ffafac78a7512387",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "artifact": {
+              "url": "/content/examples/final-message-risk.zip",
+              "label": "Скачать готовый образец итогового проекта (ZIP)"
+            },
+            "lineExplanations": [
+              {
+                "line": 2,
+                "text": "Задаём исходные учебные значения TRAIN. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 42,
+                "text": "Задаём исходные учебные значения TEST. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 52,
+                "text": "Подключаем argparse, чтобы использовать необходимые функции библиотеки."
+              },
+              {
+                "line": 53,
+                "text": "Подключаем json, чтобы использовать необходимые функции библиотеки."
+              },
+              {
+                "line": 54,
+                "text": "Подключаем math, чтобы использовать необходимые функции библиотеки."
+              },
+              {
+                "line": 55,
+                "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+              },
+              {
+                "line": 56,
+                "text": "Подключаем Counter, чтобы использовать необходимые функции библиотеки."
+              },
+              {
+                "line": 58,
+                "text": "Определяем функцию `tokens` с параметрами `text`. Её тело выполняется при вызове."
+              },
+              {
+                "line": 59,
+                "text": "Проверяем условие `not isinstance(text, str) or not text.strip()`. Блок с отступом выполняется только при истинном условии."
+              },
+              {
+                "line": 61,
+                "text": "Вычисляем `re.findall('[а-яёa-z]+', text.lower())` и сохраняем результат в `result`."
+              },
+              {
+                "line": 62,
+                "text": "Проверяем условие `not result`. Блок с отступом выполняется только при истинном условии."
+              },
+              {
+                "line": 64,
+                "text": "Возвращаем из функции `result`."
+              },
+              {
+                "line": 67,
+                "text": "Определяем функцию `fit` с параметрами `self, rows`. Её тело выполняется при вызове."
+              },
+              {
+                "line": 68,
+                "text": "Вычисляем `sorted({label for _, label in rows})` и сохраняем результат в `self.classes`."
+              },
+              {
+                "line": 69,
+                "text": "Вычисляем `{label: Counter() for label in self.classes}` и сохраняем результат в `self.counts`."
+              },
+              {
+                "line": 70,
+                "text": "Вычисляем `Counter((label for _, label in rows))` и сохраняем результат в `self.documents`."
+              },
+              {
+                "line": 71,
+                "text": "Перебираем `rows`; очередное значение доступно через `(text, label)`."
+              },
+              {
+                "line": 72,
+                "text": "Выполняем `self.counts[label].update` с переданными аргументами."
+              },
+              {
+                "line": 73,
+                "text": "Вычисляем `set().union(*(set(c) for c in self.counts.values()))` и сохраняем результат в `self.vocabulary`."
+              },
+              {
+                "line": 74,
+                "text": "Вычисляем `{label: sum(c.values()) for label, c in self.counts.items()}` и сохраняем результат в `self.total`."
+              },
+              {
+                "line": 75,
+                "text": "Вычисляем `len(rows)` и сохраняем результат в `self.rows`."
+              },
+              {
+                "line": 76,
+                "text": "Возвращаем из функции `self`."
+              },
+              {
+                "line": 78,
+                "text": "Определяем функцию `predict` с параметрами `self, text`. Её тело выполняется при вызове."
+              },
+              {
+                "line": 79,
+                "text": "Вычисляем `tokens(text)` и сохраняем результат в `words`."
+              },
+              {
+                "line": 80,
+                "text": "Задаём исходные учебные значения log_scores. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 81,
+                "text": "Перебираем `self.classes`; очередное значение доступно через `label`."
+              },
+              {
+                "line": 82,
+                "text": "Вычисляем `math.log(self.documents[label] / self.rows)` и сохраняем результат в `score`."
+              },
+              {
+                "line": 83,
+                "text": "Перебираем `words`; очередное значение доступно через `word`."
+              },
+              {
+                "line": 84,
+                "text": "Проверяем условие `word in self.vocabulary`. Блок с отступом выполняется только при истинном условии."
+              },
+              {
+                "line": 85,
+                "text": "Обновляем `score` операцией `+=` с `math.log((self.counts[label][word] + 1) / (self.total[label] + len(self.vocabulary)))`; прежнее значение участвует в вычислении."
+              },
+              {
+                "line": 87,
+                "text": "Вычисляем `score` и сохраняем результат в `log_scores[label]`."
+              },
+              {
+                "line": 88,
+                "text": "Вычисляем `max(log_scores.values())` и сохраняем результат в `maximum`."
+              },
+              {
+                "line": 89,
+                "text": "Вычисляем `{label: math.exp(score - maximum) for label, score in log_scores.items()}` и сохраняем результат в `weights`."
+              },
+              {
+                "line": 90,
+                "text": "Вычисляем `max(weights, key=weights.get)` и сохраняем результат в `label`."
+              },
+              {
+                "line": 91,
+                "text": "Вычисляем `weights[label] / sum(weights.values())` и сохраняем результат в `score`."
+              },
+              {
+                "line": 92,
+                "text": "Возвращаем из функции `{'label': label, 'score': round(score, 4), 'action': 'review' if label == 'risk' or score < 0.8 else 'ordinary'}`."
+              },
+              {
+                "line": 95,
+                "text": "Определяем функцию `evaluate` с параметрами `model`. Её тело выполняется при вызове."
+              },
+              {
+                "line": 96,
+                "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+              },
+              {
+                "line": 97,
+                "text": "Вычисляем `[label for _, label in TEST]` и сохраняем результат в `actual`."
+              },
+              {
+                "line": 98,
+                "text": "Вычисляем `sum((a == 'risk' and p == 'risk' for a, p in zip(actual, predicted)))` и сохраняем результат в `tp`."
+              },
+              {
+                "line": 99,
+                "text": "Вычисляем `sum((a == 'ordinary' and p == 'risk' for a, p in zip(actual, predicted)))` и сохраняем результат в `fp`."
+              },
+              {
+                "line": 100,
+                "text": "Вычисляем `sum((a == 'risk' and p == 'ordinary' for a, p in zip(actual, predicted)))` и сохраняем результат в `fn`."
+              },
+              {
+                "line": 101,
+                "text": "Вычисляем `sum((a == 'ordinary' and p == 'ordinary' for a, p in zip(actual, predicted)))` и сохраняем результат в `tn`."
+              },
+              {
+                "line": 102,
+                "text": "Возвращаем из функции `{'trainRows': len(TRAIN), 'testRows': len(TEST), 'accuracy': (tp + tn) / len(TEST), 'baselineAccuracy': sum((a == 'ordinary' for a in actual)) / len(TEST), 'tp': tp, 'fp': fp, 'fn': fn, 'tn': tn}`."
+              },
+              {
+                "line": 106,
+                "text": "Определяем функцию `self_test` с параметрами `model`. Её тело выполняется при вызове."
+              },
+              {
+                "line": 107,
+                "text": "Проверяем инвариант `model.predict('сообщите пароль')['action'] == 'review'`. При нарушении программа сообщит об ошибке."
+              },
+              {
+                "line": 108,
+                "text": "Проверяем инвариант `model.predict('абракадабра')['action'] == 'review'`. При нарушении программа сообщит об ошибке."
+              },
+              {
+                "line": 109,
+                "text": "Перебираем `['', '   ', None, 123, '!!!']`; очередное значение доступно через `bad`."
+              },
+              {
+                "line": 111,
+                "text": "Выполняем `model.predict` с переданными аргументами."
+              },
+              {
+                "line": 117,
+                "text": "Проверяем условие `__name__ == '__main__'`. Блок с отступом выполняется только при истинном условии."
+              },
+              {
+                "line": 118,
+                "text": "Вычисляем `argparse.ArgumentParser()` и сохраняем результат в `parser`."
+              },
+              {
+                "line": 119,
+                "text": "Выполняем `parser.add_argument` с переданными аргументами."
+              },
+              {
+                "line": 120,
+                "text": "Вычисляем `parser.parse_args()` и сохраняем результат в `args`."
+              },
+              {
+                "line": 121,
+                "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+              },
+              {
+                "line": 122,
+                "text": "Выполняем `self_test` с переданными аргументами."
+              },
+              {
+                "line": 123,
+                "text": "Проверяем условие `args.text is None`. Блок с отступом выполняется только при истинном условии."
+              },
+              {
+                "line": 124,
+                "text": "Выводим результат в формате, указанном в условии."
+              },
+              {
+                "line": 127,
+                "text": "Выводим результат в формате, указанном в условии."
+              },
+              {
+                "line": 129,
+                "text": "Выполняем `parser.error` с переданными аргументами."
+              }
+            ],
+            "examples": [
+              {
+                "input": "",
+                "output": "{\"accuracy\": 1.0, \"baselineAccuracy\": 0.5, \"fn\": 0, \"fp\": 0, \"testRows\": 10, \"tn\": 5, \"tp\": 5, \"trainRows\": 40}"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "documentUrl": "/lesson/M05-L01?tab=lecture"
+}

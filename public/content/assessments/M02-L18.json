@@ -1,0 +1,1375 @@
+{
+  "id": "M02-L18",
+  "moduleId": 2,
+  "title": "Промежуточная аттестация",
+  "kind": "assessment",
+  "number": "2.18",
+  "tasks": [
+    {
+      "id": "T-6a5c96f04e874f00070ea9d3",
+      "number": 1,
+      "title": "Вопрос №1",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9d3-V1",
+          "title": "Вариант 1",
+          "statement": "Стало известно, что у пациента температура 39°C. Как это влияет на прогноз болезни?\n\nВыбери все верные утверждения\n\nУвеличивает вероятность болезни — дополнительный признак меняет прогноз\nНикак не влияет\nУменьшает вероятность болезни\nМодель прекращает работу",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9d3",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9d3?variant=6a5c96f04e874f00070ea9d3",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9d3"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9d3",
+            "conditionSha256": "5ec7db67d15440efd63ca28ec56dd7404e41703b63a9691517c749c7e1f06bab"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9d3-V1",
+            "status": "published",
+            "answer": "Увеличивает вероятность болезни — дополнительный признак меняет прогноз",
+            "code": "",
+            "explanation": "В учебной постановке высокая температура считается дополнительным признаком, повышающим оценку вероятности болезни. Это иллюстрация условной вероятности, а не достаточное основание для реального диагноза.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9d3-V2",
+          "title": "Вариант 2",
+          "statement": "Монету бросили 10 раз, орёл выпал 7 раз. Относительная частота орла равна…\n\nВыбери все верные утверждения\n\nОтвет = 0,3\nОтвет = 7\nОтвет = 0,7\nОтвет = 10",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9d3",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9d3?variant=cdc2b0e36f6d368decd6d249",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9d3"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9d3",
+            "conditionSha256": "485e8201777f5013b83b0772c84aa2f2239414ea4318df8309918acb5cdc7ecc"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9d3-V2",
+            "status": "published",
+            "answer": "Ответ = 0,7",
+            "code": "",
+            "explanation": "Относительная частота равна 7/10=0.7. По десяти броскам нельзя утверждать, что теоретическая вероятность честной монеты стала 0.7.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9d3-V3",
+          "title": "Вариант 3",
+          "statement": "Верно ли утверждение?\nУтверждение: «Коэффициент корреляции может принимать значения от −1 до +1.»\n\nВыбери все верные утверждения\n\nНеверно\nВерно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9d3",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9d3?variant=bf0406453ca6c5ab6a2b2f49",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9d3"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9d3",
+            "conditionSha256": "a261fba1995309f1598f4885a33300b57bf5644b1ca6db23d41257e0481b107e"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9d3-V3",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "Определённый коэффициент корреляции Пирсона лежит в диапазоне [−1,1]. Если дисперсия одного признака нулевая, коэффициент не определён.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9d3-V4",
+          "title": "Вариант 4",
+          "statement": "Утверждение: «Рекомендательная система оценивает несколько вариантов и предлагает наиболее подходящий.»\n\nВыбери все верные утверждения\n\nВерно\nНеверно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9d3",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9d3?variant=82c1e38d3abbdf34cb713c7a",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9d3"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9d3",
+            "conditionSha256": "8fde69559b7abe2751b132c900dd9732b223b67774faff93ec2b6d02b966bd3f"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9d3-V4",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "Рекомендательная система оценивает подходящие варианты по данным и выбранному критерию. Результат зависит от доступных признаков и качества модели.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070ea9d7",
+      "number": 2,
+      "title": "Вопрос №2",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9d7-V1",
+          "title": "Вариант 1",
+          "statement": "Чем больше часов ученик занимается, тем выше оценка. Это пример…\nОтрицательной корреляции\nОтсутствия связи\nПоложительной корреляции\nСлучайного совпадения",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9d7",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9d7?variant=6a5c96f04e874f00070ea9d7",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9d7"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9d7",
+            "conditionSha256": "f4641880b2b5983f9f42e98b6b78a2aebf1dd5e0bbbc58bc6ac93423eb1335d1"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9d7-V1",
+            "status": "published",
+            "answer": "Положительной корреляции.",
+            "code": "",
+            "explanation": "С увеличением часов оценка по условию тоже увеличивается. Это направление связи, а не доказательство причинного эффекта.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9d7-V2",
+          "title": "Вариант 2",
+          "statement": "Зачем нужно измерять ошибку модели?\nЧтобы замедлить программу\nЧтобы оценить точность и найти направление улучшения\nЧтобы удалить данные\nЧтобы добавить параметры",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9d7",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9d7?variant=973ef1e3c3d9930151fba31d",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9d7"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9d7",
+            "conditionSha256": "7e2bd274f416831096f017d4e09baed90b1983a37ef523438f2d5679fc8549ab"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9d7-V2",
+            "status": "published",
+            "answer": "Чтобы оценить точность и найти направление улучшения.",
+            "code": "",
+            "explanation": "Сравнение прогноза с фактом показывает размер и структуру ошибок. После изменения модели измерение повторяют.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9d7-V3",
+          "title": "Вариант 3",
+          "statement": "Навигатор рассмотрел 8 маршрутов и выбрал самый короткий. Это пример…\nСлучайного выбора\nПеребора вариантов с выбором по критерию\nОшибки алгоритма\nВычисления среднего",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9d7",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9d7?variant=1dee23992fdd3d1a4e0f5505",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9d7"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9d7",
+            "conditionSha256": "69b8ac73dc81efe7b168d27ab3f0872dd132168cd4775aeb5fc0387fec390cf4"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9d7-V3",
+            "status": "published",
+            "answer": "Перебора вариантов с выбором по критерию.",
+            "code": "",
+            "explanation": "Рассмотрены восемь маршрутов, затем минимизирована длина. Это не случайный выбор и не вычисление среднего.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9d7-V4",
+          "title": "Вариант 4",
+          "statement": "Модель подбирает настройку с наименьшей ошибкой. Это задача поиска…\nМаксимума функции ошибки\nСреднего значения ошибки\nМинимума функции ошибки\nМедианы ошибки",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9d7",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9d7?variant=980461acae9036680888895f",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9d7"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9d7",
+            "conditionSha256": "533b9257241ce3e4cae8a4a3f37088c416e7f3c1c2979b49984272384af2fef3"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9d7-V4",
+            "status": "published",
+            "answer": "Минимума функции ошибки.",
+            "code": "",
+            "explanation": "Если цель — наименьшая ошибка, ищут минимум. Максимизация ошибки противоречила бы заданному критерию.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070ea9dc",
+      "number": 3,
+      "title": "Вопрос №3",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9dc-V1",
+          "title": "Вариант 1",
+          "statement": "Гистограмма: большинство оценок — 4 и 5, лишь немного — 1 и 2. Что это значит?\nВсе оценки одинаковы\nБольшинство учеников учатся хорошо\nДанные ошибочные\nНужно больше данных",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9dc",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9dc?variant=6a5c96f04e874f00070ea9dc",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9dc"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9dc",
+            "conditionSha256": "26a63137f7b840412392a58f0624cef22c1b846e60b3af584739847e6dfef372"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9dc-V1",
+            "status": "published",
+            "answer": "Большинство учеников учатся хорошо — в этой выборке преобладают оценки 4 и 5.",
+            "code": "",
+            "explanation": "Это описательный вывод по показанному распределению, а не утверждение обо всех будущих учениках. Он не означает равенство всех оценок.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9dc-V2",
+          "title": "Вариант 2",
+          "statement": "Таблица: Параметр A→ошибка 7, B→ошибка 2, C→ошибка 9, D→ошибка 5. Какой лучший?\nA\n \nB\n \nC\n \nD",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9dc",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9dc?variant=f921d3b35b80054be4e5dd62",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9dc"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9dc",
+            "conditionSha256": "df5769eed93f3a03a827ec8abc17aaf0544167093cbab587ad13bb2a86217093"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9dc-V2",
+            "status": "published",
+            "answer": "B: ошибка равна 2, это наименьшее из 7, 2, 9 и 5.",
+            "code": "",
+            "explanation": "Сравнение корректно при одинаковой метрике и сопоставимых проверочных данных для всех настроек.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9dc-V3",
+          "title": "Вариант 3",
+          "statement": "Предсказанные значения: 4, 7, 5. Реальные: 3, 7, 6. Сколько предсказаний верны (ошибка=0)?\nНи одного\nОдно (значение 7)\nДва\nТри",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9dc",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9dc?variant=10a770477f8ae1af5c49ea1e",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9dc"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9dc",
+            "conditionSha256": "64ec74f374da8bba410a944d009b8d13d18f3a0ac108477347b8a436c62654ec"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9dc-V3",
+            "status": "published",
+            "answer": "Одно предсказание — значение 7.",
+            "code": "",
+            "explanation": "По парам ошибки составляют 1, 0 и 1. Только средняя пара совпала точно.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9dc-V4",
+          "title": "Вариант 4",
+          "statement": "По таблице: x=1→y=3, x=2→y=6, x=3→y=9. Как ведёт себя функция?\nУбывает\nОстаётся постоянной\nРавномерно возрастает\nСначала растёт, потом убывает",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9dc",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9dc?variant=dddb9395eac89369a4c539a3",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9dc"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9dc",
+            "conditionSha256": "7ed0e65a79ac68e123a0c7610d0a9fb11fe421bccbf1de4b2cecd6eaad41f038"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9dc-V4",
+            "status": "published",
+            "answer": "Равномерно возрастает.",
+            "code": "",
+            "explanation": "При увеличении x на 1 значение y увеличивается на 3. Показанные точки соответствуют зависимости y=3x.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070ea9e1",
+      "number": 4,
+      "title": "Вопрос №4",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9e1-V1",
+          "title": "Вариант 1",
+          "statement": "Утверждение: «Модель ИИ работает не магически, а на основе чисел, признаков и математических правил оценки качества.»\n\nВыбери все верные утверждения\n\nВерно\nНеверно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9e1",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9e1?variant=6a5c96f04e874f00070ea9e1",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9e1"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9e1",
+            "conditionSha256": "810c28af2983affc6dcfa30bdcc2a221142c03415470017aae75a392b5ea4280"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9e1-V1",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "Модель вычисляет результат по представлению данных и параметрам. Оценка ошибок делает качество проверяемым.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9e1-V2",
+          "title": "Вариант 2",
+          "statement": "Верно ли утверждение?\nУтверждение: «Медиана менее чувствительна к выбросам, чем среднее.»\n\nВыбери все верные утверждения\n\nНеверно\nВерно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9e1",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9e1?variant=e8be9b5d6719a337e14eacf0",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9e1"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9e1",
+            "conditionSha256": "bde75e7e20408d30c63d96731aaf7ce217f0fce39b2b3e04f15dde7c707f6a9a"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9e1-V2",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "Изменение одного крайнего наблюдения сильно меняет среднее, но обычно меньше влияет на центральную позицию ряда — медиану.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9e1-V3",
+          "title": "Вариант 3",
+          "statement": "Верно ли утверждение?\nУтверждение: «Цель обучения модели – найти параметры, при которых ошибка максимальна.»\n\nВыбери все верные утверждения\n\nНеверно\nВерно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9e1",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9e1?variant=8e9f1be2850bd1995e17955b",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9e1"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9e1",
+            "conditionSha256": "b65e3c2d1d67912e860c07d2a5ba615431a27435238a7d8b9ce26e4246664920"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9e1-V3",
+            "status": "published",
+            "answer": "Неверно",
+            "code": "",
+            "explanation": "Обучение обычно минимизирует функцию потерь, а не максимизирует её. Для метрики качества, например accuracy, направление оптимизации может быть обратным.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9e1-V4",
+          "title": "Вариант 4",
+          "statement": "Верно ли утверждение?\nУтверждение: «Гистограмма показывает, как часто встречается каждое значение в наборе данных.»\n\nВыбери все верные утверждения\n\nВерно\nНеверно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9e1",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9e1?variant=47e433d9c4136f9afa313539",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9e1"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9e1",
+            "conditionSha256": "ba3bea60978efc729123e4c723d9554fb1d0ed09aca9a6c41b9500529f117c72"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9e1-V4",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "В учебном смысле верно: речь о частотах распределения. Точнее, гистограмма показывает частоты или плотности по интервалам; отдельные значения видны при соответствующем выборе интервалов.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070ea9e6",
+      "number": 5,
+      "title": "Вопрос №5",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9e6-V1",
+          "title": "Вариант 1",
+          "statement": "Верно ли утверждение?\nУтверждение: «Размах набора данных – это разность между максимальным и минимальным значением.»\n\nВыбери все верные утверждения\n\nВерно\nНеверно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9e6",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9e6?variant=6a5c96f04e874f00070ea9e6",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9e6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9e6",
+            "conditionSha256": "06e3b9a6d48a128ca49128103a3995872e3cb559742cdfa33d51d0ebfcb91d0f"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9e6-V1",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "Размах равен max−min и выражается в тех же единицах, что исходные значения. Он использует только два крайних наблюдения.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9e6-V2",
+          "title": "Вариант 2",
+          "statement": "Верно ли утверждение?\nУтверждение: «Баллы учеников за тест — пример случайной величины, так как они различаются у разных учеников.»\n\nВыбери все верные утверждения\n\nВерно\nНеверно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9e6",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9e6?variant=7d750575904d496e8b248ff8",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9e6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9e6",
+            "conditionSha256": "6fa5be146639743cd8c087370004792071271a1820e9604b8d1aa90091aac463"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9e6-V2",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "Если случайно выбирают ученика и наблюдают его балл, результат можно описать случайной величиной. Само различие уже фиксированных баллов ещё не задаёт вероятностный эксперимент.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9e6-V3",
+          "title": "Вариант 3",
+          "statement": "В мешке 5 красных и 5 синих шаров. Какова вероятность вытащить красный?\n\nВыбери все верные утверждения\n\n0,5\n0,25",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9e6",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9e6?variant=4b5a5c921b77d3e7e8e61e7d",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9e6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9e6",
+            "conditionSha256": "89f32bd7ce26f8ae8dbeb02d91f6055e304c05818e6e9b309cb41a1a02fb9e8e"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9e6-V3",
+            "status": "published",
+            "answer": "0,5",
+            "code": "",
+            "explanation": "Благоприятных шаров 5 из 10 равновероятных: 5/10=0.5. Предполагается случайное извлечение без предпочтения цвета.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9e6-V4",
+          "title": "Вариант 4",
+          "statement": "Чем больше пропусков, тем ниже оценка. Это пример…\n\nВыбери все верные утверждения\n\nПоложительной корреляции\nОтрицательной корреляции\nОтсутствия связи\nСлучайной зависимости",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9e6",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9e6?variant=c6ba2df79d2bb820cba597ac",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9e6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9e6",
+            "conditionSha256": "a5dd61257c8ba4cff4ab1102581ffaec81d6c2148a3b817385ad10cb03f99b4b"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9e6-V4",
+            "status": "published",
+            "answer": "Отрицательной корреляции",
+            "code": "",
+            "explanation": "Рост пропусков сопровождается снижением оценки, значит связь отрицательная. Это описание связи, а не само по себе доказательство причины.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070ea9eb",
+      "number": 6,
+      "title": "Вопрос №6",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9eb-V1",
+          "title": "Вариант 1",
+          "statement": "Рекомендательная система предлагает фильмы. Какую роль здесь играет математика?\n\nВыбери все верные утверждения\n\nНикакой роли не играет\nПомогает вычислить сходство между фильмами и предпочтениями пользователя\nТолько отображает красивую графику\nИспользуется только для хранения данных",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9eb",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9eb?variant=6a5c96f04e874f00070ea9eb",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9eb"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9eb",
+            "conditionSha256": "022adcb51aed66946c2184476b8d2179f93961957e316ae9ec3dc178f90fcb5a"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9eb-V1",
+            "status": "published",
+            "answer": "Помогает вычислить сходство между фильмами и предпочтениями пользователя",
+            "code": "",
+            "explanation": "Рекомендации используют числовое представление предпочтений и фильмов, меры похожести и правила ранжирования.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9eb-V2",
+          "title": "Вариант 2",
+          "statement": "Из 40 учеников 20 занимаются спортом. Из спортсменов 15 имеют хорошие оценки. P(хор.оценки | спорт) = ?\n\nВыбери все верные утверждения\n\n15/40 = 0,375\n15/20 = 0,75\n20/40 = 0,5\n15/40 = 0,5",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9eb",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9eb?variant=051c4d42db8fdc36f72b3ba4",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9eb"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9eb",
+            "conditionSha256": "870cfa8defdaf701a7de4a62f1dc0c35c3aeba080386801cd992c1eb4497fccf"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9eb-V2",
+            "status": "published",
+            "answer": "15/20 = 0,75",
+            "code": "",
+            "explanation": "После условия «занимается спортом» остаётся группа из 20 человек. Среди них хорошие оценки у 15: 15/20=0.75.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9eb-V3",
+          "title": "Вариант 3",
+          "statement": "На каком участке графика результат меняется БЫСТРЕЕ?\n\nВыбери все верные утверждения\n\nТам, где линия горизонтальна (пологая)\nВ самой высокой точке графика\nСкорость изменения везде одинакова\nТам, где линия резко поднимается или опускается",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9eb",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9eb?variant=8354492b398026f593179a30",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9eb"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9eb",
+            "conditionSha256": "a4945548d2df665418b2a618aff534a50eeae89d931fec4079071e1ccc9c3b15"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9eb-V3",
+            "status": "published",
+            "answer": "Там, где линия резко поднимается или опускается",
+            "code": "",
+            "explanation": "Быстроту изменения показывает модуль наклона графика. Резкий подъём и резкий спад оба означают быстрое изменение; высота точки сама по себе этого не показывает.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9eb-V4",
+          "title": "Вариант 4",
+          "statement": "Автомобиль проехал за 1-й час 60 км, за 2-й час — 60 км, за 3-й час — 60 км. Как меняется скорость автомобиля?\n\nВыбери все верные утверждения\n\nРастёт\nОстаётся постоянной\nУбывает\nРавна нулю",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9eb",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9eb?variant=e9b201d6c98e0bd4596c3e24",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9eb"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9eb",
+            "conditionSha256": "59b3b4c9fe6bf5a043a34379c422be70b9911a887ac8b983519810d7f20c875a"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9eb-V4",
+            "status": "published",
+            "answer": "Остаётся постоянной",
+            "code": "",
+            "explanation": "Средняя скорость на каждом указанном часовом интервале равна 60 км/ч. Данных о мгновенной скорости внутри этих интервалов нет.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070ea9f0",
+      "number": 7,
+      "title": "Вопрос №7",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9f0-V1",
+          "title": "Вариант 1",
+          "statement": "Что из перечисленного лучше всего объясняет роль математики в ИИ?\n\nВыбери все верные утверждения\n\nМатематика нужна только для написания кода\nМатематика — язык описания данных, признаков, вероятностей и ошибок модели\nМатематика нужна лишь учёным, но не ИИ-системам\nИИ работает без математики — на основе интуиции",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9f0",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9f0?variant=6a5c96f04e874f00070ea9f0",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9f0"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9f0",
+            "conditionSha256": "a164934d7aa571137de32668bd7397045aef5a3d9861aac817e6614e9eb58d24"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9f0-V1",
+            "status": "published",
+            "answer": "Математика — язык описания данных, признаков, вероятностей и ошибок модели",
+            "code": "",
+            "explanation": "Числа, функции, вероятности и показатели ошибки позволяют формально описывать данные и работу модели, а не полагаться на интуицию.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9f0-V2",
+          "title": "Вариант 2",
+          "statement": "Утверждение: «Условная вероятность – это вероятность события при наличии дополнительного условия.»\n\nВыбери все верные утверждения\n\nВерно\nНеверно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9f0",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9f0?variant=6f7efecf12ea9fc6d301ae0a",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9f0"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9f0",
+            "conditionSha256": "a23c8a782c25e5e825cbe9c1308ae0b1a2ed3b614d7793ceb93beee6826e1500"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9f0-V2",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "Дополнительное условие меняет рассматриваемую группу исходов. Например, долю успешных среди всех сравнивают с долей успешных среди выбранной категории.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9f0-V3",
+          "title": "Вариант 3",
+          "statement": "На чём основано грамотное принятие решений в задачах ИИ?\n\nВыбери все верные утверждения\n\nТолько на интуиции\nТолько на максимальном значении\nНа мнении большинства без данных\nНа данных, графиках, вероятностях и оценке рисков",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9f0",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9f0?variant=74b003c3e16bf583fcc020ec",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9f0"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9f0",
+            "conditionSha256": "13c5870e8afa79d7a6c885910dd998e1b830c4c49a5b65ff685071e2c23bd527"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9f0-V3",
+            "status": "published",
+            "answer": "На данных, графиках, вероятностях и оценке рисков",
+            "code": "",
+            "explanation": "Обоснованное решение сочетает данные, визуализацию, вероятностные оценки и последствия ошибок. Одно максимальное число не заменяет этот анализ.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9f0-V4",
+          "title": "Вариант 4",
+          "statement": "Верно ли утверждение?\nУтверждение: «Пологий участок графика означает, что изменение входного значения почти не влияет на результат.»\n\nВыбери все верные утверждения\n\nВерно\nНеверно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9f0",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9f0?variant=76f36ec8f1036b28e8c58933",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9f0"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9f0",
+            "conditionSha256": "f810eff99f64182ae86b72b20f9aee5c117515372e22dd3e4bdefadb7aa56af3"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9f0-V4",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "Небольшой наклон означает малое изменение результата при небольшом изменении аргумента в данном участке. Это локальное утверждение.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070ea9f5",
+      "number": 8,
+      "title": "Вопрос №8",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9f5-V1",
+          "title": "Вариант 1",
+          "statement": "Верно ли утверждение?\nУтверждение: «Чтобы улучшить модель, нужно измерить и проанализировать её ошибки.»\n\nВыбери все верные утверждения\n\nНеверно\nВерно",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9f5",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9f5?variant=6a5c96f04e874f00070ea9f5",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9f5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9f5",
+            "conditionSha256": "ea44452afd6a5150ff79d6701812b99f2aef9fe9e553e9f68605d066dd17a2c8"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9f5-V1",
+            "status": "published",
+            "answer": "Верно",
+            "code": "",
+            "explanation": "Измерение и разбор ошибок показывают, что именно нужно менять. Улучшение затем проверяют повторным тестом на сопоставимых данных.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9f5-V2",
+          "title": "Вариант 2",
+          "statement": "Числовой набор: 2, 4, 4, 6, 100. Чему равна медиана?\n\nВыбери все верные утверждения\n\nМедиана = 23,2\nМедиана = 4\nМедиана = 6\nМедиана = 100",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9f5",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9f5?variant=2bb9a05cc624a62bb90b5598",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9f5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9f5",
+            "conditionSha256": "cfe3cb4ed609f2e940a3ba5c0bdfd378bfe3b48d40c535c494f7182ca78832b9"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9f5-V2",
+            "status": "published",
+            "answer": "Медиана = 4",
+            "code": "",
+            "explanation": "Упорядоченный ряд уже задан: 2,4,4,6,100. Центральное третье значение равно 4; 23.2 является средним.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9f5-V3",
+          "title": "Вариант 3",
+          "statement": "На графике линия горизонтальна (параллельна оси x). Что это означает?\n\nВыбери все верные утверждения\n\nЗначение не меняется при изменении аргумента\nФункция быстро растёт\nДанные ошибочные\nФункция убывает",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9f5",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9f5?variant=a7ec20d47ef72dd2cbb6c932",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9f5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9f5",
+            "conditionSha256": "92756454876cb3ee2879594a13675f6ede0fd62bf5e0ef53caf29770d6a35e78"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9f5-V3",
+            "status": "published",
+            "answer": "Значение не меняется при изменении аргумента",
+            "code": "",
+            "explanation": "Горизонтальная линия означает постоянное значение функции на показанном интервале, поэтому её наклон равен нулю.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        },
+        {
+          "id": "T-6a5c96f04e874f00070ea9f5-V4",
+          "title": "Вариант 4",
+          "statement": "Ошибка модели снижалась так: 10 → 8 → 6 → 5,5 → 5,4. Что происходит с обучением?\n\nВыбери все верные утверждения\n\nСкорость улучшения постоянна\nМодель ухудшается\nКаждое улучшение всё меньше — обучение замедляется\nОшибка растёт",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9f5",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9f5?variant=7353691a80a171f9a5350a76",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9f5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9f5",
+            "conditionSha256": "e82ebaaa3bbcafd220318e30383444cb67399c94ace1d604b45a18b7683ebdb3"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9f5-V4",
+            "status": "published",
+            "answer": "Каждое улучшение всё меньше — обучение замедляется",
+            "code": "",
+            "explanation": "Уменьшения составляют 2, 2, 0.5 и 0.1. В последних шагах выигрыш снижается; ошибка пока не растёт.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070ea9f8",
+      "number": 9,
+      "title": "Вопрос №9",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9f8",
+          "title": "Сохранённое условие",
+          "statement": "Полное условие не сохранилось в архиве.",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9f8",
+            "label": "Вопрос №9",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9f8",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9f8"
+          },
+          "sourceIssues": [
+            "Снимки отдельных вариантов не содержат условий. Показано условие основной сохранённой страницы; оно не подменяет отсутствующие варианты."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9f8",
+            "conditionSha256": "168f419b0b1026ec6e9f97da231a01260ab1d763ac4d4da648189be3a9c40fbb"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9f8",
+            "status": "unavailable",
+            "reason": "В основном снимке и во всех четырёх снимках вариантов сохранились только «Предыдущее / Следующее». Полного условия нет. Таблица буквенных ключей без текста вопроса не позволяет проверить ответ и объяснить его."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070ea9fb",
+      "number": 10,
+      "title": "Вопрос №10",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070ea9fb",
+          "title": "Сохранённое условие",
+          "statement": "Полное условие не сохранилось в архиве.",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070ea9fb",
+            "label": "Вопрос №10",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070ea9fb",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070ea9fb"
+          },
+          "sourceIssues": [
+            "Снимки отдельных вариантов не содержат условий. Показано условие основной сохранённой страницы; оно не подменяет отсутствующие варианты."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070ea9fb",
+            "conditionSha256": "168f419b0b1026ec6e9f97da231a01260ab1d763ac4d4da648189be3a9c40fbb"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070ea9fb",
+            "status": "unavailable",
+            "reason": "В основном снимке и во всех четырёх снимках вариантов сохранились только «Предыдущее / Следующее». Полного условия нет. Таблица буквенных ключей без текста вопроса не позволяет проверить ответ и объяснить его."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070eaa00",
+      "number": 11,
+      "title": "Вопрос №11",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070eaa00",
+          "title": "Сохранённое условие",
+          "statement": "Отметьте ВСЕ верные утверждения о сравнении моделей по ошибке.\n\nВыбери все верные утверждения\n\nЛучшая модель та, у которой меньше средняя ошибка\n\nБольшая ошибка означает более точную модель\n\nНулевая ошибка означает идеальное предсказание\n\nДля сравнения моделей удобно использовать таблицу ошибок",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070eaa00",
+            "label": "Вопрос №11",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070eaa00",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070eaa00"
+          },
+          "sourceIssues": [
+            "Снимки отдельных вариантов не содержат условий. Показано условие основной сохранённой страницы; оно не подменяет отсутствующие варианты."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070eaa00",
+            "conditionSha256": "7ef6aa32d34176d009979f8870103571195325daa3aefa29b622b9de43e8eff7"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070eaa00",
+            "status": "published",
+            "answer": "Лучшая модель та, у которой меньше средняя ошибка\nНулевая ошибка означает идеальное предсказание\nДля сравнения моделей удобно использовать таблицу ошибок",
+            "code": "",
+            "explanation": "При сопоставимой проверке меньшее среднее отклонение лучше. Нулевая ошибка означает точное совпадение на проверенных примерах, но не гарантирует идеальность на любых будущих данных. Таблица помогает сравнить варианты.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070eaa05",
+      "number": 12,
+      "title": "Вопрос №12",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070eaa05",
+          "title": "Сохранённое условие",
+          "statement": "Модель определила письмо как спам с вероятностью 0,88. Что это означает?\n\nВыбери все верные утверждения\n\nПисьмо точно является спамом\n\nМодель уверена на 88% – скорее спам, но не гарантия\n\nВ письме 88 символов\n\nПисьмо не является спамом",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070eaa05",
+            "label": "Вопрос №12",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070eaa05",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070eaa05"
+          },
+          "sourceIssues": [
+            "Снимки отдельных вариантов не содержат условий. Показано условие основной сохранённой страницы; оно не подменяет отсутствующие варианты."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070eaa05",
+            "conditionSha256": "d19fa3136a43796913d9c7d8330e917fc67eebb4fe2c28c6e329ff5300f35c5a"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070eaa05",
+            "status": "published",
+            "answer": "Модель уверена на 88% – скорее спам, но не гарантия",
+            "code": "",
+            "explanation": "0.88 — оценка вероятности положительного класса, а не гарантия факта. Её надёжность зависит от калибровки и соответствия данных; число символов из неё не следует.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070eaa0a",
+      "number": 13,
+      "title": "Вопрос №13",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070eaa0a",
+          "title": "Сохранённое условие",
+          "statement": "Модель предсказала оценки пяти учеников: 4, 5, 3, 4, 5. Реальные оценки: 5, 5, 4, 4, 3.\n\n- Найдите ошибку для каждого ученика (модуль разности).\n\n- Вычислите среднюю ошибку (MAE = сумма ошибок / 5).\n\n- Хорошо ли работает модель? Объясните одним предложением.",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070eaa0a",
+            "label": "Вопрос №13",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070eaa0a",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070eaa0a"
+          },
+          "sourceIssues": [
+            "Снимки отдельных вариантов не содержат условий. Показано условие основной сохранённой страницы; оно не подменяет отсутствующие варианты."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070eaa0a",
+            "conditionSha256": "7a823a23a71ec5dbce73f171af25f01065aca3656cbca9d7ceb646e2f750c25d"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070eaa0a",
+            "status": "published",
+            "answer": "Ошибки: 1, 0, 1, 0, 2. MAE=(1+0+1+0+2)/5=0.8 балла. Средний промах меньше одного балла, но на пяти примерах и без допустимого порога нельзя объявить модель достаточно надёжной.",
+            "code": "predicted = [4, 5, 3, 4, 5]\nactual = [5, 5, 4, 4, 3]\nerrors = [abs(p-a) for p,a in zip(predicted, actual)]\nprint(errors)\nprint(sum(errors) / len(errors))",
+            "explanation": "Модули ошибок не сокращаются из-за знаков. Максимальный промах 2 балла у пятого ученика; его важно разобрать отдельно.",
+            "kind": "calculation",
+            "verification": "project_tests",
+            "testCount": 1,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "lineExplanations": [
+              {
+                "line": 1,
+                "text": "Задаём исходные учебные значения predicted. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 2,
+                "text": "Задаём исходные учебные значения actual. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 3,
+                "text": "Вычисляем `[abs(p - a) for p, a in zip(predicted, actual)]` и сохраняем результат в `errors`."
+              },
+              {
+                "line": 4,
+                "text": "Выводим результат в формате, указанном в условии."
+              },
+              {
+                "line": 5,
+                "text": "Выводим результат в формате, указанном в условии."
+              }
+            ],
+            "examples": [
+              {
+                "input": "",
+                "output": "[1, 0, 1, 0, 2]\n0.8"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070eaa0b",
+      "number": 14,
+      "title": "Вопрос №14",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070eaa0b",
+          "title": "Сохранённое условие",
+          "statement": "Число просмотров ролика за 7 дней: 120, 130, 110, 125, 115, 900, 120.\n\n- Найдите среднее значение.\n\n- Найдите медиану.\n\n- Какой показатель честнее описывает обычный день? Почему?",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070eaa0b",
+            "label": "Вопрос №14",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070eaa0b",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070eaa0b"
+          },
+          "sourceIssues": [
+            "Снимки отдельных вариантов не содержат условий. Показано условие основной сохранённой страницы; оно не подменяет отсутствующие варианты."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070eaa0b",
+            "conditionSha256": "9f5c09b7b4deb446fbb22e6c9491e2b7ee00ad58ecd7d79fbb1ac5bb86cd8b3f"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070eaa0b",
+            "status": "published",
+            "answer": "Сумма 1620. Среднее 1620/7≈231.43 просмотра. Упорядоченный ряд: 110,115,120,120,125,130,900; медиана 120. Обычный день лучше описывает медиана 120, поскольку один день с 900 просмотрами сильно поднял среднее.",
+            "code": "from statistics import mean, median\nviews = [120, 130, 110, 125, 115, 900, 120]\nprint(sum(views))\nprint(f\"{mean(views):.2f}\")\nprint(median(views))",
+            "explanation": "Высокое значение не обязательно ошибка: это может быть реальный всплеск. Его проверяют, а для описания распределения приводят оба показателя.",
+            "kind": "calculation",
+            "verification": "project_tests",
+            "testCount": 1,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "lineExplanations": [
+              {
+                "line": 1,
+                "text": "Подключаем mean, median, чтобы использовать необходимые функции библиотеки."
+              },
+              {
+                "line": 2,
+                "text": "Задаём исходные учебные значения views. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 3,
+                "text": "Выводим результат в формате, указанном в условии."
+              },
+              {
+                "line": 4,
+                "text": "Выводим результат в формате, указанном в условии."
+              },
+              {
+                "line": 5,
+                "text": "Выводим результат в формате, указанном в условии."
+              }
+            ],
+            "examples": [
+              {
+                "input": "",
+                "output": "1620\n231.43\n120"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c96f04e874f00070eaa0c",
+      "number": 15,
+      "title": "ПРАКТИЧЕСКИЙ КЕЙС: «Умный термостат»",
+      "variants": [
+        {
+          "id": "T-6a5c96f04e874f00070eaa0c",
+          "title": "Сохранённое условие",
+          "statement": "Умный термостат предсказывает комфортную температуру в квартире. Данные за 7 дней:\n\n| День | Темп. на улице (°C) | Прогноз термостата (°C) | Реальная комф. темп. (°C) |\n| --- | --- | --- | --- |\n| 1 | −5 | 22 | 22 |\n| 2 | 0 | 22 | 21 |\n| 3 | 5 | 21 | 20 |\n| 4 | 10 | 20 | 19 |\n| 5 | 15 | 19 | 19 |\n| 6 | 20 | 19 | 20 |\n| 7 | 25 | 20 | 21 |\n\nВыполните все задания:\n\n- 1. Вычислите ошибку термостата для каждого дня (|прогноз − реальная|).\n\n- 2. Найдите среднюю ошибку (MAE) за 7 дней.\n\n- 3. В какой день (или дни) ошибка наибольшая?\n\n- 4. Как меняется реальная комфортная температура при повышении уличной?\n\n- 5. Сделайте вывод: хорошо ли работает термостат? Обоснуйте числами.\n\n- 6. Оформите результат по форме таблицы в текстовом файле и прикрепите файл к заданию.\n\n| Пункт | Ваш ответ и вычисления |\n| --- | --- |\n| 1. |  |\n| 2. |  |\n| 3. |  |\n| 4. |  |\n| 5. |  |",
+          "ismartLink": {
+            "id": "6a5c96f04e874f00070eaa0c",
+            "label": "Практическая задача",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c96f04e874f00070ea9d1/element/6a5c96f04e874f00070eaa0c",
+            "status": "unverified",
+            "unitId": "6a5c96f04e874f00070ea9d1",
+            "elementId": "6a5c96f04e874f00070eaa0c"
+          },
+          "sourceIssues": [
+            "Снимки отдельных вариантов не содержат условий. Показано условие основной сохранённой страницы; оно не подменяет отсутствующие варианты."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c96f04e874f00070eaa0c",
+            "conditionSha256": "4bff0f5e6d453b4397d71be62ce1bc527ebb1d554148372c7c910eefe6b85ff5"
+          },
+          "solution": {
+            "id": "T-6a5c96f04e874f00070eaa0c",
+            "status": "published",
+            "answer": "1. Ошибки по дням: 0,1,1,1,0,1,1 °C.\n2. MAE=5/7≈0.7143 °C.\n3. Максимальная ошибка 1 °C в дни 2,3,4,6,7.\n4. При росте уличной температуры от −5 до 15 °C комфортная температура снижается с 22 до 19 °C, затем при 20 и 25 °C повышается до 20 и 21 °C: связь не является монотонной на всём интервале.\n5. На этих семи днях прогноз отклоняется не более чем на 1 °C и в среднем примерно на 0.71 °C. При допустимом пороге 1 °C результат подходит этому тесту, но для общего вывода нужны больше дней и разные жильцы.",
+            "code": "predicted = [22, 22, 21, 20, 19, 19, 20]\nactual = [22, 21, 20, 19, 19, 20, 21]\nerrors = [abs(p-a) for p,a in zip(predicted, actual)]\nprint(errors)\nprint(f\"{sum(errors)/len(errors):.4f}\")\nprint([i+1 for i,e in enumerate(errors) if e == max(errors)])",
+            "explanation": "В выводе нужно учитывать весь ряд: утверждение «всё время убывает» неверно. Допустимость ошибки 1 °C является отдельным требованием, а не универсальным свойством термостата.",
+            "kind": "calculation",
+            "verification": "project_tests",
+            "testCount": 1,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "lineExplanations": [
+              {
+                "line": 1,
+                "text": "Задаём исходные учебные значения predicted. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 2,
+                "text": "Задаём исходные учебные значения actual. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 3,
+                "text": "Вычисляем `[abs(p - a) for p, a in zip(predicted, actual)]` и сохраняем результат в `errors`."
+              },
+              {
+                "line": 4,
+                "text": "Выводим результат в формате, указанном в условии."
+              },
+              {
+                "line": 5,
+                "text": "Выводим результат в формате, указанном в условии."
+              },
+              {
+                "line": 6,
+                "text": "Выводим результат в формате, указанном в условии."
+              }
+            ],
+            "examples": [
+              {
+                "input": "",
+                "output": "[0, 1, 1, 1, 0, 1, 1]\n0.7143\n[2, 3, 4, 6, 7]"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "documentUrl": "/lesson/M02-L18?tab=lecture"
+}

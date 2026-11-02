@@ -1,0 +1,1156 @@
+{
+  "id": "M03-C1-7",
+  "moduleId": 3,
+  "title": "Текущий контроль по темам 1-7 Модуля 3",
+  "kind": "control",
+  "number": "3.К1-7",
+  "tasks": [
+    {
+      "id": "T-ca3d7e6d46e68a20e7f6552c",
+      "number": 1,
+      "title": "Вопрос №1",
+      "variants": [
+        {
+          "id": "T-ca3d7e6d46e68a20e7f6552c",
+          "title": "Сохранённое условие",
+          "statement": "Что такое машинное обучение (ML)?\n\nВыбери все верные утверждения\n\nнаписание программ с жёсткими правилами без примеров\n\nраздел ИИ, где модель автоматически ищет закономерности в данных\n\nметод хранения данных в базах данных\n\nинструмент визуализации профессиональных датасетов",
+          "ismartLink": {
+            "id": "ca3d7e6d46e68a20e7f6552c",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/ca3d7e6d46e68a20e7f6552c",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "ca3d7e6d46e68a20e7f6552c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "ca3d7e6d46e68a20e7f6552c",
+            "conditionSha256": "272e806acbac2ac10077fd810d4d32b91a492c39f27215ab2b4b3e3fbc3ddd5e"
+          },
+          "solution": {
+            "id": "T-ca3d7e6d46e68a20e7f6552c",
+            "status": "published",
+            "answer": "раздел ИИ, где модель автоматически ищет закономерности в данных",
+            "code": "",
+            "explanation": "В машинном обучении параметры или правила модели подбираются по примерам. Обычная программа может получать правила непосредственно от разработчика.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-2d5a2c950da7e5eac490ea40",
+      "number": 2,
+      "title": "Вопрос №2",
+      "variants": [
+        {
+          "id": "T-2d5a2c950da7e5eac490ea40",
+          "title": "Сохранённое условие",
+          "statement": "Что такое обучающая выборка?\n\nВыбери все верные утверждения\n\nданные для оценки качества готовой модели\n\nчасть датасета, на которой модель ищет закономерности\n\nданные для настройки интерфейса программы\n\nполный датасет без разделения на части",
+          "ismartLink": {
+            "id": "2d5a2c950da7e5eac490ea40",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/2d5a2c950da7e5eac490ea40",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "2d5a2c950da7e5eac490ea40"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "2d5a2c950da7e5eac490ea40",
+            "conditionSha256": "5dcbde8ae2378eabc2c6532d4ec6e46ef978462ec8589d57a6d40f9bbf7e0734"
+          },
+          "solution": {
+            "id": "T-2d5a2c950da7e5eac490ea40",
+            "status": "published",
+            "answer": "часть датасета, на которой модель ищет закономерности",
+            "code": "",
+            "explanation": "На train модель подбирает параметры. На независимом test проверяют результат после обучения.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-577700187acc028ab83bab1f",
+      "number": 3,
+      "title": "Вопрос №3",
+      "variants": [
+        {
+          "id": "T-577700187acc028ab83bab1f",
+          "title": "Сохранённое условие",
+          "statement": "Зачем данные делят на обучающую и тестовую выборки?\n\nВыбери все верные утверждения\n\nчтобы уменьшить объём файла\n\nчтобы ускорить процесс загрузки данных\n\nчтобы честно оценить, как модель работает на новых незнакомых данных\n\nчтобы автоматически улучшить качество признаков",
+          "ismartLink": {
+            "id": "577700187acc028ab83bab1f",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/577700187acc028ab83bab1f",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "577700187acc028ab83bab1f"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "577700187acc028ab83bab1f",
+            "conditionSha256": "5a7ccf60b66622ca573ceb970d85141e35f3cdb7d7b2927d443f1c2d1b4b6784"
+          },
+          "solution": {
+            "id": "T-577700187acc028ab83bab1f",
+            "status": "published",
+            "answer": "чтобы честно оценить, как модель работает на новых незнакомых данных",
+            "code": "",
+            "explanation": "Разделение позволяет оценить обобщение. Если обучать на test или подбирать по нему всё решение, оценка станет чрезмерно оптимистичной.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-f59e3717e633d3462668fcce",
+      "number": 4,
+      "title": "Вопрос №4",
+      "variants": [
+        {
+          "id": "T-f59e3717e633d3462668fcce",
+          "title": "Сохранённое условие",
+          "statement": "Что такое задача классификации в профессиональном контексте?\n\nВыбери все верные утверждения\n\nпредсказание числового показателя по данным\n\nгруппировка объектов без заранее заданных меток\n\nотнесение объекта к одному из заранее определённых классов\n\nпоиск аномалий в наборе данных",
+          "ismartLink": {
+            "id": "f59e3717e633d3462668fcce",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/f59e3717e633d3462668fcce",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "f59e3717e633d3462668fcce"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "f59e3717e633d3462668fcce",
+            "conditionSha256": "9dcd86e3f691572d66259497f5e3f3d780caf145a4faa3843c561f10ca3c1672"
+          },
+          "solution": {
+            "id": "T-f59e3717e633d3462668fcce",
+            "status": "published",
+            "answer": "отнесение объекта к одному из заранее определённых классов",
+            "code": "",
+            "explanation": "В классификации заранее определены категории ответа. Числовой прогноз относится к регрессии, поиск групп без заданных меток — к кластеризации.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-61866f4714c628871b44ade0",
+      "number": 5,
+      "title": "Вопрос №5",
+      "variants": [
+        {
+          "id": "T-61866f4714c628871b44ade0",
+          "title": "Сохранённое условие",
+          "statement": "Что такое задача регрессии?\n\nВыбери все верные утверждения\n\nотнесение объекта к одной из фиксированных категорий\n\nразбиение объектов на группы по схожести\n\nпредсказание числового значения, например объёма продаж\n\nпоиск связей между категориальными признаками",
+          "ismartLink": {
+            "id": "61866f4714c628871b44ade0",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/61866f4714c628871b44ade0",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "61866f4714c628871b44ade0"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "61866f4714c628871b44ade0",
+            "conditionSha256": "46f4e8b794d1874538e6a373e199225a014adbfcff4e9517c076e0689d5ea996"
+          },
+          "solution": {
+            "id": "T-61866f4714c628871b44ade0",
+            "status": "published",
+            "answer": "предсказание числового значения, например объёма продаж",
+            "code": "",
+            "explanation": "Цель регрессии — число с количественным смыслом, например сумма или длительность. Категория и номер кластера решают другие задачи.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-2ed13f5f6ce45c8d095c1d2f",
+      "number": 6,
+      "title": "Вопрос №6",
+      "variants": [
+        {
+          "id": "T-2ed13f5f6ce45c8d095c1d2f",
+          "title": "Сохранённое условие",
+          "statement": "Что такое кластеризация?\n\nВыбери все верные утверждения\n\nобучение с учителем для предсказания категории\n\nгруппировка объектов по схожести без заранее заданных меток\n\nоценка ошибки модели на тестовых данных\n\nпредсказание числового показателя по признакам",
+          "ismartLink": {
+            "id": "2ed13f5f6ce45c8d095c1d2f",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/2ed13f5f6ce45c8d095c1d2f",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "2ed13f5f6ce45c8d095c1d2f"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "2ed13f5f6ce45c8d095c1d2f",
+            "conditionSha256": "f91da15d9eb41d999b8073213ae444a904b410bd083193a0aa83bb11ad63bc45"
+          },
+          "solution": {
+            "id": "T-2ed13f5f6ce45c8d095c1d2f",
+            "status": "published",
+            "answer": "группировка объектов по схожести без заранее заданных меток",
+            "code": "",
+            "explanation": "Кластеризация объединяет похожие объекты без заранее заданных правильных групп. Смысл найденных кластеров нужно интерпретировать после построения.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-43aa1f0f0b17677e5e80ee28",
+      "number": 7,
+      "title": "Вопрос №7",
+      "variants": [
+        {
+          "id": "T-43aa1f0f0b17677e5e80ee28",
+          "title": "Сохранённое условие",
+          "statement": "Что такое accuracy (доля верных ответов)?\n\nВыбери все верные утверждения\n\nсредняя абсолютная ошибка предсказания\n\nдоля правильно классифицированных объектов от общего числа\n\nчисло объектов, которые модель неправильно классифицировала\n\nсреднеквадратическое отклонение ошибок",
+          "ismartLink": {
+            "id": "43aa1f0f0b17677e5e80ee28",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/43aa1f0f0b17677e5e80ee28",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "43aa1f0f0b17677e5e80ee28"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "43aa1f0f0b17677e5e80ee28",
+            "conditionSha256": "2cfefbc29244e89651cf3de06794f6c82fae983c4d59a78570a8a80c6bd9c0b2"
+          },
+          "solution": {
+            "id": "T-43aa1f0f0b17677e5e80ee28",
+            "status": "published",
+            "answer": "доля правильно классифицированных объектов от общего числа",
+            "code": "",
+            "explanation": "Accuracy = число верных прогнозов / число всех проверенных объектов. Это доля от 0 до 1, а не абсолютное число ошибок.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-2401dff495115fccc4ba3f7e",
+      "number": 8,
+      "title": "Вопрос №8",
+      "variants": [
+        {
+          "id": "T-2401dff495115fccc4ba3f7e",
+          "title": "Сохранённое условие",
+          "statement": "Модель классифицировала 90 объектов из 100 верно. Чему равно accuracy?\n\nВыбери все верные утверждения\n\n90\n\n0.80\n\n0.90\n\n1.0",
+          "ismartLink": {
+            "id": "2401dff495115fccc4ba3f7e",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/2401dff495115fccc4ba3f7e",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "2401dff495115fccc4ba3f7e"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "2401dff495115fccc4ba3f7e",
+            "conditionSha256": "15deac8673d3004507b667dbb339901bda4bdf0ead56d06c1177c77b684df22f"
+          },
+          "solution": {
+            "id": "T-2401dff495115fccc4ba3f7e",
+            "status": "published",
+            "answer": "0.90",
+            "code": "",
+            "explanation": "90/100=0.90, или 90%. Если требуется доля, записывают 0.90, а не 90.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-9e349d7d994773ffb8ae70c9",
+      "number": 9,
+      "title": "Вопрос №9",
+      "variants": [
+        {
+          "id": "T-9e349d7d994773ffb8ae70c9",
+          "title": "Сохранённое условие",
+          "statement": "Что такое переобучение (overfitting)?\n\nВыбери все верные утверждения\n\nмодель не обучилась и выдаёт случайные ответы\n\nмодель слишком точно подстроилась под обучающие данные и плохо работает на новых\n\nданные имеют слишком много пропущенных значений\n\nмодель обучена на слишком маленьком датасете",
+          "ismartLink": {
+            "id": "9e349d7d994773ffb8ae70c9",
+            "label": "Вопрос №9",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/9e349d7d994773ffb8ae70c9",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "9e349d7d994773ffb8ae70c9"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "9e349d7d994773ffb8ae70c9",
+            "conditionSha256": "5cee07769c2f28f6ff6e84c44ee42941d6822c353534c67303e62c67cc4ca277"
+          },
+          "solution": {
+            "id": "T-9e349d7d994773ffb8ae70c9",
+            "status": "published",
+            "answer": "модель слишком точно подстроилась под обучающие данные и плохо работает на новых",
+            "code": "",
+            "explanation": "Переобученная модель усваивает частные особенности и шум train, поэтому качество на новых данных заметно хуже.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-7c8d5ac10b353413a0a03b47",
+      "number": 10,
+      "title": "Вопрос №10",
+      "variants": [
+        {
+          "id": "T-7c8d5ac10b353413a0a03b47",
+          "title": "Сохранённое условие",
+          "statement": "Что такое недообучение (underfitting)?\n\nВыбери все верные утверждения\n\nмодель переобучилась на обучающих данных\n\nмодель слишком проста и не нашла закономерностей даже в обучающих данных\n\nобучающая выборка больше тестовой\n\nмодель обучена на данных другой задачи",
+          "ismartLink": {
+            "id": "7c8d5ac10b353413a0a03b47",
+            "label": "Вопрос №10",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/7c8d5ac10b353413a0a03b47",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "7c8d5ac10b353413a0a03b47"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "7c8d5ac10b353413a0a03b47",
+            "conditionSha256": "eacad5b3ec412afd9129a813fcf6450534ed176459f8c7bfc6acdc74fb853a9c"
+          },
+          "solution": {
+            "id": "T-7c8d5ac10b353413a0a03b47",
+            "status": "published",
+            "answer": "модель слишком проста и не нашла закономерностей даже в обучающих данных",
+            "code": "",
+            "explanation": "При недообучении модель не описала существенные зависимости даже на train. Причиной может быть слишком простая модель или неподходящие признаки.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-4b532573904596b3447f9fe6",
+      "number": 11,
+      "title": "Вопрос №11",
+      "variants": [
+        {
+          "id": "T-4b532573904596b3447f9fe6",
+          "title": "Сохранённое условие",
+          "statement": "Что такое Scikit-learn?\n\nВыбери все верные утверждения\n\nязык программирования для ИИ-алгоритмов\n\nбиблиотека Python с готовыми ML-моделями и инструментами\n\nинструмент только для визуализации данных\n\nплатформа для хранения и загрузки датасетов",
+          "ismartLink": {
+            "id": "4b532573904596b3447f9fe6",
+            "label": "Вопрос №11",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/4b532573904596b3447f9fe6",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "4b532573904596b3447f9fe6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "4b532573904596b3447f9fe6",
+            "conditionSha256": "b748d45b861ea8396c41c9cd27f6c92e22d80f1bf2c799a28d5ee1437876586c"
+          },
+          "solution": {
+            "id": "T-4b532573904596b3447f9fe6",
+            "status": "published",
+            "answer": "библиотека Python с готовыми ML-моделями и инструментами",
+            "code": "",
+            "explanation": "Scikit-learn — библиотека Python для моделей, преобразований данных, разбиений и метрик; это не самостоятельный язык программирования.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-10cb32b37f0b92ec3840bcb5",
+      "number": 12,
+      "title": "Вопрос №12",
+      "variants": [
+        {
+          "id": "T-10cb32b37f0b92ec3840bcb5",
+          "title": "Сохранённое условие",
+          "statement": "Что делает метод fit() в Scikit-learn?\n\nВыбери все верные утверждения\n\nвозвращает предсказания для новых данных\n\nразбивает датасет на выборки\n\nобучает модель на переданных данных\n\nвычисляет метрику accuracy",
+          "ismartLink": {
+            "id": "10cb32b37f0b92ec3840bcb5",
+            "label": "Вопрос №12",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/10cb32b37f0b92ec3840bcb5",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "10cb32b37f0b92ec3840bcb5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "10cb32b37f0b92ec3840bcb5",
+            "conditionSha256": "34c01edeb18b09a625a2be293c4ed453a1ec7b949112e594e37c6c1f29cb0be8"
+          },
+          "solution": {
+            "id": "T-10cb32b37f0b92ec3840bcb5",
+            "status": "published",
+            "answer": "обучает модель на переданных данных",
+            "code": "",
+            "explanation": "fit подбирает состояние модели или преобразователя по обучающим данным. Для предсказаний используют predict.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-8ce86d25225af664d1411feb",
+      "number": 13,
+      "title": "Вопрос №13",
+      "variants": [
+        {
+          "id": "T-8ce86d25225af664d1411feb",
+          "title": "Сохранённое условие",
+          "statement": "Что делает метод predict() в Scikit-learn?\n\nВыбери все верные утверждения\n\nобучает модель на обучающей выборке\n\nоценивает метрики качества\n\nвозвращает предсказания для новых объектов\n\nразбивает данные на выборки",
+          "ismartLink": {
+            "id": "8ce86d25225af664d1411feb",
+            "label": "Вопрос №13",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/8ce86d25225af664d1411feb",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "8ce86d25225af664d1411feb"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "8ce86d25225af664d1411feb",
+            "conditionSha256": "ab11dcd011fe2f4c0b363fa50ba2a6397b5c0098628f9c4a23e01d5669795ffe"
+          },
+          "solution": {
+            "id": "T-8ce86d25225af664d1411feb",
+            "status": "published",
+            "answer": "возвращает предсказания для новых объектов",
+            "code": "",
+            "explanation": "predict применяет уже обученную модель к входным признакам. Правильные ответы новых объектов ему обычно не передают.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-4bb8164124667ffdd878d958",
+      "number": 14,
+      "title": "Вопрос №14",
+      "variants": [
+        {
+          "id": "T-4bb8164124667ffdd878d958",
+          "title": "Сохранённое условие",
+          "statement": "Что такое обобщающая способность модели?\n\nВыбери все верные утверждения\n\nточность модели на обучающих данных\n\nскорость обучения модели на датасете\n\nумение модели давать верные ответы на новых незнакомых данных\n\nколичество параметров модели",
+          "ismartLink": {
+            "id": "4bb8164124667ffdd878d958",
+            "label": "Вопрос №14",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/4bb8164124667ffdd878d958",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "4bb8164124667ffdd878d958"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "4bb8164124667ffdd878d958",
+            "conditionSha256": "0f02312c0bc1da14034224dfc8622d459a01f56afd3c686c8361a8f0c28f5cb4"
+          },
+          "solution": {
+            "id": "T-4bb8164124667ffdd878d958",
+            "status": "published",
+            "answer": "умение модели давать верные ответы на новых незнакомых данных",
+            "code": "",
+            "explanation": "Обобщение — способность работать на примерах, не использованных для подбора модели. Высокий train-score ещё не доказывает такую способность.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-63bd2d534bc33858b8800f76",
+      "number": 15,
+      "title": "Вопрос №15",
+      "variants": [
+        {
+          "id": "T-63bd2d534bc33858b8800f76",
+          "title": "Сохранённое условие",
+          "statement": "Какой признак характерен для переобученной модели?\n\nВыбери все верные утверждения\n\nвысокая точность как на обучающих, так и на тестовых данных\n\nнизкая точность на обеих выборках одновременно\n\nвысокая точность на обучающих и низкая на тестовых данных\n\nодинаково низкая точность на всех наборах данных",
+          "ismartLink": {
+            "id": "63bd2d534bc33858b8800f76",
+            "label": "Вопрос №15",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/63bd2d534bc33858b8800f76",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "63bd2d534bc33858b8800f76"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "63bd2d534bc33858b8800f76",
+            "conditionSha256": "cb62f52a26607425e68d524e85441185df586161837754231aaef1ec1d0e645c"
+          },
+          "solution": {
+            "id": "T-63bd2d534bc33858b8800f76",
+            "status": "published",
+            "answer": "высокая точность на обучающих и низкая на тестовых данных",
+            "code": "",
+            "explanation": "Большой разрыв между высоким train и низким test — типичный признак переобучения; также проверяют утечки и различия распределений.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-9595609f6db8007a20c74d7a",
+      "number": 16,
+      "title": "Вопрос №16",
+      "variants": [
+        {
+          "id": "T-9595609f6db8007a20c74d7a",
+          "title": "Сохранённое условие",
+          "statement": "Для чего в профессиональном ИИ-проекте нужна оценка качества модели?\n\nВыбери все верные утверждения\n\nтолько для оформления отчёта\n\nчтобы понять, насколько точен результат и можно ли применять модель в работе\n\nчтобы ускорить обучение модели\n\nчтобы удалить ненужные признаки",
+          "ismartLink": {
+            "id": "9595609f6db8007a20c74d7a",
+            "label": "Вопрос №16",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/9595609f6db8007a20c74d7a",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "9595609f6db8007a20c74d7a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "9595609f6db8007a20c74d7a",
+            "conditionSha256": "42ae09ea31d22f2db6cb325eec6ef4764f51283a680db2a3b6aa4df177f8f18d"
+          },
+          "solution": {
+            "id": "T-9595609f6db8007a20c74d7a",
+            "status": "published",
+            "answer": "чтобы понять, насколько точен результат и можно ли применять модель в работе",
+            "code": "",
+            "explanation": "Оценка качества показывает ошибки и ограничения до рабочего применения. Для решения могут быть важны отдельные классы и цена разных ошибок.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-0c7432fb4d36bb2bc32f6100",
+      "number": 17,
+      "title": "Вопрос №17",
+      "variants": [
+        {
+          "id": "T-0c7432fb4d36bb2bc32f6100",
+          "title": "Сохранённое условие",
+          "statement": "Что такое частота слова как признак текстового объекта?\n\nВыбери все верные утверждения\n\nдлина самого длинного слова в тексте\n\nпорядковый номер слова в предложении\n\nколичество раз, которое слово встречается в документе\n\nрасстояние между двумя словами в тексте",
+          "ismartLink": {
+            "id": "0c7432fb4d36bb2bc32f6100",
+            "label": "Вопрос №17",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/0c7432fb4d36bb2bc32f6100",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "0c7432fb4d36bb2bc32f6100"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "0c7432fb4d36bb2bc32f6100",
+            "conditionSha256": "7bb2f1bf1bfd70f168521791f631c9d6c72a956e5d02b4ae3e29ac178ce907cd"
+          },
+          "solution": {
+            "id": "T-0c7432fb4d36bb2bc32f6100",
+            "status": "published",
+            "answer": "количество раз, которое слово встречается в документе",
+            "code": "",
+            "explanation": "В простом Bag-of-Words признак считает вхождения слова в документ. Это не порядковый номер слова и не его длина.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-fcc261770ab96b2880091ec5",
+      "number": 18,
+      "title": "Вопрос №18",
+      "variants": [
+        {
+          "id": "T-fcc261770ab96b2880091ec5",
+          "title": "Сохранённое условие",
+          "statement": "Зачем нужна подготовка признаков перед обучением модели?\n\nВыбери все верные утверждения\n\nтолько для красивого оформления датасета\n\nпотому что ML-алгоритмы работают с числами, а не с категориями и текстом\n\nчтобы уменьшить объём файла\n\nчтобы автоматически выбрать алгоритм",
+          "ismartLink": {
+            "id": "fcc261770ab96b2880091ec5",
+            "label": "Вопрос №18",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/fcc261770ab96b2880091ec5",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "fcc261770ab96b2880091ec5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "fcc261770ab96b2880091ec5",
+            "conditionSha256": "69a524cd735aa1024982b4bff564dcac1f5be9bcabcaf3307fcd423704378513"
+          },
+          "solution": {
+            "id": "T-fcc261770ab96b2880091ec5",
+            "status": "published",
+            "answer": "потому что ML-алгоритмы работают с числами, а не с категориями и текстом",
+            "code": "",
+            "explanation": "Для рассматриваемых sklearn-моделей текст и категории преобразуют в числовые признаки. Это не означает, что любой существующий ML-алгоритм требует одинакового кодирования.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-e834d28bc218b02615d0dcc7",
+      "number": 19,
+      "title": "Вопрос №19",
+      "variants": [
+        {
+          "id": "T-e834d28bc218b02615d0dcc7",
+          "title": "Сохранённое условие",
+          "statement": "Что является целевой переменной при классификации обращений клиентов?\n\nВыбери все верные утверждения\n\nдата обращения\n\nканал обращения\n\nтип обращения (жалоба, запрос, претензия)\n\nдлина текста обращения",
+          "ismartLink": {
+            "id": "e834d28bc218b02615d0dcc7",
+            "label": "Вопрос №19",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/e834d28bc218b02615d0dcc7",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "e834d28bc218b02615d0dcc7"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "e834d28bc218b02615d0dcc7",
+            "conditionSha256": "54e1f1307977a80f8f51e6468a235a43d8089e67eb9394584465745521612ec5"
+          },
+          "solution": {
+            "id": "T-e834d28bc218b02615d0dcc7",
+            "status": "published",
+            "answer": "тип обращения (жалоба, запрос, претензия)",
+            "code": "",
+            "explanation": "Если требуется распознать тип обращения, именно этот тип является y. Канал и текст могут выступать входными признаками.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-9507ef161271cf20d1b5e851",
+      "number": 20,
+      "title": "Вопрос №20",
+      "variants": [
+        {
+          "id": "T-9507ef161271cf20d1b5e851",
+          "title": "Сохранённое условие",
+          "statement": "Как улучшить модель при обнаружении переобучения?\n\nВыбери все верные утверждения\n\nдобавить больше сложных признаков\n\nувеличить число параметров модели\n\nупростить модель, добавить данные или применить регуляризацию\n\nубрать тестовую выборку из оценки",
+          "ismartLink": {
+            "id": "9507ef161271cf20d1b5e851",
+            "label": "Вопрос №20",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/9507ef161271cf20d1b5e851",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "9507ef161271cf20d1b5e851"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "9507ef161271cf20d1b5e851",
+            "conditionSha256": "8ce0986df776482a850a7c342a20302504ba1aab5cd7c85783297c1ebb7b4a2b"
+          },
+          "solution": {
+            "id": "T-9507ef161271cf20d1b5e851",
+            "status": "published",
+            "answer": "упростить модель, добавить данные или применить регуляризацию",
+            "code": "",
+            "explanation": "Ограничение сложности, регуляризация и более представительные данные могут снизить переобучение. Результат проверяют на независимых данных.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-e4a9f15e9614b8be0be2e27b",
+      "number": 21,
+      "title": "Вопрос №21",
+      "variants": [
+        {
+          "id": "T-e4a9f15e9614b8be0be2e27b",
+          "title": "Сохранённое условие",
+          "statement": "Что нужно сделать перед обучением модели с категориальными признаками?\n\nВыбери все верные утверждения\n\nудалить все категориальные столбцы\n\nперевести категориальные значения в числовые (кодирование)\n\nзаменить все категории нулями\n\nувеличить количество строк в датасете",
+          "ismartLink": {
+            "id": "e4a9f15e9614b8be0be2e27b",
+            "label": "Вопрос №21",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/e4a9f15e9614b8be0be2e27b",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "e4a9f15e9614b8be0be2e27b"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "e4a9f15e9614b8be0be2e27b",
+            "conditionSha256": "218f6014606da8b7e084964f7cd7ecbe5fec945703d7975993f660206f472fbb"
+          },
+          "solution": {
+            "id": "T-e4a9f15e9614b8be0be2e27b",
+            "status": "published",
+            "answer": "перевести категориальные значения в числовые (кодирование)",
+            "code": "",
+            "explanation": "Категории кодируют подходящим способом, например One-Hot. Замена всех категорий нулями уничтожает различия между ними.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-8bb586cd37490f8a49aada04",
+      "number": 22,
+      "title": "Вопрос №22",
+      "variants": [
+        {
+          "id": "T-8bb586cd37490f8a49aada04",
+          "title": "Сохранённое условие",
+          "statement": "Что такое классификация изображений как профессиональная задача?\n\nВыбери все верные утверждения\n\nпреобразование изображения в текстовый файл\n\nопределение яркости пикселей изображения\n\nавтоматическое отнесение изображения к одной из категорий\n\nсжатие изображения для хранения",
+          "ismartLink": {
+            "id": "8bb586cd37490f8a49aada04",
+            "label": "Вопрос №22",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/8bb586cd37490f8a49aada04",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "8bb586cd37490f8a49aada04"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "8bb586cd37490f8a49aada04",
+            "conditionSha256": "cd6d0efd1ba214722970fd1001d38a99173580efc4d5d7f4d79c8d4e4544f0a6"
+          },
+          "solution": {
+            "id": "T-8bb586cd37490f8a49aada04",
+            "status": "published",
+            "answer": "автоматическое отнесение изображения к одной из категорий",
+            "code": "",
+            "explanation": "При классификации изображения выбирают категорию, например «дефект» или «норма». Сжатие файла не является решением этой задачи.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-2d020bb1822d6e9b53470a1e",
+      "number": 23,
+      "title": "Вопрос №23",
+      "variants": [
+        {
+          "id": "T-2d020bb1822d6e9b53470a1e",
+          "title": "Сохранённое условие",
+          "statement": "Зачем нужна проверка модели на тестовой выборке в профессиональной задаче?\n\nВыбери все верные утверждения\n\nчтобы дополнительно обучить модель на новых данных\n\nчтобы честно оценить качество до применения в работе\n\nчтобы сократить время обучения\n\nчтобы найти ошибки в обучающих данных",
+          "ismartLink": {
+            "id": "2d020bb1822d6e9b53470a1e",
+            "label": "Вопрос №23",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/2d020bb1822d6e9b53470a1e",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "2d020bb1822d6e9b53470a1e"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "2d020bb1822d6e9b53470a1e",
+            "conditionSha256": "f1b1719157c0725cd00b6c7e8fdc0b659593f309584448a17260250f8f2f43af"
+          },
+          "solution": {
+            "id": "T-2d020bb1822d6e9b53470a1e",
+            "status": "published",
+            "answer": "чтобы честно оценить качество до применения в работе",
+            "code": "",
+            "explanation": "Test нужен для независимой оценки, а не дополнительного обучения. Подготовку с оценкой параметров тоже выполняют на train.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-b4c14c4b96d6a6d8beb0229b",
+      "number": 24,
+      "title": "Вопрос №24",
+      "variants": [
+        {
+          "id": "T-b4c14c4b96d6a6d8beb0229b",
+          "title": "Сохранённое условие",
+          "statement": "Что такое гиперпараметр модели?\n\nВыбери все верные утверждения\n\nпараметр, который модель обучает сама на данных\n\nрезультат предсказания для нового объекта\n\nпараметр, задаваемый вручную до начала обучения\n\nзначение метрики качества",
+          "ismartLink": {
+            "id": "b4c14c4b96d6a6d8beb0229b",
+            "label": "Вопрос №24",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/b4c14c4b96d6a6d8beb0229b",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "b4c14c4b96d6a6d8beb0229b"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "b4c14c4b96d6a6d8beb0229b",
+            "conditionSha256": "998b11c9c885dce60a2c1899a21f32608e8753b60db29ecc1f419e8cb91eee12"
+          },
+          "solution": {
+            "id": "T-b4c14c4b96d6a6d8beb0229b",
+            "status": "published",
+            "answer": "параметр, задаваемый вручную до начала обучения",
+            "code": "",
+            "explanation": "Гиперпараметр задаёт устройство или процесс обучения, например глубину дерева. Его выбирают до fit, часто по валидации, а не обучают как обычный вес.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-cad8087e05d5b698af414e48",
+      "number": 25,
+      "title": "Вопрос №25",
+      "variants": [
+        {
+          "id": "T-cad8087e05d5b698af414e48",
+          "title": "Сохранённое условие",
+          "statement": "Чем задача классификации обращений отличается от кластеризации обращений?\n\nВыбери все верные утверждения\n\nв обеих задачах нет правильных ответов\n\nпри классификации типы заранее известны; кластеризация сама ищет группы без меток\n\nкластеризация использует заранее размеченные типы\n\nклассификация не требует данных",
+          "ismartLink": {
+            "id": "cad8087e05d5b698af414e48",
+            "label": "Вопрос №25",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/cad8087e05d5b698af414e48",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "cad8087e05d5b698af414e48"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "cad8087e05d5b698af414e48",
+            "conditionSha256": "1b54be19342a637026b7a4381fae35681077a08de77cc29d3d6f3e99e8b9fb41"
+          },
+          "solution": {
+            "id": "T-cad8087e05d5b698af414e48",
+            "status": "published",
+            "answer": "при классификации типы заранее известны; кластеризация сама ищет группы без меток",
+            "code": "",
+            "explanation": "В классификации известен набор целевых классов и нужны примеры с метками. Кластеризация ищет структуру похожести без таких меток.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6e99a40d7ec577aa7560789d",
+      "number": 1,
+      "title": "Задание №1",
+      "variants": [
+        {
+          "id": "T-6e99a40d7ec577aa7560789d",
+          "title": "Сохранённое условие",
+          "statement": "Объясните разницу между классификацией и регрессией. Приведите пример каждой из профессиональной практики.",
+          "ismartLink": {
+            "id": "6e99a40d7ec577aa7560789d",
+            "label": "Задание №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/6e99a40d7ec577aa7560789d",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "6e99a40d7ec577aa7560789d"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6e99a40d7ec577aa7560789d",
+            "conditionSha256": "088ed897d0b0bf23d19f5ef0bf513d8fb404aeab5cf28be5e83358e4c3f1c7da"
+          },
+          "solution": {
+            "id": "T-6e99a40d7ec577aa7560789d",
+            "status": "published",
+            "answer": "Классификация предсказывает категорию: например, «жалоба», «запрос» или «претензия» по тексту обращения. Регрессия предсказывает число: например, время обработки в минутах. В обоих случаях входами могут быть характеристики заявки, но тип целевого ответа различается.",
+            "code": "",
+            "explanation": "Внешний вид числа не определяет постановку: код класса 0/1 остаётся категорией, а длительность имеет количественный смысл.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-bcac7bedb3e393f03467bc3e",
+      "number": 2,
+      "title": "Задание №2",
+      "variants": [
+        {
+          "id": "T-bcac7bedb3e393f03467bc3e",
+          "title": "Сохранённое условие",
+          "statement": "Что такое обобщающая способность модели и почему она важна?",
+          "ismartLink": {
+            "id": "bcac7bedb3e393f03467bc3e",
+            "label": "Задание №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/bcac7bedb3e393f03467bc3e",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "bcac7bedb3e393f03467bc3e"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "bcac7bedb3e393f03467bc3e",
+            "conditionSha256": "cffcf6eb4f374262677721aa568c82fd6cd0a8ea1847ab5539075c6af4f72662"
+          },
+          "solution": {
+            "id": "T-bcac7bedb3e393f03467bc3e",
+            "status": "published",
+            "answer": "Обобщающая способность — умение модели находить полезный ответ на новых объектах, не использованных при обучении. Она важна, потому что рабочий поток состоит из новых заявок. Её оценивают на независимых данных, сопоставимых с будущим применением.",
+            "code": "",
+            "explanation": "Высокий результат на train показывает усвоение обучающих примеров, но не гарантирует качество вне них.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-ebe0a2123ba1b3a91e9c5123",
+      "number": 3,
+      "title": "Задание №3",
+      "variants": [
+        {
+          "id": "T-ebe0a2123ba1b3a91e9c5123",
+          "title": "Сохранённое условие",
+          "statement": "Объясните переобучение и приведите пример из профессиональной практики.",
+          "ismartLink": {
+            "id": "ebe0a2123ba1b3a91e9c5123",
+            "label": "Задание №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/ebe0a2123ba1b3a91e9c5123",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "ebe0a2123ba1b3a91e9c5123"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "ebe0a2123ba1b3a91e9c5123",
+            "conditionSha256": "588a4cf968f94b99a60b335bde014d30698cb53ef95cf98f7220d249a09e64ff"
+          },
+          "solution": {
+            "id": "T-ebe0a2123ba1b3a91e9c5123",
+            "status": "published",
+            "answer": "Переобучение возникает, когда модель запоминает частные особенности train и хуже работает на новых примерах. Например, дерево запомнило уникальные слова и номера старых заявок и получило 100% на train, но ошибается на новых формулировках. Помогают контроль сложности, регуляризация и более представительные данные.",
+            "code": "",
+            "explanation": "Признак — заметный разрыв train/test при сопоставимых данных. Улучшение нужно подтвердить повторной независимой оценкой.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-891c4519f263dfe7b7c68621",
+      "number": 4,
+      "title": "Задание №4",
+      "variants": [
+        {
+          "id": "T-891c4519f263dfe7b7c68621",
+          "title": "Сохранённое условие",
+          "statement": "Что такое признаки текстового обращения клиента в задаче классификации?",
+          "ismartLink": {
+            "id": "891c4519f263dfe7b7c68621",
+            "label": "Задание №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/891c4519f263dfe7b7c68621",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "891c4519f263dfe7b7c68621"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "891c4519f263dfe7b7c68621",
+            "conditionSha256": "ccd397e98741fb6a55fa6a2c4d4fd154ed08a53a9e2eaeb4d4291776928be59d"
+          },
+          "solution": {
+            "id": "T-891c4519f263dfe7b7c68621",
+            "status": "published",
+            "answer": "Признаки текстового обращения — числовые характеристики его содержания: длина текста, число вхождений слов, TF-IDF слов и символьных фрагментов. Например, наличие слов «пароль» и «вход» может помогать распознавать категорию «доступ». Категория, назначенная специалистом, является y.",
+            "code": "",
+            "explanation": "Векторизатор подбирают по train и затем применяют к новым текстам. Номера заявок и будущие решения специалиста не следует использовать как замену содержанию.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-69f4b0ff275cf21f3b8d53a5",
+      "number": 5,
+      "title": "Задание №5",
+      "variants": [
+        {
+          "id": "T-69f4b0ff275cf21f3b8d53a5",
+          "title": "Сохранённое условие",
+          "statement": "Что такое целевая переменная? Как её определить в профессиональной задаче?",
+          "ismartLink": {
+            "id": "69f4b0ff275cf21f3b8d53a5",
+            "label": "Задание №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/69f4b0ff275cf21f3b8d53a5",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "69f4b0ff275cf21f3b8d53a5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "69f4b0ff275cf21f3b8d53a5",
+            "conditionSha256": "1767a57ec007e7dcb09857d59b823bc0beddb9e4e8ef0a28b5f858fe7b6768c1"
+          },
+          "solution": {
+            "id": "T-69f4b0ff275cf21f3b8d53a5",
+            "status": "published",
+            "answer": "Целевая переменная — тот результат, который модель должна предсказывать в поставленной задаче. Для сортировки заявок это категория; для оценки длительности — число минут. Её выбирают из цели пользователя, а не случайно из таблицы.",
+            "code": "",
+            "explanation": "Один столбец может быть признаком в одной задаче и целью в другой. Важно исключить недоступные на момент прогноза данные.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-2cb9f10521098530ad8f0e88",
+      "number": 6,
+      "title": "Задание №6",
+      "variants": [
+        {
+          "id": "T-2cb9f10521098530ad8f0e88",
+          "title": "Сохранённое условие",
+          "statement": "Зачем перед обучением модели нужна подготовка профессиональных данных?",
+          "ismartLink": {
+            "id": "2cb9f10521098530ad8f0e88",
+            "label": "Задание №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/2cb9f10521098530ad8f0e88",
+            "status": "unverified",
+            "unitId": "05c4269c56a60b73a17ea396",
+            "elementId": "2cb9f10521098530ad8f0e88"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "2cb9f10521098530ad8f0e88",
+            "conditionSha256": "690331eff263eb5d8f4245a91ec670c0a05ac426d66239f2d0950becafee047d"
+          },
+          "solution": {
+            "id": "T-2cb9f10521098530ad8f0e88",
+            "status": "published",
+            "answer": "Подготовка проверяет, что строки, типы, единицы и метки соответствуют задаче. Она включает поиск пропусков и дублей, исправление подтверждённых ошибок, кодирование категорий и при необходимости масштабирование. Иначе алгоритм может учиться на искажённых или несопоставимых значениях.",
+            "code": "",
+            "explanation": "Правила подготовки фиксируют, исходник сохраняют, а параметры преобразований оценивают только на train.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    }
+  ]
+}

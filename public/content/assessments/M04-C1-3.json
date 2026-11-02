@@ -1,0 +1,194 @@
+{
+  "id": "M04-C1-3",
+  "moduleId": 4,
+  "title": "Текущий контроль по темам 1-3 Модуля 4",
+  "kind": "control",
+  "number": "4.К1-3",
+  "tasks": [
+    {
+      "id": "T-afc7801fbd277f9573e1cffc",
+      "number": 1,
+      "title": "Вопрос №1",
+      "variants": [
+        {
+          "id": "T-afc7801fbd277f9573e1cffc",
+          "title": "Сохранённое условие",
+          "statement": "Что отличает прикладной ИИ-проект от набора учебных заданий?\n\nВыбери все верные утверждения\n\nпроект содержит только теоретические вопросы\n\nпроект решает реальную профессиональную задачу от постановки до рабочего продукта\n\nпроект не требует работы с реальными данными\n\nпроект пишется без использования Python",
+          "ismartLink": {
+            "id": "afc7801fbd277f9573e1cffc",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/1e43885de15d0188db5d26bc/element/afc7801fbd277f9573e1cffc",
+            "status": "unverified",
+            "unitId": "1e43885de15d0188db5d26bc",
+            "elementId": "afc7801fbd277f9573e1cffc"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "afc7801fbd277f9573e1cffc",
+            "conditionSha256": "6c95b965fe42510eedbef21d841d124ebd844e32abfd38ef44623058b5de0df0"
+          },
+          "solution": {
+            "id": "T-afc7801fbd277f9573e1cffc",
+            "status": "published",
+            "answer": "проект решает реальную профессиональную задачу от постановки до рабочего продукта",
+            "code": "",
+            "explanation": "Прикладной проект связывает профессиональную проблему, данные, работающий прототип и проверку результата. Набора несвязанных упражнений для этого недостаточно.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-89bafdde2c6221c4a7a8d140",
+      "number": 2,
+      "title": "Вопрос №2",
+      "variants": [
+        {
+          "id": "T-89bafdde2c6221c4a7a8d140",
+          "title": "Сохранённое условие",
+          "statement": "Что такое авторские права в контексте профессионального ИИ-проекта?\n\nВыбери все верные утверждения\n\nправо автора получить лучшую оценку\n\nограничения на использование чужих материалов без указания источника и разрешения\n\nправила оформления кода программы\n\nтребования к структуре паспорта проекта",
+          "ismartLink": {
+            "id": "89bafdde2c6221c4a7a8d140",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/1e43885de15d0188db5d26bc/element/89bafdde2c6221c4a7a8d140",
+            "status": "unverified",
+            "unitId": "1e43885de15d0188db5d26bc",
+            "elementId": "89bafdde2c6221c4a7a8d140"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "89bafdde2c6221c4a7a8d140",
+            "conditionSha256": "4a36416822cd60eccb9af7edc4ab474b0ec137d52433e48a034f0e7d6e26f209"
+          },
+          "solution": {
+            "id": "T-89bafdde2c6221c4a7a8d140",
+            "status": "published",
+            "answer": "ограничения на использование чужих материалов без указания источника и разрешения",
+            "code": "",
+            "explanation": "Из предложенных ответов подходит уважение прав на чужие материалы. Указание автора само по себе не всегда заменяет требуемое разрешение или условия лицензии.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-96f92d1f6d9bb74fa87d941c",
+      "number": 3,
+      "title": "Вопрос №3",
+      "variants": [
+        {
+          "id": "T-96f92d1f6d9bb74fa87d941c",
+          "title": "Сохранённое условие",
+          "statement": "Что такое этика использования ИИ в профессиональной деятельности?\n\nВыбери все верные утверждения\n\nправила форматирования кода на Python\n\nнормы честного, безопасного и ответственного применения ИИ с учётом ограничений\n\nтехнические параметры обучения нейронных сетей\n\nтребования к формату отчёта о проекте",
+          "ismartLink": {
+            "id": "96f92d1f6d9bb74fa87d941c",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/1e43885de15d0188db5d26bc/element/96f92d1f6d9bb74fa87d941c",
+            "status": "unverified",
+            "unitId": "1e43885de15d0188db5d26bc",
+            "elementId": "96f92d1f6d9bb74fa87d941c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "96f92d1f6d9bb74fa87d941c",
+            "conditionSha256": "54c9f10e3c58fd23e87817c40b78e2677da86f59105d3a6ecb4b45c2dc6539c1"
+          },
+          "solution": {
+            "id": "T-96f92d1f6d9bb74fa87d941c",
+            "status": "published",
+            "answer": "нормы честного, безопасного и ответственного применения ИИ с учётом ограничений",
+            "code": "",
+            "explanation": "Этическое применение учитывает ошибки, последствия, прозрачность и ответственность человека. Форматирование кода не исчерпывает этику.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-b83cfa6ee2a70301ce160982",
+      "number": 4,
+      "title": "Вопрос №4",
+      "variants": [
+        {
+          "id": "T-b83cfa6ee2a70301ce160982",
+          "title": "Сохранённое условие",
+          "statement": "Что такое \"рабочий продукт\" как результат прикладного ИИ-проекта?\n\nВыбери все верные утверждения\n\nнабор слайдов с теоретическим описанием\n\nтолько исходный код без документации\n\nфункционирующий прототип с документацией, пригодный к применению в профессиональной задаче\n\nотчёт о допущенных ошибках",
+          "ismartLink": {
+            "id": "b83cfa6ee2a70301ce160982",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/1e43885de15d0188db5d26bc/element/b83cfa6ee2a70301ce160982",
+            "status": "unverified",
+            "unitId": "1e43885de15d0188db5d26bc",
+            "elementId": "b83cfa6ee2a70301ce160982"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "b83cfa6ee2a70301ce160982",
+            "conditionSha256": "d9bb34d31dc2ee2815f1177cb6439fa37c3dd7d04b79b2cd1f77027c74862751"
+          },
+          "solution": {
+            "id": "T-b83cfa6ee2a70301ce160982",
+            "status": "published",
+            "answer": "функционирующий прототип с документацией, пригодный к применению в профессиональной задаче",
+            "code": "",
+            "explanation": "Рабочий продукт должен выполнять основную функцию и сопровождаться понятной документацией. Только слайды или один файл кода не показывают воспроизводимость решения.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-5be8b5fc4597daa348b9b68f",
+      "number": 1,
+      "title": "Задание №1",
+      "variants": [
+        {
+          "id": "T-5be8b5fc4597daa348b9b68f",
+          "title": "Сохранённое условие",
+          "statement": "Что такое граничный случай? Почему важно тестировать на граничных случаях?",
+          "ismartLink": {
+            "id": "5be8b5fc4597daa348b9b68f",
+            "label": "Задание №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/1e43885de15d0188db5d26bc/element/5be8b5fc4597daa348b9b68f",
+            "status": "unverified",
+            "unitId": "1e43885de15d0188db5d26bc",
+            "elementId": "5be8b5fc4597daa348b9b68f"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "5be8b5fc4597daa348b9b68f",
+            "conditionSha256": "59b2a1abf9d325554ec876abdebcb8aa308896d08a9f08d39ea25053037731e0"
+          },
+          "solution": {
+            "id": "T-5be8b5fc4597daa348b9b68f",
+            "status": "published",
+            "answer": "Граничный случай — вход на границе допустимого диапазона или редкая ситуация, способная изменить ветку алгоритма. Для порога confidence < 0.60 проверяют 0.59, 0.60 и 0.61; также проверяют пустой текст и неверный тип. Это выявляет ошибки знака сравнения, валидации и обработки крайних случаев.",
+            "code": "",
+            "explanation": "При строгом неравенстве значение ровно 0.60 не попадает в ветку «меньше». Ожидаемое поведение нужно определить до запуска.",
+            "kind": "text",
+            "verification": "source",
+            "testCount": 0,
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию"
+          }
+        }
+      ]
+    }
+  ]
+}

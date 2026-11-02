@@ -1,0 +1,2826 @@
+{
+  "id": "M01-L19",
+  "moduleId": 1,
+  "title": "Промежуточная аттестация",
+  "kind": "assessment",
+  "number": "1.19",
+  "tasks": [
+    {
+      "id": "T-6a5c829b4e874f00070e7c70",
+      "number": 1,
+      "title": "Вопрос №1",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c70-V1",
+          "title": "Вариант 1",
+          "statement": "Что возвращает df.shape?\n\nВыбери все верные утверждения\n\nназвания столбцов\nколичество строк и столбцов\nтолько среднее значение\nграфик распределения",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c70",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c70?variant=6a5c829b4e874f00070e7c70",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c70"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c70",
+            "conditionSha256": "f2afd2fcdf79a518a6bd7e4d5a98222550ccdfde61d7546a885f46157bece1b8"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c70-V1",
+            "status": "published",
+            "answer": "количество строк и столбцов",
+            "code": "",
+            "explanation": "shape возвращает кортеж (число строк, число столбцов). Названия столбцов доступны через columns.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "082eefa6cbed0647f1eb373b58c5c1b3a18337e6d6ba36cfe2ebacf165e5185c",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "количество строк и столбцов"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c70-V2",
+          "title": "Вариант 2",
+          "statement": "Что показывает df.isna().sum()?\n\nВыбери все верные утверждения\n\nтолько названия файлов\nколичество пропусков по столбцам\nточность модели\nцвет графика",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c70",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c70?variant=5db21e769cb931a2798786ae",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c70"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c70",
+            "conditionSha256": "f3e59a0098501080cfb1618802effae361c58da3594ec2a749c674c689dd1101"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c70-V2",
+            "status": "published",
+            "answer": "количество пропусков по столбцам",
+            "code": "",
+            "explanation": "isna создаёт маску пропусков, а sum по умолчанию суммирует True в каждом столбце. Результат — число пропусков по колонкам.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "693743fe59fb7f9cb7e17ac30653220cf44e77dc0afebca591b787d539e62ae4",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "количество пропусков по столбцам"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c70-V3",
+          "title": "Вариант 3",
+          "statement": "Что делает df.describe()?\n\nВыбери все верные утверждения\n\nвыводит статистику по числовым столбцам\nудаляет все строки\nобучает нейросеть\nсохраняет презентацию",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c70",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c70?variant=3b3c515623039669d9c92331",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c70"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c70",
+            "conditionSha256": "5d4ece3e024f0e0754008915368ce9eadda57b9f8e825493b310335c3174cfe3"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c70-V3",
+            "status": "published",
+            "answer": "выводит статистику по числовым столбцам",
+            "code": "",
+            "explanation": "Для числовых столбцов describe показывает количество, среднее, стандартное отклонение, минимум, квартили и максимум. Оно не изменяет таблицу.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "b8096245937a8a7ffa02b3b1b4d3d7338c0f11d1e33b4353bc4687bb81fb225e",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "выводит статистику по числовым столбцам"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c70-V4",
+          "title": "Вариант 4",
+          "statement": "Что такое CSV-файл в контексте анализа данных?\n\nВыбери все верные утверждения\n\nфайл с табличными данными\nтолько изображение\nформат видео\nмодель нейросети",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c70",
+            "label": "Вопрос №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c70?variant=f7011e834a69fb10e94042b9",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c70"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c70",
+            "conditionSha256": "38db2f89013c22f012bbc31e60046d628123ce17d29933a6c77c11da03ef5053"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c70-V4",
+            "status": "published",
+            "answer": "файл с табличными данными",
+            "code": "",
+            "explanation": "CSV — текстовый формат табличных данных с разделителем полей. Его можно прочитать в DataFrame.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "ab6238183945ed7ca34d00550a21d1f60ab27419f41fcb7895b6c7dff4e2bddd",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "файл с табличными данными"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7c75",
+      "number": 2,
+      "title": "Вопрос №2",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c75-V1",
+          "title": "Вариант 1",
+          "statement": "Какие команды подходят для первичного осмотра таблицы?\n\nВыбери все верные утверждения\n\ndf.head()\ndf.shape\ndf.columns\nplt.show() как единственная команда осмотра",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c75",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c75?variant=6a5c829b4e874f00070e7c75",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c75"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c75",
+            "conditionSha256": "c1e6bd188b71080413a99c1111234a915c8fdb607ce1186cf5863d5890a015be"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c75-V1",
+            "status": "published",
+            "answer": "df.head()\ndf.shape\ndf.columns",
+            "code": "",
+            "explanation": "head показывает первые строки, shape — размер, columns — имена полей. plt.show только отображает подготовленный график и не заменяет осмотр таблицы.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "f5b89d6f66626e959057ad0b6989f73d0ea1656283467042e2d6491c994ad81d",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "df.head()",
+              "df.shape",
+              "df.columns"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c75-V2",
+          "title": "Вариант 2",
+          "statement": "Какие действия относятся к подготовке данных?\n\nВыбери все верные утверждения\n\nисправить явные опечатки категорий\nигнорировать все ошибки\nпроверить дубли\nнайти пропуски",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c75",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c75?variant=5cf98f00fa05c054a69559f6",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c75"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c75",
+            "conditionSha256": "a6eb00459ffc128d56e2214a65277280b9533f6cdd014923fbc14e1ad93dd613"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c75-V2",
+            "status": "published",
+            "answer": "исправить явные опечатки категорий\nпроверить дубли\nнайти пропуски",
+            "code": "",
+            "explanation": "Опечатки, дубли и пропуски нужно выявлять и обрабатывать по обоснованным правилам. Игнорирование ошибок не является подготовкой.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "8afc5362cfcca2c24ddf32dc3173680850dfb4848f4cf14a318661f467903c4f",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "исправить явные опечатки категорий",
+              "проверить дубли",
+              "найти пропуски"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c75-V3",
+          "title": "Вариант 3",
+          "statement": "Какие признаки могут быть числовыми?\n\nВыбери все верные утверждения\n\ncompleted_tasks\ntrack\nstudy_hours\nscore",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c75",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c75?variant=b9e7cd4b246f85c35111a7ab",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c75"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c75",
+            "conditionSha256": "eb61cf603cb7e9d14b61597e34c976cddb11844c876a58ce991858949411b70d"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c75-V3",
+            "status": "published",
+            "answer": "completed_tasks\nstudy_hours\nscore",
+            "code": "",
+            "explanation": "Количество выполненных заданий, часы и балл могут измеряться числами. track в данном учебном контексте обозначает категорию направления.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "7fcfcca169f15b8c69c6d70345193b2622302a34f6f4155d1d53f19dd1d3c856",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "completed_tasks",
+              "study_hours",
+              "score"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c75-V4",
+          "title": "Вариант 4",
+          "statement": "Какие проблемы качества данных можно найти в таблице?\n\nВыбери все верные утверждения\n\nвыбросы\nаккуратно подписанные оси графика\nдубли\nпропуски",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c75",
+            "label": "Вопрос №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c75?variant=b1805d5d812c80fa2dbbc916",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c75"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c75",
+            "conditionSha256": "5ab10c763f364749a4105e01caffc810ee4cc7f7855008087432239e77347c55"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c75-V4",
+            "status": "published",
+            "answer": "выбросы\nдубли\nпропуски",
+            "code": "",
+            "explanation": "Выбросы, повторы и пропуски относятся к качеству исходных данных. Подписи осей улучшают представление графика и не являются дефектом таблицы.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "5053878af2a2bba0e2f17bfe9c6d24f8dbfd274b0091e011a52699582f184356",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "выбросы",
+              "дубли",
+              "пропуски"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7c7a",
+      "number": 3,
+      "title": "Вопрос №3",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c7a-V1",
+          "title": "Вариант 1",
+          "statement": "Выберите целевую переменную для задачи предсказания результата обучения по признакам активности.\n\nВыбери все верные утверждения\n\nstudent_id\nfinal_result\nstudy_hours\nsleep_hours",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c7a",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c7a?variant=6a5c829b4e874f00070e7c7a",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c7a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c7a",
+            "conditionSha256": "1e0f0311e0041461be7964dccf4687f2028aa2882148efb32f3e1528e7ef639d"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c7a-V1",
+            "status": "published",
+            "answer": "final_result",
+            "code": "",
+            "explanation": "Модель должна предсказывать final_result, поэтому это y. Остальные содержательные поля могут быть X, а id обычно служебный.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "f6850bc9b7dc7db03f8f891e9da36d65975870934acf321c9f378d811c03323f",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "final_result"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c7a-V2",
+          "title": "Вариант 2",
+          "statement": "Выберите команду для проверки количества полных дублей.\n\nВыбери все верные утверждения\n\ndf.duplicated().sum()\ndf.columns\nprint(\"hello\")\nplt.title()",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c7a",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c7a?variant=ac68710f31d66bf2bcb2b34a",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c7a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c7a",
+            "conditionSha256": "dae88e7e40f1ac7b9492776de85847099afe46bc0dfb829bd50a33b9e2d7099a"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c7a-V2",
+            "status": "published",
+            "answer": "df.duplicated().sum()",
+            "code": "",
+            "explanation": "duplicated отмечает повторные строки, sum считает их. При keep='first' первая запись каждой группы не считается повтором.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "e9233ea7cc9f98eae1ae5f0101402baedf712b2cb876a70368bf736e197ad64c",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "df.duplicated().sum()"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c7a-V3",
+          "title": "Вариант 3",
+          "statement": "Выберите пример выброса при шкале score от 0 до 100.\n\nВыбери все верные утверждения\n\nscore = 78\nscore = 0\nscore = 130\nscore = 61",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c7a",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c7a?variant=4c5a8c82237e694dcd1fd229",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c7a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c7a",
+            "conditionSha256": "cf8f65165c4563f7afcd2e399afc11929d7427ec4d9d3baa1dd21f71fe8fe93a"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c7a-V3",
+            "status": "published",
+            "answer": "score = 130",
+            "code": "",
+            "explanation": "130 выходит за заданную шкалу 0–100. Значения 0, 61 и 78 сами по себе допустимы.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "7d37109049a5c9f1fa4da1fca71e756d0dbf6c3b3a7c6e2c358468ac14703d30",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "score = 130"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c7a-V4",
+          "title": "Вариант 4",
+          "statement": "Выберите корректный вывод по таблице, если средний score у pass выше, чем у fail.\n\nВыбери все верные утверждения\n\nВ этой таблице у pass средний score выше, чем у fail\nВсе ученики всегда будут сдавать\nМодель будет идеальной\nДанные больше не нужно проверять",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c7a",
+            "label": "Вопрос №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c7a?variant=d08a7d4b5f56cc02f8e5e04f",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c7a"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c7a",
+            "conditionSha256": "8aa782f1de72a9fa83de1ade53f499b04c9705f36dbb173ec5cedf5878817773"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c7a-V4",
+            "status": "published",
+            "answer": "В этой таблице у pass средний score выше, чем у fail",
+            "code": "",
+            "explanation": "Вывод ограничен наблюдаемой таблицей и конкретным средним. Данные не доказывают идеальность модели или будущий успех всех учеников.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "cf647dd190c99c3a47621ee2168661fbaac7755ecf023a6ac6099c90af885f2c",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "В этой таблице у pass средний score выше, чем у fail"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7c7f",
+      "number": 4,
+      "title": "Вопрос №4",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c7f-V1",
+          "title": "Вариант 1",
+          "statement": "Выберите признаки, которые можно использовать на входе модели без явной утечки целевого ответа.\n\nВыбери все верные утверждения\n\nstudy_hours\ncompleted_tasks\nfinal_result\nsleep_hours",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c7f",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c7f?variant=6a5c829b4e874f00070e7c7f",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c7f"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c7f",
+            "conditionSha256": "956c9c2437af3120a5f42e084c7b1174892000f41491728bc6a603386fdce8a7"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c7f-V1",
+            "status": "published",
+            "answer": "study_hours\ncompleted_tasks\nsleep_hours",
+            "code": "",
+            "explanation": "Эти поля могут описывать активность до результата. final_result нельзя одновременно подать как X и предсказывать как y: это явная утечка ответа.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "1ac68a51901d389868bcc817c1ff36ce202f8ddfde8e11a2a9828a246912705f",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "study_hours",
+              "completed_tasks",
+              "sleep_hours"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c7f-V2",
+          "title": "Вариант 2",
+          "statement": "Выберите признаки, подходящие для анализа учебной активности.\n\nВыбери все верные утверждения\n\nstudy_hours\ncompleted_tasks\nscreen_time_hours\nfinal_result как входной признак для предсказания final_result",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c7f",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c7f?variant=8421f37ded26011a511384ea",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c7f"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c7f",
+            "conditionSha256": "82cef5749eada0b4570c6fc57b96d6057447b8ad38211a81f47cc23374767017"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c7f-V2",
+            "status": "published",
+            "answer": "study_hours\ncompleted_tasks\nscreen_time_hours",
+            "code": "",
+            "explanation": "Часы обучения, выполненные задания и экранное время описывают активность. Доступность каждого поля нужно проверить относительно момента прогноза.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "9f85c3dd74490c8d02cc356bc49bee9cd3ceb0bf0ba21732c4c8a5be2c43455a",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "study_hours",
+              "completed_tasks",
+              "screen_time_hours"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c7f-V3",
+          "title": "Вариант 3",
+          "statement": "Выберите проверки качества данных.\n\nВыбери все верные утверждения\n\nisna().sum()\nduplicated().sum()\nvalue_counts()\nprint(2 + 2)",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c7f",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c7f?variant=a6047c82a7a8a87f39a71167",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c7f"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c7f",
+            "conditionSha256": "cec5e69940a627138734eb215ce6b97d82dba99df2e5d8fed603231b9afb3911"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c7f-V3",
+            "status": "published",
+            "answer": "isna().sum()\nduplicated().sum()\nvalue_counts()",
+            "code": "",
+            "explanation": "Три команды проверяют пропуски, дубли и частоты категорий. print(2+2) проверяет лишь выполнение арифметики.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "7cf732e2714e8c29c68d68bbb0be16665c9856a5689110f66fa7bbec60a3c90e",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "isna().sum()",
+              "duplicated().sum()",
+              "value_counts()"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c7f-V4",
+          "title": "Вариант 4",
+          "statement": "Выберите команды, которые помогают проверить таблицу перед анализом.\n\nВыбери все верные утверждения\n\ndf.head()\ndf.info()\ndf.isna().sum()\nfinal_result в X всегда обязательно",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c7f",
+            "label": "Вопрос №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c7f?variant=55bdefbd1c3a0f318701926b",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c7f"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c7f",
+            "conditionSha256": "e7f82d548e4c18cffd9f6bcd8d3fe272e536fbbfe4b062ba2eb5cbf7e91535d8"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c7f-V4",
+            "status": "published",
+            "answer": "df.head()\ndf.info()\ndf.isna().sum()",
+            "code": "",
+            "explanation": "head даёт примеры, info — типы и заполненность, isna().sum — количество пропусков. Включение целевой переменной в X не является проверкой.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "7a56d446c7a58db9d409d56c160f3046dbe634545a03f8f07bfa813c300c5b4a",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "df.head()",
+              "df.info()",
+              "df.isna().sum()"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7c84",
+      "number": 5,
+      "title": "Вопрос №5",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c84-V1",
+          "title": "Вариант 1",
+          "statement": "Расположите шаги анализа данных в правильном порядке.\n\nПроверить пропуски и дубли\nОткрыть CSV\nВыделить признаки и цель\nПостроить вывод",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c84",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c84?variant=6a5c829b4e874f00070e7c84",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c84"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c84",
+            "conditionSha256": "50226af16a29e43230f1fa877e2b25f866d59320b2de0f7efe8573f7e38f9c0c"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c84-V1",
+            "status": "published",
+            "answer": "Открыть CSV → Проверить пропуски и дубли → Выделить признаки и цель → Построить вывод.",
+            "code": "",
+            "explanation": "Сначала получают данные, затем проверяют их качество, определяют роли столбцов и только после анализа формулируют вывод.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "0773f0830b40011f21a29a291b9947a8f90a847a564052980aa17168e0affde5",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c84-V2",
+          "title": "Вариант 2",
+          "statement": "Упорядочите действия перед построением вывода.\n\nОткрыть CSV\nПостроить вывод\nПроверить пропуски и дубли\nВыделить признаки и цель",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c84",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c84?variant=459a9004bf696c744a97aca2",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c84"
+          },
+          "sourceIssues": [
+            "В снимке варианта заголовок и список элементов виджета не согласованы. Пояснение разбирает это расхождение."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c84",
+            "conditionSha256": "db40745443b03ca2acbffdd64a3cbcbcf829912a732011b55eb5de3d110bf860"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c84-V2",
+            "status": "published",
+            "answer": "По смыслу задания: Открыть данные → Проверить качество → Посчитать показатели → Написать вывод.\nЕсли в виджете отображён список из сохранённого снимка: Открыть CSV → Проверить пропуски и дубли → Выделить признаки и цель → Построить вывод.",
+            "code": "",
+            "explanation": "В архиве заголовок варианта и список элементов виджета не согласованы. Приведены содержательный порядок и порядок реально видимых пунктов; это не заявление о проверке перетаскивания на платформе.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "c0d7d0c793f2abc56662b86406f09670d93f59896d2fccf83cdbf6846857d884",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c84-V3",
+          "title": "Вариант 3",
+          "statement": "Расположите шаги подготовки X и y.\n\nОткрыть данные\nПроверить качество\nНаписать вывод\nПосчитать показатели",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c84",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c84?variant=015000469e5047562f0be730",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c84"
+          },
+          "sourceIssues": [
+            "В снимке варианта заголовок и список элементов виджета не согласованы. Пояснение разбирает это расхождение."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c84",
+            "conditionSha256": "55356129fa72b1d46401e9a337244b09b2a855a18a3deeaf83fc12a5b19e2c58"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c84-V3",
+            "status": "published",
+            "answer": "Найти целевой столбец → Выбрать признаки → Исключить целевой столбец из X → Записать X и y.",
+            "code": "",
+            "explanation": "Это порядок подготовки признаков и цели по формулировке. В сохранённом виджете показаны пункты другого задания, поэтому его список нельзя выдавать за корректный полный набор этого варианта.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "e7b53afb077ec021e33ffcaa111b4c1670bf6f40d65d0e5490507212b6a2e143",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c84-V4",
+          "title": "Вариант 4",
+          "statement": "Расположите элементы мини-анализа в логичном порядке.\n\nИсключить целевой столбец из X\nНайти целевой столбец\nВыбрать признаки\nЗаписать X и y",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c84",
+            "label": "Вопрос №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c84?variant=f886ade4a4dadd3718787641",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c84"
+          },
+          "sourceIssues": [
+            "В снимке варианта заголовок и список элементов виджета не согласованы. Пояснение разбирает это расхождение."
+          ],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c84",
+            "conditionSha256": "072aab3d8e0ca218ef4f1763afe03c9e8c3ea3c7cfb24b71ea29db7bdef55a42"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c84-V4",
+            "status": "published",
+            "answer": "Просмотр таблицы → Описание объекта и признаков → Расчёт показателей → Итоговый вывод.",
+            "code": "",
+            "explanation": "Мини-анализ начинается с осмотра и понимания данных. В снимке виджета остался список подготовки X и y из другого варианта; содержательный ответ дан по текущему заголовку.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "6b1834d155d8e74cfdccb4fcb3997f12ba54c11bfef13d928313b2eec2467299",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7c88",
+      "number": 6,
+      "title": "Вопрос №6",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c88-V1",
+          "title": "Вариант 1",
+          "statement": "Вопрос №6\nСоедините проблему данных и команду проверки.\nПропуски\nДубли\nКатегории\nЧисловые выбросы\ndf.isna().sum()\ndf.duplicated().sum()\nvalue_counts()\ndescribe()",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c88",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c88?variant=6a5c829b4e874f00070e7c88",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c88"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c88",
+            "conditionSha256": "2a5970a7a59b6c0f2f666532c41dae4635b2b207309441cbed3369769a0dec29"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c88-V1",
+            "status": "published",
+            "answer": "Пропуски → df.isna().sum()\nДубли → df.duplicated().sum()\nКатегории → value_counts()\nЧисловые выбросы → describe()",
+            "code": "",
+            "explanation": "Первые две команды считают пропуски и повторные строки. Частоты выявляют редкие и ошибочные категории; числовая сводка помогает заметить необычные диапазоны, но сама не доказывает ошибочность выброса.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "cb0ad28a47db740291bc778b409ee3ea27221f455aad283934642e9e98701993",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c88-V2",
+          "title": "Вариант 2",
+          "statement": "Вопрос №6\nСоедините понятие и описание.\nОбъект\nПризнак\nЦель\nДубль\nодна строка таблицы\nсвойство объекта\nто, что предсказываем\nповтор записи",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c88",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c88?variant=a78b41ca607fc1eba6d4b73e",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c88"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c88",
+            "conditionSha256": "86c05c4a67d1b1a37740814197125a90b26653969f3a903defe9a86ea4c4bbed"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c88-V2",
+            "status": "published",
+            "answer": "Объект → одна строка таблицы\nПризнак → свойство объекта\nЦель → то, что предсказываем\nДубль → повтор записи",
+            "code": "",
+            "explanation": "Различение этих понятий нужно для правильного выбора X и y и для проверки качества таблицы.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "f790a989fbac5547c2ea23911682daad1e5e097d0b0059572e089cee39afffb1",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c88-V3",
+          "title": "Вариант 3",
+          "statement": "Вопрос №6\nСоедините тип задачи ИИ и пример.\nКлассификация\nРегрессия\nКластеризация\nАнализ качества данных\nпредсказать pass/fail\nпредсказать score\nнайти похожие группы\nнайти пропуски",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c88",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c88?variant=19b6098bb997ff1abeb0fe21",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c88"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c88",
+            "conditionSha256": "b9b0272a2c3af819078e5ab45af334ab9900233f9af664b7e3397184c39d156b"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c88-V3",
+            "status": "published",
+            "answer": "Классификация → предсказать pass/fail\nРегрессия → предсказать score\nКластеризация → найти похожие группы\nАнализ качества данных → найти пропуски",
+            "code": "",
+            "explanation": "Тип задачи определяется выходом: категория, число, группа без заданной метки или диагностическая проверка данных.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "f08d7750323484ada4c0612537070bb6f3f69312338b92dd8b8713be935e3252",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c88-V4",
+          "title": "Вариант 4",
+          "statement": "Вопрос №6\nСоедините команду и назначение.\nhead()\nshape\ncolumns\nmean()\nпервые строки\nразмер таблицы\nназвания столбцов\nсреднее значение",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c88",
+            "label": "Вопрос №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c88?variant=fa06d36442cac8291ab32515",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c88"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c88",
+            "conditionSha256": "c4865606eaeb15a64c93ffb7f3a5fcb436c7230150a4d364814d18aed2f22a0b"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c88-V4",
+            "status": "published",
+            "answer": "head() → первые строки\nshape → размер таблицы\ncolumns → названия столбцов\nmean() → среднее значение",
+            "code": "",
+            "explanation": "shape и columns являются атрибутами DataFrame без вызова скобками; head и mean — методы.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "197da935e9bdd65ca9d7c10c2ec2fef70013711bc16a93c2b58ad79d6863442d",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7c8d",
+      "number": 7,
+      "title": "Вопрос №7",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c8d-V1",
+          "title": "Вариант 1",
+          "statement": "Подчеркните некорректную часть вывода:\n\nВ таблице 60 строк, средний балл 72, значит все ученики хорошо подготовлены и модель точно будет идеальной",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c8d",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c8d?variant=6a5c829b4e874f00070e7c8d",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c8d"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c8d",
+            "conditionSha256": "b42427c914c97f183feb57c13ab01ca6c3b175a666192c3082c43d3436495e55"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c8d-V1",
+            "status": "published",
+            "answer": "Некорректно: «значит все ученики хорошо подготовлены и модель точно будет идеальной».",
+            "code": "",
+            "explanation": "Средний балл 72 не описывает каждого ученика, а число строк и среднее не доказывают качество будущей модели. Нужны распределение, независимая оценка и ограничения.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "434f44b52a9185671337321839ba458b7ab69da880176cf9853c2f02770c7320",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c8d-V2",
+          "title": "Вариант 2",
+          "statement": "Подчеркните проблемную часть утверждения: \"В данных найден один дубль, поэтому весь датасет нельзя использовать ни для каких задач\".",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c8d",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c8d?variant=0eb6e1b79a4f3d715bb3741a",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c8d"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c8d",
+            "conditionSha256": "113f8efad96433909289edc85b43413bb70f819798bcc0a1dfed5beb294eb2c1"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c8d-V2",
+            "status": "published",
+            "answer": "Некорректно: «поэтому весь датасет нельзя использовать ни для каких задач».",
+            "code": "",
+            "explanation": "Один дубль требует проверки и обработки по правилам, но не доказывает полную непригодность набора для любой цели.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "e0f4a251bb854d30cccc65ea883848510596a756e40c5f3fe991b8d23a64da4c",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c8d-V3",
+          "title": "Вариант 3",
+          "statement": "Подчеркните ошибочную часть: \"Если график красивый, то проверять пропуски и дубли уже не нужно\".",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c8d",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c8d?variant=892e28863de69e197a3e05b8",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c8d"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c8d",
+            "conditionSha256": "76a7b6461a78b57feee52b03c84fbd21c922b36f59a4ee74e7e91e75c4dee9d2"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c8d-V3",
+            "status": "published",
+            "answer": "Некорректно: «то проверять пропуски и дубли уже не нужно».",
+            "code": "",
+            "explanation": "Привлекательное оформление графика не подтверждает качество исходных строк. Проверки данных нужны независимо от дизайна.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "9262a95777d156f7157683442ff8cadeb0b3e7717915700a368064d658389094",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c8d-V4",
+          "title": "Вариант 4",
+          "statement": "Подчеркните некорректную часть: \"В данных есть пропуски, но они не могут повлиять на расчеты и модель\".",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c8d",
+            "label": "Вопрос №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c8d?variant=90482061b2a91c41144fd182",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c8d"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c8d",
+            "conditionSha256": "80422bb2d9cc907c2d8d3a08d8256eccbfe383db9fbaeee0d853b180b1bb74f8"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c8d-V4",
+            "status": "published",
+            "answer": "Некорректно: «они не могут повлиять на расчёты и модель».",
+            "code": "",
+            "explanation": "Пропуски могут изменить состав анализируемой выборки, значения показателей и работу алгоритма. Их влияние оценивают, а способ обработки обосновывают.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "c7dd22c3177b6a83558557909ee84cef20a625f7f8fad2a4787d1500e99881d4",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7c92",
+      "number": 8,
+      "title": "Вопрос №8",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c92-V1",
+          "title": "Вариант 1",
+          "statement": "Какая задача является классификацией?\n\nВыбери все верные утверждения\n\nпредсказать pass/fail\nпредсказать точное время в минутах\nнайти среднее значение\nвывести названия столбцов",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c92",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c92?variant=6a5c829b4e874f00070e7c92",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c92"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c92",
+            "conditionSha256": "7e25c7260ab441715d2ce0901a8c984917ece067be6faf81eb5a4969d69fe012"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c92-V1",
+            "status": "published",
+            "answer": "предсказать pass/fail",
+            "code": "",
+            "explanation": "pass/fail — два дискретных класса. Точное время является числом, а вычисление среднего само по себе не является классификацией.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "2df23e89586841004a0e30900dfcdd79b5549d854202fe875cdf1817fff7c279",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "предсказать pass/fail"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c92-V2",
+          "title": "Вариант 2",
+          "statement": "Какой график чаще всего подходит для связи двух числовых признаков?\n\nВыбери все верные утверждения\n\nscatterplot\nvalue_counts()\nтаблица умножения\ndf.columns",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c92",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c92?variant=c33274edc87032287e229288",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c92"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c92",
+            "conditionSha256": "a7c2ae8ab0ff3d322ebcc28e3aa31fc975d048fcd62a259326d125dc8b6adee3"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c92-V2",
+            "status": "published",
+            "answer": "scatterplot",
+            "code": "",
+            "explanation": "Диаграмма рассеяния показывает пары значений двух числовых признаков. value_counts считает категории и не является таким графиком.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "16841c9d30e572884b25d5a8086636230fcb822fb388a6bd7fdda71930359def",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "scatterplot"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c92-V3",
+          "title": "Вариант 3",
+          "statement": "Что обычно означает одна строка таблицы в датасете?\n\nВыбери все верные утверждения\n\nодин объект\nвсе данные сразу\nтолько название файла\nцвет графика",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c92",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c92?variant=5ad3e95071db9c447df8af93",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c92"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c92",
+            "conditionSha256": "e72460d9a60d96cfa84e33c23f979e13419002dcc3cb8eb1b3d0be3f3592a8b5"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c92-V3",
+            "status": "published",
+            "answer": "один объект",
+            "code": "",
+            "explanation": "Строка обычно соответствует одному объекту или наблюдению. Столбцы описывают его характеристики.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "7dca54e48168b5fe95e1ac4d63bc45bc2210b22290b8f0775f383bf9bf7569d8",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "один объект"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c92-V4",
+          "title": "Вариант 4",
+          "statement": "Если модель должна определить класс pass/fail, это задача...\n\nВыбери все верные утверждения\n\nклассификации\nрегрессии\nархивации\nцвет графика",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c92",
+            "label": "Вопрос №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c92?variant=d4b68735637e69c202ff2a86",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c92"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c92",
+            "conditionSha256": "6f7a44d93e703d7e2986af402ce30695560e0890e1dc2b83cf9ee6ceac676556"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c92-V4",
+            "status": "published",
+            "answer": "классификации",
+            "code": "",
+            "explanation": "Выбор между pass и fail — бинарная классификация, поскольку выход является категорией.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "bb231c121ac305f841fa788c160229ee6e59358b669e351ad172152e2797fb05",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "классификации"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7c97",
+      "number": 9,
+      "title": "Вопрос №9",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c97-V1",
+          "title": "Вариант 1",
+          "statement": "Какие значения в учебной таблице выглядят подозрительно?\n\nВыбери все верные утверждения\n\nscore = 130 при шкале 0-100\nstudy_hours = -2\nsleep_hours = 7\ncategory = passsed вместо passed",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c97",
+            "label": "Вопрос №9",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c97?variant=6a5c829b4e874f00070e7c97",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c97"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c97",
+            "conditionSha256": "92783323603b2469effe9b5795629e57fc04d25a8eb21604195b8a5a6298a70f"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c97-V1",
+            "status": "published",
+            "answer": "score = 130 при шкале 0-100\nstudy_hours = -2\ncategory = passsed вместо passed",
+            "code": "",
+            "explanation": "130 нарушает шкалу балла, −2 часа невозможны, passsed похоже на опечатку метки. 7 часов сна в обычной суточной шкале допустимы.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "cc405a074679a03053cd3f14e73d08dae9e5910c9686649275f8e3fda14a3fec",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "score = 130 при шкале 0-100",
+              "study_hours = -2",
+              "category = passsed вместо passed"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c97-V2",
+          "title": "Вариант 2",
+          "statement": "Какие утверждения про student_id верны?\n\nВыбери все верные утверждения\n\nэто служебный идентификатор\nон обычно не описывает поведение обучающегося\nего всегда нужно брать как главный признак\nон может помочь найти повторы записей",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c97",
+            "label": "Вопрос №9",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c97?variant=24f374306a8a702941632347",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c97"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c97",
+            "conditionSha256": "4b4da354d671337185a6644ee0d84466f3a35d6d8414f7197aa14da9b7245c8c"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c97-V2",
+            "status": "published",
+            "answer": "это служебный идентификатор\nон обычно не описывает поведение обучающегося\nон может помочь найти повторы записей",
+            "code": "",
+            "explanation": "Идентификатор помогает связывать записи и проверять повторы, но обычно не описывает поведение ученика. Использовать его как главный признак без обоснования нельзя.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "9582cd4720682d4f4c7da3f5435d41fec4cd2bc326ff6e0953c7e5ff03bf4a76",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "это служебный идентификатор",
+              "он обычно не описывает поведение обучающегося",
+              "он может помочь найти повторы записей"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c97-V3",
+          "title": "Вариант 3",
+          "statement": "Какие элементы нужны в корректном выводе по данным?\n\nВыбери все верные утверждения\n\nссылка на найденные числа\nсвязь с графиком\nутверждение без доказательств\nограничение вывода",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c97",
+            "label": "Вопрос №9",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c97?variant=e2d3c0e74997644b548c6556",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c97"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c97",
+            "conditionSha256": "c9e0e5b34ed2ad84150d1d4008ba9ca3e8d244be3ed4e37178360cb54e3c5ee1"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c97-V3",
+            "status": "published",
+            "answer": "ссылка на найденные числа\nсвязь с графиком\nограничение вывода",
+            "code": "",
+            "explanation": "Вывод должен опираться на вычисленные значения и график, а также указывать границы применимости. Недоказанное утверждение этого не заменяет.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "bb95775eada023b8454957283d2d07f03f0934ef3267f35a755050f400fed0eb",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "ссылка на найденные числа",
+              "связь с графиком",
+              "ограничение вывода"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c97-V4",
+          "title": "Вариант 4",
+          "statement": "Какие признаки не должны попадать в X без обоснования?\n\nВыбери все верные утверждения\n\nцелевая переменная\nслужебный id\nпрямой дубликат ответа\nучебные часы как обычный признак",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c97",
+            "label": "Вопрос №9",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c97?variant=95b6911627a69e38ab85130d",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c97"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c97",
+            "conditionSha256": "1a68af47a23eb07a6e7e28e94d91e138b04c232a494ffdef6870bb5c041a1793"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c97-V4",
+            "status": "published",
+            "answer": "целевая переменная\nслужебный id\nпрямой дубликат ответа",
+            "code": "",
+            "explanation": "Цель и её копия дают утечку, id требует отдельного обоснования. Учебные часы могут быть обычным доступным до прогноза признаком.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "febbf698629c2c3d0b9db077cb605badc06155705b5133ee8b2c72bea5c0a1f2",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "целевая переменная",
+              "служебный id",
+              "прямой дубликат ответа"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7c9c",
+      "number": 10,
+      "title": "Вопрос №10",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7c9c-V1",
+          "title": "Вариант 1",
+          "statement": "Зачем делить данные на признаки X и целевую переменную y?\n\nВыбери все верные утверждения\n\nчтобы отделить входные данные от правильного ответа\nчтобы удалить все строки\nчтобы заменить таблицу картинкой\nчтобы не проверять качество данных",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c9c",
+            "label": "Вопрос №10",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c9c?variant=6a5c829b4e874f00070e7c9c",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c9c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c9c",
+            "conditionSha256": "e9db08ebec0e538c75b8e82e7da2f54deef2c5d4e3bc4ec6b3d3797d750d30ac"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c9c-V1",
+            "status": "published",
+            "answer": "чтобы отделить входные данные от правильного ответа",
+            "code": "",
+            "explanation": "X содержит входные характеристики, y — ответ для обучения и оценки. Такое разделение позволяет проверить отсутствие утечки.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "b48f0bdcba71a983a10d8c3d31a80168639561c560823736a3b8ff23d9f3cd82",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "чтобы отделить входные данные от правильного ответа"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c9c-V2",
+          "title": "Вариант 2",
+          "statement": "Если модель предсказывает числовой score, это задача...\n\nВыбери все верные утверждения\n\nрегрессии\nклассификации\nудаления файлов\nчтения видео",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c9c",
+            "label": "Вопрос №10",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c9c?variant=47403121977f8cf054018111",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c9c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c9c",
+            "conditionSha256": "63b0b0a5780f09b05429cfaf147d813c841f43ec3977355fb9f2d5d074186a0b"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c9c-V2",
+            "status": "published",
+            "answer": "регрессии",
+            "code": "",
+            "explanation": "Числовой score предсказывается в задаче регрессии. Если бы вместо числа выбиралась категория, постановка была бы классификацией.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "87e811f683dbcda22dbeb1eab95bb13d778185a95b4af5eb2bac35fdc36a3a3a",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "регрессии"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c9c-V3",
+          "title": "Вариант 3",
+          "statement": "Команда value_counts() чаще всего нужна для...\n\nВыбери все верные утверждения\n\nпросмотра частот категорий\nзапуска цикла\nвывода размера таблицы\nпостроения нейросети",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c9c",
+            "label": "Вопрос №10",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c9c?variant=082516640c6ffece184a98df",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c9c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c9c",
+            "conditionSha256": "deb7e80c0fb4d3adc07a6fe2a1cce294ca55b5ab009727dcc5b5d1587bec810f"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c9c-V3",
+            "status": "published",
+            "answer": "просмотра частот категорий",
+            "code": "",
+            "explanation": "value_counts возвращает частоты уникальных значений. Это удобно для проверки распределения меток и опечаток в категориях.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "5081601fd3d030b7140ef45d9c008c60c61b57dfc6ef766ffa7f222d955dbcb3",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "просмотра частот категорий"
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7c9c-V4",
+          "title": "Вариант 4",
+          "statement": "Что означает положительная связь между study_hours и score?\n\nВыбери все верные утверждения\n\nпри росте study_hours score чаще растет\nscore всегда равен нулю\nпризнаки удалены\nтаблица стала изображением",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7c9c",
+            "label": "Вопрос №10",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7c9c?variant=9f418c28e3c64608553ebaa0",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7c9c"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7c9c",
+            "conditionSha256": "16dba6408c9495a63f36c34d01754be0ddd7f5e12b6b4e3a0f6136e553477932"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7c9c-V4",
+            "status": "published",
+            "answer": "при росте study_hours score чаще растет",
+            "code": "",
+            "explanation": "Положительная связь означает тенденцию совместного роста. Это не равенство и не доказательство причинного воздействия учебных часов.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "02957a0b452c9447f794bae6cb3986c586ccf49c653e97ff9aa523175cd1c79d",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "selectedOptions": [
+              "при росте study_hours score чаще растет"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7ca1",
+      "number": 1,
+      "title": "Задание №1",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7ca1-V1",
+          "title": "Вариант 1",
+          "statement": "Что такое объект в табличном датасете? Приведите пример для таблицы обучающихся.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca1",
+            "label": "Задание №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca1?variant=6a5c829b4e874f00070e7ca1",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca1"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca1",
+            "conditionSha256": "05b578d1d481279bdc4fa7c8e9bfb0ca8792042669b9c3fdcf56a0163465885e"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca1-V1",
+            "status": "published",
+            "answer": "Объект — отдельный обучающийся или отдельное наблюдение о нём, которому соответствует одна строка. Например, строка student_id=101 содержит часы учёбы, сон, балл и результат этого ученика.",
+            "code": "",
+            "explanation": "Точная единица наблюдения должна быть описана: один ученик за курс и один ученик за день — разные типы строк.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "1b940207aae00a7809defa1e23e1e0185269d2eb250a839b824d0d4bca36fd5c",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca1-V2",
+          "title": "Вариант 2",
+          "statement": "Что такое пропуск в данных и почему он мешает анализу?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca1",
+            "label": "Задание №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca1?variant=04de082a20527b0deb51312a",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca1"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca1",
+            "conditionSha256": "3615d0a5a332d72e1661983543cc41f7a30b1d0096ca0f43dc496e170a357c76"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca1-V2",
+            "status": "published",
+            "answer": "Пропуск — отсутствующее значение, например неизвестное число учебных часов. Он мешает расчётам и может приводить к исключению части строк или ошибкам модели. Сначала выясняют причину и долю пропусков, затем обосновывают заполнение, удаление или отдельную категорию.",
+            "code": "",
+            "explanation": "Пропуск нельзя автоматически считать нулём: «нет измерения» и «измеренное значение 0» имеют разный смысл.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "9b920890291f2f769df5cc1de938301427c8c142b4f30acaae24ee8399db1183",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca1-V3",
+          "title": "Вариант 3",
+          "statement": "Почему перед обучением ИИ-модели данные нужно проверять?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca1",
+            "label": "Задание №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca1?variant=024b2dd4e9b424275ec3ec6a",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca1"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca1",
+            "conditionSha256": "5b70c07219d4d90e801ad3b5f207ab0f11f318c8aa1534486e318941c1d62e7a"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca1-V3",
+            "status": "published",
+            "answer": "Перед обучением проверяют типы, единицы, диапазоны, пропуски, дубли и правильность меток. Иначе модель может усвоить ошибки источника, а её оценка будет ненадёжной. Правила исправлений фиксируют и применяют последовательно.",
+            "code": "",
+            "explanation": "Для преобразований, подбираемых по данным, статистики рассчитывают на train, не используя test.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "4ba9525bc2e085041d95e4e6c5f5f6290f66b6cf0398a9707ad502ef2f4c6382",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca1-V4",
+          "title": "Вариант 4",
+          "statement": "Что такое целевая переменная в задаче ИИ?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca1",
+            "label": "Задание №1",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca1?variant=fb82bd4b309e4d30b0f01ef5",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca1"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca1",
+            "conditionSha256": "db3269fd161c90640a1de633c9ad3339dcc40e8816f4a021393a31202b28c0e4"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca1-V4",
+            "status": "published",
+            "answer": "Целевая переменная y — результат, который нужно предсказать. Для определения успешности обучения это final_result, принимающий pass или fail. Содержательные характеристики, доступные до результата, образуют X.",
+            "code": "",
+            "explanation": "Роль столбца определяется конкретной задачей. Тот же score может быть целью регрессии или допустимым ранее измеренным признаком другой задачи.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "e66d7d4d26de559793e0e494383afc6ecaf7302429f80631bfefbec19dda1f9c",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7ca2",
+      "number": 2,
+      "title": "Задание №2",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7ca2-V1",
+          "title": "Вариант 1",
+          "statement": "Чем признак отличается от целевой переменной?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca2",
+            "label": "Задание №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca2?variant=6a5c829b4e874f00070e7ca2",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca2"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca2",
+            "conditionSha256": "f39eaf97f7027fa3a0a5227a8fdab5e92bca6a0a8bd78c00ee596d9b09be2353"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca2-V1",
+            "status": "published",
+            "answer": "Признак описывает объект и поступает на вход модели; целевая переменная является нужным ответом. Например, study_hours — признак, final_result — цель для прогноза pass/fail.",
+            "code": "",
+            "explanation": "Цель и её прямые копии не должны входить в признаки этой же задачи.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "e6a659946a48409e2fa6a9a3eac602ca7984e94d02ae78507cf11ba32fdbadae",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca2-V2",
+          "title": "Вариант 2",
+          "statement": "Зачем проверять value_counts() для категориального столбца?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca2",
+            "label": "Задание №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca2?variant=e3c765cb76f9384b5a2104c5",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca2"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca2",
+            "conditionSha256": "cf623efecd6a104b52ae43ce1c94b0f064549c2ef8ea717194665c8d0afa783e"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca2-V2",
+            "status": "published",
+            "answer": "value_counts показывает варианты значений и их частоты. Так можно заметить Pass, pass и pas как возможные несогласованные записи одного класса, проверить редкие категории и дисбаланс.",
+            "code": "",
+            "explanation": "Похожее написание — повод сверить словарь и источник; оно не всегда доказывает, что значения тождественны.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "66b4f4d9f5911493b7a398318e81f8a34aeff560fee49fd03ddfeb922b855f70",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca2-V3",
+          "title": "Вариант 3",
+          "statement": "Что такое категориальный признак?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca2",
+            "label": "Задание №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca2?variant=dd0fab20c8a65df648c6af48",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca2"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca2",
+            "conditionSha256": "d4d3442827e86613be2bb5952f748d7f2dae938159d03a72b604628a28be4033"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca2-V3",
+            "status": "published",
+            "answer": "Категориальный признак принимает значения из набора категорий: например, канал заявки «почта», «портал», «телефон». Даже если категории закодированы числами, арифметическая разница кодов может не иметь смысла.",
+            "code": "",
+            "explanation": "Категории бывают номинальными и порядковыми; способ кодирования выбирают с учётом их смысла и модели.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "047606ca45e5a1ee62a18f6aea9725252acf2dbc5d6258cd74d4cf494ca80e35",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca2-V4",
+          "title": "Вариант 4",
+          "statement": "Почему одинаковые категории нужно записывать одинаково?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca2",
+            "label": "Задание №2",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca2?variant=575ae74aa213b99e270a3470",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca2"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca2",
+            "conditionSha256": "1566660cea56a0d8ccd490c6f482d92d4ab804bf7aa5241e80e0099e77840bc5"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca2-V4",
+            "status": "published",
+            "answer": "Разные написания одной категории создают искусственные дополнительные классы и искажают частоты. Поэтому задают единый словарь, нормализуют регистр и пробелы и исправляют подтверждённые опечатки.",
+            "code": "",
+            "explanation": "Нельзя объединять действительно разные категории только из-за похожести названий.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "aa0d3624452e282cf4333312bd185d5e73caf85d44e7b9d4b8722cf8be4dd90d",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7ca3",
+      "number": 3,
+      "title": "Задание №3",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7ca3-V1",
+          "title": "Вариант 1",
+          "statement": "Почему значение sleep_hours = 35 в учебном датасете требует проверки?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca3",
+            "label": "Задание №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca3?variant=6a5c829b4e874f00070e7ca3",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca3"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca3",
+            "conditionSha256": "2a6da5dce5db6596ef1f82477e0d298ab36e7f6680e7c6ecc73425b6776d7aee"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca3-V1",
+            "status": "published",
+            "answer": "Если sleep_hours означает сон за сутки, 35 часов выходят за физически возможные 24 часа и требуют проверки. Нужно выяснить единицы, период наблюдения и исходную запись, затем исправить по источнику или обозначить пропуск.",
+            "code": "",
+            "explanation": "Без уточнения периода нельзя произвольно заменить 35 на 3.5 или 8: это было бы выдуманным исправлением.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "4308afbc83b4e3601ac1c7d835e2b00d56d0ee380f16c7a964ef3ca11ae7ea04",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca3-V2",
+          "title": "Вариант 2",
+          "statement": "Почему вывод должен быть связан с числами и графиками?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca3",
+            "label": "Задание №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca3?variant=207f73d4b3c0b91b39594a87",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca3"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca3",
+            "conditionSha256": "a17cae793917610b73aeea31c3c8f3aedd97c1aef79b0d3003501337036f4889"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca3-V2",
+            "status": "published",
+            "answer": "Числа и графики дают проверяемое основание вывода. Например, утверждение о большем среднем балле группы должно опираться на рассчитанные средние и подписи групп, а не на впечатление.",
+            "code": "",
+            "explanation": "Вывод следует ограничить наблюдаемой выборкой и не приписывать корреляции причинный смысл.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "45b54f4867d21044b94285e4b52e3ab654e35005238c2287e40b93e29964a69e",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca3-V3",
+          "title": "Вариант 3",
+          "statement": "Зачем строить визуализацию при анализе данных?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca3",
+            "label": "Задание №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca3?variant=67a4ef48b92edd128e4a2ca6",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca3"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca3",
+            "conditionSha256": "ad48319912637fba1f260bd5325e232d08461fe915bb1cc79381115387d61e3b"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca3-V3",
+            "status": "published",
+            "answer": "Визуализация помогает увидеть распределение, связь, групповые различия и необычные случаи. Например, scatterplot часов и балла показывает форму зависимости и крайние наблюдения.",
+            "code": "",
+            "explanation": "График дополняют числовыми показателями и проверкой исходных строк; он не заменяет очистку.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "49d07598aa7d19938b109d1975fad944f5257e983a58fff1f18841e5d4ca052c",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca3-V4",
+          "title": "Вариант 4",
+          "statement": "Что показывает среднее значение и почему его иногда недостаточно?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca3",
+            "label": "Задание №3",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca3?variant=969b0813828a74861c10fd7f",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca3"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca3",
+            "conditionSha256": "7086a6c9287ac45be9fc8de53e6b26de44af3c5f55047f367c3c791d8558d04f"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca3-V4",
+            "status": "published",
+            "answer": "Среднее показывает сумму значений в расчёте на одно наблюдение. Оно не описывает разброс и чувствительно к выбросам: у [10,10,100] среднее 40, хотя большинство значений 10. Поэтому полезны медиана, диапазон, стандартное отклонение и график.",
+            "code": "",
+            "explanation": "Выбор показателей зависит от цели: среднее удобно для общей нагрузки, медиана — для типичного случая при сильной асимметрии.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "a24335d496ec700aa575ad1e202a890062544c51f238264b2dba985ac1982f9f",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7ca4",
+      "number": 4,
+      "title": "Задание №4",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7ca4-V1",
+          "title": "Вариант 1",
+          "statement": "Почему student_id обычно не используют как содержательный признак для модели?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca4",
+            "label": "Задание №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca4?variant=6a5c829b4e874f00070e7ca4",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca4"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca4",
+            "conditionSha256": "dbb91ef2062023877d860f27ffdfd5d621ed67b983361ede818a5b5e498a0958"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca4-V1",
+            "status": "published",
+            "answer": "student_id обычно служит для идентификации, а не описания поведения или знаний. Модель может запомнить случайные номера вместо полезной закономерности. Идентификатор оставляют для связи и проверки записей, а в X включают только при отдельном содержательном обосновании.",
+            "code": "",
+            "explanation": "Числовой формат id не делает его количественным признаком.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "cf0970f73108ca2f1d103d766e80b6bc2b9779e7240ffc2ad2331fd4cd5c7671",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca4-V2",
+          "title": "Вариант 2",
+          "statement": "Что такое утечка целевой переменной в признаки?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca4",
+            "label": "Задание №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca4?variant=49223d8181c1d29bcd01c0de",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca4"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca4",
+            "conditionSha256": "4afb4f8179608736561bfbf743022bcd4c84ba1ab4a4a140668aa16f86076cae"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca4-V2",
+            "status": "published",
+            "answer": "Утечка — попадание в X целевого ответа, его копии или информации, которая станет известна только после события прогноза. Например, включение final_result в X при предсказании final_result позволяет подсмотреть ответ.",
+            "code": "",
+            "explanation": "Нужно учитывать момент доступности всех признаков и обучать преобразования только на train.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "df4d6d5ca1c7532355666d4c016c2fd12501f95fd331bd4381df8a934b86454c",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca4-V3",
+          "title": "Вариант 3",
+          "statement": "Почему нельзя делать слишком широкий вывод по маленькой таблице?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca4",
+            "label": "Задание №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca4?variant=be046d39b0deb8e57da50a5b",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca4"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca4",
+            "conditionSha256": "4f3bb9523f87c5a73b33227512ced2452fb96318dc22196a256483e68b7c802c"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca4-V3",
+            "status": "published",
+            "answer": "Маленькая таблица может быть нерепрезентативной и случайной. Наблюдение «у этих трёх учеников больше часов связано с большим баллом» не доказывает тот же эффект для всех учеников и будущих периодов.",
+            "code": "",
+            "explanation": "Корректный вывод указывает размер, состав и ограничения выборки и избегает обещаний идеального прогноза.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "8cd37cad48d1a8f6577f9ea6e94c834519bf25741e35dba6ee0fad3215038db5",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca4-V4",
+          "title": "Вариант 4",
+          "statement": "Как определить, какие признаки полезны для ИИ-задачи?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca4",
+            "label": "Задание №4",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca4?variant=0b6b5f8a01297d717e2ab1bd",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca4"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca4",
+            "conditionSha256": "8cfe2cce53d384c0551e53159c050fde2c38d9a6463c4b77772efe26be4462fb"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca4-V4",
+            "status": "published",
+            "answer": "Сначала определяют целевой результат и момент прогноза. Затем выбирают доступные до него содержательные свойства, исключают утечки и служебные поля и сравнивают качество на валидации с разными наборами признаков.",
+            "code": "",
+            "explanation": "Одна корреляция или красивое название не гарантируют полезность. Нужны предметный смысл и независимая проверка.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "c011ece076480fa474b5a8d333e6ff14458913a3f74c3462a30c00ffbba6759e",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7ca5",
+      "number": 5,
+      "title": "Задание №5",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7ca5-V1",
+          "title": "Вариант 1",
+          "statement": "Когда задача по данным является классификацией?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca5",
+            "label": "Задание №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca5?variant=6a5c829b4e874f00070e7ca5",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca5",
+            "conditionSha256": "1fbca804839a3f6a40ebb39f8f8723a150597096e5f3a871348c5454e142b2bb"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca5-V1",
+            "status": "published",
+            "answer": "Задача является классификацией, когда нужно выбрать одну из заранее заданных категорий: например, pass или fail. Правильные метки нужны для обучения с учителем и оценки качества.",
+            "code": "",
+            "explanation": "Если вместо категории требуется точное число, задача относится к регрессии.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "3ba9d275add813515c77ebcb2fd67d19a15cb2f051b68607b9f32f7c730eae5f",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca5-V2",
+          "title": "Вариант 2",
+          "statement": "Когда задача по данным является регрессией?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca5",
+            "label": "Задание №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca5?variant=1d29cfd47945e3905b78d7be",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca5",
+            "conditionSha256": "b4715464c25aca353f1a251164903931ffd0964ffd9d7df4da046978ebd9111d"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca5-V2",
+            "status": "published",
+            "answer": "Регрессия предсказывает количественное значение, например балл score или время обработки в минутах. Ошибку можно измерить в исходных единицах, например через MAE.",
+            "code": "",
+            "explanation": "Код категории 0/1 сам по себе не превращает классификацию в регрессию.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "646818b904d2ee14334519856d14219d11911f1387baa6b5a510fa23c35a0050",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca5-V3",
+          "title": "Вариант 3",
+          "statement": "Какие данные можно использовать для задачи кластеризации?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca5",
+            "label": "Задание №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca5?variant=7fe51a8eef16a6b413521a82",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca5",
+            "conditionSha256": "8640c3913c24e8ff0147baaad7c2c007d53b15650eded242847177100cd11177"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca5-V3",
+            "status": "published",
+            "answer": "Для кластеризации подходят характеристики, по которым можно сравнивать объекты: часы учёбы, выполненные задания, активность. Заранее размеченная группа не обязательна; признаки кодируют и при необходимости масштабируют.",
+            "code": "",
+            "explanation": "Нужно определить смысл похожести и затем содержательно описать найденные группы.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "f4ac806cc8a5ea64643d4cdb6eb21dc3c31ba8c948cd1a01f0ebccda45fa7af4",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca5-V4",
+          "title": "Вариант 4",
+          "statement": "Почему важно указывать ограничения данных в итоговом выводе?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca5",
+            "label": "Задание №5",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca5?variant=3f2db602fdc05743d0424b1d",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca5"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca5",
+            "conditionSha256": "32dbd48bf336ae39ff6def0a9486d7ef8053e92ae76c32bbefd30ec3fee707c4"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca5-V4",
+            "status": "published",
+            "answer": "Ограничения показывают, на какие объекты и условия распространяется вывод: размер и период выборки, пропуски, ошибки измерения, неполнота признаков. Это предотвращает необоснованное обобщение на весь будущий поток.",
+            "code": "",
+            "explanation": "Корректный результат может быть полезным, даже если его область применения ограничена.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "e14f2421272d41f765031a93dfebf9b7b19ce98b04cb9451490970dfec26c609",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7ca6",
+      "number": 6,
+      "title": "Задание №6",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7ca6-V1",
+          "title": "Вариант 1",
+          "statement": "В редакторе кода напишите программу, которая создает список оценок scores = [4, 5, 3, 2], суммирует только оценки строго выше 4 и выводит полученную сумму. Программа не должна запрашивать ввод и должна вывести одно число.\nОжидаемый формат вывода: одна строка stdout.\nПодсказка: Используйте цикл for для перебора элементов списка и условие if для проверки, что оценка > 4.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca6",
+            "label": "Задание №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca6?variant=6a5c829b4e874f00070e7ca6",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca6",
+            "conditionSha256": "59e3dfd2316ba5f492cde7153419bd2769d303638cd6f9555c612ec46a4304f4"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca6-V1",
+            "status": "published",
+            "answer": "5",
+            "code": "scores = [4, 5, 3, 2]\ntotal = 0\nfor score in scores:\n    if score > 4:\n        total += score\nprint(total)",
+            "explanation": "Строго выше 4 только оценка 5: её и прибавляем. Число 4 не проходит строгое сравнение. Программа выполнена отдельно с проверкой stdout.",
+            "kind": "code",
+            "verification": "project_tests",
+            "tests": [
+              {
+                "input": "",
+                "expected": "5"
+              }
+            ],
+            "testCount": 1,
+            "sha256": "472f1d640d65859f21009316734178c0014d3b8f016aa41e9ba16c225007ffb0",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "lineExplanations": [
+              {
+                "line": 1,
+                "text": "Задаём исходные учебные значения scores. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 2,
+                "text": "Вычисляем `0` и сохраняем результат в `total`."
+              },
+              {
+                "line": 3,
+                "text": "Перебираем `scores`; очередное значение доступно через `score`."
+              },
+              {
+                "line": 4,
+                "text": "Проверяем условие `score > 4`. Блок с отступом выполняется только при истинном условии."
+              },
+              {
+                "line": 5,
+                "text": "Обновляем `total` операцией `+=` с `score`; прежнее значение участвует в вычислении."
+              },
+              {
+                "line": 6,
+                "text": "Выводим результат в формате, указанном в условии."
+              }
+            ],
+            "examples": [
+              {
+                "input": "",
+                "output": "5"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca6-V2",
+          "title": "Вариант 2",
+          "statement": "В редакторе кода напишите программу, которая создает список temperatures = [22, 27, 24, 30, 25, 28], считает количество значений 25 и выше и выводит это количество. Программа не должна запрашивать ввод и должна вывести одно число.\nОжидаемый формат вывода: одна строка stdout.\nПодсказка: Используйте цикл for для перебора элементов списка, условие if для проверки, что температура >= 25, и переменную-счётчик.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca6",
+            "label": "Задание №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca6?variant=f63fa62436d4af8f5490bedb",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca6",
+            "conditionSha256": "08567b76f75f3da7a8870d9ea1c6b5371772421ddbb1fdac009341429e4d893a"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca6-V2",
+            "status": "published",
+            "answer": "4",
+            "code": "temperatures = [22, 27, 24, 30, 25, 28]\ncount = 0\nfor temperature in temperatures:\n    if temperature >= 25:\n        count += 1\nprint(count)",
+            "explanation": "Условие включает границу 25. Подходят 27, 30, 25 и 28: четыре значения. Программа выполнена отдельно с проверкой stdout.",
+            "kind": "code",
+            "verification": "project_tests",
+            "tests": [
+              {
+                "input": "",
+                "expected": "4"
+              }
+            ],
+            "testCount": 1,
+            "sha256": "2bce311fa99727d2a7bb5b9c587097bb87599abd833154a5cb559eb7ef1dc851",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "lineExplanations": [
+              {
+                "line": 1,
+                "text": "Задаём исходные учебные значения temperatures. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 2,
+                "text": "Вычисляем `0` и сохраняем результат в `count`."
+              },
+              {
+                "line": 3,
+                "text": "Перебираем `temperatures`; очередное значение доступно через `temperature`."
+              },
+              {
+                "line": 4,
+                "text": "Проверяем условие `temperature >= 25`. Блок с отступом выполняется только при истинном условии."
+              },
+              {
+                "line": 5,
+                "text": "Обновляем `count` операцией `+=` с `1`; прежнее значение участвует в вычислении."
+              },
+              {
+                "line": 6,
+                "text": "Выводим результат в формате, указанном в условии."
+              }
+            ],
+            "examples": [
+              {
+                "input": "",
+                "output": "4"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca6-V3",
+          "title": "Вариант 3",
+          "statement": "В редакторе кода напишите программу, которая создает список tasks = [3, 4, 2], находит сумму всех значений списка и выводит эту сумму. Программа не должна запрашивать ввод и должна вывести одно число.\nОжидаемый формат вывода: одна строка stdout.\nПодсказка: Используйте цикл for для перебора элементов списка и переменную для накопления суммы. Также можно использовать встроенную функцию sum().",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca6",
+            "label": "Задание №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca6?variant=84edabb1e44ecd1de57cc61d",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca6",
+            "conditionSha256": "bb09900b9cdc499e0803d43beedb7d925b644ba317cc19f68118677b725ce96d"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca6-V3",
+            "status": "published",
+            "answer": "9",
+            "code": "tasks = [3, 4, 2]\nprint(sum(tasks))",
+            "explanation": "Сумма всех трёх значений равна 3+4+2=9. Ввода и дополнительных строк вывода не требуется. Программа выполнена отдельно с проверкой stdout.",
+            "kind": "code",
+            "verification": "project_tests",
+            "tests": [
+              {
+                "input": "",
+                "expected": "9"
+              }
+            ],
+            "testCount": 1,
+            "sha256": "d7655abf23a243df347fa7b565d3971438371983ae7271d28dea122da15fbaa5",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "lineExplanations": [
+              {
+                "line": 1,
+                "text": "Задаём исходные учебные значения tasks. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 2,
+                "text": "Выводим результат в формате, указанном в условии."
+              }
+            ],
+            "examples": [
+              {
+                "input": "",
+                "output": "9"
+              }
+            ]
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca6-V4",
+          "title": "Вариант 4",
+          "statement": "В редакторе кода напишите программу, которая создает список оценок scores = [30, 75, 90], считает средний балл и выводит строку \"ok\", если средний балл не ниже 70, иначе выводит строку \"repeat\". Программа не должна запрашивать ввод и должна вывести одну строку.\nОжидаемый формат вывода: одна строка stdout.\nПодсказка: Используйте функцию sum() для суммы и len() для количества элементов. Средний балл = сумма / количество. Затем используйте условный оператор if для проверки условия.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca6",
+            "label": "Задание №6",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca6?variant=0c17633ad2d484efec4a5e28",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca6"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca6",
+            "conditionSha256": "c6afa6783ee99122ba19c9434af1b20b38b991f73d2d919d7be0b9adfbd56f25"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca6-V4",
+            "status": "published",
+            "answer": "repeat",
+            "code": "scores = [30, 75, 90]\naverage = sum(scores) / len(scores)\nif average >= 70:\n    print(\"ok\")\nelse:\n    print(\"repeat\")",
+            "explanation": "Средний балл 195/3=65, он ниже 70. Поэтому выполняется else и выводится repeat. Программа выполнена отдельно с проверкой stdout.",
+            "kind": "code",
+            "verification": "project_tests",
+            "tests": [
+              {
+                "input": "",
+                "expected": "repeat"
+              }
+            ],
+            "testCount": 1,
+            "sha256": "d7adbbd513f8e2209c06883a0c798b3ddecb4f308822cd774dfeeef23d7a5c30",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате.",
+            "lineExplanations": [
+              {
+                "line": 1,
+                "text": "Задаём исходные учебные значения scores. Они используются в последующих вычислениях."
+              },
+              {
+                "line": 2,
+                "text": "Вычисляем `sum(scores) / len(scores)` и сохраняем результат в `average`."
+              },
+              {
+                "line": 3,
+                "text": "Проверяем условие `average >= 70`. Блок с отступом выполняется только при истинном условии."
+              },
+              {
+                "line": 4,
+                "text": "Выводим результат в формате, указанном в условии."
+              },
+              {
+                "line": 6,
+                "text": "Выводим результат в формате, указанном в условии."
+              }
+            ],
+            "examples": [
+              {
+                "input": "",
+                "output": "repeat"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7ca8",
+      "number": 7,
+      "title": "Задание №7",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7ca8-V1",
+          "title": "Вариант 1",
+          "statement": "Фрагмент таблицы:\n| student_id | study_hours | sleep_hours | score | final_result |\n| --- | --- | --- | --- | --- |\n| 101 | 2.5 | 7 | 78 | pass |\n| 102 | 0.5 | 6 | 45 | fail |\n| 103 | 4.0 | 35 | 84 | pass |\nОпределите:\nОбъект — что описывает каждая строка таблицы?\nТри признака — какие столбцы являются признаками?\nЦелевой столбец — какой столбец является целевым?\nОдну проблему качества данных — какое значение в таблице выглядит нереалистичным или ошибочным?\nПодсказка: Объект — это то, о ком или о чём записана информация. Признаки — это характеристики объекта. Целевой столбец — то, что модель должна предсказать.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca8",
+            "label": "Задание №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca8?variant=6a5c829b4e874f00070e7ca8",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca8"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca8",
+            "conditionSha256": "9999571d82c50a248962fc7e348e21fbe925737476d9d452ba3eb69e65789c6e"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca8-V1",
+            "status": "published",
+            "answer": "Объект — один обучающийся. Признаки: study_hours, sleep_hours, score. Цель: final_result. Проблема: sleep_hours=35 у student_id=103 требует проверки, если указан сон за сутки.",
+            "code": "",
+            "explanation": "student_id — идентификатор. Включение score допустимо лишь если он уже известен в момент прогноза; если final_result непосредственно вычислен из того же итогового score, возникнет утечка, и для раннего прогноза score исключают.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "783cb280d9fe0be1b9fa756e66bcd3199c0f0765a16ea071fa068b42d7291eac",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca8-V2",
+          "title": "Вариант 2",
+          "statement": "В столбце result встречаются значения: pass, fail, Pass, pas.\nОпишите:\nКакая здесь проблема качества данных?\nКак её можно обработать перед анализом?\nПодсказка: Обратите внимание на регистр символов и возможные опечатки. Какие значения должны быть правильными?",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca8",
+            "label": "Задание №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca8?variant=18428925058ea5ae9b8ef297",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca8"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca8",
+            "conditionSha256": "0bcae208597132adb67066c0f542cb57c5d153ed7ad85af4f65b70a51c89e910"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca8-V2",
+            "status": "published",
+            "answer": "Проблема — несогласованные записи категории: pass, Pass и вероятная опечатка pas. Приводим регистр и пробелы к единому виду, сверяем допустимые метки {pass, fail} и подтверждаем по источнику, что pas следует исправить на pass. Затем повторно проверяем частоты.",
+            "code": "",
+            "explanation": "Регистр можно нормализовать по принятому словарю; смысл опечатки нельзя считать доказанным только по сходству.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "15efd40facaec135aeadde5a560b8e8e8251c02949331be177350a90119f6091",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca8-V3",
+          "title": "Вариант 3",
+          "statement": "Фрагмент таблицы:\n| id | hours | tasks | result |\n| --- | --- | --- | --- |\n| 1 | 3 | 5 | pass |\n| 2 |  | 2 | fail |\n| 2 |  | 2 | fail |\nНайдите две проблемы качества данных и предложите, как их проверить командами pandas.\nПодсказка: Обратите внимание на пропущенные значения, дубликаты и некорректные данные в столбцах.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca8",
+            "label": "Задание №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca8?variant=d47450f305c4ad3d94615ca2",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca8"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca8",
+            "conditionSha256": "7fe9e7f640a4ebe12ef8617ba6bb2703542fd58230719a3121bdeca0369abb21"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca8-V3",
+            "status": "published",
+            "answer": "Две проблемы: пропуски в hours и повтор одной строки. Проверка пропусков: df.isna().sum(). Проверка полных дублей: df.duplicated().sum(). В показанном фрагменте 2 пропуска hours и 1 повторная строка при keep='first'.",
+            "code": "",
+            "explanation": "Совпадение id отдельно не всегда означает полный дубль, но здесь совпадают все показанные поля. Способ заполнения пропусков требует обоснования.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "3f99bf984b55a68bfa4ad748f32b8cd9b92b2e8937574358e81555329d0ddd3a",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca8-V4",
+          "title": "Вариант 4",
+          "statement": "Для предсказания passed ученик выбрал X = [study_hours, score, passed], y = passed.\nНайдите ошибку и предложите правильный набор X.\nПодсказка: Целевой столбец y и признаки X должны быть разными. Если целевой столбец попал в признаки, это называется \"утечка целевой переменной\".",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca8",
+            "label": "Задание №7",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca8?variant=ff3e395de8b4c495bd1c83f5",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca8"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca8",
+            "conditionSha256": "3809fb82bb356afb65234f4728ba878524c1b5ebd4bb46d52667ecdd81796809"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca8-V4",
+            "status": "published",
+            "answer": "Ошибка: passed включён одновременно в X и y, поэтому модель получает готовый ответ. Минимальное исправление при доступном заранее score: X=[study_hours, score], y=passed. Для раннего прогноза до итоговой оценки безопаснее X=[study_hours], а score добавлять лишь при отсутствии утечки.",
+            "code": "",
+            "explanation": "Даже без прямого passed поле score может быть утечкой, если passed получен порогом из той же итоговой оценки.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "1310c8487483336673f094dd35c7fb4a21d9cf9d9402f203ee9a015ac09b0c04",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-6a5c829b4e874f00070e7ca9",
+      "number": 8,
+      "title": "Задание №8",
+      "variants": [
+        {
+          "id": "T-6a5c829b4e874f00070e7ca9-V1",
+          "title": "Вариант 1",
+          "statement": "По таблице с признаками study_hours, completed_tasks, score и final_result нужно предложить ИИ-задачу.\nДанные для примера:\n| student_id | study_hours | completed_tasks | score | final_result |\n| --- | --- | --- | --- | --- |\n| 101 | 2.5 | 8 | 78 | pass |\n| 102 | 0.5 | 2 | 45 | fail |\n| 103 | 4.0 | 12 | 84 | pass |\nУкажите:\nТип задачи — классификация или регрессия?\nВходные признаки — какие столбцы используем для предсказания?\nОжидаемый результат модели — что модель должна предсказывать?\nПодсказка: Если целевой столбец — категория (например, pass/fail), это задача классификации. Если целевой столбец — число (например, score), это задача регрессии.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca9",
+            "label": "Задание №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca9?variant=6a5c829b4e874f00070e7ca9",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca9"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca9",
+            "conditionSha256": "c3595e8dce89fb0530c8a141ca4fe5d3895189e94ac79de7787af4eb495dd0da"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca9-V1",
+            "status": "published",
+            "answer": "Предлагаем бинарную классификацию final_result (pass/fail). X=[study_hours, completed_tasks], y=final_result. Модель возвращает прогноз категории. student_id исключён; итоговый score не включён, поскольку может напрямую определять итоговый результат.",
+            "code": "",
+            "explanation": "Условие разрешает разные постановки. Выбран вариант раннего прогноза без очевидной утечки целевого ответа.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "2d81bd80ae383f49b11b91410cb362444e7cb66db4fc2e2d8e006c1d62b0c34b",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca9-V2",
+          "title": "Вариант 2",
+          "statement": "Есть признаки screen_time_hours, study_hours, score и итог passed.\nВопросы:\nКакой график поможет сравнить средний score у passed / fail?\nКакую ИИ-задачу можно поставить на основе этих данных?\nПодсказка: Для сравнения средних значений по группам удобно использовать столбчатую диаграмму или ящик с усами (boxplot). Для ИИ-задачи подумайте, какой столбец может быть целевым.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca9",
+            "label": "Задание №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca9?variant=835ddb7f842d905494715776",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca9"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca9",
+            "conditionSha256": "d7a67300b9e0270466227783babbae712d8cbc790f9a4434ad696e587328ed69"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca9-V2",
+            "status": "published",
+            "answer": "Для сравнения средних score у passed/fail подойдёт столбчатая диаграмма групповых средних с количеством наблюдений. Boxplot дополнительно покажет распределение и медиану, но не является прямой диаграммой среднего. ИИ-задача: предсказывать passed по screen_time_hours и study_hours до получения итогового score.",
+            "code": "",
+            "explanation": "Следует явно определить момент прогноза и не подавать сам итоговый ответ или его прямую копию в X.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "1d55fd06966f6677bf5efe223f56807543628717aecf8e2a60f02061ebc3a552",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca9-V3",
+          "title": "Вариант 3",
+          "statement": "Для задачи предсказания result есть столбцы: student_id, hours, tasks, score, result.\nФрагмент таблицы (показаны не все столбцы):\n| student_id | hours | tasks | result |\n| --- | --- | --- | --- |\n| 1 | 3 | 5 | pass |\n| 2 |  | 2 | fail |\n| 2 |  | 2 | fail |\nЧто нужно сделать\nСоставьте X и y на уровне названий столбцов и объясните, что не должно попасть в X.\nПодсказка:\nВ X должны быть только признаки, по которым модель учится предсказывать. y — это целевой столбец. Идентификатор объекта не должен быть признаком.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca9",
+            "label": "Задание №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca9?variant=e5d2e747604901be1d74f0f7",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca9"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca9",
+            "conditionSha256": "b6c8f442bf933d0f02719cc4a6927650680cbb5a82dd8940f9ba84f93d8bc1a7"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca9-V3",
+            "status": "published",
+            "answer": "y=result. Для раннего прогноза X=[hours, tasks]. student_id исключаем как служебный идентификатор, result — как готовый ответ. score можно добавить только если он известен заранее и не определяет result напрямую; в осторожной постановке его не используем.",
+            "code": "",
+            "explanation": "До обучения необходимо проверить пропуски hours и полные дубли. Три строки недостаточны для надёжной оценки модели.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "d6b848d105a03b20bda5dfda3d8f09227dbb2ceccda0745f8747cb8c1ce5a57e",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        },
+        {
+          "id": "T-6a5c829b4e874f00070e7ca9-V4",
+          "title": "Вариант 4",
+          "statement": "Ученики построили столбчатую диаграмму среднего значения study_hours по группам final_result. На диаграмме видно, что у группы pass среднее study_hours выше, чем у группы fail.\nСформулируйте корректный вывод и один осторожный комментарий об ограничениях данных.\nПодсказка: Вывод должен опираться только на то, что показано на диаграмме. Осторожный комментарий — о том, что данные не показывают причину и могут быть ограничены.",
+          "ismartLink": {
+            "id": "6a5c829b4e874f00070e7ca9",
+            "label": "Задание №8",
+            "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a5c829b4e874f00070e7c6e/element/6a5c829b4e874f00070e7ca9?variant=dd2ab4a3f8fb6c8c43529c75",
+            "status": "unverified",
+            "unitId": "6a5c829b4e874f00070e7c6e",
+            "elementId": "6a5c829b4e874f00070e7ca9"
+          },
+          "sourceIssues": [],
+          "source": {
+            "archive": "ismart_course_unpacked.zip",
+            "elementId": "6a5c829b4e874f00070e7ca9",
+            "conditionSha256": "462af914a7ed026487c35dad665c29e8ce0df59f2619247a0fc53ce09ed290b8"
+          },
+          "solution": {
+            "id": "T-6a5c829b4e874f00070e7ca9-V4",
+            "status": "published",
+            "answer": "В показанной таблице среднее study_hours у группы pass выше, чем у группы fail. Это связь внутри данного набора, а не доказательство, что увеличение часов само по себе вызовет успешную сдачу. На вывод могут влиять размер выборки и другие особенности учеников.",
+            "code": "",
+            "explanation": "Вывод точно повторяет наблюдаемый групповой результат и отдельно ограничивает причинную интерпретацию.",
+            "kind": "text",
+            "verification": "source",
+            "tests": [],
+            "testCount": 0,
+            "sha256": "e9f0c8935e1c1095d9a93be709511378190508837f504aeffdec57a4eb62606e",
+            "source": "Самостоятельный проверенный разбор Code Future Academy по сохранённому условию",
+            "reviewedAt": "2026-11-02",
+            "authorization": "Владелец подтвердил права на материалы и прямо запросил ответы контролей и аттестаций в чате."
+          }
+        }
+      ]
+    }
+  ],
+  "documentUrl": "/lesson/M01-L19?tab=lecture"
+}

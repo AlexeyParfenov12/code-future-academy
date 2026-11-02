@@ -1,0 +1,10 @@
+{
+  "accuracy": 1.0,
+  "baselineAccuracy": 0.5,
+  "fn": 0,
+  "fp": 0,
+  "testRows": 10,
+  "tn": 5,
+  "tp": 5,
+  "trainRows": 40
+}
