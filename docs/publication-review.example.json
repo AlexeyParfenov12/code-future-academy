@@ -1,0 +1,19 @@
+{
+  "_instruction": "Это не разрешение на публикацию. Заполните реальными проверенными данными и явно смените status после разрешения правообладателя.",
+  "solutions": [
+    {
+      "lessonId": "M01-L03",
+      "taskId": "REPLACE_WITH_ACTUAL_TASK_ID",
+      "status": "unreviewed",
+      "rightsConfirmed": false,
+      "reviewer": "",
+      "reviewedAt": "",
+      "code": "",
+      "sha256": "SHA256_OF_EXACT_UTF8_CODE",
+      "explanation": "Объясните алгоритм, входные данные, ожидаемый результат, ключевые строки и типичные ошибки.",
+      "verification": "source",
+      "verificationEvidence": "",
+      "source": "Точный путь и раздел проверенного исходного материала"
+    }
+  ]
+}

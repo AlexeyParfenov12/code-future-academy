@@ -1,0 +1,18 @@
+export type PublicationStatus = 'unreviewed'|'locally_verified'|'approved'|'published'|'teacher_only';
+export type TaskType = 'code'|'choice'|'debug'|'file'|'free_response'|'assessment'|'project';
+export interface SourceReference { path?:string; sha256?:string; elementId?:string; archive?:string }
+export interface ContentPublication { audience:'student'|'teacher'; rights:string; status:PublicationStatus }
+export interface IsmartLink { id:string; label:string; candidateUrl:string|null; status:'unverified'|'verified'|'unavailable'; unitId:string|null; elementId:string|null }
+export interface TaskVariant { id:string; title:string; statement:string; publication:ContentPublication }
+export interface TaskSolution { id:string; code:string; explanation:string; verification:'source'|'local'|'project_tests'|'ismart'; status:PublicationStatus; source:string }
+export interface TaskSummary { id:string; title:string; type:TaskType; number:number; origin:'ismart'|'author'; solutionStatus:PublicationStatus }
+export interface Task extends TaskSummary { moduleId:number; lessonId:string; statement:string; files:string[]; variants:TaskVariant[]; solution:TaskSolution|null; ismartLink:IsmartLink|null; source:SourceReference; publication:ContentPublication }
+export interface LearningMaterial { id:string; name:string; type:string; url:string; bytes:number; sha256:string; sourceSha256:string; preview:string[][]|null; derived:boolean }
+export interface LessonSummary { id:string; moduleId:number; order:number; number:string; title:string; originalTitle:string; kind:'lesson'|'control'|'assessment'|'final'; taskCount:number; slideCount:number; fileCount:number; hasLecture:boolean; description:string; tags:string[]; tasks:TaskSummary[] }
+export interface Lesson extends LessonSummary { lecture:string; lectureChanges:string[]; practice:string; theory:{title:string;content:string;source:SourceReference}[]; tasks:Task[]; slides:string[]; deckDownload:string|null; files:LearningMaterial[]; ismartLinks:IsmartLink[]; source:SourceReference; publication:ContentPublication }
+export interface Module { id:number; title:string; description:string; lessonIds:string[]; lessonCount:number; controlCount:number; taskCount:number }
+export interface Course { id:string; title:string; subtitle:string; officialUrl:string }
+export interface Catalog { course:Course; modules:Module[]; lessons:LessonSummary[]; counts:Record<string,number> }
+export interface Resource { id:string; title:string; description:string; url:string; topics:string[]; language:string; type:'docs'|'interactive'|'course'|'video'; verifiedAt:string|null }
+export interface Topic { id:string; title:string; group:string; lessons:string[]; content:string; visual?:string }
+export interface ImportReport { counts:Record<string,number>; discrepancies:{metric:string;expected:number;actual:number}[]; warnings:{lessonId:string;message:string}[]; knownIssues:{lessonId:string;message:string}[]; missing:{lessonId:string;material:string}[]; manualReview:string[]; publication:Record<string,string|boolean>; sourceSha256:string; sourceName:string }

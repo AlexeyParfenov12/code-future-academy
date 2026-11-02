@@ -1,0 +1,13 @@
+object_id,true_label,model_A_prediction,model_B_prediction
+1,spam,spam,spam
+2,normal,normal,normal
+3,unclear,spam,unclear
+4,spam,spam,spam
+5,normal,spam,normal
+6,unclear,unclear,normal
+7,spam,normal,spam
+8,normal,normal,normal
+9,spam,spam,unclear
+10,unclear,unclear,unclear
+11,normal,normal,normal
+12,spam,unclear,spam

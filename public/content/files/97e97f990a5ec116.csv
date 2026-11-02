@@ -1,0 +1,36 @@
+student_id,age,country,grade,sleep_hours,screen_time_hours,study_hours,ai_usage_hours,stress_level,uses_ai_for_study,exam_preparation
+1,15,Brazil,9,7,4,2.0,1.0,4,Yes,good
+2,16,Japan,10,6,8,1.0,0.5,8,No,weak
+3,15,India,9,8,5,3.0,1.5,5,Yes,good
+4,17,Germany,11,5,7,2.0,0.0,7,No,weak
+5,16,Canada,10,7,6,2.0,1.0,6,Yes,medium
+6,15,Brazil,9,9,3,4.0,2.0,3,Yes,good
+7,16,USA,10,6,9,1.0,0.5,9,No,weak
+8,17,UK,11,7,5,3.0,1.0,5,Yes,medium
+9,15,India,9,8,4,2.0,0.5,4,No,good
+10,16,Japan,10,5,10,1.0,2.0,8,Yes,weak
+11,17,Nigeria,11,6,6,2.0,1.0,7,No,medium
+12,15,South Korea,9,7,8,2.0,1.5,6,Yes,medium
+13,16,Australia,10,8,4,3.0,0.0,4,No,good
+14,15,Canada,9,7,5,2.0,1.0,5,Yes,medium
+15,17,Germany,11,6,7,3.0,1.5,6,Yes,medium
+16,16,USA,10,4,12,1.0,0.5,9,No,weak
+17,15,UK,9,8,3,4.0,2.0,3,Yes,good
+18,17,Brazil,11,6,6,2.0,1.0,7,No,medium
+19,16,India,10,7,5,3.0,2.0,5,Yes,good
+20,15,Japan,9,8,4,2.0,0.0,4,No,good
+21,16,Nigeria,10,6,9,1.0,1.0,8,Yes,weak
+22,17,South Korea,11,7,6,2.0,1.0,6,No,medium
+23,15,Australia,9,9,2,4.0,2.0,2,Yes,good
+24,16,Canada,10,5,11,1.0,0.5,9,No,weak
+25,17,Germany,11,7,5,3.0,1.5,5,Yes,medium
+26,15,USA,9,8,4,2.0,1.0,4,Yes,good
+27,16,UK,10,6,7,2.0,0.0,7,No,medium
+28,17,Brazil,11,5,8,1.0,1.0,8,Yes,weak
+29,15,India,9,7,5,3.0,2.0,5,Yes,medium
+30,16,Japan,10,6,6,2.0,0.5,6,No,medium
+31,17,USA,11,7,26,1.0,3.0,8,Yes,weak
+32,15,Canada,9,99,4,2.0,1.0,4,No,good
+33,16,Australia,10,6,5,,1.5,5,Yes,medium
+34,17,Germany,11,7,6,3.0,1.0,6,Yes,medium
+35,15,South Korea,9,8,4,2.0,0.5,4,No,good

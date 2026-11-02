@@ -1,0 +1,13 @@
+﻿request_id,text,text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority,category
+101,Не могу войти в аккаунт после смены пароля,43,1,0,0,4,web,high,technical
+102,Списали деньги за подписку два раза,36,0,1,0,5,app,high,payment
+103,Когда доставят мой заказ?,25,1,0,1,3,web,medium,delivery
+104,Приложение закрывается после обновления,39,0,0,0,4,app,high,technical
+105,Как отменить подписку и вернуть деньги?,38,1,1,0,4,web,medium,payment
+106,"Заказ пришёл не полностью, не хватает товара",43,0,0,1,5,app,high,delivery
+107,Не пришёл чек после оплаты,26,0,1,0,3,web,medium,payment
+108,Ошибка при смене пароля в личном кабинете,41,0,0,0,4,web,medium,technical
+109,Хочу изменить адрес доставки,27,0,0,1,2,app,low,delivery
+110,Не загружается страница оплаты,29,0,1,0,5,web,high,technical
+111,"Деньги вернулись, спасибо",24,0,1,0,1,app,low,payment
+112,Курьер не приехал в выбранное время,35,0,0,1,4,web,high,delivery

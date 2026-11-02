@@ -1,0 +1,527 @@
+{
+  "id": "M01-C1-4",
+  "moduleId": 1,
+  "order": 4,
+  "number": "1.К1-4",
+  "title": "Текущий контроль по темам 1-4 Модуля 1",
+  "originalTitle": "Текущий контроль по темам 1-4 Модуля 1",
+  "kind": "control",
+  "taskCount": 12,
+  "slideCount": 0,
+  "fileCount": 0,
+  "hasLecture": false,
+  "description": "Текущий контроль по темам 1-4 Модуля 1  Задания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные вари",
+  "tags": [],
+  "tasks": [
+    {
+      "id": "T-f22cfdc83c204027f54c9c44",
+      "number": 1,
+      "title": "Вопрос №1",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nЧто такое переменная в Python?\n\nВыбери все верные утверждения\n\nспециальная команда для вывода данных на экран\n\nимя, за которым хранится значение\n\nтип файла для хранения профессиональных данных\n\nсинтаксическое правило для описания условий",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "f22cfdc83c204027f54c9c44",
+        "label": "Вопрос №1",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/f22cfdc83c204027f54c9c44",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "f22cfdc83c204027f54c9c44"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-64a0f48f51005cd909feb413",
+      "number": 2,
+      "title": "Вопрос №2",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nКакой тип данных у значения 3.14 в Python?\n\nВыбери все верные утверждения\n\nint – целочисленный тип\n\nstr – строковый тип\n\nfloat – вещественный тип\n\nbool – логический тип",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "64a0f48f51005cd909feb413",
+        "label": "Вопрос №2",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/64a0f48f51005cd909feb413",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "64a0f48f51005cd909feb413"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-b6157225f85c5e2c180e59a0",
+      "number": 3,
+      "title": "Вопрос №3",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nЧто выведет программа: print(10 / 4)?\n\nВыбери все верные утверждения\n\n3\n\n2.5\n\n2\n\n0.25",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "b6157225f85c5e2c180e59a0",
+        "label": "Вопрос №3",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/b6157225f85c5e2c180e59a0",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "b6157225f85c5e2c180e59a0"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-8398e88fa0115d227e0eefab",
+      "number": 4,
+      "title": "Вопрос №4",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nЧто такое жизненный цикл ИИ-решения?\n\nВыбери все верные утверждения\n\nнабор Python-библиотек для работы с нейросетями\n\nнабор методов визуализации данных\n\nэтапы: задача, данные, алгоритм, модель, результат, проверка\n\nпроцесс загрузки данных из внешних источников",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "8398e88fa0115d227e0eefab",
+        "label": "Вопрос №4",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/8398e88fa0115d227e0eefab",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "8398e88fa0115d227e0eefab"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-374be6456f949ac08e145e94",
+      "number": 5,
+      "title": "Вопрос №5",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nЧто делает функция print() в Python?\n\nВыбери все верные утверждения\n\nсчитывает данные с клавиатуры\n\nвыводит одно или несколько значений на экран\n\nоткрывает файл для записи данных\n\nсоздаёт новую переменную",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "374be6456f949ac08e145e94",
+        "label": "Вопрос №5",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/374be6456f949ac08e145e94",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "374be6456f949ac08e145e94"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-ccb24819185fa8403a7b7e1a",
+      "number": 6,
+      "title": "Вопрос №6",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nЧто такое обратная связь на образовательной платформе?\n\nВыбери все верные утверждения\n\nавтоматический тест без участия преподавателя\n\nсистема рейтингов участников по баллам\n\nкомментарии и замечания преподавателя по сданной работе\n\nфункция загрузки файлов на платформу",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "ccb24819185fa8403a7b7e1a",
+        "label": "Вопрос №6",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/ccb24819185fa8403a7b7e1a",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "ccb24819185fa8403a7b7e1a"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-53c41337e8e79c6af3a5616d",
+      "number": 7,
+      "title": "Вопрос №7",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nКакой порядок этапов жизненного цикла ИИ-решения верный?\n\nВыбери все верные утверждения\n\nданные → алгоритм → задача → проверка → модель → результат\n\nмодель → задача → данные → результат → алгоритм → проверка\n\nзадача → данные → алгоритм → модель → результат → проверка\n\nзадача → модель → результат → данные → алгоритм → проверка",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "53c41337e8e79c6af3a5616d",
+        "label": "Вопрос №7",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/53c41337e8e79c6af3a5616d",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "53c41337e8e79c6af3a5616d"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-5c9f2ee9c601399813f622b9",
+      "number": 8,
+      "title": "Вопрос №8",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nЧто лучше описывает роль Python в профессиональных ИИ-задачах?\n\nВыбери все верные утверждения\n\nPython используется только для создания веб-сайтов\n\nPython заменяет математику в задачах анализа данных\n\nPython позволяет обрабатывать данные, описывать алгоритмы и запускать модели\n\nPython хранит данные эффективнее баз данных",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "5c9f2ee9c601399813f622b9",
+        "label": "Вопрос №8",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/5c9f2ee9c601399813f622b9",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "5c9f2ee9c601399813f622b9"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-b9e518c55395310a85a373cf",
+      "number": 1,
+      "title": "Задание №1",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nЧто такое тип данных str в Python? Приведите пример из профессионального контекста.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "b9e518c55395310a85a373cf",
+        "label": "Задание №1",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/b9e518c55395310a85a373cf",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "b9e518c55395310a85a373cf"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-bddde60ae3b78d13f241e046",
+      "number": 2,
+      "title": "Задание №2",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nЧто такое обучающая выборка в ИИ? Зачем она нужна?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "bddde60ae3b78d13f241e046",
+        "label": "Задание №2",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/bddde60ae3b78d13f241e046",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "bddde60ae3b78d13f241e046"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-883c71b1db67c732d5b233aa",
+      "number": 3,
+      "title": "Задание №3",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nУсловие\n\nПриведите пример задачи классификации из вашей профессиональной области.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "883c71b1db67c732d5b233aa",
+        "label": "Задание №3",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/883c71b1db67c732d5b233aa",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "883c71b1db67c732d5b233aa"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-b9213041afed84fe86f42b07",
+      "number": 4,
+      "title": "Задание №4",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C1-4",
+      "statement": "Текущий контроль по темам 1-4 Модуля 1\n\nУсловие\n\nОбъясните \"жизненный цикл ИИ-решения\" своими словами применительно к профессиональной задаче.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "b9213041afed84fe86f42b07",
+        "label": "Задание №4",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/b9213041afed84fe86f42b07",
+        "status": "unverified",
+        "unitId": "fdd4aea6c0a97d47114f9bc8",
+        "elementId": "b9213041afed84fe86f42b07"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 1-4/Практика для студентов.md",
+        "sha256": "e9dbf98a0262dbdaaff63c0d396542f772d6596aafd6bdd2f81ab5b000182d14"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    }
+  ],
+  "lecture": "",
+  "lectureChanges": [],
+  "practice": "# Текущий контроль по темам 1-4 Модуля 1\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Вопрос №1\n\nТекущий контроль по темам 1-4 Модуля 1\n\nЧто такое переменная в Python?\n\nВыбери все верные утверждения\n\nспециальная команда для вывода данных на экран\n\nимя, за которым хранится значение\n\nтип файла для хранения профессиональных данных\n\nсинтаксическое правило для описания условий\n\n\n### Вопрос №2\n\nТекущий контроль по темам 1-4 Модуля 1\n\nКакой тип данных у значения 3.14 в Python?\n\nВыбери все верные утверждения\n\nint – целочисленный тип\n\nstr – строковый тип\n\nfloat – вещественный тип\n\nbool – логический тип\n\n\n### Вопрос №3\n\nТекущий контроль по темам 1-4 Модуля 1\n\nЧто выведет программа: print(10 / 4)?\n\nВыбери все верные утверждения\n\n3\n\n2.5\n\n2\n\n0.25\n\n\n### Вопрос №4\n\nТекущий контроль по темам 1-4 Модуля 1\n\nЧто такое жизненный цикл ИИ-решения?\n\nВыбери все верные утверждения\n\nнабор Python-библиотек для работы с нейросетями\n\nнабор методов визуализации данных\n\nэтапы: задача, данные, алгоритм, модель, результат, проверка\n\nпроцесс загрузки данных из внешних источников\n\n\n### Вопрос №5\n\nТекущий контроль по темам 1-4 Модуля 1\n\nЧто делает функция print() в Python?\n\nВыбери все верные утверждения\n\nсчитывает данные с клавиатуры\n\nвыводит одно или несколько значений на экран\n\nоткрывает файл для записи данных\n\nсоздаёт новую переменную\n\n\n### Вопрос №6\n\nТекущий контроль по темам 1-4 Модуля 1\n\nЧто такое обратная связь на образовательной платформе?\n\nВыбери все верные утверждения\n\nавтоматический тест без участия преподавателя\n\nсистема рейтингов участников по баллам\n\nкомментарии и замечания преподавателя по сданной работе\n\nфункция загрузки файлов на платформу\n\n\n### Вопрос №7\n\nТекущий контроль по темам 1-4 Модуля 1\n\nКакой порядок этапов жизненного цикла ИИ-решения верный?\n\nВыбери все верные утверждения\n\nданные → алгоритм → задача → проверка → модель → результат\n\nмодель → задача → данные → результат → алгоритм → проверка\n\nзадача → данные → алгоритм → модель → результат → проверка\n\nзадача → модель → результат → данные → алгоритм → проверка\n\n\n### Вопрос №8\n\nТекущий контроль по темам 1-4 Модуля 1\n\nЧто лучше описывает роль Python в профессиональных ИИ-задачах?\n\nВыбери все верные утверждения\n\nPython используется только для создания веб-сайтов\n\nPython заменяет математику в задачах анализа данных\n\nPython позволяет обрабатывать данные, описывать алгоритмы и запускать модели\n\nPython хранит данные эффективнее баз данных\n\n\n### Задание №1\n\nТекущий контроль по темам 1-4 Модуля 1\n\nЧто такое тип данных str в Python? Приведите пример из профессионального контекста.\n\n\n### Задание №2\n\nТекущий контроль по темам 1-4 Модуля 1\n\nЧто такое обучающая выборка в ИИ? Зачем она нужна?\n\n\n### Задание №3\n\nТекущий контроль по темам 1-4 Модуля 1\n\nУсловие\n\nПриведите пример задачи классификации из вашей профессиональной области.\n\n\n### Задание №4\n\nТекущий контроль по темам 1-4 Модуля 1\n\nУсловие\n\nОбъясните \"жизненный цикл ИИ-решения\" своими словами применительно к профессиональной задаче.",
+  "theory": [],
+  "slides": [],
+  "deckDownload": null,
+  "files": [],
+  "ismartLinks": [
+    {
+      "id": "f22cfdc83c204027f54c9c44",
+      "label": "Вопрос №1",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/f22cfdc83c204027f54c9c44",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "f22cfdc83c204027f54c9c44"
+    },
+    {
+      "id": "64a0f48f51005cd909feb413",
+      "label": "Вопрос №2",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/64a0f48f51005cd909feb413",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "64a0f48f51005cd909feb413"
+    },
+    {
+      "id": "b6157225f85c5e2c180e59a0",
+      "label": "Вопрос №3",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/b6157225f85c5e2c180e59a0",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "b6157225f85c5e2c180e59a0"
+    },
+    {
+      "id": "8398e88fa0115d227e0eefab",
+      "label": "Вопрос №4",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/8398e88fa0115d227e0eefab",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "8398e88fa0115d227e0eefab"
+    },
+    {
+      "id": "374be6456f949ac08e145e94",
+      "label": "Вопрос №5",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/374be6456f949ac08e145e94",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "374be6456f949ac08e145e94"
+    },
+    {
+      "id": "ccb24819185fa8403a7b7e1a",
+      "label": "Вопрос №6",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/ccb24819185fa8403a7b7e1a",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "ccb24819185fa8403a7b7e1a"
+    },
+    {
+      "id": "53c41337e8e79c6af3a5616d",
+      "label": "Вопрос №7",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/53c41337e8e79c6af3a5616d",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "53c41337e8e79c6af3a5616d"
+    },
+    {
+      "id": "5c9f2ee9c601399813f622b9",
+      "label": "Вопрос №8",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/5c9f2ee9c601399813f622b9",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "5c9f2ee9c601399813f622b9"
+    },
+    {
+      "id": "b9e518c55395310a85a373cf",
+      "label": "Задание №1",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/b9e518c55395310a85a373cf",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "b9e518c55395310a85a373cf"
+    },
+    {
+      "id": "bddde60ae3b78d13f241e046",
+      "label": "Задание №2",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/bddde60ae3b78d13f241e046",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "bddde60ae3b78d13f241e046"
+    },
+    {
+      "id": "883c71b1db67c732d5b233aa",
+      "label": "Задание №3",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/883c71b1db67c732d5b233aa",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "883c71b1db67c732d5b233aa"
+    },
+    {
+      "id": "b9213041afed84fe86f42b07",
+      "label": "Задание №4",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/b9213041afed84fe86f42b07",
+      "status": "unverified",
+      "unitId": "fdd4aea6c0a97d47114f9bc8",
+      "elementId": "b9213041afed84fe86f42b07"
+    }
+  ],
+  "source": {
+    "path": "Модуль 1/Контроль 1-4",
+    "archive": "ismart_course_unpacked.zip"
+  },
+  "publication": {
+    "audience": "student",
+    "rights": "private_owner_use",
+    "status": "published"
+  }
+}

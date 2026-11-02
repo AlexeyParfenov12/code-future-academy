@@ -1,0 +1,1962 @@
+{
+  "id": "M02-C2-9",
+  "moduleId": 2,
+  "order": 31,
+  "number": "2.К2-9",
+  "title": "Текущий контроль по темам 2-9 Модуля 2",
+  "originalTitle": "Текущий контроль по темам 2-9 Модуля 2",
+  "kind": "control",
+  "taskCount": 47,
+  "slideCount": 0,
+  "fileCount": 0,
+  "hasLecture": false,
+  "description": "Текущий контроль по темам 2-9 Модуля 2  Задания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные вари",
+  "tags": [],
+  "tasks": [
+    {
+      "id": "T-6a9564bb4c2de5000736fe56",
+      "number": 1,
+      "title": "Вопрос №1",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто показывает производная функции?\n\nВыбери все верные утверждения\n\nзначение функции в конкретной точке\n\nплощадь под графиком на интервале\n\nскорость изменения функции в данной точке\n\nрасстояние между двумя точками функции",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe56",
+        "label": "Вопрос №1",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe56",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe56"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe5c",
+      "number": 2,
+      "title": "Вопрос №2",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧему равна вероятность невозможного события?\n\nВыбери все верные утверждения\n\n1\n\n0.5\n\n0\n\nзависит от условий",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe5c",
+        "label": "Вопрос №2",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe5c",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe5c"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe62",
+      "number": 3,
+      "title": "Вопрос №3",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое условная вероятность P(A|B)?\n\nВыбери все верные утверждения\n\nвероятность события A, умноженная на вероятность B\n\nвероятность события A при условии, что B уже произошло\n\nсумма вероятностей событий A и B\n\nвероятность противоположного события для A",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe62",
+        "label": "Вопрос №3",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe62",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe62"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe68",
+      "number": 4,
+      "title": "Вопрос №4",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое среднее арифметическое (mean)?\n\nВыбери все верные утверждения\n\nнаиболее часто встречающееся значение в наборе\n\nцентральное значение упорядоченного набора\n\nсумма всех значений, делённая на их количество\n\nразность максимального и минимального значений",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe68",
+        "label": "Вопрос №4",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe68",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe68"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe6e",
+      "number": 5,
+      "title": "Вопрос №5",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое медиана?\n\nВыбери все верные утверждения\n\nсреднее арифметическое всех значений\n\nнаиболее часто встречающееся значение\n\nзначение, делящее упорядоченный набор на две равные части\n\nразброс значений вокруг среднего",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe6e",
+        "label": "Вопрос №5",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe6e",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe6e"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe74",
+      "number": 6,
+      "title": "Вопрос №6",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое дисперсия?\n\nВыбери все верные утверждения\n\nсреднее квадратов отклонений значений от среднего, показывающее разброс данных\n\nразность максимального и минимального значений\n\nотношение двух средних значений\n\nколичество уникальных значений в наборе",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe74",
+        "label": "Вопрос №6",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe74",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe74"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe7a",
+      "number": 7,
+      "title": "Вопрос №7",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nДля чего в ИИ-задаче нужна функция потерь (ошибка модели)?\n\nВыбери все верные утверждения\n\nдля визуализации данных в диаграммах\n\nдля нормализации признаков перед обучением\n\nдля измерения расхождения между предсказанием и реальным значением\n\nдля выбора алгоритма классификации",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe7a",
+        "label": "Вопрос №7",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe7a",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe7a"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe80",
+      "number": 8,
+      "title": "Вопрос №8",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое градиентный спуск в ИИ?\n\nВыбери все верные утверждения\n\nалгоритм сортировки данных по возрастанию\n\nметод визуализации функции ошибки\n\nитеративный метод поиска минимума ошибки через обновление параметров\n\nспособ удаления выбросов из обучающих данных",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe80",
+        "label": "Вопрос №8",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe80",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe80"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe86",
+      "number": 9,
+      "title": "Вопрос №9",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое гистограмма?\n\nВыбери все верные утверждения\n\nточечная диаграмма зависимости двух признаков\n\nстолбчатая диаграмма частот, показывающая распределение значений\n\nлинейный график изменения показателя во времени\n\nкруговая диаграмма долей категорий",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe86",
+        "label": "Вопрос №9",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe86",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe86"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe8c",
+      "number": 10,
+      "title": "Вопрос №10",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое корреляция двух признаков?\n\nВыбери все верные утверждения\n\nразность между средними значениями двух признаков\n\nмера линейной статистической связи между двумя признаками\n\nотношение дисперсий двух признаков\n\nколичество общих значений двух признаков",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe8c",
+        "label": "Вопрос №10",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe8c",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe8c"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe92",
+      "number": 11,
+      "title": "Вопрос №11",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто означает коэффициент корреляции, близкий к -1?\n\nВыбери все верные утверждения\n\nпризнаки не связаны между собой\n\nсильная положительная связь: оба растут вместе\n\nсильная отрицательная связь: рост одного сопровождается падением другого\n\nслабая случайная связь между признаками",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe92",
+        "label": "Вопрос №11",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe92",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe92"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe98",
+      "number": 12,
+      "title": "Вопрос №12",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое минимум функции и как он связан с ИИ?\n\nВыбери все верные утверждения\n\nточка, где функция принимает наибольшее значение\n\nточка, где функция ошибки наименьшая – оптимальные параметры модели\n\nзначение, при котором функция не определена\n\nсреднее значение функции на интервале",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe98",
+        "label": "Вопрос №12",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe98",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe98"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fe9e",
+      "number": 13,
+      "title": "Вопрос №13",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое оптимизация в задачах ИИ?\n\nВыбери все верные утверждения\n\nпроцесс удаления лишних признаков из датасета\n\nпоиск параметров модели, при которых ошибка минимальна\n\nпостроение диаграмм по профессиональным данным\n\nпроцедура разметки данных для задач обучения",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fe9e",
+        "label": "Вопрос №13",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe9e",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fe9e"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fea4",
+      "number": 14,
+      "title": "Вопрос №14",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nКак рассчитать вероятность события при 100 испытаниях и 35 благоприятных исходах?\n\nВыбери все верные утверждения\n\n35/65 = 0.54\n\n35 × 100 = 3500\n\n100/35 = 2.86\n\n35/100 = 0.35",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fea4",
+        "label": "Вопрос №14",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fea4",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fea4"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feaa",
+      "number": 15,
+      "title": "Вопрос №15",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое случайная величина?\n\nВыбери все верные утверждения\n\nпараметр, задаваемый программистом вручную\n\nчисловой результат случайного события, принимающий разные значения с разными вероятностями\n\nпеременная Python с неизвестным типом\n\nкоэффициент в функции ошибки модели",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736feaa",
+        "label": "Вопрос №15",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feaa",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736feaa"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feb0",
+      "number": 16,
+      "title": "Вопрос №16",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое доверительный интервал?\n\nВыбери все верные утверждения\n\nдиапазон, в котором находятся все значения набора\n\nинтервал, в который с заданной вероятностью попадает истинное значение\n\nразность максимального и минимального значений\n\nсумма дисперсий двух независимых признаков",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736feb0",
+        "label": "Вопрос №16",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feb0",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736feb0"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feb6",
+      "number": 17,
+      "title": "Вопрос №17",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое нормализация данных?\n\nВыбери все верные утверждения\n\nудаление строк с пропущенными значениями\n\nзамена категориальных значений числами\n\nперевод числовых признаков к единому масштабу, например от 0 до 1\n\nудаление дублирующихся строк из датасета",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736feb6",
+        "label": "Вопрос №17",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feb6",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736feb6"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fec2",
+      "number": 18,
+      "title": "Вопрос №18",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое мода в наборе данных?\n\nВыбери все верные утверждения\n\nсреднее значение набора\n\nнаиболее часто встречающееся значение\n\nцентральное значение упорядоченного набора\n\nмаксимальное значение набора",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fec2",
+        "label": "Вопрос №18",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fec2",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fec2"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fec8",
+      "number": 19,
+      "title": "Вопрос №19",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЗачем в профессиональной задаче важно принимать решения \"на основе данных\"?\n\nВыбери все верные утверждения\n\nпотому что любой алгоритм всегда даёт точный ответ\n\nчтобы избежать субъективности и обосновать выбор количественными показателями\n\nпотому что визуальные графики заменяют расчёты\n\nчтобы полностью исключить ошибку в решениях",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fec8",
+        "label": "Вопрос №19",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fec8",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fec8"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fece",
+      "number": 20,
+      "title": "Вопрос №20",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто показывает положительная корреляция между двумя признаками?\n\nВыбери все верные утверждения\n\nпри увеличении одного признака второй уменьшается\n\nпризнаки статистически не связаны\n\nпри увеличении одного признака второй тоже обычно растёт\n\nоба признака принимают одинаковые значения",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fece",
+        "label": "Вопрос №20",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fece",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fece"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fed4",
+      "number": 21,
+      "title": "Вопрос №21",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое ошибка модели в профессиональном контексте?\n\nВыбери все верные утверждения\n\nколичество параметров, которые модель не обучила\n\nвремя, затраченное на обучение модели\n\nрасхождение между предсказанием модели и реальным значением\n\nколичество данных, не использованных в обучении",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fed4",
+        "label": "Вопрос №21",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fed4",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fed4"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feda",
+      "number": 22,
+      "title": "Вопрос №22",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nКак связаны вероятность и задача классификации в ИИ?\n\nВыбери все верные утверждения\n\nвероятность не применяется в задачах классификации\n\nмодель оценивает вероятность принадлежности объекта к каждому классу\n\nмодель выбирает класс с наименьшей вероятностью\n\nвероятность задаётся вручную до начала обучения",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736feda",
+        "label": "Вопрос №22",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feda",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736feda"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fee0",
+      "number": 23,
+      "title": "Вопрос №23",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто показывает гистограмма распределения данных?\n\nВыбери все верные утверждения\n\nзависимость между двумя числовыми признаками\n\nдоли категорий в процентах\n\nкакие диапазоны значений встречаются часто, а какие – редко\n\nизменение показателя во времени",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fee0",
+        "label": "Вопрос №23",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fee0",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fee0"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736feec",
+      "number": 24,
+      "title": "Вопрос №24",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое стандартное отклонение?\n\nВыбери все верные утверждения\n\nсреднее значение всех элементов набора данных\n\nнаибольшее значение, встречающееся в наборе\n\nквадратный корень из дисперсии, показывающий разброс значений\n\nколичество уникальных значений в наборе",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736feec",
+        "label": "Вопрос №24",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feec",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736feec"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fef2",
+      "number": 25,
+      "title": "Вопрос №25",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nКак ошибка модели связана с выбором лучшей модели?\n\nВыбери все верные утверждения\n\nлучшей считается модель с максимальной ошибкой\n\nошибка не используется при сравнении моделей\n\nвыбирают модель с минимальной средней ошибкой на проверочных данных\n\nлучшей считается модель с наибольшим числом параметров",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fef2",
+        "label": "Вопрос №25",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fef2",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fef2"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fef8",
+      "number": 26,
+      "title": "Вопрос №26",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое частота события?\n\nВыбери все верные утверждения\n\nмаксимальное значение случайной величины\n\nотношение числа наступлений события к общему числу испытаний\n\nсумма всех вероятностей в пространстве исходов\n\nразность двух вероятностей",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fef8",
+        "label": "Вопрос №26",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fef8",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fef8"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736fefe",
+      "number": 27,
+      "title": "Вопрос №27",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧему равна сумма вероятностей всех возможных исходов одного опыта?\n\nВыбери все верные утверждения\n\n0\n\n0.5\n\nзависит от числа исходов\n\n1",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736fefe",
+        "label": "Вопрос №27",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fefe",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736fefe"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff04",
+      "number": 28,
+      "title": "Вопрос №28",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nКак производная связана с обучением ИИ-модели?\n\nВыбери все верные утверждения\n\nпроизводная определяет число итераций обучения\n\nпроизводная показывает, в какую сторону изменить параметр, чтобы ошибка уменьшилась\n\nпроизводная вычисляет среднее значение функции ошибки\n\nпроизводная автоматически выбирает алгоритм классификации",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff04",
+        "label": "Вопрос №28",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff04",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff04"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff0a",
+      "number": 29,
+      "title": "Вопрос №29",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЗачем строить график функции при анализе профессиональных данных?\n\nВыбери все верные утверждения\n\nчтобы автоматически исправить ошибки в датасете\n\nчтобы получить точный математический ответ без вычислений\n\nчтобы наглядно увидеть зависимость и характер изменения показателя\n\nчтобы уменьшить размер файла данных",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff0a",
+        "label": "Вопрос №29",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff0a",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff0a"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff10",
+      "number": 30,
+      "title": "Вопрос №30",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое рекомендательная система в профессиональном контексте?\n\nВыбери все верные утверждения\n\nсистема, автоматически удаляющая ошибки в данных\n\nсистема, предлагающая сотруднику или клиенту варианты действий на основе данных\n\nалгоритм сортировки заявок по дате\n\nпрограмма для создания резервных копий",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff10",
+        "label": "Вопрос №30",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff10",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff10"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff16",
+      "number": 31,
+      "title": "Вопрос №31",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое прогнозирование спроса как задача ИИ?\n\nВыбери все верные утверждения\n\nклассификация товаров по категориям\n\nразбиение клиентов на группы по похожести\n\nпредсказание числового показателя – будущего объёма заказов – на основе данных\n\nразметка исторических данных вручную",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff16",
+        "label": "Вопрос №31",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff16",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff16"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff1c",
+      "number": 32,
+      "title": "Вопрос №32",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nПочему статистические показатели важны для принятия решений в профессиональной среде?\n\nВыбери все верные утверждения\n\nони заменяют экспертное мнение специалиста\n\nони дают возможность обосновать решение числами и сравнивать варианты объективно\n\nони используются только для оформления отчётов\n\nони автоматически решают профессиональные задачи",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff1c",
+        "label": "Вопрос №32",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff1c",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff1c"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff22",
+      "number": 1,
+      "title": "Задание №1",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое производная? Объясните на примере профессиональной задачи.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff22",
+        "label": "Задание №1",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff22",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff22"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff24",
+      "number": 2,
+      "title": "Задание №2",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nИз 200 обращений клиентов 50 оказались жалобами. Вычислите вероятность жалобы.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff24",
+        "label": "Задание №2",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff24",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff24"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff26",
+      "number": 3,
+      "title": "Задание №3",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое гистограмма и что из неё можно узнать о профессиональных данных?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff26",
+        "label": "Задание №3",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff26",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff26"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff28",
+      "number": 4,
+      "title": "Задание №4",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nОбъясните идею градиентного спуска простыми словами.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff28",
+        "label": "Задание №4",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff28",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff28"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff2a",
+      "number": 5,
+      "title": "Задание №5",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧем среднее отличается от медианы? Когда медиана предпочтительнее в профессиональных данных?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff2a",
+        "label": "Задание №5",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff2a",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff2a"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff2c",
+      "number": 6,
+      "title": "Задание №6",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nЧто такое корреляция признаков? Приведите пример из профессионального датасета.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff2c",
+        "label": "Задание №6",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff2c",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff2c"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff2e",
+      "number": 7,
+      "title": "Задание №7",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто означает \"минимум функции ошибки\" при обучении ИИ-модели?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff2e",
+        "label": "Задание №7",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff2e",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff2e"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff30",
+      "number": 8,
+      "title": "Задание №8",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое дисперсия и что она говорит о профессиональных данных?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff30",
+        "label": "Задание №8",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff30",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff30"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff32",
+      "number": 9,
+      "title": "Задание №9",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nПриведите пример, когда решение \"на основе данных\" оказывается ошибочным в профессиональной задаче.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff32",
+        "label": "Задание №9",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff32",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff32"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff34",
+      "number": 10,
+      "title": "Задание №10",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nЧто такое условная вероятность? Приведите пример из профессиональной задачи.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff34",
+        "label": "Задание №10",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff34",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff34"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff36",
+      "number": 11,
+      "title": "Задание №11",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЗачем нормализовать данные перед анализом или обучением модели?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff36",
+        "label": "Задание №11",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff36",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff36"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff38",
+      "number": 12,
+      "title": "Задание №12",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nЧто такое случайная величина в профессиональном контексте? Приведите пример.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff38",
+        "label": "Задание №12",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff38",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff38"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff3a",
+      "number": 13,
+      "title": "Задание №13",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nКак по гистограмме определить, есть ли в профессиональных данных выбросы?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff3a",
+        "label": "Задание №13",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff3a",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff3a"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff3c",
+      "number": 14,
+      "title": "Задание №14",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nЧто такое функция потерь? Зачем она нужна при обучении ИИ-модели?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff3c",
+        "label": "Задание №14",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff3c",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff3c"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9564bb4c2de5000736ff3e",
+      "number": 15,
+      "title": "Задание №15",
+      "type": "assessment",
+      "moduleId": 2,
+      "lessonId": "M02-C2-9",
+      "statement": "Текущий контроль по темам 2-9 Модуля 2\n\nОбъясните, зачем в профессиональной задаче сравнивать несколько моделей по ошибке.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9564bb4c2de5000736ff3e",
+        "label": "Задание №15",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff3e",
+        "status": "unverified",
+        "unitId": "6a9564bb4c2de5000736fe4f",
+        "elementId": "6a9564bb4c2de5000736ff3e"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 2/Контроль 2-9/Практика для студентов.md",
+        "sha256": "f7ce160c1274df0068b3629e649dc2a85b2ec9943cb63e641be8ac042591fecc"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    }
+  ],
+  "lecture": "",
+  "lectureChanges": [],
+  "practice": "# Текущий контроль по темам 2-9 Модуля 2\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Вопрос №1\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто показывает производная функции?\n\nВыбери все верные утверждения\n\nзначение функции в конкретной точке\n\nплощадь под графиком на интервале\n\nскорость изменения функции в данной точке\n\nрасстояние между двумя точками функции\n\n\n### Вопрос №2\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧему равна вероятность невозможного события?\n\nВыбери все верные утверждения\n\n1\n\n0.5\n\n0\n\nзависит от условий\n\n\n### Вопрос №3\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое условная вероятность P(A|B)?\n\nВыбери все верные утверждения\n\nвероятность события A, умноженная на вероятность B\n\nвероятность события A при условии, что B уже произошло\n\nсумма вероятностей событий A и B\n\nвероятность противоположного события для A\n\n\n### Вопрос №4\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое среднее арифметическое (mean)?\n\nВыбери все верные утверждения\n\nнаиболее часто встречающееся значение в наборе\n\nцентральное значение упорядоченного набора\n\nсумма всех значений, делённая на их количество\n\nразность максимального и минимального значений\n\n\n### Вопрос №5\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое медиана?\n\nВыбери все верные утверждения\n\nсреднее арифметическое всех значений\n\nнаиболее часто встречающееся значение\n\nзначение, делящее упорядоченный набор на две равные части\n\nразброс значений вокруг среднего\n\n\n### Вопрос №6\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое дисперсия?\n\nВыбери все верные утверждения\n\nсреднее квадратов отклонений значений от среднего, показывающее разброс данных\n\nразность максимального и минимального значений\n\nотношение двух средних значений\n\nколичество уникальных значений в наборе\n\n\n### Вопрос №7\n\nТекущий контроль по темам 2-9 Модуля 2\n\nДля чего в ИИ-задаче нужна функция потерь (ошибка модели)?\n\nВыбери все верные утверждения\n\nдля визуализации данных в диаграммах\n\nдля нормализации признаков перед обучением\n\nдля измерения расхождения между предсказанием и реальным значением\n\nдля выбора алгоритма классификации\n\n\n### Вопрос №8\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое градиентный спуск в ИИ?\n\nВыбери все верные утверждения\n\nалгоритм сортировки данных по возрастанию\n\nметод визуализации функции ошибки\n\nитеративный метод поиска минимума ошибки через обновление параметров\n\nспособ удаления выбросов из обучающих данных\n\n\n### Вопрос №9\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое гистограмма?\n\nВыбери все верные утверждения\n\nточечная диаграмма зависимости двух признаков\n\nстолбчатая диаграмма частот, показывающая распределение значений\n\nлинейный график изменения показателя во времени\n\nкруговая диаграмма долей категорий\n\n\n### Вопрос №10\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое корреляция двух признаков?\n\nВыбери все верные утверждения\n\nразность между средними значениями двух признаков\n\nмера линейной статистической связи между двумя признаками\n\nотношение дисперсий двух признаков\n\nколичество общих значений двух признаков\n\n\n### Вопрос №11\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто означает коэффициент корреляции, близкий к -1?\n\nВыбери все верные утверждения\n\nпризнаки не связаны между собой\n\nсильная положительная связь: оба растут вместе\n\nсильная отрицательная связь: рост одного сопровождается падением другого\n\nслабая случайная связь между признаками\n\n\n### Вопрос №12\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое минимум функции и как он связан с ИИ?\n\nВыбери все верные утверждения\n\nточка, где функция принимает наибольшее значение\n\nточка, где функция ошибки наименьшая – оптимальные параметры модели\n\nзначение, при котором функция не определена\n\nсреднее значение функции на интервале\n\n\n### Вопрос №13\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое оптимизация в задачах ИИ?\n\nВыбери все верные утверждения\n\nпроцесс удаления лишних признаков из датасета\n\nпоиск параметров модели, при которых ошибка минимальна\n\nпостроение диаграмм по профессиональным данным\n\nпроцедура разметки данных для задач обучения\n\n\n### Вопрос №14\n\nТекущий контроль по темам 2-9 Модуля 2\n\nКак рассчитать вероятность события при 100 испытаниях и 35 благоприятных исходах?\n\nВыбери все верные утверждения\n\n35/65 = 0.54\n\n35 × 100 = 3500\n\n100/35 = 2.86\n\n35/100 = 0.35\n\n\n### Вопрос №15\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое случайная величина?\n\nВыбери все верные утверждения\n\nпараметр, задаваемый программистом вручную\n\nчисловой результат случайного события, принимающий разные значения с разными вероятностями\n\nпеременная Python с неизвестным типом\n\nкоэффициент в функции ошибки модели\n\n\n### Вопрос №16\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое доверительный интервал?\n\nВыбери все верные утверждения\n\nдиапазон, в котором находятся все значения набора\n\nинтервал, в который с заданной вероятностью попадает истинное значение\n\nразность максимального и минимального значений\n\nсумма дисперсий двух независимых признаков\n\n\n### Вопрос №17\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое нормализация данных?\n\nВыбери все верные утверждения\n\nудаление строк с пропущенными значениями\n\nзамена категориальных значений числами\n\nперевод числовых признаков к единому масштабу, например от 0 до 1\n\nудаление дублирующихся строк из датасета\n\n\n### Вопрос №18\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое мода в наборе данных?\n\nВыбери все верные утверждения\n\nсреднее значение набора\n\nнаиболее часто встречающееся значение\n\nцентральное значение упорядоченного набора\n\nмаксимальное значение набора\n\n\n### Вопрос №19\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЗачем в профессиональной задаче важно принимать решения \"на основе данных\"?\n\nВыбери все верные утверждения\n\nпотому что любой алгоритм всегда даёт точный ответ\n\nчтобы избежать субъективности и обосновать выбор количественными показателями\n\nпотому что визуальные графики заменяют расчёты\n\nчтобы полностью исключить ошибку в решениях\n\n\n### Вопрос №20\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто показывает положительная корреляция между двумя признаками?\n\nВыбери все верные утверждения\n\nпри увеличении одного признака второй уменьшается\n\nпризнаки статистически не связаны\n\nпри увеличении одного признака второй тоже обычно растёт\n\nоба признака принимают одинаковые значения\n\n\n### Вопрос №21\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое ошибка модели в профессиональном контексте?\n\nВыбери все верные утверждения\n\nколичество параметров, которые модель не обучила\n\nвремя, затраченное на обучение модели\n\nрасхождение между предсказанием модели и реальным значением\n\nколичество данных, не использованных в обучении\n\n\n### Вопрос №22\n\nТекущий контроль по темам 2-9 Модуля 2\n\nКак связаны вероятность и задача классификации в ИИ?\n\nВыбери все верные утверждения\n\nвероятность не применяется в задачах классификации\n\nмодель оценивает вероятность принадлежности объекта к каждому классу\n\nмодель выбирает класс с наименьшей вероятностью\n\nвероятность задаётся вручную до начала обучения\n\n\n### Вопрос №23\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто показывает гистограмма распределения данных?\n\nВыбери все верные утверждения\n\nзависимость между двумя числовыми признаками\n\nдоли категорий в процентах\n\nкакие диапазоны значений встречаются часто, а какие – редко\n\nизменение показателя во времени\n\n\n### Вопрос №24\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое стандартное отклонение?\n\nВыбери все верные утверждения\n\nсреднее значение всех элементов набора данных\n\nнаибольшее значение, встречающееся в наборе\n\nквадратный корень из дисперсии, показывающий разброс значений\n\nколичество уникальных значений в наборе\n\n\n### Вопрос №25\n\nТекущий контроль по темам 2-9 Модуля 2\n\nКак ошибка модели связана с выбором лучшей модели?\n\nВыбери все верные утверждения\n\nлучшей считается модель с максимальной ошибкой\n\nошибка не используется при сравнении моделей\n\nвыбирают модель с минимальной средней ошибкой на проверочных данных\n\nлучшей считается модель с наибольшим числом параметров\n\n\n### Вопрос №26\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое частота события?\n\nВыбери все верные утверждения\n\nмаксимальное значение случайной величины\n\nотношение числа наступлений события к общему числу испытаний\n\nсумма всех вероятностей в пространстве исходов\n\nразность двух вероятностей\n\n\n### Вопрос №27\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧему равна сумма вероятностей всех возможных исходов одного опыта?\n\nВыбери все верные утверждения\n\n0\n\n0.5\n\nзависит от числа исходов\n\n1\n\n\n### Вопрос №28\n\nТекущий контроль по темам 2-9 Модуля 2\n\nКак производная связана с обучением ИИ-модели?\n\nВыбери все верные утверждения\n\nпроизводная определяет число итераций обучения\n\nпроизводная показывает, в какую сторону изменить параметр, чтобы ошибка уменьшилась\n\nпроизводная вычисляет среднее значение функции ошибки\n\nпроизводная автоматически выбирает алгоритм классификации\n\n\n### Вопрос №29\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЗачем строить график функции при анализе профессиональных данных?\n\nВыбери все верные утверждения\n\nчтобы автоматически исправить ошибки в датасете\n\nчтобы получить точный математический ответ без вычислений\n\nчтобы наглядно увидеть зависимость и характер изменения показателя\n\nчтобы уменьшить размер файла данных\n\n\n### Вопрос №30\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое рекомендательная система в профессиональном контексте?\n\nВыбери все верные утверждения\n\nсистема, автоматически удаляющая ошибки в данных\n\nсистема, предлагающая сотруднику или клиенту варианты действий на основе данных\n\nалгоритм сортировки заявок по дате\n\nпрограмма для создания резервных копий\n\n\n### Вопрос №31\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое прогнозирование спроса как задача ИИ?\n\nВыбери все верные утверждения\n\nклассификация товаров по категориям\n\nразбиение клиентов на группы по похожести\n\nпредсказание числового показателя – будущего объёма заказов – на основе данных\n\nразметка исторических данных вручную\n\n\n### Вопрос №32\n\nТекущий контроль по темам 2-9 Модуля 2\n\nПочему статистические показатели важны для принятия решений в профессиональной среде?\n\nВыбери все верные утверждения\n\nони заменяют экспертное мнение специалиста\n\nони дают возможность обосновать решение числами и сравнивать варианты объективно\n\nони используются только для оформления отчётов\n\nони автоматически решают профессиональные задачи\n\n\n### Задание №1\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое производная? Объясните на примере профессиональной задачи.\n\n\n### Задание №2\n\nТекущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nИз 200 обращений клиентов 50 оказались жалобами. Вычислите вероятность жалобы.\n\n\n### Задание №3\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое гистограмма и что из неё можно узнать о профессиональных данных?\n\n\n### Задание №4\n\nТекущий контроль по темам 2-9 Модуля 2\n\nОбъясните идею градиентного спуска простыми словами.\n\n\n### Задание №5\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧем среднее отличается от медианы? Когда медиана предпочтительнее в профессиональных данных?\n\n\n### Задание №6\n\nТекущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nЧто такое корреляция признаков? Приведите пример из профессионального датасета.\n\n\n### Задание №7\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто означает \"минимум функции ошибки\" при обучении ИИ-модели?\n\n\n### Задание №8\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое дисперсия и что она говорит о профессиональных данных?\n\n\n### Задание №9\n\nТекущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nПриведите пример, когда решение \"на основе данных\" оказывается ошибочным в профессиональной задаче.\n\n\n### Задание №10\n\nТекущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nЧто такое условная вероятность? Приведите пример из профессиональной задачи.\n\n\n### Задание №11\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЗачем нормализовать данные перед анализом или обучением модели?\n\n\n### Задание №12\n\nТекущий контроль по темам 2-9 Модуля 2\n\nУсловие\n\nЧто такое случайная величина в профессиональном контексте? Приведите пример.\n\n\n### Задание №13\n\nТекущий контроль по темам 2-9 Модуля 2\n\nКак по гистограмме определить, есть ли в профессиональных данных выбросы?\n\n\n### Задание №14\n\nТекущий контроль по темам 2-9 Модуля 2\n\nЧто такое функция потерь? Зачем она нужна при обучении ИИ-модели?\n\n\n### Задание №15\n\nТекущий контроль по темам 2-9 Модуля 2\n\nОбъясните, зачем в профессиональной задаче сравнивать несколько моделей по ошибке.",
+  "theory": [],
+  "slides": [],
+  "deckDownload": null,
+  "files": [],
+  "ismartLinks": [
+    {
+      "id": "6a9564bb4c2de5000736fe56",
+      "label": "Вопрос №1",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe56",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe56"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe5c",
+      "label": "Вопрос №2",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe5c",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe5c"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe62",
+      "label": "Вопрос №3",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe62",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe62"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe68",
+      "label": "Вопрос №4",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe68",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe68"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe6e",
+      "label": "Вопрос №5",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe6e",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe6e"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe74",
+      "label": "Вопрос №6",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe74",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe74"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe7a",
+      "label": "Вопрос №7",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe7a",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe7a"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe80",
+      "label": "Вопрос №8",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe80",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe80"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe86",
+      "label": "Вопрос №9",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe86",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe86"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe8c",
+      "label": "Вопрос №10",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe8c",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe8c"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe92",
+      "label": "Вопрос №11",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe92",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe92"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe98",
+      "label": "Вопрос №12",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe98",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe98"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fe9e",
+      "label": "Вопрос №13",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe9e",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fe9e"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fea4",
+      "label": "Вопрос №14",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fea4",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fea4"
+    },
+    {
+      "id": "6a9564bb4c2de5000736feaa",
+      "label": "Вопрос №15",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feaa",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736feaa"
+    },
+    {
+      "id": "6a9564bb4c2de5000736feb0",
+      "label": "Вопрос №16",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feb0",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736feb0"
+    },
+    {
+      "id": "6a9564bb4c2de5000736feb6",
+      "label": "Вопрос №17",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feb6",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736feb6"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fec2",
+      "label": "Вопрос №18",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fec2",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fec2"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fec8",
+      "label": "Вопрос №19",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fec8",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fec8"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fece",
+      "label": "Вопрос №20",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fece",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fece"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fed4",
+      "label": "Вопрос №21",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fed4",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fed4"
+    },
+    {
+      "id": "6a9564bb4c2de5000736feda",
+      "label": "Вопрос №22",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feda",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736feda"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fee0",
+      "label": "Вопрос №23",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fee0",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fee0"
+    },
+    {
+      "id": "6a9564bb4c2de5000736feec",
+      "label": "Вопрос №24",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736feec",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736feec"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fef2",
+      "label": "Вопрос №25",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fef2",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fef2"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fef8",
+      "label": "Вопрос №26",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fef8",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fef8"
+    },
+    {
+      "id": "6a9564bb4c2de5000736fefe",
+      "label": "Вопрос №27",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fefe",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736fefe"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff04",
+      "label": "Вопрос №28",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff04",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff04"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff0a",
+      "label": "Вопрос №29",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff0a",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff0a"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff10",
+      "label": "Вопрос №30",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff10",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff10"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff16",
+      "label": "Вопрос №31",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff16",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff16"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff1c",
+      "label": "Вопрос №32",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff1c",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff1c"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff22",
+      "label": "Задание №1",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff22",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff22"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff24",
+      "label": "Задание №2",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff24",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff24"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff26",
+      "label": "Задание №3",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff26",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff26"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff28",
+      "label": "Задание №4",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff28",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff28"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff2a",
+      "label": "Задание №5",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff2a",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff2a"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff2c",
+      "label": "Задание №6",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff2c",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff2c"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff2e",
+      "label": "Задание №7",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff2e",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff2e"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff30",
+      "label": "Задание №8",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff30",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff30"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff32",
+      "label": "Задание №9",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff32",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff32"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff34",
+      "label": "Задание №10",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff34",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff34"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff36",
+      "label": "Задание №11",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff36",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff36"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff38",
+      "label": "Задание №12",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff38",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff38"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff3a",
+      "label": "Задание №13",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff3a",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff3a"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff3c",
+      "label": "Задание №14",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff3c",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff3c"
+    },
+    {
+      "id": "6a9564bb4c2de5000736ff3e",
+      "label": "Задание №15",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736ff3e",
+      "status": "unverified",
+      "unitId": "6a9564bb4c2de5000736fe4f",
+      "elementId": "6a9564bb4c2de5000736ff3e"
+    }
+  ],
+  "source": {
+    "path": "Модуль 2/Контроль 2-9",
+    "archive": "ismart_course_unpacked.zip"
+  },
+  "publication": {
+    "audience": "student",
+    "rights": "private_owner_use",
+    "status": "published"
+  }
+}

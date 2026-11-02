@@ -1,0 +1,96 @@
+{
+  "sourceName": "ismart_course_unpacked.zip",
+  "sourceSha256": "54def6f73c76657f86cbc0ad8f2a95dc8071240844a93c85d6584da0dcdcef51",
+  "sourceDate": "2026-11-02",
+  "counts": {
+    "modules": 5,
+    "sections": 82,
+    "lessons": 74,
+    "controls": 8,
+    "presentations": 74,
+    "slides": 1239,
+    "lectures": 74,
+    "tasks": 723,
+    "officialPracticalElements": 653,
+    "dataFiles": 49,
+    "fileBindings": 67,
+    "linksMapped": 743,
+    "verifiedStudentLinks": 0,
+    "teacherSections": 73,
+    "sourcePages": 743,
+    "variantViews": 284,
+    "additionalPractices": 16,
+    "attachmentUrls": 156,
+    "attachmentMetadataUrls": 155
+  },
+  "expected": {
+    "date": "2026-11-02",
+    "presentations": 74,
+    "slides": 1239,
+    "lectures": 74,
+    "sections": 82,
+    "source_pages": 743,
+    "teacher_sections": 73,
+    "variant_page_views": 284,
+    "original_attachment_urls": 156,
+    "additional_practices": 16,
+    "broken_navigation_links": 0
+  },
+  "discrepancies": [],
+  "unboundAttachmentUrls": [
+    "https://files-cdn.ismart.org/documents/method-ai-v3/basic-spo/1.16/README.md"
+  ],
+  "warnings": [
+    {
+      "lessonId": "M01-L16",
+      "message": "Сохранена ссылка на README.md, но файл отсутствует в комплекте и метаданных занятия."
+    }
+  ],
+  "knownIssues": [
+    {
+      "lessonId": "M01-L03",
+      "message": "Задание 2: вариант 15 из 20 даёт 75.0%. Задание 5: сдаётся перевод минут в секунды, пример метров — только демонстрация."
+    },
+    {
+      "lessonId": "M02-L12",
+      "message": "Выборочное и генеральное стандартное отклонение различаются: stdev и pstdev нельзя подменять."
+    },
+    {
+      "lessonId": "M02-L15",
+      "message": "В учебной функции пропущено двоеточие. Условие с or соответствует требованию; замена на and меняет задачу."
+    },
+    {
+      "lessonId": "M03-L16",
+      "message": "Занятия 3.16 и 3.17 — отдельные элементы с одинаковым названием."
+    }
+  ],
+  "duplicates": [],
+  "missing": [
+    {
+      "lessonId": "M01-L16",
+      "material": "README.md"
+    }
+  ],
+  "publication": {
+    "audience": "owner_private",
+    "studentMaterials": "private_owner_use",
+    "teacherMaterials": "excluded_from_public_build",
+    "solutions": "explicit_review_and_rights_confirmation_required",
+    "ismartLinks": "all_unverified_no_student_session",
+    "pptx": "notes_comments_and_personal_metadata_removed",
+    "originals": "unchanged_outside_project",
+    "publicRightsConfirmed": false
+  },
+  "manualReview": [
+    "Подтвердить права iSMART перед открытой публикацией.",
+    "Проверить кандидаты ссылок в авторизованной студенческой сессии.",
+    "Рассмотреть решения по одному; контрольные ключи и варианты остаются закрытыми.",
+    "Сверить отрисовку всех слайдов с PowerPoint перед публичным выпуском."
+  ],
+  "rendering": {
+    "renderer": "DrawingML geometry and rich text → script-free SVG; browser text fitting",
+    "slideCount": 1239,
+    "adjustedBlocks": 18,
+    "overflowingBlocks": 0
+  }
+}

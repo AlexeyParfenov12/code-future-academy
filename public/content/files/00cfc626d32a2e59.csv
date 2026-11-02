@@ -1,0 +1,16 @@
+﻿student_id,age,sleep_hours,screen_time_hours,uses_ai_for_study,stress_level,exam_preparation,wellness_group
+1,15,8.0,4.0,yes,medium,good,balanced
+2,16,,6.5,no,high,weak,needs_attention
+3,15,7.0,5.0,yes,medium,good,balanced
+3,15,7.0,5.0,yes,medium,good,balanced
+4,150,6.0,3.0,no,low,good,normal
+5,16,5.0,-2.0,yes,high,weak,needs_attention
+6,17,9.0,7.0,YES,medum,normal,normal
+7,14,3.0,12.5,sometimes,high,weak,needs_attention
+8,18,7.5,4.5,no,low,good,balanced
+9,,6.5,8.0,yes,hight,normal,normal
+10,16,6.0,,no,medium,normal,normal
+11,15,7.0,5.0,да,medium,good,balanced
+12,17,24.0,2.0,no,low,good,balanced
+13,16,6.5,4.0,yes,medium,normal,normal
+14,15,7.5,5.5,sometimes,medium,good,balanced

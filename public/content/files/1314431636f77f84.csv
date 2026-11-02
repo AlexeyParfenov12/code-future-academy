@@ -1,0 +1,4 @@
+class,count,description_ru
+spam,12,спам-сообщение
+normal,28,обычное сообщение
+promo,10,рекламное сообщение

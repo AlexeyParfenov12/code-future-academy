@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.sites-local/
+test-results/
+playwright-report/
+private/
+*.zip
+__pycache__/
+
+*.tsbuildinfo
+.vite/

@@ -1,0 +1,814 @@
+{
+  "id": "M03-C8-11",
+  "moduleId": 3,
+  "order": 53,
+  "number": "3.К8-11",
+  "title": "Текущий контроль по темам 8-11 Модуля 3",
+  "originalTitle": "Текущий контроль по темам 8-11 Модуля 3",
+  "kind": "control",
+  "taskCount": 19,
+  "slideCount": 0,
+  "fileCount": 0,
+  "hasLecture": false,
+  "description": "Текущий контроль по темам 8-11 Модуля 3  Задания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные вар",
+  "tags": [],
+  "tasks": [
+    {
+      "id": "T-6a9566a24c2de50007370620",
+      "number": 1,
+      "title": "Вопрос №1",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто показывает матрица ошибок (confusion matrix)?\n\nВыбери все верные утверждения\n\nзависимость признаков в обучающей выборке\n\nраспределение правильных и неправильных предсказаний по классам\n\nскорость обучения модели по итерациям\n\nкорреляцию между признаками и целевой переменной",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de50007370620",
+        "label": "Вопрос №1",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370620",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de50007370620"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de5000737064a",
+      "number": 2,
+      "title": "Вопрос №2",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто такое регрессионная ошибка?\n\nВыбери все верные утверждения\n\nдоля объектов, отнесённых к неверному классу\n\nразность между предсказанным и фактическим числовым значением\n\nчисло признаков, не учтённых моделью\n\nдисперсия целевой переменной",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de5000737064a",
+        "label": "Вопрос №2",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de5000737064a",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de5000737064a"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de50007370668",
+      "number": 3,
+      "title": "Вопрос №3",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто такое полный ML-пайплайн?\n\nВыбери все верные утверждения\n\nтолько этап обучения модели без подготовки данных\n\nнабор визуализаций для анализа профессионального датасета\n\nпоследовательность: подготовка данных, обучение, оценка, вывод о качестве\n\nодна функция Scikit-learn для классификации",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de50007370668",
+        "label": "Вопрос №3",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370668",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de50007370668"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de50007370674",
+      "number": 4,
+      "title": "Вопрос №4",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто такое baseline в ML-проекте?\n\nВыбери все верные утверждения\n\nлучший возможный результат для задачи\n\nпростейший ориентир, с которым сравнивают более сложную модель\n\nметрика accuracy на обучающей выборке\n\nсреднее значение целевой переменной",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de50007370674",
+        "label": "Вопрос №4",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370674",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de50007370674"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de50007370686",
+      "number": 5,
+      "title": "Вопрос №5",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто показывает средняя ошибка прогноза (MAE) в регрессии?\n\nВыбери все верные утверждения\n\nдолю верных предсказаний из общего числа\n\nскорость обучения модели\n\nсреднее абсолютное отклонение предсказаний от реальных значений\n\nкорреляцию между признаками",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de50007370686",
+        "label": "Вопрос №5",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370686",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de50007370686"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de50007370692",
+      "number": 6,
+      "title": "Вопрос №6",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто такое кластеризация клиентов в профессиональном контексте?\n\nВыбери все верные утверждения\n\nклассификация клиентов по заранее заданным категориям\n\nгруппировка клиентов по схожести поведения без заранее известных меток\n\nпредсказание покупки клиентом\n\nразметка клиентских данных вручную",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de50007370692",
+        "label": "Вопрос №6",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370692",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de50007370692"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de5000737069e",
+      "number": 7,
+      "title": "Вопрос №7",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто такое \"ИИ-кейс\" в профессиональном контексте?\n\nВыбери все верные утверждения\n\nописание технических параметров модели\n\nконкретная профессиональная задача, решаемая с помощью ИИ, с данными и критериями\n\nнабор библиотек Python для машинного обучения\n\nшаблон презентации результатов модели",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de5000737069e",
+        "label": "Вопрос №7",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de5000737069e",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de5000737069e"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706a4",
+      "number": 8,
+      "title": "Вопрос №8",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто такое интерпретация матрицы ошибок?\n\nВыбери все верные утверждения\n\nрасчёт средней ошибки регрессии\n\nпостроение гистограммы для целевой переменной\n\nанализ того, какие классы модель путает и как часто\n\nкорреляционный анализ признаков",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706a4",
+        "label": "Вопрос №8",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706a4",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706a4"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706b0",
+      "number": 9,
+      "title": "Вопрос №9",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЗачем улучшать модель после первой оценки?\n\nВыбери все верные утверждения\n\nчтобы полностью устранить все ошибки предсказания\n\nчтобы убрать тестовую выборку из проекта\n\nчтобы повысить точность и надёжность предсказаний для профессиональной задачи\n\nчтобы сократить датасет до минимума",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706b0",
+        "label": "Вопрос №9",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706b0",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706b0"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706b6",
+      "number": 10,
+      "title": "Вопрос №10",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто является примером задачи регрессии в профессиональной среде?\n\nВыбери все верные утверждения\n\nопределить, является ли обращение жалобой или нет\n\nпредсказать ежемесячный объём продаж по историческим данным\n\nразбить клиентов на группы по похожести поведения\n\nклассифицировать документ по типу",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706b6",
+        "label": "Вопрос №10",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706b6",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706b6"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706c6",
+      "number": 1,
+      "title": "Задание №1",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nУсловие\n\nОпишите, что такое матрица ошибок и какую информацию она даёт в профессиональной задаче.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706c6",
+        "label": "Задание №1",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706c6",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706c6"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706c8",
+      "number": 2,
+      "title": "Задание №2",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nУсловие\n\nПриведите пример задачи кластеризации в профессиональной деятельности.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706c8",
+        "label": "Задание №2",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706c8",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706c8"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706ca",
+      "number": 3,
+      "title": "Задание №3",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nУсловие\n\nЧто такое полный ML-пайплайн? Перечислите этапы применительно к профессиональной задаче.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706ca",
+        "label": "Задание №3",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706ca",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706ca"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706ce",
+      "number": 4,
+      "title": "Задание №4",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nУсловие\n\nЧем accuracy может быть недостаточной метрикой в профессиональной задаче? Приведите пример.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706ce",
+        "label": "Задание №4",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706ce",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706ce"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706d2",
+      "number": 5,
+      "title": "Задание №5",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nДля чего нужно визуальное сравнение предсказаний модели с реальными значениями?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706d2",
+        "label": "Задание №5",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706d2",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706d2"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706d6",
+      "number": 6,
+      "title": "Задание №6",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nОбъясните кластеризацию простыми словами применительно к профессиональной задаче.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706d6",
+        "label": "Задание №6",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706d6",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706d6"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706d8",
+      "number": 7,
+      "title": "Задание №7",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто такое ошибка регрессии (MAE)? Как интерпретировать её в профессиональном контексте?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706d8",
+        "label": "Задание №7",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706d8",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706d8"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706dc",
+      "number": 8,
+      "title": "Задание №8",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nЧто такое baseline и зачем он нужен в профессиональном ML-проекте?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706dc",
+        "label": "Задание №8",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706dc",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706dc"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9566a24c2de500073706de",
+      "number": 9,
+      "title": "Задание №9",
+      "type": "assessment",
+      "moduleId": 3,
+      "lessonId": "M03-C8-11",
+      "statement": "Текущий контроль по темам 8-11 Модуля 3\n\nКак описать профессиональный ИИ-кейс? Что нужно указать?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9566a24c2de500073706de",
+        "label": "Задание №9",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706de",
+        "status": "unverified",
+        "unitId": "6a9566a24c2de500073705ef",
+        "elementId": "6a9566a24c2de500073706de"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 3/Контроль 8-11/Практика для студентов.md",
+        "sha256": "473995ab9fc51babadc5ed9b7fd8e46b96220dee5094aa7c1f046f9859d0092f"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    }
+  ],
+  "lecture": "",
+  "lectureChanges": [],
+  "practice": "# Текущий контроль по темам 8-11 Модуля 3\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Вопрос №1\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто показывает матрица ошибок (confusion matrix)?\n\nВыбери все верные утверждения\n\nзависимость признаков в обучающей выборке\n\nраспределение правильных и неправильных предсказаний по классам\n\nскорость обучения модели по итерациям\n\nкорреляцию между признаками и целевой переменной\n\n\n### Вопрос №2\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто такое регрессионная ошибка?\n\nВыбери все верные утверждения\n\nдоля объектов, отнесённых к неверному классу\n\nразность между предсказанным и фактическим числовым значением\n\nчисло признаков, не учтённых моделью\n\nдисперсия целевой переменной\n\n\n### Вопрос №3\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто такое полный ML-пайплайн?\n\nВыбери все верные утверждения\n\nтолько этап обучения модели без подготовки данных\n\nнабор визуализаций для анализа профессионального датасета\n\nпоследовательность: подготовка данных, обучение, оценка, вывод о качестве\n\nодна функция Scikit-learn для классификации\n\n\n### Вопрос №4\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто такое baseline в ML-проекте?\n\nВыбери все верные утверждения\n\nлучший возможный результат для задачи\n\nпростейший ориентир, с которым сравнивают более сложную модель\n\nметрика accuracy на обучающей выборке\n\nсреднее значение целевой переменной\n\n\n### Вопрос №5\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто показывает средняя ошибка прогноза (MAE) в регрессии?\n\nВыбери все верные утверждения\n\nдолю верных предсказаний из общего числа\n\nскорость обучения модели\n\nсреднее абсолютное отклонение предсказаний от реальных значений\n\nкорреляцию между признаками\n\n\n### Вопрос №6\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто такое кластеризация клиентов в профессиональном контексте?\n\nВыбери все верные утверждения\n\nклассификация клиентов по заранее заданным категориям\n\nгруппировка клиентов по схожести поведения без заранее известных меток\n\nпредсказание покупки клиентом\n\nразметка клиентских данных вручную\n\n\n### Вопрос №7\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто такое \"ИИ-кейс\" в профессиональном контексте?\n\nВыбери все верные утверждения\n\nописание технических параметров модели\n\nконкретная профессиональная задача, решаемая с помощью ИИ, с данными и критериями\n\nнабор библиотек Python для машинного обучения\n\nшаблон презентации результатов модели\n\n\n### Вопрос №8\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто такое интерпретация матрицы ошибок?\n\nВыбери все верные утверждения\n\nрасчёт средней ошибки регрессии\n\nпостроение гистограммы для целевой переменной\n\nанализ того, какие классы модель путает и как часто\n\nкорреляционный анализ признаков\n\n\n### Вопрос №9\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЗачем улучшать модель после первой оценки?\n\nВыбери все верные утверждения\n\nчтобы полностью устранить все ошибки предсказания\n\nчтобы убрать тестовую выборку из проекта\n\nчтобы повысить точность и надёжность предсказаний для профессиональной задачи\n\nчтобы сократить датасет до минимума\n\n\n### Вопрос №10\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто является примером задачи регрессии в профессиональной среде?\n\nВыбери все верные утверждения\n\nопределить, является ли обращение жалобой или нет\n\nпредсказать ежемесячный объём продаж по историческим данным\n\nразбить клиентов на группы по похожести поведения\n\nклассифицировать документ по типу\n\n\n### Задание №1\n\nТекущий контроль по темам 8-11 Модуля 3\n\nУсловие\n\nОпишите, что такое матрица ошибок и какую информацию она даёт в профессиональной задаче.\n\n\n### Задание №2\n\nТекущий контроль по темам 8-11 Модуля 3\n\nУсловие\n\nПриведите пример задачи кластеризации в профессиональной деятельности.\n\n\n### Задание №3\n\nТекущий контроль по темам 8-11 Модуля 3\n\nУсловие\n\nЧто такое полный ML-пайплайн? Перечислите этапы применительно к профессиональной задаче.\n\n\n### Задание №4\n\nТекущий контроль по темам 8-11 Модуля 3\n\nУсловие\n\nЧем accuracy может быть недостаточной метрикой в профессиональной задаче? Приведите пример.\n\n\n### Задание №5\n\nТекущий контроль по темам 8-11 Модуля 3\n\nДля чего нужно визуальное сравнение предсказаний модели с реальными значениями?\n\n\n### Задание №6\n\nТекущий контроль по темам 8-11 Модуля 3\n\nОбъясните кластеризацию простыми словами применительно к профессиональной задаче.\n\n\n### Задание №7\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто такое ошибка регрессии (MAE)? Как интерпретировать её в профессиональном контексте?\n\n\n### Задание №8\n\nТекущий контроль по темам 8-11 Модуля 3\n\nЧто такое baseline и зачем он нужен в профессиональном ML-проекте?\n\n\n### Задание №9\n\nТекущий контроль по темам 8-11 Модуля 3\n\nКак описать профессиональный ИИ-кейс? Что нужно указать?",
+  "theory": [],
+  "slides": [],
+  "deckDownload": null,
+  "files": [],
+  "ismartLinks": [
+    {
+      "id": "6a9566a24c2de50007370620",
+      "label": "Вопрос №1",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370620",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de50007370620"
+    },
+    {
+      "id": "6a9566a24c2de5000737064a",
+      "label": "Вопрос №2",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de5000737064a",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de5000737064a"
+    },
+    {
+      "id": "6a9566a24c2de50007370668",
+      "label": "Вопрос №3",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370668",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de50007370668"
+    },
+    {
+      "id": "6a9566a24c2de50007370674",
+      "label": "Вопрос №4",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370674",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de50007370674"
+    },
+    {
+      "id": "6a9566a24c2de50007370686",
+      "label": "Вопрос №5",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370686",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de50007370686"
+    },
+    {
+      "id": "6a9566a24c2de50007370692",
+      "label": "Вопрос №6",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370692",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de50007370692"
+    },
+    {
+      "id": "6a9566a24c2de5000737069e",
+      "label": "Вопрос №7",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de5000737069e",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de5000737069e"
+    },
+    {
+      "id": "6a9566a24c2de500073706a4",
+      "label": "Вопрос №8",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706a4",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706a4"
+    },
+    {
+      "id": "6a9566a24c2de500073706b0",
+      "label": "Вопрос №9",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706b0",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706b0"
+    },
+    {
+      "id": "6a9566a24c2de500073706b6",
+      "label": "Вопрос №10",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706b6",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706b6"
+    },
+    {
+      "id": "6a9566a24c2de500073706c6",
+      "label": "Задание №1",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706c6",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706c6"
+    },
+    {
+      "id": "6a9566a24c2de500073706c8",
+      "label": "Задание №2",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706c8",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706c8"
+    },
+    {
+      "id": "6a9566a24c2de500073706ca",
+      "label": "Задание №3",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706ca",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706ca"
+    },
+    {
+      "id": "6a9566a24c2de500073706ce",
+      "label": "Задание №4",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706ce",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706ce"
+    },
+    {
+      "id": "6a9566a24c2de500073706d2",
+      "label": "Задание №5",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706d2",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706d2"
+    },
+    {
+      "id": "6a9566a24c2de500073706d6",
+      "label": "Задание №6",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706d6",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706d6"
+    },
+    {
+      "id": "6a9566a24c2de500073706d8",
+      "label": "Задание №7",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706d8",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706d8"
+    },
+    {
+      "id": "6a9566a24c2de500073706dc",
+      "label": "Задание №8",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706dc",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706dc"
+    },
+    {
+      "id": "6a9566a24c2de500073706de",
+      "label": "Задание №9",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de500073706de",
+      "status": "unverified",
+      "unitId": "6a9566a24c2de500073705ef",
+      "elementId": "6a9566a24c2de500073706de"
+    }
+  ],
+  "source": {
+    "path": "Модуль 3/Контроль 8-11",
+    "archive": "ismart_course_unpacked.zip"
+  },
+  "publication": {
+    "audience": "student",
+    "rights": "private_owner_use",
+    "status": "published"
+  }
+}

@@ -1,0 +1,1593 @@
+{
+  "id": "M01-C5-13",
+  "moduleId": 1,
+  "order": 14,
+  "number": "1.К5-13",
+  "title": "Текущий контроль по темам 5-13 Модуля 1",
+  "originalTitle": "Текущий контроль по темам 5-13 Модуля 1",
+  "kind": "control",
+  "taskCount": 38,
+  "slideCount": 0,
+  "fileCount": 0,
+  "hasLecture": false,
+  "description": "Текущий контроль по темам 5-13 Модуля 1  Задания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные вар",
+  "tags": [],
+  "tasks": [
+    {
+      "id": "T-6a9562534c2de5000736fb85",
+      "number": 1,
+      "title": "Вопрос №1",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто делает условный оператор if/elif/else?\n\nВыбери все верные утверждения\n\nповторяет блок кода заданное число раз\n\nсоздаёт именованный блок многократно используемого кода\n\nвыполняет один из блоков кода в зависимости от условия\n\nчитает данные из файла построчно",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fb85",
+        "label": "Вопрос №1",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb85",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fb85"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fb8b",
+      "number": 2,
+      "title": "Вопрос №2",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто делает цикл while?\n\nВыбери все верные утверждения\n\nперебирает элементы коллекции по одному\n\nвыполняет блок кода, пока заданное условие истинно\n\nвыполняет блок кода ровно один раз\n\nвычисляет среднее значение списка",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fb8b",
+        "label": "Вопрос №2",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb8b",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fb8b"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fb91",
+      "number": 3,
+      "title": "Вопрос №3",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nКак обратиться ко второму элементу списка items?\n\nВыбери все верные утверждения\n\nitems[2]\n\nitems[1]\n\nitems{2}\n\nitems.get(2)",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fb91",
+        "label": "Вопрос №3",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb91",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fb91"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fb97",
+      "number": 4,
+      "title": "Вопрос №4",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто делает метод append() у списка?\n\nВыбери все верные утверждения\n\nудаляет последний элемент из списка\n\nвозвращает длину списка\n\nдобавляет новый элемент в конец списка\n\nсортирует элементы списка",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fb97",
+        "label": "Вопрос №4",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb97",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fb97"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fb9d",
+      "number": 5,
+      "title": "Вопрос №5",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое словарь (dict) в Python?\n\nВыбери все верные утверждения\n\nупорядоченная коллекция элементов одного типа\n\nколлекция пар ключ–значение для структурированного хранения\n\nспециальный цикл для числовых данных\n\nвстроенная функция для чтения файлов",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fb9d",
+        "label": "Вопрос №5",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb9d",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fb9d"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fba3",
+      "number": 6,
+      "title": "Вопрос №6",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nДля чего используется ключевое слово def?\n\nВыбери все верные утверждения\n\nдля объявления переменной с начальным значением\n\nдля описания условия ветвления\n\nдля объявления функции с именем и параметрами\n\nдля перебора элементов коллекции",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fba3",
+        "label": "Вопрос №6",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fba3",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fba3"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fba9",
+      "number": 7,
+      "title": "Вопрос №7",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое CSV-файл?\n\nВыбери все верные утверждения\n\nисполняемый скрипт на Python\n\nтекстовый файл, где значения в строке разделены запятыми или другим разделителем (например, точкой с запятой)\n\nбинарный файл для хранения изображений\n\nархив Python-библиотек",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fba9",
+        "label": "Вопрос №7",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fba9",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fba9"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbaf",
+      "number": 8,
+      "title": "Вопрос №8",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое датасет?\n\nВыбери все верные утверждения\n\nназвание алгоритма обучения нейронной сети\n\nнабор данных, используемых для обучения или анализа модели\n\nпрограмма для работы с нейросетями\n\nтип визуализации в библиотеке Matplotlib",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbaf",
+        "label": "Вопрос №8",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbaf",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbaf"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbb5",
+      "number": 9,
+      "title": "Вопрос №9",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое признак объекта в машинном обучении?\n\nВыбери все верные утверждения",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbb5",
+        "label": "Вопрос №9",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbb5",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbb5"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbbb",
+      "number": 10,
+      "title": "Вопрос №10",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nКакой из перечисленных признаков является категориальным?\n\nВыбери все верные утверждения\n\nколичество обращений за месяц\n\nвремя обработки заявки в минутах\n\nтип обращения клиента (жалоба, запрос, претензия)\n\nрейтинг удовлетворённости клиента",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbbb",
+        "label": "Вопрос №10",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbbb",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbbb"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbc1",
+      "number": 11,
+      "title": "Вопрос №11",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое целевая переменная в задаче ИИ?\n\nВыбери все верные утверждения\n\nслучайный столбец, выбранный для анализа\n\nзначение, которое модель должна предсказать\n\nназвание датасета\n\nколичество строк в обучающей выборке",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbc1",
+        "label": "Вопрос №11",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbc1",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbc1"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbcd",
+      "number": 12,
+      "title": "Вопрос №12",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое пропущенное значение в датасете?\n\nВыбери все верные утверждения\n\nячейка таблицы без данных (NaN или пустая)\n\nзначение, равное нулю в числовом столбце\n\nячейка с текстом вместо числа\n\nстрока с отрицательным значением показателя",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbcd",
+        "label": "Вопрос №12",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbcd",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbcd"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbd3",
+      "number": 13,
+      "title": "Вопрос №13",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nКакое действие является примером очистки данных?\n\nВыбери все верные утверждения\n\nпостроение графика по готовым данным\n\nобучение модели классификации\n\nудаление строк с пропущенными значениями из таблицы\n\nвывод результатов предсказания на экран",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbd3",
+        "label": "Вопрос №13",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbd3",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbd3"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbd9",
+      "number": 14,
+      "title": "Вопрос №14",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое разметка данных для задач классификации?\n\nВыбери все верные утверждения\n\nнормализация числовых признаков к единому масштабу\n\nприсвоение каждому примеру правильной метки класса\n\nразделение датасета на обучающую и тестовую части\n\nудаление дублирующихся строк из таблицы",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbd9",
+        "label": "Вопрос №14",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbd9",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbd9"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbdf",
+      "number": 15,
+      "title": "Вопрос №15",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое дублирующиеся строки в датасете?\n\nВыбери все верные утверждения\n\nстроки с пропущенными значениями в нескольких столбцах\n\nстроки с одинаковыми значениями всех признаков\n\nстроки с нулевыми значениями числовых показателей\n\nстроки с некорректными типами данных",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbdf",
+        "label": "Вопрос №15",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbdf",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbdf"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbe5",
+      "number": 16,
+      "title": "Вопрос №16",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое нетипичное значение (выброс) в данных?\n\nВыбери все верные утверждения\n\nзначение, равное среднему по столбцу\n\nзначение, которое встречается чаще всего\n\nзначение, значительно отклоняющееся от остальных данных\n\nзначение из категориального признака",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbe5",
+        "label": "Вопрос №16",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbe5",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbe5"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbf1",
+      "number": 17,
+      "title": "Вопрос №17",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто делает функция len() в Python?\n\nВыбери все верные утверждения\n\nудаляет элемент из коллекции\n\nсортирует элементы списка\n\nвозвращает количество элементов коллекции\n\nвычисляет сумму числовых элементов",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbf1",
+        "label": "Вопрос №17",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbf1",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbf1"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbf7",
+      "number": 18,
+      "title": "Вопрос №18",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое алгоритм?\n\nВыбери все верные утверждения\n\nязык программирования для профессиональных задач\n\nпошаговая инструкция для решения задачи за конечное число шагов\n\nготовая программа для работы с нейронными сетями\n\nформат хранения данных в реляционной базе",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbf7",
+        "label": "Вопрос №18",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbf7",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbf7"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fbfd",
+      "number": 19,
+      "title": "Вопрос №19",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое числовой признак? Приведите пример.\n\nВыбери все верные утверждения\n\nпризнак с текстовыми значениями – например, тип заявки\n\nпризнак с двумя возможными значениями: да или нет\n\nизмеримый признак, выражаемый числом, например сумма счёта\n\nпризнак, принимающий дискретные категории без порядка",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fbfd",
+        "label": "Вопрос №19",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbfd",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fbfd"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc03",
+      "number": 20,
+      "title": "Вопрос №20",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто произойдёт при выполнении: for x in [5,10,15]: print(x)?\n\nВыбери все верные утверждения\n\nбудет выведено одно число 30 – сумма элементов\n\nбудет выведено 3 числа: 5, 10, 15 – каждое на своей строке\n\nвозникнет ошибка, список нельзя перебирать\n\nбудет выведено только первое значение – 5",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc03",
+        "label": "Вопрос №20",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc03",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc03"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc09",
+      "number": 21,
+      "title": "Вопрос №21",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЗачем нужна визуализация данных?\n\nВыбери все верные утверждения\n\nдля ускорения процесса обучения модели\n\nдля уменьшения объёма датасета\n\nчтобы наглядно представить закономерности и распределения в данных\n\nдля автоматического исправления ошибок",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc09",
+        "label": "Вопрос №21",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc09",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc09"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc15",
+      "number": 22,
+      "title": "Вопрос №22",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто делает ключевое слово return в функции?\n\nВыбери все верные утверждения\n\nзавершает программу полностью\n\nвыводит значение на экран\n\nзавершает функцию и возвращает значение вызывающему коду\n\nсоздаёт новую переменную",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc15",
+        "label": "Вопрос №22",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc15",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc15"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc1b",
+      "number": 23,
+      "title": "Вопрос №23",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nКак в Python открыть CSV-файл в виде таблицы?\n\nВыбери все верные утверждения\n\nиспользуя функцию print()\n\nс помощью функции pd.read_csv() из библиотеки pandas\n\nиспользуя функцию input()\n\nчерез встроенный метод list.read()",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc1b",
+        "label": "Вопрос №23",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc1b",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc1b"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc21",
+      "number": 34,
+      "title": "Вопрос №34",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое класс объекта в задаче классификации?\n\nВыбери все верные утверждения\n\nтип переменной в Python\n\nодин из заранее заданных вариантов ответа, к которому относится объект\n\nколичество признаков, описывающих объект\n\nметод обучения на размеченных данных",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc21",
+        "label": "Вопрос №34",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc21",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc21"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc27",
+      "number": 31,
+      "title": "Вопрос №31",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое исполнитель алгоритма?\n\nВыбери все верные утверждения\n\nавтор, создавший алгоритм\n\nязык программирования, на котором написан алгоритм\n\nтот, кто выполняет команды алгоритма шаг за шагом\n\nсреда разработки для написания программ",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc27",
+        "label": "Вопрос №31",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc27",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc27"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc39",
+      "number": 24,
+      "title": "Вопрос №24",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое среднее значение (mean) набора данных?\n\nВыбери все верные утверждения\n\nнаиболее часто встречающееся значение\n\nцентральное значение упорядоченного набора\n\nсумма всех значений, делённая на их количество\n\nразность максимального и минимального значений",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc39",
+        "label": "Вопрос №24",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc39",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc39"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc3f",
+      "number": 25,
+      "title": "Вопрос №25",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЗачем перед применением ИИ-модели в профессиональной задаче проверять качество данных?\n\nВыбери все верные утверждения\n\nчтобы ускорить работу алгоритма\n\nчтобы автоматически выбрать модель\n\nпотому что ошибки, пропуски и дубли в данных снижают точность и надёжность модели\n\nчтобы визуализировать данные в диаграммах",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc3f",
+        "label": "Вопрос №25",
+        "kind": "Вопрос",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc3f",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc3f"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc47",
+      "number": 1,
+      "title": "Задание №1",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nОбъясните разницу между циклами for и while. В каком случае удобнее использовать каждый?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc47",
+        "label": "Задание №1",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc47",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc47"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc4d",
+      "number": 2,
+      "title": "Задание №2",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое функция в Python? Зачем она нужна в обработке профессиональных данных?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc4d",
+        "label": "Задание №2",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc4d",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc4d"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc4f",
+      "number": 3,
+      "title": "Задание №3",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nОбъясните, почему качество данных влияет на качество ИИ-модели.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc4f",
+        "label": "Задание №3",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc4f",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc4f"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc51",
+      "number": 4,
+      "title": "Задание №4",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nУсловие\n\nЧто такое признак объекта? Приведите два примера из профессионального датасета.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc51",
+        "label": "Задание №4",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc51",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc51"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc53",
+      "number": 5,
+      "title": "Задание №5",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Задание №5\n\nУсловие\n\nЧто выведет следующий код?\n\nИсходный код\n\ndata = [100, 200, 300]\n\nprint(data[0] + data[-1])",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc53",
+        "label": "Задание №5",
+        "kind": "Интерактивный элемент",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc53",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc53"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc55",
+      "number": 6,
+      "title": "Задание №6",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧем словарь отличается от списка в Python? Когда удобнее использовать словарь?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc55",
+        "label": "Задание №6",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc55",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc55"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc57",
+      "number": 7,
+      "title": "Задание №7",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое разметка данных? Почему она важна для обучения с учителем?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc57",
+        "label": "Задание №7",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc57",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc57"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc59",
+      "number": 8,
+      "title": "Задание №8",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nУсловие\n\nЧто такое визуализация данных? Назовите один тип диаграммы и его применение в профессиональной задаче.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc59",
+        "label": "Задание №8",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc59",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc59"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc5d",
+      "number": 9,
+      "title": "Задание №9",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nУсловие\n\nДля чего используется функция max() в Python? Приведите пример применения.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc5d",
+        "label": "Задание №9",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc5d",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc5d"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc5f",
+      "number": 10,
+      "title": "Задание №10",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nЧто такое выброс в данных и как он влияет на профессиональный анализ?",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc5f",
+        "label": "Задание №10",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc5f",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc5f"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    },
+    {
+      "id": "T-6a9562534c2de5000736fc61",
+      "number": 11,
+      "title": "Задание №11",
+      "type": "assessment",
+      "moduleId": 1,
+      "lessonId": "M01-C5-13",
+      "statement": "Текущий контроль по темам 5-13 Модуля 1\n\nОпишите, как Python используется для первичной обработки CSV-файла с профессиональными данными.",
+      "origin": "ismart",
+      "ismartLink": {
+        "id": "6a9562534c2de5000736fc61",
+        "label": "Задание №11",
+        "kind": "Свободный ответ (ИИ)",
+        "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc61",
+        "status": "unverified",
+        "unitId": "6a9562534c2de5000736fb72",
+        "elementId": "6a9562534c2de5000736fc61"
+      },
+      "files": [],
+      "variants": [],
+      "solution": null,
+      "solutionStatus": "teacher_only",
+      "source": {
+        "path": "Модуль 1/Контроль 5-13/Практика для студентов.md",
+        "sha256": "12729512eaf263d566c982c85be8e46396b478ac27834a991344f2edc20cca13"
+      },
+      "publication": {
+        "audience": "student",
+        "rights": "private_owner_use",
+        "status": "published"
+      }
+    }
+  ],
+  "lecture": "",
+  "lectureChanges": [],
+  "practice": "# Текущий контроль по темам 5-13 Модуля 1\n\nЗадания по материалам iSmart. Сохраните решение и краткий вывод по каждому заданию. Оригинальные материалы и дополнительные варианты доступны через оглавление комплекта.\n\n\n### Вопрос №1\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто делает условный оператор if/elif/else?\n\nВыбери все верные утверждения\n\nповторяет блок кода заданное число раз\n\nсоздаёт именованный блок многократно используемого кода\n\nвыполняет один из блоков кода в зависимости от условия\n\nчитает данные из файла построчно\n\n\n### Вопрос №2\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто делает цикл while?\n\nВыбери все верные утверждения\n\nперебирает элементы коллекции по одному\n\nвыполняет блок кода, пока заданное условие истинно\n\nвыполняет блок кода ровно один раз\n\nвычисляет среднее значение списка\n\n\n### Вопрос №3\n\nТекущий контроль по темам 5-13 Модуля 1\n\nКак обратиться ко второму элементу списка items?\n\nВыбери все верные утверждения\n\nitems[2]\n\nitems[1]\n\nitems{2}\n\nitems.get(2)\n\n\n### Вопрос №4\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто делает метод append() у списка?\n\nВыбери все верные утверждения\n\nудаляет последний элемент из списка\n\nвозвращает длину списка\n\nдобавляет новый элемент в конец списка\n\nсортирует элементы списка\n\n\n### Вопрос №5\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое словарь (dict) в Python?\n\nВыбери все верные утверждения\n\nупорядоченная коллекция элементов одного типа\n\nколлекция пар ключ–значение для структурированного хранения\n\nспециальный цикл для числовых данных\n\nвстроенная функция для чтения файлов\n\n\n### Вопрос №6\n\nТекущий контроль по темам 5-13 Модуля 1\n\nДля чего используется ключевое слово def?\n\nВыбери все верные утверждения\n\nдля объявления переменной с начальным значением\n\nдля описания условия ветвления\n\nдля объявления функции с именем и параметрами\n\nдля перебора элементов коллекции\n\n\n### Вопрос №7\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое CSV-файл?\n\nВыбери все верные утверждения\n\nисполняемый скрипт на Python\n\nтекстовый файл, где значения в строке разделены запятыми или другим разделителем (например, точкой с запятой)\n\nбинарный файл для хранения изображений\n\nархив Python-библиотек\n\n\n### Вопрос №8\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое датасет?\n\nВыбери все верные утверждения\n\nназвание алгоритма обучения нейронной сети\n\nнабор данных, используемых для обучения или анализа модели\n\nпрограмма для работы с нейросетями\n\nтип визуализации в библиотеке Matplotlib\n\n\n### Вопрос №9\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое признак объекта в машинном обучении?\n\nВыбери все верные утверждения\n\n\n### Вопрос №10\n\nТекущий контроль по темам 5-13 Модуля 1\n\nКакой из перечисленных признаков является категориальным?\n\nВыбери все верные утверждения\n\nколичество обращений за месяц\n\nвремя обработки заявки в минутах\n\nтип обращения клиента (жалоба, запрос, претензия)\n\nрейтинг удовлетворённости клиента\n\n\n### Вопрос №11\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое целевая переменная в задаче ИИ?\n\nВыбери все верные утверждения\n\nслучайный столбец, выбранный для анализа\n\nзначение, которое модель должна предсказать\n\nназвание датасета\n\nколичество строк в обучающей выборке\n\n\n### Вопрос №12\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое пропущенное значение в датасете?\n\nВыбери все верные утверждения\n\nячейка таблицы без данных (NaN или пустая)\n\nзначение, равное нулю в числовом столбце\n\nячейка с текстом вместо числа\n\nстрока с отрицательным значением показателя\n\n\n### Вопрос №13\n\nТекущий контроль по темам 5-13 Модуля 1\n\nКакое действие является примером очистки данных?\n\nВыбери все верные утверждения\n\nпостроение графика по готовым данным\n\nобучение модели классификации\n\nудаление строк с пропущенными значениями из таблицы\n\nвывод результатов предсказания на экран\n\n\n### Вопрос №14\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое разметка данных для задач классификации?\n\nВыбери все верные утверждения\n\nнормализация числовых признаков к единому масштабу\n\nприсвоение каждому примеру правильной метки класса\n\nразделение датасета на обучающую и тестовую части\n\nудаление дублирующихся строк из таблицы\n\n\n### Вопрос №15\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое дублирующиеся строки в датасете?\n\nВыбери все верные утверждения\n\nстроки с пропущенными значениями в нескольких столбцах\n\nстроки с одинаковыми значениями всех признаков\n\nстроки с нулевыми значениями числовых показателей\n\nстроки с некорректными типами данных\n\n\n### Вопрос №16\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое нетипичное значение (выброс) в данных?\n\nВыбери все верные утверждения\n\nзначение, равное среднему по столбцу\n\nзначение, которое встречается чаще всего\n\nзначение, значительно отклоняющееся от остальных данных\n\nзначение из категориального признака\n\n\n### Вопрос №17\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто делает функция len() в Python?\n\nВыбери все верные утверждения\n\nудаляет элемент из коллекции\n\nсортирует элементы списка\n\nвозвращает количество элементов коллекции\n\nвычисляет сумму числовых элементов\n\n\n### Вопрос №18\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое алгоритм?\n\nВыбери все верные утверждения\n\nязык программирования для профессиональных задач\n\nпошаговая инструкция для решения задачи за конечное число шагов\n\nготовая программа для работы с нейронными сетями\n\nформат хранения данных в реляционной базе\n\n\n### Вопрос №19\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое числовой признак? Приведите пример.\n\nВыбери все верные утверждения\n\nпризнак с текстовыми значениями – например, тип заявки\n\nпризнак с двумя возможными значениями: да или нет\n\nизмеримый признак, выражаемый числом, например сумма счёта\n\nпризнак, принимающий дискретные категории без порядка\n\n\n### Вопрос №20\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто произойдёт при выполнении: for x in [5,10,15]: print(x)?\n\nВыбери все верные утверждения\n\nбудет выведено одно число 30 – сумма элементов\n\nбудет выведено 3 числа: 5, 10, 15 – каждое на своей строке\n\nвозникнет ошибка, список нельзя перебирать\n\nбудет выведено только первое значение – 5\n\n\n### Вопрос №21\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЗачем нужна визуализация данных?\n\nВыбери все верные утверждения\n\nдля ускорения процесса обучения модели\n\nдля уменьшения объёма датасета\n\nчтобы наглядно представить закономерности и распределения в данных\n\nдля автоматического исправления ошибок\n\n\n### Вопрос №22\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто делает ключевое слово return в функции?\n\nВыбери все верные утверждения\n\nзавершает программу полностью\n\nвыводит значение на экран\n\nзавершает функцию и возвращает значение вызывающему коду\n\nсоздаёт новую переменную\n\n\n### Вопрос №23\n\nТекущий контроль по темам 5-13 Модуля 1\n\nКак в Python открыть CSV-файл в виде таблицы?\n\nВыбери все верные утверждения\n\nиспользуя функцию print()\n\nс помощью функции pd.read_csv() из библиотеки pandas\n\nиспользуя функцию input()\n\nчерез встроенный метод list.read()\n\n\n### Вопрос №34\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое класс объекта в задаче классификации?\n\nВыбери все верные утверждения\n\nтип переменной в Python\n\nодин из заранее заданных вариантов ответа, к которому относится объект\n\nколичество признаков, описывающих объект\n\nметод обучения на размеченных данных\n\n\n### Вопрос №31\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое исполнитель алгоритма?\n\nВыбери все верные утверждения\n\nавтор, создавший алгоритм\n\nязык программирования, на котором написан алгоритм\n\nтот, кто выполняет команды алгоритма шаг за шагом\n\nсреда разработки для написания программ\n\n\n### Вопрос №24\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое среднее значение (mean) набора данных?\n\nВыбери все верные утверждения\n\nнаиболее часто встречающееся значение\n\nцентральное значение упорядоченного набора\n\nсумма всех значений, делённая на их количество\n\nразность максимального и минимального значений\n\n\n### Вопрос №25\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЗачем перед применением ИИ-модели в профессиональной задаче проверять качество данных?\n\nВыбери все верные утверждения\n\nчтобы ускорить работу алгоритма\n\nчтобы автоматически выбрать модель\n\nпотому что ошибки, пропуски и дубли в данных снижают точность и надёжность модели\n\nчтобы визуализировать данные в диаграммах\n\n\n### Задание №1\n\nТекущий контроль по темам 5-13 Модуля 1\n\nОбъясните разницу между циклами for и while. В каком случае удобнее использовать каждый?\n\n\n### Задание №2\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое функция в Python? Зачем она нужна в обработке профессиональных данных?\n\n\n### Задание №3\n\nТекущий контроль по темам 5-13 Модуля 1\n\nОбъясните, почему качество данных влияет на качество ИИ-модели.\n\n\n### Задание №4\n\nТекущий контроль по темам 5-13 Модуля 1\n\nУсловие\n\nЧто такое признак объекта? Приведите два примера из профессионального датасета.\n\n\n### Задание №5\n\nЗадание №5\n\nУсловие\n\nЧто выведет следующий код?\n\nИсходный код\n\ndata = [100, 200, 300]\n\nprint(data[0] + data[-1])\n\n\n### Задание №6\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧем словарь отличается от списка в Python? Когда удобнее использовать словарь?\n\n\n### Задание №7\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое разметка данных? Почему она важна для обучения с учителем?\n\n\n### Задание №8\n\nТекущий контроль по темам 5-13 Модуля 1\n\nУсловие\n\nЧто такое визуализация данных? Назовите один тип диаграммы и его применение в профессиональной задаче.\n\n\n### Задание №9\n\nТекущий контроль по темам 5-13 Модуля 1\n\nУсловие\n\nДля чего используется функция max() в Python? Приведите пример применения.\n\n\n### Задание №10\n\nТекущий контроль по темам 5-13 Модуля 1\n\nЧто такое выброс в данных и как он влияет на профессиональный анализ?\n\n\n### Задание №11\n\nТекущий контроль по темам 5-13 Модуля 1\n\nОпишите, как Python используется для первичной обработки CSV-файла с профессиональными данными.",
+  "theory": [],
+  "slides": [],
+  "deckDownload": null,
+  "files": [],
+  "ismartLinks": [
+    {
+      "id": "6a9562534c2de5000736fb85",
+      "label": "Вопрос №1",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb85",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fb85"
+    },
+    {
+      "id": "6a9562534c2de5000736fb8b",
+      "label": "Вопрос №2",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb8b",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fb8b"
+    },
+    {
+      "id": "6a9562534c2de5000736fb91",
+      "label": "Вопрос №3",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb91",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fb91"
+    },
+    {
+      "id": "6a9562534c2de5000736fb97",
+      "label": "Вопрос №4",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb97",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fb97"
+    },
+    {
+      "id": "6a9562534c2de5000736fb9d",
+      "label": "Вопрос №5",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb9d",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fb9d"
+    },
+    {
+      "id": "6a9562534c2de5000736fba3",
+      "label": "Вопрос №6",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fba3",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fba3"
+    },
+    {
+      "id": "6a9562534c2de5000736fba9",
+      "label": "Вопрос №7",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fba9",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fba9"
+    },
+    {
+      "id": "6a9562534c2de5000736fbaf",
+      "label": "Вопрос №8",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbaf",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbaf"
+    },
+    {
+      "id": "6a9562534c2de5000736fbb5",
+      "label": "Вопрос №9",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbb5",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbb5"
+    },
+    {
+      "id": "6a9562534c2de5000736fbbb",
+      "label": "Вопрос №10",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbbb",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbbb"
+    },
+    {
+      "id": "6a9562534c2de5000736fbc1",
+      "label": "Вопрос №11",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbc1",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbc1"
+    },
+    {
+      "id": "6a9562534c2de5000736fbcd",
+      "label": "Вопрос №12",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbcd",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbcd"
+    },
+    {
+      "id": "6a9562534c2de5000736fbd3",
+      "label": "Вопрос №13",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbd3",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbd3"
+    },
+    {
+      "id": "6a9562534c2de5000736fbd9",
+      "label": "Вопрос №14",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbd9",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbd9"
+    },
+    {
+      "id": "6a9562534c2de5000736fbdf",
+      "label": "Вопрос №15",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbdf",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbdf"
+    },
+    {
+      "id": "6a9562534c2de5000736fbe5",
+      "label": "Вопрос №16",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbe5",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbe5"
+    },
+    {
+      "id": "6a9562534c2de5000736fbf1",
+      "label": "Вопрос №17",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbf1",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbf1"
+    },
+    {
+      "id": "6a9562534c2de5000736fbf7",
+      "label": "Вопрос №18",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbf7",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbf7"
+    },
+    {
+      "id": "6a9562534c2de5000736fbfd",
+      "label": "Вопрос №19",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fbfd",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fbfd"
+    },
+    {
+      "id": "6a9562534c2de5000736fc03",
+      "label": "Вопрос №20",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc03",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc03"
+    },
+    {
+      "id": "6a9562534c2de5000736fc09",
+      "label": "Вопрос №21",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc09",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc09"
+    },
+    {
+      "id": "6a9562534c2de5000736fc15",
+      "label": "Вопрос №22",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc15",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc15"
+    },
+    {
+      "id": "6a9562534c2de5000736fc1b",
+      "label": "Вопрос №23",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc1b",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc1b"
+    },
+    {
+      "id": "6a9562534c2de5000736fc21",
+      "label": "Вопрос №34",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc21",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc21"
+    },
+    {
+      "id": "6a9562534c2de5000736fc27",
+      "label": "Вопрос №31",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc27",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc27"
+    },
+    {
+      "id": "6a9562534c2de5000736fc39",
+      "label": "Вопрос №24",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc39",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc39"
+    },
+    {
+      "id": "6a9562534c2de5000736fc3f",
+      "label": "Вопрос №25",
+      "kind": "Вопрос",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc3f",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc3f"
+    },
+    {
+      "id": "6a9562534c2de5000736fc47",
+      "label": "Задание №1",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc47",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc47"
+    },
+    {
+      "id": "6a9562534c2de5000736fc4d",
+      "label": "Задание №2",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc4d",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc4d"
+    },
+    {
+      "id": "6a9562534c2de5000736fc4f",
+      "label": "Задание №3",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc4f",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc4f"
+    },
+    {
+      "id": "6a9562534c2de5000736fc51",
+      "label": "Задание №4",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc51",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc51"
+    },
+    {
+      "id": "6a9562534c2de5000736fc53",
+      "label": "Задание №5",
+      "kind": "Интерактивный элемент",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc53",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc53"
+    },
+    {
+      "id": "6a9562534c2de5000736fc55",
+      "label": "Задание №6",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc55",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc55"
+    },
+    {
+      "id": "6a9562534c2de5000736fc57",
+      "label": "Задание №7",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc57",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc57"
+    },
+    {
+      "id": "6a9562534c2de5000736fc59",
+      "label": "Задание №8",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc59",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc59"
+    },
+    {
+      "id": "6a9562534c2de5000736fc5d",
+      "label": "Задание №9",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc5d",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc5d"
+    },
+    {
+      "id": "6a9562534c2de5000736fc5f",
+      "label": "Задание №10",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc5f",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc5f"
+    },
+    {
+      "id": "6a9562534c2de5000736fc61",
+      "label": "Задание №11",
+      "kind": "Свободный ответ (ИИ)",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fc61",
+      "status": "unverified",
+      "unitId": "6a9562534c2de5000736fb72",
+      "elementId": "6a9562534c2de5000736fc61"
+    }
+  ],
+  "source": {
+    "path": "Модуль 1/Контроль 5-13",
+    "archive": "ismart_course_unpacked.zip"
+  },
+  "publication": {
+    "audience": "student",
+    "rights": "private_owner_use",
+    "status": "published"
+  }
+}
