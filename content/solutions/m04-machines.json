@@ -1,0 +1,407 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6ab911c4fea5a2fa9cbd8d23",
+      "lessonId": "M04-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Объект: одно наблюдение оборудования перед решением об обслуживании. Задача: бинарная классификация, нужно выбрать 0/1, а не предсказать число часов.\nИдентификатор: record_id — связь записей, не признак.\nЧисловые признаки: temperature_c, vibration_mm_s, load_pct, hours_since_service, alarms_24h.\nКатегориальные: machine_type, shift.\nЦель: needs_service_24h.\nИсключить repair_result_after_shift: результат ремонта появляется позже и создаёт утечку. Исключить record_id из X, сохранив для аудита.",
+      "explanation": "Роль определяется доступностью до решения. Цель нужна для обучения и проверки, но не входит в X. Числовое кодирование 0/1 не делает задачу регрессией.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "d38be50de58b7b24c7b9be6eb947c3470e19ea1a23ef3bd42beaa9b8d16231ac",
+      "verificationEvidence": {
+        "codeSha256": "d38be50de58b7b24c7b9be6eb947c3470e19ea1a23ef3bd42beaa9b8d16231ac",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab911c7fea5a2fa9cbd8d24",
+      "lessonId": "M04-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "1.M07 повторён с тем же record_id — двойной вес события; оставить подтверждённую первую запись.\n2.M04: Pump вместо pump — унифицировать регистр.\n3.M08: NIGHT вместо night — lower.\n4.M10: eve вместо evening — явная замена категории.\n5.M04/M08/M09: цель yes/Да/Нет смешана с 0/1 — явное сопоставление.\n6.M04: vibration_mm_s пропущена — восстановление из источника или медиана по типу после разделения для ML.\n7.M09: load_pct пропущена — аналогичная обработка.\n8.M05: load_pct140 вне 0–100 — заменить пропуском, проверить источник.\n9.M07: hours_since_service−30 невозможно — пропуск.\n10.M06: temperature_c−40 вне заданных 0–120 — пропуск, не считать доказанной температурой.\n11.repair_result_after_shift — поле будущего, исключить из признаков.\n12. Малый набор 15 строк с дублем — риск неустойчивой оценки.",
+      "explanation": "Аудит отдельно указывает строку, основание и правило. После удаления дубля остаётся 14 объектов. Температура−40 проверяется по явному диапазону практики, а не интерпретируется по будущему результату ремонта.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "f0107d52b955093ab15da6553f106083f916853e882ebd6adea32dfc93459cb0",
+      "verificationEvidence": {
+        "codeSha256": "f0107d52b955093ab15da6553f106083f916853e882ebd6adea32dfc93459cb0",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab911cafea5a2fa9cbd8d25",
+      "lessonId": "M04-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Б) 4 и {\"0\", \"1\", \"Да\", \"Нет\"}. Порядок элементов при печати множества может различаться.",
+      "explanation": "nunique различает числа 0, 1 и строки«Да», «Нет»: получаются четыре значения. astype(str) приводит их к строкам, но не объединяет семантически равные ответы. Для цели нужна явная нормализация, иначе модель увидит лишние классы.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "33a9e1abad3ce73512ccbe834d8cbc258b5cf6d06f32e5873dfd0c3f24243c14",
+      "verificationEvidence": {
+        "codeSha256": "33a9e1abad3ce73512ccbe834d8cbc258b5cf6d06f32e5873dfd0c3f24243c14",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab911cdfea5a2fa9cbd8d26",
+      "lessonId": "M04-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nimport numpy as np\n\nrows = [\n[\"M01\", \"pump\", 72.4, 3.2, 78, 410, 1, \"day\", 0, \"no_repair\"],\n[\"M02\", \"conveyor\", 81.1, 6.8, 92, 780, 3, \"night\", 1, \"bearing\"],\n[\"M03\", \"fan\", 66.0, 2.1, 55, 250, 0, \"evening\", 0, \"no_repair\"],\n[\"M04\", \"Pump\", 79.5, np.nan, 88, 690, 2, \"night\", \"yes\", \"inspection\"],\n[\"M05\", \"conveyor\", 105.0, 9.2, 140, 1200, 5, \"day\", 1, \"overheat\"],\n[\"M06\", \"fan\", -40, 1.8, 45, 180, 0, \"day\", 0, \"sensor_error\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M08\", \"conveyor\", 83.0, 7.1, 95, 820, 4, \"NIGHT\", \"Да\", \"belt\"],\n[\"M09\", \"fan\", 68.3, 2.4, np.nan, 300, 0, \"day\", \"Нет\", \"no_repair\"],\n[\"M10\", \"pump\", 77.6, 4.8, 85, 650, 2, \"eve\", 0, \"inspection\"],\n[\"M11\", \"conveyor\", 89.2, 8.4, 99, 960, 5, \"night\", 1, \"belt\"],\n[\"M12\", \"fan\", 70.1, 2.9, 60, 430, 1, \"day\", 0, \"no_repair\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M13\", \"pump\", 84.0, 6.1, 90, 750, 3, \"night\", 1, \"seal\"],\n[\"M14\", \"conveyor\", 74.5, 3.5, 70, 520, 1, \"evening\", 0, \"no_repair\"],\n]\ncolumns = [\"record_id\", \"machine_type\", \"temperature_c\", \"vibration_mm_s\",\n\"load_pct\", \"hours_since_service\", \"alarms_24h\", \"shift\",\n\"needs_service_24h\", \"repair_result_after_shift\"]\ndf = pd.DataFrame(rows, columns=columns)\ndf.head()\nclean_df = df.drop_duplicates(subset='record_id').copy()\nclean_df['machine_type'] = clean_df['machine_type'].str.strip().str.lower()\nclean_df['shift'] = clean_df['shift'].str.strip().str.lower().replace({'eve':'evening'})\nmapping = {0:0,1:1,'0':0,'1':1,'yes':1,'Да':1,'Нет':0}\nclean_df['needs_service_24h'] = clean_df['needs_service_24h'].map(mapping)\nif clean_df['needs_service_24h'].isna().any():\n    raise ValueError('Неизвестная метка цели')\nclean_df['needs_service_24h'] = clean_df['needs_service_24h'].astype(int)\nfor column,low,high in [('temperature_c',0,120),('load_pct',0,100)]:\n    clean_df.loc[~clean_df[column].between(low,high),column] = np.nan\nclean_df.loc[clean_df['hours_since_service']<0,'hours_since_service'] = np.nan\nfor column in ['temperature_c','vibration_mm_s','load_pct','hours_since_service']:\n    clean_df[column] = clean_df.groupby('machine_type')[column].transform(lambda values: values.fillna(values.median()))\nfeature_columns = ['machine_type','temperature_c','vibration_mm_s','load_pct','hours_since_service','alarms_24h','shift']\nX = clean_df[feature_columns].copy()\ny = clean_df['needs_service_24h'].copy()\nassert X.index.equals(y.index) and X.isna().sum().sum()==0\nassert clean_df['record_id'].is_unique\nassert 'repair_result_after_shift' not in X and 'record_id' not in X\nprint(X.shape,y.shape)\nprint('Цель:',sorted(y.unique().tolist()))",
+      "answer": "",
+      "explanation": "Исправления: дубликат удалён по record_id, цель нормализована, ID и результат ремонта исключены. Вместо удаления всех неполных строк применены явные проверки диапазонов и медианы внутри типа. Для следующего ML-этапа медианы нужно учить на train внутри Pipeline: расчёт по всей учебной таблице здесь служит только требуемому упражнению очистки.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "(14, 7) (14,)\nЦель: [0, 1]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Создаём набор значений `rows` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 21,
+          "text": "Создаём набор значений `columns` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 24,
+          "text": "Вычисляем `pd.DataFrame(rows, columns=columns)` и сохраняем результат в `df`."
+        },
+        {
+          "line": 25,
+          "text": "Выполняем `df.head` с переданными аргументами."
+        },
+        {
+          "line": 26,
+          "text": "Вычисляем `df.drop_duplicates(subset='record_id').copy()` и сохраняем результат в `clean_df`."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `clean_df['machine_type'].str.strip().str.lower()` и сохраняем результат в `clean_df['machine_type']`."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `clean_df['shift'].str.strip().str.lower().replace({'eve': 'evening'})` и сохраняем результат в `clean_df['shift']`."
+        },
+        {
+          "line": 29,
+          "text": "Создаём словарь `mapping` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 30,
+          "text": "Вычисляем `clean_df['needs_service_24h'].map(mapping)` и сохраняем результат в `clean_df['needs_service_24h']`."
+        },
+        {
+          "line": 31,
+          "text": "Проверяем условие `clean_df['needs_service_24h'].isna().any()`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `clean_df['needs_service_24h'].astype(int)` и сохраняем результат в `clean_df['needs_service_24h']`."
+        },
+        {
+          "line": 34,
+          "text": "Перебираем `[('temperature_c', 0, 120), ('load_pct', 0, 100)]`; очередное значение доступно через `(column, low, high)`."
+        },
+        {
+          "line": 35,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `clean_df.loc[~clean_df[column].between(low, high), column]`."
+        },
+        {
+          "line": 36,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `clean_df.loc[clean_df['hours_since_service'] < 0, 'hours_since_service']`."
+        },
+        {
+          "line": 37,
+          "text": "Перебираем `['temperature_c', 'vibration_mm_s', 'load_pct', 'hours_since_service']`; очередное значение доступно через `column`."
+        },
+        {
+          "line": 38,
+          "text": "Вычисляем `clean_df.groupby('machine_type')[column].transform(lambda values: values.fillna(values.median()))` и сохраняем результат в `clean_df[column]`."
+        },
+        {
+          "line": 39,
+          "text": "Создаём набор значений `feature_columns` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 40,
+          "text": "Вычисляем `clean_df[feature_columns].copy()` и сохраняем результат в `X`."
+        },
+        {
+          "line": 41,
+          "text": "Вычисляем `clean_df['needs_service_24h'].copy()` и сохраняем результат в `y`."
+        },
+        {
+          "line": 42,
+          "text": "Проверяем инвариант `X.index.equals(y.index) and X.isna().sum().sum() == 0`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 43,
+          "text": "Проверяем инвариант `clean_df['record_id'].is_unique`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 44,
+          "text": "Проверяем инвариант `'repair_result_after_shift' not in X and 'record_id' not in X`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 45,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 46,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "47d88dd3e2c9b96a3e075ec954f4a017646879dc34c814daff4141e27634c8de",
+      "verificationEvidence": {
+        "codeSha256": "47d88dd3e2c9b96a3e075ec954f4a017646879dc34c814daff4141e27634c8de",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "(14, 7) (14,)\nЦель: [0, 1]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab911d2fea5a2fa9cbd8d27",
+      "lessonId": "M04-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nimport numpy as np\n\nrows = [\n[\"M01\", \"pump\", 72.4, 3.2, 78, 410, 1, \"day\", 0, \"no_repair\"],\n[\"M02\", \"conveyor\", 81.1, 6.8, 92, 780, 3, \"night\", 1, \"bearing\"],\n[\"M03\", \"fan\", 66.0, 2.1, 55, 250, 0, \"evening\", 0, \"no_repair\"],\n[\"M04\", \"Pump\", 79.5, np.nan, 88, 690, 2, \"night\", \"yes\", \"inspection\"],\n[\"M05\", \"conveyor\", 105.0, 9.2, 140, 1200, 5, \"day\", 1, \"overheat\"],\n[\"M06\", \"fan\", -40, 1.8, 45, 180, 0, \"day\", 0, \"sensor_error\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M08\", \"conveyor\", 83.0, 7.1, 95, 820, 4, \"NIGHT\", \"Да\", \"belt\"],\n[\"M09\", \"fan\", 68.3, 2.4, np.nan, 300, 0, \"day\", \"Нет\", \"no_repair\"],\n[\"M10\", \"pump\", 77.6, 4.8, 85, 650, 2, \"eve\", 0, \"inspection\"],\n[\"M11\", \"conveyor\", 89.2, 8.4, 99, 960, 5, \"night\", 1, \"belt\"],\n[\"M12\", \"fan\", 70.1, 2.9, 60, 430, 1, \"day\", 0, \"no_repair\"],\n[\"M07\", \"pump\", 75.2, 4.0, 80, -30, 1, \"evening\", 0, \"no_repair\"],\n[\"M13\", \"pump\", 84.0, 6.1, 90, 750, 3, \"night\", 1, \"seal\"],\n[\"M14\", \"conveyor\", 74.5, 3.5, 70, 520, 1, \"evening\", 0, \"no_repair\"],\n]\ncolumns = [\"record_id\", \"machine_type\", \"temperature_c\", \"vibration_mm_s\",\n\"load_pct\", \"hours_since_service\", \"alarms_24h\", \"shift\",\n\"needs_service_24h\", \"repair_result_after_shift\"]\ndf = pd.DataFrame(rows, columns=columns)\ndf.head()\nclean_df = df.drop_duplicates(subset='record_id').copy()\nclean_df['machine_type'] = clean_df['machine_type'].str.strip().str.lower()\nclean_df['shift'] = clean_df['shift'].str.strip().str.lower().replace({'eve':'evening'})\nmapping = {0:0,1:1,'0':0,'1':1,'yes':1,'Да':1,'Нет':0}\nclean_df['needs_service_24h'] = clean_df['needs_service_24h'].map(mapping)\nif clean_df['needs_service_24h'].isna().any():\n    raise ValueError('Неизвестная метка цели')\nclean_df['needs_service_24h'] = clean_df['needs_service_24h'].astype(int)\nfor column,low,high in [('temperature_c',0,120),('load_pct',0,100)]:\n    clean_df.loc[~clean_df[column].between(low,high),column] = np.nan\nclean_df.loc[clean_df['hours_since_service']<0,'hours_since_service'] = np.nan\nfor column in ['temperature_c','vibration_mm_s','load_pct','hours_since_service']:\n    clean_df[column] = clean_df.groupby('machine_type')[column].transform(lambda values: values.fillna(values.median()))\nfeature_columns = ['machine_type','temperature_c','vibration_mm_s','load_pct','hours_since_service','alarms_24h','shift']\nX = clean_df[feature_columns].copy()\ny = clean_df['needs_service_24h'].copy()\nassert X.index.equals(y.index) and X.isna().sum().sum()==0\nassert clean_df['record_id'].is_unique\nassert 'repair_result_after_shift' not in X and 'record_id' not in X\nprint('Строк:',len(clean_df))\nprint('Пропусков:',int(X.isna().sum().sum()))\nprint('Дублей ID:',int(clean_df['record_id'].duplicated().sum()))\nprint(y.value_counts().sort_index().to_string())\nprint('Средняя температура:',round(clean_df['temperature_c'].mean(),2))\nprint('Медианная вибрация:',round(clean_df['vibration_mm_s'].median(),2))",
+      "answer": "",
+      "explanation": "Пропуски шаблона: lower() и median(). Все 14 строк сохраняются после удаления одного дубля, неверные числа заменены NaN и заполнены по типу оборудования. Правило именно из условия практики: оно отличается от упрощённого демонстрационного фрагмента, где использовалась общая медиана. Показатели рассчитаны после полной очистки.\n\nРезультат: 14 строк, 0 пропусков, 0 дублей ID; класс 0—8, класс 1—6; средняя температура 78.16, медианная вибрация 4.2.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Строк: 14\nПропусков: 0\nДублей ID: 0\nneeds_service_24h\n0    8\n1    6\nСредняя температура: 78.16\nМедианная вибрация: 4.2"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Создаём набор значений `rows` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 21,
+          "text": "Создаём набор значений `columns` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 24,
+          "text": "Вычисляем `pd.DataFrame(rows, columns=columns)` и сохраняем результат в `df`."
+        },
+        {
+          "line": 25,
+          "text": "Выполняем `df.head` с переданными аргументами."
+        },
+        {
+          "line": 26,
+          "text": "Вычисляем `df.drop_duplicates(subset='record_id').copy()` и сохраняем результат в `clean_df`."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `clean_df['machine_type'].str.strip().str.lower()` и сохраняем результат в `clean_df['machine_type']`."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `clean_df['shift'].str.strip().str.lower().replace({'eve': 'evening'})` и сохраняем результат в `clean_df['shift']`."
+        },
+        {
+          "line": 29,
+          "text": "Создаём словарь `mapping` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 30,
+          "text": "Вычисляем `clean_df['needs_service_24h'].map(mapping)` и сохраняем результат в `clean_df['needs_service_24h']`."
+        },
+        {
+          "line": 31,
+          "text": "Проверяем условие `clean_df['needs_service_24h'].isna().any()`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `clean_df['needs_service_24h'].astype(int)` и сохраняем результат в `clean_df['needs_service_24h']`."
+        },
+        {
+          "line": 34,
+          "text": "Перебираем `[('temperature_c', 0, 120), ('load_pct', 0, 100)]`; очередное значение доступно через `(column, low, high)`."
+        },
+        {
+          "line": 35,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `clean_df.loc[~clean_df[column].between(low, high), column]`."
+        },
+        {
+          "line": 36,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `clean_df.loc[clean_df['hours_since_service'] < 0, 'hours_since_service']`."
+        },
+        {
+          "line": 37,
+          "text": "Перебираем `['temperature_c', 'vibration_mm_s', 'load_pct', 'hours_since_service']`; очередное значение доступно через `column`."
+        },
+        {
+          "line": 38,
+          "text": "Вычисляем `clean_df.groupby('machine_type')[column].transform(lambda values: values.fillna(values.median()))` и сохраняем результат в `clean_df[column]`."
+        },
+        {
+          "line": 39,
+          "text": "Создаём набор значений `feature_columns` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 40,
+          "text": "Вычисляем `clean_df[feature_columns].copy()` и сохраняем результат в `X`."
+        },
+        {
+          "line": 41,
+          "text": "Вычисляем `clean_df['needs_service_24h'].copy()` и сохраняем результат в `y`."
+        },
+        {
+          "line": 42,
+          "text": "Проверяем инвариант `X.index.equals(y.index) and X.isna().sum().sum() == 0`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 43,
+          "text": "Проверяем инвариант `clean_df['record_id'].is_unique`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 44,
+          "text": "Проверяем инвариант `'repair_result_after_shift' not in X and 'record_id' not in X`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 45,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 46,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 47,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 48,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 49,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 50,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "d60e05f6305de09061d403c6877122f961dfcbe0a907de77da9b8b7a84991009",
+      "verificationEvidence": {
+        "codeSha256": "d60e05f6305de09061d403c6877122f961dfcbe0a907de77da9b8b7a84991009",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Строк: 14\nПропусков: 0\nДублей ID: 0\nneeds_service_24h\n0    8\n1    6\nСредняя температура: 78.16\nМедианная вибрация: 4.2"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab911d4fea5a2fa9cbd8d28",
+      "lessonId": "M04-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "Разбиение 14 уникальных событий: 10train и 4validation со stratify=y ификсированным random_state; проверить наличие 0/1 в обеих частях. При повторных наблюдениях одной машины разделять по машине/времени, а не случайным строкам. Для финальной оценки собрать новые события: 4 проверочных слишком мало.\nНовые признаки до отказа: тренд вибрации за последние 6 часов и число превышений температуры за последние 24 часа. Окна заканчиваются строго до момента прогноза.\nКонтроль дрейфа: еженедельно на последних 100 событиях считать долю неизвестных типов и долю пропусков; порог, например, >5% неизвестных или рост пропусков на 10 п.п.от базовой train-статистики вызывает аудит. Это проектные пороги, требующие проверки.\nM06: sensor_error записан после смены, не подтверждает реальную температуру−40 и не доступен в момент прогноза. Нужно проверить датчик и первичный журнал, а значение обработать по правилу допустимости.",
+      "explanation": "Разделены обучение, проверка, мониторинг и расследование ошибки датчика. Даже стратификация не делает оценку на четырёх наблюдениях устойчивой. Новые признаки используют только прошлое.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "88b1fe39a12d1ad1ccfc6cb62a67646229f7574d154337f4dd22b28d10284918",
+      "verificationEvidence": {
+        "codeSha256": "88b1fe39a12d1ad1ccfc6cb62a67646229f7574d154337f4dd22b28d10284918",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    }
+  ]
+}

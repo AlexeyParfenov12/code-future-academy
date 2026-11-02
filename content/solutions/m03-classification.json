@@ -1,0 +1,1409 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6ab90680a1f5b9575b4e7131",
+      "lessonId": "M03-L05",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.tree import DecisionTreeClassifier, export_text\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import accuracy_score\ndf = pd.read_csv('messages_train.csv')\nfeatures = ['text_len','has_link','has_discount','has_urgent']\nX,y = df[features],df['label']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = DecisionTreeClassifier(max_depth=3,random_state=42)\nmodel.fit(X_train,y_train)\nprint(df.head().to_string(index=False))\nprint('X:',X.shape,'y:',y.shape)\nnew = pd.DataFrame([[48,1,1,1]],columns=features)\nprint('Первый прогноз:',model.predict(new)[0])\nprint('Test accuracy:',round(accuracy_score(y_test,model.predict(X_test)),3))",
+      "answer": "",
+      "explanation": "Каждая строка — сообщение; четыре числовых поля входят в X, label только в y. Дерево обучается на train. Новый объект имеет те же имена и порядок признаков. Сообщение со ссылкой, скидкой и срочностью получает прогноз spam. Проверочная доля оценивается отдельно от обучения.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": " text_len  has_link  has_discount  has_urgent   label\n       22         0             0           0  normal\n       35         0             0           0  normal\n       41         0             0           0  normal\n       18         0             0           1 unclear\n       27         0             0           1 unclear\nX: (30, 4) y: (30,)\nПервый прогноз: spam\nTest accuracy: 0.875"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем DecisionTreeClassifier, export_text, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 7,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `DecisionTreeClassifier(max_depth=3, random_state=42)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 12,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `pd.DataFrame([[48, 1, 1, 1]], columns=features)` и сохраняем результат в `new`."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "3d16269964ed9963c2c7c1069cb977d8b620fb39fa2151fd5de7c4a491975d88",
+      "verificationEvidence": {
+        "codeSha256": "3d16269964ed9963c2c7c1069cb977d8b620fb39fa2151fd5de7c4a491975d88",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": " text_len  has_link  has_discount  has_urgent   label\n       22         0             0           0  normal\n       35         0             0           0  normal\n       41         0             0           0  normal\n       18         0             0           1 unclear\n       27         0             0           1 unclear\nX: (30, 4) y: (30,)\nПервый прогноз: spam\nTest accuracy: 0.875"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90688a1f5b9575b4e7132",
+      "lessonId": "M03-L05",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.tree import DecisionTreeClassifier, export_text\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import accuracy_score\ndf = pd.read_csv('messages_train.csv')\nfeatures = ['text_len','has_link','has_discount','has_urgent']\nX,y = df[features],df['label']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = DecisionTreeClassifier(max_depth=3,random_state=42)\nmodel.fit(X_train,y_train)\nnew = pd.DataFrame([[30,0,1,0],[30,1,1,0],[23,0,0,0]],columns=features)\nnew['prediction'] = model.predict(new)\nprint(new.to_string(index=False))\nprint(export_text(model,feature_names=features))",
+      "answer": "",
+      "explanation": "Первые два сообщения различаются только has_link: для первого ожидается unclear, для второго spam. Третий пример без индикаторов получает normal. Вывод export_text показывает фактические проверки дерева: по нему можно связать класс с ветвями. Это поведение конкретной модели; добавление ссылки не обязано менять класс любого сообщения.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": " text_len  has_link  has_discount  has_urgent prediction\n       30         0             1           0    unclear\n       30         1             1           0       spam\n       23         0             0           0     normal\n|--- has_link <= 0.50\n|   |--- has_urgent <= 0.50\n|   |   |--- has_discount <= 0.50\n|   |   |   |--- class: normal\n|   |   |--- has_discount >  0.50\n|   |   |   |--- class: unclear\n|   |--- has_urgent >  0.50\n|   |   |--- class: unclear\n|--- has_link >  0.50\n|   |--- text_len <= 25.50\n|   |   |--- class: unclear\n|   |--- text_len >  25.50\n|   |   |--- text_len <= 43.00\n|   |   |   |--- class: spam\n|   |   |--- text_len >  43.00\n|   |   |   |--- class: spam"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем DecisionTreeClassifier, export_text, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 7,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `DecisionTreeClassifier(max_depth=3, random_state=42)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `pd.DataFrame([[30, 0, 1, 0], [30, 1, 1, 0], [23, 0, 0, 0]], columns=features)` и сохраняем результат в `new`."
+        },
+        {
+          "line": 12,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в new['prediction']."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "a95d36e480df1c0b0ec4b650c4b696abc54a42692b36de8e9f69fde73145e551",
+      "verificationEvidence": {
+        "codeSha256": "a95d36e480df1c0b0ec4b650c4b696abc54a42692b36de8e9f69fde73145e551",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": " text_len  has_link  has_discount  has_urgent prediction\n       30         0             1           0    unclear\n       30         1             1           0       spam\n       23         0             0           0     normal\n|--- has_link <= 0.50\n|   |--- has_urgent <= 0.50\n|   |   |--- has_discount <= 0.50\n|   |   |   |--- class: normal\n|   |   |--- has_discount >  0.50\n|   |   |   |--- class: unclear\n|   |--- has_urgent >  0.50\n|   |   |--- class: unclear\n|--- has_link >  0.50\n|   |--- text_len <= 25.50\n|   |   |--- class: unclear\n|   |--- text_len >  25.50\n|   |   |--- text_len <= 43.00\n|   |   |   |--- class: spam\n|   |   |--- text_len >  43.00\n|   |   |   |--- class: spam"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab9068ba1f5b9575b4e7133",
+      "lessonId": "M03-L05",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.tree import DecisionTreeClassifier, export_text\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import accuracy_score\ndf = pd.read_csv('messages_train.csv')\nfeatures = ['text_len','has_link','has_discount','has_urgent']\nX,y = df[features],df['label']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = DecisionTreeClassifier(max_depth=3,random_state=42)\nmodel.fit(X_train,y_train)\nnew = pd.read_csv('messages_new_examples.csv')\nfor depth in [1,3]:\n    current = DecisionTreeClassifier(max_depth=depth,random_state=42).fit(X_train,y_train)\n    print('Глубина',depth,':',current.predict(new).tolist())\n    print('Accuracy:',round(accuracy_score(y_test,current.predict(X_test)),3))",
+      "answer": "",
+      "explanation": "Один фактор — max_depth — меняется при неизменных train/test и новых объектах. Для каждой глубины выполняется новое fit. Код печатает все прогнозы и качество, поэтому видно, какие ответы сохранились. Более глубокая модель не обязана быть лучше на других данных; новый столбец здесь не добавляется.\n\nИзменился второй новый прогноз: unclear→normal. Остальные три сохранились. Accuracy выросла 0.625→0.875 на этом test.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Глубина 1 : ['spam', 'unclear', 'spam', 'unclear']\nAccuracy: 0.625\nГлубина 3 : ['spam', 'normal', 'spam', 'unclear']\nAccuracy: 0.875"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем DecisionTreeClassifier, export_text, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 7,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `DecisionTreeClassifier(max_depth=3, random_state=42)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Читаем учебный CSV в таблицу new. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 12,
+          "text": "Перебираем `[1, 3]`; очередное значение доступно через `depth`."
+        },
+        {
+          "line": 13,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "75ad60cdf99c890533dbe65ffd123cadb6c470d5d55a447a5a82dbeedbb49d6b",
+      "verificationEvidence": {
+        "codeSha256": "75ad60cdf99c890533dbe65ffd123cadb6c470d5d55a447a5a82dbeedbb49d6b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Глубина 1 : ['spam', 'unclear', 'spam', 'unclear']\nAccuracy: 0.625\nГлубина 3 : ['spam', 'normal', 'spam', 'unclear']\nAccuracy: 0.875"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a5da29a82298c0be9599dcd",
+      "lessonId": "M03-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\ndf = pd.read_csv('iris_real_dataset.csv')\nprint('До очистки:',df.shape,'пропусков:',int(df.isna().sum().sum()))\ndf = df.dropna()\nfeatures = ['sepal_length_cm','sepal_width_cm','petal_length_cm','petal_width_cm']\nX,y = df[features],df['species']\ntrain_ids,test_ids = train_test_split(df.index,test_size=.25,random_state=42,stratify=y)\nmodel = DecisionTreeClassifier(max_depth=3,random_state=42)\nmodel.fit(X.loc[train_ids],y.loc[train_ids])\npredictions = model.predict(X.loc[test_ids])\nresult = X.loc[test_ids].copy()\nresult['true_species'] = y.loc[test_ids]\nresult['predicted_species'] = predictions\nprint(df.head().to_string(index=False))\nprint(df.dtypes.to_string())\nprint('Train/test:',len(train_ids),len(test_ids))\nprint(result.head(10).to_string(index=False))\nprint('Accuracy:',round(accuracy_score(y.loc[test_ids],predictions),4))",
+      "answer": "",
+      "explanation": "150 цветов описаны четырьмя измерениями в сантиметрах, species — целевой класс. После удаления пропусков разбиваем 75/25 со стратификацией: 112 и 38 строк. Модель обучается только на 112, прогнозы проверяются на 38. Таблица сравнения сохраняет соответствие индексов, чтобы правильные классы не сдвинулись относительно объектов.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "До очистки: (150, 5) пропусков: 0\n sepal_length_cm  sepal_width_cm  petal_length_cm  petal_width_cm species\n             5.1             3.5              1.4             0.2  setosa\n             4.9             3.0              1.4             0.2  setosa\n             4.7             3.2              1.3             0.2  setosa\n             4.6             3.1              1.5             0.2  setosa\n             5.0             3.6              1.4             0.2  setosa\nsepal_length_cm    float64\nsepal_width_cm     float64\npetal_length_cm    float64\npetal_width_cm     float64\nspecies                str\nTrain/test: 112 38\n sepal_length_cm  sepal_width_cm  petal_length_cm  petal_width_cm true_species predicted_species\n             4.4             3.2              1.3             0.2       setosa            setosa\n             6.3             3.3              4.7             1.6   versicolor        versicolor\n             5.7             2.8              4.1             1.3   versicolor        versicolor\n             5.5             2.3              4.0             1.3   versicolor        versicolor\n             4.4             3.0              1.3             0.2       setosa            setosa\n             6.0             3.4              4.5             1.6   versicolor        versicolor\n             6.1             2.6              5.6             1.4    virginica        versicolor\n             6.9             3.1              5.1             2.3    virginica         virginica\n             7.3             2.9              6.3             1.8    virginica         virginica\n             6.4             2.8              5.6             2.2    virginica         virginica\nAccuracy: 0.8947"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `df.dropna()` и сохраняем результат в `df`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `train_test_split(df.index, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(train_ids, test_ids)`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `DecisionTreeClassifier(max_depth=3, random_state=42)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 12,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 13,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predictions."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `X.loc[test_ids].copy()` и сохраняем результат в `result`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `y.loc[test_ids]` и сохраняем результат в `result['true_species']`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `predictions` и сохраняем результат в `result['predicted_species']`."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 18,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 19,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 20,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "b6ec7c2bb0c59c7e31fbde2f0bb1459e459504834670733e023d40314ca92ba6",
+      "verificationEvidence": {
+        "codeSha256": "b6ec7c2bb0c59c7e31fbde2f0bb1459e459504834670733e023d40314ca92ba6",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "До очистки: (150, 5) пропусков: 0\n sepal_length_cm  sepal_width_cm  petal_length_cm  petal_width_cm species\n             5.1             3.5              1.4             0.2  setosa\n             4.9             3.0              1.4             0.2  setosa\n             4.7             3.2              1.3             0.2  setosa\n             4.6             3.1              1.5             0.2  setosa\n             5.0             3.6              1.4             0.2  setosa\nsepal_length_cm    float64\nsepal_width_cm     float64\npetal_length_cm    float64\npetal_width_cm     float64\nspecies                str\nTrain/test: 112 38\n sepal_length_cm  sepal_width_cm  petal_length_cm  petal_width_cm true_species predicted_species\n             4.4             3.2              1.3             0.2       setosa            setosa\n             6.3             3.3              4.7             1.6   versicolor        versicolor\n             5.7             2.8              4.1             1.3   versicolor        versicolor\n             5.5             2.3              4.0             1.3   versicolor        versicolor\n             4.4             3.0              1.3             0.2       setosa            setosa\n             6.0             3.4              4.5             1.6   versicolor        versicolor\n             6.1             2.6              5.6             1.4    virginica        versicolor\n             6.9             3.1              5.1             2.3    virginica         virginica\n             7.3             2.9              6.3             1.8    virginica         virginica\n             6.4             2.8              5.6             2.2    virginica         virginica\nAccuracy: 0.8947"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab908ed146694885148ad91",
+      "lessonId": "M03-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\ndf = pd.read_csv('iris_real_dataset.csv')\nprint('До очистки:',df.shape,'пропусков:',int(df.isna().sum().sum()))\ndf = df.dropna()\nfeatures = ['sepal_length_cm','sepal_width_cm','petal_length_cm','petal_width_cm']\nX,y = df[features],df['species']\ntrain_ids,test_ids = train_test_split(df.index,test_size=.25,random_state=42,stratify=y)\nmodel = DecisionTreeClassifier(max_depth=3,random_state=42)\nmodel.fit(X.loc[train_ids],y.loc[train_ids])\npredictions = model.predict(X.loc[test_ids])\nresult = X.loc[test_ids].copy()\nresult['true_species'] = y.loc[test_ids]\nresult['predicted_species'] = predictions\nprint(df.head().to_string(index=False))\nprint(df.dtypes.to_string())\nprint('Train/test:',len(train_ids),len(test_ids))\nprint(result.head(10).to_string(index=False))\nprint('Accuracy:',round(accuracy_score(y.loc[test_ids],predictions),4))",
+      "answer": "",
+      "explanation": "150 цветов описаны четырьмя измерениями в сантиметрах, species — целевой класс. После удаления пропусков разбиваем 75/25 со стратификацией: 112 и 38 строк. Модель обучается только на 112, прогнозы проверяются на 38. Таблица сравнения сохраняет соответствие индексов, чтобы правильные классы не сдвинулись относительно объектов.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "До очистки: (150, 5) пропусков: 0\n sepal_length_cm  sepal_width_cm  petal_length_cm  petal_width_cm species\n             5.1             3.5              1.4             0.2  setosa\n             4.9             3.0              1.4             0.2  setosa\n             4.7             3.2              1.3             0.2  setosa\n             4.6             3.1              1.5             0.2  setosa\n             5.0             3.6              1.4             0.2  setosa\nsepal_length_cm    float64\nsepal_width_cm     float64\npetal_length_cm    float64\npetal_width_cm     float64\nspecies                str\nTrain/test: 112 38\n sepal_length_cm  sepal_width_cm  petal_length_cm  petal_width_cm true_species predicted_species\n             4.4             3.2              1.3             0.2       setosa            setosa\n             6.3             3.3              4.7             1.6   versicolor        versicolor\n             5.7             2.8              4.1             1.3   versicolor        versicolor\n             5.5             2.3              4.0             1.3   versicolor        versicolor\n             4.4             3.0              1.3             0.2       setosa            setosa\n             6.0             3.4              4.5             1.6   versicolor        versicolor\n             6.1             2.6              5.6             1.4    virginica        versicolor\n             6.9             3.1              5.1             2.3    virginica         virginica\n             7.3             2.9              6.3             1.8    virginica         virginica\n             6.4             2.8              5.6             2.2    virginica         virginica\nAccuracy: 0.8947"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `df.dropna()` и сохраняем результат в `df`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `train_test_split(df.index, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(train_ids, test_ids)`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `DecisionTreeClassifier(max_depth=3, random_state=42)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 12,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 13,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predictions."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `X.loc[test_ids].copy()` и сохраняем результат в `result`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `y.loc[test_ids]` и сохраняем результат в `result['true_species']`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `predictions` и сохраняем результат в `result['predicted_species']`."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 18,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 19,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 20,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "b6ec7c2bb0c59c7e31fbde2f0bb1459e459504834670733e023d40314ca92ba6",
+      "verificationEvidence": {
+        "codeSha256": "b6ec7c2bb0c59c7e31fbde2f0bb1459e459504834670733e023d40314ca92ba6",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "До очистки: (150, 5) пропусков: 0\n sepal_length_cm  sepal_width_cm  petal_length_cm  petal_width_cm species\n             5.1             3.5              1.4             0.2  setosa\n             4.9             3.0              1.4             0.2  setosa\n             4.7             3.2              1.3             0.2  setosa\n             4.6             3.1              1.5             0.2  setosa\n             5.0             3.6              1.4             0.2  setosa\nsepal_length_cm    float64\nsepal_width_cm     float64\npetal_length_cm    float64\npetal_width_cm     float64\nspecies                str\nTrain/test: 112 38\n sepal_length_cm  sepal_width_cm  petal_length_cm  petal_width_cm true_species predicted_species\n             4.4             3.2              1.3             0.2       setosa            setosa\n             6.3             3.3              4.7             1.6   versicolor        versicolor\n             5.7             2.8              4.1             1.3   versicolor        versicolor\n             5.5             2.3              4.0             1.3   versicolor        versicolor\n             4.4             3.0              1.3             0.2       setosa            setosa\n             6.0             3.4              4.5             1.6   versicolor        versicolor\n             6.1             2.6              5.6             1.4    virginica        versicolor\n             6.9             3.1              5.1             2.3    virginica         virginica\n             7.3             2.9              6.3             1.8    virginica         virginica\n             6.4             2.8              5.6             2.2    virginica         virginica\nAccuracy: 0.8947"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab908f1146694885148ad92",
+      "lessonId": "M03-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\ndf = pd.read_csv('iris_real_dataset.csv')\nprint('До очистки:',df.shape,'пропусков:',int(df.isna().sum().sum()))\ndf = df.dropna()\nfeatures = ['sepal_length_cm','sepal_width_cm','petal_length_cm','petal_width_cm']\nX,y = df[features],df['species']\ntrain_ids,test_ids = train_test_split(df.index,test_size=.25,random_state=42,stratify=y)\nmodel = DecisionTreeClassifier(max_depth=3,random_state=42)\nmodel.fit(X.loc[train_ids],y.loc[train_ids])\npredictions = model.predict(X.loc[test_ids])\nresult = X.loc[test_ids].copy()\nresult['true_species'] = y.loc[test_ids]\nresult['predicted_species'] = predictions\nfor columns in [features,['petal_length_cm','petal_width_cm']]:\n    current = DecisionTreeClassifier(max_depth=3,random_state=42).fit(df.loc[train_ids,columns],y.loc[train_ids])\n    pred = current.predict(df.loc[test_ids,columns])\n    print(columns,'accuracy=',round(accuracy_score(y.loc[test_ids],pred),4))\n    print('Изменившихся прогнозов:',int((pred != predictions).sum()))",
+      "answer": "",
+      "explanation": "Индексы разбиения создаются один раз, поэтому сравниваются одни и те же 38 цветов. Вторая модель использует только два признака лепестка и обучается заново. Код показывает accuracy и число отличий от полной модели. Ограничение: информация о чашелистиках теряется, а равенство качества на этом тесте не доказывает её бесполезность в целом.\n\nЧетыре признака дали 0.8947, два признака лепестка 0.9211; изменился один прогноз. Два признака удачнее на этом тесте, но это не доказывает ненужность чашелистиков вообще.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "До очистки: (150, 5) пропусков: 0\n['sepal_length_cm', 'sepal_width_cm', 'petal_length_cm', 'petal_width_cm'] accuracy= 0.8947\nИзменившихся прогнозов: 0\n['petal_length_cm', 'petal_width_cm'] accuracy= 0.9211\nИзменившихся прогнозов: 1"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `df.dropna()` и сохраняем результат в `df`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `train_test_split(df.index, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(train_ids, test_ids)`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `DecisionTreeClassifier(max_depth=3, random_state=42)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 12,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 13,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predictions."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `X.loc[test_ids].copy()` и сохраняем результат в `result`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `y.loc[test_ids]` и сохраняем результат в `result['true_species']`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `predictions` и сохраняем результат в `result['predicted_species']`."
+        },
+        {
+          "line": 17,
+          "text": "Перебираем `[features, ['petal_length_cm', 'petal_width_cm']]`; очередное значение доступно через `columns`."
+        },
+        {
+          "line": 18,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+        },
+        {
+          "line": 19,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred."
+        },
+        {
+          "line": 20,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "00e45aebd3409938c8c496945fc14939d2ed8c77210b40c8d5720ab5eeacecb7",
+      "verificationEvidence": {
+        "codeSha256": "00e45aebd3409938c8c496945fc14939d2ed8c77210b40c8d5720ab5eeacecb7",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "До очистки: (150, 5) пропусков: 0\n['sepal_length_cm', 'sepal_width_cm', 'petal_length_cm', 'petal_width_cm'] accuracy= 0.8947\nИзменившихся прогнозов: 0\n['petal_length_cm', 'petal_width_cm'] accuracy= 0.9211\nИзменившихся прогнозов: 1"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab908f5146694885148ad93",
+      "lessonId": "M03-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\ndf = pd.read_csv('iris_real_dataset.csv')\nprint('До очистки:',df.shape,'пропусков:',int(df.isna().sum().sum()))\ndf = df.dropna()\nfeatures = ['sepal_length_cm','sepal_width_cm','petal_length_cm','petal_width_cm']\nX,y = df[features],df['species']\ntrain_ids,test_ids = train_test_split(df.index,test_size=.25,random_state=42,stratify=y)\nmodel = DecisionTreeClassifier(max_depth=3,random_state=42)\nmodel.fit(X.loc[train_ids],y.loc[train_ids])\npredictions = model.predict(X.loc[test_ids])\nresult = X.loc[test_ids].copy()\nresult['true_species'] = y.loc[test_ids]\nresult['predicted_species'] = predictions\nnew_flowers = pd.DataFrame({\n    'sepal_length_cm': [5.1, 6.5, 4.0],\n    'sepal_width_cm':  [3.5, 3.0, 2.5],\n    'petal_length_cm': [1.4, 5.5, 1.2],\n    'petal_width_cm':  [0.2, 1.8, 0.3]\n})\nmodel.predict(new_flowers)\nprint('Новые прогнозы:',model.predict(new_flowers).tolist())",
+      "answer": "",
+      "explanation": "Первый цветок с лепестком 1.4×0.2 см похож на setosa. Второй с 5.5×1.8 см — на virginica. Третий с очень маленьким чашелистиком 4.0 см и лепестком 1.2×0.3 см тоже получает setosa, но нетипичные измерения требуют проверки. Прогноз дерева не подтверждает биологический вид; нужны точность замеров и независимая метка.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "До очистки: (150, 5) пропусков: 0\nНовые прогнозы: ['setosa', 'virginica', 'setosa']"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `df.dropna()` и сохраняем результат в `df`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `train_test_split(df.index, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(train_ids, test_ids)`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `DecisionTreeClassifier(max_depth=3, random_state=42)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 12,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 13,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predictions."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `X.loc[test_ids].copy()` и сохраняем результат в `result`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `y.loc[test_ids]` и сохраняем результат в `result['true_species']`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `predictions` и сохраняем результат в `result['predicted_species']`."
+        },
+        {
+          "line": 17,
+          "text": "Вычисляем `pd.DataFrame({'sepal_length_cm': [5.1, 6.5, 4.0], 'sepal_width_cm': [3.5, 3.0, 2.5], 'petal_length_cm': [1.4, 5.5, 1.2], 'petal_width_cm': [0.2, 1.8, 0.3]})` и сохраняем результат в `new_flowers`."
+        },
+        {
+          "line": 23,
+          "text": "Выполняем `model.predict` с переданными аргументами."
+        },
+        {
+          "line": 24,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "d827b3555681bf7163e209dee1106ddbae8773b6ae6b8c14425f307a8f055f9b",
+      "verificationEvidence": {
+        "codeSha256": "d827b3555681bf7163e209dee1106ddbae8773b6ae6b8c14425f307a8f055f9b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "До очистки: (150, 5) пропусков: 0\nНовые прогнозы: ['setosa', 'virginica', 'setosa']"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90ceaa1f5b9575b4e7134",
+      "lessonId": "M03-L07",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Верные строки: 1, 2, 4, 6, 8, 9, 10, 11, 12. Ошибки: 3, 5, 7.\n9 верных из 12. Accuracy=9/12=0.75=75%.",
+      "explanation": "Сравниваем истинную и предсказанную метку в каждой строке. В знаменателе все 12 объектов, а не только spam или только правильные ответы.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "faead79415977e290dee2edb3aa8f5657828322dd668c19e8784725e494108cd",
+      "verificationEvidence": {
+        "codeSha256": "faead79415977e290dee2edb3aa8f5657828322dd668c19e8784725e494108cd",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab90ceda1f5b9575b4e7135",
+      "lessonId": "M03-L07",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Модель A: 8 верных из 12, accuracy=2/3≈66.67%.\nМодель B: 10 из 12, accuracy=5/6≈83.33%.\nНа этой таблице лучше B: на 2 верных ответа больше, разница≈16.67 п.п.",
+      "explanation": "У A ошибки в строках 3, 5, 7, 12; у B —6, 9. Вывод относится к одной проверочной таблице, а не к превосходству на всех новых данных.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "4260b59465a93e5a8115a042ec61bfe9e178c177f8039cc79c6b0c1557303b98",
+      "verificationEvidence": {
+        "codeSha256": "4260b59465a93e5a8115a042ec61bfe9e178c177f8039cc79c6b0c1557303b98",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-bfd14010dabf9a699710b7d6",
+      "lessonId": "M03-L07",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.metrics import accuracy_score\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\ndf = pd.read_csv('classification_results_level_1.csv')\ndf['is_correct'] = df['true_label'] == df['predicted_label']\npandas_accuracy = df['is_correct'].mean()\nsklearn_accuracy = accuracy_score(df['true_label'],df['predicted_label'])\nassert pandas_accuracy == sklearn_accuracy == 9/12\nprint('Уровень 1:',pandas_accuracy,sklearn_accuracy)\ntwo = pd.read_csv('classification_results_two_models.csv')\nfor name in ['A','B']:\n    print(name,round(accuracy_score(two['true_label'],two['model_'+name+'_prediction']),4))\niris = pd.read_csv('iris_accuracy_dataset.csv')\nX,y = iris.drop(columns='species'),iris['species']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nscores = {}\nfor depth in [1,2,3,4,5]:\n    model = DecisionTreeClassifier(max_depth=depth,random_state=42).fit(X_train,y_train)\n    scores[depth] = accuracy_score(y_test,model.predict(X_test))\n    print('max_depth=',depth,'accuracy=',round(scores[depth],4))\nprint('Лучшие глубины:',[depth for depth,score in scores.items() if score == max(scores.values())])",
+      "answer": "",
+      "explanation": "В уровне 1 обе реализации дают 0.75, у A≈0.6667, у B≈0.8333. Для Iris сравниваются пять глубин на одном разбиении. При нескольких равных максимумах выводятся все, а не произвольный единственный победитель. Выбор по этому test превращает его в валидационную часть; окончательную оценку выбранной глубины нужно делать на новых данных.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Уровень 1: 0.75 0.75\nA 0.6667\nB 0.8333\nmax_depth= 1 accuracy= 0.6579\nmax_depth= 2 accuracy= 0.9211\nmax_depth= 3 accuracy= 0.8947\nmax_depth= 4 accuracy= 0.9211\nmax_depth= 5 accuracy= 0.8947\nЛучшие глубины: [2, 4]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `df['true_label'] == df['predicted_label']` и сохраняем результат в `df['is_correct']`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `df['is_correct'].mean()` и сохраняем результат в `pandas_accuracy`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `accuracy_score(df['true_label'], df['predicted_label'])` и сохраняем результат в `sklearn_accuracy`."
+        },
+        {
+          "line": 9,
+          "text": "Проверяем инвариант `pandas_accuracy == sklearn_accuracy == 9 / 12`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 11,
+          "text": "Читаем учебный CSV в таблицу two. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 12,
+          "text": "Перебираем `['A', 'B']`; очередное значение доступно через `name`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Читаем учебный CSV в таблицу iris. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 15,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 17,
+          "text": "Создаём словарь `scores` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 18,
+          "text": "Перебираем `[1, 2, 3, 4, 5]`; очередное значение доступно через `depth`."
+        },
+        {
+          "line": 19,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 20,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в scores[depth]."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 22,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "6751b6284efff0f23e6164b466bd1c3b3ef65c19a25c9a7aeddcc1d802f6e9b1",
+      "verificationEvidence": {
+        "codeSha256": "6751b6284efff0f23e6164b466bd1c3b3ef65c19a25c9a7aeddcc1d802f6e9b1",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Уровень 1: 0.75 0.75\nA 0.6667\nB 0.8333\nmax_depth= 1 accuracy= 0.6579\nmax_depth= 2 accuracy= 0.9211\nmax_depth= 3 accuracy= 0.8947\nmax_depth= 4 accuracy= 0.9211\nmax_depth= 5 accuracy= 0.8947\nЛучшие глубины: [2, 4]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90cf0a1f5b9575b4e7136",
+      "lessonId": "M03-L07",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.metrics import accuracy_score\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\ndf = pd.read_csv('classification_results_level_1.csv')\ndf['is_correct'] = df['true_label'] == df['predicted_label']\npandas_accuracy = df['is_correct'].mean()\nsklearn_accuracy = accuracy_score(df['true_label'],df['predicted_label'])\nassert pandas_accuracy == sklearn_accuracy == 9/12\nprint('Уровень 1:',pandas_accuracy,sklearn_accuracy)\ntwo = pd.read_csv('classification_results_two_models.csv')\nfor name in ['A','B']:\n    print(name,round(accuracy_score(two['true_label'],two['model_'+name+'_prediction']),4))\niris = pd.read_csv('iris_accuracy_dataset.csv')\nX,y = iris.drop(columns='species'),iris['species']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nscores = {}\nfor depth in [1,2,3,4,5]:\n    model = DecisionTreeClassifier(max_depth=depth,random_state=42).fit(X_train,y_train)\n    scores[depth] = accuracy_score(y_test,model.predict(X_test))\n    print('max_depth=',depth,'accuracy=',round(scores[depth],4))\nprint('Лучшие глубины:',[depth for depth,score in scores.items() if score == max(scores.values())])",
+      "answer": "",
+      "explanation": "В уровне 1 обе реализации дают 0.75, у A≈0.6667, у B≈0.8333. Для Iris сравниваются пять глубин на одном разбиении. При нескольких равных максимумах выводятся все, а не произвольный единственный победитель. Выбор по этому test превращает его в валидационную часть; окончательную оценку выбранной глубины нужно делать на новых данных.\n\nЛучшие глубины 2 и 4, обе 0.9211. Для учебного выбора предпочитаю 2 как более простое дерево с равным результатом.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Уровень 1: 0.75 0.75\nA 0.6667\nB 0.8333\nmax_depth= 1 accuracy= 0.6579\nmax_depth= 2 accuracy= 0.9211\nmax_depth= 3 accuracy= 0.8947\nmax_depth= 4 accuracy= 0.9211\nmax_depth= 5 accuracy= 0.8947\nЛучшие глубины: [2, 4]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `df['true_label'] == df['predicted_label']` и сохраняем результат в `df['is_correct']`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `df['is_correct'].mean()` и сохраняем результат в `pandas_accuracy`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `accuracy_score(df['true_label'], df['predicted_label'])` и сохраняем результат в `sklearn_accuracy`."
+        },
+        {
+          "line": 9,
+          "text": "Проверяем инвариант `pandas_accuracy == sklearn_accuracy == 9 / 12`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 11,
+          "text": "Читаем учебный CSV в таблицу two. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 12,
+          "text": "Перебираем `['A', 'B']`; очередное значение доступно через `name`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Читаем учебный CSV в таблицу iris. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 15,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 17,
+          "text": "Создаём словарь `scores` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 18,
+          "text": "Перебираем `[1, 2, 3, 4, 5]`; очередное значение доступно через `depth`."
+        },
+        {
+          "line": 19,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 20,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в scores[depth]."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 22,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "6751b6284efff0f23e6164b466bd1c3b3ef65c19a25c9a7aeddcc1d802f6e9b1",
+      "verificationEvidence": {
+        "codeSha256": "6751b6284efff0f23e6164b466bd1c3b3ef65c19a25c9a7aeddcc1d802f6e9b1",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Уровень 1: 0.75 0.75\nA 0.6667\nB 0.8333\nmax_depth= 1 accuracy= 0.6579\nmax_depth= 2 accuracy= 0.9211\nmax_depth= 3 accuracy= 0.8947\nmax_depth= 4 accuracy= 0.9211\nmax_depth= 5 accuracy= 0.8947\nЛучшие глубины: [2, 4]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90d95146694885148ad94",
+      "lessonId": "M03-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import confusion_matrix,accuracy_score,ConfusionMatrixDisplay\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('iris_confusion_dataset.csv')\nX,y = df.drop(columns='species'),df['species']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.3,random_state=42,stratify=y)\nlabels = ['setosa','versicolor','virginica']\nmodel = DecisionTreeClassifier(max_depth=2,random_state=42).fit(X_train,y_train)\npredictions = model.predict(X_test)\nmatrix = confusion_matrix(y_test,predictions,labels=labels)\nprint(matrix)\nprint('Ошибок:',int(matrix.sum()-np.trace(matrix)))\nprint('Accuracy:',round(accuracy_score(y_test,predictions),4))\n",
+      "answer": "",
+      "explanation": "Строки — истинные виды, столбцы — прогнозы в фиксированном порядке setosa, versicolor, virginica. Диагональ содержит верные ответы. setosa распознаётся без ошибок, основные смешения — между двумя другими видами; точные количества приведены в проверочном выводе.\n\nМатрица: [[15, 0, 0], [0, 12, 3], [0, 2, 13]]. Ошибок 5, accuracy40/45≈0.8889. Setosa распознана 15 из 15.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[[15  0  0]\n [ 0 12  3]\n [ 0  2 13]]\nОшибок: 5\nAccuracy: 0.8889"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем confusion_matrix, accuracy_score, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 10,
+          "text": "Создаём набор значений `labels` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 11,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 12,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predictions."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `confusion_matrix(y_test, predictions, labels=labels)` и сохраняем результат в `matrix`."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "89c02d3f3d0469c28184a364f324027cfd75a8c9f4c99647775d09cec57d22cd",
+      "verificationEvidence": {
+        "codeSha256": "89c02d3f3d0469c28184a364f324027cfd75a8c9f4c99647775d09cec57d22cd",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[[15  0  0]\n [ 0 12  3]\n [ 0  2 13]]\nОшибок: 5\nAccuracy: 0.8889"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90d98146694885148ad95",
+      "lessonId": "M03-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import confusion_matrix,accuracy_score,ConfusionMatrixDisplay\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('iris_confusion_dataset.csv')\nX,y = df.drop(columns='species'),df['species']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.3,random_state=42,stratify=y)\nlabels = ['setosa','versicolor','virginica']\nmodel = DecisionTreeClassifier(max_depth=2,random_state=42).fit(X_train,y_train)\npredictions = model.predict(X_test)\nmatrix = confusion_matrix(y_test,predictions,labels=labels)\nprint(matrix)\nprint('Ошибок:',int(matrix.sum()-np.trace(matrix)))\nprint('Accuracy:',round(accuracy_score(y_test,predictions),4))\nConfusionMatrixDisplay(matrix,display_labels=labels).plot(cmap='Blues')\nplt.xlabel('Предсказанный класс')\nplt.ylabel('Истинный класс')\nplt.title('Матрица ошибок: дерево глубины 2')\nplt.show()\noff = matrix.copy()\nnp.fill_diagonal(off,0)\ni,j = np.unravel_index(off.argmax(),off.shape)\nprint('Наибольшая ошибка:',labels[i],'→',labels[j],int(off[i,j]))",
+      "answer": "",
+      "explanation": "setosa отличается небольшими лепестками и распознана отдельно. Ошибки сосредоточены в versicolor/virginica, измерения которых частично перекрываются. Код находит крупнейшую внедиагональную клетку и печатает её направление. Это гипотеза о сходстве признаков, а не доказательство причины каждой ошибки.\n\nКрупнейшая ошибка: versicolor→virginica, 3 случая. Обратных 2. Это подтверждает смешение двух похожих видов.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[[15  0  0]\n [ 0 12  3]\n [ 0  2 13]]\nОшибок: 5\nAccuracy: 0.8889\nНаибольшая ошибка: versicolor → virginica 3"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем confusion_matrix, accuracy_score, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 10,
+          "text": "Создаём набор значений `labels` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 11,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 12,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predictions."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `confusion_matrix(y_test, predictions, labels=labels)` и сохраняем результат в `matrix`."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 17,
+          "text": "Выполняем `ConfusionMatrixDisplay(matrix, display_labels=labels).plot` с переданными аргументами."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 20,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 21,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 22,
+          "text": "Вычисляем `matrix.copy()` и сохраняем результат в `off`."
+        },
+        {
+          "line": 23,
+          "text": "Выполняем `np.fill_diagonal` с переданными аргументами."
+        },
+        {
+          "line": 24,
+          "text": "Вычисляем `np.unravel_index(off.argmax(), off.shape)` и сохраняем результат в `(i, j)`."
+        },
+        {
+          "line": 25,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "cc5480d3a956d44a4e6b64fec55d58d4bfd480bcd7fb67a0fa7e7df6f53e58ae",
+      "verificationEvidence": {
+        "codeSha256": "cc5480d3a956d44a4e6b64fec55d58d4bfd480bcd7fb67a0fa7e7df6f53e58ae",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[[15  0  0]\n [ 0 12  3]\n [ 0  2 13]]\nОшибок: 5\nAccuracy: 0.8889\nНаибольшая ошибка: versicolor → virginica 3"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90d9b146694885148ad96",
+      "lessonId": "M03-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import confusion_matrix,accuracy_score,ConfusionMatrixDisplay\nimport matplotlib.pyplot as plt\ndf = pd.read_csv('iris_confusion_dataset.csv')\nX,y = df.drop(columns='species'),df['species']\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.3,random_state=42,stratify=y)\nlabels = ['setosa','versicolor','virginica']\nfor depth in [2,3]:\n    model = DecisionTreeClassifier(max_depth=depth,random_state=42).fit(X_train,y_train)\n    predicted = model.predict(X_test)\n    matrix = confusion_matrix(y_test,predicted,labels=labels)\n    print('Глубина',depth,'accuracy=',round(accuracy_score(y_test,predicted),4),'ошибок=',int(matrix.sum()-np.trace(matrix)))\n    print(matrix)",
+      "answer": "",
+      "explanation": "Все условия кроме глубины неизменны. Сравнение показывает не только общую долю, но и конкретные направления путаницы. При равном качестве следует предпочесть более простую модель или проверить на дополнительных данных, а не объявлять глубокую автоматически лучшей.\n\nДля данного сравнения выбираю глубину 3: accuracy44/45≈0.9778, одна ошибка versicolor→virginica. При глубине 2 было 40/45≈0.8889 и 5 ошибок.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Глубина 2 accuracy= 0.8889 ошибок= 5\n[[15  0  0]\n [ 0 12  3]\n [ 0  2 13]]\nГлубина 3 accuracy= 0.9778 ошибок= 1\n[[15  0  0]\n [ 0 14  1]\n [ 0  0 15]]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем confusion_matrix, accuracy_score, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 10,
+          "text": "Создаём набор значений `labels` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 11,
+          "text": "Перебираем `[2, 3]`; очередное значение доступно через `depth`."
+        },
+        {
+          "line": 12,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 13,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `confusion_matrix(y_test, predicted, labels=labels)` и сохраняем результат в `matrix`."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "e1ecd3dc31f47a0a987383548d82d489e2f0ae396219dd256ceba3c3dec82588",
+      "verificationEvidence": {
+        "codeSha256": "e1ecd3dc31f47a0a987383548d82d489e2f0ae396219dd256ceba3c3dec82588",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Глубина 2 accuracy= 0.8889 ошибок= 5\n[[15  0  0]\n [ 0 12  3]\n [ 0  2 13]]\nГлубина 3 accuracy= 0.9778 ошибок= 1\n[[15  0  0]\n [ 0 14  1]\n [ 0  0 15]]"
+        }
+      ]
+    }
+  ]
+}

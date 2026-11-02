@@ -1,0 +1,351 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6ab7900631184cd1f38a2cf1",
+      "lessonId": "M04-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "Размещение комплекта из условия:\nmain_final2.py → src/main_v2_0.py — рабочая точка запуска.\ntickets_new.csv → data/tickets_v1_3.csv — рабочие данные после сверки паспорта.\nresults.csv → reports/test_results_product_v2_0_data_v1_3_2026-06-20.csv — показать в демонстрации как отчёт.\nnotes.docx → docs/technical_notes_v1_0.docx — справочная документация, статус уточнить.\nrun.txt → docs/README_v1_0.txt — инструкция запуска.\nold_model.py → archive/model_v1_0.py — не использовать как текущую модель.\n\nЖурнал: продукт 2.0 — текущая версия по условию, дата изменения не указана; данные 1.3 — версия по условию, фактическую проверку файла требуется зафиксировать; тестовый набор/отчёт 2.0 — результаты от 20.06.2026; документация 1.0 — черновик до проверки воспроизводимости. В графе изменений записать реальные отличия после сравнения файлов, а не выдумывать историю.",
+      "explanation": "В ответе не заявляется фактическое переименование отсутствующих учебных файлов. Дана законченная схема размещения и честный журнал по известным сведениям. Дата 20 июня относится к отчёту из условия, а не автоматически ко всем компонентам.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "2432e6198c7f79fb8cae2654e602fc3dbedc9de135f5a8214162db6c3f559071",
+      "verificationEvidence": {
+        "codeSha256": "2432e6198c7f79fb8cae2654e602fc3dbedc9de135f5a8214162db6c3f559071",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [],
+      "artifact": {
+        "url": "/content/examples/campus-support-4-13.zip",
+        "label": "Скачать самостоятельный пример проекта (ZIP)"
+      }
+    },
+    {
+      "taskId": "T-6ab7900a31184cd1f38a2cf2",
+      "lessonId": "M04-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "Паспорт исходного комплекта:\nНазвание: tickets, версия 1.3.\nНазначение: проверка маршрутизации учебных обращений.\nОбъём: 64 заявки по условию; число классов в самом CSV требует проверки поля разметки. Правила программы поддерживают access, network, equipment, software и резервное other, но это не доказывает представленность всех значений в файле.\nПоля: точную схему CSV сверить по заголовкам; для функции нужны text и confidence, для тестового отчёта — ожидаемый класс/действие и версия.\nИсточник: учебный комплект; способ сбора и дата данных в данном элементе не указаны.\nРазметка: единая инструкция по основной теме, смешанные темы — ручная проверка.\nКачество: непустой текст, допустимые типы/диапазон confidence, единые метки, пропуски, дубли и баланс классов.\nОграничения: малый учебный набор и ограниченный словарь, не подтверждён перенос на реальные обращения.\nПерсональные данные: не использовать; для демо — синтетические тексты.\n\nКонтроль кода: проверить наличие classify_request и версии; отсутствие секретов и абсолютных путей; список зависимостей в README; отдельный тестовый набор без изменения CSV. Факт проверки каждого пункта фиксируется именем файла и результатом запуска.",
+      "explanation": "Размер 64 не используется для угадывания числа классов. Сам файл tickets_new.csv в этом элементе не предоставлен как отдельное вложение, поэтому неизвестные свойства названы прямо. Скачать самостоятельный рабочий пример можно отдельно от исходного комплекта.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "1d025ceb8e2d520936eca846eda728b47ce3f302cee385b70e71922bd71dd195",
+      "verificationEvidence": {
+        "codeSha256": "1d025ceb8e2d520936eca846eda728b47ce3f302cee385b70e71922bd71dd195",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [],
+      "artifact": {
+        "url": "/content/examples/campus-support-4-13.zip",
+        "label": "Скачать самостоятельный пример проекта (ZIP)"
+      }
+    },
+    {
+      "taskId": "T-6ab7900d31184cd1f38a2cf3",
+      "lessonId": "M04-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\nVERSION = '2.0'\ndef classify_request(text,confidence):\n    if not isinstance(text,str) or not text.strip():\n        return {'category':'other','action':'input_error'}\n    if type(confidence) not in (int,float) or not 0 <= confidence <= 1:\n        return {'category':'other','action':'input_error'}\n    normalized=text.strip().lower()\n    categories={\n        'access':['пароль','вход','доступ','учётная запись'],\n        'network':['сеть','wi-fi','интернет','сервер недоступен'],\n        'equipment':['принтер','ноутбук','компьютер','клавиатура'],\n        'software':['программа','приложение','обновление','ошибка установки']}\n    matched=[name for name,words in categories.items() if any(re.search(r'\\b'+re.escape(word),normalized) for word in words)]\n    if len(matched)!=1:\n        return {'category':'other','action':'operator_review'}\n    return {'category':matched[0],'action':'operator_review' if confidence<.60 else 'auto_route'}\ncases=[\n('T01','Не могу выполнить вход в учётную запись',.92,('access','auto_route')),\n('T02','Нет интернета',.60,('network','auto_route')),\n('T03','Принтер и интернет не работают',.90,('other','operator_review')),\n('T04','Нужно обновление программы',.55,('software','operator_review')),\n('T05','',.80,('other','input_error')),\n('T06','Сломалась клавиатура',.86,('equipment','auto_route'))]\npassed=0\nfor ident,text,confidence,expected in cases:\n    result=classify_request(text,confidence)\n    ok=(result['category'],result['action'])==expected\n    passed+=ok\n    print(ident,'/'.join(result.values()),'OK' if ok else 'FAIL')\nassert passed==6\nprint('Scenario Pass Rate:',f'{passed/len(cases):.0%}')\nprint('Арифметический пример:',17,20-17,round(17/20,2))\n",
+      "answer": "Для отдельного арифметического фрагмента: passed=17, errors=3, quality=0.85; полная строка — 17 3 0.85.\nСамостоятельная исполняемая реализация правил 2.0 ниже прошла шесть указанных сценариев: 6/6=100%, критичных расхождений среди них нет. Это не результат запуска отсутствующего main_final2.py и не пересчёт исходного отчёта из 20 тестов.",
+      "explanation": "Архивный фрагмент classify_request сохранён без отступов. Ниже приведена собственная реализация явно описанных правил, проверенная реальными запусками. Шесть сценариев и пример 17/20 — разные наборы, их показатели нельзя смешивать. Для учебного показа пример готов с ограничениями; полнота проверки исходного продукта требует его файлов.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "T01 access/auto_route OK\nT02 network/auto_route OK\nT03 other/operator_review OK\nT04 software/operator_review OK\nT05 other/input_error OK\nT06 equipment/auto_route OK\nScenario Pass Rate: 100%\nАрифметический пример: 17 3 0.85"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re для поиска целых слов и фраз, чтобы «недоступен» не совпадало с «доступ»."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `'2.0'` и сохраняем результат в `VERSION`."
+        },
+        {
+          "line": 3,
+          "text": "Определяем функцию `classify_request` с параметрами `text, confidence`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `not isinstance(text, str) or not text.strip()`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Возвращаем из функции `{'category': 'other', 'action': 'input_error'}`."
+        },
+        {
+          "line": 6,
+          "text": "Проверяем условие `type(confidence) not in (int, float) or not 0 <= confidence <= 1`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 7,
+          "text": "Возвращаем из функции `{'category': 'other', 'action': 'input_error'}`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `text.strip().lower()` и сохраняем результат в `normalized`."
+        },
+        {
+          "line": 9,
+          "text": "Создаём словарь `categories` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `[name for name, words in categories.items() if any((word in normalized for word in words))]` и сохраняем результат в `matched`."
+        },
+        {
+          "line": 15,
+          "text": "Проверяем условие `len(matched) != 1`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 16,
+          "text": "Возвращаем из функции `{'category': 'other', 'action': 'operator_review'}`."
+        },
+        {
+          "line": 17,
+          "text": "Возвращаем из функции `{'category': matched[0], 'action': 'operator_review' if confidence < 0.6 else 'auto_route'}`."
+        },
+        {
+          "line": 18,
+          "text": "Создаём набор значений `cases` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 25,
+          "text": "Вычисляем `0` и сохраняем результат в `passed`."
+        },
+        {
+          "line": 26,
+          "text": "Перебираем `cases`; очередное значение доступно через `(ident, text, confidence, expected)`."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `classify_request(text, confidence)` и сохраняем результат в `result`."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `(result['category'], result['action']) == expected` и сохраняем результат в `ok`."
+        },
+        {
+          "line": 29,
+          "text": "Обновляем `passed` операцией `+=` с `ok`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 30,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 31,
+          "text": "Проверяем инвариант `passed == 6`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 32,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 33,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "08b8e1ce66bdcbe1dee9c69cc07837ce686ed27b91181515829ce14d4160dcf0",
+      "verificationEvidence": {
+        "codeSha256": "08b8e1ce66bdcbe1dee9c69cc07837ce686ed27b91181515829ce14d4160dcf0",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "T01 access/auto_route OK\nT02 network/auto_route OK\nT03 other/operator_review OK\nT04 software/operator_review OK\nT05 other/input_error OK\nT06 equipment/auto_route OK\nScenario Pass Rate: 100%\nАрифметический пример: 17 3 0.85"
+        }
+      ],
+      "artifact": {
+        "url": "/content/examples/campus-support-4-13.zip",
+        "label": "Скачать самостоятельный пример проекта (ZIP)"
+      }
+    },
+    {
+      "taskId": "T-6ab7901031184cd1f38a2cf4",
+      "lessonId": "M04-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\ndef make_summary(passed,total):\n    if type(passed) is not int or type(total) is not int or passed<0 or total<=0 or passed>total:\n        return 'Некорректные данные отчёта'\n    errors=total-passed\n    quality=passed/total*100\n    return f'Успешно: {passed}; ошибки: {errors}; качество: {quality:.1f}%'\n\nprint(make_summary(17,20))\nprint(make_summary(20,20))\nprint(make_summary(0,0))\nassert make_summary(0,20)=='Успешно: 0; ошибки: 20; качество: 0.0%'\nfor args in [(-1,20),(21,20),('17',20),(17.0,20),(True,20),(1,None)]:\n    assert make_summary(*args)=='Некорректные данные отчёта'\n",
+      "answer": "README — образец содержания\n1. CampusSupport, версия 2.0, учебный маршрутизатор по правилам.\n2. Назначение: предварительная категория и действие для обезличенного обращения.\n3. Комплект: src/main_v2_0.py, data/tickets_v1_3.csv, reports/, docs/, archive/.\n4. Среда: Python 3.10+, для приведённой функции внешние библиотеки не нужны; для другого рабочего кода зависимости нужно сверить отдельно.\n5. Быстрый запуск из корня распакованного комплекта: python src/main_v2_0.py. Успех — строки T01–T06 с OK и сводка 6/6 в нашем рабочем примере.\n6. Вход: text: str и confidence: число 0–1; выход: category и action.\n7. Тесты: встроенные фиксированные случаи плюс пустой ввод и граница 0.60; исходный набор не изменяется.\n8. Результат примера: 6/6 сценариев. Число 17/20 из задания — отдельная арифметическая иллюстрация.\n9. Ограничения: словарные правила, нет промышленного сервиса и доказанного качества на живом потоке.\n10. Проблемы: проверить версию Python, текущую папку, имя файла и совпадение версии кода/инструкции; логические расхождения записать в журнал.",
+      "explanation": "Знаменатель — общее число тестов, а не число ошибок. Проверка точного int исключает bool, хотя bool является подклассом int. Успехи не могут превышать total, а total должен быть положительным. README описывает рабочий пример и отдельно отмечает неизвестные зависимости исходного продукта.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Успешно: 17; ошибки: 3; качество: 85.0%\nУспешно: 20; ошибки: 0; качество: 100.0%\nНекорректные данные отчёта"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re для поиска целых слов и фраз, чтобы «недоступен» не совпадало с «доступ»."
+        },
+        {
+          "line": 2,
+          "text": "Определяем функцию `make_summary` с параметрами `passed, total`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 3,
+          "text": "Проверяем условие `type(passed) is not int or type(total) is not int or passed < 0 or (total <= 0) or (passed > total)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 4,
+          "text": "Возвращаем из функции `'Некорректные данные отчёта'`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `total - passed` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `passed / total * 100` и сохраняем результат в `quality`."
+        },
+        {
+          "line": 7,
+          "text": "Возвращаем из функции `f'Успешно: {passed}; ошибки: {errors}; качество: {quality:.1f}%'`."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 11,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 12,
+          "text": "Проверяем инвариант `make_summary(0, 20) == 'Успешно: 0; ошибки: 20; качество: 0.0%'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 13,
+          "text": "Перебираем `[(-1, 20), (21, 20), ('17', 20), (17.0, 20), (True, 20), (1, None)]`; очередное значение доступно через `args`."
+        },
+        {
+          "line": 14,
+          "text": "Проверяем инвариант `make_summary(*args) == 'Некорректные данные отчёта'`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "6010804f6f7d38201ae4e5a8df3b43d65604947aeaef49eb6c92680baa3997ab",
+      "verificationEvidence": {
+        "codeSha256": "6010804f6f7d38201ae4e5a8df3b43d65604947aeaef49eb6c92680baa3997ab",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Успешно: 17; ошибки: 3; качество: 85.0%\nУспешно: 20; ошибки: 0; качество: 100.0%\nНекорректные данные отчёта"
+        }
+      ],
+      "artifact": {
+        "url": "/content/examples/campus-support-4-13.zip",
+        "label": "Скачать самостоятельный пример проекта (ZIP)"
+      }
+    },
+    {
+      "taskId": "T-6ab7901331184cd1f38a2cf5",
+      "lessonId": "M04-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "1. Проверить python --version: ожидается 3.10 или новее; иначе выбрать нужный интерпретатор.\n2. Открыть корень распакованного примера: должны быть src, data, docs, reports; иначе проверить выбранную папку.\n3. Сверить версию 2.0 в файле и README: при различии не смешивать комплекты.\n4. Выполнить python src/main_v2_0.py: ожидаются T01–T06 и сводка 6/6; при отсутствии файла проверить путь и имя.\n5. Сравнить каждое поле с таблицей ожиданий: при FAIL записать вход, версию и фактический результат, не исправлять таблицу под программу.\n6. Открыть паспорт и ограничения: убедиться, что демонстрационные тексты синтетические и отчёт относится к этой версии.\n\nЧек-лист заполняется после проверки. Независимая проверка другим человеком здесь не проводилась — этот пункт должен остаться неподтверждённым. Резервный вариант — сохранённая таблица входов/выходов и скриншот запуска, помеченные как резервное демо.",
+      "explanation": "Пошаговая инструкция не выдаёт ещё не выполненную проверку пользователем за факт. Команда и признак успеха указаны явно. Контрольный список относится к качеству артефакта, а не к прогрессу студента.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "cde30d991356b532bc5338c62b856b83139b6c619d4d4542eca5114515b571f3",
+      "verificationEvidence": {
+        "codeSha256": "cde30d991356b532bc5338c62b856b83139b6c619d4d4542eca5114515b571f3",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [],
+      "artifact": {
+        "url": "/content/examples/campus-support-4-13.zip",
+        "label": "Скачать самостоятельный пример проекта (ZIP)"
+      }
+    },
+    {
+      "taskId": "T-6ab7901731184cd1f38a2cf6",
+      "lessonId": "M04-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "CHANGELOG — шаблон для нашего примера:\n2.0: единый формат category/action; граница confidence 0.60; ручная проверка нескольких тем; отклонение пустого ввода; шесть воспроизводимых тестов.\n1.0: архив предыдущего примера. Содержательные отличия от реального old_model.py требуют сравнения файла; приведённый список не является его историей.\n\nКарточка ошибки:\nID BUG-001; продукт/данные/среда; исходное состояние; шаги и точный вход; ожидаемый словарь; фактический словарь или исключение; влияние; исправление; результат ретеста.\n\nКонтроль данных: в паспорте исходного комплекта указаны 64 строки, версия 1.3. Размер файла в байтах и SHA-256 необходимо вычислить на фактически выбранном CSV и записать вместе с его именем. В скачиваемом самостоятельном примере контрольная сумма вычисляется при сборке и помещается в manifest.json; это проверяемая характеристика этого примера, а не неизвестного tickets_new.csv.",
+      "explanation": "Версии, происхождение и контрольные суммы не подменяются выдуманными значениями. Для полноценного рабочего образца отдельный комплект включает README, тесты, паспорт и машинный манифест.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "e9c2d22ec3312187a387aa1a3e3e6aa06359b19503360aadb020641d18579387",
+      "verificationEvidence": {
+        "codeSha256": "e9c2d22ec3312187a387aa1a3e3e6aa06359b19503360aadb020641d18579387",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [],
+      "artifact": {
+        "url": "/content/examples/campus-support-4-13.zip",
+        "label": "Скачать самостоятельный пример проекта (ZIP)"
+      }
+    }
+  ]
+}

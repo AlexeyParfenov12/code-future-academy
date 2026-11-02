@@ -1,0 +1,816 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6ab90e03146694885148ad97",
+      "lessonId": "M03-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor\nfrom sklearn.metrics import mean_absolute_error\ndf = pd.read_csv('game_scores_regression.csv')\nfeatures = ['training_minutes','previous_score']\ntrain_ids,test_ids = train_test_split(df.index,test_size=.25,random_state=42)\nX_train,X_test = df.loc[train_ids,features],df.loc[test_ids,features]\ny_train,y_test = df.loc[train_ids,'score'],df.loc[test_ids,'score']\nmodel = LinearRegression().fit(X_train,y_train)\npredictions = model.predict(X_test)\nresult = X_test.copy()\nresult['real_score'] = y_test\nresult['predicted_score'] = predictions\nresult['error'] = abs(result['real_score']-result['predicted_score'])\nprint(df.head().to_string(index=False))\nprint(result.round(3).to_string())\nmae = result['error'].mean()\nassert abs(mae-mean_absolute_error(y_test,predictions)) < 1e-10\nprint('MAE:',round(mae,3))",
+      "answer": "",
+      "explanation": "Признаки — минуты тренировки и предыдущий результат, цель — score. player_id исключён. После одного разбиения 30/10 строк линейная модель обучается только на train. Индексы сохраняют соответствие факта и прогноза. MAE выражена в очках и вычисляется по десяти тестовым игрокам; отдельные ошибки видны в таблице.\n\nПолучена MAE≈2.520 очка, крупнейший показанный промах≈6.149. На тестовых значениях 38–91 средний промах невелик, но допустимость зависит от цели игры.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": " player_id  training_minutes  previous_score  score\n         1                 8              26     25\n         2                10              32     33\n         3                12              32     33\n         4                14              30     40\n         5                15              31     38\n    training_minutes  previous_score  real_score  predicted_score  error\n19                40              54          56           62.149  6.149\n16                35              46          51           54.921  3.921\n15                34              48          56           55.644  0.356\n26                52              63          69           73.353  4.353\n4                 15              31          38           36.248  1.752\n12                28              39          45           47.331  2.331\n37                70              76          89           89.857  0.857\n27                54              64          71           74.919  3.919\n39                75              74          91           91.061  0.061\n6                 18              34          38           39.501  1.501\nMAE: 2.52"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем LinearRegression, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем DecisionTreeRegressor, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем mean_absolute_error, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 7,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(df.index, test_size=0.25, random_state=42)` и сохраняем результат в `(train_ids, test_ids)`."
+        },
+        {
+          "line": 9,
+          "text": "Создаём набор значений `(X_train, X_test)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 10,
+          "text": "Создаём набор значений `(y_train, y_test)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 11,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 12,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predictions."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `X_test.copy()` и сохраняем результат в `result`."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `y_test` и сохраняем результат в `result['real_score']`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `predictions` и сохраняем результат в `result['predicted_score']`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `abs(result['real_score'] - result['predicted_score'])` и сохраняем результат в `result['error']`."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 18,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `result['error'].mean()` и сохраняем результат в `mae`."
+        },
+        {
+          "line": 20,
+          "text": "Проверяем инвариант `abs(mae - mean_absolute_error(y_test, predictions)) < 1e-10`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "ebbb81f91efbdd2236d0d807a7702d97529ec4ff26f5f0944a9adc5b6c7d829d",
+      "verificationEvidence": {
+        "codeSha256": "ebbb81f91efbdd2236d0d807a7702d97529ec4ff26f5f0944a9adc5b6c7d829d",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": " player_id  training_minutes  previous_score  score\n         1                 8              26     25\n         2                10              32     33\n         3                12              32     33\n         4                14              30     40\n         5                15              31     38\n    training_minutes  previous_score  real_score  predicted_score  error\n19                40              54          56           62.149  6.149\n16                35              46          51           54.921  3.921\n15                34              48          56           55.644  0.356\n26                52              63          69           73.353  4.353\n4                 15              31          38           36.248  1.752\n12                28              39          45           47.331  2.331\n37                70              76          89           89.857  0.857\n27                54              64          71           74.919  3.919\n39                75              74          91           91.061  0.061\n6                 18              34          38           39.501  1.501\nMAE: 2.52"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90e0b146694885148ad98",
+      "lessonId": "M03-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor\nfrom sklearn.metrics import mean_absolute_error\ndf = pd.read_csv('game_scores_regression.csv')\nfeatures = ['training_minutes','previous_score']\ntrain_ids,test_ids = train_test_split(df.index,test_size=.25,random_state=42)\nX_train,X_test = df.loc[train_ids,features],df.loc[test_ids,features]\ny_train,y_test = df.loc[train_ids,'score'],df.loc[test_ids,'score']\nmodel = LinearRegression().fit(X_train,y_train)\npredictions = model.predict(X_test)\nresult = X_test.copy()\nresult['real_score'] = y_test\nresult['predicted_score'] = predictions\nresult['error'] = abs(result['real_score']-result['predicted_score'])\nfor name,columns in [('A',['training_minutes']),('B',features)]:\n    current = LinearRegression().fit(df.loc[train_ids,columns],y_train)\n    pred = current.predict(df.loc[test_ids,columns])\n    print(name,'MAE=',round(mean_absolute_error(y_test,pred),3))",
+      "answer": "",
+      "explanation": "Меняется только набор признаков: индексы 30 обучающих и 10 тестовых игроков общие. Сравнение MAE показывает полезность previous_score именно для этого разбиения; для устойчивого вывода нужны дополнительные разбиения или кросс-валидация.\n\nA: MAE≈3.230, B≈2.520. На этом тесте previous_score полезен: средний промах уменьшился примерно на 0.710 очка.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "A MAE= 3.23\nB MAE= 2.52"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем LinearRegression, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем DecisionTreeRegressor, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем mean_absolute_error, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 7,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(df.index, test_size=0.25, random_state=42)` и сохраняем результат в `(train_ids, test_ids)`."
+        },
+        {
+          "line": 9,
+          "text": "Создаём набор значений `(X_train, X_test)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 10,
+          "text": "Создаём набор значений `(y_train, y_test)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 11,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 12,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predictions."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `X_test.copy()` и сохраняем результат в `result`."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `y_test` и сохраняем результат в `result['real_score']`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `predictions` и сохраняем результат в `result['predicted_score']`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `abs(result['real_score'] - result['predicted_score'])` и сохраняем результат в `result['error']`."
+        },
+        {
+          "line": 17,
+          "text": "Перебираем `[('A', ['training_minutes']), ('B', features)]`; очередное значение доступно через `(name, columns)`."
+        },
+        {
+          "line": 18,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+        },
+        {
+          "line": 19,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred."
+        },
+        {
+          "line": 20,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "936e48ce5a5ac2dae9dc719e7d5a2188977ca8f61715f57f536ba92ee1e7293c",
+      "verificationEvidence": {
+        "codeSha256": "936e48ce5a5ac2dae9dc719e7d5a2188977ca8f61715f57f536ba92ee1e7293c",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "A MAE= 3.23\nB MAE= 2.52"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90e0e146694885148ad99",
+      "lessonId": "M03-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor\nfrom sklearn.metrics import mean_absolute_error\ndf = pd.read_csv('game_scores_regression.csv')\nfeatures = ['training_minutes','previous_score']\ntrain_ids,test_ids = train_test_split(df.index,test_size=.25,random_state=42)\nX_train,X_test = df.loc[train_ids,features],df.loc[test_ids,features]\ny_train,y_test = df.loc[train_ids,'score'],df.loc[test_ids,'score']\nmodel = LinearRegression().fit(X_train,y_train)\npredictions = model.predict(X_test)\nresult = X_test.copy()\nresult['real_score'] = y_test\nresult['predicted_score'] = predictions\nresult['error'] = abs(result['real_score']-result['predicted_score'])\nfor name,current in [('LinearRegression',LinearRegression()),('DecisionTreeRegressor',DecisionTreeRegressor(max_depth=3,random_state=42))]:\n    current.fit(X_train,y_train)\n    pred = current.predict(X_test)\n    print(name,'MAE=',round(mean_absolute_error(y_test,pred),3))",
+      "answer": "",
+      "explanation": "Выбран вариант B: сравнение двух алгоритмов на тех же X_train/X_test. Дерево ограничено глубиной 3, random_state фиксирован. Меньшая MAE означает меньший средний промах на этом тесте; она не доказывает универсального преимущества алгоритма.\n\nLinearRegression: MAE≈2.520; дерево глубины 3: 5.410. Здесь выбираю линейную модель.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "LinearRegression MAE= 2.52\nDecisionTreeRegressor MAE= 5.41"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем LinearRegression, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем DecisionTreeRegressor, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем mean_absolute_error, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 7,
+          "text": "Создаём набор значений `features` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(df.index, test_size=0.25, random_state=42)` и сохраняем результат в `(train_ids, test_ids)`."
+        },
+        {
+          "line": 9,
+          "text": "Создаём набор значений `(X_train, X_test)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 10,
+          "text": "Создаём набор значений `(y_train, y_test)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 11,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 12,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predictions."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `X_test.copy()` и сохраняем результат в `result`."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `y_test` и сохраняем результат в `result['real_score']`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `predictions` и сохраняем результат в `result['predicted_score']`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `abs(result['real_score'] - result['predicted_score'])` и сохраняем результат в `result['error']`."
+        },
+        {
+          "line": 17,
+          "text": "Перебираем `[('LinearRegression', LinearRegression()), ('DecisionTreeRegressor', DecisionTreeRegressor(max_depth=3, random_state=42))]`; очередное значение доступно через `(name, current)`."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `current.fit` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred."
+        },
+        {
+          "line": 20,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "608ff643b9807f09fb65be2dc97d6a3329ddbf80bd7738652662a2469951df73",
+      "verificationEvidence": {
+        "codeSha256": "608ff643b9807f09fb65be2dc97d6a3329ddbf80bd7738652662a2469951df73",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "LinearRegression MAE= 2.52\nDecisionTreeRegressor MAE= 5.41"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab95fccf75f35125bb97fbe",
+      "lessonId": "M03-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Ошибки по строкам 1–8: 3, 2, 4, 3, 5, 1, 4, 2.\nМинимальная ошибка 1 у игрока 6: 69 против 70. Максимальная 5 у игрока 5: 64 против 59.\nВ этой таблице точнее всего прогноз для игрока 6, самый большой промах — для игрока 5.",
+      "explanation": "Для каждой строки берём abs(real_score−predicted_score). Ошибка не может стать отрицательной, независимо от направления промаха.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "f06dc3a7f570e61cc4327b44e9615efc60e417eb1b3e19dd36a321bd6632b722",
+      "verificationEvidence": {
+        "codeSha256": "f06dc3a7f570e61cc4327b44e9615efc60e417eb1b3e19dd36a321bd6632b722",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab95ff8f75f35125bb97fbf",
+      "lessonId": "M03-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "Сумма ошибок 24, строк 8. Средняя ошибка 24/8=3 очка.\n«На этих восьми примерах модель в среднем промахивается на 3 очка».\nНаибольшее расхождение у игрока 5: 5 очков.",
+      "explanation": "Используются восемь строк уровня 1. CSV для уровня 3 содержит двенадцать наблюдений и даёт другое среднее: нельзя незаметно подменять один набор другим.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "dd79dc61975f46082605af89138d038c7b05fcc5cbde74ae04dfa794ab6c4fef",
+      "verificationEvidence": {
+        "codeSha256": "dd79dc61975f46082605af89138d038c7b05fcc5cbde74ae04dfa794ab6c4fef",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab9603ef75f35125bb97fc0",
+      "lessonId": "M03-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('regression_predictions_basic.csv')\ndf['error'] = abs(df['real_score']-df['predicted_score'])\nprint('Базовый CSV, строк:',len(df),'MAE:',round(df['error'].mean(),4))\ntwo = pd.read_csv('regression_predictions_two_models.csv')\nfor name in ['A','B']:\n    error = abs(two['real_score']-two['model_'+name+'_prediction'])\n    print(name,'MAE:',round(error.mean(),4),'максимум:',error.max())\n    print('Игроки с максимальной ошибкой:',two.loc[error == error.max(),'player_id'].tolist())",
+      "answer": "",
+      "explanation": "В базовом CSV12 строк, MAE=40/12≈3.3333. У модели B средняя ошибка меньше, но остаются отдельные промахи: максимум 3 очка у игроков 5 и 9. Среднее полезно дополнять максимумом и разбором строк, особенно при дорогих больших ошибках.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Базовый CSV, строк: 12 MAE: 3.3333\nA MAE: 5.75 максимум: 8\nИгроки с максимальной ошибкой: [9]\nB MAE: 1.9167 максимум: 3\nИгроки с максимальной ошибкой: [5, 9]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `abs(df['real_score'] - df['predicted_score'])` и сохраняем результат в `df['error']`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Читаем учебный CSV в таблицу two. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 6,
+          "text": "Перебираем `['A', 'B']`; очередное значение доступно через `name`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `abs(two['real_score'] - two['model_' + name + '_prediction'])` и сохраняем результат в `error`."
+        },
+        {
+          "line": 8,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "90502c93cc84749dab327f0bff5c438db85b762770b41133ae53bade31a0d2d5",
+      "verificationEvidence": {
+        "codeSha256": "90502c93cc84749dab327f0bff5c438db85b762770b41133ae53bade31a0d2d5",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Базовый CSV, строк: 12 MAE: 3.3333\nA MAE: 5.75 максимум: 8\nИгроки с максимальной ошибкой: [9]\nB MAE: 1.9167 максимум: 3\nИгроки с максимальной ошибкой: [5, 9]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90f30146694885148ad9a",
+      "lessonId": "M03-L11",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import adjusted_rand_score\ndf = pd.read_csv('game_characters_sklearn.csv')\nX = df[['speed','power']]\nmodel = KMeans(n_clusters=3,random_state=42,n_init=10)\ndf['cluster'] = model.fit_predict(X)\nprint(df.head().to_string(index=False))\nfor cluster,group in df.groupby('cluster'):\n    print('Кластер',cluster,':',', '.join(group['character']))\nplt.scatter(df['speed'],df['power'],c=df['cluster'],cmap='viridis')\nplt.xlabel('Скорость')\nplt.ylabel('Сила')\nplt.title('Персонажи: три кластера')\nplt.colorbar(label='Номер кластера')\nplt.show()\nassert df['cluster'].nunique() == 3",
+      "answer": "",
+      "explanation": "Алгоритм использует speed и power без целевого y: готовых правильных классов нет. fit_predict строит три группы и возвращает номер для каждого персонажа. Номера 0, 1, 2 условны; состав каждой группы печатается полностью. Признак defense пока не участвует в расстояниях.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "character  speed  power  defense  cluster\n      Rys      9      3        4        2\n      Ten     10      2        3        2\n    Iskra      8      4        4        2\n    Veter      9      5        3        2\n     Grom      2      9        8        1\nКластер 0 : Klinok, Reindzher, Mehanik, Medik, Sfera, Strela, Pilot, Kvant, Druid, Orion\nКластер 1 : Grom, Strazh, Skala, Molot, Shchit, Taran, Buran, Titan\nКластер 2 : Rys, Ten, Iskra, Veter, Neon, Fakel"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем KMeans, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем adjusted_rand_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `df[['speed', 'power']]` и сохраняем результат в `X`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `KMeans(n_clusters=3, random_state=42, n_init=10)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 9,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в df['cluster']."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 11,
+          "text": "Перебираем `df.groupby('cluster')`; очередное значение доступно через `(cluster, group)`."
+        },
+        {
+          "line": 12,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `plt.scatter` с переданными аргументами."
+        },
+        {
+          "line": 14,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 15,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 16,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 17,
+          "text": "Выполняем `plt.colorbar` с переданными аргументами."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Проверяем инвариант `df['cluster'].nunique() == 3`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "1d43e49816ad880ae33401a61c3fceacf43131881e4f94e5d029c9a20cd20cef",
+      "verificationEvidence": {
+        "codeSha256": "1d43e49816ad880ae33401a61c3fceacf43131881e4f94e5d029c9a20cd20cef",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "character  speed  power  defense  cluster\n      Rys      9      3        4        2\n      Ten     10      2        3        2\n    Iskra      8      4        4        2\n    Veter      9      5        3        2\n     Grom      2      9        8        1\nКластер 0 : Klinok, Reindzher, Mehanik, Medik, Sfera, Strela, Pilot, Kvant, Druid, Orion\nКластер 1 : Grom, Strazh, Skala, Molot, Shchit, Taran, Buran, Titan\nКластер 2 : Rys, Ten, Iskra, Veter, Neon, Fakel"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90f36146694885148ad9b",
+      "lessonId": "M03-L11",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import adjusted_rand_score\ndf = pd.read_csv('game_characters_sklearn.csv')\nX = df[['speed','power']]\nmodel = KMeans(n_clusters=3,random_state=42,n_init=10)\ndf['cluster'] = model.fit_predict(X)\nprint(df.groupby('cluster')[['speed','power','defense']].mean().round(3).to_string())\ndistances = np.sort(model.transform(X),axis=1)\ndf['distance_margin'] = distances[:,1]-distances[:,0]\nprint('Спорные объекты:')\nprint(df.nsmallest(2,'distance_margin')[['character','speed','power','defense','cluster','distance_margin']].round(3).to_string(index=False))",
+      "answer": "",
+      "explanation": "Средние всех трёх показателей помогают назвать группы, хотя defense не участвовал в обучении. Группа с высокой speed и низкой power — быстрые; с низкой speed и высокой power/defense — тяжёлые; промежуточная — сбалансированные. Спорность оцениваем разницей расстояний до двух ближайших центров: меньший запас означает близость к границе. Это геометрическое объяснение, а не вероятность принадлежности.\n\nКластер 0—сбалансированные: средние 5.8/5.4/6.0 для speed/power/defense. Кластер 1—тяжёлые: 2.875/8.0/8.75. Кластер 2—быстрые: 8.833/3.5/3.167. Спорные Strela(8, 6, 4) и Shchit(3, 6, 9) имеют малый запас расстояния до второго центра. Защита не использовалась при построении этих групп.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "         speed  power  defense\ncluster                       \n0        5.800    5.4    6.000\n1        2.875    8.0    8.750\n2        8.833    3.5    3.167\nСпорные объекты:\ncharacter  speed  power  defense  cluster  distance_margin\n   Strela      8      6        4        0            0.355\n   Shchit      3      6        9        1            0.860"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем KMeans, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем adjusted_rand_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `df[['speed', 'power']]` и сохраняем результат в `X`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `KMeans(n_clusters=3, random_state=42, n_init=10)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 9,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в df['cluster']."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `np.sort(model.transform(X), axis=1)` и сохраняем результат в `distances`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `distances[:, 1] - distances[:, 0]` и сохраняем результат в `df['distance_margin']`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "c37da270e2e7759044a381eff3f3fecd094ad84b8429b8aa0e821012638b174b",
+      "verificationEvidence": {
+        "codeSha256": "c37da270e2e7759044a381eff3f3fecd094ad84b8429b8aa0e821012638b174b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "         speed  power  defense\ncluster                       \n0        5.800    5.4    6.000\n1        2.875    8.0    8.750\n2        8.833    3.5    3.167\nСпорные объекты:\ncharacter  speed  power  defense  cluster  distance_margin\n   Strela      8      6        4        0            0.355\n   Shchit      3      6        9        1            0.860"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab90f3a146694885148ad9c",
+      "lessonId": "M03-L11",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import adjusted_rand_score\ndf = pd.read_csv('game_characters_sklearn.csv')\nX = df[['speed','power']]\nmodel = KMeans(n_clusters=3,random_state=42,n_init=10)\ndf['cluster'] = model.fit_predict(X)\nfig,axes = plt.subplots(1,3,figsize=(14,4))\nfor k,ax in zip([2,3,4],axes):\n    current = KMeans(n_clusters=k,random_state=42,n_init=10)\n    labels = current.fit_predict(X)\n    print('k=',k)\n    print(df.assign(cluster=labels).groupby('cluster')[['speed','power','defense']].mean().round(2).to_string())\n    ax.scatter(df['speed'],df['power'],c=labels,cmap='viridis')\n    ax.set(xlabel='Скорость',ylabel='Сила',title=f'k={k}')\nplt.tight_layout()\nplt.show()\nlabels3d = KMeans(n_clusters=3,random_state=42,n_init=10).fit_predict(df[['speed','power','defense']])\nprint('Сходство разбиений ARI:',round(adjusted_rand_score(df['cluster'],labels3d),4))\nprint(df.assign(cluster=labels3d).groupby('cluster')['character'].apply(list).to_string())",
+      "answer": "",
+      "explanation": "Два кластера грубо разделяют быстрых и более сильных/защищённых. Три дают понятную промежуточную группу, поэтому для этого примера выбираю k=3. При k=4 одна область дробится подробнее; соответствие видно по средним, а не по номеру. Для сравнения с defense используется ARI, нечувствительный к перестановке номеров групп. Кластеризация не имеет y, поэтому «accuracy кластеров» без эталонных категорий не вычисляется.\n\nПри k=4 промежуточная область дробится на более быстрых сбалансированных и медленных защитных. После добавления defense разбиение изменилось: ARI≈0.8737, Strela перешла к быстрым. Номера групп между запусками напрямую не сравниваются.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "k= 2\n         speed  power  defense\ncluster                       \n0         3.79   6.93     7.86\n1         8.10   4.20     3.90\nk= 3\n         speed  power  defense\ncluster                       \n0         5.80    5.4     6.00\n1         2.88    8.0     8.75\n2         8.83    3.5     3.17\nk= 4\n         speed  power  defense\ncluster                       \n0         6.67   5.67     5.17\n1         2.86   8.29     8.71\n2         8.83   3.50     3.17\n3         4.20   5.20     7.60\nСходство разбиений ARI: 0.8737\ncluster\n0    [Klinok, Reindzher, Mehanik, Medik, Sfera, Pil...\n1        [Rys, Ten, Iskra, Veter, Strela, Neon, Fakel]\n2    [Grom, Strazh, Skala, Molot, Shchit, Taran, Bu..."
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем KMeans, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем adjusted_rand_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `df[['speed', 'power']]` и сохраняем результат в `X`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `KMeans(n_clusters=3, random_state=42, n_init=10)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 9,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в df['cluster']."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `plt.subplots(1, 3, figsize=(14, 4))` и сохраняем результат в `(fig, axes)`."
+        },
+        {
+          "line": 11,
+          "text": "Перебираем `zip([2, 3, 4], axes)`; очередное значение доступно через `(k, ax)`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `KMeans(n_clusters=k, random_state=42, n_init=10)` и сохраняем результат в `current`."
+        },
+        {
+          "line": 13,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в labels."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Выполняем `ax.scatter` с переданными аргументами."
+        },
+        {
+          "line": 17,
+          "text": "Выполняем `ax.set` с переданными аргументами."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `plt.tight_layout` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 20,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в labels3d."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 22,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "867c9969521ec92f791695a0524e24098a460993f3df46215da57d14de1e63a0",
+      "verificationEvidence": {
+        "codeSha256": "867c9969521ec92f791695a0524e24098a460993f3df46215da57d14de1e63a0",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "k= 2\n         speed  power  defense\ncluster                       \n0         3.79   6.93     7.86\n1         8.10   4.20     3.90\nk= 3\n         speed  power  defense\ncluster                       \n0         5.80    5.4     6.00\n1         2.88    8.0     8.75\n2         8.83    3.5     3.17\nk= 4\n         speed  power  defense\ncluster                       \n0         6.67   5.67     5.17\n1         2.86   8.29     8.71\n2         8.83   3.50     3.17\n3         4.20   5.20     7.60\nСходство разбиений ARI: 0.8737\ncluster\n0    [Klinok, Reindzher, Mehanik, Medik, Sfera, Pil...\n1        [Rys, Ten, Iskra, Veter, Strela, Neon, Fakel]\n2    [Grom, Strazh, Skala, Molot, Shchit, Taran, Bu..."
+        }
+      ]
+    }
+  ]
+}

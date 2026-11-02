@@ -1,0 +1,767 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6aba90be48825a15986fe205",
+      "lessonId": "M03-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\nprint('X_train:',X_train.shape)\nprint('X_test:',X_test.shape)\nprint('Доля1 train:',round(y_train.mean(),3))\nprint('Доля1 test:',round(y_test.mean(),3))\nassert X_train.shape == (420,20) and X_test.shape == (180,20)",
+      "answer": "",
+      "explanation": "test_size=0.30 выделяет 180 из 600 объектов, остальные 420 используются для обучения. stratify=y сохраняет близкие доли бинарных классов. Ни одна модель ещё не обучалась на test.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "X_train: (420, 20)\nX_test: (180, 20)\nДоля1 train: 0.49\nДоля1 test: 0.489"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 11,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 12,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 13,
+          "text": "Проверяем инвариант `X_train.shape == (420, 20) and X_test.shape == (180, 20)`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "be4bbb1b80efb608fb16e874fef04005de1c847b3e7253d05ef5bc6aeeec3595",
+      "verificationEvidence": {
+        "codeSha256": "be4bbb1b80efb608fb16e874fef04005de1c847b3e7253d05ef5bc6aeeec3595",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "X_train: (420, 20)\nX_test: (180, 20)\nДоля1 train: 0.49\nДоля1 test: 0.489"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba90be48825a15986fe208",
+      "lessonId": "M03-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ntree_limited = DecisionTreeClassifier(max_depth=3,random_state=42).fit(X_train,y_train)\ntrain_acc_limited = accuracy_score(y_train,tree_limited.predict(X_train))\ntest_acc_limited = accuracy_score(y_test,tree_limited.predict(X_test))\ngap_limited = train_acc_limited-test_acc_limited\nprint('Train:',round(train_acc_limited,3),'Test:',round(test_acc_limited,3),'Разрыв:',round(gap_limited,3))\nassert .75 <= train_acc_limited <= .85\nassert .65 <= test_acc_limited <= .77",
+      "answer": "",
+      "explanation": "Дерево ограничено тремя последовательными проверками. Обучение использует только train; обе метрики считаются на соответствующих входах и метках. Разрыв не заменяет сами уровни качества: две одинаково низкие точности не означают хорошую модель.\n\nTrain≈0.798, test≈0.711, разрыв≈0.087.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Train: 0.798 Test: 0.711 Разрыв: 0.087"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 9,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_limited."
+        },
+        {
+          "line": 10,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_limited."
+        },
+        {
+          "line": 11,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_limited."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `train_acc_limited - test_acc_limited` и сохраняем результат в `gap_limited`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Проверяем инвариант `0.75 <= train_acc_limited <= 0.85`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 15,
+          "text": "Проверяем инвариант `0.65 <= test_acc_limited <= 0.77`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "925f6866fe18e2be61a7e2f362ec5f1284e86d5a43200f4cb88a5e8c31101a52",
+      "verificationEvidence": {
+        "codeSha256": "925f6866fe18e2be61a7e2f362ec5f1284e86d5a43200f4cb88a5e8c31101a52",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Train: 0.798 Test: 0.711 Разрыв: 0.087"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba90be48825a15986fe20b",
+      "lessonId": "M03-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ntree_limited = DecisionTreeClassifier(max_depth=3,random_state=42).fit(X_train,y_train)\ntrain_acc_limited = accuracy_score(y_train,tree_limited.predict(X_train))\ntest_acc_limited = accuracy_score(y_test,tree_limited.predict(X_test))\ngap_limited = train_acc_limited-test_acc_limited\ntree_deep = DecisionTreeClassifier(max_depth=None,random_state=42).fit(X_train,y_train)\ntrain_acc_deep = accuracy_score(y_train,tree_deep.predict(X_train))\ntest_acc_deep = accuracy_score(y_test,tree_deep.predict(X_test))\ngap_deep = train_acc_deep-test_acc_deep\nprint('Ограниченная:',round(train_acc_limited,3),round(test_acc_limited,3),round(gap_limited,3))\nprint('Глубокая:',round(train_acc_deep,3),round(test_acc_deep,3),round(gap_deep,3))\nprint('Глубина:',tree_deep.get_depth(),'листьев:',tree_deep.get_n_leaves())\nassert train_acc_deep >= .99 and gap_deep >= .20",
+      "answer": "",
+      "explanation": "Неограниченное дерево подстраивается под шум обучающей части: train близок к 1, но test заметно ниже. Сравнение с ограниченным деревом проводится при тех же данных. Это признаки переобучения, а не подтверждение качества по идеальной обучающей доле.\n\nГлубокое дерево: train1.0, test≈0.694, разрыв≈0.306, глубина 13, 62 листа. Ограниченное дерево имело разрыв≈0.087.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Ограниченная: 0.798 0.711 0.087\nГлубокая: 1.0 0.694 0.306\nГлубина: 13 листьев: 62"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 9,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_limited."
+        },
+        {
+          "line": 10,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_limited."
+        },
+        {
+          "line": 11,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_limited."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `train_acc_limited - test_acc_limited` и сохраняем результат в `gap_limited`."
+        },
+        {
+          "line": 13,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_deep."
+        },
+        {
+          "line": 14,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_deep."
+        },
+        {
+          "line": 15,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_deep."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `train_acc_deep - test_acc_deep` и сохраняем результат в `gap_deep`."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 18,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 19,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 20,
+          "text": "Проверяем инвариант `train_acc_deep >= 0.99 and gap_deep >= 0.2`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "3849c9129f286438272a6086a0b8dfcfb650e76dbef796300bba632171f16592",
+      "verificationEvidence": {
+        "codeSha256": "3849c9129f286438272a6086a0b8dfcfb650e76dbef796300bba632171f16592",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Ограниченная: 0.798 0.711 0.087\nГлубокая: 1.0 0.694 0.306\nГлубина: 13 листьев: 62"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba90be48825a15986fe20e",
+      "lessonId": "M03-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ntree_limited = DecisionTreeClassifier(max_depth=3,random_state=42).fit(X_train,y_train)\ntrain_acc_limited = accuracy_score(y_train,tree_limited.predict(X_train))\ntest_acc_limited = accuracy_score(y_test,tree_limited.predict(X_test))\ngap_limited = train_acc_limited-test_acc_limited\ntree_deep = DecisionTreeClassifier(max_depth=None,random_state=42).fit(X_train,y_train)\ntrain_acc_deep = accuracy_score(y_train,tree_deep.predict(X_train))\ntest_acc_deep = accuracy_score(y_test,tree_deep.predict(X_test))\ngap_deep = train_acc_deep-test_acc_deep\ndef diagnose_model(train_accuracy,test_accuracy,gap_threshold=.10):\n    gap = train_accuracy-test_accuracy\n    if train_accuracy >= .90 and gap+1e-12 >= gap_threshold:\n        return 'Есть признаки переобучения'\n    elif train_accuracy < .70 and test_accuracy < .70:\n        return 'Возможно недообучение'\n    return 'Явных признаков переобучения нет'\nassert diagnose_model(.99,.70) == 'Есть признаки переобучения'\nassert diagnose_model(.62,.60) == 'Возможно недообучение'\nassert diagnose_model(.82,.76) == 'Явных признаков переобучения нет'\nassert diagnose_model(.90,.80) == 'Есть признаки переобучения'\nprint(diagnose_model(train_acc_limited,test_acc_limited))\nprint(diagnose_model(train_acc_deep,test_acc_deep))",
+      "answer": "",
+      "explanation": "Нужно одновременно высокое качество на обучении и заметное отставание на новых данных: одна высокая или одна низкая точность недостаточна. Два сравнения для недообучения строгие (<0.70). Малый допуск 1e−12 компенсирует двоичное представление разности 0.90−0.80 на включённой границе 0.10.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Явных признаков переобучения нет\nЕсть признаки переобучения"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 9,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_limited."
+        },
+        {
+          "line": 10,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_limited."
+        },
+        {
+          "line": 11,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_limited."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `train_acc_limited - test_acc_limited` и сохраняем результат в `gap_limited`."
+        },
+        {
+          "line": 13,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_deep."
+        },
+        {
+          "line": 14,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_deep."
+        },
+        {
+          "line": 15,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_deep."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `train_acc_deep - test_acc_deep` и сохраняем результат в `gap_deep`."
+        },
+        {
+          "line": 17,
+          "text": "Определяем функцию `diagnose_model` с параметрами `train_accuracy, test_accuracy, gap_threshold=0.1`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 18,
+          "text": "Вычисляем `train_accuracy - test_accuracy` и сохраняем результат в `gap`."
+        },
+        {
+          "line": 19,
+          "text": "Проверяем условие `train_accuracy >= 0.9 and gap + 1e-12 >= gap_threshold`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 20,
+          "text": "Возвращаем из функции `'Есть признаки переобучения'`."
+        },
+        {
+          "line": 21,
+          "text": "Проверяем условие `train_accuracy < 0.7 and test_accuracy < 0.7`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 22,
+          "text": "Возвращаем из функции `'Возможно недообучение'`."
+        },
+        {
+          "line": 23,
+          "text": "Возвращаем из функции `'Явных признаков переобучения нет'`."
+        },
+        {
+          "line": 24,
+          "text": "Проверяем инвариант `diagnose_model(0.99, 0.7) == 'Есть признаки переобучения'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 25,
+          "text": "Проверяем инвариант `diagnose_model(0.62, 0.6) == 'Возможно недообучение'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 26,
+          "text": "Проверяем инвариант `diagnose_model(0.82, 0.76) == 'Явных признаков переобучения нет'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 27,
+          "text": "Проверяем инвариант `diagnose_model(0.9, 0.8) == 'Есть признаки переобучения'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 28,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 29,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "e1f4060c75f85ebb7105f98b1599b765fb90a948a2053f8bec8e68d3e4a5c569",
+      "verificationEvidence": {
+        "codeSha256": "e1f4060c75f85ebb7105f98b1599b765fb90a948a2053f8bec8e68d3e4a5c569",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Явных признаков переобучения нет\nЕсть признаки переобучения"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba90be48825a15986fe211",
+      "lessonId": "M03-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ndepths = list(range(1,16))\ntrain_scores,test_scores = [],[]\nfor depth in depths:\n    model = DecisionTreeClassifier(max_depth=depth,random_state=42).fit(X_train,y_train)\n    train_scores.append(accuracy_score(y_train,model.predict(X_train)))\n    test_scores.append(accuracy_score(y_test,model.predict(X_test)))\n    print(depth,round(train_scores[-1],3),round(test_scores[-1],3),round(train_scores[-1]-test_scores[-1],3))\nbest = depths[int(np.argmax(test_scores))]\nprint('Лучшая глубина:',best,'Test:',round(max(test_scores),3))\nplt.plot(depths,train_scores,marker='o',label='Train')\nplt.plot(depths,test_scores,marker='o',label='Test')\nplt.xlabel('max_depth')\nplt.ylabel('Accuracy')\nplt.title('Глубина и качество')\nplt.legend()\nplt.grid(True)\nplt.show()",
+      "answer": "",
+      "explanation": "Обучающая точность в целом повышается с усложнением дерева, а тестовая колеблется и не растёт бесконечно. Таблица показывает начало заметного разрыва. В этом учебном задании глубина выбирается по test, поэтому эта часть фактически используется как валидационная; для честной окончательной оценки понадобится ещё одна независимая часть.\n\nМаксимальное test≈0.7333 при глубинах 8 и 10; argmax выбирает первую, 8. Примерно с 5 разрыв больше 0.20, с 6train уже выше 0.90.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "1 0.65 0.578 0.072\n2 0.698 0.644 0.053\n3 0.798 0.711 0.087\n4 0.829 0.689 0.14\n5 0.881 0.678 0.203\n6 0.931 0.711 0.22\n7 0.969 0.728 0.241\n8 0.983 0.733 0.25\n9 0.99 0.717 0.274\n10 0.99 0.733 0.257\n11 0.995 0.711 0.284\n12 0.998 0.678 0.32\n13 1.0 0.694 0.306\n14 1.0 0.694 0.306\n15 1.0 0.694 0.306\nЛучшая глубина: 8 Test: 0.733"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `list(range(1, 16))` и сохраняем результат в `depths`."
+        },
+        {
+          "line": 10,
+          "text": "Создаём набор значений `(train_scores, test_scores)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 11,
+          "text": "Перебираем `depths`; очередное значение доступно через `depth`."
+        },
+        {
+          "line": 12,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `train_scores.append` с переданными аргументами."
+        },
+        {
+          "line": 14,
+          "text": "Выполняем `test_scores.append` с переданными аргументами."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `depths[int(np.argmax(test_scores))]` и сохраняем результат в `best`."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `plt.plot` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Выполняем `plt.plot` с переданными аргументами."
+        },
+        {
+          "line": 20,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 21,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 22,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 23,
+          "text": "Выполняем `plt.legend` с переданными аргументами."
+        },
+        {
+          "line": 24,
+          "text": "Выполняем `plt.grid` с переданными аргументами."
+        },
+        {
+          "line": 25,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "f7932bffcb36a8c838450f9b2d70f1e075869330f4b403f42c6642d291b3bf7a",
+      "verificationEvidence": {
+        "codeSha256": "f7932bffcb36a8c838450f9b2d70f1e075869330f4b403f42c6642d291b3bf7a",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "1 0.65 0.578 0.072\n2 0.698 0.644 0.053\n3 0.798 0.711 0.087\n4 0.829 0.689 0.14\n5 0.881 0.678 0.203\n6 0.931 0.711 0.22\n7 0.969 0.728 0.241\n8 0.983 0.733 0.25\n9 0.99 0.717 0.274\n10 0.99 0.733 0.257\n11 0.995 0.711 0.284\n12 0.998 0.678 0.32\n13 1.0 0.694 0.306\n14 1.0 0.694 0.306\n15 1.0 0.694 0.306\nЛучшая глубина: 8 Test: 0.733"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba90be48825a15986fe214",
+      "lessonId": "M03-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\nX,y = make_classification(n_samples=600,n_features=20,n_informative=5,n_redundant=5,n_repeated=0,n_classes=2,flip_y=.12,class_sep=.8,random_state=42)\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.30,random_state=42,stratify=y)\ntree_limited = DecisionTreeClassifier(max_depth=3,random_state=42).fit(X_train,y_train)\ntrain_acc_limited = accuracy_score(y_train,tree_limited.predict(X_train))\ntest_acc_limited = accuracy_score(y_test,tree_limited.predict(X_test))\ngap_limited = train_acc_limited-test_acc_limited\ntree_deep = DecisionTreeClassifier(max_depth=None,random_state=42).fit(X_train,y_train)\ntrain_acc_deep = accuracy_score(y_train,tree_deep.predict(X_train))\ntest_acc_deep = accuracy_score(y_test,tree_deep.predict(X_test))\ngap_deep = train_acc_deep-test_acc_deep\ndef diagnose_model(train_accuracy,test_accuracy,gap_threshold=.10):\n    gap = train_accuracy-test_accuracy\n    if train_accuracy >= .90 and gap+1e-12 >= gap_threshold:\n        return 'Есть признаки переобучения'\n    elif train_accuracy < .70 and test_accuracy < .70:\n        return 'Возможно недообучение'\n    return 'Явных признаков переобучения нет'\ntree_regularized = DecisionTreeClassifier(max_depth=5,min_samples_leaf=10,random_state=42).fit(X_train,y_train)\ntrain_acc_reg = accuracy_score(y_train,tree_regularized.predict(X_train))\ntest_acc_reg = accuracy_score(y_test,tree_regularized.predict(X_test))\ngap_reg = train_acc_reg-test_acc_reg\nfor name,train,test,gap,depth in [\n    ('Ограниченная',train_acc_limited,test_acc_limited,gap_limited,tree_limited.get_depth()),\n    ('Глубокая',train_acc_deep,test_acc_deep,gap_deep,tree_deep.get_depth()),\n    ('Регуляризованная',train_acc_reg,test_acc_reg,gap_reg,tree_regularized.get_depth())]:\n    print(name,round(train,3),round(test,3),round(gap,3),depth,diagnose_model(train,test))\nassert .80 <= train_acc_reg <= .90\nassert .70 <= test_acc_reg <= .80\nassert gap_reg < gap_deep\nassert test_acc_reg > test_acc_deep",
+      "answer": "",
+      "explanation": "max_depth=5 ограничивает длину пути, min_samples_leaf=10 не позволяет создавать листья по единичным объектам. Проверки из исходного условия выполняются: разрыв меньше глубокого дерева, а качество на тесте выше. Регуляризация может слегка уменьшить train ради лучшего переноса на новые данные.\n\nРегуляризация дала train≈0.845, test0.750, разрыв≈0.095: лучше test и меньше разрыв, чем 0.694/0.306 глубокого дерева.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Ограниченная 0.798 0.711 0.087 3 Явных признаков переобучения нет\nГлубокая 1.0 0.694 0.306 13 Есть признаки переобучения\nРегуляризованная 0.845 0.75 0.095 5 Явных признаков переобучения нет"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем make_classification, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем DecisionTreeClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `make_classification(n_samples=600, n_features=20, n_informative=5, n_redundant=5, n_repeated=0, n_classes=2, flip_y=0.12, class_sep=0.8, random_state=42)` и сохраняем результат в `(X, y)`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 9,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_limited."
+        },
+        {
+          "line": 10,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_limited."
+        },
+        {
+          "line": 11,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_limited."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `train_acc_limited - test_acc_limited` и сохраняем результат в `gap_limited`."
+        },
+        {
+          "line": 13,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_deep."
+        },
+        {
+          "line": 14,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_deep."
+        },
+        {
+          "line": 15,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_deep."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `train_acc_deep - test_acc_deep` и сохраняем результат в `gap_deep`."
+        },
+        {
+          "line": 17,
+          "text": "Определяем функцию `diagnose_model` с параметрами `train_accuracy, test_accuracy, gap_threshold=0.1`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 18,
+          "text": "Вычисляем `train_accuracy - test_accuracy` и сохраняем результат в `gap`."
+        },
+        {
+          "line": 19,
+          "text": "Проверяем условие `train_accuracy >= 0.9 and gap + 1e-12 >= gap_threshold`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 20,
+          "text": "Возвращаем из функции `'Есть признаки переобучения'`."
+        },
+        {
+          "line": 21,
+          "text": "Проверяем условие `train_accuracy < 0.7 and test_accuracy < 0.7`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 22,
+          "text": "Возвращаем из функции `'Возможно недообучение'`."
+        },
+        {
+          "line": 23,
+          "text": "Возвращаем из функции `'Явных признаков переобучения нет'`."
+        },
+        {
+          "line": 24,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в tree_regularized."
+        },
+        {
+          "line": 25,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в train_acc_reg."
+        },
+        {
+          "line": 26,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в test_acc_reg."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `train_acc_reg - test_acc_reg` и сохраняем результат в `gap_reg`."
+        },
+        {
+          "line": 28,
+          "text": "Перебираем `[('Ограниченная', train_acc_limited, test_acc_limited, gap_limited, tree_limited.get_depth()), ('Глубокая', train_acc_deep, test_acc_deep, gap_deep, tree_deep.get_depth()), ('Регуляризованная', train_acc_reg, test_acc_reg, gap_reg, tree_regularized.get_depth())]`; очередное значение доступно через `(name, train, test, gap, depth)`."
+        },
+        {
+          "line": 32,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 33,
+          "text": "Проверяем инвариант `0.8 <= train_acc_reg <= 0.9`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 34,
+          "text": "Проверяем инвариант `0.7 <= test_acc_reg <= 0.8`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 35,
+          "text": "Проверяем инвариант `gap_reg < gap_deep`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 36,
+          "text": "Проверяем инвариант `test_acc_reg > test_acc_deep`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "13612f9b74d6d7fc6aee7f8a99eb7a7335ea26e639cfa7cebe3d1d24e597df89",
+      "verificationEvidence": {
+        "codeSha256": "13612f9b74d6d7fc6aee7f8a99eb7a7335ea26e639cfa7cebe3d1d24e597df89",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Ограниченная 0.798 0.711 0.087 3 Явных признаков переобучения нет\nГлубокая 1.0 0.694 0.306 13 Есть признаки переобучения\nРегуляризованная 0.845 0.75 0.095 5 Явных признаков переобучения нет"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6aba89da10dbcd0669efe60d",
+      "lessonId": "M04-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Цель: направить учебное обращение в нужную очередь с корректными срочностью и способом обработки.\nВход: text: str, непустой после strip; role: str из student/teacher/administrator; channel: str из portal/email/phone; confidence: int или float от 0 до 1, но не bool.\nВыход: словарь category=access/network/equipment/software/other, priority=P1/P2/P3, action=auto_route/operator_review/input_error.\nПорядок: валидация R1 → strip/lower R2 → поиск всех категорий R3–R6 → неоднозначность R7/низкая confidence R8 → независимый приоритет R9/R10.\nДве и более категории: other/operator_review. При confidence<0.60: operator_review с сохранением единственной найденной категории; 0.60 допускает auto_route.\nКритические фразы «сервер недоступен», «утечка данных», «не работает сеть во всём корпусе»: P1 при любой роли/канале и даже ручной проверке. Иначе teacher/administrator/phone→P2, остальные P3.\nУспех: все три выходных поля совпали с заранее заданным ожиданием.",
+      "explanation": "Валидация выполняется до строковых методов. Приоритет не отменяется из-за низкой уверенности. Слово«other» не означает автоматически ошибку ввода: важен action.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "4896a4a8aa176df2191bb74902138f66a787917e2b36be99026c20648d3c6e0c",
+      "verificationEvidence": {
+        "codeSha256": "4896a4a8aa176df2191bb74902138f66a787917e2b36be99026c20648d3c6e0c",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89da10dbcd0669efe610",
+      "lessonId": "M04-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Трассировка логики ветвей, а не запуск архивного файла с потерянными отступами:\n1. Требуется access/P3/auto_route; исходная логика other/P3/auto_route: не учтены «войти» и форма «учётную запись».\n2. Требуется network/P3/auto_route; исходная other/P3/operator_review: ошибочное<=0.60 и потеря категории.\n3. Требуется network/P1/auto_route; исходная other/P3/auto_route: нет критической фразы и приоритета R9.\n4. Требуется other/P3/input_error; исходная логика вызывает сбой при None.lower().\nПо последствиям особенно важен 3: критическая недоступность сервера теряет срочность. Сценарий 4 также важен для непрерывности обработки.",
+      "explanation": "В сохранённом исходном фрагменте отступы отсутствуют: он не объявляется исправно запускаемой программой. Таблица получена ручным прохождением явно описанных ветвей. Для исправленной реализации ниже применяется полный контракт и реальные автопроверки. Формы слов в сценарии 1 нужно согласовать с перечнем ключевых выражений.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "9968400b7dd527ba14c7b15675fe15a50b987b5012e802d742f94656d98cfb2f",
+      "verificationEvidence": {
+        "codeSha256": "9968400b7dd527ba14c7b15675fe15a50b987b5012e802d742f94656d98cfb2f",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89da10dbcd0669efe613",
+      "lessonId": "M04-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "S1. Обычный: student, portal; «Не могу открыть приложение», confidence 0.90; цель — решить запуск. Ожидание software/P3/auto_route.\nS2. Критический: teacher, email; «Утечка данных», 0.95; цель — срочно остановить инцидент. Ожидание other/P1/auto_route по заданному контракту (критическая фраза вне 4 категорий).\nS3. Неоднозначный: student, email; «Пароль заблокирован и принтер не печатает», 0.90. Ожидание other/P3/operator_review.\nS4. Некорректный: administrator, phone; «Сервер недоступен», confidence=True. Ожидание other/P3/input_error: bool недопустим, валидация выполняется раньше критических правил.",
+      "explanation": "Четыре сценария проверяют разные цели. В S2 не придумывается новая категория security: контракт разрешает other. В S4 ошибочныйвходимеетприоритетнадсодержанием.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "6309132843525b4de96295bae95e3bd288a7bd5a8484f0e00742e4e61c816c1a",
+      "verificationEvidence": {
+        "codeSha256": "6309132843525b4de96295bae95e3bd288a7bd5a8484f0e00742e4e61c816c1a",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89da10dbcd0669efe616",
+      "lessonId": "M04-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Ручная трассировка исходной логики по T01–T08:\nT01: access/P3/auto_route —да.\nT02: equipment/P2/auto_route —да.\nT03: other/P3/operator_review —нет.\nT04: other/P3/auto_route —нет.\nT05: other/P3/operator_review —нет.\nT06: access/P3/auto_route —нет.\nT07: other/P3/auto_route —нет.\nT08: other/P3/auto_route —нет.\nScenario Pass Rate=2/8=25%. Critical Recall=0/1=0%. Validation Rate=0/2=0%.\nИсправленная функция из шага 5 проверена отдельно: 8/8, 1/1, 2/2 соответственно.",
+      "explanation": "В исходной сохранённой программе потеряны отступы, поэтому результаты исходной логики названы ручной трассировкой. Строго сравниваются все три поля. Метрики исправленной функции подтверждены assert-проверками, а не подставлены в исходный протокол.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "8623328be3796e12e680285dd231cb4ac46447e7350a478940f9e565d474c844",
+      "verificationEvidence": {
+        "codeSha256": "8623328be3796e12e680285dd231cb4ac46447e7350a478940f9e565d474c844",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89da10dbcd0669efe619",
+      "lessonId": "M04-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\ndef process_request(text,role,channel,confidence):\n    error={'category':'other','priority':'P3','action':'input_error'}\n    if type(text) is not str or type(role) is not str or type(channel) is not str:\n        return error\n    if type(confidence) not in (int,float) or not 0 <= confidence <= 1:\n        return error\n    if role not in {'student','teacher','administrator'} or channel not in {'portal','email','phone'} or not text.strip():\n        return error\n    text=text.strip().lower()\n    categories=set()\n    # Word boundaries prevent \"доступ\" matching inside \"недоступен\".\n    # Inflected forms cover the explicit scenario \"войти в учётную запись\".\n    if re.search(r'\\b(?:парол\\w*|вход\\w*|доступ\\w*|войти|уч[её]тн\\w*\\s+запис\\w*)\\b',text):\n        categories.add('access')\n    if any(word in text for word in ['сеть','wi-fi','интернет','сервер недоступен']):\n        categories.add('network')\n    if any(word in text for word in ['принтер','ноутбук','компьютер','клавиатура']):\n        categories.add('equipment')\n    if any(word in text for word in ['программа','приложение','обновление','ошибка установки']):\n        categories.add('software')\n    category=next(iter(categories)) if len(categories)==1 else 'other'\n    action='operator_review' if len(categories)>=2 or confidence<.60 else 'auto_route'\n    critical=any(phrase in text for phrase in ['сервер недоступен','утечка данных','не работает сеть во всём корпусе'])\n    priority='P1' if critical else 'P2' if role in {'teacher','administrator'} or channel=='phone' else 'P3'\n    return {'category':category,'priority':priority,'action':action}\n\ntests=[\n('Не могу войти: пароль не подходит','student','portal',.92,('access','P3','auto_route')),\n('Принтер не печатает','teacher','email',.88,('equipment','P2','auto_route')),\n('Нет интернета','student','portal',.60,('network','P3','auto_route')),\n('Сервер недоступен','student','portal',.95,('network','P1','auto_route')),\n('Нужно обновление программы','teacher','portal',.58,('software','P2','operator_review')),\n('Не входит пароль и не работает интернет','student','email',.90,('other','P3','operator_review')),\n('','student','portal',.80,('other','P3','input_error')),\n('Не могу войти','guest','portal',.82,('other','P3','input_error'))]\nfor i,(*args,expected) in enumerate(tests,1):\n    actual=process_request(*args)\n    assert tuple(actual.values())==expected,(i,actual)\n    print(f'T{i:02d}', '/'.join(actual.values()))\nfor bad in [-.01,1.01,True,False,float('nan'),None,'0.8']:\n    assert process_request('Доступ','student','portal',bad)['action']=='input_error'\nfor value in [0,.59,.60,1]:\n    expected='operator_review' if value<.60 else 'auto_route'\n    assert process_request('Доступ','student','portal',value)['action']==expected\nassert process_request(None,'student','portal',.8)['action']=='input_error'\nassert process_request('   ','student','portal',.8)['action']=='input_error'\nassert process_request('Сервер недоступен','teacher','phone',.5)=={'category':'network','priority':'P1','action':'operator_review'}\nassert process_request('Не могу войти в учётную запись','student','portal',.92)['category']=='access'\nprint('8 основных и 15 дополнительных проверок пройдены')",
+      "answer": "",
+      "explanation": "Новая реализация написана по R1–R10, а не восстановлена догадками из потерянных отступов. Проверяются точные типы и диапазон, все категории, действие и независимый приоритет. На 0.60 автоматический режим допустим. Для явного сценария «войти в учётную запись» учтены словоформы; границы слов не дают«недоступен» совпасть с«доступ». Пройдены 8 основных и 15 дополнительных проверок.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "T01 access/P3/auto_route\nT02 equipment/P2/auto_route\nT03 network/P3/auto_route\nT04 network/P1/auto_route\nT05 software/P2/operator_review\nT06 other/P3/operator_review\nT07 other/P3/input_error\nT08 other/P3/input_error\n8 основных и 15 дополнительных проверок пройдены"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Определяем функцию `process_request` с параметрами `text, role, channel, confidence`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 3,
+          "text": "Создаём словарь `error` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `type(text) is not str or type(role) is not str or type(channel) is not str`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Возвращаем из функции `error`."
+        },
+        {
+          "line": 6,
+          "text": "Проверяем условие `type(confidence) not in (int, float) or not 0 <= confidence <= 1`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 7,
+          "text": "Возвращаем из функции `error`."
+        },
+        {
+          "line": 8,
+          "text": "Проверяем условие `role not in {'student', 'teacher', 'administrator'} or channel not in {'portal', 'email', 'phone'} or (not text.strip())`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 9,
+          "text": "Возвращаем из функции `error`."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `text.strip().lower()` и сохраняем результат в `text`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `set()` и сохраняем результат в `categories`."
+        },
+        {
+          "line": 14,
+          "text": "Проверяем условие `re.search('\\\\b(?:парол\\\\w*|вход\\\\w*|доступ\\\\w*|войти|уч[её]тн\\\\w*\\\\s+запис\\\\w*)\\\\b', text)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 15,
+          "text": "Выполняем `categories.add` с переданными аргументами."
+        },
+        {
+          "line": 16,
+          "text": "Проверяем условие `any((word in text for word in ['сеть', 'wi-fi', 'интернет', 'сервер недоступен']))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 17,
+          "text": "Выполняем `categories.add` с переданными аргументами."
+        },
+        {
+          "line": 18,
+          "text": "Проверяем условие `any((word in text for word in ['принтер', 'ноутбук', 'компьютер', 'клавиатура']))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 19,
+          "text": "Выполняем `categories.add` с переданными аргументами."
+        },
+        {
+          "line": 20,
+          "text": "Проверяем условие `any((word in text for word in ['программа', 'приложение', 'обновление', 'ошибка установки']))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 21,
+          "text": "Выполняем `categories.add` с переданными аргументами."
+        },
+        {
+          "line": 22,
+          "text": "Вычисляем `next(iter(categories)) if len(categories) == 1 else 'other'` и сохраняем результат в `category`."
+        },
+        {
+          "line": 23,
+          "text": "Вычисляем `'operator_review' if len(categories) >= 2 or confidence < 0.6 else 'auto_route'` и сохраняем результат в `action`."
+        },
+        {
+          "line": 24,
+          "text": "Вычисляем `any((phrase in text for phrase in ['сервер недоступен', 'утечка данных', 'не работает сеть во всём корпусе']))` и сохраняем результат в `critical`."
+        },
+        {
+          "line": 25,
+          "text": "Вычисляем `'P1' if critical else 'P2' if role in {'teacher', 'administrator'} or channel == 'phone' else 'P3'` и сохраняем результат в `priority`."
+        },
+        {
+          "line": 26,
+          "text": "Возвращаем из функции `{'category': category, 'priority': priority, 'action': action}`."
+        },
+        {
+          "line": 28,
+          "text": "Создаём набор значений `tests` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 37,
+          "text": "Перебираем `enumerate(tests, 1)`; очередное значение доступно через `(i, (*args, expected))`."
+        },
+        {
+          "line": 38,
+          "text": "Вычисляем `process_request(*args)` и сохраняем результат в `actual`."
+        },
+        {
+          "line": 39,
+          "text": "Проверяем инвариант `tuple(actual.values()) == expected`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 40,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 41,
+          "text": "Перебираем `[-0.01, 1.01, True, False, float('nan'), None, '0.8']`; очередное значение доступно через `bad`."
+        },
+        {
+          "line": 42,
+          "text": "Проверяем инвариант `process_request('Доступ', 'student', 'portal', bad)['action'] == 'input_error'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 43,
+          "text": "Перебираем `[0, 0.59, 0.6, 1]`; очередное значение доступно через `value`."
+        },
+        {
+          "line": 44,
+          "text": "Вычисляем `'operator_review' if value < 0.6 else 'auto_route'` и сохраняем результат в `expected`."
+        },
+        {
+          "line": 45,
+          "text": "Проверяем инвариант `process_request('Доступ', 'student', 'portal', value)['action'] == expected`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 46,
+          "text": "Проверяем инвариант `process_request(None, 'student', 'portal', 0.8)['action'] == 'input_error'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 47,
+          "text": "Проверяем инвариант `process_request('   ', 'student', 'portal', 0.8)['action'] == 'input_error'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 48,
+          "text": "Проверяем инвариант `process_request('Сервер недоступен', 'teacher', 'phone', 0.5) == {'category': 'network', 'priority': 'P1', 'action': 'operator_review'}`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 49,
+          "text": "Проверяем инвариант `process_request('Не могу войти в учётную запись', 'student', 'portal', 0.92)['category'] == 'access'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 50,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "7043dae78798913d49093e0d63077b9159ef04d09298b9ce31c33e202e185b02",
+      "verificationEvidence": {
+        "codeSha256": "7043dae78798913d49093e0d63077b9159ef04d09298b9ce31c33e202e185b02",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "T01 access/P3/auto_route\nT02 equipment/P2/auto_route\nT03 network/P3/auto_route\nT04 network/P1/auto_route\nT05 software/P2/operator_review\nT06 other/P3/operator_review\nT07 other/P3/input_error\nT08 other/P3/input_error\n8 основных и 15 дополнительных проверок пройдены"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba89da10dbcd0669efe61c",
+      "lessonId": "M04-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "Граничная ошибка T03, R8: при confidence=0.60 исходная логика направляет оператору. Причина — <= вместо < и ранний return. Последствие — лишняя ручная работа и потеря категории. Исправление: сначала определить категорию, затем действие. Ретест: 0.59→review, 0.60→auto, 1→auto.\nВалидационная T07/None, R1–R2: пустой текст классифицируется, а None вызывает сбой. Причина — строковый метод до проверки. Исправление: типы, диапазон, strip, роль и канал проверяются первыми. Ретест: пустота, пробелы, None, guest, True→input_error.\nКритическая T04, R9: «Сервер недоступен» теряет network/P1. Причина — неполный словарь и приоритет только по роли. Исправление: критические фразы независимы от action. Ретест: student/portal/0.95→network/P1/auto; teacher/phone/0.5→network/P1/review.",
+      "explanation": "Карточки содержат симптом, требование, причину, последствие, исправление и ретест. Повторные проверки есть в исполняемом решении шага 5.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "c3cffe2e5b855c8a55278d70315e19784ccfd546cf44725812dddeb181180a41",
+      "verificationEvidence": {
+        "codeSha256": "c3cffe2e5b855c8a55278d70315e19784ccfd546cf44725812dddeb181180a41",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89da10dbcd0669efe61f",
+      "lessonId": "M04-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "Улучшение 1: версионированный словарь тем и словоформ. Риск — непокрытые формулировки; уточняет R3–R6. Проверка — новые фразы и регрессия старого словаря.\nУлучшение 2: обезличенный журнал причин review и решения оператора. Риск — непонятная нагрузка на человека; уточняет R7–R8. Проверка — полнота причин, доля передач и отсутствие секретов.\nИтог: найдены неверная граница 0.60, отсутствие валидации и потеря критического приоритета. Исправленная функция проверяет вход до строковых методов и собирает все темы. Все 8 обязательных сценариев совпали полностью. Критический случай и валидация прошли 1/1 и 2/2. Дополнительные тесты покрывают bool, NaN, None и границы. Учебная демонстрация готова, но конечный словарь не покрывает весь язык. Рабочее применение требует новых сценариев, согласованных словоформ и оператора.",
+      "explanation": "Улучшения отделены от обязательных исправлений. Вывод подтверждён тестами и ограничен учебным контрактом.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "25690d3ff04dc0ba72f9d376f0c57dcf8364e9047afeb2eb5b6436fa202b7cd7",
+      "verificationEvidence": {
+        "codeSha256": "25690d3ff04dc0ba72f9d376f0c57dcf8364e9047afeb2eb5b6436fa202b7cd7",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    }
+  ]
+}

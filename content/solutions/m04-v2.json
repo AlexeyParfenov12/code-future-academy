@@ -1,0 +1,1628 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6ab79775b0a3edd62a273861",
+      "lessonId": "M04-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "А: R1/R2 — обязательные поля и диапазоны не проверяются, возможны сбой и неправильный результат.\nБ: R4 — без predict_proba не реализован заданный вероятностный порог; decision_function нельзя объявлять вероятностью.\nВ: R5 — score≥5 перехватывает все score≥8, критический приоритет недостижим.\nГ: R6 — неполный формат мешает контролю ошибок и ручной проверке.\nД: R2 — пустой/короткий текст попадает в модель и получает случайный рабочий маршрут.\npriority_v1(50, 240, \"нет\") вернёт (\"высокий\", 8): 3+3+2=8, первая ветка score≥5 уже сработала. Версия 2 должна также начислять по 4 балла за верхние диапазоны, итого 10 и«критический».",
+      "explanation": "Сопоставлены требования и последствия. Важны две независимые правки приоритета: порядок ветвей и отдельные верхние пороги 50/240. Одна перестановка if не исправит недостающие баллы.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "68dfb9d29f9ca697d763727a72d25a01e28e3c785cb08cf5cffb748da9810519",
+      "verificationEvidence": {
+        "codeSha256": "68dfb9d29f9ca697d763727a72d25a01e28e3c785cb08cf5cffb748da9810519",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab79778b0a3edd62a273862",
+      "lessonId": "M04-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def normalize_spaces(value):\n    return ' '.join(str(value).strip().lower().split())\n\ndef prepare_ticket(ticket):\n    if not isinstance(ticket,dict):\n        return {},['ticket:ожидался словарь']\n    prepared,errors = {},[]\n    for name in ['ticket_id','text','users_affected','outage_minutes','has_workaround']:\n        if name not in ticket:\n            errors.append(name+':обязательное поле отсутствует')\n    prepared['ticket_id'] = str(ticket.get('ticket_id') or '').strip()\n    if not prepared['ticket_id']:\n        errors.append('ticket_id:пустой идентификатор')\n    prepared['text'] = normalize_spaces(ticket.get('text') or '')\n    if not 5 <= len(prepared['text']) <= 500:\n        errors.append('text:длина вне5–500')\n    for name,low,high in [('users_affected',1,500),('outage_minutes',0,1440)]:\n        value = ticket.get(name)\n        try:\n            if isinstance(value,bool) or isinstance(value,float) and not value.is_integer():\n                raise ValueError()\n            converted = int(value)\n        except (TypeError,ValueError,OverflowError):\n            errors.append(name+':не целое число')\n            continue\n        prepared[name] = converted\n        if not low <= converted <= high:\n            errors.append(name+':вне диапазона')\n    value = ticket.get('has_workaround')\n    if type(value) is bool:\n        prepared['has_workaround'] = value\n    elif type(value) is int and value in (0,1):\n        prepared['has_workaround'] = bool(value)\n    else:\n        normalized = normalize_spaces(value)\n        if normalized in {'да','есть','yes','1'}:\n            prepared['has_workaround'] = True\n        elif normalized in {'нет','отсутствует','no','0'}:\n            prepared['has_workaround'] = False\n        else:\n            errors.append('has_workaround:неизвестное значение')\n    return prepared,errors\ncases = [\n{'ticket_id':'B01','text':' Не работает ИНТЕРНЕТ ','users_affected':12,'outage_minutes':60,'has_workaround':'НЕТ'},\n{'ticket_id':'B02','text':' ','users_affected':3,'outage_minutes':10,'has_workaround':'да'},\n{'ticket_id':'B03','text':'принтер не печатает','users_affected':-2,'outage_minutes':15,'has_workaround':'нет'},\n{'ticket_id':'B04','text':'программа зависает','users_affected':5,'outage_minutes':'долго','has_workaround':'возможно'}]\nfor ticket in cases:\n    prepared,errors = prepare_ticket(ticket)\n    print(ticket['ticket_id'],prepared,errors)\nassert prepare_ticket(cases[0])[1] == []\nassert prepare_ticket(cases[0])[0]['has_workaround'] is False\nassert len(prepare_ticket(cases[3])[1])==2\nfor value in [True,False,1,0,'Да','НЕТ','yes','no','1','0']:\n    assert not prepare_ticket(dict(cases[0],has_workaround=value))[1]\nassert prepare_ticket(dict(cases[0],users_affected=2.5))[1]\nassert prepare_ticket(None)[1]",
+      "answer": "",
+      "explanation": "Валидация собирает все ошибки за один вызов. Ошибка преобразования числа отделена от нарушения диапазона; дробное 2.5 не обрезается молча до 2. Строковые и логические варианты временного решения проверены отдельно. Некорректный объект возвращает errors, а вызывающий код обязан остановиться до модели и приоритета.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "B01 {'ticket_id': 'B01', 'text': 'не работает интернет', 'users_affected': 12, 'outage_minutes': 60, 'has_workaround': False} []\nB02 {'ticket_id': 'B02', 'text': '', 'users_affected': 3, 'outage_minutes': 10, 'has_workaround': True} ['text:длина вне5–500']\nB03 {'ticket_id': 'B03', 'text': 'принтер не печатает', 'users_affected': -2, 'outage_minutes': 15, 'has_workaround': False} ['users_affected:вне диапазона']\nB04 {'ticket_id': 'B04', 'text': 'программа зависает', 'users_affected': 5} ['outage_minutes:не целое число', 'has_workaround:неизвестное значение']"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `normalize_spaces` с параметрами `value`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Возвращаем из функции `' '.join(str(value).strip().lower().split())`."
+        },
+        {
+          "line": 4,
+          "text": "Определяем функцию `prepare_ticket` с параметрами `ticket`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 5,
+          "text": "Проверяем условие `not isinstance(ticket, dict)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 6,
+          "text": "Возвращаем из функции `({}, ['ticket:ожидался словарь'])`."
+        },
+        {
+          "line": 7,
+          "text": "Создаём набор значений `(prepared, errors)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 8,
+          "text": "Перебираем `['ticket_id', 'text', 'users_affected', 'outage_minutes', 'has_workaround']`; очередное значение доступно через `name`."
+        },
+        {
+          "line": 9,
+          "text": "Проверяем условие `name not in ticket`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `str(ticket.get('ticket_id') or '').strip()` и сохраняем результат в `prepared['ticket_id']`."
+        },
+        {
+          "line": 12,
+          "text": "Проверяем условие `not prepared['ticket_id']`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `normalize_spaces(ticket.get('text') or '')` и сохраняем результат в `prepared['text']`."
+        },
+        {
+          "line": 15,
+          "text": "Проверяем условие `not 5 <= len(prepared['text']) <= 500`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 16,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 17,
+          "text": "Перебираем `[('users_affected', 1, 500), ('outage_minutes', 0, 1440)]`; очередное значение доступно через `(name, low, high)`."
+        },
+        {
+          "line": 18,
+          "text": "Вычисляем `ticket.get(name)` и сохраняем результат в `value`."
+        },
+        {
+          "line": 20,
+          "text": "Проверяем условие `isinstance(value, bool) or (isinstance(value, float) and (not value.is_integer()))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 22,
+          "text": "Вычисляем `int(value)` и сохраняем результат в `converted`."
+        },
+        {
+          "line": 24,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 26,
+          "text": "Вычисляем `converted` и сохраняем результат в `prepared[name]`."
+        },
+        {
+          "line": 27,
+          "text": "Проверяем условие `not low <= converted <= high`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 28,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 29,
+          "text": "Вычисляем `ticket.get('has_workaround')` и сохраняем результат в `value`."
+        },
+        {
+          "line": 30,
+          "text": "Проверяем условие `type(value) is bool`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 31,
+          "text": "Вычисляем `value` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 32,
+          "text": "Проверяем условие `type(value) is int and value in (0, 1)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `bool(value)` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 35,
+          "text": "Вычисляем `normalize_spaces(value)` и сохраняем результат в `normalized`."
+        },
+        {
+          "line": 36,
+          "text": "Проверяем условие `normalized in {'да', 'есть', 'yes', '1'}`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 37,
+          "text": "Вычисляем `True` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 38,
+          "text": "Проверяем условие `normalized in {'нет', 'отсутствует', 'no', '0'}`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 39,
+          "text": "Вычисляем `False` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 41,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 42,
+          "text": "Возвращаем из функции `(prepared, errors)`."
+        },
+        {
+          "line": 43,
+          "text": "Создаём набор значений `cases` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 48,
+          "text": "Перебираем `cases`; очередное значение доступно через `ticket`."
+        },
+        {
+          "line": 49,
+          "text": "Вычисляем `prepare_ticket(ticket)` и сохраняем результат в `(prepared, errors)`."
+        },
+        {
+          "line": 50,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 51,
+          "text": "Проверяем инвариант `prepare_ticket(cases[0])[1] == []`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 52,
+          "text": "Проверяем инвариант `prepare_ticket(cases[0])[0]['has_workaround'] is False`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 53,
+          "text": "Проверяем инвариант `len(prepare_ticket(cases[3])[1]) == 2`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 54,
+          "text": "Перебираем `[True, False, 1, 0, 'Да', 'НЕТ', 'yes', 'no', '1', '0']`; очередное значение доступно через `value`."
+        },
+        {
+          "line": 55,
+          "text": "Проверяем инвариант `not prepare_ticket(dict(cases[0], has_workaround=value))[1]`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 56,
+          "text": "Проверяем инвариант `prepare_ticket(dict(cases[0], users_affected=2.5))[1]`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 57,
+          "text": "Проверяем инвариант `prepare_ticket(None)[1]`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "e021c6e18193a019228876bb8397ee48f8e3ca5e5703c83499f0822c3b3adad9",
+      "verificationEvidence": {
+        "codeSha256": "e021c6e18193a019228876bb8397ee48f8e3ca5e5703c83499f0822c3b3adad9",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "B01 {'ticket_id': 'B01', 'text': 'не работает интернет', 'users_affected': 12, 'outage_minutes': 60, 'has_workaround': False} []\nB02 {'ticket_id': 'B02', 'text': '', 'users_affected': 3, 'outage_minutes': 10, 'has_workaround': True} ['text:длина вне5–500']\nB03 {'ticket_id': 'B03', 'text': 'принтер не печатает', 'users_affected': -2, 'outage_minutes': 15, 'has_workaround': False} ['users_affected:вне диапазона']\nB04 {'ticket_id': 'B04', 'text': 'программа зависает', 'users_affected': 5} ['outage_minutes:не целое число', 'has_workaround:неизвестное значение']"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab7977cb0a3edd62a273863",
+      "lessonId": "M04-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\n\nTEXTS_BY_CATEGORY = {\n\"сеть\": [\n\"не работает интернет в кабинете\", \"пропал wi fi на этаже\",\n\"нет подключения к сети\", \"роутер не раздает интернет\",\n\"очень медленный интернет\", \"компьютер не видит локальную сеть\",\n\"обрыв сетевого соединения\", \"не открываются сайты через сеть\",\n\"точка доступа отключилась\", \"кабель сети не подключен\",\n\"интернет часто пропадает\", \"нет связи с сервером по сети\",\n\"wi fi подключен без доступа в интернет\", \"сетевой адаптер отключен\",\n\"пинг до сервера очень высокий\", \"не удается получить ip адрес\"\n],\n\"доступ\": [\n\"не могу войти в учетную запись\", \"забыл пароль от портала\",\n\"аккаунт заблокирован после попыток входа\", \"не приходит код подтверждения\",\n\"нет прав доступа к папке\", \"система пишет неверный логин\",\n\"нужно восстановить пароль\", \"не открывается личный кабинет\",\n\"пользователь не авторизуется\", \"доступ запрещен для сотрудника\",\n\"истек срок действия пароля\", \"не могу пройти двухфакторную авторизацию\",\n\"нужно выдать права на каталог\", \"логин не найден в системе\",\n\"учетная запись отключена\", \"не получается сменить пароль\"\n],\n\"по\": [\n\"программа не запускается\", \"приложение выдает ошибку\",\n\"не устанавливается обновление программы\", \"редактор зависает при запуске\",\n\"ошибка лицензии в приложении\", \"программа закрывается сама\",\n\"не работает функция экспорта\", \"после обновления приложение тормозит\",\n\"не открывается файл в программе\", \"сервис показывает программную ошибку\",\n\"приложение зависает при сохранении\", \"не устанавливается драйвер программы\",\n\"ошибка при запуске модуля\", \"программа показывает белое окно\",\n\"не работает кнопка в приложении\", \"после обновления появились сбои\"\n],\n\"оборудование\": [\n\"принтер не печатает\", \"сломалась клавиатура\",\n\"монитор не включается\", \"компьютер сильно шумит\",\n\"мышь не реагирует\", \"сканер зажевывает бумагу\",\n\"проектор не показывает изображение\", \"ноутбук не заряжается\",\n\"на системном блоке не горит индикатор\", \"принтер печатает полосами\",\n\"веб камера не включается\", \"наушники не воспроизводят звук\",\n\"перегревается ноутбук\", \"диск издает странный звук\",\n\"клавиша на клавиатуре западает\", \"монитор мерцает\"\n]\n}\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.pipeline import Pipeline,FeatureUnion\nfrom sklearn.svm import LinearSVC\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import accuracy_score,confusion_matrix\nrows = [{'text':text,'category':category} for category,texts in TEXTS_BY_CATEGORY.items() for text in texts]\ndf = pd.DataFrame(rows)\nX_train,X_test,y_train,y_test = train_test_split(df['text'],df['category'],test_size=.25,random_state=4,stratify=df['category'])\nmodel_v1 = Pipeline([('tfidf',TfidfVectorizer()),('classifier',LinearSVC(random_state=42))]).fit(X_train,y_train)\nmodel_v2 = Pipeline([\n    ('features',FeatureUnion([\n        ('word',TfidfVectorizer(ngram_range=(1,2),sublinear_tf=True)),\n        ('char',TfidfVectorizer(analyzer='char_wb',ngram_range=(3,5),sublinear_tf=True))])),\n    ('classifier',LogisticRegression(max_iter=1000,C=8,random_state=42))\n]).fit(X_train,y_train)\naccuracy_v1 = accuracy_score(y_test,model_v1.predict(X_test))\naccuracy_v2 = accuracy_score(y_test,model_v2.predict(X_test))\nprint('v1:',accuracy_v1,'ошибок:',int((model_v1.predict(X_test)!=y_test).sum()))\nprint('v2:',accuracy_v2,'ошибок:',int((model_v2.predict(X_test)!=y_test).sum()))\nfor text in ['интернет не работает','не работает портал','срочно помогите']:\n    probabilities = model_v2.predict_proba([text])[0]\n    best = int(probabilities.argmax())\n    print(text,str(model_v2.classes_[best]),round(float(probabilities[best]),4),'manual_review' if probabilities[best]<.60 else 'accepted')",
+      "answer": "",
+      "explanation": "Обе модели обучаются на одинаковых 48 из 64 текстов и оцениваются на тех же 16. FeatureUnion объединяет словесные и символьные признаки, LogisticRegression даёт predict_proba. Порог 0.60 проверяется по полной вероятности, не по округлённой печати. Эти вероятности ещё требуют проверки калибровки при применении к реальным обращениям.\n\nv1=13/16=0.8125, 3 ошибки; v2=14/16=0.875, 2 ошибки. Интернет: сеть≈0.7237, accepted; портал: по≈0.5383, review; «срочно помогите»: доступ≈0.3558, review.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "v1: 0.8125 ошибок: 3\nv2: 0.875 ошибок: 2\nинтернет не работает сеть 0.7237 accepted\nне работает портал по 0.5383 manual_review\nсрочно помогите доступ 0.3558 manual_review"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Создаём словарь `TEXTS_BY_CATEGORY` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 46,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 47,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 48,
+          "text": "Подключаем Pipeline, FeatureUnion, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 49,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 50,
+          "text": "Подключаем LogisticRegression, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 51,
+          "text": "Подключаем accuracy_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 52,
+          "text": "Вычисляем `[{'text': text, 'category': category} for category, texts in TEXTS_BY_CATEGORY.items() for text in texts]` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 53,
+          "text": "Вычисляем `pd.DataFrame(rows)` и сохраняем результат в `df`."
+        },
+        {
+          "line": 54,
+          "text": "Вычисляем `train_test_split(df['text'], df['category'], test_size=0.25, random_state=4, stratify=df['category'])` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 55,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model_v1."
+        },
+        {
+          "line": 56,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model_v2."
+        },
+        {
+          "line": 62,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в accuracy_v1."
+        },
+        {
+          "line": 63,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в accuracy_v2."
+        },
+        {
+          "line": 64,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 65,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 66,
+          "text": "Перебираем `['интернет не работает', 'не работает портал', 'срочно помогите']`; очередное значение доступно через `text`."
+        },
+        {
+          "line": 67,
+          "text": "Вычисляем `model_v2.predict_proba([text])[0]` и сохраняем результат в `probabilities`."
+        },
+        {
+          "line": 68,
+          "text": "Вычисляем `int(probabilities.argmax())` и сохраняем результат в `best`."
+        },
+        {
+          "line": 69,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "61efae345c0a96797d83f6e2cb40e56cc0a3c714f7b5ffff4edb389afe4bdd58",
+      "verificationEvidence": {
+        "codeSha256": "61efae345c0a96797d83f6e2cb40e56cc0a3c714f7b5ffff4edb389afe4bdd58",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "v1: 0.8125 ошибок: 3\nv2: 0.875 ошибок: 2\nинтернет не работает сеть 0.7237 accepted\nне работает портал по 0.5383 manual_review\nсрочно помогите доступ 0.3558 manual_review"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab79781b0a3edd62a273864",
+      "lessonId": "M04-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\n\nTEXTS_BY_CATEGORY = {\n\"сеть\": [\n\"не работает интернет в кабинете\", \"пропал wi fi на этаже\",\n\"нет подключения к сети\", \"роутер не раздает интернет\",\n\"очень медленный интернет\", \"компьютер не видит локальную сеть\",\n\"обрыв сетевого соединения\", \"не открываются сайты через сеть\",\n\"точка доступа отключилась\", \"кабель сети не подключен\",\n\"интернет часто пропадает\", \"нет связи с сервером по сети\",\n\"wi fi подключен без доступа в интернет\", \"сетевой адаптер отключен\",\n\"пинг до сервера очень высокий\", \"не удается получить ip адрес\"\n],\n\"доступ\": [\n\"не могу войти в учетную запись\", \"забыл пароль от портала\",\n\"аккаунт заблокирован после попыток входа\", \"не приходит код подтверждения\",\n\"нет прав доступа к папке\", \"система пишет неверный логин\",\n\"нужно восстановить пароль\", \"не открывается личный кабинет\",\n\"пользователь не авторизуется\", \"доступ запрещен для сотрудника\",\n\"истек срок действия пароля\", \"не могу пройти двухфакторную авторизацию\",\n\"нужно выдать права на каталог\", \"логин не найден в системе\",\n\"учетная запись отключена\", \"не получается сменить пароль\"\n],\n\"по\": [\n\"программа не запускается\", \"приложение выдает ошибку\",\n\"не устанавливается обновление программы\", \"редактор зависает при запуске\",\n\"ошибка лицензии в приложении\", \"программа закрывается сама\",\n\"не работает функция экспорта\", \"после обновления приложение тормозит\",\n\"не открывается файл в программе\", \"сервис показывает программную ошибку\",\n\"приложение зависает при сохранении\", \"не устанавливается драйвер программы\",\n\"ошибка при запуске модуля\", \"программа показывает белое окно\",\n\"не работает кнопка в приложении\", \"после обновления появились сбои\"\n],\n\"оборудование\": [\n\"принтер не печатает\", \"сломалась клавиатура\",\n\"монитор не включается\", \"компьютер сильно шумит\",\n\"мышь не реагирует\", \"сканер зажевывает бумагу\",\n\"проектор не показывает изображение\", \"ноутбук не заряжается\",\n\"на системном блоке не горит индикатор\", \"принтер печатает полосами\",\n\"веб камера не включается\", \"наушники не воспроизводят звук\",\n\"перегревается ноутбук\", \"диск издает странный звук\",\n\"клавиша на клавиатуре западает\", \"монитор мерцает\"\n]\n}\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.pipeline import Pipeline,FeatureUnion\nfrom sklearn.svm import LinearSVC\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import accuracy_score,confusion_matrix\nrows = [{'text':text,'category':category} for category,texts in TEXTS_BY_CATEGORY.items() for text in texts]\ndf = pd.DataFrame(rows)\nX_train,X_test,y_train,y_test = train_test_split(df['text'],df['category'],test_size=.25,random_state=4,stratify=df['category'])\nmodel_v1 = Pipeline([('tfidf',TfidfVectorizer()),('classifier',LinearSVC(random_state=42))]).fit(X_train,y_train)\nmodel_v2 = Pipeline([\n    ('features',FeatureUnion([\n        ('word',TfidfVectorizer(ngram_range=(1,2),sublinear_tf=True)),\n        ('char',TfidfVectorizer(analyzer='char_wb',ngram_range=(3,5),sublinear_tf=True))])),\n    ('classifier',LogisticRegression(max_iter=1000,C=8,random_state=42))\n]).fit(X_train,y_train)\naccuracy_v1 = accuracy_score(y_test,model_v1.predict(X_test))\naccuracy_v2 = accuracy_score(y_test,model_v2.predict(X_test))\ndef normalize_spaces(value):\n    return ' '.join(str(value).strip().lower().split())\n\ndef prepare_ticket(ticket):\n    if not isinstance(ticket,dict):\n        return {},['ticket:ожидался словарь']\n    prepared,errors = {},[]\n    for name in ['ticket_id','text','users_affected','outage_minutes','has_workaround']:\n        if name not in ticket:\n            errors.append(name+':обязательное поле отсутствует')\n    prepared['ticket_id'] = str(ticket.get('ticket_id') or '').strip()\n    if not prepared['ticket_id']:\n        errors.append('ticket_id:пустой идентификатор')\n    prepared['text'] = normalize_spaces(ticket.get('text') or '')\n    if not 5 <= len(prepared['text']) <= 500:\n        errors.append('text:длина вне5–500')\n    for name,low,high in [('users_affected',1,500),('outage_minutes',0,1440)]:\n        value = ticket.get(name)\n        try:\n            if isinstance(value,bool) or isinstance(value,float) and not value.is_integer():\n                raise ValueError()\n            converted = int(value)\n        except (TypeError,ValueError,OverflowError):\n            errors.append(name+':не целое число')\n            continue\n        prepared[name] = converted\n        if not low <= converted <= high:\n            errors.append(name+':вне диапазона')\n    value = ticket.get('has_workaround')\n    if type(value) is bool:\n        prepared['has_workaround'] = value\n    elif type(value) is int and value in (0,1):\n        prepared['has_workaround'] = bool(value)\n    else:\n        normalized = normalize_spaces(value)\n        if normalized in {'да','есть','yes','1'}:\n            prepared['has_workaround'] = True\n        elif normalized in {'нет','отсутствует','no','0'}:\n            prepared['has_workaround'] = False\n        else:\n            errors.append('has_workaround:неизвестное значение')\n    return prepared,errors\ndef calculate_priority(users_affected,outage_minutes,has_workaround):\n    users_score = 4 if users_affected>=50 else 3 if users_affected>=20 else 1 if users_affected>=5 else 0\n    outage_score = 4 if outage_minutes>=240 else 3 if outage_minutes>=60 else 1 if outage_minutes>=15 else 0\n    score = users_score+outage_score+(0 if has_workaround else 2)\n    priority = 'критический' if score>=8 else 'высокий' if score>=5 else 'средний' if score>=2 else 'низкий'\n    return priority,score\n\ndef process_v2(ticket):\n    prepared,errors = prepare_ticket(ticket)\n    result = {'status':'input_error','ticket_id':prepared.get('ticket_id'),'category':None,'confidence':None,'priority':None,'explanation':'; '.join(errors),'errors':errors,'score':None}\n    if errors:\n        return result\n    probabilities = model_v2.predict_proba([prepared['text']])[0]\n    best = int(probabilities.argmax())\n    confidence = float(probabilities[best])\n    category = str(model_v2.classes_[best])\n    priority,score = calculate_priority(prepared['users_affected'],prepared['outage_minutes'],prepared['has_workaround'])\n    status = 'manual_review' if confidence < .60 else 'accepted'\n    reason = 'Низкая уверенность,нужна проверка специалистом.' if status=='manual_review' else 'Категория принята по порогу0.60.'\n    explanation = f'{reason} Категория:{category}; оценка:{confidence:.3f}; пользователей:{prepared[\"users_affected\"]}; простой:{prepared[\"outage_minutes\"]}; временное решение:{prepared[\"has_workaround\"]}; баллов:{score}.'\n    result.update(status=status,category=category,confidence=round(confidence,4),priority=priority,score=score,explanation=explanation,errors=[])\n    return result\nfor users in [4,5,19,20,49,50]:\n    priority,score = calculate_priority(users,0,True)\n    print('users',users,priority,score)\n    assert score == (4 if users>=50 else 3 if users>=20 else 1 if users>=5 else 0)\nfor minutes in [14,15,59,60,239,240]:\n    priority,score = calculate_priority(1,minutes,True)\n    print('outage',minutes,priority,score)\n    assert score == (4 if minutes>=240 else 3 if minutes>=60 else 1 if minutes>=15 else 0)\nassert calculate_priority(50,240,False)==('критический',10)\nprint('Максимум:',calculate_priority(50,240,False))",
+      "answer": "",
+      "explanation": "Приоритет вычисляется отдельно от ML и confidence. Верхние диапазоны получают по 4 балла, отсутствие обходного решения ещё 2. Проверки идут от 8 к 5 к 2. При input_error модель не вызывается, вычисленные поля остаются None. Возвращаются все обязательные поля R6 и дополнительный score для проверки границ; explanation сообщает основания, а не только статус.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "users 4 низкий 0\nusers 5 низкий 1\nusers 19 низкий 1\nusers 20 средний 3\nusers 49 средний 3\nusers 50 средний 4\noutage 14 низкий 0\noutage 15 низкий 1\noutage 59 низкий 1\noutage 60 средний 3\noutage 239 средний 3\noutage 240 средний 4\nМаксимум: ('критический', 10)"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Создаём словарь `TEXTS_BY_CATEGORY` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 46,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 47,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 48,
+          "text": "Подключаем Pipeline, FeatureUnion, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 49,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 50,
+          "text": "Подключаем LogisticRegression, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 51,
+          "text": "Подключаем accuracy_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 52,
+          "text": "Вычисляем `[{'text': text, 'category': category} for category, texts in TEXTS_BY_CATEGORY.items() for text in texts]` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 53,
+          "text": "Вычисляем `pd.DataFrame(rows)` и сохраняем результат в `df`."
+        },
+        {
+          "line": 54,
+          "text": "Вычисляем `train_test_split(df['text'], df['category'], test_size=0.25, random_state=4, stratify=df['category'])` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 55,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model_v1."
+        },
+        {
+          "line": 56,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model_v2."
+        },
+        {
+          "line": 62,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в accuracy_v1."
+        },
+        {
+          "line": 63,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в accuracy_v2."
+        },
+        {
+          "line": 64,
+          "text": "Определяем функцию `normalize_spaces` с параметрами `value`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 65,
+          "text": "Возвращаем из функции `' '.join(str(value).strip().lower().split())`."
+        },
+        {
+          "line": 67,
+          "text": "Определяем функцию `prepare_ticket` с параметрами `ticket`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 68,
+          "text": "Проверяем условие `not isinstance(ticket, dict)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 69,
+          "text": "Возвращаем из функции `({}, ['ticket:ожидался словарь'])`."
+        },
+        {
+          "line": 70,
+          "text": "Создаём набор значений `(prepared, errors)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 71,
+          "text": "Перебираем `['ticket_id', 'text', 'users_affected', 'outage_minutes', 'has_workaround']`; очередное значение доступно через `name`."
+        },
+        {
+          "line": 72,
+          "text": "Проверяем условие `name not in ticket`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 73,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 74,
+          "text": "Вычисляем `str(ticket.get('ticket_id') or '').strip()` и сохраняем результат в `prepared['ticket_id']`."
+        },
+        {
+          "line": 75,
+          "text": "Проверяем условие `not prepared['ticket_id']`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 76,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 77,
+          "text": "Вычисляем `normalize_spaces(ticket.get('text') or '')` и сохраняем результат в `prepared['text']`."
+        },
+        {
+          "line": 78,
+          "text": "Проверяем условие `not 5 <= len(prepared['text']) <= 500`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 79,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 80,
+          "text": "Перебираем `[('users_affected', 1, 500), ('outage_minutes', 0, 1440)]`; очередное значение доступно через `(name, low, high)`."
+        },
+        {
+          "line": 81,
+          "text": "Вычисляем `ticket.get(name)` и сохраняем результат в `value`."
+        },
+        {
+          "line": 83,
+          "text": "Проверяем условие `isinstance(value, bool) or (isinstance(value, float) and (not value.is_integer()))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 85,
+          "text": "Вычисляем `int(value)` и сохраняем результат в `converted`."
+        },
+        {
+          "line": 87,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 89,
+          "text": "Вычисляем `converted` и сохраняем результат в `prepared[name]`."
+        },
+        {
+          "line": 90,
+          "text": "Проверяем условие `not low <= converted <= high`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 91,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 92,
+          "text": "Вычисляем `ticket.get('has_workaround')` и сохраняем результат в `value`."
+        },
+        {
+          "line": 93,
+          "text": "Проверяем условие `type(value) is bool`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 94,
+          "text": "Вычисляем `value` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 95,
+          "text": "Проверяем условие `type(value) is int and value in (0, 1)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 96,
+          "text": "Вычисляем `bool(value)` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 98,
+          "text": "Вычисляем `normalize_spaces(value)` и сохраняем результат в `normalized`."
+        },
+        {
+          "line": 99,
+          "text": "Проверяем условие `normalized in {'да', 'есть', 'yes', '1'}`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 100,
+          "text": "Вычисляем `True` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 101,
+          "text": "Проверяем условие `normalized in {'нет', 'отсутствует', 'no', '0'}`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 102,
+          "text": "Вычисляем `False` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 104,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 105,
+          "text": "Возвращаем из функции `(prepared, errors)`."
+        },
+        {
+          "line": 106,
+          "text": "Определяем функцию `calculate_priority` с параметрами `users_affected, outage_minutes, has_workaround`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 107,
+          "text": "Вычисляем `4 if users_affected >= 50 else 3 if users_affected >= 20 else 1 if users_affected >= 5 else 0` и сохраняем результат в `users_score`."
+        },
+        {
+          "line": 108,
+          "text": "Вычисляем `4 if outage_minutes >= 240 else 3 if outage_minutes >= 60 else 1 if outage_minutes >= 15 else 0` и сохраняем результат в `outage_score`."
+        },
+        {
+          "line": 109,
+          "text": "Вычисляем `users_score + outage_score + (0 if has_workaround else 2)` и сохраняем результат в `score`."
+        },
+        {
+          "line": 110,
+          "text": "Вычисляем `'критический' if score >= 8 else 'высокий' if score >= 5 else 'средний' if score >= 2 else 'низкий'` и сохраняем результат в `priority`."
+        },
+        {
+          "line": 111,
+          "text": "Возвращаем из функции `(priority, score)`."
+        },
+        {
+          "line": 113,
+          "text": "Определяем функцию `process_v2` с параметрами `ticket`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 114,
+          "text": "Вычисляем `prepare_ticket(ticket)` и сохраняем результат в `(prepared, errors)`."
+        },
+        {
+          "line": 115,
+          "text": "Создаём словарь `result` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 116,
+          "text": "Проверяем условие `errors`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 117,
+          "text": "Возвращаем из функции `result`."
+        },
+        {
+          "line": 118,
+          "text": "Вычисляем `model_v2.predict_proba([prepared['text']])[0]` и сохраняем результат в `probabilities`."
+        },
+        {
+          "line": 119,
+          "text": "Вычисляем `int(probabilities.argmax())` и сохраняем результат в `best`."
+        },
+        {
+          "line": 120,
+          "text": "Вычисляем `float(probabilities[best])` и сохраняем результат в `confidence`."
+        },
+        {
+          "line": 121,
+          "text": "Вычисляем `str(model_v2.classes_[best])` и сохраняем результат в `category`."
+        },
+        {
+          "line": 122,
+          "text": "Вычисляем `calculate_priority(prepared['users_affected'], prepared['outage_minutes'], prepared['has_workaround'])` и сохраняем результат в `(priority, score)`."
+        },
+        {
+          "line": 123,
+          "text": "Вычисляем `'manual_review' if confidence < 0.6 else 'accepted'` и сохраняем результат в `status`."
+        },
+        {
+          "line": 124,
+          "text": "Вычисляем `'Низкая уверенность,нужна проверка специалистом.' if status == 'manual_review' else 'Категория принята по порогу0.60.'` и сохраняем результат в `reason`."
+        },
+        {
+          "line": 125,
+          "text": "Вычисляем `f\"{reason} Категория:{category}; оценка:{confidence:.3f}; пользователей:{prepared['users_affected']}; простой:{prepared['outage_minutes']}; временное решение:{prepared['has_workaround']}; баллов:{score}.\"` и сохраняем результат в `explanation`."
+        },
+        {
+          "line": 126,
+          "text": "Выполняем `result.update` с переданными аргументами."
+        },
+        {
+          "line": 127,
+          "text": "Возвращаем из функции `result`."
+        },
+        {
+          "line": 128,
+          "text": "Перебираем `[4, 5, 19, 20, 49, 50]`; очередное значение доступно через `users`."
+        },
+        {
+          "line": 129,
+          "text": "Вычисляем `calculate_priority(users, 0, True)` и сохраняем результат в `(priority, score)`."
+        },
+        {
+          "line": 130,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 131,
+          "text": "Проверяем инвариант `score == (4 if users >= 50 else 3 if users >= 20 else 1 if users >= 5 else 0)`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 132,
+          "text": "Перебираем `[14, 15, 59, 60, 239, 240]`; очередное значение доступно через `minutes`."
+        },
+        {
+          "line": 133,
+          "text": "Вычисляем `calculate_priority(1, minutes, True)` и сохраняем результат в `(priority, score)`."
+        },
+        {
+          "line": 134,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 135,
+          "text": "Проверяем инвариант `score == (4 if minutes >= 240 else 3 if minutes >= 60 else 1 if minutes >= 15 else 0)`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 136,
+          "text": "Проверяем инвариант `calculate_priority(50, 240, False) == ('критический', 10)`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 137,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "718daba68ae1caa3775478bb55e006d37747692e42738c243d814a6bf2a5a8c3",
+      "verificationEvidence": {
+        "codeSha256": "718daba68ae1caa3775478bb55e006d37747692e42738c243d814a6bf2a5a8c3",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "users 4 низкий 0\nusers 5 низкий 1\nusers 19 низкий 1\nusers 20 средний 3\nusers 49 средний 3\nusers 50 средний 4\noutage 14 низкий 0\noutage 15 низкий 1\noutage 59 низкий 1\noutage 60 средний 3\noutage 239 средний 3\noutage 240 средний 4\nМаксимум: ('критический', 10)"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab79784b0a3edd62a273865",
+      "lessonId": "M04-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\n\nTEXTS_BY_CATEGORY = {\n\"сеть\": [\n\"не работает интернет в кабинете\", \"пропал wi fi на этаже\",\n\"нет подключения к сети\", \"роутер не раздает интернет\",\n\"очень медленный интернет\", \"компьютер не видит локальную сеть\",\n\"обрыв сетевого соединения\", \"не открываются сайты через сеть\",\n\"точка доступа отключилась\", \"кабель сети не подключен\",\n\"интернет часто пропадает\", \"нет связи с сервером по сети\",\n\"wi fi подключен без доступа в интернет\", \"сетевой адаптер отключен\",\n\"пинг до сервера очень высокий\", \"не удается получить ip адрес\"\n],\n\"доступ\": [\n\"не могу войти в учетную запись\", \"забыл пароль от портала\",\n\"аккаунт заблокирован после попыток входа\", \"не приходит код подтверждения\",\n\"нет прав доступа к папке\", \"система пишет неверный логин\",\n\"нужно восстановить пароль\", \"не открывается личный кабинет\",\n\"пользователь не авторизуется\", \"доступ запрещен для сотрудника\",\n\"истек срок действия пароля\", \"не могу пройти двухфакторную авторизацию\",\n\"нужно выдать права на каталог\", \"логин не найден в системе\",\n\"учетная запись отключена\", \"не получается сменить пароль\"\n],\n\"по\": [\n\"программа не запускается\", \"приложение выдает ошибку\",\n\"не устанавливается обновление программы\", \"редактор зависает при запуске\",\n\"ошибка лицензии в приложении\", \"программа закрывается сама\",\n\"не работает функция экспорта\", \"после обновления приложение тормозит\",\n\"не открывается файл в программе\", \"сервис показывает программную ошибку\",\n\"приложение зависает при сохранении\", \"не устанавливается драйвер программы\",\n\"ошибка при запуске модуля\", \"программа показывает белое окно\",\n\"не работает кнопка в приложении\", \"после обновления появились сбои\"\n],\n\"оборудование\": [\n\"принтер не печатает\", \"сломалась клавиатура\",\n\"монитор не включается\", \"компьютер сильно шумит\",\n\"мышь не реагирует\", \"сканер зажевывает бумагу\",\n\"проектор не показывает изображение\", \"ноутбук не заряжается\",\n\"на системном блоке не горит индикатор\", \"принтер печатает полосами\",\n\"веб камера не включается\", \"наушники не воспроизводят звук\",\n\"перегревается ноутбук\", \"диск издает странный звук\",\n\"клавиша на клавиатуре западает\", \"монитор мерцает\"\n]\n}\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.pipeline import Pipeline,FeatureUnion\nfrom sklearn.svm import LinearSVC\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import accuracy_score,confusion_matrix\nrows = [{'text':text,'category':category} for category,texts in TEXTS_BY_CATEGORY.items() for text in texts]\ndf = pd.DataFrame(rows)\nX_train,X_test,y_train,y_test = train_test_split(df['text'],df['category'],test_size=.25,random_state=4,stratify=df['category'])\nmodel_v1 = Pipeline([('tfidf',TfidfVectorizer()),('classifier',LinearSVC(random_state=42))]).fit(X_train,y_train)\nmodel_v2 = Pipeline([\n    ('features',FeatureUnion([\n        ('word',TfidfVectorizer(ngram_range=(1,2),sublinear_tf=True)),\n        ('char',TfidfVectorizer(analyzer='char_wb',ngram_range=(3,5),sublinear_tf=True))])),\n    ('classifier',LogisticRegression(max_iter=1000,C=8,random_state=42))\n]).fit(X_train,y_train)\naccuracy_v1 = accuracy_score(y_test,model_v1.predict(X_test))\naccuracy_v2 = accuracy_score(y_test,model_v2.predict(X_test))\ndef normalize_spaces(value):\n    return ' '.join(str(value).strip().lower().split())\n\ndef prepare_ticket(ticket):\n    if not isinstance(ticket,dict):\n        return {},['ticket:ожидался словарь']\n    prepared,errors = {},[]\n    for name in ['ticket_id','text','users_affected','outage_minutes','has_workaround']:\n        if name not in ticket:\n            errors.append(name+':обязательное поле отсутствует')\n    prepared['ticket_id'] = str(ticket.get('ticket_id') or '').strip()\n    if not prepared['ticket_id']:\n        errors.append('ticket_id:пустой идентификатор')\n    prepared['text'] = normalize_spaces(ticket.get('text') or '')\n    if not 5 <= len(prepared['text']) <= 500:\n        errors.append('text:длина вне5–500')\n    for name,low,high in [('users_affected',1,500),('outage_minutes',0,1440)]:\n        value = ticket.get(name)\n        try:\n            if isinstance(value,bool) or isinstance(value,float) and not value.is_integer():\n                raise ValueError()\n            converted = int(value)\n        except (TypeError,ValueError,OverflowError):\n            errors.append(name+':не целое число')\n            continue\n        prepared[name] = converted\n        if not low <= converted <= high:\n            errors.append(name+':вне диапазона')\n    value = ticket.get('has_workaround')\n    if type(value) is bool:\n        prepared['has_workaround'] = value\n    elif type(value) is int and value in (0,1):\n        prepared['has_workaround'] = bool(value)\n    else:\n        normalized = normalize_spaces(value)\n        if normalized in {'да','есть','yes','1'}:\n            prepared['has_workaround'] = True\n        elif normalized in {'нет','отсутствует','no','0'}:\n            prepared['has_workaround'] = False\n        else:\n            errors.append('has_workaround:неизвестное значение')\n    return prepared,errors\ndef calculate_priority(users_affected,outage_minutes,has_workaround):\n    users_score = 4 if users_affected>=50 else 3 if users_affected>=20 else 1 if users_affected>=5 else 0\n    outage_score = 4 if outage_minutes>=240 else 3 if outage_minutes>=60 else 1 if outage_minutes>=15 else 0\n    score = users_score+outage_score+(0 if has_workaround else 2)\n    priority = 'критический' if score>=8 else 'высокий' if score>=5 else 'средний' if score>=2 else 'низкий'\n    return priority,score\n\ndef process_v2(ticket):\n    prepared,errors = prepare_ticket(ticket)\n    result = {'status':'input_error','ticket_id':prepared.get('ticket_id'),'category':None,'confidence':None,'priority':None,'explanation':'; '.join(errors),'errors':errors,'score':None}\n    if errors:\n        return result\n    probabilities = model_v2.predict_proba([prepared['text']])[0]\n    best = int(probabilities.argmax())\n    confidence = float(probabilities[best])\n    category = str(model_v2.classes_[best])\n    priority,score = calculate_priority(prepared['users_affected'],prepared['outage_minutes'],prepared['has_workaround'])\n    status = 'manual_review' if confidence < .60 else 'accepted'\n    reason = 'Низкая уверенность,нужна проверка специалистом.' if status=='manual_review' else 'Категория принята по порогу0.60.'\n    explanation = f'{reason} Категория:{category}; оценка:{confidence:.3f}; пользователей:{prepared[\"users_affected\"]}; простой:{prepared[\"outage_minutes\"]}; временное решение:{prepared[\"has_workaround\"]}; баллов:{score}.'\n    result.update(status=status,category=category,confidence=round(confidence,4),priority=priority,score=score,explanation=explanation,errors=[])\n    return result\nacceptance = [\n('A01','интернет не работает',10,30,'есть',{'status':'accepted','category':'сеть','priority':'средний'}),\n('A02','не могу войти в аккаунт',2,5,'да',{'status':'accepted','category':'доступ','priority':'низкий'}),\n('A03','принтер не включается',55,250,'нет',{'status':'accepted','category':'оборудование','priority':'критический'}),\n('A04','программа зависает',22,70,'нет',{'status':'accepted','category':'по','priority':'критический'}),\n('A05','не работает портал',3,10,'да',{'status':'manual_review'}),\n('A06','срочно помогите',1,0,'есть',{'status':'manual_review'}),\n('A07','не печатает сетевой принтер',8,20,'нет',{'status':'accepted','category':'оборудование','priority':'средний'}),\n('A08','пароль не принимается',20,60,'нет',{'status':'accepted','category':'доступ','priority':'критический'}),\n('A09','',2,5,'да',{'status':'input_error'}),\n('A10','монитор мерцает',0,10,'нет',{'status':'input_error'}),\n('A11','пропал доступ к интернету',50,240,'нет',{'status':'accepted','category':'сеть','priority':'критический'}),\n('A12','ошибка программы',5,'долго','возможно',{'status':'input_error'})]\npassed = 0\nfor ident,text,users,outage,workaround,expected in acceptance:\n    ticket = dict(ticket_id=ident,text=text,users_affected=users,outage_minutes=outage,has_workaround=workaround)\n    actual = process_v2(ticket)\n    ok = all(actual[key]==value for key,value in expected.items())\n    passed += ok\n    print(ident,actual['status'],actual['category'],actual['priority'],actual['confidence'],'OK' if ok else 'FAIL')\n    if actual['status']=='input_error':\n        assert actual['category'] is None and actual['confidence'] is None and actual['priority'] is None\nprint('Приёмка:',passed,'/12 =',round(passed/12,4))\nprint('R3,accuracy_v2:',round(accuracy_v2,4))\nassert accuracy_v2 >= .80\nclass ForbiddenModel:\n    def predict_proba(self,*args):\n        raise AssertionError('Модель не должна запускаться на неверном вводе')\nsaved_model = model_v2\nmodel_v2 = ForbiddenModel()\nassert process_v2({'ticket_id':'BAD','text':''})['status']=='input_error'\nmodel_v2 = saved_model",
+      "answer": "",
+      "explanation": "Каждая строка засчитывается только при совпадении всех заранее указанных ожиданий. Отдельная проверка подставляет модель, которая бросила бы исключение при вызове: неверный ввод останавливается раньше. Нельзя объявлять приёмку пройденной по одной accuracy: нужны R2, R4, R5, R6 и не менее 11 полных совпадений. Фактические статусы и число совпадений приведены ниже; любые FAIL нужно внести в журнал с причиной, не подменяя прогноз ожидаемым классом.\n\nСовпали 12/12 ожиданий. R2: все 3 неверных ввода остановлены; R3: 0.875≥0.80; R4: A05/A06—review; R5: A03/A11—критические; R6: словарь для каждой строки. Учебная приёмка пройдена; внедрение требует независимого набора.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "A01 accepted сеть средний 0.7237 OK\nA02 accepted доступ низкий 0.8302 OK\nA03 accepted оборудование критический 0.9004 OK\nA04 accepted по критический 0.8809 OK\nA05 manual_review по низкий 0.5383 OK\nA06 manual_review доступ низкий 0.3558 OK\nA07 accepted оборудование средний 0.6662 OK\nA08 accepted доступ критический 0.76 OK\nA09 input_error None None None OK\nA10 input_error None None None OK\nA11 accepted сеть критический 0.6547 OK\nA12 input_error None None None OK\nПриёмка: 12 /12 = 1.0\nR3,accuracy_v2: 0.875"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Создаём словарь `TEXTS_BY_CATEGORY` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 46,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 47,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 48,
+          "text": "Подключаем Pipeline, FeatureUnion, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 49,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 50,
+          "text": "Подключаем LogisticRegression, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 51,
+          "text": "Подключаем accuracy_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 52,
+          "text": "Вычисляем `[{'text': text, 'category': category} for category, texts in TEXTS_BY_CATEGORY.items() for text in texts]` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 53,
+          "text": "Вычисляем `pd.DataFrame(rows)` и сохраняем результат в `df`."
+        },
+        {
+          "line": 54,
+          "text": "Вычисляем `train_test_split(df['text'], df['category'], test_size=0.25, random_state=4, stratify=df['category'])` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 55,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model_v1."
+        },
+        {
+          "line": 56,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model_v2."
+        },
+        {
+          "line": 62,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в accuracy_v1."
+        },
+        {
+          "line": 63,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в accuracy_v2."
+        },
+        {
+          "line": 64,
+          "text": "Определяем функцию `normalize_spaces` с параметрами `value`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 65,
+          "text": "Возвращаем из функции `' '.join(str(value).strip().lower().split())`."
+        },
+        {
+          "line": 67,
+          "text": "Определяем функцию `prepare_ticket` с параметрами `ticket`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 68,
+          "text": "Проверяем условие `not isinstance(ticket, dict)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 69,
+          "text": "Возвращаем из функции `({}, ['ticket:ожидался словарь'])`."
+        },
+        {
+          "line": 70,
+          "text": "Создаём набор значений `(prepared, errors)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 71,
+          "text": "Перебираем `['ticket_id', 'text', 'users_affected', 'outage_minutes', 'has_workaround']`; очередное значение доступно через `name`."
+        },
+        {
+          "line": 72,
+          "text": "Проверяем условие `name not in ticket`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 73,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 74,
+          "text": "Вычисляем `str(ticket.get('ticket_id') or '').strip()` и сохраняем результат в `prepared['ticket_id']`."
+        },
+        {
+          "line": 75,
+          "text": "Проверяем условие `not prepared['ticket_id']`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 76,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 77,
+          "text": "Вычисляем `normalize_spaces(ticket.get('text') or '')` и сохраняем результат в `prepared['text']`."
+        },
+        {
+          "line": 78,
+          "text": "Проверяем условие `not 5 <= len(prepared['text']) <= 500`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 79,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 80,
+          "text": "Перебираем `[('users_affected', 1, 500), ('outage_minutes', 0, 1440)]`; очередное значение доступно через `(name, low, high)`."
+        },
+        {
+          "line": 81,
+          "text": "Вычисляем `ticket.get(name)` и сохраняем результат в `value`."
+        },
+        {
+          "line": 83,
+          "text": "Проверяем условие `isinstance(value, bool) or (isinstance(value, float) and (not value.is_integer()))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 85,
+          "text": "Вычисляем `int(value)` и сохраняем результат в `converted`."
+        },
+        {
+          "line": 87,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 89,
+          "text": "Вычисляем `converted` и сохраняем результат в `prepared[name]`."
+        },
+        {
+          "line": 90,
+          "text": "Проверяем условие `not low <= converted <= high`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 91,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 92,
+          "text": "Вычисляем `ticket.get('has_workaround')` и сохраняем результат в `value`."
+        },
+        {
+          "line": 93,
+          "text": "Проверяем условие `type(value) is bool`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 94,
+          "text": "Вычисляем `value` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 95,
+          "text": "Проверяем условие `type(value) is int and value in (0, 1)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 96,
+          "text": "Вычисляем `bool(value)` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 98,
+          "text": "Вычисляем `normalize_spaces(value)` и сохраняем результат в `normalized`."
+        },
+        {
+          "line": 99,
+          "text": "Проверяем условие `normalized in {'да', 'есть', 'yes', '1'}`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 100,
+          "text": "Вычисляем `True` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 101,
+          "text": "Проверяем условие `normalized in {'нет', 'отсутствует', 'no', '0'}`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 102,
+          "text": "Вычисляем `False` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 104,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 105,
+          "text": "Возвращаем из функции `(prepared, errors)`."
+        },
+        {
+          "line": 106,
+          "text": "Определяем функцию `calculate_priority` с параметрами `users_affected, outage_minutes, has_workaround`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 107,
+          "text": "Вычисляем `4 if users_affected >= 50 else 3 if users_affected >= 20 else 1 if users_affected >= 5 else 0` и сохраняем результат в `users_score`."
+        },
+        {
+          "line": 108,
+          "text": "Вычисляем `4 if outage_minutes >= 240 else 3 if outage_minutes >= 60 else 1 if outage_minutes >= 15 else 0` и сохраняем результат в `outage_score`."
+        },
+        {
+          "line": 109,
+          "text": "Вычисляем `users_score + outage_score + (0 if has_workaround else 2)` и сохраняем результат в `score`."
+        },
+        {
+          "line": 110,
+          "text": "Вычисляем `'критический' if score >= 8 else 'высокий' if score >= 5 else 'средний' if score >= 2 else 'низкий'` и сохраняем результат в `priority`."
+        },
+        {
+          "line": 111,
+          "text": "Возвращаем из функции `(priority, score)`."
+        },
+        {
+          "line": 113,
+          "text": "Определяем функцию `process_v2` с параметрами `ticket`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 114,
+          "text": "Вычисляем `prepare_ticket(ticket)` и сохраняем результат в `(prepared, errors)`."
+        },
+        {
+          "line": 115,
+          "text": "Создаём словарь `result` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 116,
+          "text": "Проверяем условие `errors`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 117,
+          "text": "Возвращаем из функции `result`."
+        },
+        {
+          "line": 118,
+          "text": "Вычисляем `model_v2.predict_proba([prepared['text']])[0]` и сохраняем результат в `probabilities`."
+        },
+        {
+          "line": 119,
+          "text": "Вычисляем `int(probabilities.argmax())` и сохраняем результат в `best`."
+        },
+        {
+          "line": 120,
+          "text": "Вычисляем `float(probabilities[best])` и сохраняем результат в `confidence`."
+        },
+        {
+          "line": 121,
+          "text": "Вычисляем `str(model_v2.classes_[best])` и сохраняем результат в `category`."
+        },
+        {
+          "line": 122,
+          "text": "Вычисляем `calculate_priority(prepared['users_affected'], prepared['outage_minutes'], prepared['has_workaround'])` и сохраняем результат в `(priority, score)`."
+        },
+        {
+          "line": 123,
+          "text": "Вычисляем `'manual_review' if confidence < 0.6 else 'accepted'` и сохраняем результат в `status`."
+        },
+        {
+          "line": 124,
+          "text": "Вычисляем `'Низкая уверенность,нужна проверка специалистом.' if status == 'manual_review' else 'Категория принята по порогу0.60.'` и сохраняем результат в `reason`."
+        },
+        {
+          "line": 125,
+          "text": "Вычисляем `f\"{reason} Категория:{category}; оценка:{confidence:.3f}; пользователей:{prepared['users_affected']}; простой:{prepared['outage_minutes']}; временное решение:{prepared['has_workaround']}; баллов:{score}.\"` и сохраняем результат в `explanation`."
+        },
+        {
+          "line": 126,
+          "text": "Выполняем `result.update` с переданными аргументами."
+        },
+        {
+          "line": 127,
+          "text": "Возвращаем из функции `result`."
+        },
+        {
+          "line": 128,
+          "text": "Создаём набор значений `acceptance` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 141,
+          "text": "Вычисляем `0` и сохраняем результат в `passed`."
+        },
+        {
+          "line": 142,
+          "text": "Перебираем `acceptance`; очередное значение доступно через `(ident, text, users, outage, workaround, expected)`."
+        },
+        {
+          "line": 143,
+          "text": "Вычисляем `dict(ticket_id=ident, text=text, users_affected=users, outage_minutes=outage, has_workaround=workaround)` и сохраняем результат в `ticket`."
+        },
+        {
+          "line": 144,
+          "text": "Вычисляем `process_v2(ticket)` и сохраняем результат в `actual`."
+        },
+        {
+          "line": 145,
+          "text": "Вычисляем `all((actual[key] == value for key, value in expected.items()))` и сохраняем результат в `ok`."
+        },
+        {
+          "line": 146,
+          "text": "Обновляем `passed` операцией `+=` с `ok`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 147,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 148,
+          "text": "Проверяем условие `actual['status'] == 'input_error'`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 149,
+          "text": "Проверяем инвариант `actual['category'] is None and actual['confidence'] is None and (actual['priority'] is None)`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 150,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 151,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 152,
+          "text": "Проверяем инвариант `accuracy_v2 >= 0.8`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 154,
+          "text": "Определяем функцию `predict_proba` с параметрами `self, *args`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 156,
+          "text": "Вычисляем `model_v2` и сохраняем результат в `saved_model`."
+        },
+        {
+          "line": 157,
+          "text": "Вычисляем `ForbiddenModel()` и сохраняем результат в `model_v2`."
+        },
+        {
+          "line": 158,
+          "text": "Проверяем инвариант `process_v2({'ticket_id': 'BAD', 'text': ''})['status'] == 'input_error'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 159,
+          "text": "Вычисляем `saved_model` и сохраняем результат в `model_v2`."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "d956a936cfe692e88e7ecf912a6dc5873c549268b668ab86ca255d3e4c846432",
+      "verificationEvidence": {
+        "codeSha256": "d956a936cfe692e88e7ecf912a6dc5873c549268b668ab86ca255d3e4c846432",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "A01 accepted сеть средний 0.7237 OK\nA02 accepted доступ низкий 0.8302 OK\nA03 accepted оборудование критический 0.9004 OK\nA04 accepted по критический 0.8809 OK\nA05 manual_review по низкий 0.5383 OK\nA06 manual_review доступ низкий 0.3558 OK\nA07 accepted оборудование средний 0.6662 OK\nA08 accepted доступ критический 0.76 OK\nA09 input_error None None None OK\nA10 input_error None None None OK\nA11 accepted сеть критический 0.6547 OK\nA12 input_error None None None OK\nПриёмка: 12 /12 = 1.0\nR3,accuracy_v2: 0.875"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab79787b0a3edd62a273866",
+      "lessonId": "M04-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\n\nTEXTS_BY_CATEGORY = {\n\"сеть\": [\n\"не работает интернет в кабинете\", \"пропал wi fi на этаже\",\n\"нет подключения к сети\", \"роутер не раздает интернет\",\n\"очень медленный интернет\", \"компьютер не видит локальную сеть\",\n\"обрыв сетевого соединения\", \"не открываются сайты через сеть\",\n\"точка доступа отключилась\", \"кабель сети не подключен\",\n\"интернет часто пропадает\", \"нет связи с сервером по сети\",\n\"wi fi подключен без доступа в интернет\", \"сетевой адаптер отключен\",\n\"пинг до сервера очень высокий\", \"не удается получить ip адрес\"\n],\n\"доступ\": [\n\"не могу войти в учетную запись\", \"забыл пароль от портала\",\n\"аккаунт заблокирован после попыток входа\", \"не приходит код подтверждения\",\n\"нет прав доступа к папке\", \"система пишет неверный логин\",\n\"нужно восстановить пароль\", \"не открывается личный кабинет\",\n\"пользователь не авторизуется\", \"доступ запрещен для сотрудника\",\n\"истек срок действия пароля\", \"не могу пройти двухфакторную авторизацию\",\n\"нужно выдать права на каталог\", \"логин не найден в системе\",\n\"учетная запись отключена\", \"не получается сменить пароль\"\n],\n\"по\": [\n\"программа не запускается\", \"приложение выдает ошибку\",\n\"не устанавливается обновление программы\", \"редактор зависает при запуске\",\n\"ошибка лицензии в приложении\", \"программа закрывается сама\",\n\"не работает функция экспорта\", \"после обновления приложение тормозит\",\n\"не открывается файл в программе\", \"сервис показывает программную ошибку\",\n\"приложение зависает при сохранении\", \"не устанавливается драйвер программы\",\n\"ошибка при запуске модуля\", \"программа показывает белое окно\",\n\"не работает кнопка в приложении\", \"после обновления появились сбои\"\n],\n\"оборудование\": [\n\"принтер не печатает\", \"сломалась клавиатура\",\n\"монитор не включается\", \"компьютер сильно шумит\",\n\"мышь не реагирует\", \"сканер зажевывает бумагу\",\n\"проектор не показывает изображение\", \"ноутбук не заряжается\",\n\"на системном блоке не горит индикатор\", \"принтер печатает полосами\",\n\"веб камера не включается\", \"наушники не воспроизводят звук\",\n\"перегревается ноутбук\", \"диск издает странный звук\",\n\"клавиша на клавиатуре западает\", \"монитор мерцает\"\n]\n}\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.pipeline import Pipeline,FeatureUnion\nfrom sklearn.svm import LinearSVC\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import accuracy_score,confusion_matrix\nrows = [{'text':text,'category':category} for category,texts in TEXTS_BY_CATEGORY.items() for text in texts]\ndf = pd.DataFrame(rows)\nX_train,X_test,y_train,y_test = train_test_split(df['text'],df['category'],test_size=.25,random_state=4,stratify=df['category'])\nmodel_v1 = Pipeline([('tfidf',TfidfVectorizer()),('classifier',LinearSVC(random_state=42))]).fit(X_train,y_train)\nmodel_v2 = Pipeline([\n    ('features',FeatureUnion([\n        ('word',TfidfVectorizer(ngram_range=(1,2),sublinear_tf=True)),\n        ('char',TfidfVectorizer(analyzer='char_wb',ngram_range=(3,5),sublinear_tf=True))])),\n    ('classifier',LogisticRegression(max_iter=1000,C=8,random_state=42))\n]).fit(X_train,y_train)\naccuracy_v1 = accuracy_score(y_test,model_v1.predict(X_test))\naccuracy_v2 = accuracy_score(y_test,model_v2.predict(X_test))\ndef normalize_spaces(value):\n    return ' '.join(str(value).strip().lower().split())\n\ndef prepare_ticket(ticket):\n    if not isinstance(ticket,dict):\n        return {},['ticket:ожидался словарь']\n    prepared,errors = {},[]\n    for name in ['ticket_id','text','users_affected','outage_minutes','has_workaround']:\n        if name not in ticket:\n            errors.append(name+':обязательное поле отсутствует')\n    prepared['ticket_id'] = str(ticket.get('ticket_id') or '').strip()\n    if not prepared['ticket_id']:\n        errors.append('ticket_id:пустой идентификатор')\n    prepared['text'] = normalize_spaces(ticket.get('text') or '')\n    if not 5 <= len(prepared['text']) <= 500:\n        errors.append('text:длина вне5–500')\n    for name,low,high in [('users_affected',1,500),('outage_minutes',0,1440)]:\n        value = ticket.get(name)\n        try:\n            if isinstance(value,bool) or isinstance(value,float) and not value.is_integer():\n                raise ValueError()\n            converted = int(value)\n        except (TypeError,ValueError,OverflowError):\n            errors.append(name+':не целое число')\n            continue\n        prepared[name] = converted\n        if not low <= converted <= high:\n            errors.append(name+':вне диапазона')\n    value = ticket.get('has_workaround')\n    if type(value) is bool:\n        prepared['has_workaround'] = value\n    elif type(value) is int and value in (0,1):\n        prepared['has_workaround'] = bool(value)\n    else:\n        normalized = normalize_spaces(value)\n        if normalized in {'да','есть','yes','1'}:\n            prepared['has_workaround'] = True\n        elif normalized in {'нет','отсутствует','no','0'}:\n            prepared['has_workaround'] = False\n        else:\n            errors.append('has_workaround:неизвестное значение')\n    return prepared,errors\ndef calculate_priority(users_affected,outage_minutes,has_workaround):\n    users_score = 4 if users_affected>=50 else 3 if users_affected>=20 else 1 if users_affected>=5 else 0\n    outage_score = 4 if outage_minutes>=240 else 3 if outage_minutes>=60 else 1 if outage_minutes>=15 else 0\n    score = users_score+outage_score+(0 if has_workaround else 2)\n    priority = 'критический' if score>=8 else 'высокий' if score>=5 else 'средний' if score>=2 else 'низкий'\n    return priority,score\n\ndef process_v2(ticket):\n    prepared,errors = prepare_ticket(ticket)\n    result = {'status':'input_error','ticket_id':prepared.get('ticket_id'),'category':None,'confidence':None,'priority':None,'explanation':'; '.join(errors),'errors':errors,'score':None}\n    if errors:\n        return result\n    probabilities = model_v2.predict_proba([prepared['text']])[0]\n    best = int(probabilities.argmax())\n    confidence = float(probabilities[best])\n    category = str(model_v2.classes_[best])\n    priority,score = calculate_priority(prepared['users_affected'],prepared['outage_minutes'],prepared['has_workaround'])\n    status = 'manual_review' if confidence < .60 else 'accepted'\n    reason = 'Низкая уверенность,нужна проверка специалистом.' if status=='manual_review' else 'Категория принята по порогу0.60.'\n    explanation = f'{reason} Категория:{category}; оценка:{confidence:.3f}; пользователей:{prepared[\"users_affected\"]}; простой:{prepared[\"outage_minutes\"]}; временное решение:{prepared[\"has_workaround\"]}; баллов:{score}.'\n    result.update(status=status,category=category,confidence=round(confidence,4),priority=priority,score=score,explanation=explanation,errors=[])\n    return result\nimport re\ndef process_extended(ticket):\n    if isinstance(ticket,dict) and isinstance(ticket.get('text'),str):\n        text = ticket['text']\n        contact = bool(re.search(r'[\\w.+-]+@[\\w.-]+\\.[A-Za-z]{2,}',text) or re.search(r'(?<!\\d)\\+?\\d[\\d ()-]{8,}\\d(?!\\d)',text))\n        if contact:\n            return {'status':'input_error','ticket_id':str(ticket.get('ticket_id','')),'category':None,'confidence':None,'priority':None,'explanation':'Возможные контактные данные:удалите их из учебного текста.','errors':['possible_contact_data'],'score':None,'review_reason':None}\n    result = process_v2(ticket)\n    result['review_reason'] = None\n    if result['status']!='input_error':\n        reason = detect_review_reason(ticket['text'],result['category'],result['confidence'])\n        if reason:\n            result.update(status='manual_review',review_reason=reason)\n            result['explanation'] += ' Причина ручной проверки:'+reason+'.'\n    return result\n\ndef detect_review_reason(text,predicted,confidence):\n    normalized = text.lower()\n    stems = {'доступ':['парол','вход','учётн','учетн','заблокирован'],\n             'сеть':['интернет','wi-fi','wi fi','сеть','сетев','роутер'],\n             'оборудование':['принтер','клавиатур','монитор','ноутбук'],\n             'по':['программ','приложени','обновлен','установк']}\n    signals = {name for name,words in stems.items() if any(word in normalized for word in words)}\n    if len(signals)>1:\n        return 'ambiguous_text'\n    if signals and predicted not in signals:\n        return 'feature_conflict'\n    if confidence<.60:\n        return 'low_confidence'\n    return None\n\ndef process_batch(tickets):\n    results = []\n    for ticket in tickets:\n        try:\n            results.append(process_extended(ticket))\n        except Exception:\n            results.append({'status':'input_error','ticket_id':None,'category':None,'confidence':None,'priority':None,'explanation':'Ошибка обработки одной строки.','errors':['processing_error'],'score':None,'review_reason':None})\n    return results\n\nitems = [dict(ticket_id='X1',text='срочно помогите',users_affected=1,outage_minutes=0,has_workaround=True),None,dict(ticket_id='X3',text='Почта student@example.invalid',users_affected=1,outage_minutes=0,has_workaround=False)]\nfor item in process_batch(items):\n    print(item['ticket_id'],item['status'],item['review_reason'],item['errors'])\nassert len(process_batch(items))==3\nprint('Матрица по категориям:')\nprint(confusion_matrix(y_test,model_v2.predict(X_test),labels=['доступ','сеть','оборудование','по']))\nassert detect_review_reason('Принтер и интернет не работают','сеть',.90)=='ambiguous_text'\nassert detect_review_reason('Не печатает принтер','сеть',.90)=='feature_conflict'\nassert detect_review_reason('Помогите пожалуйста','по',.50)=='low_confidence'\nassert detect_review_reason('Нет интернета','сеть',.90) is None\nphone=dict(ticket_id='P1',text='Позвоните +7 (999) 123-45-67',users_affected=1,outage_minutes=0,has_workaround=True)\nassert process_extended(phone)['errors']==['possible_contact_data']\nassert len(process_batch([None,phone,items[0]]))==3\n",
+      "answer": "",
+      "explanation": "Дополнения сохраняют обязательные поля. Пакет возвращает отдельную запись для каждой строки; неожиданная ошибка одной записи не прерывает остальные. review_reason различает ambiguous_text (сигналы нескольких тем), feature_conflict (сигнал темы не совпал с прогнозом) и low_confidence (оценка ниже 0.60). Это явно заданные учебные эвристики, их нельзя считать доказательством неоднозначности естественного языка. Проверка контактов фиксирует только факт и не сохраняет значения из текста. Телефон и email проверены отдельными сценариями. Матрица ошибок строится на тех же 16 тестовых обращениях. Особенно опасны смешения сети и доступа: обращение может попасть к команде без нужных полномочий. Для критических случаев требуется отдельное правило эскалации и оператор.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "X1 manual_review low_confidence []\nNone input_error None ['ticket:ожидался словарь']\nX3 input_error None ['possible_contact_data']\nМатрица по категориям:\n[[3 1 0 0]\n [0 4 0 0]\n [1 0 3 0]\n [0 0 0 4]]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `{'сеть': ['не работает интернет в кабинете', 'пропал wi fi на этаже', 'нет подключения к сети', 'роутер не раздает интернет', 'очень медленный интернет', 'компьютер не видит локальную сеть', 'обрыв сетевого соединения', 'не открываются сайты через сеть', 'точка доступа отключилась', 'кабель сети не подключен', 'интернет часто пропадает', 'нет связи с сервером по сети', 'wi fi подключен без доступа в интернет', 'сетевой адаптер отключен', 'пинг до сервера очень высокий', 'не удается получить ip адрес'], 'доступ': ['не могу войти в учетную запись', 'забыл пароль от портала', 'аккаунт заблокирован после попыток входа', 'не приходит код подтверждения', 'нет прав доступа к папке', 'система пишет неверный логин', 'нужно восстановить пароль', 'не открывается личный кабинет', 'пользователь не авторизуется', 'доступ запрещен для сотрудника', 'истек срок действия пароля', 'не могу пройти двухфакторную авторизацию', 'нужно выдать права на каталог', 'логин не найден в системе', 'учетная запись отключена', 'не получается сменить пароль'], 'по': ['программа не запускается', 'приложение выдает ошибку', 'не устанавливается обновление программы', 'редактор зависает при запуске', 'ошибка лицензии в приложении', 'программа закрывается сама', 'не работает функция экспорта', 'после обновления приложение тормозит', 'не открывается файл в программе', 'сервис показывает программную ошибку', 'приложение зависает при сохранении', 'не устанавливается драйвер программы', 'ошибка при запуске модуля', 'программа показывает белое окно', 'не работает кнопка в приложении', 'после обновления появились сбои'], 'оборудование': ['принтер не печатает', 'сломалась клавиатура', 'монитор не включается', 'компьютер сильно шумит', 'мышь не реагирует', 'сканер зажевывает бумагу', 'проектор не показывает изображение', 'ноутбук не заряжается', 'на системном блоке не горит индикатор', 'принтер печатает полосами', 'веб камера не включается', 'наушники не воспроизводят звук', 'перегревается ноутбук', 'диск издает странный звук', 'клавиша на клавиатуре западает', 'монитор мерцает']}` и сохраняем результат в `TEXTS_BY_CATEGORY`."
+        },
+        {
+          "line": 46,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 47,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 48,
+          "text": "Подключаем Pipeline, FeatureUnion, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 49,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 50,
+          "text": "Подключаем LogisticRegression, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 51,
+          "text": "Подключаем accuracy_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 52,
+          "text": "Вычисляем `[{'text': text, 'category': category} for category, texts in TEXTS_BY_CATEGORY.items() for text in texts]` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 53,
+          "text": "Вычисляем `pd.DataFrame(rows)` и сохраняем результат в `df`."
+        },
+        {
+          "line": 54,
+          "text": "Вычисляем `train_test_split(df['text'], df['category'], test_size=0.25, random_state=4, stratify=df['category'])` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 55,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model_v1."
+        },
+        {
+          "line": 56,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model_v2."
+        },
+        {
+          "line": 62,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в accuracy_v1."
+        },
+        {
+          "line": 63,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в accuracy_v2."
+        },
+        {
+          "line": 64,
+          "text": "Определяем функцию `normalize_spaces` с параметрами `value`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 65,
+          "text": "Возвращаем из функции `' '.join(str(value).strip().lower().split())`."
+        },
+        {
+          "line": 67,
+          "text": "Определяем функцию `prepare_ticket` с параметрами `ticket`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 68,
+          "text": "Проверяем условие `not isinstance(ticket, dict)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 69,
+          "text": "Возвращаем из функции `({}, ['ticket:ожидался словарь'])`."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `({}, [])` и сохраняем результат в `(prepared, errors)`."
+        },
+        {
+          "line": 71,
+          "text": "Перебираем `['ticket_id', 'text', 'users_affected', 'outage_minutes', 'has_workaround']`; очередное значение доступно через `name`."
+        },
+        {
+          "line": 72,
+          "text": "Проверяем условие `name not in ticket`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 73,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 74,
+          "text": "Вычисляем `str(ticket.get('ticket_id') or '').strip()` и сохраняем результат в `prepared['ticket_id']`."
+        },
+        {
+          "line": 75,
+          "text": "Проверяем условие `not prepared['ticket_id']`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 76,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 77,
+          "text": "Вычисляем `normalize_spaces(ticket.get('text') or '')` и сохраняем результат в `prepared['text']`."
+        },
+        {
+          "line": 78,
+          "text": "Проверяем условие `not 5 <= len(prepared['text']) <= 500`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 79,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 80,
+          "text": "Перебираем `[('users_affected', 1, 500), ('outage_minutes', 0, 1440)]`; очередное значение доступно через `(name, low, high)`."
+        },
+        {
+          "line": 81,
+          "text": "Вычисляем `ticket.get(name)` и сохраняем результат в `value`."
+        },
+        {
+          "line": 83,
+          "text": "Проверяем условие `isinstance(value, bool) or (isinstance(value, float) and (not value.is_integer()))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 85,
+          "text": "Вычисляем `int(value)` и сохраняем результат в `converted`."
+        },
+        {
+          "line": 87,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 89,
+          "text": "Вычисляем `converted` и сохраняем результат в `prepared[name]`."
+        },
+        {
+          "line": 90,
+          "text": "Проверяем условие `not low <= converted <= high`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 91,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 92,
+          "text": "Вычисляем `ticket.get('has_workaround')` и сохраняем результат в `value`."
+        },
+        {
+          "line": 93,
+          "text": "Проверяем условие `type(value) is bool`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 94,
+          "text": "Вычисляем `value` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 95,
+          "text": "Проверяем условие `type(value) is int and value in (0, 1)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 96,
+          "text": "Вычисляем `bool(value)` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 98,
+          "text": "Вычисляем `normalize_spaces(value)` и сохраняем результат в `normalized`."
+        },
+        {
+          "line": 99,
+          "text": "Проверяем условие `normalized in {'да', 'есть', 'yes', '1'}`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 100,
+          "text": "Вычисляем `True` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 101,
+          "text": "Проверяем условие `normalized in {'нет', 'отсутствует', 'no', '0'}`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 102,
+          "text": "Вычисляем `False` и сохраняем результат в `prepared['has_workaround']`."
+        },
+        {
+          "line": 104,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 105,
+          "text": "Возвращаем из функции `(prepared, errors)`."
+        },
+        {
+          "line": 106,
+          "text": "Определяем функцию `calculate_priority` с параметрами `users_affected, outage_minutes, has_workaround`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 107,
+          "text": "Вычисляем `4 if users_affected >= 50 else 3 if users_affected >= 20 else 1 if users_affected >= 5 else 0` и сохраняем результат в `users_score`."
+        },
+        {
+          "line": 108,
+          "text": "Вычисляем `4 if outage_minutes >= 240 else 3 if outage_minutes >= 60 else 1 if outage_minutes >= 15 else 0` и сохраняем результат в `outage_score`."
+        },
+        {
+          "line": 109,
+          "text": "Вычисляем `users_score + outage_score + (0 if has_workaround else 2)` и сохраняем результат в `score`."
+        },
+        {
+          "line": 110,
+          "text": "Вычисляем `'критический' if score >= 8 else 'высокий' if score >= 5 else 'средний' if score >= 2 else 'низкий'` и сохраняем результат в `priority`."
+        },
+        {
+          "line": 111,
+          "text": "Возвращаем из функции `(priority, score)`."
+        },
+        {
+          "line": 113,
+          "text": "Определяем функцию `process_v2` с параметрами `ticket`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 114,
+          "text": "Вычисляем `prepare_ticket(ticket)` и сохраняем результат в `(prepared, errors)`."
+        },
+        {
+          "line": 115,
+          "text": "Вычисляем `{'status': 'input_error', 'ticket_id': prepared.get('ticket_id'), 'category': None, 'confidence': None, 'priority': None, 'explanation': '; '.join(errors), 'errors': errors, 'score': None}` и сохраняем результат в `result`."
+        },
+        {
+          "line": 116,
+          "text": "Проверяем условие `errors`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 117,
+          "text": "Возвращаем из функции `result`."
+        },
+        {
+          "line": 118,
+          "text": "Вычисляем `model_v2.predict_proba([prepared['text']])[0]` и сохраняем результат в `probabilities`."
+        },
+        {
+          "line": 119,
+          "text": "Вычисляем `int(probabilities.argmax())` и сохраняем результат в `best`."
+        },
+        {
+          "line": 120,
+          "text": "Вычисляем `float(probabilities[best])` и сохраняем результат в `confidence`."
+        },
+        {
+          "line": 121,
+          "text": "Вычисляем `str(model_v2.classes_[best])` и сохраняем результат в `category`."
+        },
+        {
+          "line": 122,
+          "text": "Вычисляем `calculate_priority(prepared['users_affected'], prepared['outage_minutes'], prepared['has_workaround'])` и сохраняем результат в `(priority, score)`."
+        },
+        {
+          "line": 123,
+          "text": "Вычисляем `'manual_review' if confidence < 0.6 else 'accepted'` и сохраняем результат в `status`."
+        },
+        {
+          "line": 124,
+          "text": "Вычисляем `'Низкая уверенность,нужна проверка специалистом.' if status == 'manual_review' else 'Категория принята по порогу0.60.'` и сохраняем результат в `reason`."
+        },
+        {
+          "line": 125,
+          "text": "Вычисляем `f\"{reason} Категория:{category}; оценка:{confidence:.3f}; пользователей:{prepared['users_affected']}; простой:{prepared['outage_minutes']}; временное решение:{prepared['has_workaround']}; баллов:{score}.\"` и сохраняем результат в `explanation`."
+        },
+        {
+          "line": 126,
+          "text": "Выполняем `result.update` с переданными аргументами."
+        },
+        {
+          "line": 127,
+          "text": "Возвращаем из функции `result`."
+        },
+        {
+          "line": 128,
+          "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 129,
+          "text": "Определяем функцию `process_extended` с параметрами `ticket`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 130,
+          "text": "Проверяем условие `isinstance(ticket, dict) and isinstance(ticket.get('text'), str)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 131,
+          "text": "Вычисляем `ticket['text']` и сохраняем результат в `text`."
+        },
+        {
+          "line": 132,
+          "text": "Вычисляем `bool(re.search('[\\\\w.+-]+@[\\\\w.-]+\\\\.[A-Za-z]{2,}', text) or re.search('(?<!\\\\d)\\\\+?\\\\d[\\\\d ()-]{8,}\\\\d(?!\\\\d)', text))` и сохраняем результат в `contact`."
+        },
+        {
+          "line": 133,
+          "text": "Проверяем условие `contact`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 134,
+          "text": "Возвращаем из функции `{'status': 'input_error', 'ticket_id': str(ticket.get('ticket_id', '')), 'category': None, 'confidence': None, 'priority': None, 'explanation': 'Возможные контактные данные:удалите их из учебного текста.', 'errors': ['possible_contact_data'], 'score': None, 'review_reason': None}`."
+        },
+        {
+          "line": 135,
+          "text": "Вычисляем `process_v2(ticket)` и сохраняем результат в `result`."
+        },
+        {
+          "line": 136,
+          "text": "Вычисляем `None` и сохраняем результат в `result['review_reason']`."
+        },
+        {
+          "line": 137,
+          "text": "Проверяем условие `result['status'] != 'input_error'`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 138,
+          "text": "Вычисляем `detect_review_reason(ticket['text'], result['category'], result['confidence'])` и сохраняем результат в `reason`."
+        },
+        {
+          "line": 139,
+          "text": "Проверяем условие `reason`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 140,
+          "text": "Выполняем `result.update` с переданными аргументами."
+        },
+        {
+          "line": 141,
+          "text": "Обновляем `result['explanation']` операцией `Add` с `' Причина ручной проверки:' + reason + '.'`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 142,
+          "text": "Возвращаем из функции `result`."
+        },
+        {
+          "line": 144,
+          "text": "Определяем функцию `detect_review_reason` с параметрами `text, predicted, confidence`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 145,
+          "text": "Вычисляем `text.lower()` и сохраняем результат в `normalized`."
+        },
+        {
+          "line": 146,
+          "text": "Вычисляем `{'доступ': ['парол', 'вход', 'учётн', 'учетн', 'заблокирован'], 'сеть': ['интернет', 'wi-fi', 'wi fi', 'сеть', 'сетев', 'роутер'], 'оборудование': ['принтер', 'клавиатур', 'монитор', 'ноутбук'], 'по': ['программ', 'приложени', 'обновлен', 'установк']}` и сохраняем результат в `stems`."
+        },
+        {
+          "line": 150,
+          "text": "Вычисляем `{name for name, words in stems.items() if any((word in normalized for word in words))}` и сохраняем результат в `signals`."
+        },
+        {
+          "line": 151,
+          "text": "Проверяем условие `len(signals) > 1`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 152,
+          "text": "Возвращаем из функции `'ambiguous_text'`."
+        },
+        {
+          "line": 153,
+          "text": "Проверяем условие `signals and predicted not in signals`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 154,
+          "text": "Возвращаем из функции `'feature_conflict'`."
+        },
+        {
+          "line": 155,
+          "text": "Проверяем условие `confidence < 0.6`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 156,
+          "text": "Возвращаем из функции `'low_confidence'`."
+        },
+        {
+          "line": 157,
+          "text": "Возвращаем из функции `None`."
+        },
+        {
+          "line": 159,
+          "text": "Определяем функцию `process_batch` с параметрами `tickets`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 160,
+          "text": "Вычисляем `[]` и сохраняем результат в `results`."
+        },
+        {
+          "line": 161,
+          "text": "Перебираем `tickets`; очередное значение доступно через `ticket`."
+        },
+        {
+          "line": 163,
+          "text": "Выполняем `results.append` с переданными аргументами."
+        },
+        {
+          "line": 165,
+          "text": "Выполняем `results.append` с переданными аргументами."
+        },
+        {
+          "line": 166,
+          "text": "Возвращаем из функции `results`."
+        },
+        {
+          "line": 168,
+          "text": "Вычисляем `[dict(ticket_id='X1', text='срочно помогите', users_affected=1, outage_minutes=0, has_workaround=True), None, dict(ticket_id='X3', text='Почта student@example.invalid', users_affected=1, outage_minutes=0, has_workaround=False)]` и сохраняем результат в `items`."
+        },
+        {
+          "line": 169,
+          "text": "Перебираем `process_batch(items)`; очередное значение доступно через `item`."
+        },
+        {
+          "line": 170,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 171,
+          "text": "Проверяем инвариант `len(process_batch(items)) == 3`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 172,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 173,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 174,
+          "text": "Проверяем инвариант `detect_review_reason('Принтер и интернет не работают', 'сеть', 0.9) == 'ambiguous_text'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 175,
+          "text": "Проверяем инвариант `detect_review_reason('Не печатает принтер', 'сеть', 0.9) == 'feature_conflict'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 176,
+          "text": "Проверяем инвариант `detect_review_reason('Помогите пожалуйста', 'по', 0.5) == 'low_confidence'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 177,
+          "text": "Проверяем инвариант `detect_review_reason('Нет интернета', 'сеть', 0.9) is None`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 178,
+          "text": "Вычисляем `dict(ticket_id='P1', text='Позвоните +7 (999) 123-45-67', users_affected=1, outage_minutes=0, has_workaround=True)` и сохраняем результат в `phone`."
+        },
+        {
+          "line": 179,
+          "text": "Проверяем инвариант `process_extended(phone)['errors'] == ['possible_contact_data']`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 180,
+          "text": "Проверяем инвариант `len(process_batch([None, phone, items[0]])) == 3`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "85dd5ed2062943cf19a0cbfade3f4e8843ca5966c568d97625023f2f7b86884f",
+      "verificationEvidence": {
+        "codeSha256": "85dd5ed2062943cf19a0cbfade3f4e8843ca5966c568d97625023f2f7b86884f",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "X1 manual_review low_confidence []\nNone input_error None ['ticket:ожидался словарь']\nX3 input_error None ['possible_contact_data']\nМатрица по категориям:\n[[3 1 0 0]\n [0 4 0 0]\n [1 0 3 0]\n [0 0 0 4]]"
+        }
+      ]
+    }
+  ]
+}

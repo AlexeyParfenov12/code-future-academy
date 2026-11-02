@@ -1888,8 +1888,8 @@
       "answer": "",
       "explanation": "Проверяем тип до обращения к полям. Ошибки добавляются строго в порядке рубрики. strip исключает пустые строки, множество учитывает различные непустые признаки один раз. Пустой вывод и короткий вывод — взаимоисключающие случаи. При отсутствии ошибок возвращается список [\"OK\"]. Функция отдельно проверена шестью утверждениями: пустой и корректный отчёты, неверный тип, дубли и два случая заключения.",
       "source": "Самостоятельная реализация по полной рубрике; 6 локальных assert-проверок",
-      "verification": "source",
-      "testCount": 0,
+      "verification": "project_tests",
+      "testCount": 1,
       "examples": [],
       "lineExplanations": [
         {
@@ -1906,7 +1906,7 @@
         },
         {
           "line": 4,
-          "text": "Вычисляем `[]` и сохраняем результат в `errors`."
+          "text": "Создаём набор значений `errors` для этого примера. Значения используются в следующих вычислениях."
         },
         {
           "line": 5,
@@ -1981,11 +1981,17 @@
       "sha256": "395e6fe4d57433085597d097115267d8d0d93cae82a337e066ed5003aba8923c",
       "verificationEvidence": {
         "codeSha256": "395e6fe4d57433085597d097115267d8d0d93cae82a337e066ed5003aba8923c",
-        "passed": 0,
-        "total": 0,
+        "passed": 1,
+        "total": 1,
         "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
       },
-      "tests": []
+      "tests": [
+        {
+          "input": "",
+          "expected": "6/6",
+          "harness": "\nassert check_mini_analysis(None) == ['NOT_A_DICT']\nassert check_mini_analysis({}) == ['MISSING_DATASET','MISSING_OBJECT','TOO_FEW_FEATURES','TOO_FEW_METRICS','NO_VISUALIZATION','EMPTY_CONCLUSION']\nvalid={'dataset':'course.csv','object':'запись','features':['a','b','c'],'metrics':['mean','median'],'visualizations':['bar'],'conclusion':'Обоснованный вывод длиной более двадцати символов'}\nassert check_mini_analysis(valid) == ['OK']\nassert check_mini_analysis(dict(valid,features=['a','a','b'])) == ['TOO_FEW_FEATURES']\nassert check_mini_analysis(dict(valid,conclusion='  ')) == ['EMPTY_CONCLUSION']\nassert check_mini_analysis(dict(valid,conclusion='Коротко')) == ['TOO_SHORT_CONCLUSION']\nprint('6/6')\n"
+        }
+      ]
     },
     {
       "taskId": "T-6abc4083f82a6a54f6b35d0b",

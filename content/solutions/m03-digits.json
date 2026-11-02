@@ -1,0 +1,656 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6a5db625e0ea2a68129a230e",
+      "lessonId": "M03-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Изображений: 1797.\nРазмер: 8×8 пикселей.\nПризнаков в X: 64.\nКлассов: 10 (цифры 0–9).\nЯркость: от 0 до 16.\nОдна строка X содержит 64 яркости одного изображения, развёрнутого из матрицы 8×8.",
+      "explanation": "Набор load_digits встроен в scikit-learn и не скачивает случайные картинки. Признаки — значения пикселей; целевая метка — изображённая цифра. Это не изображения 28×28 из MNIST.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "461fb2c0171501c409e21914d1165f09b7c42a0c3f00f4b6ffac4b80811797e3",
+      "verificationEvidence": {
+        "codeSha256": "461fb2c0171501c409e21914d1165f09b7c42a0c3f00f4b6ffac4b80811797e3",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a5db62ae0ea2a68129a230f",
+      "lessonId": "M03-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = KNeighborsClassifier(n_neighbors=3).fit(X_train,y_train)\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test,y_pred)\nprint('X_train:',X_train.shape,'X_test:',X_test.shape)\nprint('y_train:',y_train.shape,'y_test:',y_test.shape)\nprint(f'Accuracy: {accuracy:.4f}')",
+      "answer": "",
+      "explanation": "Правильный вариант В: train_test_split способен разделить два массива даже при перепутанном порядке, но дальнейший fit получает метки вместо двумерных признаков и несовместимые части. Исправление: разделять X, y; fit(X_train, y_train); predict(X_test); accuracy_score(y_test, y_pred). Тестовая доля ceil(1797×0.25)=450, train1347.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "X_train: (1347, 64) X_test: (450, 64)\ny_train: (1347,) y_test: (450,)\nAccuracy: 0.9844"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 10,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 11,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в y_pred."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `accuracy_score(y_test, y_pred)` и сохраняем результат в `accuracy`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "183c9b2eb71807ca87437fef9d1a484693e739c821ec9daa81b6582ced66e752",
+      "verificationEvidence": {
+        "codeSha256": "183c9b2eb71807ca87437fef9d1a484693e739c821ec9daa81b6582ced66e752",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "X_train: (1347, 64) X_test: (450, 64)\ny_train: (1347,) y_test: (450,)\nAccuracy: 0.9844"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a5db630e0ea2a68129a2310",
+      "lessonId": "M03-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = KNeighborsClassifier(n_neighbors=3).fit(X_train,y_train)\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test,y_pred)\nerrors = int(np.sum(y_pred != y_test))\nprint(f'Accuracy: {accuracy:.4f}')\nprint('Тестовых:',len(y_test),'верных:',len(y_test)-errors,'ошибок:',errors)\nassert len(y_test) == 450 and 0.97 <= accuracy <= 1 and errors < 20",
+      "answer": "",
+      "explanation": "Доля верных вычисляется на 450 тестовых изображениях. Даже accuracy>0.98 не гарантирует качество на фотографиях с телефона: встроенные 8×8 изображения и реальные условия различаются. Нужно проверить матрицу ошибок, новые источники изображений и цену конкретной ошибки.\n\nВерных 443 из 450, ошибок 7: 443/450≈0.9844.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Accuracy: 0.9844\nТестовых: 450 верных: 443 ошибок: 7"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 10,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 11,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в y_pred."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `accuracy_score(y_test, y_pred)` и сохраняем результат в `accuracy`."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `int(np.sum(y_pred != y_test))` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Проверяем инвариант `len(y_test) == 450 and 0.97 <= accuracy <= 1 and (errors < 20)`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "1c5c624c4533bd5f01fadcf8d0cbe141dbff3f28b9cf965afc8cb6af41cf011c",
+      "verificationEvidence": {
+        "codeSha256": "1c5c624c4533bd5f01fadcf8d0cbe141dbff3f28b9cf965afc8cb6af41cf011c",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Accuracy: 0.9844\nТестовых: 450 верных: 443 ошибок: 7"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a5db635e0ea2a68129a2311",
+      "lessonId": "M03-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = KNeighborsClassifier(n_neighbors=3).fit(X_train,y_train)\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test,y_pred)\ncm = confusion_matrix(y_test,y_pred,labels=list(range(10)))\nprint(cm)\nprint(classification_report(y_test,y_pred,digits=3))\nprint('8 верно:',cm[8,8],'ошибок:',int(cm[8].sum()-cm[8,8]))\nprint('8 путается с:',[(j,int(cm[8,j])) for j in range(10) if j != 8 and cm[8,j]])\nprint('Классы с ошибками:',[i for i in range(10) if cm[i].sum() != cm[i,i]])\nprint('Всего вне диагонали:',int(cm.sum()-np.trace(cm)))\nConfusionMatrixDisplay(cm,display_labels=digits.target_names).plot(cmap='Blues',values_format='d')\nplt.title('Матрица ошибок KNN, k=3')\nplt.show()\nwrong_indices = np.where(y_pred != y_test)[0]\nfig,axes = plt.subplots(2,4,figsize=(10,5))\nfor ax in axes.ravel():\n    ax.axis('off')\nfor ax,index in zip(axes.ravel(),wrong_indices[:8]):\n    ax.imshow(X_test[index].reshape(8,8),cmap='gray_r')\n    ax.set_title(f'{y_test[index]} → {y_pred[index]}')\nfor index in wrong_indices[:2]:\n    print('Протокол: истинная',y_test[index],'прогноз',y_pred[index],'индекс test',index)\nplt.tight_layout()\nplt.show()",
+      "answer": "",
+      "explanation": "Код отвечает на все числовые вопросы по строке 8 и выводит первые две ошибки для протокола. При просмотре размытых 8×8 контуров возможные объяснения — слабое замыкание петли или похожий наклон штрихов; это гипотезы, которые нужно связать с конкретным изображением. Матрица показывает частоты, но сама не доказывает причину неправильного распознавания.\n\nДля 8: 39 верных из 43, 4 ошибки—три 8→1 иодна 8→6. Ещё ошибаются истинные 5 и 9; всего 7. Первые случаи протокола 8→1 и 9→8. Возможные причины—слабая/незамкнутая петля и похожий контур; по одному изображению причина не доказывается.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[[45  0  0  0  0  0  0  0  0  0]\n [ 0 46  0  0  0  0  0  0  0  0]\n [ 0  0 44  0  0  0  0  0  0  0]\n [ 0  0  0 46  0  0  0  0  0  0]\n [ 0  0  0  0 45  0  0  0  0  0]\n [ 0  0  0  0  0 45  0  0  0  1]\n [ 0  0  0  0  0  0 45  0  0  0]\n [ 0  0  0  0  0  0  0 45  0  0]\n [ 0  3  0  0  0  0  1  0 39  0]\n [ 0  0  0  0  1  0  0  0  1 43]]\n              precision    recall  f1-score   support\n\n           0      1.000     1.000     1.000        45\n           1      0.939     1.000     0.968        46\n           2      1.000     1.000     1.000        44\n           3      1.000     1.000     1.000        46\n           4      0.978     1.000     0.989        45\n           5      1.000     0.978     0.989        46\n           6      0.978     1.000     0.989        45\n           7      1.000     1.000     1.000        45\n           8      0.975     0.907     0.940        43\n           9      0.977     0.956     0.966        45\n\n    accuracy                          0.984       450\n   macro avg      0.985     0.984     0.984       450\nweighted avg      0.985     0.984     0.984       450\n\n8 верно: 39 ошибок: 4\n8 путается с: [(1, 3), (6, 1)]\nКлассы с ошибками: [5, 8, 9]\nВсего вне диагонали: 7\nПротокол: истинная 8 прогноз 1 индекс test 25\nПротокол: истинная 9 прогноз 8 индекс test 194"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 10,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 11,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в y_pred."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `accuracy_score(y_test, y_pred)` и сохраняем результат в `accuracy`."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `confusion_matrix(y_test, y_pred, labels=list(range(10)))` и сохраняем результат в `cm`."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 18,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 19,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 20,
+          "text": "Выполняем `ConfusionMatrixDisplay(cm, display_labels=digits.target_names).plot` с переданными аргументами."
+        },
+        {
+          "line": 21,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 22,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 23,
+          "text": "Вычисляем `np.where(y_pred != y_test)[0]` и сохраняем результат в `wrong_indices`."
+        },
+        {
+          "line": 24,
+          "text": "Вычисляем `plt.subplots(2, 4, figsize=(10, 5))` и сохраняем результат в `(fig, axes)`."
+        },
+        {
+          "line": 25,
+          "text": "Перебираем `axes.ravel()`; очередное значение доступно через `ax`."
+        },
+        {
+          "line": 26,
+          "text": "Выполняем `ax.axis` с переданными аргументами."
+        },
+        {
+          "line": 27,
+          "text": "Перебираем `zip(axes.ravel(), wrong_indices[:8])`; очередное значение доступно через `(ax, index)`."
+        },
+        {
+          "line": 28,
+          "text": "Выполняем `ax.imshow` с переданными аргументами."
+        },
+        {
+          "line": 29,
+          "text": "Выполняем `ax.set_title` с переданными аргументами."
+        },
+        {
+          "line": 30,
+          "text": "Перебираем `wrong_indices[:2]`; очередное значение доступно через `index`."
+        },
+        {
+          "line": 31,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 32,
+          "text": "Выполняем `plt.tight_layout` с переданными аргументами."
+        },
+        {
+          "line": 33,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "c5e9e6622b5a6dd2cfaa90f9b9661a7b6cc38614fd4398d7e69602d2074d06be",
+      "verificationEvidence": {
+        "codeSha256": "c5e9e6622b5a6dd2cfaa90f9b9661a7b6cc38614fd4398d7e69602d2074d06be",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[[45  0  0  0  0  0  0  0  0  0]\n [ 0 46  0  0  0  0  0  0  0  0]\n [ 0  0 44  0  0  0  0  0  0  0]\n [ 0  0  0 46  0  0  0  0  0  0]\n [ 0  0  0  0 45  0  0  0  0  0]\n [ 0  0  0  0  0 45  0  0  0  1]\n [ 0  0  0  0  0  0 45  0  0  0]\n [ 0  0  0  0  0  0  0 45  0  0]\n [ 0  3  0  0  0  0  1  0 39  0]\n [ 0  0  0  0  1  0  0  0  1 43]]\n              precision    recall  f1-score   support\n\n           0      1.000     1.000     1.000        45\n           1      0.939     1.000     0.968        46\n           2      1.000     1.000     1.000        44\n           3      1.000     1.000     1.000        46\n           4      0.978     1.000     0.989        45\n           5      1.000     0.978     0.989        46\n           6      0.978     1.000     0.989        45\n           7      1.000     1.000     1.000        45\n           8      0.975     0.907     0.940        43\n           9      0.977     0.956     0.966        45\n\n    accuracy                          0.984       450\n   macro avg      0.985     0.984     0.984       450\nweighted avg      0.985     0.984     0.984       450\n\n8 верно: 39 ошибок: 4\n8 путается с: [(1, 3), (6, 1)]\nКлассы с ошибками: [5, 8, 9]\nВсего вне диагонали: 7\nПротокол: истинная 8 прогноз 1 индекс test 25\nПротокол: истинная 9 прогноз 8 индекс test 194"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a5db63be0ea2a68129a2312",
+      "lessonId": "M03-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = KNeighborsClassifier(n_neighbors=3).fit(X_train,y_train)\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test,y_pred)\nk_values = [1,3,5,7,9,11,15]\nscores = []\nfor k in k_values:\n    current = KNeighborsClassifier(n_neighbors=k).fit(X_train,y_train)\n    score = accuracy_score(y_test,current.predict(X_test))\n    scores.append(score)\n    print(f'k={k}: accuracy={score:.4f}')\nbest_k_values = [k for k,score in zip(k_values,scores) if score == max(scores)]\nprint('Лучшие k:',best_k_values)\nprint('Выбранное k:',min(best_k_values))\nplt.plot(k_values,scores,marker='o')\nplt.xlabel('k')\nplt.ylabel('Accuracy')\nplt.title('Число соседей и качество на фиксированном test')\nplt.grid(True)\nplt.show()\nassert len(scores)==7 and max(scores)>=accuracy",
+      "answer": "",
+      "explanation": "Сравниваем семь значений k на одном разбиении 1347/450. Код сохраняет все равные максимумы; для однозначного учебного выбора берём наименьшее k среди них. Это результат фиксированного разбиения, а не универсальное лучшее k. Многократный подбор по test требует новой независимой оценки выбранной модели.\n\nЛучшие k: 1, 3, 5, все 0.9844. По выбранному правилу берём 1 как наименьшее среди равных. Класс 8 дал 4 из 7 ошибок.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "k=1: accuracy=0.9844\nk=3: accuracy=0.9844\nk=5: accuracy=0.9844\nk=7: accuracy=0.9800\nk=9: accuracy=0.9756\nk=11: accuracy=0.9778\nk=15: accuracy=0.9689\nЛучшие k: [1, 3, 5]\nВыбранное k: 1"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 10,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в model."
+        },
+        {
+          "line": 11,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в y_pred."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `accuracy_score(y_test, y_pred)` и сохраняем результат в `accuracy`."
+        },
+        {
+          "line": 13,
+          "text": "Создаём набор значений `k_values` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 14,
+          "text": "Создаём набор значений `scores` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 15,
+          "text": "Перебираем `k_values`; очередное значение доступно через `k`."
+        },
+        {
+          "line": 16,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+        },
+        {
+          "line": 17,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в score."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `scores.append` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 20,
+          "text": "Вычисляем `[k for k, score in zip(k_values, scores) if score == max(scores)]` и сохраняем результат в `best_k_values`."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 22,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 23,
+          "text": "Выполняем `plt.plot` с переданными аргументами."
+        },
+        {
+          "line": 24,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 25,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 26,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 27,
+          "text": "Выполняем `plt.grid` с переданными аргументами."
+        },
+        {
+          "line": 28,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 29,
+          "text": "Проверяем инвариант `len(scores) == 7 and max(scores) >= accuracy`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "ecd1d78fb35071dc53cccba2e647e73c8c557ed70aa8dfad1697a89619687ee4",
+      "verificationEvidence": {
+        "codeSha256": "ecd1d78fb35071dc53cccba2e647e73c8c557ed70aa8dfad1697a89619687ee4",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "k=1: accuracy=0.9844\nk=3: accuracy=0.9844\nk=5: accuracy=0.9844\nk=7: accuracy=0.9800\nk=9: accuracy=0.9756\nk=11: accuracy=0.9778\nk=15: accuracy=0.9689\nЛучшие k: [1, 3, 5]\nВыбранное k: 1"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a5db646e0ea2a68129a2314",
+      "lessonId": "M03-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_digits\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,confusion_matrix,classification_report,ConfusionMatrixDisplay\ndigits = load_digits()\nX,y = digits.data,digits.target\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nfor rs in [1,7,100]:\n    train_x,test_x,train_y,test_y = train_test_split(X,y,test_size=.25,random_state=rs,stratify=y)\n    scores = {}\n    for k in [1,3]:\n        current = KNeighborsClassifier(n_neighbors=k).fit(train_x,train_y)\n        scores[k] = accuracy_score(test_y,current.predict(test_x))\n        print(f'random_state={rs}, k={k}: accuracy={scores[k]:.4f}')\n    print('Победитель:', 'равенство' if scores[1]==scores[3] else max(scores,key=scores.get))",
+      "answer": "",
+      "explanation": "Для каждого random_state создаётся новая общая пара выборок для обоих k. Меняется состав данных, поэтому меняются доли верных и потенциальный победитель. Таблица делает эти колебания явными; один удачный split недостаточен для окончательного выбора гиперпараметра.\n\nПри random_state1 и 7 лучше k=3, при 100 равенство. Единственного строго лучшего k во всех разбиениях нет.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "random_state=1, k=1: accuracy=0.9822\nrandom_state=1, k=3: accuracy=0.9844\nПобедитель: 3\nrandom_state=7, k=1: accuracy=0.9889\nrandom_state=7, k=3: accuracy=0.9911\nПобедитель: 3\nrandom_state=100, k=1: accuracy=0.9867\nrandom_state=100, k=3: accuracy=0.9867\nПобедитель: равенство"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_digits, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `load_digits()` и сохраняем результат в `digits`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 10,
+          "text": "Перебираем `[1, 7, 100]`; очередное значение доступно через `rs`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=rs, stratify=y)` и сохраняем результат в `(train_x, test_x, train_y, test_y)`."
+        },
+        {
+          "line": 12,
+          "text": "Создаём словарь `scores` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 13,
+          "text": "Перебираем `[1, 3]`; очередное значение доступно через `k`."
+        },
+        {
+          "line": 14,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+        },
+        {
+          "line": 15,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в scores[k]."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "be0ac7096ed185d48717cbbe1c291e629f90210c3de9159d7f42aab65c05863b",
+      "verificationEvidence": {
+        "codeSha256": "be0ac7096ed185d48717cbbe1c291e629f90210c3de9159d7f42aab65c05863b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "random_state=1, k=1: accuracy=0.9822\nrandom_state=1, k=3: accuracy=0.9844\nПобедитель: 3\nrandom_state=7, k=1: accuracy=0.9889\nrandom_state=7, k=3: accuracy=0.9911\nПобедитель: 3\nrandom_state=100, k=1: accuracy=0.9867\nrandom_state=100, k=3: accuracy=0.9867\nПобедитель: равенство"
+        }
+      ]
+    }
+  ]
+}

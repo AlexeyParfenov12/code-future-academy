@@ -1,0 +1,425 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6aba89237b615504cf97b3b0",
+      "lessonId": "M04-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "R1: слово «быстро» не измеримо. Предлагаемый NFR: на описанном учебном компьютере p95 времени функции не более 100 мс на 1000 синтетических обращениях; фиксировать среду и метод замера. Это критерий, ещё не результат измерения.\nR2: «правильно» не задаёт контракт. При единственной известной теме и confidence≥0.65 вернуть её категорию и auto_route; проверить T01/T02 и новые примеры каждой темы.\nR3: «низкая» не имеет границы. При confidence<0.65 вернуть operator_review, сохранив единственную категорию; проверить 0.64, 0.65, 0.66.\nR4: перечислить критические фразы: «сервер недоступен», «утечка данных», «не работает сеть во всём корпусе» → P1 независимо от роли/канала и ручной проверки; проверить все три фразы.",
+      "explanation": "Каждое требование содержит условие, наблюдаемый результат и процедуру. В версии 2.2 порог 0.65: переносить 0.60 из другого занятия нельзя.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "675b492b755ea9924a16096582458c867b7c99eb875cde5b9d7905224d55ec4f",
+      "verificationEvidence": {
+        "codeSha256": "675b492b755ea9924a16096582458c867b7c99eb875cde5b9d7905224d55ec4f",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89237b615504cf97b3b3",
+      "lessonId": "M04-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "FR-01: валидные непустой text, допустимые role/channel/confidence и единственная тема → category темы, priority по правилам, auto_route при confidence≥0.65; T01/T02.\nFR-02: confidence<0.65 → operator_review; T03 и границы 0.64/0.65.\nFR-03: две темы → other/operator_review; T04.\nFR-04: критическая фраза → P1, даже при operator_review; T05 плюс низкая confidence.\nNFR-01: предложенный p95≤100 мс на 1000 фиксированных обращений в описанной среде; измерить отдельно, не объявлять достигнутым заранее.\nГраницы: входят валидация, нормализация, категория, приоритет, действие и словарь результата. Не входят Service Desk, хранение ПДн, изменение прав пользователя и промышленный мониторинг.",
+      "explanation": "Критерии связаны с конкретными сценариями. Нефункциональный порог является выбранным примером спецификации, а не свойством, якобы измеренным в архиве.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "5e42ca6e8849f9c42693daaad9705a3e2d338d6c4391315d164261bf8a68a5a3",
+      "verificationEvidence": {
+        "codeSha256": "5e42ca6e8849f9c42693daaad9705a3e2d338d6c4391315d164261bf8a68a5a3",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89237b615504cf97b3b6",
+      "lessonId": "M04-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "Паспорт: CampusSupport scenarios, версия 2.2. Назначение — проверить правила маршрутизации. В условии приведены шесть сценариев T01–T06; полный объём отдельного датасета не указан. Четыре предметные категории и резервное other. Источник — синтетические обращения курса. Разметка по основной теме, несколько тем — other/review. Пропуски, дубли и распределение классов проверяются по фактической таблице; результаты для отсутствующего полного файла не выдумываются.\nСловарь: text: str, непустой; role: str из student/teacher/administrator; channel: str из portal/email/phone; confidence: int/float 0–1 без bool; expected_category: str из access/network/equipment/software/other, только для теста. Нарушение рабочего входа → other/P3/input_error; неизвестная тестовая метка → ошибка подготовки теста.\nАрхитектура: валидация raw→valid/error; нормализация valid text→strip/lower; поиск категорий normalized→множество тем; приоритет valid context→P1/P2/P3; действие категории+confidence→auto_route/review; затем итоговый словарь.",
+      "explanation": "expected_category не передаётся в определение категории. Паспорт описывает известные шесть сценариев и прямо отмечает отсутствие сведений о полном наборе.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "0afa377a4b388f8a97e2f25af152676a7b8761b94e573cef25c6fd7ab8c6306c",
+      "verificationEvidence": {
+        "codeSha256": "0afa377a4b388f8a97e2f25af152676a7b8761b94e573cef25c6fd7ab8c6306c",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89237b615504cf97b3b9",
+      "lessonId": "M04-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "Используется rule-based подход: словари ключевых выражений, проверка типов, порог 0.65 и правила приоритета. Обучения и fit нет, поэтому это не обученная ML-модель. Выбран для прозрачного учебного контракта и малого объёма примеров. Альтернатива — TF-IDF+классификатор с отдельным обучением и проверкой. Преимущество правил — воспроизводимое объяснение, ограничение — новые формулировки и многозначность.\nПорядок: 1.Принять четыре входа и проверить контракт → валидный объект/ошибка. 2.Нормализовать текст → единая строка. 3.Найти все темы → множество категорий. 4.Назначить приоритет → P1/P2/P3. 5.Выбрать действие по числу тем и confidence → auto/review. 6.Сформировать три поля и записать обезличенный результат теста. ML потребуется при разнообразном потоке и достаточной надёжной разметке, с доказанной пользой относительно правил.",
+      "explanation": "Порядок отражает зависимости, а не маркетинговое название технологии. Значение confidence в этом учебном интерфейсе поступает на вход; rule-based функция сама его не оценивает.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "2c5e27595e33528210a49bf726e458602332a002df8ab67c995f52181324320d",
+      "verificationEvidence": {
+        "codeSha256": "2c5e27595e33528210a49bf726e458602332a002df8ab67c995f52181324320d",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89237b615504cf97b3bf",
+      "lessonId": "M04-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "1. Сохранить приведённую реализацию 2.2 в отдельный Python-файл; проверить версию и порог 0.65. При несоответствии не смешивать с 2.0.\n2. Запустить файл в Python 3.10+: должны появиться T01–T06. При сбое проверить интерпретатор и полный код, включая import re.\n3. Сравнить словари с фиксированными ожиданиями: все три поля должны совпасть. При расхождении записать ID и фактическое поле.\n4. Повторить 0.64/0.65 и неизвестную роль: соответственно review/auto и input_error.\nОграничение 1: конечный словарь → неизвестные формулировки; проверять новыми текстами. Ограничение 2: синтетические сценарии → неизвестен перенос на службу.\nРиск 1: пропуск критической фразы задерживает помощь → тесты всех критических фраз и оператор. Риск 2: неверная категория → повторная передача → анализ ошибок и ручное исправление.\nУлучшение 1: версионированный словарь словоформ; тест — новые варианты и регрессия старых. Улучшение 2: обезличенный журнал причин review; тест — полнота причин и отсутствие секретов.",
+      "explanation": "Инструкция проверяет конкретную версию. Ни тесты на шести строках, ни формат документа не подтверждают пригодность к промышленному внедрению.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "a7a1d96b80a9434b3398009cfca4cf596dcb791e71e34db502511b58816e0acf",
+      "verificationEvidence": {
+        "codeSha256": "a7a1d96b80a9434b3398009cfca4cf596dcb791e71e34db502511b58816e0acf",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba89237b615504cf97b3bc",
+      "lessonId": "M04-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\ndef process_request(text,role,channel,confidence):\n    error={'category':'other','priority':'P3','action':'input_error'}\n    if type(text) is not str or type(role) is not str or type(channel) is not str:\n        return error\n    if type(confidence) not in (int,float) or not 0 <= confidence <= 1:\n        return error\n    if role not in {'student','teacher','administrator'} or channel not in {'portal','email','phone'} or not text.strip():\n        return error\n    text=text.strip().lower()\n    categories=set()\n    # Word boundaries prevent \"доступ\" matching inside \"недоступен\".\n    # Inflected forms cover the explicit scenario \"войти в учётную запись\".\n    if re.search(r'\\b(?:парол\\w*|вход\\w*|доступ\\w*|войти|уч[её]тн\\w*\\s+запис\\w*)\\b',text):\n        categories.add('access')\n    if any(word in text for word in ['сеть','wi-fi','интернет','сервер недоступен']):\n        categories.add('network')\n    if any(word in text for word in ['принтер','ноутбук','компьютер','клавиатура']):\n        categories.add('equipment')\n    if any(word in text for word in ['программа','приложение','обновление','ошибка установки']):\n        categories.add('software')\n    category=next(iter(categories)) if len(categories)==1 else 'other'\n    action='operator_review' if len(categories)>=2 or confidence<.65 else 'auto_route'\n    critical=any(phrase in text for phrase in ['сервер недоступен','утечка данных','не работает сеть во всём корпусе'])\n    priority='P1' if critical else 'P2' if role in {'teacher','administrator'} or channel=='phone' else 'P3'\n    return {'category':category,'priority':priority,'action':action}\n\ncases=[\n('T01','Не могу войти','student','portal',.90,('access','P3','auto_route')),\n('T02','Принтер сломан','teacher','email',.85,('equipment','P2','auto_route')),\n('T03','Нет интернета','student','portal',.64,('network','P3','operator_review')),\n('T04','Пароль и интернет','student','email',.91,('other','P3','operator_review')),\n('T05','Сервер недоступен','administrator','phone',.96,('network','P1','auto_route')),\n('T06','Не могу войти','guest','portal',.80,('other','P3','input_error'))]\nfor ident,text,role,channel,confidence,expected in cases:\n    result=process_request(text,role,channel,confidence)\n    assert tuple(result.values())==expected,(ident,result)\n    print(ident,'/'.join(result.values()),'OK')\nassert process_request('Нет интернета','student','portal',.65)['action']=='auto_route'\nprint('Пример из20:',round(16/20*100,1),round(4/4*100,1))\n",
+      "answer": "В приведённой исполняемой реализации 2.2 все шесть сценариев совпали: 6/6. Отдельный арифметический пример из условия: quality=80.0, critical_recall=100.0; строка вывода «80.0 100.0». Эти 20 сценариев не подменяются шестью демонстрационными.",
+      "explanation": "Порог изменён на 0.65 по контексту именно 2.2. Критическая фраза даёт P1, неизвестная роль останавливается до обработки. Учебное демо подготовленной реализации подтверждено шестью тестами и границей; происхождение агрегата 16/20 задано условием и не выдаётся за наш запуск отсутствующих 20 строк.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "T01 access/P3/auto_route OK\nT02 equipment/P2/auto_route OK\nT03 network/P3/operator_review OK\nT04 other/P3/operator_review OK\nT05 network/P1/auto_route OK\nT06 other/P3/input_error OK\nПример из20: 80.0 100.0"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Определяем функцию `process_request` с параметрами `text, role, channel, confidence`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 3,
+          "text": "Создаём словарь `error` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `type(text) is not str or type(role) is not str or type(channel) is not str`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Возвращаем из функции `error`."
+        },
+        {
+          "line": 6,
+          "text": "Проверяем условие `type(confidence) not in (int, float) or not 0 <= confidence <= 1`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 7,
+          "text": "Возвращаем из функции `error`."
+        },
+        {
+          "line": 8,
+          "text": "Проверяем условие `role not in {'student', 'teacher', 'administrator'} or channel not in {'portal', 'email', 'phone'} or (not text.strip())`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 9,
+          "text": "Возвращаем из функции `error`."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `text.strip().lower()` и сохраняем результат в `text`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `set()` и сохраняем результат в `categories`."
+        },
+        {
+          "line": 14,
+          "text": "Проверяем условие `re.search('\\\\b(?:парол\\\\w*|вход\\\\w*|доступ\\\\w*|войти|уч[её]тн\\\\w*\\\\s+запис\\\\w*)\\\\b', text)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 15,
+          "text": "Выполняем `categories.add` с переданными аргументами."
+        },
+        {
+          "line": 16,
+          "text": "Проверяем условие `any((word in text for word in ['сеть', 'wi-fi', 'интернет', 'сервер недоступен']))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 17,
+          "text": "Выполняем `categories.add` с переданными аргументами."
+        },
+        {
+          "line": 18,
+          "text": "Проверяем условие `any((word in text for word in ['принтер', 'ноутбук', 'компьютер', 'клавиатура']))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 19,
+          "text": "Выполняем `categories.add` с переданными аргументами."
+        },
+        {
+          "line": 20,
+          "text": "Проверяем условие `any((word in text for word in ['программа', 'приложение', 'обновление', 'ошибка установки']))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 21,
+          "text": "Выполняем `categories.add` с переданными аргументами."
+        },
+        {
+          "line": 22,
+          "text": "Вычисляем `next(iter(categories)) if len(categories) == 1 else 'other'` и сохраняем результат в `category`."
+        },
+        {
+          "line": 23,
+          "text": "Вычисляем `'operator_review' if len(categories) >= 2 or confidence < 0.65 else 'auto_route'` и сохраняем результат в `action`."
+        },
+        {
+          "line": 24,
+          "text": "Вычисляем `any((phrase in text for phrase in ['сервер недоступен', 'утечка данных', 'не работает сеть во всём корпусе']))` и сохраняем результат в `critical`."
+        },
+        {
+          "line": 25,
+          "text": "Вычисляем `'P1' if critical else 'P2' if role in {'teacher', 'administrator'} or channel == 'phone' else 'P3'` и сохраняем результат в `priority`."
+        },
+        {
+          "line": 26,
+          "text": "Возвращаем из функции `{'category': category, 'priority': priority, 'action': action}`."
+        },
+        {
+          "line": 28,
+          "text": "Создаём набор значений `cases` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 35,
+          "text": "Перебираем `cases`; очередное значение доступно через `(ident, text, role, channel, confidence, expected)`."
+        },
+        {
+          "line": 36,
+          "text": "Вычисляем `process_request(text, role, channel, confidence)` и сохраняем результат в `result`."
+        },
+        {
+          "line": 37,
+          "text": "Проверяем инвариант `tuple(result.values()) == expected`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 38,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 39,
+          "text": "Проверяем инвариант `process_request('Нет интернета', 'student', 'portal', 0.65)['action'] == 'auto_route'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 40,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "385bea359c03a38402ba6ec9f80cc1c2f355262372098bb656ea3e105fc12c2d",
+      "verificationEvidence": {
+        "codeSha256": "385bea359c03a38402ba6ec9f80cc1c2f355262372098bb656ea3e105fc12c2d",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "T01 access/P3/auto_route OK\nT02 equipment/P2/auto_route OK\nT03 network/P3/operator_review OK\nT04 other/P3/operator_review OK\nT05 network/P1/auto_route OK\nT06 other/P3/input_error OK\nПример из20: 80.0 100.0"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba89237b615504cf97b3c2",
+      "lessonId": "M04-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def validate_technical_spec(spec):\n    if not isinstance(spec,dict):\n        return ['spec']\n    string_fields=['title','version','approach','limitations','usage']\n    list_fields=['requirements','data','test_results','improvements']\n    problems=[]\n    for field in string_fields:\n        value=spec.get(field)\n        if not isinstance(value,str) or not value.strip():\n            problems.append(field)\n    for field in list_fields:\n        value=spec.get(field)\n        if not isinstance(value,list) or not value or any(not isinstance(item,str) or not item.strip() for item in value):\n            problems.append(field)\n    return sorted(problems)\n\nvalid_spec={\n    'title':'CampusSupport Assistant','version':'2.2',\n    'requirements':['FR-02: confidence<0.65 → operator_review'],\n    'data':['Шесть синтетических сценариев T01–T06'],\n    'approach':'Словари и правила.',\n    'limitations':'Ограниченный словарь, нет промышленной проверки.',\n    'test_results':['Подготовленная реализация: 6/6. Агрегат16/20 дан условием отдельно.'],\n    'usage':'Передать text, role, channel, confidence в process_request.',\n    'improvements':['Расширить проверенный словарь','Журнал причин review']}\nassert validate_technical_spec(valid_spec)==[]\nassert validate_technical_spec(None)==['spec']\nassert validate_technical_spec(dict(valid_spec,title=' ',requirements=[]))==['requirements','title']\nassert validate_technical_spec(dict(valid_spec,data=['ok',2]))==['data']\nassert validate_technical_spec(dict(valid_spec,improvements=[' ']))==['improvements']\nprint(validate_technical_spec(valid_spec))\nprint('5 проверок структуры пройдено')\n",
+      "answer": "Аудит примера: требования проверяемы — шаги 1–2 и ID FR; архитектура согласована — шаги 3–4; ограничения и синтетические данные названы — шаг 3; тесты относятся к 2.2 — шаг 5; инструкция — шаг 6; улучшения связаны с рисками — шаг 6; структура прошла 5 проверок — код ниже. Документ готов как учебный образец. Независимый запуск другим человеком и проверка полного отсутствующего датасета не заявляются выполненными.",
+      "explanation": "Функция проверяет типы и непустое содержимое всех девяти обязательных полей, включая каждый элемент списка. Сортировка делает результат однозначным. Корректная структура не доказывает правдивость метрик или качество смысла требований; их проверяют отдельно.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[]\n5 проверок структуры пройдено"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `validate_technical_spec` с параметрами `spec`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Проверяем условие `not isinstance(spec, dict)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 3,
+          "text": "Возвращаем из функции `['spec']`."
+        },
+        {
+          "line": 4,
+          "text": "Создаём набор значений `string_fields` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 5,
+          "text": "Создаём набор значений `list_fields` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 6,
+          "text": "Создаём набор значений `problems` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 7,
+          "text": "Перебираем `string_fields`; очередное значение доступно через `field`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `spec.get(field)` и сохраняем результат в `value`."
+        },
+        {
+          "line": 9,
+          "text": "Проверяем условие `not isinstance(value, str) or not value.strip()`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `problems.append` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Перебираем `list_fields`; очередное значение доступно через `field`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `spec.get(field)` и сохраняем результат в `value`."
+        },
+        {
+          "line": 13,
+          "text": "Проверяем условие `not isinstance(value, list) or not value or any((not isinstance(item, str) or not item.strip() for item in value))`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 14,
+          "text": "Выполняем `problems.append` с переданными аргументами."
+        },
+        {
+          "line": 15,
+          "text": "Возвращаем из функции `sorted(problems)`."
+        },
+        {
+          "line": 17,
+          "text": "Создаём словарь `valid_spec` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 26,
+          "text": "Проверяем инвариант `validate_technical_spec(valid_spec) == []`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 27,
+          "text": "Проверяем инвариант `validate_technical_spec(None) == ['spec']`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 28,
+          "text": "Проверяем инвариант `validate_technical_spec(dict(valid_spec, title=' ', requirements=[])) == ['requirements', 'title']`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 29,
+          "text": "Проверяем инвариант `validate_technical_spec(dict(valid_spec, data=['ok', 2])) == ['data']`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 30,
+          "text": "Проверяем инвариант `validate_technical_spec(dict(valid_spec, improvements=[' '])) == ['improvements']`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 31,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 32,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "e3b1ee5951023259afbde89317898dd5aa26a25da66faf9fb8c3436e23c7c5cc",
+      "verificationEvidence": {
+        "codeSha256": "e3b1ee5951023259afbde89317898dd5aa26a25da66faf9fb8c3436e23c7c5cc",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[]\n5 проверок структуры пройдено"
+        }
+      ]
+    }
+  ]
+}

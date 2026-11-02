@@ -1,0 +1,1631 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6abc3fe57e9a535302ca55f6",
+      "lessonId": "M03-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score, f1_score, confusion_matrix\n\nRANDOM_STATE = 42\nrng = np.random.RandomState(RANDOM_STATE)\n\niris = load_iris(as_frame=True)\nX = iris.data.copy()\ny = iris.target.copy()\n\n# Сначала создаём единый независимый тест.\nX_train_clean, X_test, y_train_clean, y_test = train_test_split(\n    X, y,\n    test_size=0.25,\n    random_state=RANDOM_STATE,\n    stratify=y\n)\n\n# Учебная копия обучающих данных с типичными проблемами.\nX_train_bad = X_train_clean.reset_index(drop=True).copy()\ny_train_bad = y_train_clean.reset_index(drop=True).copy()\nX_test_base = X_test.reset_index(drop=True).copy()\ny_test = y_test.reset_index(drop=True)\n\nX_train_bad[\"sample_id\"] = np.arange(1001, 1001 + len(X_train_bad))\nX_test_base[\"sample_id\"] = np.arange(9001, 9001 + len(X_test_base))\n\nfor i in range(1, 9):\n    X_train_bad[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_train_bad))\n    X_test_base[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_test_base))\n\nfor column in X.columns:\n    rows = rng.choice(X_train_bad.index, size=18, replace=False)\n    X_train_bad.loc[rows, column] = np.nan\n\nrows = rng.choice(X_train_bad.index, size=10, replace=False)\nX_train_bad.loc[rows, \"sepal length (cm)\"] *= 8\n\ntrain_bad = X_train_bad.copy()\ntrain_bad[\"target\"] = y_train_bad\ntrain_bad = pd.concat(\n    [train_bad, train_bad.sample(20, random_state=1)],\n    ignore_index=True\n)\nX_train_base = train_bad.drop(columns='target')\ny_train_base = train_bad['target']\nbaseline = Pipeline([('imputer',SimpleImputer(strategy='constant',fill_value=0)),('model',KNeighborsClassifier(n_neighbors=5))]).fit(X_train_base,y_train_base)\npred_base = baseline.predict(X_test_base)\nbase_accuracy = accuracy_score(y_test,pred_base)\nbase_f1 = f1_score(y_test,pred_base,average='macro')\nmatrix = confusion_matrix(y_test,pred_base)\nprint('Train:',X_train_base.shape,'Test:',len(pred_base))\nprint('Accuracy:',round(base_accuracy,3),'Macro F1:',round(base_f1,3))\nprint(matrix)\nprint('Верных:',int(np.trace(matrix)),'ошибок:',int(matrix.sum()-np.trace(matrix)))\nassert X_train_base.shape==(132,13) and len(pred_base)==38",
+      "answer": "",
+      "explanation": "Базовая модель намеренно слаба: нулевое заполнение, 13 входов с ID и шумом, без масштаба. Встроенный Iris разделён до внесения искусственных проблем, поэтому test38 остаётся независимым от искажений train. По одному слабому результату модель нельзя считать надёжной.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Train: (132, 13) Test: 38\nAccuracy: 0.237 Macro F1: 0.221\n[[1 6 5]\n [4 5 4]\n [3 7 3]]\nВерных: 9 ошибок: 29"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_iris, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем SimpleImputer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `42` и сохраняем результат в `RANDOM_STATE`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `np.random.RandomState(RANDOM_STATE)` и сохраняем результат в `rng`."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `load_iris(as_frame=True)` и сохраняем результат в `iris`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `iris.data.copy()` и сохраняем результат в `X`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `iris.target.copy()` и сохраняем результат в `y`."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=RANDOM_STATE, stratify=y)` и сохраняем результат в `(X_train_clean, X_test, y_train_clean, y_test)`."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `X_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `X_train_bad`."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `y_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `y_train_bad`."
+        },
+        {
+          "line": 29,
+          "text": "Вычисляем `X_test.reset_index(drop=True).copy()` и сохраняем результат в `X_test_base`."
+        },
+        {
+          "line": 30,
+          "text": "Вычисляем `y_test.reset_index(drop=True)` и сохраняем результат в `y_test`."
+        },
+        {
+          "line": 32,
+          "text": "Вычисляем `np.arange(1001, 1001 + len(X_train_bad))` и сохраняем результат в `X_train_bad['sample_id']`."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `np.arange(9001, 9001 + len(X_test_base))` и сохраняем результат в `X_test_base['sample_id']`."
+        },
+        {
+          "line": 35,
+          "text": "Перебираем `range(1, 9)`; очередное значение доступно через `i`."
+        },
+        {
+          "line": 36,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_train_bad))` и сохраняем результат в `X_train_bad[f'noise_{i}']`."
+        },
+        {
+          "line": 37,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_test_base))` и сохраняем результат в `X_test_base[f'noise_{i}']`."
+        },
+        {
+          "line": 39,
+          "text": "Перебираем `X.columns`; очередное значение доступно через `column`."
+        },
+        {
+          "line": 40,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=18, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 41,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `X_train_bad.loc[rows, column]`."
+        },
+        {
+          "line": 43,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=10, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 44,
+          "text": "Обновляем `X_train_bad.loc[rows, 'sepal length (cm)']` операцией `Mult` с `8`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 46,
+          "text": "Вычисляем `X_train_bad.copy()` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 47,
+          "text": "Вычисляем `y_train_bad` и сохраняем результат в `train_bad['target']`."
+        },
+        {
+          "line": 48,
+          "text": "Вычисляем `pd.concat([train_bad, train_bad.sample(20, random_state=1)], ignore_index=True)` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 52,
+          "text": "Вычисляем `train_bad.drop(columns='target')` и сохраняем результат в `X_train_base`."
+        },
+        {
+          "line": 53,
+          "text": "Вычисляем `train_bad['target']` и сохраняем результат в `y_train_base`."
+        },
+        {
+          "line": 54,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в baseline."
+        },
+        {
+          "line": 55,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred_base."
+        },
+        {
+          "line": 56,
+          "text": "Вычисляем `accuracy_score(y_test, pred_base)` и сохраняем результат в `base_accuracy`."
+        },
+        {
+          "line": 57,
+          "text": "Вычисляем `f1_score(y_test, pred_base, average='macro')` и сохраняем результат в `base_f1`."
+        },
+        {
+          "line": 58,
+          "text": "Вычисляем `confusion_matrix(y_test, pred_base)` и сохраняем результат в `matrix`."
+        },
+        {
+          "line": 59,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 60,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 61,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 62,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 63,
+          "text": "Проверяем инвариант `X_train_base.shape == (132, 13) and len(pred_base) == 38`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5e3965c429adb5fb876875da63ee4d07bb520f4a86217f5b491c4930fddc30ac",
+      "verificationEvidence": {
+        "codeSha256": "5e3965c429adb5fb876875da63ee4d07bb520f4a86217f5b491c4930fddc30ac",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Train: (132, 13) Test: 38\nAccuracy: 0.237 Macro F1: 0.221\n[[1 6 5]\n [4 5 4]\n [3 7 3]]\nВерных: 9 ошибок: 29"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc3fe57e9a535302ca55f9",
+      "lessonId": "M03-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score, f1_score, confusion_matrix\n\nRANDOM_STATE = 42\nrng = np.random.RandomState(RANDOM_STATE)\n\niris = load_iris(as_frame=True)\nX = iris.data.copy()\ny = iris.target.copy()\n\n# Сначала создаём единый независимый тест.\nX_train_clean, X_test, y_train_clean, y_test = train_test_split(\n    X, y,\n    test_size=0.25,\n    random_state=RANDOM_STATE,\n    stratify=y\n)\n\n# Учебная копия обучающих данных с типичными проблемами.\nX_train_bad = X_train_clean.reset_index(drop=True).copy()\ny_train_bad = y_train_clean.reset_index(drop=True).copy()\nX_test_base = X_test.reset_index(drop=True).copy()\ny_test = y_test.reset_index(drop=True)\n\nX_train_bad[\"sample_id\"] = np.arange(1001, 1001 + len(X_train_bad))\nX_test_base[\"sample_id\"] = np.arange(9001, 9001 + len(X_test_base))\n\nfor i in range(1, 9):\n    X_train_bad[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_train_bad))\n    X_test_base[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_test_base))\n\nfor column in X.columns:\n    rows = rng.choice(X_train_bad.index, size=18, replace=False)\n    X_train_bad.loc[rows, column] = np.nan\n\nrows = rng.choice(X_train_bad.index, size=10, replace=False)\nX_train_bad.loc[rows, \"sepal length (cm)\"] *= 8\n\ntrain_bad = X_train_bad.copy()\ntrain_bad[\"target\"] = y_train_bad\ntrain_bad = pd.concat(\n    [train_bad, train_bad.sample(20, random_state=1)],\n    ignore_index=True\n)\nprint('Форма:',train_bad.shape)\nprint('Пропусков:',int(train_bad.drop(columns='target').isna().sum().sum()))\nprint('Дублей:',int(train_bad.duplicated().sum()))\nprint('Недопустимая длина:',int(((train_bad['sepal length (cm)']<4)|(train_bad['sepal length (cm)']>8)).sum()))\nprint('ID и шум:',1+8)\nassert train_bad.shape==(132,14) and train_bad.duplicated().sum()==20",
+      "answer": "Б) (132, 14): 132 строки, 13 входных столбцов и target.",
+      "explanation": "Пропуски нельзя напрямую передавать обычному KNN; дубли чрезмерно усиливают отдельные примеры; невозможные длины искажают расстояния; ID и восемь шумовых колонок могут подавлять полезные признаки. Точные количества рассчитываются по воспроизводимой копии исходного генератора.\n\nВ копии 83 пропуска с учётом повторов, 20 дублей, 10 недопустимых длин чашелистика, 9ID/шумовых столбцов.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Форма: (132, 14)\nПропусков: 83\nДублей: 20\nНедопустимая длина: 10\nID и шум: 9"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_iris, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем SimpleImputer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `42` и сохраняем результат в `RANDOM_STATE`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `np.random.RandomState(RANDOM_STATE)` и сохраняем результат в `rng`."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `load_iris(as_frame=True)` и сохраняем результат в `iris`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `iris.data.copy()` и сохраняем результат в `X`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `iris.target.copy()` и сохраняем результат в `y`."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=RANDOM_STATE, stratify=y)` и сохраняем результат в `(X_train_clean, X_test, y_train_clean, y_test)`."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `X_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `X_train_bad`."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `y_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `y_train_bad`."
+        },
+        {
+          "line": 29,
+          "text": "Вычисляем `X_test.reset_index(drop=True).copy()` и сохраняем результат в `X_test_base`."
+        },
+        {
+          "line": 30,
+          "text": "Вычисляем `y_test.reset_index(drop=True)` и сохраняем результат в `y_test`."
+        },
+        {
+          "line": 32,
+          "text": "Вычисляем `np.arange(1001, 1001 + len(X_train_bad))` и сохраняем результат в `X_train_bad['sample_id']`."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `np.arange(9001, 9001 + len(X_test_base))` и сохраняем результат в `X_test_base['sample_id']`."
+        },
+        {
+          "line": 35,
+          "text": "Перебираем `range(1, 9)`; очередное значение доступно через `i`."
+        },
+        {
+          "line": 36,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_train_bad))` и сохраняем результат в `X_train_bad[f'noise_{i}']`."
+        },
+        {
+          "line": 37,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_test_base))` и сохраняем результат в `X_test_base[f'noise_{i}']`."
+        },
+        {
+          "line": 39,
+          "text": "Перебираем `X.columns`; очередное значение доступно через `column`."
+        },
+        {
+          "line": 40,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=18, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 41,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `X_train_bad.loc[rows, column]`."
+        },
+        {
+          "line": 43,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=10, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 44,
+          "text": "Обновляем `X_train_bad.loc[rows, 'sepal length (cm)']` операцией `Mult` с `8`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 46,
+          "text": "Вычисляем `X_train_bad.copy()` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 47,
+          "text": "Вычисляем `y_train_bad` и сохраняем результат в `train_bad['target']`."
+        },
+        {
+          "line": 48,
+          "text": "Вычисляем `pd.concat([train_bad, train_bad.sample(20, random_state=1)], ignore_index=True)` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 52,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 53,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 54,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 55,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 56,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 57,
+          "text": "Проверяем инвариант `train_bad.shape == (132, 14) and train_bad.duplicated().sum() == 20`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "46cad65e447c1cc03cc2c365b718aa08fc4d973b552fc0b68c0a607cea553727",
+      "verificationEvidence": {
+        "codeSha256": "46cad65e447c1cc03cc2c365b718aa08fc4d973b552fc0b68c0a607cea553727",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Форма: (132, 14)\nПропусков: 83\nДублей: 20\nНедопустимая длина: 10\nID и шум: 9"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc3fe57e9a535302ca55fc",
+      "lessonId": "M03-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score, f1_score, confusion_matrix\n\nRANDOM_STATE = 42\nrng = np.random.RandomState(RANDOM_STATE)\n\niris = load_iris(as_frame=True)\nX = iris.data.copy()\ny = iris.target.copy()\n\n# Сначала создаём единый независимый тест.\nX_train_clean, X_test, y_train_clean, y_test = train_test_split(\n    X, y,\n    test_size=0.25,\n    random_state=RANDOM_STATE,\n    stratify=y\n)\n\n# Учебная копия обучающих данных с типичными проблемами.\nX_train_bad = X_train_clean.reset_index(drop=True).copy()\ny_train_bad = y_train_clean.reset_index(drop=True).copy()\nX_test_base = X_test.reset_index(drop=True).copy()\ny_test = y_test.reset_index(drop=True)\n\nX_train_bad[\"sample_id\"] = np.arange(1001, 1001 + len(X_train_bad))\nX_test_base[\"sample_id\"] = np.arange(9001, 9001 + len(X_test_base))\n\nfor i in range(1, 9):\n    X_train_bad[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_train_bad))\n    X_test_base[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_test_base))\n\nfor column in X.columns:\n    rows = rng.choice(X_train_bad.index, size=18, replace=False)\n    X_train_bad.loc[rows, column] = np.nan\n\nrows = rng.choice(X_train_bad.index, size=10, replace=False)\nX_train_bad.loc[rows, \"sepal length (cm)\"] *= 8\n\ntrain_bad = X_train_bad.copy()\ntrain_bad[\"target\"] = y_train_bad\ntrain_bad = pd.concat(\n    [train_bad, train_bad.sample(20, random_state=1)],\n    ignore_index=True\n)\nX_train_base = train_bad.drop(columns='target')\ny_train_base = train_bad['target']\nbaseline = Pipeline([('imputer',SimpleImputer(strategy='constant',fill_value=0)),('model',KNeighborsClassifier(n_neighbors=5))]).fit(X_train_base,y_train_base)\npred_base = baseline.predict(X_test_base)\nbase_accuracy = accuracy_score(y_test,pred_base)\nbase_f1 = f1_score(y_test,pred_base,average='macro')\ntrain_cleaned = train_bad.drop_duplicates().copy()\nlength = train_cleaned['sepal length (cm)']\ntrain_cleaned = train_cleaned[length.between(4,8) | length.isna()].copy()\nuseful_features = list(iris.feature_names)\ndef build_model(k=5,scale=True):\n    steps = [('imputer',SimpleImputer(strategy='median'))]\n    if scale:\n        steps.append(('scaler',StandardScaler()))\n    steps.append(('model',KNeighborsClassifier(n_neighbors=k)))\n    return Pipeline(steps)\nimproved = build_model().fit(train_cleaned[useful_features],train_cleaned['target'])\npred_improved = improved.predict(X_test[useful_features])\nimproved_accuracy = accuracy_score(y_test,pred_improved)\nimproved_f1 = f1_score(y_test,pred_improved,average='macro')\nassert len(train_cleaned)==104\nprint('После очистки:',len(train_cleaned))\nprint('Базовая:',round(base_accuracy,3),round(base_f1,3))\nprint('Улучшенная:',round(improved_accuracy,3),round(improved_f1,3))\nprint(confusion_matrix(y_test,pred_improved))\nassert improved_accuracy > base_accuracy and improved_f1 > base_f1",
+      "answer": "",
+      "explanation": "drop_duplicates нужно вызвать со скобками. Маска допускает длину 4–8 ИЛИ NaN: пропущенные длины не объявляются выбросами. Остаются 104 строки. Полезные признаки — четыре измерения Iris, без ID и шума. Медиана и масштаб обучаются в Pipeline, тест не меняется. Улучшение связано с очисткой и исключением бессодержательных расстояний.\n\nAccuracy0.237→0.921, macroF1≈0.221→0.923; ошибки 29→3 из 38. Изменены данные и признаки одновременно, поэтому рост нельзя приписать одному шагу.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "После очистки: 104\nБазовая: 0.237 0.221\nУлучшенная: 0.921 0.923\n[[12  0  0]\n [ 0 12  1]\n [ 0  2 11]]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_iris, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем SimpleImputer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `42` и сохраняем результат в `RANDOM_STATE`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `np.random.RandomState(RANDOM_STATE)` и сохраняем результат в `rng`."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `load_iris(as_frame=True)` и сохраняем результат в `iris`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `iris.data.copy()` и сохраняем результат в `X`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `iris.target.copy()` и сохраняем результат в `y`."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=RANDOM_STATE, stratify=y)` и сохраняем результат в `(X_train_clean, X_test, y_train_clean, y_test)`."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `X_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `X_train_bad`."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `y_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `y_train_bad`."
+        },
+        {
+          "line": 29,
+          "text": "Вычисляем `X_test.reset_index(drop=True).copy()` и сохраняем результат в `X_test_base`."
+        },
+        {
+          "line": 30,
+          "text": "Вычисляем `y_test.reset_index(drop=True)` и сохраняем результат в `y_test`."
+        },
+        {
+          "line": 32,
+          "text": "Вычисляем `np.arange(1001, 1001 + len(X_train_bad))` и сохраняем результат в `X_train_bad['sample_id']`."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `np.arange(9001, 9001 + len(X_test_base))` и сохраняем результат в `X_test_base['sample_id']`."
+        },
+        {
+          "line": 35,
+          "text": "Перебираем `range(1, 9)`; очередное значение доступно через `i`."
+        },
+        {
+          "line": 36,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_train_bad))` и сохраняем результат в `X_train_bad[f'noise_{i}']`."
+        },
+        {
+          "line": 37,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_test_base))` и сохраняем результат в `X_test_base[f'noise_{i}']`."
+        },
+        {
+          "line": 39,
+          "text": "Перебираем `X.columns`; очередное значение доступно через `column`."
+        },
+        {
+          "line": 40,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=18, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 41,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `X_train_bad.loc[rows, column]`."
+        },
+        {
+          "line": 43,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=10, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 44,
+          "text": "Обновляем `X_train_bad.loc[rows, 'sepal length (cm)']` операцией `Mult` с `8`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 46,
+          "text": "Вычисляем `X_train_bad.copy()` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 47,
+          "text": "Вычисляем `y_train_bad` и сохраняем результат в `train_bad['target']`."
+        },
+        {
+          "line": 48,
+          "text": "Вычисляем `pd.concat([train_bad, train_bad.sample(20, random_state=1)], ignore_index=True)` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 52,
+          "text": "Вычисляем `train_bad.drop(columns='target')` и сохраняем результат в `X_train_base`."
+        },
+        {
+          "line": 53,
+          "text": "Вычисляем `train_bad['target']` и сохраняем результат в `y_train_base`."
+        },
+        {
+          "line": 54,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в baseline."
+        },
+        {
+          "line": 55,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred_base."
+        },
+        {
+          "line": 56,
+          "text": "Вычисляем `accuracy_score(y_test, pred_base)` и сохраняем результат в `base_accuracy`."
+        },
+        {
+          "line": 57,
+          "text": "Вычисляем `f1_score(y_test, pred_base, average='macro')` и сохраняем результат в `base_f1`."
+        },
+        {
+          "line": 58,
+          "text": "Вычисляем `train_bad.drop_duplicates().copy()` и сохраняем результат в `train_cleaned`."
+        },
+        {
+          "line": 59,
+          "text": "Вычисляем `train_cleaned['sepal length (cm)']` и сохраняем результат в `length`."
+        },
+        {
+          "line": 60,
+          "text": "Вычисляем `train_cleaned[length.between(4, 8) | length.isna()].copy()` и сохраняем результат в `train_cleaned`."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `list(iris.feature_names)` и сохраняем результат в `useful_features`."
+        },
+        {
+          "line": 62,
+          "text": "Определяем функцию `build_model` с параметрами `k=5, scale=True`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 63,
+          "text": "Создаём набор значений `steps` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 64,
+          "text": "Проверяем условие `scale`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 65,
+          "text": "Выполняем `steps.append` с переданными аргументами."
+        },
+        {
+          "line": 66,
+          "text": "Выполняем `steps.append` с переданными аргументами."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `Pipeline(steps)`."
+        },
+        {
+          "line": 68,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в improved."
+        },
+        {
+          "line": 69,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred_improved."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `accuracy_score(y_test, pred_improved)` и сохраняем результат в `improved_accuracy`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `f1_score(y_test, pred_improved, average='macro')` и сохраняем результат в `improved_f1`."
+        },
+        {
+          "line": 72,
+          "text": "Проверяем инвариант `len(train_cleaned) == 104`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 73,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 74,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 75,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 76,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 77,
+          "text": "Проверяем инвариант `improved_accuracy > base_accuracy and improved_f1 > base_f1`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "aa6ef8345439cb5151e215a51fea556239716472c4e66e42a6af36bade170d0b",
+      "verificationEvidence": {
+        "codeSha256": "aa6ef8345439cb5151e215a51fea556239716472c4e66e42a6af36bade170d0b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "После очистки: 104\nБазовая: 0.237 0.221\nУлучшенная: 0.921 0.923\n[[12  0  0]\n [ 0 12  1]\n [ 0  2 11]]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc3fe57e9a535302ca55ff",
+      "lessonId": "M03-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score, f1_score, confusion_matrix\n\nRANDOM_STATE = 42\nrng = np.random.RandomState(RANDOM_STATE)\n\niris = load_iris(as_frame=True)\nX = iris.data.copy()\ny = iris.target.copy()\n\n# Сначала создаём единый независимый тест.\nX_train_clean, X_test, y_train_clean, y_test = train_test_split(\n    X, y,\n    test_size=0.25,\n    random_state=RANDOM_STATE,\n    stratify=y\n)\n\n# Учебная копия обучающих данных с типичными проблемами.\nX_train_bad = X_train_clean.reset_index(drop=True).copy()\ny_train_bad = y_train_clean.reset_index(drop=True).copy()\nX_test_base = X_test.reset_index(drop=True).copy()\ny_test = y_test.reset_index(drop=True)\n\nX_train_bad[\"sample_id\"] = np.arange(1001, 1001 + len(X_train_bad))\nX_test_base[\"sample_id\"] = np.arange(9001, 9001 + len(X_test_base))\n\nfor i in range(1, 9):\n    X_train_bad[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_train_bad))\n    X_test_base[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_test_base))\n\nfor column in X.columns:\n    rows = rng.choice(X_train_bad.index, size=18, replace=False)\n    X_train_bad.loc[rows, column] = np.nan\n\nrows = rng.choice(X_train_bad.index, size=10, replace=False)\nX_train_bad.loc[rows, \"sepal length (cm)\"] *= 8\n\ntrain_bad = X_train_bad.copy()\ntrain_bad[\"target\"] = y_train_bad\ntrain_bad = pd.concat(\n    [train_bad, train_bad.sample(20, random_state=1)],\n    ignore_index=True\n)\nX_train_base = train_bad.drop(columns='target')\ny_train_base = train_bad['target']\nbaseline = Pipeline([('imputer',SimpleImputer(strategy='constant',fill_value=0)),('model',KNeighborsClassifier(n_neighbors=5))]).fit(X_train_base,y_train_base)\npred_base = baseline.predict(X_test_base)\nbase_accuracy = accuracy_score(y_test,pred_base)\nbase_f1 = f1_score(y_test,pred_base,average='macro')\ntrain_cleaned = train_bad.drop_duplicates().copy()\nlength = train_cleaned['sepal length (cm)']\ntrain_cleaned = train_cleaned[length.between(4,8) | length.isna()].copy()\nuseful_features = list(iris.feature_names)\ndef build_model(k=5,scale=True):\n    steps = [('imputer',SimpleImputer(strategy='median'))]\n    if scale:\n        steps.append(('scaler',StandardScaler()))\n    steps.append(('model',KNeighborsClassifier(n_neighbors=k)))\n    return Pipeline(steps)\nimproved = build_model().fit(train_cleaned[useful_features],train_cleaned['target'])\npred_improved = improved.predict(X_test[useful_features])\nimproved_accuracy = accuracy_score(y_test,pred_improved)\nimproved_f1 = f1_score(y_test,pred_improved,average='macro')\nassert len(train_cleaned)==104\nfeature_sets = {'all_4':useful_features,'petal_2':['petal length (cm)','petal width (cm)'],'sepal_2':['sepal length (cm)','sepal width (cm)']}\nfeature_results = {}\nfor name,columns in feature_sets.items():\n    current = build_model().fit(train_cleaned[columns],train_cleaned['target'])\n    prediction = current.predict(X_test[columns])\n    feature_results[name] = accuracy_score(y_test,prediction)\nbest_features = feature_sets['petal_2']\ncv = StratifiedKFold(n_splits=5,shuffle=True,random_state=RANDOM_STATE)\nfor name,score in feature_results.items():\n    print(name,round(score,4))\nassert feature_results['petal_2'] >= feature_results['all_4']\nassert feature_results['sepal_2'] < feature_results['petal_2']",
+      "answer": "",
+      "explanation": "Модель и test одинаковы для трёх наборов. Два признака лепестка могут дать лучший результат, поскольку концентрируют полезное разделение и не добавляют менее полезные расстояния. Это наблюдение на фиксированном тесте, а не правило «меньше признаков всегда лучше».\n\nВсе 4 признака 0.9211; лепестки 2—0.9474; чашелистики 2—0.6053. В данном опыте выбираю лепестки.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "all_4 0.9211\npetal_2 0.9474\nsepal_2 0.6053"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_iris, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем SimpleImputer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `42` и сохраняем результат в `RANDOM_STATE`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `np.random.RandomState(RANDOM_STATE)` и сохраняем результат в `rng`."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `load_iris(as_frame=True)` и сохраняем результат в `iris`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `iris.data.copy()` и сохраняем результат в `X`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `iris.target.copy()` и сохраняем результат в `y`."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=RANDOM_STATE, stratify=y)` и сохраняем результат в `(X_train_clean, X_test, y_train_clean, y_test)`."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `X_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `X_train_bad`."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `y_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `y_train_bad`."
+        },
+        {
+          "line": 29,
+          "text": "Вычисляем `X_test.reset_index(drop=True).copy()` и сохраняем результат в `X_test_base`."
+        },
+        {
+          "line": 30,
+          "text": "Вычисляем `y_test.reset_index(drop=True)` и сохраняем результат в `y_test`."
+        },
+        {
+          "line": 32,
+          "text": "Вычисляем `np.arange(1001, 1001 + len(X_train_bad))` и сохраняем результат в `X_train_bad['sample_id']`."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `np.arange(9001, 9001 + len(X_test_base))` и сохраняем результат в `X_test_base['sample_id']`."
+        },
+        {
+          "line": 35,
+          "text": "Перебираем `range(1, 9)`; очередное значение доступно через `i`."
+        },
+        {
+          "line": 36,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_train_bad))` и сохраняем результат в `X_train_bad[f'noise_{i}']`."
+        },
+        {
+          "line": 37,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_test_base))` и сохраняем результат в `X_test_base[f'noise_{i}']`."
+        },
+        {
+          "line": 39,
+          "text": "Перебираем `X.columns`; очередное значение доступно через `column`."
+        },
+        {
+          "line": 40,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=18, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 41,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `X_train_bad.loc[rows, column]`."
+        },
+        {
+          "line": 43,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=10, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 44,
+          "text": "Обновляем `X_train_bad.loc[rows, 'sepal length (cm)']` операцией `Mult` с `8`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 46,
+          "text": "Вычисляем `X_train_bad.copy()` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 47,
+          "text": "Вычисляем `y_train_bad` и сохраняем результат в `train_bad['target']`."
+        },
+        {
+          "line": 48,
+          "text": "Вычисляем `pd.concat([train_bad, train_bad.sample(20, random_state=1)], ignore_index=True)` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 52,
+          "text": "Вычисляем `train_bad.drop(columns='target')` и сохраняем результат в `X_train_base`."
+        },
+        {
+          "line": 53,
+          "text": "Вычисляем `train_bad['target']` и сохраняем результат в `y_train_base`."
+        },
+        {
+          "line": 54,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в baseline."
+        },
+        {
+          "line": 55,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred_base."
+        },
+        {
+          "line": 56,
+          "text": "Вычисляем `accuracy_score(y_test, pred_base)` и сохраняем результат в `base_accuracy`."
+        },
+        {
+          "line": 57,
+          "text": "Вычисляем `f1_score(y_test, pred_base, average='macro')` и сохраняем результат в `base_f1`."
+        },
+        {
+          "line": 58,
+          "text": "Вычисляем `train_bad.drop_duplicates().copy()` и сохраняем результат в `train_cleaned`."
+        },
+        {
+          "line": 59,
+          "text": "Вычисляем `train_cleaned['sepal length (cm)']` и сохраняем результат в `length`."
+        },
+        {
+          "line": 60,
+          "text": "Вычисляем `train_cleaned[length.between(4, 8) | length.isna()].copy()` и сохраняем результат в `train_cleaned`."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `list(iris.feature_names)` и сохраняем результат в `useful_features`."
+        },
+        {
+          "line": 62,
+          "text": "Определяем функцию `build_model` с параметрами `k=5, scale=True`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 63,
+          "text": "Создаём набор значений `steps` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 64,
+          "text": "Проверяем условие `scale`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 65,
+          "text": "Выполняем `steps.append` с переданными аргументами."
+        },
+        {
+          "line": 66,
+          "text": "Выполняем `steps.append` с переданными аргументами."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `Pipeline(steps)`."
+        },
+        {
+          "line": 68,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в improved."
+        },
+        {
+          "line": 69,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred_improved."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `accuracy_score(y_test, pred_improved)` и сохраняем результат в `improved_accuracy`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `f1_score(y_test, pred_improved, average='macro')` и сохраняем результат в `improved_f1`."
+        },
+        {
+          "line": 72,
+          "text": "Проверяем инвариант `len(train_cleaned) == 104`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 73,
+          "text": "Создаём словарь `feature_sets` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 74,
+          "text": "Создаём словарь `feature_results` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 75,
+          "text": "Перебираем `feature_sets.items()`; очередное значение доступно через `(name, columns)`."
+        },
+        {
+          "line": 76,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+        },
+        {
+          "line": 77,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в prediction."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `accuracy_score(y_test, prediction)` и сохраняем результат в `feature_results[name]`."
+        },
+        {
+          "line": 79,
+          "text": "Вычисляем `feature_sets['petal_2']` и сохраняем результат в `best_features`."
+        },
+        {
+          "line": 80,
+          "text": "Вычисляем `StratifiedKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE)` и сохраняем результат в `cv`."
+        },
+        {
+          "line": 81,
+          "text": "Перебираем `feature_results.items()`; очередное значение доступно через `(name, score)`."
+        },
+        {
+          "line": 82,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 83,
+          "text": "Проверяем инвариант `feature_results['petal_2'] >= feature_results['all_4']`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 84,
+          "text": "Проверяем инвариант `feature_results['sepal_2'] < feature_results['petal_2']`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "0c823101d54a81139221e43be23167fe7e478dcb284d63540ed43c3301f10731",
+      "verificationEvidence": {
+        "codeSha256": "0c823101d54a81139221e43be23167fe7e478dcb284d63540ed43c3301f10731",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "all_4 0.9211\npetal_2 0.9474\nsepal_2 0.6053"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc3fe57e9a535302ca5602",
+      "lessonId": "M03-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score, f1_score, confusion_matrix\n\nRANDOM_STATE = 42\nrng = np.random.RandomState(RANDOM_STATE)\n\niris = load_iris(as_frame=True)\nX = iris.data.copy()\ny = iris.target.copy()\n\n# Сначала создаём единый независимый тест.\nX_train_clean, X_test, y_train_clean, y_test = train_test_split(\n    X, y,\n    test_size=0.25,\n    random_state=RANDOM_STATE,\n    stratify=y\n)\n\n# Учебная копия обучающих данных с типичными проблемами.\nX_train_bad = X_train_clean.reset_index(drop=True).copy()\ny_train_bad = y_train_clean.reset_index(drop=True).copy()\nX_test_base = X_test.reset_index(drop=True).copy()\ny_test = y_test.reset_index(drop=True)\n\nX_train_bad[\"sample_id\"] = np.arange(1001, 1001 + len(X_train_bad))\nX_test_base[\"sample_id\"] = np.arange(9001, 9001 + len(X_test_base))\n\nfor i in range(1, 9):\n    X_train_bad[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_train_bad))\n    X_test_base[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_test_base))\n\nfor column in X.columns:\n    rows = rng.choice(X_train_bad.index, size=18, replace=False)\n    X_train_bad.loc[rows, column] = np.nan\n\nrows = rng.choice(X_train_bad.index, size=10, replace=False)\nX_train_bad.loc[rows, \"sepal length (cm)\"] *= 8\n\ntrain_bad = X_train_bad.copy()\ntrain_bad[\"target\"] = y_train_bad\ntrain_bad = pd.concat(\n    [train_bad, train_bad.sample(20, random_state=1)],\n    ignore_index=True\n)\nX_train_base = train_bad.drop(columns='target')\ny_train_base = train_bad['target']\nbaseline = Pipeline([('imputer',SimpleImputer(strategy='constant',fill_value=0)),('model',KNeighborsClassifier(n_neighbors=5))]).fit(X_train_base,y_train_base)\npred_base = baseline.predict(X_test_base)\nbase_accuracy = accuracy_score(y_test,pred_base)\nbase_f1 = f1_score(y_test,pred_base,average='macro')\ntrain_cleaned = train_bad.drop_duplicates().copy()\nlength = train_cleaned['sepal length (cm)']\ntrain_cleaned = train_cleaned[length.between(4,8) | length.isna()].copy()\nuseful_features = list(iris.feature_names)\ndef build_model(k=5,scale=True):\n    steps = [('imputer',SimpleImputer(strategy='median'))]\n    if scale:\n        steps.append(('scaler',StandardScaler()))\n    steps.append(('model',KNeighborsClassifier(n_neighbors=k)))\n    return Pipeline(steps)\nimproved = build_model().fit(train_cleaned[useful_features],train_cleaned['target'])\npred_improved = improved.predict(X_test[useful_features])\nimproved_accuracy = accuracy_score(y_test,pred_improved)\nimproved_f1 = f1_score(y_test,pred_improved,average='macro')\nassert len(train_cleaned)==104\nfeature_sets = {'all_4':useful_features,'petal_2':['petal length (cm)','petal width (cm)'],'sepal_2':['sepal length (cm)','sepal width (cm)']}\nfeature_results = {}\nfor name,columns in feature_sets.items():\n    current = build_model().fit(train_cleaned[columns],train_cleaned['target'])\n    prediction = current.predict(X_test[columns])\n    feature_results[name] = accuracy_score(y_test,prediction)\nbest_features = feature_sets['petal_2']\ncv = StratifiedKFold(n_splits=5,shuffle=True,random_state=RANDOM_STATE)\nscores = cross_val_score(build_model(),train_cleaned[best_features],train_cleaned['target'],cv=cv,scoring='accuracy')\nprint('Оценки:',np.round(scores,3))\nprint('Среднее:',round(scores.mean(),3),'std:',round(scores.std(),3))\nprint('Базовая accuracy/F1:',round(base_accuracy,3),round(base_f1,3))\nprint('После очистки accuracy/F1:',round(improved_accuracy,3),round(improved_f1,3))\nprint('Признаки лепестка, test:',round(feature_results['petal_2'],3))\nassert len(scores)==5 and scores.mean()>.90 and scores.std()<.06",
+      "answer": "",
+      "explanation": "Пятьчастная CV проводится на 104 очищенных обучающих строках, не на 38 test. Imputer и scaler переобучаются внутри каждого fold. Высокое среднее при небольшом разбросе поддерживает устойчивость учебного улучшения, но Iris мал и однороден, а выбор признаков ранее просматривался на test. Для реального применения нужна независимая проверка на новых цветках и условиях измерения.\n\nCV≈[1.000, 0.952, 0.952, 1.000, 0.900], mean≈0.961, std≈0.037. Это поддерживает устойчивость в пределах данного набора.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Оценки: [1.    0.952 0.952 1.    0.9  ]\nСреднее: 0.961 std: 0.037\nБазовая accuracy/F1: 0.237 0.221\nПосле очистки accuracy/F1: 0.921 0.923\nПризнаки лепестка, test: 0.947"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_iris, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем SimpleImputer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `42` и сохраняем результат в `RANDOM_STATE`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `np.random.RandomState(RANDOM_STATE)` и сохраняем результат в `rng`."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `load_iris(as_frame=True)` и сохраняем результат в `iris`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `iris.data.copy()` и сохраняем результат в `X`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `iris.target.copy()` и сохраняем результат в `y`."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=RANDOM_STATE, stratify=y)` и сохраняем результат в `(X_train_clean, X_test, y_train_clean, y_test)`."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `X_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `X_train_bad`."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `y_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `y_train_bad`."
+        },
+        {
+          "line": 29,
+          "text": "Вычисляем `X_test.reset_index(drop=True).copy()` и сохраняем результат в `X_test_base`."
+        },
+        {
+          "line": 30,
+          "text": "Вычисляем `y_test.reset_index(drop=True)` и сохраняем результат в `y_test`."
+        },
+        {
+          "line": 32,
+          "text": "Вычисляем `np.arange(1001, 1001 + len(X_train_bad))` и сохраняем результат в `X_train_bad['sample_id']`."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `np.arange(9001, 9001 + len(X_test_base))` и сохраняем результат в `X_test_base['sample_id']`."
+        },
+        {
+          "line": 35,
+          "text": "Перебираем `range(1, 9)`; очередное значение доступно через `i`."
+        },
+        {
+          "line": 36,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_train_bad))` и сохраняем результат в `X_train_bad[f'noise_{i}']`."
+        },
+        {
+          "line": 37,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_test_base))` и сохраняем результат в `X_test_base[f'noise_{i}']`."
+        },
+        {
+          "line": 39,
+          "text": "Перебираем `X.columns`; очередное значение доступно через `column`."
+        },
+        {
+          "line": 40,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=18, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 41,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `X_train_bad.loc[rows, column]`."
+        },
+        {
+          "line": 43,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=10, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 44,
+          "text": "Обновляем `X_train_bad.loc[rows, 'sepal length (cm)']` операцией `Mult` с `8`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 46,
+          "text": "Вычисляем `X_train_bad.copy()` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 47,
+          "text": "Вычисляем `y_train_bad` и сохраняем результат в `train_bad['target']`."
+        },
+        {
+          "line": 48,
+          "text": "Вычисляем `pd.concat([train_bad, train_bad.sample(20, random_state=1)], ignore_index=True)` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 52,
+          "text": "Вычисляем `train_bad.drop(columns='target')` и сохраняем результат в `X_train_base`."
+        },
+        {
+          "line": 53,
+          "text": "Вычисляем `train_bad['target']` и сохраняем результат в `y_train_base`."
+        },
+        {
+          "line": 54,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в baseline."
+        },
+        {
+          "line": 55,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred_base."
+        },
+        {
+          "line": 56,
+          "text": "Вычисляем `accuracy_score(y_test, pred_base)` и сохраняем результат в `base_accuracy`."
+        },
+        {
+          "line": 57,
+          "text": "Вычисляем `f1_score(y_test, pred_base, average='macro')` и сохраняем результат в `base_f1`."
+        },
+        {
+          "line": 58,
+          "text": "Вычисляем `train_bad.drop_duplicates().copy()` и сохраняем результат в `train_cleaned`."
+        },
+        {
+          "line": 59,
+          "text": "Вычисляем `train_cleaned['sepal length (cm)']` и сохраняем результат в `length`."
+        },
+        {
+          "line": 60,
+          "text": "Вычисляем `train_cleaned[length.between(4, 8) | length.isna()].copy()` и сохраняем результат в `train_cleaned`."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `list(iris.feature_names)` и сохраняем результат в `useful_features`."
+        },
+        {
+          "line": 62,
+          "text": "Определяем функцию `build_model` с параметрами `k=5, scale=True`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 63,
+          "text": "Создаём набор значений `steps` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 64,
+          "text": "Проверяем условие `scale`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 65,
+          "text": "Выполняем `steps.append` с переданными аргументами."
+        },
+        {
+          "line": 66,
+          "text": "Выполняем `steps.append` с переданными аргументами."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `Pipeline(steps)`."
+        },
+        {
+          "line": 68,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в improved."
+        },
+        {
+          "line": 69,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred_improved."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `accuracy_score(y_test, pred_improved)` и сохраняем результат в `improved_accuracy`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `f1_score(y_test, pred_improved, average='macro')` и сохраняем результат в `improved_f1`."
+        },
+        {
+          "line": 72,
+          "text": "Проверяем инвариант `len(train_cleaned) == 104`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 73,
+          "text": "Создаём словарь `feature_sets` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 74,
+          "text": "Создаём словарь `feature_results` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 75,
+          "text": "Перебираем `feature_sets.items()`; очередное значение доступно через `(name, columns)`."
+        },
+        {
+          "line": 76,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+        },
+        {
+          "line": 77,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в prediction."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `accuracy_score(y_test, prediction)` и сохраняем результат в `feature_results[name]`."
+        },
+        {
+          "line": 79,
+          "text": "Вычисляем `feature_sets['petal_2']` и сохраняем результат в `best_features`."
+        },
+        {
+          "line": 80,
+          "text": "Вычисляем `StratifiedKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE)` и сохраняем результат в `cv`."
+        },
+        {
+          "line": 81,
+          "text": "Вычисляем `cross_val_score(build_model(), train_cleaned[best_features], train_cleaned['target'], cv=cv, scoring='accuracy')` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 82,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 83,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 84,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 85,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 86,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 87,
+          "text": "Проверяем инвариант `len(scores) == 5 and scores.mean() > 0.9 and (scores.std() < 0.06)`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "09e3a5b6f3f3670f4106bf7473405db2da5a890d9c211a07114a2711a513d989",
+      "verificationEvidence": {
+        "codeSha256": "09e3a5b6f3f3670f4106bf7473405db2da5a890d9c211a07114a2711a513d989",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Оценки: [1.    0.952 0.952 1.    0.9  ]\nСреднее: 0.961 std: 0.037\nБазовая accuracy/F1: 0.237 0.221\nПосле очистки accuracy/F1: 0.921 0.923\nПризнаки лепестка, test: 0.947"
+        }
+      ]
+    },
+    {
+      "taskId": "T-a40862cc2e4919781458c76c",
+      "lessonId": "M03-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score, f1_score, confusion_matrix\n\nRANDOM_STATE = 42\nrng = np.random.RandomState(RANDOM_STATE)\n\niris = load_iris(as_frame=True)\nX = iris.data.copy()\ny = iris.target.copy()\n\n# Сначала создаём единый независимый тест.\nX_train_clean, X_test, y_train_clean, y_test = train_test_split(\n    X, y,\n    test_size=0.25,\n    random_state=RANDOM_STATE,\n    stratify=y\n)\n\n# Учебная копия обучающих данных с типичными проблемами.\nX_train_bad = X_train_clean.reset_index(drop=True).copy()\ny_train_bad = y_train_clean.reset_index(drop=True).copy()\nX_test_base = X_test.reset_index(drop=True).copy()\ny_test = y_test.reset_index(drop=True)\n\nX_train_bad[\"sample_id\"] = np.arange(1001, 1001 + len(X_train_bad))\nX_test_base[\"sample_id\"] = np.arange(9001, 9001 + len(X_test_base))\n\nfor i in range(1, 9):\n    X_train_bad[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_train_bad))\n    X_test_base[f\"noise_{i}\"] = rng.normal(0, 100 * i, len(X_test_base))\n\nfor column in X.columns:\n    rows = rng.choice(X_train_bad.index, size=18, replace=False)\n    X_train_bad.loc[rows, column] = np.nan\n\nrows = rng.choice(X_train_bad.index, size=10, replace=False)\nX_train_bad.loc[rows, \"sepal length (cm)\"] *= 8\n\ntrain_bad = X_train_bad.copy()\ntrain_bad[\"target\"] = y_train_bad\ntrain_bad = pd.concat(\n    [train_bad, train_bad.sample(20, random_state=1)],\n    ignore_index=True\n)\nX_train_base = train_bad.drop(columns='target')\ny_train_base = train_bad['target']\nbaseline = Pipeline([('imputer',SimpleImputer(strategy='constant',fill_value=0)),('model',KNeighborsClassifier(n_neighbors=5))]).fit(X_train_base,y_train_base)\npred_base = baseline.predict(X_test_base)\nbase_accuracy = accuracy_score(y_test,pred_base)\nbase_f1 = f1_score(y_test,pred_base,average='macro')\ntrain_cleaned = train_bad.drop_duplicates().copy()\nlength = train_cleaned['sepal length (cm)']\ntrain_cleaned = train_cleaned[length.between(4,8) | length.isna()].copy()\nuseful_features = list(iris.feature_names)\ndef build_model(k=5,scale=True):\n    steps = [('imputer',SimpleImputer(strategy='median'))]\n    if scale:\n        steps.append(('scaler',StandardScaler()))\n    steps.append(('model',KNeighborsClassifier(n_neighbors=k)))\n    return Pipeline(steps)\nimproved = build_model().fit(train_cleaned[useful_features],train_cleaned['target'])\npred_improved = improved.predict(X_test[useful_features])\nimproved_accuracy = accuracy_score(y_test,pred_improved)\nimproved_f1 = f1_score(y_test,pred_improved,average='macro')\nassert len(train_cleaned)==104\nfeature_sets = {'all_4':useful_features,'petal_2':['petal length (cm)','petal width (cm)'],'sepal_2':['sepal length (cm)','sepal width (cm)']}\nfeature_results = {}\nfor name,columns in feature_sets.items():\n    current = build_model().fit(train_cleaned[columns],train_cleaned['target'])\n    prediction = current.predict(X_test[columns])\n    feature_results[name] = accuracy_score(y_test,prediction)\nbest_features = feature_sets['petal_2']\ncv = StratifiedKFold(n_splits=5,shuffle=True,random_state=RANDOM_STATE)\nno_scale = build_model(scale=False).fit(train_cleaned[best_features],train_cleaned['target'])\nprint('Лепестки без масштаба:',round(accuracy_score(y_test,no_scale.predict(X_test[best_features])),3))\nprint('Лепестки с масштабом:',round(feature_results['petal_2'],3))\nk_results = {}\nfor k in [3,5,7,9]:\n    scores = cross_val_score(build_model(k),train_cleaned[best_features],train_cleaned['target'],cv=cv,scoring='accuracy')\n    k_results[k] = scores.mean()\n    print('k=',k,'CV mean=',round(scores.mean(),4))\nbest_k = max(k_results,key=k_results.get)\nprint('Лучшее k по CV:',best_k)\nprint('Журнал:изменения | признаки | CV mean | Test | Macro F1')\nstages = [('Базовая',X_train_base,y_train_base,X_test_base,baseline),\n          ('Очистка,все13',train_cleaned.drop(columns='target'),train_cleaned['target'],X_test_base,build_model()),\n          ('Отбор4',train_cleaned[useful_features],train_cleaned['target'],X_test[useful_features],build_model()),\n          ('Лепестки2',train_cleaned[best_features],train_cleaned['target'],X_test[best_features],build_model())]\nfor name,train_x,train_y,test_x,current in stages:\n    current.fit(train_x,train_y)\n    predicted = current.predict(test_x)\n    cv_score = cross_val_score(current,train_x,train_y,cv=cv,scoring='accuracy').mean()\n    print(name,len(train_x.columns),round(cv_score,3),round(accuracy_score(y_test,predicted),3),round(f1_score(y_test,predicted,average='macro'),3))",
+      "answer": "",
+      "explanation": "Решены задачи 6–8 этого отдельного элемента: без масштаба, подбор k только по CV и журнал четырёх этапов. Важно различать геометрию двух соизмеримых измерений лепестка и исходных 13 столбцов с шумом разных масштабов: эффект scaler может различаться. Журнал фиксирует точные изменения и позволяет команде повторить результат. Ни лучшую глубину, ни k нельзя выбирать по финальному test; повторное использование test в учебной сравнительной таблице ограничивает независимость итогового вывода.\n\nУ двух признаков лепестка scaler не изменил test: обе 0.947. Лучшее k по CV—3(≈0.971 против 0.961 у 5). Одна очистка с сохранением 13 входов дала test≈0.316; отбор 4≈0.921, двух лепестков≈0.947.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Лепестки без масштаба: 0.947\nЛепестки с масштабом: 0.947\nk= 3 CV mean= 0.971\nk= 5 CV mean= 0.961\nk= 7 CV mean= 0.9514\nk= 9 CV mean= 0.9029\nЛучшее k по CV: 3\nЖурнал:изменения | признаки | CV mean | Test | Macro F1\nБазовая 13 0.379 0.237 0.221\nОчистка,все13 13 0.721 0.316 0.16\nОтбор4 4 0.904 0.921 0.923\nЛепестки2 2 0.961 0.947 0.949"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем load_iris, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем SimpleImputer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `42` и сохраняем результат в `RANDOM_STATE`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `np.random.RandomState(RANDOM_STATE)` и сохраняем результат в `rng`."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `load_iris(as_frame=True)` и сохраняем результат в `iris`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `iris.data.copy()` и сохраняем результат в `X`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `iris.target.copy()` и сохраняем результат в `y`."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=RANDOM_STATE, stratify=y)` и сохраняем результат в `(X_train_clean, X_test, y_train_clean, y_test)`."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `X_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `X_train_bad`."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `y_train_clean.reset_index(drop=True).copy()` и сохраняем результат в `y_train_bad`."
+        },
+        {
+          "line": 29,
+          "text": "Вычисляем `X_test.reset_index(drop=True).copy()` и сохраняем результат в `X_test_base`."
+        },
+        {
+          "line": 30,
+          "text": "Вычисляем `y_test.reset_index(drop=True)` и сохраняем результат в `y_test`."
+        },
+        {
+          "line": 32,
+          "text": "Вычисляем `np.arange(1001, 1001 + len(X_train_bad))` и сохраняем результат в `X_train_bad['sample_id']`."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `np.arange(9001, 9001 + len(X_test_base))` и сохраняем результат в `X_test_base['sample_id']`."
+        },
+        {
+          "line": 35,
+          "text": "Перебираем `range(1, 9)`; очередное значение доступно через `i`."
+        },
+        {
+          "line": 36,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_train_bad))` и сохраняем результат в `X_train_bad[f'noise_{i}']`."
+        },
+        {
+          "line": 37,
+          "text": "Вычисляем `rng.normal(0, 100 * i, len(X_test_base))` и сохраняем результат в `X_test_base[f'noise_{i}']`."
+        },
+        {
+          "line": 39,
+          "text": "Перебираем `X.columns`; очередное значение доступно через `column`."
+        },
+        {
+          "line": 40,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=18, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 41,
+          "text": "Вычисляем `np.nan` и сохраняем результат в `X_train_bad.loc[rows, column]`."
+        },
+        {
+          "line": 43,
+          "text": "Вычисляем `rng.choice(X_train_bad.index, size=10, replace=False)` и сохраняем результат в `rows`."
+        },
+        {
+          "line": 44,
+          "text": "Обновляем `X_train_bad.loc[rows, 'sepal length (cm)']` операцией `Mult` с `8`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 46,
+          "text": "Вычисляем `X_train_bad.copy()` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 47,
+          "text": "Вычисляем `y_train_bad` и сохраняем результат в `train_bad['target']`."
+        },
+        {
+          "line": 48,
+          "text": "Вычисляем `pd.concat([train_bad, train_bad.sample(20, random_state=1)], ignore_index=True)` и сохраняем результат в `train_bad`."
+        },
+        {
+          "line": 52,
+          "text": "Вычисляем `train_bad.drop(columns='target')` и сохраняем результат в `X_train_base`."
+        },
+        {
+          "line": 53,
+          "text": "Вычисляем `train_bad['target']` и сохраняем результат в `y_train_base`."
+        },
+        {
+          "line": 54,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в baseline."
+        },
+        {
+          "line": 55,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred_base."
+        },
+        {
+          "line": 56,
+          "text": "Вычисляем `accuracy_score(y_test, pred_base)` и сохраняем результат в `base_accuracy`."
+        },
+        {
+          "line": 57,
+          "text": "Вычисляем `f1_score(y_test, pred_base, average='macro')` и сохраняем результат в `base_f1`."
+        },
+        {
+          "line": 58,
+          "text": "Вычисляем `train_bad.drop_duplicates().copy()` и сохраняем результат в `train_cleaned`."
+        },
+        {
+          "line": 59,
+          "text": "Вычисляем `train_cleaned['sepal length (cm)']` и сохраняем результат в `length`."
+        },
+        {
+          "line": 60,
+          "text": "Вычисляем `train_cleaned[length.between(4, 8) | length.isna()].copy()` и сохраняем результат в `train_cleaned`."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `list(iris.feature_names)` и сохраняем результат в `useful_features`."
+        },
+        {
+          "line": 62,
+          "text": "Определяем функцию `build_model` с параметрами `k=5, scale=True`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 63,
+          "text": "Создаём набор значений `steps` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 64,
+          "text": "Проверяем условие `scale`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 65,
+          "text": "Выполняем `steps.append` с переданными аргументами."
+        },
+        {
+          "line": 66,
+          "text": "Выполняем `steps.append` с переданными аргументами."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `Pipeline(steps)`."
+        },
+        {
+          "line": 68,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в improved."
+        },
+        {
+          "line": 69,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred_improved."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `accuracy_score(y_test, pred_improved)` и сохраняем результат в `improved_accuracy`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `f1_score(y_test, pred_improved, average='macro')` и сохраняем результат в `improved_f1`."
+        },
+        {
+          "line": 72,
+          "text": "Проверяем инвариант `len(train_cleaned) == 104`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 73,
+          "text": "Создаём словарь `feature_sets` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 74,
+          "text": "Создаём словарь `feature_results` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 75,
+          "text": "Перебираем `feature_sets.items()`; очередное значение доступно через `(name, columns)`."
+        },
+        {
+          "line": 76,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в current."
+        },
+        {
+          "line": 77,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в prediction."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `accuracy_score(y_test, prediction)` и сохраняем результат в `feature_results[name]`."
+        },
+        {
+          "line": 79,
+          "text": "Вычисляем `feature_sets['petal_2']` и сохраняем результат в `best_features`."
+        },
+        {
+          "line": 80,
+          "text": "Вычисляем `StratifiedKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE)` и сохраняем результат в `cv`."
+        },
+        {
+          "line": 81,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в no_scale."
+        },
+        {
+          "line": 82,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 83,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 84,
+          "text": "Создаём словарь `k_results` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 85,
+          "text": "Перебираем `[3, 5, 7, 9]`; очередное значение доступно через `k`."
+        },
+        {
+          "line": 86,
+          "text": "Вычисляем `cross_val_score(build_model(k), train_cleaned[best_features], train_cleaned['target'], cv=cv, scoring='accuracy')` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 87,
+          "text": "Вычисляем `scores.mean()` и сохраняем результат в `k_results[k]`."
+        },
+        {
+          "line": 88,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 89,
+          "text": "Вычисляем `max(k_results, key=k_results.get)` и сохраняем результат в `best_k`."
+        },
+        {
+          "line": 90,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 91,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 92,
+          "text": "Создаём набор значений `stages` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 96,
+          "text": "Перебираем `stages`; очередное значение доступно через `(name, train_x, train_y, test_x, current)`."
+        },
+        {
+          "line": 97,
+          "text": "Выполняем `current.fit` с переданными аргументами."
+        },
+        {
+          "line": 98,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+        },
+        {
+          "line": 99,
+          "text": "Вычисляем `cross_val_score(current, train_x, train_y, cv=cv, scoring='accuracy').mean()` и сохраняем результат в `cv_score`."
+        },
+        {
+          "line": 100,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "003065b69e4d512ad4421babb7ab18f838154f61827c68cc1be000f5c4b69af6",
+      "verificationEvidence": {
+        "codeSha256": "003065b69e4d512ad4421babb7ab18f838154f61827c68cc1be000f5c4b69af6",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Лепестки без масштаба: 0.947\nЛепестки с масштабом: 0.947\nk= 3 CV mean= 0.971\nk= 5 CV mean= 0.961\nk= 7 CV mean= 0.9514\nk= 9 CV mean= 0.9029\nЛучшее k по CV: 3\nЖурнал:изменения | признаки | CV mean | Test | Macro F1\nБазовая 13 0.379 0.237 0.221\nОчистка,все13 13 0.721 0.316 0.16\nОтбор4 4 0.904 0.921 0.923\nЛепестки2 2 0.961 0.947 0.949"
+        }
+      ]
+    }
+  ]
+}

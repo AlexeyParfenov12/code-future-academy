@@ -1,0 +1,689 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6a56c85851ad6c611651ce7c",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "Заказы: среднее 136.5; медиана 140; σ≈24.3; min95; max175.\nВремя: среднее 30.4 мин; медиана 29; σ≈6.0; min22; max42.\nРейтинг: среднее 4.48; медиана 4.55; σ≈0.38; min3.8; max5.0.",
+      "explanation": "Суммы заказов 1365, времени 304 и рейтингов 44.8 делим на 10. Для медианы берём среднее пятого и шестого отсортированных значений. σ генеральное: делитель n=10.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "ba17a215d2a9055218565f490943da9c333a8b1a15fa4210789922efad782633",
+      "verificationEvidence": {
+        "codeSha256": "ba17a215d2a9055218565f490943da9c333a8b1a15fa4210789922efad782633",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce7f",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "0–5%: 2 курьера, 20%.\n6–10%: 4, 40%.\n11–15%: 2, 20%.\n16–20%: 1, 10%.\n21–25%: 1, 10%.\nИтого 10 и 100%.",
+      "explanation": "Интервалы сверены с разрешённым материалом обычной практики: часть полей исходного виджета в архиве повреждена. Каждый курьер попадает в один интервал, границы включены.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "b76d3ebcfbe107c5714fc1ec1b772505b1aab2618221c4dd7bd80cb17eef1ae0",
+      "verificationEvidence": {
+        "codeSha256": "b76d3ebcfbe107c5714fc1ec1b772505b1aab2618221c4dd7bd80cb17eef1ae0",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce8a",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Вывод 3.",
+      "explanation": "Менеджер переносит наблюдаемую корреляцию заказов и выручки на причинное вмешательство для всех курьеров. Дополнительная нагрузка может увеличивать задержки; нужны данные о маршрутах и контролируемая проверка.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "125dedee1c15052affd5f4d22203d8982dda88e9fc5f58f02822d7479864a7d8",
+      "verificationEvidence": {
+        "codeSha256": "125dedee1c15052affd5f4d22203d8982dda88e9fc5f58f02822d7479864a7d8",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce7d",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "Среднее 30.4; медиана 29; σ≈6.0; минимум 22; максимум 42 (минуты).",
+      "explanation": "Сумма 304, n=10. Средние два отсортированных значения 28 и 30 дают медиану 29. Генеральное отклонение sqrt(364.4/10)≈6.0366, округляется до 6.0.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "e8feec342be9f6534de701b287bed0929b8058b918dc0edf9dedc0481e160bd2",
+      "verificationEvidence": {
+        "codeSha256": "e8feec342be9f6534de701b287bed0929b8058b918dc0edf9dedc0481e160bd2",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce7e",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "Среднее 4.48; медиана 4.55; σ≈0.38; минимум 3.8; максимум 5.0.",
+      "explanation": "Сумма 44.8/10=4.48. Центральные 4.5 и 4.6 дают 4.55. Сумма квадратов отклонений 1.416; sqrt(1.416/10)≈0.3763.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "85792c177c8ad82ffcff6e380c89efa8ad4f78828e0e632a012e2caab887d6da",
+      "verificationEvidence": {
+        "codeSha256": "85792c177c8ad82ffcff6e380c89efa8ad4f78828e0e632a012e2caab887d6da",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce84",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Очень сильная отрицательная связь, r≈−0.99: большему времени доставки обычно соответствует меньший рейтинг. Это согласуется с нисходящим облаком точек. Причинность не доказана: могут влиять сложность маршрута, опыт, общение и состояние заказа.",
+      "explanation": "Пирсон описывает совместное изменение в десяти наблюдениях. Он не заменяет эксперимент и не исключает скрытые переменные.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "5e4d100c7ea4803a1be0cdf9b007b20e6bcacebcd474174a1da7a290a1bb17cc",
+      "verificationEvidence": {
+        "codeSha256": "5e4d100c7ea4803a1be0cdf9b007b20e6bcacebcd474174a1da7a290a1bb17cc",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce80",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "P(опозданий>15%)=2/10=0.2.\nP(опозданий≤10%)=6/10=0.6.",
+      "explanation": "Больше 15 имеют Захар 18 и Галина 22. В стандарт входят Алексей 8, Виктор 5, Дмитрий 10, Жанна 6, Ирина 7, Кирилл 4. Ровно 10 включается.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "a5fb6e9ba9bcf24b1032a081b1788daceccc08a01ac1803f3e73ebe577982394",
+      "verificationEvidence": {
+        "codeSha256": "a5fb6e9ba9bcf24b1032a081b1788daceccc08a01ac1803f3e73ebe577982394",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce86",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Вне стандарта: Берта 14%, Елена 12%, Захар 18%, Галина 22%.\nГипотеза 1: сложные районы/пробки — нужны расстояния, адресные зоны и время отправления.\nГипотеза 2: перегруженные маршруты — нужны число одновременных заказов и планирование.\nГипотеза 3: нехватка опыта/проблемы транспорта — нужны стаж, обучение и журналы поломок.",
+      "explanation": "Низкий показатель фиксирует проблему, но не доказывает личную вину курьера. Сначала проверяем гипотезы по дополнительным данным.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "10aa55c4259dca6997ba7ae8483dfbe57335f4c06191192de560fb6b143826d8",
+      "verificationEvidence": {
+        "codeSha256": "10aa55c4259dca6997ba7ae8483dfbe57335f4c06191192de560fb6b143826d8",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce85",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "Виктор: 0.283+0.086+0.193+0.245≈0.807.\nГалина: 0.163+0.000+0.000+0.190≈0.353.",
+      "explanation": "Каждый вклад получаем по формуле с соответствующим весом. Итог предпочтительно считать по полным значениям и округлять в конце: сумма предварительно округлённых слагаемых может отличаться на 0.001.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "02697bb6e257d523e99c5d8d14724839422655ee8393210fe6e88afb383c8506",
+      "verificationEvidence": {
+        "codeSha256": "02697bb6e257d523e99c5d8d14724839422655ee8393210fe6e88afb383c8506",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce87",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "Топ-1: Кирилл, KPI0.850.\nТоп-2: Виктор, 0.807.\nТоп-3: Жанна, 0.764.\nСамый низкий: Галина, 0.353.\nВторой с конца: Захар, 0.450.",
+      "explanation": "Сортируем по общей взвешенной оценке, учитывая объём, время, опоздания и рейтинг. Один высокий рейтинг не заменяет все критерии.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "662d0d80281a6027d0d8a1dbfa3ba6dfb0f7dfd826d990e274e08a000a7e7827",
+      "verificationEvidence": {
+        "codeSha256": "662d0d80281a6027d0d8a1dbfa3ba6dfb0f7dfd826d990e274e08a000a7e7827",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce89",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Сильнее всего с выручкой связано количество заказов (r≈1.00), слабее остальных — опоздания (r≈−0.97). Время связано сильно отрицательно (≈−0.99). Выручка складывается из выполненных заказов, но ускорение не гарантирует её рост. Возможная общая причина — хорошие маршруты и опыт: они позволяют выполнять больше заказов и тратить меньше времени.",
+      "explanation": "Даже сильная связь не задаёт универсальное управленческое правило. При росте нагрузки качество и своевременность могут ухудшиться.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "7cd7c50f7e680570fd1bef88499f83cb971267c4848a779b2b4653170aa047d9",
+      "verificationEvidence": {
+        "codeSha256": "7cd7c50f7e680570fd1bef88499f83cb971267c4848a779b2b4653170aa047d9",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce8b",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "1: частично верный. Кирилл действительно первый по KPI0.850, но обоснование только рейтингом 5.0 неполно: у него также 175 заказов и 4% опозданий.\n2: ошибочный. У Галины KPI0.353 и 95 заказов, но без сведений о маршрутах и условиях увольнение не обосновано. Уточнение: выяснить причины и предложить поддержку/обучение.\n3: ошибочный. Корреляция заказов с выручкой не доказывает пользу одинакового повышения нагрузки для всех. Уточнение: проверять увеличение нагрузки с контролем опозданий и качества.",
+      "explanation": "Для каждого вывода отличаем наблюдаемый факт от причинного и кадрового решения. Уточнения опираются на полный KPI и ограничения набора.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "06c16fdf4732f7acfac3e22c2b06a2518eba2af82a95e6bef7771ea83885d5bd",
+      "verificationEvidence": {
+        "codeSha256": "06c16fdf4732f7acfac3e22c2b06a2518eba2af82a95e6bef7771ea83885d5bd",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce8c",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Выбираю вывод 2: увольнение Галины по одному числу заказов без проверки районов, сложности и условий работы может несправедливо навредить человеку. KPI0.353 указывает на необходимость разбирательства и помощи, а не доказывает причину. Вывод 3 также опасен, поскольку ошибочное решение распространяется на всех 10 курьеров.",
+      "explanation": "Задание допускает обоснованный выбор. Здесь сформулированы последствия и ограничение данных, а не объявлен единственный правильный вариант.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "82e5fccb2b7d6f64c452e634501811f826ab0d68438a8facf6476dd8a40203ce",
+      "verificationEvidence": {
+        "codeSha256": "82e5fccb2b7d6f64c452e634501811f826ab0d68438a8facf6476dd8a40203ce",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce83",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "orders,time,late,rating = map(float,input().split())\nkpi = orders/175*.30+(1-time/42)*.20+(1-late/22)*.25+rating/5*.25\nprint('KPI =',round(kpi,3))",
+      "answer": "",
+      "explanation": "Нормируем показатели на заданные 175, 42, 22 и 5. Время и опоздания вычитаются из 1: меньше значит лучше. Веса суммируются в 1. Для Виктора итог≈0.807, для Галины≈0.353. Диапазон 0–1 относится к допустимым значениям в рамках заданной нормировки.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 3,
+      "examples": [
+        {
+          "input": "165 24 5 4.9",
+          "output": "KPI = 0.807"
+        },
+        {
+          "input": "95 42 22 3.8",
+          "output": "KPI = 0.353"
+        },
+        {
+          "input": "175 22 4 5",
+          "output": "KPI = 0.85"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Читаем входные данные и сохраняем их в (orders, time, late, rating). input возвращает строку."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `orders / 175 * 0.3 + (1 - time / 42) * 0.2 + (1 - late / 22) * 0.25 + rating / 5 * 0.25` и сохраняем результат в `kpi`."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5aeb8b1a5b2e8a6d8b9254a0cc1b2bdd775270823c784c016653aa698fdd20e3",
+      "verificationEvidence": {
+        "codeSha256": "5aeb8b1a5b2e8a6d8b9254a0cc1b2bdd775270823c784c016653aa698fdd20e3",
+        "passed": 3,
+        "total": 3,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "165 24 5 4.9\n",
+          "expected": "KPI = 0.807"
+        },
+        {
+          "input": "95 42 22 3.8\n",
+          "expected": "KPI = 0.353"
+        },
+        {
+          "input": "175 22 4 5\n",
+          "expected": "KPI = 0.85"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce81",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "x = [float(value.strip()) for value in input().split(',')]\ny = [float(value.strip()) for value in input().split(',')]\nif len(x) != len(y) or len(x) < 2:\n    raise ValueError('Нужны ряды одинаковой длины, не короче двух')\nmx,my = sum(x)/len(x),sum(y)/len(y)\nsxy = sxx = syy = 0\nfor a,b in zip(x,y):\n    dx,dy = a-mx,b-my\n    sxy += dx*dy\n    sxx += dx**2\n    syy += dy**2\nif sxx == 0 or syy == 0:\n    raise ValueError('Корреляция постоянного ряда не определена')\nr = sxy/(sxx*syy)**.5\nprint('r =',round(r,2))",
+      "answer": "",
+      "explanation": "Использована исходная формула без numpy и statistics. Удаляем пробелы вокруг значений, поэтому принимаются как запятые с пробелом, так и без него. Проверяем длины и ненулевой разброс. Для кейса числитель−22.52, суммы квадратов 364.4 и 1.416, r≈−0.99.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 3,
+      "examples": [
+        {
+          "input": "28, 35, 24, 42, 30, 32, 26, 38, 27, 22\n4.7, 4.2, 4.9, 3.8, 4.5, 4.3, 4.8, 4.0, 4.6, 5.0",
+          "output": "r = -0.99"
+        },
+        {
+          "input": "1,2,3\n2,4,6",
+          "output": "r = 1.0"
+        },
+        {
+          "input": "1,2,3\n6,4,2",
+          "output": "r = -1.0"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Читаем входные данные и сохраняем их в x. float позволяет вводить дробное число."
+        },
+        {
+          "line": 2,
+          "text": "Читаем входные данные и сохраняем их в y. float позволяет вводить дробное число."
+        },
+        {
+          "line": 3,
+          "text": "Проверяем условие `len(x) != len(y) or len(x) < 2`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Создаём набор значений `(mx, my)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `0` и сохраняем результат в `sxy, sxx, syy`."
+        },
+        {
+          "line": 7,
+          "text": "Перебираем `zip(x, y)`; очередное значение доступно через `(a, b)`."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `(dx, dy)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 9,
+          "text": "Обновляем `sxy` операцией `+=` с `dx * dy`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 10,
+          "text": "Обновляем `sxx` операцией `+=` с `dx ** 2`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 11,
+          "text": "Обновляем `syy` операцией `+=` с `dy ** 2`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 12,
+          "text": "Проверяем условие `sxx == 0 or syy == 0`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `sxy / (sxx * syy) ** 0.5` и сохраняем результат в `r`."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "07f0c9eccaf63557dbfb587a795ffc9cdbebacf28e31b9c0ed4d1f87e8dd05bc",
+      "verificationEvidence": {
+        "codeSha256": "07f0c9eccaf63557dbfb587a795ffc9cdbebacf28e31b9c0ed4d1f87e8dd05bc",
+        "passed": 3,
+        "total": 3,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "28, 35, 24, 42, 30, 32, 26, 38, 27, 22\n4.7, 4.2, 4.9, 3.8, 4.5, 4.3, 4.8, 4.0, 4.6, 5.0\n",
+          "expected": "r = -0.99"
+        },
+        {
+          "input": "1,2,3\n2,4,6\n",
+          "expected": "r = 1.0"
+        },
+        {
+          "input": "1,2,3\n6,4,2\n",
+          "expected": "r = -1.0"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce82",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import matplotlib.pyplot as plt\nnames=['Алексей', 'Берта', 'Виктор', 'Галина', 'Дмитрий', 'Елена', 'Жанна', 'Захар', 'Ирина', 'Кирилл']\ntimes=[28, 35, 24, 42, 30, 32, 26, 38, 27, 22]\nratings=[4.7, 4.2, 4.9, 3.8, 4.5, 4.3, 4.8, 4.0, 4.6, 5.0]\nplt.scatter(times,ratings)\nfor name,x,y in zip(names,times,ratings):\n    plt.annotate(name[0],(x,y))\nplt.xlabel('Время доставки, мин')\nplt.ylabel('Рейтинг клиентов')\nplt.title('Время и рейтинг: 10 курьеров')\nplt.grid(True)\nplt.show()",
+      "answer": "",
+      "explanation": "Код наносит все 10 точек и подписывает каждую первой буквой имени. Облако идёт сверху слева вниз вправо: связь отрицательная. По рисунку нельзя установить причинность, но он согласуется с r≈−0.99.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": ""
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Создаём набор значений `names` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 3,
+          "text": "Создаём набор значений `times` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 4,
+          "text": "Создаём набор значений `ratings` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 5,
+          "text": "Выполняем `plt.scatter` с переданными аргументами."
+        },
+        {
+          "line": 6,
+          "text": "Перебираем `zip(names, times, ratings)`; очередное значение доступно через `(name, x, y)`."
+        },
+        {
+          "line": 7,
+          "text": "Выполняем `plt.annotate` с переданными аргументами."
+        },
+        {
+          "line": 8,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 9,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Выполняем `plt.grid` с переданными аргументами."
+        },
+        {
+          "line": 12,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "f9de5abfbb1591a89e76d59633d33f0e961774dea58497490cd3ad24642b1be5",
+      "verificationEvidence": {
+        "codeSha256": "f9de5abfbb1591a89e76d59633d33f0e961774dea58497490cd3ad24642b1be5",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": ""
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce88",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\norders=[142, 118, 165, 95, 138, 121, 155, 108, 148, 175]\ntimes=[28, 35, 24, 42, 30, 32, 26, 38, 27, 22]\nlate=[8, 14, 5, 22, 10, 12, 6, 18, 7, 4]\nrevenue=[89.2, 71.4, 104.8, 56.3, 86.7, 74.2, 97.5, 64.1, 92.3, 112.6]\nfor name,values in [('Заказы',orders),('Время',times),('Опоздания',late)]:\n    print(name,round(np.corrcoef(values,revenue)[0,1],2))",
+      "answer": "",
+      "explanation": "Пары сохранены в порядке курьеров. Максимальная по модулю связь у заказов, затем времени, затем опозданий. Почти 1 — округлённая корреляция, а не математически точное равенство.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Заказы 1.0\nВремя -0.99\nОпоздания -0.97"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Создаём набор значений `orders` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 3,
+          "text": "Создаём набор значений `times` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 4,
+          "text": "Создаём набор значений `late` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 5,
+          "text": "Создаём набор значений `revenue` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 6,
+          "text": "Перебираем `[('Заказы', orders), ('Время', times), ('Опоздания', late)]`; очередное значение доступно через `(name, values)`."
+        },
+        {
+          "line": 7,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "20d4833eb5e58cf0c2ef1d8e1f6b686b8efe40c12dc1fe7f2d447b325df02ef7",
+      "verificationEvidence": {
+        "codeSha256": "20d4833eb5e58cf0c2ef1d8e1f6b686b8efe40c12dc1fe7f2d447b325df02ef7",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Заказы 1.0\nВремя -0.99\nОпоздания -0.97"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce8d",
+      "lessonId": "M02-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "1. Общая картина: 10 курьеров за один апрель, среднее 136.5 заказа, медиана 140, σ24.3. Время в среднем 30.4 мин (22–42), рейтинг 4.48.\n2. По KPI первые: Кирилл 0.850, Виктор 0.807, Жанна 0.764. Последние: Галина 0.353 и Захар 0.450; у них 42/38 мин и 22%/18% опозданий.\n3. Выручка теснее всего связана с заказами (r≈1.00), с временем r≈−0.99, с опозданиями≈−0.97. Рейтинг и время также r≈−0.99. Это связи, а не доказательство причин: влияют маршруты и опыт.\n4. Вариант рекомендации: премировать первых троих с KPI>0.75; Галине и Захару предложить разбор маршрутов и обучение, предварительно проверив условия. Стандарт≤10% опозданий выполняют 6/10, не выполняют 4/10. Ограничения: один месяц, 10 человек, нет сложности районов и нагрузки; кадровые решения и изменение нормативов требуют дополнительной проверки.",
+      "explanation": "Образец объединяет все четыре требуемых раздела и не назначает виновных по корреляции. Рейтинг строится по общей формуле KPI. Рекомендации являются предложением на основе учебного набора, а не отчётом о проведённых реальных мероприятиях.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "6024b335abd3587cf8138525ec2515cd5314e9a7d1a007060aca006e652ad7d0",
+      "verificationEvidence": {
+        "codeSha256": "6024b335abd3587cf8138525ec2515cd5314e9a7d1a007060aca006e652ad7d0",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    }
+  ]
+}

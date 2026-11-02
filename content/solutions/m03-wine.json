@@ -1,0 +1,634 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6ab91034a1f5b9575b4e7137",
+      "lessonId": "M03-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_wine\nfrom sklearn.model_selection import train_test_split,StratifiedKFold,cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,precision_score,recall_score,f1_score,confusion_matrix,ConfusionMatrixDisplay\nwine = load_wine(as_frame=True)\nX,y = wine.data.copy(),wine.target.copy()\nprint('Размер X:',X.shape,'y:',y.shape)\nprint('Классы:',list(map(str,wine.target_names)))\nprint('Пропуски:',int(X.isna().sum().sum()),'дубли:',int(X.duplicated().sum()))\nprint(y.value_counts().sort_index().to_string())\nassert X.shape==(178,13) and set(y.unique())=={0,1,2}",
+      "answer": "Тип: многоклассовая классификация. Объект: один образец вина с химическими измерениями.178 объектов, 13 числовых признаков, цель — класс 0/1/2. Пропусков 0, полных дублей X —0. Частоты классов: 59, 71, 48.",
+      "explanation": "Паспорт фиксирует, что одна строка X —13 измерений одного образца, а y отдельно содержит его класс. При проверке дубликатов признаков цель не участвует. Небольшой дисбаланс учитывается стратификацией и macro-метриками.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Размер X: (178, 13) y: (178,)\nКлассы: ['class_0', 'class_1', 'class_2']\nПропуски: 0 дубли: 0\ntarget\n0    59\n1    71\n2    48"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем load_wine, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `load_wine(as_frame=True)` и сохраняем результат в `wine`."
+        },
+        {
+          "line": 11,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 12,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Проверяем инвариант `X.shape == (178, 13) and set(y.unique()) == {0, 1, 2}`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "4746cd2344d30b355fce97e87da6a824c0aed1577c42e31f7192f6d94235c549",
+      "verificationEvidence": {
+        "codeSha256": "4746cd2344d30b355fce97e87da6a824c0aed1577c42e31f7192f6d94235c549",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Размер X: (178, 13) y: (178,)\nКлассы: ['class_0', 'class_1', 'class_2']\nПропуски: 0 дубли: 0\ntarget\n0    59\n1    71\n2    48"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab91037a1f5b9575b4e7138",
+      "lessonId": "M03-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_wine\nfrom sklearn.model_selection import train_test_split,StratifiedKFold,cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,precision_score,recall_score,f1_score,confusion_matrix,ConfusionMatrixDisplay\nwine = load_wine(as_frame=True)\nX,y = wine.data.copy(),wine.target.copy()\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nprint(X_train.shape,X_test.shape)\nprint(y_train.value_counts(normalize=True).sort_index().round(3).to_string())\nprint(y_test.value_counts(normalize=True).sort_index().round(3).to_string())\nassert set(X_train.index).isdisjoint(set(X_test.index))",
+      "answer": "Б) (133,13) (45,13).",
+      "explanation": "Четверть 178 равна 44.5, тестовая часть округляется вверх до 45, train133. Число признаков не меняется. Нормализовать весь X до разделения нельзя: средние и масштабы увидели бы тестовые объекты. Их нужно обучать внутри Pipeline на train.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "(133, 13) (45, 13)\ntarget\n0    0.331\n1    0.398\n2    0.271\ntarget\n0    0.333\n1    0.400\n2    0.267"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем load_wine, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `load_wine(as_frame=True)` и сохраняем результат в `wine`."
+        },
+        {
+          "line": 11,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Проверяем инвариант `set(X_train.index).isdisjoint(set(X_test.index))`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "c91deef87869f9415ec0ddb81d75323c09f42e82a5a99c6dab78d9e4687714e1",
+      "verificationEvidence": {
+        "codeSha256": "c91deef87869f9415ec0ddb81d75323c09f42e82a5a99c6dab78d9e4687714e1",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "(133, 13) (45, 13)\ntarget\n0    0.331\n1    0.398\n2    0.271\ntarget\n0    0.333\n1    0.400\n2    0.267"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab9103aa1f5b9575b4e7139",
+      "lessonId": "M03-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_wine\nfrom sklearn.model_selection import train_test_split,StratifiedKFold,cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,precision_score,recall_score,f1_score,confusion_matrix,ConfusionMatrixDisplay\nwine = load_wine(as_frame=True)\nX,y = wine.data.copy(),wine.target.copy()\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\nmodel = Pipeline([('scale',StandardScaler()),('model',KNeighborsClassifier(n_neighbors=5))])\nmodel.fit(X_train,y_train)\npred = model.predict(X_test)\nprint('Шаги:',list(model.named_steps))\nprint('Предсказаний:',len(pred))\nassert list(model.named_steps)==['scale','model'] and len(pred)==len(y_test)",
+      "answer": "",
+      "explanation": "Сначала StandardScaler преобразует признаки, затем KNN классифицирует. Классификатор не может стоять промежуточным шагом, поскольку не преобразует данные через transform. Pipeline полезен единым fit/predict и обучением масштаба внутри каждого CV-fold: это предотвращает несогласованные признаки и утечку.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Шаги: ['scale', 'model']\nПредсказаний: 45"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем load_wine, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `load_wine(as_frame=True)` и сохраняем результат в `wine`."
+        },
+        {
+          "line": 11,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `Pipeline([('scale', StandardScaler()), ('model', KNeighborsClassifier(n_neighbors=5))])` и сохраняем результат в `model`."
+        },
+        {
+          "line": 14,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 15,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в pred."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 18,
+          "text": "Проверяем инвариант `list(model.named_steps) == ['scale', 'model'] and len(pred) == len(y_test)`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "47bd83dbf65ed1810fff7175fd6e4532b5df7cf522a721dcd6c48054747e455e",
+      "verificationEvidence": {
+        "codeSha256": "47bd83dbf65ed1810fff7175fd6e4532b5df7cf522a721dcd6c48054747e455e",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Шаги: ['scale', 'model']\nПредсказаний: 45"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab9103da1f5b9575b4e713a",
+      "lessonId": "M03-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_wine\nfrom sklearn.model_selection import train_test_split,StratifiedKFold,cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,precision_score,recall_score,f1_score,confusion_matrix,ConfusionMatrixDisplay\nwine = load_wine(as_frame=True)\nX,y = wine.data.copy(),wine.target.copy()\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\ncv = StratifiedKFold(n_splits=5,shuffle=True,random_state=42)\nresults = []\nfor k in [3,5,7,9,11]:\n    candidate = Pipeline([('scale',StandardScaler()),('model',KNeighborsClassifier(n_neighbors=k))])\n    scores = cross_val_score(candidate,X_train,y_train,cv=cv,scoring='accuracy')\n    results.append({'k':k,'mean_accuracy':scores.mean(),'std_accuracy':scores.std()})\nresults_df = pd.DataFrame(results).sort_values(['mean_accuracy','k'],ascending=[False,True])\nbest_k = int(results_df.iloc[0]['k'])\nprint(results_df.round(4).to_string(index=False))\nprint('Выбранное k:',best_k)\nassert best_k == 3",
+      "answer": "",
+      "explanation": "Кандидаты оцениваются на пяти стратифицированных частях только внутри 133 обучающих объектов. Для каждого fold scaler обучается заново в Pipeline. Выбирается максимальное среднее, при равенстве — меньшее k. Выбор по test сделал бы финальную оценку зависимой от настройки.\n\nВыбрано k=3: CVmean≈0.9775, std≈0.0184. У 7≈0.9627, 11≈0.9624, 5 и 9≈0.9553.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": " k  mean_accuracy  std_accuracy\n 3         0.9775        0.0184\n 7         0.9627        0.0234\n11         0.9624        0.0338\n 5         0.9553        0.0431\n 9         0.9553        0.0362\nВыбранное k: 3"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем load_wine, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `load_wine(as_frame=True)` и сохраняем результат в `wine`."
+        },
+        {
+          "line": 11,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `StratifiedKFold(n_splits=5, shuffle=True, random_state=42)` и сохраняем результат в `cv`."
+        },
+        {
+          "line": 14,
+          "text": "Создаём набор значений `results` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 15,
+          "text": "Перебираем `[3, 5, 7, 9, 11]`; очередное значение доступно через `k`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `Pipeline([('scale', StandardScaler()), ('model', KNeighborsClassifier(n_neighbors=k))])` и сохраняем результат в `candidate`."
+        },
+        {
+          "line": 17,
+          "text": "Вычисляем `cross_val_score(candidate, X_train, y_train, cv=cv, scoring='accuracy')` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `results.append` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `pd.DataFrame(results).sort_values(['mean_accuracy', 'k'], ascending=[False, True])` и сохраняем результат в `results_df`."
+        },
+        {
+          "line": 20,
+          "text": "Вычисляем `int(results_df.iloc[0]['k'])` и сохраняем результат в `best_k`."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 22,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 23,
+          "text": "Проверяем инвариант `best_k == 3`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "da92cb3e788ae1a1d922c53027bf240f1a670b3113af9e151d48ea8b4b3c83bf",
+      "verificationEvidence": {
+        "codeSha256": "da92cb3e788ae1a1d922c53027bf240f1a670b3113af9e151d48ea8b4b3c83bf",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": " k  mean_accuracy  std_accuracy\n 3         0.9775        0.0184\n 7         0.9627        0.0234\n11         0.9624        0.0338\n 5         0.9553        0.0431\n 9         0.9553        0.0362\nВыбранное k: 3"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab91040a1f5b9575b4e713b",
+      "lessonId": "M03-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_wine\nfrom sklearn.model_selection import train_test_split,StratifiedKFold,cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score,precision_score,recall_score,f1_score,confusion_matrix,ConfusionMatrixDisplay\nwine = load_wine(as_frame=True)\nX,y = wine.data.copy(),wine.target.copy()\nX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=.25,random_state=42,stratify=y)\ncv = StratifiedKFold(n_splits=5,shuffle=True,random_state=42)\nresults = []\nfor k in [3,5,7,9,11]:\n    candidate = Pipeline([('scale',StandardScaler()),('model',KNeighborsClassifier(n_neighbors=k))])\n    scores = cross_val_score(candidate,X_train,y_train,cv=cv,scoring='accuracy')\n    results.append({'k':k,'mean_accuracy':scores.mean(),'std_accuracy':scores.std()})\nresults_df = pd.DataFrame(results).sort_values(['mean_accuracy','k'],ascending=[False,True])\nbest_k = int(results_df.iloc[0]['k'])\nfinal_model = Pipeline([('scale',StandardScaler()),('model',KNeighborsClassifier(n_neighbors=best_k))]).fit(X_train,y_train)\ny_pred = final_model.predict(X_test)\naccuracy = accuracy_score(y_test,y_pred)\ncm = confusion_matrix(y_test,y_pred,labels=[0,1,2])\nrow = results_df[results_df['k']==best_k].iloc[0]\nprint('CV mean:',round(row['mean_accuracy'],4),'CV std:',round(row['std_accuracy'],4))\nprint('Accuracy:',round(accuracy,4))\nprint('Macro precision:',round(precision_score(y_test,y_pred,average='macro',zero_division=0),4))\nprint('Macro recall:',round(recall_score(y_test,y_pred,average='macro',zero_division=0),4))\nprint('Macro F1:',round(f1_score(y_test,y_pred,average='macro',zero_division=0),4))\nprint(cm)\nprint('Ошибок:',int(cm.sum()-np.trace(cm)))\nplain = KNeighborsClassifier(n_neighbors=best_k).fit(X_train,y_train)\nprint('Без масштаба:',round(accuracy_score(y_test,plain.predict(X_test)),4))\nConfusionMatrixDisplay(cm,display_labels=wine.target_names).plot()\nplt.title('Wine: финальная проверка')\nplt.show()\nassert accuracy >= .9",
+      "answer": "",
+      "explanation": "После CV модель с k=3 обучается на всех 133 train-объектах и оценивается на 45 test. Macro-метрики дают каждому из трёх классов одинаковый вес. Код печатает CV mean/std, четыре тестовые метрики, число ошибок и сравнение без масштаба. Стандартизация улучшает геометрию расстояний KNN при разных единицах признаков; результат относится к этому небольшому учебному набору. Test нельзя снова использовать для перебора множества новых схем.\n\nФинально: CV0.9775±0.0184, testaccuracy0.9556, macroprecision0.9535, recall0.9630, F1≈0.9563. Две ошибки: class_1→class_0 и class_1→class_2, по одной; единственной крупнейшей пары нет. Без масштабирования 0.7111. Для учебного прототипа высокое качество, но 45 тестовых объектов и один источник ограничивают переносимость.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "CV mean: 0.9775 CV std: 0.0184\nAccuracy: 0.9556\nMacro precision: 0.9535\nMacro recall: 0.963\nMacro F1: 0.9563\n[[15  0  0]\n [ 1 16  1]\n [ 0  0 12]]\nОшибок: 2\nБез масштаба: 0.7111"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем load_wine, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем train_test_split, StratifiedKFold, cross_val_score, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем StandardScaler, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Подключаем KNeighborsClassifier, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 9,
+          "text": "Подключаем accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `load_wine(as_frame=True)` и сохраняем результат в `wine`."
+        },
+        {
+          "line": 11,
+          "text": "Создаём набор значений `(X, y)` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)` и сохраняем результат в `(X_train, X_test, y_train, y_test)`."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `StratifiedKFold(n_splits=5, shuffle=True, random_state=42)` и сохраняем результат в `cv`."
+        },
+        {
+          "line": 14,
+          "text": "Создаём набор значений `results` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 15,
+          "text": "Перебираем `[3, 5, 7, 9, 11]`; очередное значение доступно через `k`."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `Pipeline([('scale', StandardScaler()), ('model', KNeighborsClassifier(n_neighbors=k))])` и сохраняем результат в `candidate`."
+        },
+        {
+          "line": 17,
+          "text": "Вычисляем `cross_val_score(candidate, X_train, y_train, cv=cv, scoring='accuracy')` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `results.append` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `pd.DataFrame(results).sort_values(['mean_accuracy', 'k'], ascending=[False, True])` и сохраняем результат в `results_df`."
+        },
+        {
+          "line": 20,
+          "text": "Вычисляем `int(results_df.iloc[0]['k'])` и сохраняем результат в `best_k`."
+        },
+        {
+          "line": 21,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в final_model."
+        },
+        {
+          "line": 22,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в y_pred."
+        },
+        {
+          "line": 23,
+          "text": "Вычисляем `accuracy_score(y_test, y_pred)` и сохраняем результат в `accuracy`."
+        },
+        {
+          "line": 24,
+          "text": "Вычисляем `confusion_matrix(y_test, y_pred, labels=[0, 1, 2])` и сохраняем результат в `cm`."
+        },
+        {
+          "line": 25,
+          "text": "Вычисляем `results_df[results_df['k'] == best_k].iloc[0]` и сохраняем результат в `row`."
+        },
+        {
+          "line": 26,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 27,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 28,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 29,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 30,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 31,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 32,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 33,
+          "text": "Обучаем модель на подготовленных признаках и сохраняем результат в plain."
+        },
+        {
+          "line": 34,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 35,
+          "text": "Выполняем `ConfusionMatrixDisplay(cm, display_labels=wine.target_names).plot` с переданными аргументами."
+        },
+        {
+          "line": 36,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 37,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 38,
+          "text": "Проверяем инвариант `accuracy >= 0.9`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "de22d31b98b2dfae5657b966d6712d0b1c180049d89940fba65fd5ed7f4d8d19",
+      "verificationEvidence": {
+        "codeSha256": "de22d31b98b2dfae5657b966d6712d0b1c180049d89940fba65fd5ed7f4d8d19",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "CV mean: 0.9775 CV std: 0.0184\nAccuracy: 0.9556\nMacro precision: 0.9535\nMacro recall: 0.963\nMacro F1: 0.9563\n[[15  0  0]\n [ 1 16  1]\n [ 0  0 12]]\nОшибок: 2\nБез масштаба: 0.7111"
+        }
+      ]
+    }
+  ]
+}

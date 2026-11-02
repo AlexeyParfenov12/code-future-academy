@@ -1,0 +1,1053 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6ab7a0a7b0a3edd62a27386c",
+      "lessonId": "M04-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "2",
+      "explanation": "Строка«доступ» встречается в позициях 0 и 2, поэтому count возвращает 2. Это не число разных классов и не длина списка.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "verificationEvidence": {
+        "codeSha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab7a0b1b0a3edd62a27386d",
+      "lessonId": "M04-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\nprint('Обучено:',len(train_df),'текстов')",
+      "answer": "Между шагами Pipeline нужна запятая. fit получает сначала train_df[\"text\"], затем train_df[\"label\"].",
+      "explanation": "Входы — тексты, метки — классы. Перестановка этих аргументов решала бы другую задачу. В полном копируемом примере добавлены импорты и исходные 32 обучающие записи, чтобы код запускался самостоятельно.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Обучено: 32 текстов"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 43,
+          "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 57,
+          "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 58,
+          "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+        },
+        {
+          "line": 60,
+          "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+        },
+        {
+          "line": 62,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 63,
+          "text": "Возвращаем из функции `model`."
+        },
+        {
+          "line": 65,
+          "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 66,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+        },
+        {
+          "line": 69,
+          "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+        },
+        {
+          "line": 72,
+          "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+        },
+        {
+          "line": 73,
+          "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+        },
+        {
+          "line": 75,
+          "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+        },
+        {
+          "line": 76,
+          "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+        },
+        {
+          "line": 77,
+          "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+        },
+        {
+          "line": 79,
+          "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 80,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "4cd1a0be6b379bab188c4cb366a85a672e86a8772fb255ed2be109c5b54219a9",
+      "verificationEvidence": {
+        "codeSha256": "4cd1a0be6b379bab188c4cb366a85a672e86a8772fb255ed2be109c5b54219a9",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Обучено: 32 текстов"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab79f67b0a3edd62a273867",
+      "lessonId": "M04-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nprint('Train/test:',train_df.shape,test_df.shape)\nprint('Пропусков:',int(train_df.isna().sum().sum()),int(test_df.isna().sum().sum()))\nprint('Дубли:',int(train_df.duplicated(subset=['text','label']).sum()))\nprint(train_df['label'].value_counts().sort_index().to_string())",
+      "answer": "",
+      "explanation": "В обучении 32 строки, в тесте 12, классов 4. В train по 8 на класс, в test по 3: наборы сбалансированы. Пропусков и полных парных дублей нет. Обучающие и проверочные списки создаются раздельно и не объединяются.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Train/test: (32, 2) (12, 2)\nПропусков: 0 0\nДубли: 0\nlabel\nПО              8\nдоступ          8\nоборудование    8\nсеть            8"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 43,
+          "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 57,
+          "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 58,
+          "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+        },
+        {
+          "line": 60,
+          "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+        },
+        {
+          "line": 62,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 63,
+          "text": "Возвращаем из функции `model`."
+        },
+        {
+          "line": 65,
+          "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 66,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+        },
+        {
+          "line": 69,
+          "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+        },
+        {
+          "line": 72,
+          "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+        },
+        {
+          "line": 73,
+          "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+        },
+        {
+          "line": 75,
+          "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+        },
+        {
+          "line": 76,
+          "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+        },
+        {
+          "line": 77,
+          "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+        },
+        {
+          "line": 79,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 80,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 81,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 82,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "75729e4fb36d1c38fb9c41715fc94216b7baa8f7353fa3e0ed52151b5f1e8649",
+      "verificationEvidence": {
+        "codeSha256": "75729e4fb36d1c38fb9c41715fc94216b7baa8f7353fa3e0ed52151b5f1e8649",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Train/test: (32, 2) (12, 2)\nПропусков: 0 0\nДубли: 0\nlabel\nПО              8\nдоступ          8\nоборудование    8\nсеть            8"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab79f6bb0a3edd62a273868",
+      "lessonId": "M04-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\nassert normalize_text('  VPN\\n  НЕ РАБОТАЕТ ') == 'vpn не работает'\nprint('Шаги:',list(model.named_steps))\nprint('Пример:',normalize_text('  VPN\\n  НЕ РАБОТАЕТ '))",
+      "answer": "",
+      "explanation": "normalize_text приводит к строке, нижнему регистру и одному пробелу. build_model обучает TF-IDF+LinearSVC только на train. Pipeline сохраняет один словарь и порядок признаков для обучения и новых текстов. Функции evaluate_model и route_request включены полностью, чтобы следующие шаги были воспроизводимы.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Шаги: ['vectorizer', 'classifier']\nПример: vpn не работает"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 43,
+          "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 57,
+          "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 58,
+          "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+        },
+        {
+          "line": 60,
+          "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+        },
+        {
+          "line": 62,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 63,
+          "text": "Возвращаем из функции `model`."
+        },
+        {
+          "line": 65,
+          "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 66,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+        },
+        {
+          "line": 69,
+          "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+        },
+        {
+          "line": 72,
+          "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+        },
+        {
+          "line": 73,
+          "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+        },
+        {
+          "line": 75,
+          "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+        },
+        {
+          "line": 76,
+          "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+        },
+        {
+          "line": 77,
+          "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+        },
+        {
+          "line": 79,
+          "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 80,
+          "text": "Проверяем инвариант `normalize_text('  VPN\\n  НЕ РАБОТАЕТ ') == 'vpn не работает'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 81,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 82,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "a453ee691b64a397149b8999f7e02fb7cb0eba50ca21140c92e106660661c5a7",
+      "verificationEvidence": {
+        "codeSha256": "a453ee691b64a397149b8999f7e02fb7cb0eba50ca21140c92e106660661c5a7",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Шаги: ['vectorizer', 'classifier']\nПример: vpn не работает"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab79f6eb0a3edd62a273869",
+      "lessonId": "M04-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\npredictions,accuracy,macro_f1,matrix = evaluate_model(model,test_df)\nresult = test_df.assign(prediction=predictions)\nprint(result.to_string(index=False))\nprint('Accuracy:',round(accuracy,3),'Macro F1:',round(macro_f1,3))\nprint('Ошибок:',int((result['label']!=result['prediction']).sum()))\nprint('Ошибочные строки:')\nprint(result[result['label']!=result['prediction']].to_string(index=False))",
+      "answer": "",
+      "explanation": "Метки test используются только после predict для оценки. Вывод содержит все 12 прогнозов, две метрики и реальные ошибочные строки. Не подгоняем число ошибок под формулировку вопроса: оно проверяется фактическим сравнением строк.\n\nAccuracy10/12≈0.833, macroF1≈0.831, ошибок 2.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "                                            text        label   prediction\nпользователь забыл пароль от рабочего компьютера       доступ       доступ\n   после отпуска пропал доступ к рабочей системе       доступ       доступ\n      нужно изменить права доступа к общей папке       доступ           ПО\n      сетевой кабель подключен, но интернета нет         сеть         сеть\n           не удается подключиться к точке wi-fi         сеть         сеть\n    vpn соединение разрывается каждые пять минут         сеть         сеть\n                       принтер зажевывает бумагу оборудование оборудование\n                           ноутбук не заряжается оборудование оборудование\n        требуется заменить неисправную гарнитуру оборудование       доступ\n                word сообщает об ошибке лицензии           ПО           ПО\n      программа зависает при формировании отчета           ПО           ПО\n  не удается установить корпоративное приложение           ПО           ПО\nAccuracy: 0.833 Macro F1: 0.831\nОшибок: 2\nОшибочные строки:\n                                      text        label prediction\nнужно изменить права доступа к общей папке       доступ         ПО\n  требуется заменить неисправную гарнитуру оборудование     доступ"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 43,
+          "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 57,
+          "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 58,
+          "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+        },
+        {
+          "line": 60,
+          "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+        },
+        {
+          "line": 62,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 63,
+          "text": "Возвращаем из функции `model`."
+        },
+        {
+          "line": 65,
+          "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 66,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+        },
+        {
+          "line": 69,
+          "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+        },
+        {
+          "line": 72,
+          "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+        },
+        {
+          "line": 73,
+          "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+        },
+        {
+          "line": 75,
+          "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+        },
+        {
+          "line": 76,
+          "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+        },
+        {
+          "line": 77,
+          "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+        },
+        {
+          "line": 79,
+          "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 80,
+          "text": "Вычисляем `evaluate_model(model, test_df)` и сохраняем результат в `(predictions, accuracy, macro_f1, matrix)`."
+        },
+        {
+          "line": 81,
+          "text": "Вычисляем `test_df.assign(prediction=predictions)` и сохраняем результат в `result`."
+        },
+        {
+          "line": 82,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 83,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 84,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 85,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 86,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "2a2765c26f45ea66e310ec8385b16e4b138a31dcbd337e98d79ed0fb89e47717",
+      "verificationEvidence": {
+        "codeSha256": "2a2765c26f45ea66e310ec8385b16e4b138a31dcbd337e98d79ed0fb89e47717",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "                                            text        label   prediction\nпользователь забыл пароль от рабочего компьютера       доступ       доступ\n   после отпуска пропал доступ к рабочей системе       доступ       доступ\n      нужно изменить права доступа к общей папке       доступ           ПО\n      сетевой кабель подключен, но интернета нет         сеть         сеть\n           не удается подключиться к точке wi-fi         сеть         сеть\n    vpn соединение разрывается каждые пять минут         сеть         сеть\n                       принтер зажевывает бумагу оборудование оборудование\n                           ноутбук не заряжается оборудование оборудование\n        требуется заменить неисправную гарнитуру оборудование       доступ\n                word сообщает об ошибке лицензии           ПО           ПО\n      программа зависает при формировании отчета           ПО           ПО\n  не удается установить корпоративное приложение           ПО           ПО\nAccuracy: 0.833 Macro F1: 0.831\nОшибок: 2\nОшибочные строки:\n                                      text        label prediction\nнужно изменить права доступа к общей папке       доступ         ПО\n  требуется заменить неисправную гарнитуру оборудование     доступ"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab79f72b0a3edd62a27386a",
+      "lessonId": "M04-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\npredictions,accuracy,macro_f1,matrix = evaluate_model(model,test_df)\nresult = test_df.assign(prediction=predictions)\nprint('Порядок: доступ,сеть,оборудование,ПО')\nprint(matrix)\nprint(result[result['label']!=result['prediction']].to_string(index=False))",
+      "answer": "",
+      "explanation": "Строки матрицы — истинные классы, столбцы — прогнозы в указанном порядке. Непривычные слова вроде«гарнитура» или«лицензия» могут отсутствовать среди 32 обучающих сообщений; это гипотеза о нехватке покрытия, а не доказанная единственная причина ошибки. Конкретные тексты и направления ошибок приведены в результате запуска.\n\n«Нужно изменить права доступа к общей папке»: доступ→ПО. «Требуется заменить неисправную гарнитуру»: оборудование→доступ. Для покрытия этих формулировок нужны новые обучающие примеры, без копирования теста.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Порядок: доступ,сеть,оборудование,ПО\n[[2 0 0 1]\n [0 3 0 0]\n [1 0 2 0]\n [0 0 0 3]]\n                                      text        label prediction\nнужно изменить права доступа к общей папке       доступ         ПО\n  требуется заменить неисправную гарнитуру оборудование     доступ"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 43,
+          "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 57,
+          "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 58,
+          "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+        },
+        {
+          "line": 60,
+          "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+        },
+        {
+          "line": 62,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 63,
+          "text": "Возвращаем из функции `model`."
+        },
+        {
+          "line": 65,
+          "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 66,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+        },
+        {
+          "line": 69,
+          "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+        },
+        {
+          "line": 72,
+          "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+        },
+        {
+          "line": 73,
+          "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+        },
+        {
+          "line": 75,
+          "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+        },
+        {
+          "line": 76,
+          "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+        },
+        {
+          "line": 77,
+          "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+        },
+        {
+          "line": 79,
+          "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 80,
+          "text": "Вычисляем `evaluate_model(model, test_df)` и сохраняем результат в `(predictions, accuracy, macro_f1, matrix)`."
+        },
+        {
+          "line": 81,
+          "text": "Вычисляем `test_df.assign(prediction=predictions)` и сохраняем результат в `result`."
+        },
+        {
+          "line": 82,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 83,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 84,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "89f477193b933331706f3c4249024ddb178fca3310a6b6c1c6bb6d002b840e9b",
+      "verificationEvidence": {
+        "codeSha256": "89f477193b933331706f3c4249024ddb178fca3310a6b6c1c6bb6d002b840e9b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Порядок: доступ,сеть,оборудование,ПО\n[[2 0 0 1]\n [0 3 0 0]\n [1 0 2 0]\n [0 0 0 3]]\n                                      text        label prediction\nнужно изменить права доступа к общей папке       доступ         ПО\n  требуется заменить неисправную гарнитуру оборудование     доступ"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab79f74b0a3edd62a27386b",
+      "lessonId": "M04-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import re\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.svm import LinearSVC\nfrom sklearn.metrics import accuracy_score,f1_score,confusion_matrix\ntrain_records = [\n(\"Не могу войти в учетную запись после смены пароля\", \"доступ\"),\n(\"Система пишет неверный пароль при входе\", \"доступ\"),\n(\"Заблокирована учетная запись пользователя\", \"доступ\"),\n(\"Не приходит код подтверждения для авторизации\", \"доступ\"),\n(\"Нужно восстановить доступ к корпоративному порталу\", \"доступ\"),\n(\"Не открывается личный кабинет сотрудника\", \"доступ\"),\n(\"Требуется создать учетную запись новому сотруднику\", \"доступ\"),\n(\"Авторизация завершается ошибкой\", \"доступ\"),\n(\"На рабочем месте нет подключения к интернету\", \"сеть\"),\n(\"Wi-Fi постоянно отключается\", \"сеть\"),\n(\"Не работает VPN из дома\", \"сеть\"),\n(\"Очень медленно загружаются сайты\", \"сеть\"),\n(\"Пропадает сетевое соединение во время звонка\", \"сеть\"),\n(\"Компьютер не видит корпоративную сеть\", \"сеть\"),\n(\"Высокая задержка при подключении к серверу\", \"сеть\"),\n(\"Не открываются внутренние сайты по сети\", \"сеть\"),\n(\"Принтер не печатает документы\", \"оборудование\"),\n(\"Монитор не включается\", \"оборудование\"),\n(\"Клавиатура не реагирует на нажатия\", \"оборудование\"),\n(\"Ноутбук сильно перегревается\", \"оборудование\"),\n(\"Сканер не распознается компьютером\", \"оборудование\"),\n(\"Мышь работает с перебоями\", \"оборудование\"),\n(\"На экране появились полосы\", \"оборудование\"),\n(\"Не работает веб-камера\", \"оборудование\"),\n(\"Программа 1С закрывается с ошибкой\", \"ПО\"),\n(\"Не устанавливается обновление приложения\", \"ПО\"),\n(\"Excel зависает при открытии файла\", \"ПО\"),\n(\"Нужно установить офисный пакет\", \"ПО\"),\n(\"Антивирус блокирует рабочую программу\", \"ПО\"),\n(\"Приложение не запускается после обновления\", \"ПО\"),\n(\"В программе пропала кнопка сохранения\", \"ПО\"),\n(\"Не открывается PDF в рабочем приложении\", \"ПО\"),\n]\n\ntest_records = [\n(\"Пользователь забыл пароль от рабочего компьютера\", \"доступ\"),\n(\"После отпуска пропал доступ к рабочей системе\", \"доступ\"),\n(\"Нужно изменить права доступа к общей папке\", \"доступ\"),\n(\"Сетевой кабель подключен, но интернета нет\", \"сеть\"),\n(\"Не удается подключиться к точке Wi-Fi\", \"сеть\"),\n(\"VPN соединение разрывается каждые пять минут\", \"сеть\"),\n(\"Принтер зажевывает бумагу\", \"оборудование\"),\n(\"Ноутбук не заряжается\", \"оборудование\"),\n(\"Требуется заменить неисправную гарнитуру\", \"оборудование\"),\n(\"Word сообщает об ошибке лицензии\", \"ПО\"),\n(\"Программа зависает при формировании отчета\", \"ПО\"),\n(\"Не удается установить корпоративное приложение\", \"ПО\"),\n]\ndef normalize_text(text):\n    return re.sub(r'\\s+',' ',str(text).strip().lower())\n\ndef build_model(train_df):\n    model = Pipeline([('vectorizer',TfidfVectorizer(ngram_range=(1,2))),('classifier',LinearSVC(random_state=42))])\n    model.fit(train_df['text'],train_df['label'])\n    return model\n\ndef evaluate_model(model,test_df):\n    predicted = model.predict(test_df['text'])\n    return predicted,accuracy_score(test_df['label'],predicted),f1_score(test_df['label'],predicted,average='macro'),confusion_matrix(test_df['label'],predicted,labels=['доступ','сеть','оборудование','ПО'])\n\ndef route_request(model,text,review_threshold=.35):\n    scores = model.decision_function([normalize_text(text)])[0]\n    order = np.argsort(scores)[::-1]\n    margin = float(scores[order[0]]-scores[order[1]])\n    return {'label':str(model.classes_[order[0]]),'margin':round(margin,3),'route_mode':'автоматически' if margin>=review_threshold else 'проверка специалистом'}\n\ntrain_df = pd.DataFrame(train_records,columns=['text','label'])\ntest_df = pd.DataFrame(test_records,columns=['text','label'])\ntrain_df['text'] = train_df['text'].apply(normalize_text)\ntest_df['text'] = test_df['text'].apply(normalize_text)\nmodel = build_model(train_df)\npredictions,accuracy,macro_f1,matrix = evaluate_model(model,test_df)\nresult = test_df.assign(prediction=predictions)\nautomatic = manual = auto_errors = 0\nfor row in test_df.itertuples():\n    result = route_request(model,row.text)\n    print(row.text,'→',result)\n    if result['route_mode']=='автоматически':\n        automatic += 1\n        auto_errors += result['label'] != row.label\n    else:\n        manual += 1\nprint('Автоматически:',automatic,'Специалисту:',manual,'Автоошибок:',auto_errors)\nfor text in ['Не могу подключиться к VPN','Принтер печатает пустые страницы','Система просит пароль и не пускает','Программа не запускается']:\n    print('Новый:',text,'→',route_request(model,text))",
+      "answer": "",
+      "explanation": "Разница двух лучших значений decision_function сравнивается с 0.35 до округления. Это margin, не вероятность и не процент уверенности. Код проверяет все 12 тестовых и 4 новых сообщения, считает автоматические ошибки отдельно. Ручная передача уменьшает автоматизацию, но может снизить риск ошибочного назначения; порог проверяется на отдельных данных.\n\nАвтоматически 8, специалисту 4; автоматических ошибок среди этих 8 нет. Из четырёх новых примеров только VPN передан специалисту(margin≈0.055). Это не вероятность и не гарантия будущего качества.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "пользователь забыл пароль от рабочего компьютера → {'label': 'доступ', 'margin': 0.415, 'route_mode': 'автоматически'}\nпосле отпуска пропал доступ к рабочей системе → {'label': 'доступ', 'margin': 0.254, 'route_mode': 'проверка специалистом'}\nнужно изменить права доступа к общей папке → {'label': 'ПО', 'margin': 0.069, 'route_mode': 'проверка специалистом'}\nсетевой кабель подключен, но интернета нет → {'label': 'сеть', 'margin': 0.424, 'route_mode': 'автоматически'}\nне удается подключиться к точке wi-fi → {'label': 'сеть', 'margin': 0.715, 'route_mode': 'автоматически'}\nvpn соединение разрывается каждые пять минут → {'label': 'сеть', 'margin': 0.642, 'route_mode': 'автоматически'}\nпринтер зажевывает бумагу → {'label': 'оборудование', 'margin': 0.492, 'route_mode': 'автоматически'}\nноутбук не заряжается → {'label': 'оборудование', 'margin': 0.723, 'route_mode': 'автоматически'}\nтребуется заменить неисправную гарнитуру → {'label': 'доступ', 'margin': 0.333, 'route_mode': 'проверка специалистом'}\nword сообщает об ошибке лицензии → {'label': 'ПО', 'margin': 0.001, 'route_mode': 'проверка специалистом'}\nпрограмма зависает при формировании отчета → {'label': 'ПО', 'margin': 0.768, 'route_mode': 'автоматически'}\nне удается установить корпоративное приложение → {'label': 'ПО', 'margin': 0.549, 'route_mode': 'автоматически'}\nАвтоматически: 8 Специалисту: 4 Автоошибок: 0\nНовый: Не могу подключиться к VPN → {'label': 'доступ', 'margin': 0.055, 'route_mode': 'проверка специалистом'}\nНовый: Принтер печатает пустые страницы → {'label': 'оборудование', 'margin': 0.711, 'route_mode': 'автоматически'}\nНовый: Система просит пароль и не пускает → {'label': 'доступ', 'margin': 0.381, 'route_mode': 'автоматически'}\nНовый: Программа не запускается → {'label': 'ПО', 'margin': 0.738, 'route_mode': 'автоматически'}"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем re, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем numpy, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем Pipeline, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Подключаем TfidfVectorizer, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Подключаем LinearSVC, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 7,
+          "text": "Подключаем accuracy_score, f1_score, confusion_matrix, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 8,
+          "text": "Создаём набор значений `train_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 43,
+          "text": "Создаём набор значений `test_records` для этого примера. Значения используются в следующих вычислениях."
+        },
+        {
+          "line": 57,
+          "text": "Определяем функцию `normalize_text` с параметрами `text`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 58,
+          "text": "Возвращаем из функции `re.sub('\\\\s+', ' ', str(text).strip().lower())`."
+        },
+        {
+          "line": 60,
+          "text": "Определяем функцию `build_model` с параметрами `train_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 61,
+          "text": "Вычисляем `Pipeline([('vectorizer', TfidfVectorizer(ngram_range=(1, 2))), ('classifier', LinearSVC(random_state=42))])` и сохраняем результат в `model`."
+        },
+        {
+          "line": 62,
+          "text": "Выполняем `model.fit` с переданными аргументами."
+        },
+        {
+          "line": 63,
+          "text": "Возвращаем из функции `model`."
+        },
+        {
+          "line": 65,
+          "text": "Определяем функцию `evaluate_model` с параметрами `model, test_df`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 66,
+          "text": "Получаем прогнозы обученной модели для переданных объектов; результат сохраняется в predicted."
+        },
+        {
+          "line": 67,
+          "text": "Возвращаем из функции `(predicted, accuracy_score(test_df['label'], predicted), f1_score(test_df['label'], predicted, average='macro'), confusion_matrix(test_df['label'], predicted, labels=['доступ', 'сеть', 'оборудование', 'ПО']))`."
+        },
+        {
+          "line": 69,
+          "text": "Определяем функцию `route_request` с параметрами `model, text, review_threshold=0.35`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 70,
+          "text": "Вычисляем `model.decision_function([normalize_text(text)])[0]` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 71,
+          "text": "Вычисляем `np.argsort(scores)[::-1]` и сохраняем результат в `order`."
+        },
+        {
+          "line": 72,
+          "text": "Вычисляем `float(scores[order[0]] - scores[order[1]])` и сохраняем результат в `margin`."
+        },
+        {
+          "line": 73,
+          "text": "Возвращаем из функции `{'label': str(model.classes_[order[0]]), 'margin': round(margin, 3), 'route_mode': 'автоматически' if margin >= review_threshold else 'проверка специалистом'}`."
+        },
+        {
+          "line": 75,
+          "text": "Вычисляем `pd.DataFrame(train_records, columns=['text', 'label'])` и сохраняем результат в `train_df`."
+        },
+        {
+          "line": 76,
+          "text": "Вычисляем `pd.DataFrame(test_records, columns=['text', 'label'])` и сохраняем результат в `test_df`."
+        },
+        {
+          "line": 77,
+          "text": "Вычисляем `train_df['text'].apply(normalize_text)` и сохраняем результат в `train_df['text']`."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `test_df['text'].apply(normalize_text)` и сохраняем результат в `test_df['text']`."
+        },
+        {
+          "line": 79,
+          "text": "Вычисляем `build_model(train_df)` и сохраняем результат в `model`."
+        },
+        {
+          "line": 80,
+          "text": "Вычисляем `evaluate_model(model, test_df)` и сохраняем результат в `(predictions, accuracy, macro_f1, matrix)`."
+        },
+        {
+          "line": 81,
+          "text": "Вычисляем `test_df.assign(prediction=predictions)` и сохраняем результат в `result`."
+        },
+        {
+          "line": 82,
+          "text": "Вычисляем `0` и сохраняем результат в `automatic, manual, auto_errors`."
+        },
+        {
+          "line": 83,
+          "text": "Перебираем `test_df.itertuples()`; очередное значение доступно через `row`."
+        },
+        {
+          "line": 84,
+          "text": "Вычисляем `route_request(model, row.text)` и сохраняем результат в `result`."
+        },
+        {
+          "line": 85,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 86,
+          "text": "Проверяем условие `result['route_mode'] == 'автоматически'`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 87,
+          "text": "Обновляем `automatic` операцией `+=` с `1`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 88,
+          "text": "Обновляем `auto_errors` операцией `+=` с `result['label'] != row.label`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 90,
+          "text": "Обновляем `manual` операцией `+=` с `1`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 91,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 92,
+          "text": "Перебираем `['Не могу подключиться к VPN', 'Принтер печатает пустые страницы', 'Система просит пароль и не пускает', 'Программа не запускается']`; очередное значение доступно через `text`."
+        },
+        {
+          "line": 93,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "ccecbaf954df769827ec9240b646f912faa198984100f83b6ddb842acb7fa9f7",
+      "verificationEvidence": {
+        "codeSha256": "ccecbaf954df769827ec9240b646f912faa198984100f83b6ddb842acb7fa9f7",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "пользователь забыл пароль от рабочего компьютера → {'label': 'доступ', 'margin': 0.415, 'route_mode': 'автоматически'}\nпосле отпуска пропал доступ к рабочей системе → {'label': 'доступ', 'margin': 0.254, 'route_mode': 'проверка специалистом'}\nнужно изменить права доступа к общей папке → {'label': 'ПО', 'margin': 0.069, 'route_mode': 'проверка специалистом'}\nсетевой кабель подключен, но интернета нет → {'label': 'сеть', 'margin': 0.424, 'route_mode': 'автоматически'}\nне удается подключиться к точке wi-fi → {'label': 'сеть', 'margin': 0.715, 'route_mode': 'автоматически'}\nvpn соединение разрывается каждые пять минут → {'label': 'сеть', 'margin': 0.642, 'route_mode': 'автоматически'}\nпринтер зажевывает бумагу → {'label': 'оборудование', 'margin': 0.492, 'route_mode': 'автоматически'}\nноутбук не заряжается → {'label': 'оборудование', 'margin': 0.723, 'route_mode': 'автоматически'}\nтребуется заменить неисправную гарнитуру → {'label': 'доступ', 'margin': 0.333, 'route_mode': 'проверка специалистом'}\nword сообщает об ошибке лицензии → {'label': 'ПО', 'margin': 0.001, 'route_mode': 'проверка специалистом'}\nпрограмма зависает при формировании отчета → {'label': 'ПО', 'margin': 0.768, 'route_mode': 'автоматически'}\nне удается установить корпоративное приложение → {'label': 'ПО', 'margin': 0.549, 'route_mode': 'автоматически'}\nАвтоматически: 8 Специалисту: 4 Автоошибок: 0\nНовый: Не могу подключиться к VPN → {'label': 'доступ', 'margin': 0.055, 'route_mode': 'проверка специалистом'}\nНовый: Принтер печатает пустые страницы → {'label': 'оборудование', 'margin': 0.711, 'route_mode': 'автоматически'}\nНовый: Система просит пароль и не пускает → {'label': 'доступ', 'margin': 0.381, 'route_mode': 'автоматически'}\nНовый: Программа не запускается → {'label': 'ПО', 'margin': 0.738, 'route_mode': 'автоматически'}"
+        }
+      ]
+    }
+  ]
+}
