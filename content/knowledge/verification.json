@@ -1,0 +1,796 @@
+{
+  "reviewedAt": "2026-11-03",
+  "python": "3.12.14",
+  "libraries": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "chapters": 145,
+  "examples": 156,
+  "passed": 156,
+  "failures": [],
+  "fixtures": [
+    {
+      "topic": "aggregation",
+      "example": 1,
+      "fixtureSha256": "8f84ebaf5d1c2471bbcc5bf0601db1a2461e10dc351bae2215943cf8a6a317b8"
+    },
+    {
+      "topic": "ai-ml-dl",
+      "example": 1,
+      "fixtureSha256": "0049ad8cfd02692e326357e40837ea2cae500279a53ee292a5a60b22e7efafd3"
+    },
+    {
+      "topic": "ai-privacy",
+      "example": 1,
+      "fixtureSha256": "c881d68e39a552ef1c7a3d77ea32fb6bb03a34db5ada5e530bf8adfe003d5302"
+    },
+    {
+      "topic": "arithmetic",
+      "example": 1,
+      "fixtureSha256": "2213e8c30fa7fcac73dfd532dcfb47d00d1a1044b68b689ed7ad476410dd9b82"
+    },
+    {
+      "topic": "arithmetic",
+      "example": 2,
+      "fixtureSha256": "67ec9ec093d1103f4a835579adabca43879262d42aa5ac2b085e5d74f37aa4ca"
+    },
+    {
+      "topic": "assertions",
+      "example": 1,
+      "fixtureSha256": "173ec1fd54a073d6eefde5f73ef136f72b08a0d9c11a3049cf3d268627398107"
+    },
+    {
+      "topic": "baseline",
+      "example": 1,
+      "fixtureSha256": "1daf812da5d206038cfdaa75e5a88ad9150ceb38c747f640a8afa46f25b37001"
+    },
+    {
+      "topic": "bias-variance",
+      "example": 1,
+      "fixtureSha256": "bd8cf9b5213c1537a66d02ed43626112f1108d69426865e8eda059921fb84a2c"
+    },
+    {
+      "topic": "boosting",
+      "example": 1,
+      "fixtureSha256": "c279a8468b229673adcdd9a6c4852a50d6c5bd44889633dbe80a5121c8ce80e6"
+    },
+    {
+      "topic": "calibration",
+      "example": 1,
+      "fixtureSha256": "33d4b8e33d108bd0b2813f72a51f5d8f73f27957f8a1dfaf17425ebe16e254d9"
+    },
+    {
+      "topic": "charts",
+      "example": 1,
+      "fixtureSha256": "80ecd0205c20f41403e5d9e54c1bcf38585c9eb5cb8e0bf3185a7b16be862a78"
+    },
+    {
+      "topic": "classes",
+      "example": 1,
+      "fixtureSha256": "417f65bf4dd8fa1dd95d9f904f204b05c7d69f0bf4e6de997ebccf2c733c7f41"
+    },
+    {
+      "topic": "classification",
+      "example": 1,
+      "fixtureSha256": "1841ab4b84c977591c1e1b2c5416da33cc82483aeaf1910d4582823715ae1e6a"
+    },
+    {
+      "topic": "cleaning",
+      "example": 1,
+      "fixtureSha256": "9501bb6b2d168a7358f8700ea73cfbec886dad874588ba7cab0af2ddd8f6ee48"
+    },
+    {
+      "topic": "clustering",
+      "example": 1,
+      "fixtureSha256": "90838da1f4df6a300f6e9f5ba05e653cc59bf86e28f801c0a47c5ef3ef33414c"
+    },
+    {
+      "topic": "column-transformer",
+      "example": 1,
+      "fixtureSha256": "b795bca997f7a9552a39ee78ca9d44a2520167ef3d57b8fd3c6bb98d645212d6"
+    },
+    {
+      "topic": "comparisons",
+      "example": 1,
+      "fixtureSha256": "4a33594d13b0cc1a235d2935c15b7d0f248bf43ee2e31b8a1ec47f0b6954b142"
+    },
+    {
+      "topic": "complexity",
+      "example": 1,
+      "fixtureSha256": "1b538bace185124a6dd9e764e4d9517c322c19d349f5f7769c1f89e6b9a887b0"
+    },
+    {
+      "topic": "comprehensions",
+      "example": 1,
+      "fixtureSha256": "02566ed69806914583e030a83ed2b62b775dfca784ddd258c31be0aee0966e53"
+    },
+    {
+      "topic": "conditions",
+      "example": 1,
+      "fixtureSha256": "288efefe9157febd7029b4816c269bd9280f4d49fdafa55e38767e45b5bb0d90"
+    },
+    {
+      "topic": "conditions",
+      "example": 2,
+      "fixtureSha256": "76abe1a76ccd275552756124e855f707b7db85bdb8174fd3aeb683cac77e96c4"
+    },
+    {
+      "topic": "confusion-matrix",
+      "example": 1,
+      "fixtureSha256": "2a4bf79dc95360aef624341fd80b87ef78272c137dd87f35cd5f4bc804288b9c"
+    },
+    {
+      "topic": "conversion",
+      "example": 1,
+      "fixtureSha256": "0fca8981bad8d845f7d9bf72ee4e7b31f5a34eab1a61a1e3eadcc981b1816708"
+    },
+    {
+      "topic": "conversion",
+      "example": 2,
+      "fixtureSha256": "a94231137f957fffbfedaba7fc7517308933612447412ad3315e7e4e0953a6eb"
+    },
+    {
+      "topic": "correlation-causality",
+      "example": 1,
+      "fixtureSha256": "fa330055e51c12b05eb6bd85bfa5e502a14ca836750f06e8c24e9a16c3b10fc8"
+    },
+    {
+      "topic": "cosine-similarity",
+      "example": 1,
+      "fixtureSha256": "ea3b2bc7a5d4ab14b63ed0cff7f984de588cd9415992cb3ca7d589cc459da466"
+    },
+    {
+      "topic": "counter",
+      "example": 1,
+      "fixtureSha256": "4e6579e76dd2bdc932ed4ab5aafc4d6a55bb8fb522ebd89c05b3697fb8134054"
+    },
+    {
+      "topic": "cross-validation",
+      "example": 1,
+      "fixtureSha256": "23e18ba7d2c6ec014cb9ece95a7782f4051f7d5abaf4435e750844619f8835eb"
+    },
+    {
+      "topic": "csv",
+      "example": 1,
+      "fixtureSha256": "2d9916aebe44bfe8ab81df32280c9c7dbe1286a0d3c2eff6648f14282566a034"
+    },
+    {
+      "topic": "data-drift",
+      "example": 1,
+      "fixtureSha256": "6796f71723055708e5f3c8ac2502dcb679a130207e98e70f2d76cf725594f136"
+    },
+    {
+      "topic": "dataclasses",
+      "example": 1,
+      "fixtureSha256": "9186e20e13d0042436a914be66d9e9ccc16787091be3cab2cb3125b73ab72b24"
+    },
+    {
+      "topic": "dataset",
+      "example": 1,
+      "fixtureSha256": "0f3b1579ba53b9cf558ad5da00561a02ab7f90c1a75d9e6ed8cf893f881858ff"
+    },
+    {
+      "topic": "datetime",
+      "example": 1,
+      "fixtureSha256": "ee8a0b16ba66d5f941b580d716e96cc2bf42fdbfd341a2b2bfd3f2dc3dbfc522"
+    },
+    {
+      "topic": "dbscan",
+      "example": 1,
+      "fixtureSha256": "c09de1e99b19ee2570c909b100acce04667e4cf4f05c47c76cbccd4d41661bdc"
+    },
+    {
+      "topic": "debugging",
+      "example": 1,
+      "fixtureSha256": "d3bdab0d77f4a905d5e060aff54642250ba69a21392708fc8662ad10fde4021d"
+    },
+    {
+      "topic": "decision-trees",
+      "example": 1,
+      "fixtureSha256": "10d77ec4856ab72cc457682c24fd239ea308aedf32c5c520e3ce180b5870e5a3"
+    },
+    {
+      "topic": "defense",
+      "example": 1,
+      "fixtureSha256": "e7cb290d6d3474ab84e09dbebd8a794c2f6621e49a2f72d50faf685f0246a64b"
+    },
+    {
+      "topic": "dictionaries",
+      "example": 1,
+      "fixtureSha256": "20860773a76dce9193234798f8390823b98ef80144a810d41de0a20b6a270c80"
+    },
+    {
+      "topic": "dictionaries",
+      "example": 2,
+      "fixtureSha256": "1d21c893ea746de6556664e616c32164206f8e8fbab3b98d3add5e897c0de7d9"
+    },
+    {
+      "topic": "dictionary-patterns",
+      "example": 1,
+      "fixtureSha256": "723845cdf1caae01c3a19ec1571870f1b2f94f06b0329953b70550205c642db7"
+    },
+    {
+      "topic": "documentation",
+      "example": 1,
+      "fixtureSha256": "14339a8429bbe24a060ffb9d0070621865b9f12e48d5557b6dc4ec780c837871"
+    },
+    {
+      "topic": "embeddings",
+      "example": 1,
+      "fixtureSha256": "e9225a8e3ab6eb2679d01031dede814fece25e9e442042b532f7ea6feacffd8f"
+    },
+    {
+      "topic": "encoding",
+      "example": 1,
+      "fixtureSha256": "3eb1935b57567c10ec835dcc206145c76ed69acd2a69dc4e2db8449aab553dc3"
+    },
+    {
+      "topic": "enumerate-zip",
+      "example": 1,
+      "fixtureSha256": "a452537f0087122f4a8d02d1c8a9ca55c673707758341d8c3ea06b50feb49ad3"
+    },
+    {
+      "topic": "exceptions",
+      "example": 1,
+      "fixtureSha256": "fc042a9f1f852947f995a26fb55fc446f3a3e2c87d8018dcb6d429fe9a57a64c"
+    },
+    {
+      "topic": "f1",
+      "example": 1,
+      "fixtureSha256": "a58e66487d4381f9558bc87f64169ddb4f35e2091321135c227bf929ba998d00"
+    },
+    {
+      "topic": "feature-importance",
+      "example": 1,
+      "fixtureSha256": "ae9a4e9006af0fcacc0bae5429290e96fe2726942d1f1aa9734cde876848b2fa"
+    },
+    {
+      "topic": "features",
+      "example": 1,
+      "fixtureSha256": "ea3bb27db992df0a9cbbc916c6ab56381ec1b75baf62a2bf36eef55e8cd47079"
+    },
+    {
+      "topic": "file-text",
+      "example": 1,
+      "fixtureSha256": "83a12400b4daec78e12c3639f336e3f342133c37a633a228b03a8721e48ad1f6"
+    },
+    {
+      "topic": "float-precision",
+      "example": 1,
+      "fixtureSha256": "93728e3ee2bcf426105760db70e82bd55059ff46533431daafb49c5112ca3463"
+    },
+    {
+      "topic": "formatting",
+      "example": 1,
+      "fixtureSha256": "1ef22c5e23f1d0ca54a9e55659de8d91e033bd178693eb6ccc56732b76d16843"
+    },
+    {
+      "topic": "functions",
+      "example": 1,
+      "fixtureSha256": "7c2ed8faf30ba79173577b579a67ab8b35f7be7a770c1e08b63ee6b4fad7dffc"
+    },
+    {
+      "topic": "generators",
+      "example": 1,
+      "fixtureSha256": "120e427a907694e87029face37c8d9bf4973ecefd69b03dd68a40690bbffdc35"
+    },
+    {
+      "topic": "git",
+      "example": 1,
+      "fixtureSha256": "1761cc3296605f3fc0bdafa7e489be992d6605f575de25f32683fa1c35346f82"
+    },
+    {
+      "topic": "gradient-descent",
+      "example": 1,
+      "fixtureSha256": "9edfa857b8399d121c62091abacc11c92806799eed5bea8d8800fc8c344e5369"
+    },
+    {
+      "topic": "hallucinations",
+      "example": 1,
+      "fixtureSha256": "076f092f7c2ebb73ac5f34575532ca7ac71bda94c9a7bdf3fd3cb5504ab19d95"
+    },
+    {
+      "topic": "hyperparameters",
+      "example": 1,
+      "fixtureSha256": "99763830a6ea5e3b99f23c789a83128f64bb1cf96a946c4dc2d1475d650fd05a"
+    },
+    {
+      "topic": "imbalance",
+      "example": 1,
+      "fixtureSha256": "e0b6ec107d9886cacea2e2448f860b7e3e46f5fb1e56d15a8a48486f1d715b9a"
+    },
+    {
+      "topic": "imputation",
+      "example": 1,
+      "fixtureSha256": "c999ec32c403d1e079323ccbd810de69c370f15ab694ae9974dff99672f312a1"
+    },
+    {
+      "topic": "indentation",
+      "example": 1,
+      "fixtureSha256": "afc2da383aae291adf87f6b2bbc1c4f05ceb578d8451d15f2973ce9732264acb"
+    },
+    {
+      "topic": "input",
+      "example": 1,
+      "fixtureSha256": "ee55293ba8e297dfcca64a8fcf103f0963107e398edf72e237204db9e0d9e0ce"
+    },
+    {
+      "topic": "input",
+      "example": 2,
+      "fixtureSha256": "52b6f31418dcd8c3b4136873444679fbcd472892292f1fa561f91c1978710f7d"
+    },
+    {
+      "topic": "iterators",
+      "example": 1,
+      "fixtureSha256": "d30197bcb302c97584939cf459cfd3db271b7fecab64c70f18b2cadf85615e8e"
+    },
+    {
+      "topic": "itertools",
+      "example": 1,
+      "fixtureSha256": "9295591662e23583dbc11f2a180b507ba6ac8ac42a90082f2525904dba092ea2"
+    },
+    {
+      "topic": "json",
+      "example": 1,
+      "fixtureSha256": "8ec31de21bdb42d5bd43c95f264051fc4b5455080d7eab95f8666dbaa1bfc67e"
+    },
+    {
+      "topic": "kmeans",
+      "example": 1,
+      "fixtureSha256": "4ebc8e0f06a26836d60cb5dbf935577f659ef64ba830e867b24a0c3a3cb107a4"
+    },
+    {
+      "topic": "knn",
+      "example": 1,
+      "fixtureSha256": "5e126efeb645b1e1415d18ef97cdc950a74a085b3a4bb7db91eadc9d24e2ce47"
+    },
+    {
+      "topic": "leakage",
+      "example": 1,
+      "fixtureSha256": "77df92ce052898b95eeeb938d4acf0c3a786f3acffced4dcdf62cf2d30290927"
+    },
+    {
+      "topic": "learning-curves",
+      "example": 1,
+      "fixtureSha256": "58d866521f7f576b8f46890ef0dd8e8c9e201d74a42b32f24c382a181858f69f"
+    },
+    {
+      "topic": "linear-regression",
+      "example": 1,
+      "fixtureSha256": "fc8e3e4346a2e9debb99f3c24a032cd455e3bfefd20d80db4eb84c2b4242c8b9"
+    },
+    {
+      "topic": "list-slices",
+      "example": 1,
+      "fixtureSha256": "432d896b31cc6cf456037b0c7d401cdb33b1445b55befdb0e98fd0adcc2aec36"
+    },
+    {
+      "topic": "lists",
+      "example": 1,
+      "fixtureSha256": "db15527a8d2e5378c694a5782993d46e9fe02e3d28e98253b8b16d12d3c4768f"
+    },
+    {
+      "topic": "lists",
+      "example": 2,
+      "fixtureSha256": "f228324c21d15d2d5cd060a4286807c4c75fc50653bfe8669292527a02a98bee"
+    },
+    {
+      "topic": "llm-evaluation",
+      "example": 1,
+      "fixtureSha256": "3b57495e5924660bf03fc0ae4cdc27629c4eb24e8739e940acba3eca6940d231"
+    },
+    {
+      "topic": "llm-generation",
+      "example": 1,
+      "fixtureSha256": "23c10cc64243f6a0ac75bbbe1f6753a12c60d58c2630d59757a999c737127f12"
+    },
+    {
+      "topic": "llm-tokens",
+      "example": 1,
+      "fixtureSha256": "cbdae5a3b7d2bd5891c575849b89e1936be6402ea1b329d2f43c6f8bf21fe257"
+    },
+    {
+      "topic": "logic",
+      "example": 1,
+      "fixtureSha256": "31c75e5bc7da616e155242ce6ef8a501bf6d15441f441c5e39686449d094f69f"
+    },
+    {
+      "topic": "logic",
+      "example": 2,
+      "fixtureSha256": "2d3062151d2359d996ff1fd44d9e050ad81dc8ef4fdb4b8275cd171e1b27d450"
+    },
+    {
+      "topic": "logistic-regression",
+      "example": 1,
+      "fixtureSha256": "6e4a3d12d478ae0023bf1a4df1aff0668dd937c616f364ad7041e09c77b8c304"
+    },
+    {
+      "topic": "loop-control",
+      "example": 1,
+      "fixtureSha256": "110897c16dcf59f100513eedddc51e3acb5dcdacbc9623026e9a60f67a11af4e"
+    },
+    {
+      "topic": "loops",
+      "example": 1,
+      "fixtureSha256": "885e7d5266137cd35ab10d428d97b85a12b8fe716c1227b6802cadc60dc697ce"
+    },
+    {
+      "topic": "loops",
+      "example": 2,
+      "fixtureSha256": "fd257da1bd808d15df46245b1194d73eb0fb274cbd1820680689e5c8b5d1ed98"
+    },
+    {
+      "topic": "mae-rmse",
+      "example": 1,
+      "fixtureSha256": "b5fb7916c7ec8c52cb04f4084d4d0fd6c16fc721348890f060bf9fcf49b2157c"
+    },
+    {
+      "topic": "main-guard",
+      "example": 1,
+      "fixtureSha256": "b622ba8118b70e35006d6ebae669310bc0972229911b7182ea42ef4000ab412d"
+    },
+    {
+      "topic": "matplotlib",
+      "example": 1,
+      "fixtureSha256": "e8f8c549298168fd4f6b3974f422e30ddd9db3786f833e9d6e6548fa30a39ff9"
+    },
+    {
+      "topic": "metrics",
+      "example": 1,
+      "fixtureSha256": "32922bb21f001c538bcd3a65d9271538f5765fe7b038e6c14bd84e256ea9aaa6"
+    },
+    {
+      "topic": "ml-workflow",
+      "example": 1,
+      "fixtureSha256": "4ab999d5f96da43a41ad07f60f902d0c12bc774d49676917d0f6490e0c7b4a09"
+    },
+    {
+      "topic": "model-monitoring",
+      "example": 1,
+      "fixtureSha256": "7e7f19d2357cf513b42845743836fe6df6e016485ee386a0dd3d3db0fbe33c00"
+    },
+    {
+      "topic": "modules",
+      "example": 1,
+      "fixtureSha256": "dd02990866ab6592c973f1106db556761d21528c0091c6ab60bcd9c568f99588"
+    },
+    {
+      "topic": "mutability",
+      "example": 1,
+      "fixtureSha256": "4239dc210f619871d75e879bf221a3a5998dd8cf5f6522d638ad204734b9b046"
+    },
+    {
+      "topic": "naive-bayes",
+      "example": 1,
+      "fixtureSha256": "21f534fb70f72251dd8737a564d567a938c44cb00e7e98a647876c5d48ac047f"
+    },
+    {
+      "topic": "neural-networks",
+      "example": 1,
+      "fixtureSha256": "4c217a3e5fd8b46ae82b01bc67324261d83538fe6406daeca147c60244cd7cb5"
+    },
+    {
+      "topic": "none",
+      "example": 1,
+      "fixtureSha256": "20e11970cbd5fcbade6f082dea0152eabe5d0e37978e609feecd2ce4ea9e7591"
+    },
+    {
+      "topic": "notebooks",
+      "example": 1,
+      "fixtureSha256": "c932d804c0b5d2db5d256ba7848bc3716cd2da0d427a9dab36cd8fdceb508eec"
+    },
+    {
+      "topic": "numpy-arrays",
+      "example": 1,
+      "fixtureSha256": "d3c77afb5278fe223430951e501ce9a00fa33329b68c1be9937e29a8b7424e76"
+    },
+    {
+      "topic": "numpy-broadcasting",
+      "example": 1,
+      "fixtureSha256": "b139607637932abddca5d5efa7bd6929679997aa68bc083865d422c0281ea045"
+    },
+    {
+      "topic": "output",
+      "example": 1,
+      "fixtureSha256": "c1a1f0092eb83cdd155a2421d49c046ce6a8530f79a96072167bac4ea1722d0e"
+    },
+    {
+      "topic": "output",
+      "example": 2,
+      "fixtureSha256": "6541544b312cae5aacc21102ef21c1e8b23b1a984db834fb1bdc9f21614f4d0f"
+    },
+    {
+      "topic": "overfitting",
+      "example": 1,
+      "fixtureSha256": "bc18eb9e016f0797c861218dc325f056c8d237456aa59a09afa313791f9fa3d2"
+    },
+    {
+      "topic": "pandas-groupby",
+      "example": 1,
+      "fixtureSha256": "c073c3d477170db8c0a0c22157ebf006b9939d72dacdefd7cde3ea7b5182bcc9"
+    },
+    {
+      "topic": "pandas-indexing",
+      "example": 1,
+      "fixtureSha256": "b23a9393c2d27f3bbe4247e7dcaa6f518e4d5c314559b4d04cb772e840ef10b5"
+    },
+    {
+      "topic": "pandas-merge",
+      "example": 1,
+      "fixtureSha256": "93e343c23d3e2d78e44ac0eb5b488358ca962097c2e036466080d5200c11a2d4"
+    },
+    {
+      "topic": "pandas-missing",
+      "example": 1,
+      "fixtureSha256": "ec8f6bc163ae213b462d1ddaa91336989b84c8fa5c548b8ce4eb167dfafc3b9a"
+    },
+    {
+      "topic": "parameters",
+      "example": 1,
+      "fixtureSha256": "5d0399d7a5c285a44241f01b60d1dd272ddb62b3fd4855cc7127d453eab22343"
+    },
+    {
+      "topic": "pathlib",
+      "example": 1,
+      "fixtureSha256": "8804511eccaeb7c24b74220bf28a4c60cb8b48d49214e6932d37790eba04dc18"
+    },
+    {
+      "topic": "pca",
+      "example": 1,
+      "fixtureSha256": "59048184c0c21609a5cd55033b347a461c08d24aa9b69d7dbdf30890bd90e193"
+    },
+    {
+      "topic": "pip",
+      "example": 1,
+      "fixtureSha256": "035b7530f91e0da537ae8d53d9e63a639f99939d5528da6ccd25c86efce23cfe"
+    },
+    {
+      "topic": "pipeline",
+      "example": 1,
+      "fixtureSha256": "440225b08db07661bcc6fce3863b37f27f8de760e1bbc696dbe53fe8e1f779ee"
+    },
+    {
+      "topic": "precision-recall",
+      "example": 1,
+      "fixtureSha256": "613f0ede70a9af574086610580bca239cd8cfa52c2bde4fd444f99252d78ca1d"
+    },
+    {
+      "topic": "probability-bayes",
+      "example": 1,
+      "fixtureSha256": "8324a57d55a90a0faee3c2c0875afea472648bef3a133bdb6ccbb4dca9f4441b"
+    },
+    {
+      "topic": "problem",
+      "example": 1,
+      "fixtureSha256": "2d30ba60e1523ea0667612cc1359ebf61f33f0c9a2cbb8bc12132add06cf398b"
+    },
+    {
+      "topic": "prompt-injection",
+      "example": 1,
+      "fixtureSha256": "aa372b9806c26cc76ea5571429b3f1a432e79f2a4c358789c850576efed16115"
+    },
+    {
+      "topic": "prompting",
+      "example": 1,
+      "fixtureSha256": "ba8b70aa4518045b33358ea83f6c3f61e051a69c55d586534e7b56dd1d15a921"
+    },
+    {
+      "topic": "prototype",
+      "example": 1,
+      "fixtureSha256": "c98e4cbecf1a3f03832f1f6db0185958db9e0de3579f4c23503c5b8197fb665f"
+    },
+    {
+      "topic": "r2",
+      "example": 1,
+      "fixtureSha256": "7ba207afd85e918cc50db8a59c919183babff1f655a7802d1a8e67f2bc821133"
+    },
+    {
+      "topic": "rag",
+      "example": 1,
+      "fixtureSha256": "0984261ae29979ae963c04ee04edefc91914dc8e306ebaf09a967aaa4d9d2eea"
+    },
+    {
+      "topic": "random-forest",
+      "example": 1,
+      "fixtureSha256": "19c82ccc876ed7c0cb354cb5ff1158d4d55551dac42e0b9b6c22e8a1bd46cd8d"
+    },
+    {
+      "topic": "regex",
+      "example": 1,
+      "fixtureSha256": "0254500e4340c6a36ccdb9f53b4620526e30daacf5776a8e2a9627219367ed24"
+    },
+    {
+      "topic": "regression",
+      "example": 1,
+      "fixtureSha256": "1074471f427b79fd5a664de2ee0baa5ea6d6f9481fb23e06ab8c7335a93d6404"
+    },
+    {
+      "topic": "regularization",
+      "example": 1,
+      "fixtureSha256": "6f51bb3e71f04fb3b1f3f0cf0b845644257c70cb3166b6d9b9e8774d1cead68a"
+    },
+    {
+      "topic": "reproducibility",
+      "example": 1,
+      "fixtureSha256": "807b10706e2eac6847f863e8b56fe29e92ed05b1bcaa75b47ad5960a06b176e3"
+    },
+    {
+      "topic": "return-print",
+      "example": 1,
+      "fixtureSha256": "0449b464269c713f3b1d3ed24a6b40134003cdc3fa74c4c033975b8f5f585084"
+    },
+    {
+      "topic": "roc-pr",
+      "example": 1,
+      "fixtureSha256": "0c69b3157705af809c6b3e5c857b37b0f7b76342544c975e5c79a511637d6992"
+    },
+    {
+      "topic": "scaling",
+      "example": 1,
+      "fixtureSha256": "6af618febcfa5bfc33c020da78e5ee7529183d6c73421680c23454f7f9edfc25"
+    },
+    {
+      "topic": "scope",
+      "example": 1,
+      "fixtureSha256": "4d0451e24db857408a06549b98c98e74cd461630c7ff290a7d48c77267f74e7a"
+    },
+    {
+      "topic": "sets",
+      "example": 1,
+      "fixtureSha256": "eecfad68578d51ad7adec6ee42be2689f502ef3d450af8b348adc047fb26b0ad"
+    },
+    {
+      "topic": "setup",
+      "example": 1,
+      "fixtureSha256": "46131057a00c9fcd1eec430098831a79605647bdf2cdc0bb85c6874d1d44fbcd"
+    },
+    {
+      "topic": "sorting",
+      "example": 1,
+      "fixtureSha256": "e7b91714314658d84acf8b1aff9ea48e998af3514f591df1c6dfbf4a1ad8fcb9"
+    },
+    {
+      "topic": "split-text",
+      "example": 1,
+      "fixtureSha256": "18b5438b6dc3eb30c521764b38fda71694932004b44d161010b6be33c297bdd0"
+    },
+    {
+      "topic": "split",
+      "example": 1,
+      "fixtureSha256": "6b884f9adb8976b0d373ca38c3f2e819906c6c2bb3315b12d97b070f55211e74"
+    },
+    {
+      "topic": "statistics",
+      "example": 1,
+      "fixtureSha256": "4daf1ce6ccd4868e7fb5c4cd67963dd468b7862e238e7cb922eb9a89c5add7fa"
+    },
+    {
+      "topic": "stratification",
+      "example": 1,
+      "fixtureSha256": "67e7e11f8ba5e47bf70e1437917d1453cb7057c22dbd79666fdf4e73a6028ebb"
+    },
+    {
+      "topic": "string-methods",
+      "example": 1,
+      "fixtureSha256": "524565219ef86a87239df633dfaac727aea7e7c3cf02c556d927192769de4a41"
+    },
+    {
+      "topic": "string-slices",
+      "example": 1,
+      "fixtureSha256": "fd09a8e20f281ac02de61d56948e409509b1ac22bbc297ceccc9c0942643a82b"
+    },
+    {
+      "topic": "strings",
+      "example": 1,
+      "fixtureSha256": "47d3c2d8e5243772ece9e78f0acf62353de046605ea6fb5e83aecf2696880223"
+    },
+    {
+      "topic": "supervised",
+      "example": 1,
+      "fixtureSha256": "602cd7f2cec5e399473074abe19fcfd2c7c99377c18cc8e0852db7b47953228c"
+    },
+    {
+      "topic": "svm",
+      "example": 1,
+      "fixtureSha256": "5f85d15ce63656ffbb1a19803d961ff0bda820dd8a6bcefac82e5606b9ddf639"
+    },
+    {
+      "topic": "tables",
+      "example": 1,
+      "fixtureSha256": "e1421f34af5ca1914489421ac0af26ff5b83fd9e05140058326d5587eddfe6b6"
+    },
+    {
+      "topic": "target",
+      "example": 1,
+      "fixtureSha256": "9e37d8ce1f1a1ee5564408057f973bb490885b3c467f0e6af03d55b295fdfed0"
+    },
+    {
+      "topic": "temporal-split",
+      "example": 1,
+      "fixtureSha256": "0652158f8cb6bb6deb2a9b50c0289836682f3ef14245a61a71ca9791cea3b1d2"
+    },
+    {
+      "topic": "terminal",
+      "example": 1,
+      "fixtureSha256": "8201d11f35026df2c21bbce9115318ed97ed1f60bcb2cb075d9d29aae970f563"
+    },
+    {
+      "topic": "testing",
+      "example": 1,
+      "fixtureSha256": "a460d1161b5c6d6694f4438f0b1f4840bb6b56cd1c6493a3bb63682a1e4b8b2e"
+    },
+    {
+      "topic": "tfidf",
+      "example": 1,
+      "fixtureSha256": "5b2b407ae56b9dada9a0c1923f3494072840f262a67f8c268cc7a09179cb901b"
+    },
+    {
+      "topic": "thresholds",
+      "example": 1,
+      "fixtureSha256": "30404e3e609d9d271d124354542da81e3b4aa32be9259703acf3141b54b239d8"
+    },
+    {
+      "topic": "transformers",
+      "example": 1,
+      "fixtureSha256": "b43838a0920cfb9fefe561d7cbfb987658ea43100cf5c3741bc396164a970793"
+    },
+    {
+      "topic": "truthiness",
+      "example": 1,
+      "fixtureSha256": "4824c20dbf4f5b9da03c489b35db9d69905691afcc8a1d4126f4619427240585"
+    },
+    {
+      "topic": "tuples",
+      "example": 1,
+      "fixtureSha256": "16106601e3fb509d9d0693d6f5fab94fe3ca49228f321c61ef352d98e398b97c"
+    },
+    {
+      "topic": "type-hints",
+      "example": 1,
+      "fixtureSha256": "b6d5e79db3aaae08a348d5f1519b61e562519fb21e26d590ce963608de1d1bec"
+    },
+    {
+      "topic": "types",
+      "example": 1,
+      "fixtureSha256": "bf0292550d811e07de42af41a68a787027d861fa4c2d163581f346e6f988cd12"
+    },
+    {
+      "topic": "types",
+      "example": 2,
+      "fixtureSha256": "9ea40cada4404836d11161538041c5a9462c52c4daa784cd672f7c23c9c247ca"
+    },
+    {
+      "topic": "unittest",
+      "example": 1,
+      "fixtureSha256": "47cfb611c448fa652b1cc7487070c1a5f887b44d6f0371754abdc9a519d44bb2"
+    },
+    {
+      "topic": "unsupervised",
+      "example": 1,
+      "fixtureSha256": "34beb5f603e42153ac219d209f79c3cc365e940eb0e403da246c829b59756362"
+    },
+    {
+      "topic": "validation",
+      "example": 1,
+      "fixtureSha256": "91d20c3a8e9a8fe35600f55596daa9ca88b121818f10d9343616491b3b8254e0"
+    },
+    {
+      "topic": "variables",
+      "example": 1,
+      "fixtureSha256": "be407a79cdfb652b967ad8ad386082e56b1dbe0657a78131ad43c13f4a448ca5"
+    },
+    {
+      "topic": "variables",
+      "example": 2,
+      "fixtureSha256": "2683c00809c26424ca0b2455211c92efbcb1f114e89abbb1c26d466b1f41163e"
+    },
+    {
+      "topic": "venv",
+      "example": 1,
+      "fixtureSha256": "ed7abfabbec5e513d8c1bd65bdb6faa83cafbf49fc249916d0d63987a4c52d59"
+    }
+  ]
+}

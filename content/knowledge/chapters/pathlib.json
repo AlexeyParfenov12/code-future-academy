@@ -1,0 +1,28 @@
+{
+  "id": "pathlib",
+  "title": "Пути и папки: pathlib",
+  "group": "Файлы и качество кода",
+  "track": "python",
+  "level": "beginner",
+  "summary": "Создание путей, чтение файлов и различие абсолютного и относительного адреса.",
+  "lessons": [
+    "M01-L10"
+  ],
+  "prerequisites": [
+    "strings"
+  ],
+  "related": [
+    "file-text",
+    "csv"
+  ],
+  "content": "## Ключевая идея\n\nPath представляет путь объектом. Оператор / добавляет компонент с учётом операционной системы. Путь сам по себе не создаёт файл: создание папки, чтение и запись — отдельные действия, которые могут завершиться ошибкой.\n\n## Как это работает\n\nresolve() получает абсолютное расположение; suffix и stem помогают разобрать имя. Для относительных путей важен текущий каталог. Папку данных лучше задавать явно, а перед записью создавать родителей через mkdir(parents=True, exist_ok=True).\n\n## Разобранный пример\n\n```python\nfrom pathlib import Path\nfrom tempfile import TemporaryDirectory\nwith TemporaryDirectory() as folder:\n    path = Path(folder) / \"report.txt\"\n    path.write_text(\"готово\", encoding=\"utf-8\")\n    print(path.stem, path.suffix)\n    print(path.read_text(encoding=\"utf-8\"))\n```\n\nРезультат:\n\n```text\nreport .txt\nготово\n```\n\n## Почему получается такой результат\n\nВременная папка изолирует пример от пользовательских документов. После записи читается ровно тот же путь с одинаковой кодировкой. При выходе из контекста временные данные удаляются.\n\n## Границы и частые ошибки\n\nНе проверяйте существование файла вместо обработки ошибки чтения: между проверкой и чтением состояние может измениться. Не принимайте произвольный путь пользователя как разрешение читать любой файл сервера.\n\n## Применение в курсе\n\nВ проекте храните входные CSV отдельно от результатов. Передайте путь аргументом функции, чтобы один и тот же анализ работал с разными наборами данных.\n",
+  "examples": [
+    {
+      "code": "from pathlib import Path\nfrom tempfile import TemporaryDirectory\nwith TemporaryDirectory() as folder:\n    path = Path(folder) / \"report.txt\"\n    path.write_text(\"готово\", encoding=\"utf-8\")\n    print(path.stem, path.suffix)\n    print(path.read_text(encoding=\"utf-8\"))",
+      "input": "",
+      "expected": "report .txt\nготово",
+      "sha256": "07455860ee8bbcabf676ce6834b550765c06a8841d0ad6e54de48ba272b99b83"
+    }
+  ],
+  "order": 58
+}

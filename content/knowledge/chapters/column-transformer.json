@@ -1,0 +1,29 @@
+{
+  "id": "column-transformer",
+  "title": "Разная обработка разных столбцов",
+  "group": "Эксперимент и данные",
+  "track": "ai",
+  "level": "intermediate",
+  "summary": "ColumnTransformer для чисел и категорий в одной таблице.",
+  "lessons": [
+    "M03-L03"
+  ],
+  "prerequisites": [
+    "pipeline",
+    "encoding"
+  ],
+  "related": [
+    "encoding",
+    "pipeline"
+  ],
+  "content": "## Ключевая идея\n\nЧисловые и категориальные столбцы требуют разных преобразований. ColumnTransformer применяет к указанным столбцам отдельные процессы и объединяет результаты. Это делает подготовку явной и воспроизводимой.\n\n## Как это работает\n\nКаждый этап задаётся именем, преобразователем и набором колонок. Невыбранные столбцы по умолчанию удаляются. Порядок выходных признаков определяется этапами, а не исходным расположением всех колонок.\n\n## Разобранный пример\n\n```python\nimport pandas as pd\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import StandardScaler, OneHotEncoder\ndf = pd.DataFrame({\"age\": [10, 20], \"city\": [\"A\", \"B\"]})\ntransform = ColumnTransformer([(\"num\", StandardScaler(), [\"age\"]), (\"cat\", OneHotEncoder(sparse_output=False), [\"city\"])])\nprint(transform.fit_transform(df).shape)\n```\n\nРезультат:\n\n```text\n(2, 3)\n```\n\n## Почему получается такой результат\n\nОдин числовой столбец масштабируется, один категориальный превращается в два индикатора. Поэтому две строки дают матрицу формы (2,3). get_feature_names_out помогает сопоставить новые столбцы с источниками.\n\n## Границы и частые ошибки\n\nНе включайте целевую переменную среди remainder=\"passthrough\". Новые категории и пропуски должны иметь согласованные правила. Сохраняйте имена столбцов и схему входа.\n\n## Применение в курсе\n\nДля проекта с таблицей создайте числовой и категориальный списки, затем подключите ColumnTransformer перед моделью в Pipeline. Проверьте форму до обучения.\n",
+  "examples": [
+    {
+      "code": "import pandas as pd\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import StandardScaler, OneHotEncoder\ndf = pd.DataFrame({\"age\": [10, 20], \"city\": [\"A\", \"B\"]})\ntransform = ColumnTransformer([(\"num\", StandardScaler(), [\"age\"]), (\"cat\", OneHotEncoder(sparse_output=False), [\"city\"])])\nprint(transform.fit_transform(df).shape)",
+      "input": "",
+      "expected": "(2, 3)",
+      "sha256": "36b1e599fda62125f33d097dbc63cf66d73227eec8fa52d625835dc08e99ae20"
+    }
+  ],
+  "order": 92
+}

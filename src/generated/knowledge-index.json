@@ -1,0 +1,5789 @@
+{
+  "topics": [
+    {
+      "id": "setup",
+      "title": "Интерпретатор и первый запуск",
+      "group": "Начало работы",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Что устанавливается на компьютер и как связаны редактор, интерпретатор и файл программы.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [],
+      "related": [
+        "terminal"
+      ],
+      "order": 1,
+      "contentUrl": "/content/knowledge/topics/setup.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-venv",
+        "pip",
+        "yandex-handbook-python",
+        "vscode",
+        "pycharm",
+        "colab"
+      ],
+      "keywords": "Jupyter Python REPL import main.py print python python.py sys sys.version_info.major text version"
+    },
+    {
+      "id": "terminal",
+      "title": "Терминал, аргументы и рабочая папка",
+      "group": "Начало работы",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Почему относительный путь зависит от места запуска, а аргументы — от команды.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [],
+      "related": [
+        "pathlib",
+        "main-guard"
+      ],
+      "order": 2,
+      "contentUrl": "/content/knowledge/topics/terminal.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "vscode"
+      ],
+      "keywords": "CSV Path PowerShell PurePosixPath Python argparse bash csv data from import path path.as_posix path.suffix pathlib print python sys.argv text tickets.csv"
+    },
+    {
+      "id": "venv",
+      "title": "Виртуальное окружение",
+      "group": "Начало работы",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Изоляция библиотек проекта и выбор правильного интерпретатора.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [],
+      "related": [
+        "pip",
+        "notebooks"
+      ],
+      "order": 3,
+      "contentUrl": "/content/knowledge/topics/venv.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-venv",
+        "pip",
+        "vscode",
+        "pycharm",
+        "uv"
+      ],
+      "keywords": "Git Jupyter Linux Python Scripts True Windows bin import isinstance macOS pandas pip print python python.exe str sys sys.base_prefix sys.prefix sys.version_info.major text venv version"
+    },
+    {
+      "id": "pip",
+      "title": "Зависимости и установка пакетов",
+      "group": "Начало работы",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Почему python -m pip надёжнее случайной команды pip.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [],
+      "related": [
+        "venv",
+        "reproducibility"
+      ],
+      "order": 4,
+      "contentUrl": "/content/knowledge/topics/pip.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-venv",
+        "pip",
+        "uv"
+      ],
+      "keywords": "Python True bool check csv from import importlib.metadata install json learn numpy pip print python requirements.txt scikit sklearn text version"
+    },
+    {
+      "id": "notebooks",
+      "title": "Блокноты Jupyter и порядок выполнения",
+      "group": "Начало работы",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Почему видимый порядок ячеек может отличаться от состояния памяти.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [],
+      "related": [
+        "venv",
+        "reproducibility"
+      ],
+      "order": 5,
+      "contentUrl": "/content/knowledge/topics/notebooks.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "vscode",
+        "jupyter",
+        "colab"
+      ],
+      "keywords": "All Python Restart Run and doubled print python text value"
+    },
+    {
+      "id": "git",
+      "title": "Версии проекта и Git",
+      "group": "Начало работы",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Изменения, коммиты и сохранение воспроизводимого состояния работы.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [],
+      "related": [
+        "reproducibility",
+        "documentation"
+      ],
+      "order": 6,
+      "contentUrl": "/content/knowledge/topics/git.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "git",
+        "dvc"
+      ],
+      "keywords": "API Git README True diff encode first from git gitignore hashlib hexdigest import len print python second sha256 status text"
+    },
+    {
+      "id": "variables",
+      "title": "Переменные и присваивание",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как имена связываются со значениями, что делает присваивание и почему второе имя не создаёт копию объекта.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "setup"
+      ],
+      "related": [
+        "types",
+        "mutability",
+        "scope"
+      ],
+      "order": 7,
+      "contentUrl": "/content/knowledge/topics/variables.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-intro",
+        "yandex-python",
+        "stepik-beginner",
+        "python-visualizer"
+      ],
+      "keywords": "NameError Python True append b.append correct input list percent price print python sum text total"
+    },
+    {
+      "id": "types",
+      "title": "Типы данных и допустимые операции",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Чем отличаются int, float, str и bool и как тип влияет на смысл операций.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "variables"
+      ],
+      "related": [
+        "conversion",
+        "truthiness",
+        "none"
+      ],
+      "order": 8,
+      "contentUrl": "/content/knowledge/topics/types.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-intro",
+        "python-functions"
+      ],
+      "keywords": "False Python True __name__ bool float int isinstance print python str text type"
+    },
+    {
+      "id": "output",
+      "title": "Вывод: print, разделители и формат ответа",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как сформировать точный stdout, разделять значения и не путать вывод с возвращаемым результатом.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [],
+      "related": [
+        "formatting",
+        "return-print"
+      ],
+      "order": 9,
+      "contentUrl": "/content/knowledge/topics/output.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-functions",
+        "python-io",
+        "yandex-python",
+        "pythontutor-inout"
+      ],
+      "keywords": "None True end iSMART print python sep status text value"
+    },
+    {
+      "id": "input",
+      "title": "Чтение входных данных",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Что возвращает input, как читать несколько чисел и почему формат ввода является частью условия.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "output"
+      ],
+      "related": [
+        "conversion",
+        "split-text",
+        "exceptions"
+      ],
+      "order": 10,
+      "contentUrl": "/content/knowledge/topics/input.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-functions",
+        "yandex-python",
+        "pythontutor-inout"
+      ],
+      "keywords": "CSV EOFError ValueError float input int left map minutes print python right split str strip text"
+    },
+    {
+      "id": "conversion",
+      "title": "Преобразование и проверка типов",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Явное преобразование текста в число, проверка ошибок и ограничения int, float и bool.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "input",
+        "types"
+      ],
+      "related": [
+        "types",
+        "exceptions",
+        "pandas-missing"
+      ],
+      "order": 11,
+      "contentUrl": "/content/knowledge/topics/conversion.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-intro",
+        "python-functions",
+        "pythontutor-inout"
+      ],
+      "keywords": "CSV False None True ValueError bool except false float for int lower nan print python str text true try"
+    },
+    {
+      "id": "arithmetic",
+      "title": "Арифметика, среднее и проценты",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Порядок действий, деление, остаток и различие между долей, процентом и процентными пунктами.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "types"
+      ],
+      "related": [
+        "float-precision",
+        "statistics",
+        "metrics"
+      ],
+      "order": 12,
+      "contentUrl": "/content/knowledge/topics/arithmetic.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-intro",
+        "pythontutor-inout",
+        "desmos"
+      ],
+      "keywords": "new old print python round seconds text"
+    },
+    {
+      "id": "float-precision",
+      "title": "Точность float и округление",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Приближённые числа, сравнение с допуском и десятичная арифметика.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "arithmetic"
+      ],
+      "related": [
+        "arithmetic",
+        "comparisons"
+      ],
+      "order": 13,
+      "contentUrl": "/content/knowledge/topics/float-precision.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-io"
+      ],
+      "keywords": "Decimal False Python True decimal float from import isclose math math.isclose print python text"
+    },
+    {
+      "id": "comparisons",
+      "title": "Сравнение значений и объектов",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Разница == и is, цепочки сравнений и принадлежность набору.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "arithmetic"
+      ],
+      "related": [
+        "none",
+        "conditions"
+      ],
+      "order": 14,
+      "contentUrl": "/content/knowledge/topics/comparisons.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-types"
+      ],
+      "keywords": "False NaN None True print python score text"
+    },
+    {
+      "id": "truthiness",
+      "title": "Истинность значений",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Какие объекты считаются ложными и почему строка \"0\" истинна.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "types"
+      ],
+      "related": [
+        "none",
+        "logic"
+      ],
+      "order": 15,
+      "contentUrl": "/content/knowledge/topics/truthiness.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-types"
+      ],
+      "keywords": "False None NumPy Python True all any bool count else for not print python text value"
+    },
+    {
+      "id": "none",
+      "title": "None и отсутствие значения",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как отличать отсутствующее значение от нуля, пустой строки и False.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "types"
+      ],
+      "related": [
+        "truthiness",
+        "pandas-missing"
+      ],
+      "order": 16,
+      "contentUrl": "/content/knowledge/topics/none.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-types"
+      ],
+      "keywords": "CSV None def else first for not pandas print python return text value values"
+    },
+    {
+      "id": "indentation",
+      "title": "Отступы, блоки и комментарии",
+      "group": "Основы Python",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как Python определяет тело условия, цикла и функции.",
+      "lessons": [
+        "M01-L03"
+      ],
+      "prerequisites": [
+        "setup"
+      ],
+      "related": [
+        "conditions",
+        "loops",
+        "functions"
+      ],
+      "order": 17,
+      "contentUrl": "/content/knowledge/topics/indentation.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-intro"
+      ],
+      "keywords": "Python TabError def for print python text value"
+    },
+    {
+      "id": "strings",
+      "title": "Строки и подготовка текста",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Неизменяемый текст, индексы, Unicode и аккуратная нормализация.",
+      "lessons": [
+        "M01-L03",
+        "M03-L14"
+      ],
+      "prerequisites": [
+        "types"
+      ],
+      "related": [
+        "string-slices",
+        "string-methods",
+        "split-text",
+        "tfidf"
+      ],
+      "order": 18,
+      "contentUrl": "/content/knowledge/topics/strings.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-intro",
+        "stepik-beginner"
+      ],
+      "keywords": "Python True Unicode clean join len lower message message.startswith message.strip print python replace split strip text"
+    },
+    {
+      "id": "string-slices",
+      "title": "Индексы и срезы строк",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Полуинтервал start:stop:step и безопасное получение фрагментов.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "strings"
+      ],
+      "related": [
+        "strings",
+        "split-text"
+      ],
+      "order": 19,
+      "contentUrl": "/content/knowledge/topics/string-slices.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-intro"
+      ],
+      "keywords": "IndexError NOHTYP PTO PYTHON YTH print python text"
+    },
+    {
+      "id": "string-methods",
+      "title": "Методы строк и нормализация категорий",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "strip, casefold, replace, startswith и проверяемое преобразование текста.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "strings"
+      ],
+      "related": [
+        "strings",
+        "cleaning"
+      ],
+      "order": 20,
+      "contentUrl": "/content/knowledge/topics/string-methods.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-types",
+        "python-re",
+        "pandas-text"
+      ],
+      "keywords": "PASS Pass REQ Unicode casefold for lower pass print python removeprefix replace startswith strip text values x.strip"
+    },
+    {
+      "id": "split-text",
+      "title": "split, join и разбор строки",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Разделение текста на поля без потери понимания формата.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "string-methods"
+      ],
+      "related": [
+        "input",
+        "csv"
+      ],
+      "order": 21,
+      "contentUrl": "/content/knowledge/topics/split-text.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-types"
+      ],
+      "keywords": "CSV csv.reader join map print python split str text"
+    },
+    {
+      "id": "formatting",
+      "title": "f-строки и форматирование чисел",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Читаемые отчёты, точность вывода и отделение данных от оформления.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "strings"
+      ],
+      "related": [
+        "output",
+        "float-precision"
+      ],
+      "order": 22,
+      "contentUrl": "/content/knowledge/topics/formatting.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-io"
+      ],
+      "keywords": "R0007 eval print python ratio text"
+    },
+    {
+      "id": "lists",
+      "title": "Списки и изменение последовательности",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Индексы, append, удаление и различие между изменением списка и созданием нового.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "types"
+      ],
+      "related": [
+        "mutability",
+        "list-slices",
+        "comprehensions"
+      ],
+      "order": 23,
+      "contentUrl": "/content/knowledge/topics/lists.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-data",
+        "yandex-python",
+        "stepik-beginner"
+      ],
+      "keywords": "DataFrame None a.append append b.extend extend items len ordered pop print python rows scores sorted text"
+    },
+    {
+      "id": "list-slices",
+      "title": "Срезы списков и копирование",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Новый внешний список не всегда означает независимость вложенных объектов.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "lists"
+      ],
+      "related": [
+        "mutability",
+        "lists"
+      ],
+      "order": 24,
+      "contentUrl": "/content/knowledge/topics/list-slices.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-types"
+      ],
+      "keywords": "False append copy deepcopy list original print python text values"
+    },
+    {
+      "id": "tuples",
+      "title": "Кортежи и распаковка",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Неизменяемая последовательность для фиксированного набора значений.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "lists"
+      ],
+      "related": [
+        "functions",
+        "enumerate-zip"
+      ],
+      "order": 25,
+      "contentUrl": "/content/knowledge/topics/tuples.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-data"
+      ],
+      "keywords": "__name__ columns dataclass first last middle print python rows text tuple type"
+    },
+    {
+      "id": "sets",
+      "title": "Множества и уникальные значения",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Принадлежность, пересечение и отличие уникальности от частоты.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "lists"
+      ],
+      "related": [
+        "dictionaries",
+        "counter"
+      ],
+      "order": 26,
+      "contentUrl": "/content/knowledge/topics/sets.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-data"
+      ],
+      "keywords": "Counter actual channel print python required role seen set sorted test text train"
+    },
+    {
+      "id": "dictionaries",
+      "title": "Словари и поля объекта",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Доступ по ключу, значения по умолчанию и проверка обязательных полей.",
+      "lessons": [
+        "M01-L09"
+      ],
+      "prerequisites": [
+        "lists"
+      ],
+      "related": [
+        "dictionary-patterns",
+        "counter",
+        "dataclasses"
+      ],
+      "order": 27,
+      "contentUrl": "/content/knowledge/topics/dictionaries.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-data",
+        "python-types",
+        "python-collections",
+        "yandex-handbook-python"
+      ],
+      "keywords": "False KeyError category counts counts.get for get items print priority python text ticket ticket.get"
+    },
+    {
+      "id": "dictionary-patterns",
+      "title": "Проверка схемы словаря",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Обязательные поля, допустимые ключи и различие отсутствия и пустоты.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "dictionaries"
+      ],
+      "related": [
+        "dictionaries",
+        "types",
+        "testing"
+      ],
+      "order": 28,
+      "contentUrl": "/content/knowledge/topics/dictionary-patterns.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-types"
+      ],
+      "keywords": "False and bool get isinstance print python required role sorted str strip text ticket ticket.get ticket.keys"
+    },
+    {
+      "id": "mutability",
+      "title": "Изменяемость и общие ссылки",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Почему изменение объекта видно через другое имя и как выбирать копию.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "lists",
+        "variables"
+      ],
+      "related": [
+        "variables",
+        "list-slices",
+        "parameters"
+      ],
+      "order": 29,
+      "contentUrl": "/content/knowledge/topics/mutability.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-data",
+        "python-dataclasses",
+        "python-visualizer"
+      ],
+      "keywords": "append bad dict for good list print python range set text"
+    },
+    {
+      "id": "comprehensions",
+      "title": "Генераторы списков и словарей",
+      "group": "Строки и коллекции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Компактное преобразование и фильтрация без скрытых побочных действий.",
+      "lessons": [
+        "M01-L08"
+      ],
+      "prerequisites": [
+        "lists",
+        "loops"
+      ],
+      "related": [
+        "loops",
+        "generators"
+      ],
+      "order": 30,
+      "contentUrl": "/content/knowledge/topics/comprehensions.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-data"
+      ],
+      "keywords": "List append comprehension for len print python text values word"
+    },
+    {
+      "id": "conditions",
+      "title": "Условия и порядок ветвей",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как if, elif и else выбирают действие и почему порядок порогов меняет результат.",
+      "lessons": [
+        "M01-L06"
+      ],
+      "prerequisites": [
+        "comparisons"
+      ],
+      "related": [
+        "logic",
+        "comparisons",
+        "testing"
+      ],
+      "order": 31,
+      "contentUrl": "/content/knowledge/topics/conditions.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-flow",
+        "yandex-handbook-python"
+      ],
+      "keywords": "False Python True confidence elif else print python score text"
+    },
+    {
+      "id": "logic",
+      "title": "Логические операции и короткое замыкание",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "and, or и not: проверка требований и защита от недопустимой операции.",
+      "lessons": [
+        "M01-L06",
+        "M02-L15"
+      ],
+      "prerequisites": [
+        "conditions"
+      ],
+      "related": [
+        "truthiness",
+        "none",
+        "conditions"
+      ],
+      "order": 32,
+      "contentUrl": "/content/knowledge/topics/logic.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-flow"
+      ],
+      "keywords": "False Python True and bool name not print python text values"
+    },
+    {
+      "id": "loops",
+      "title": "Циклы и накопители",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Перебор, сумма, счётчик и условие завершения без лишнего повторения кода.",
+      "lessons": [
+        "M01-L07"
+      ],
+      "prerequisites": [
+        "conditions"
+      ],
+      "related": [
+        "loop-control",
+        "enumerate-zip",
+        "aggregation"
+      ],
+      "order": 33,
+      "contentUrl": "/content/knowledge/topics/loops.json",
+      "readingMinutes": 2,
+      "exampleCount": 2,
+      "sourceIds": [
+        "python-flow",
+        "yandex-python",
+        "yandex-handbook-python",
+        "stepik-beginner"
+      ],
+      "keywords": "count for print python range remaining score text total while"
+    },
+    {
+      "id": "loop-control",
+      "title": "break, continue и завершение поиска",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как остановить цикл или пропустить один элемент, сохранив смысл алгоритма.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "loops"
+      ],
+      "related": [
+        "loops",
+        "functions"
+      ],
+      "order": 34,
+      "contentUrl": "/content/knowledge/topics/loop-control.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-flow"
+      ],
+      "keywords": "break continue else for not print python return text while"
+    },
+    {
+      "id": "enumerate-zip",
+      "title": "enumerate и zip",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Позиция элемента, синхронный обход и проверка одинаковой длины.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "loops",
+        "lists"
+      ],
+      "related": [
+        "iterators",
+        "metrics"
+      ],
+      "order": 35,
+      "contentUrl": "/content/knowledge/topics/enumerate-zip.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-functions"
+      ],
+      "keywords": "Python True actual enumerate for number predicted print python strict text y_pred y_true zip"
+    },
+    {
+      "id": "sorting",
+      "title": "Сортировка и ключ сравнения",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "sorted, list.sort, устойчивость и выбор порядка по смыслу.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "lists"
+      ],
+      "related": [
+        "tuples",
+        "enumerate-zip"
+      ],
+      "order": 36,
+      "contentUrl": "/content/knowledge/topics/sorting.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-data",
+        "python-functions"
+      ],
+      "keywords": "None Python item key lambda list.sort print python reverse rows sorted text"
+    },
+    {
+      "id": "aggregation",
+      "title": "Сумма, количество и взвешенное среднее",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как выбрать нужный агрегат и не усреднять проценты неверно.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "loops"
+      ],
+      "related": [
+        "statistics",
+        "metrics"
+      ],
+      "order": 37,
+      "contentUrl": "/content/knowledge/topics/aggregation.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-functions",
+        "python-collections",
+        "python-statistics"
+      ],
+      "keywords": "correct for groups len print python round sum text total"
+    },
+    {
+      "id": "functions",
+      "title": "Функции: вход, результат и повторное использование",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как выделить вычисление в функцию и проверить его независимо от ввода и печати.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "loops"
+      ],
+      "related": [
+        "parameters",
+        "scope",
+        "return-print",
+        "unittest"
+      ],
+      "order": 38,
+      "contentUrl": "/content/knowledge/topics/functions.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-flow",
+        "yandex-python",
+        "yandex-handbook-python",
+        "stepik-beginner",
+        "python-visualizer"
+      ],
+      "keywords": "None ValueError correct def input not percent print python raise return text total"
+    },
+    {
+      "id": "parameters",
+      "title": "Параметры и значения по умолчанию",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Позиционные и именованные аргументы, keyword-only и безопасный default.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "functions"
+      ],
+      "related": [
+        "functions",
+        "mutability"
+      ],
+      "order": 39,
+      "contentUrl": "/content/knowledge/topics/parameters.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-flow"
+      ],
+      "keywords": "Default None add_note def default kwargs notes notes.append print priority python return text"
+    },
+    {
+      "id": "scope",
+      "title": "Области видимости и локальные имена",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Почему переменная внутри функции не обязательно меняет внешнее имя.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "functions"
+      ],
+      "related": [
+        "functions",
+        "notebooks"
+      ],
+      "order": 40,
+      "contentUrl": "/content/knowledge/topics/scope.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-classes",
+        "python-visualizer"
+      ],
+      "keywords": "Python UnboundLocalError calculate def global print python return text total"
+    },
+    {
+      "id": "return-print",
+      "title": "return и print: результат и представление",
+      "group": "Логика и функции",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Почему напечатанное значение не становится возвращённым ответом функции.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "functions"
+      ],
+      "related": [
+        "functions",
+        "output"
+      ],
+      "order": 41,
+      "contentUrl": "/content/knowledge/topics/return-print.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-flow"
+      ],
+      "keywords": "None def double print python result return show stdout text"
+    },
+    {
+      "id": "classes",
+      "title": "Объекты и классы",
+      "group": "Устройство программ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Состояние экземпляра, методы и простая модель поведения.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "functions"
+      ],
+      "related": [
+        "dataclasses",
+        "scope"
+      ],
+      "order": 42,
+      "contentUrl": "/content/knowledge/topics/classes.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-classes",
+        "python-dataclasses"
+      ],
+      "keywords": "Counter __init__ class def first first.increment first.value fit increment predict print python second second.value self self.value sklearn text value"
+    },
+    {
+      "id": "dataclasses",
+      "title": "Записи данных: dataclass",
+      "group": "Устройство программ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Именованные поля вместо неясных позиций в списке.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "classes"
+      ],
+      "related": [
+        "classes",
+        "dictionaries"
+      ],
+      "order": 43,
+      "contentUrl": "/content/knowledge/topics/dataclasses.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-dataclasses"
+      ],
+      "keywords": "Student True asdict class dataclass dataclasses default_factory field from frozen import int list name print python score str student student.score text"
+    },
+    {
+      "id": "iterators",
+      "title": "Итерируемые объекты и итераторы",
+      "group": "Устройство программ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Что делает цикл for и почему обход можно исчерпать.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "loops"
+      ],
+      "related": [
+        "generators",
+        "loops"
+      ],
+      "order": 44,
+      "contentUrl": "/content/knowledge/topics/iterators.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-classes",
+        "python-itertools"
+      ],
+      "keywords": "CSV StopIteration for iter list next print python text values"
+    },
+    {
+      "id": "generators",
+      "title": "Генераторы и yield",
+      "group": "Устройство программ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Ленивое получение последовательности без готового списка.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "iterators"
+      ],
+      "related": [
+        "iterators",
+        "complexity"
+      ],
+      "order": 45,
+      "contentUrl": "/content/knowledge/topics/generators.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-classes",
+        "python-itertools"
+      ],
+      "keywords": "def for items list print python range squares sum text value yield"
+    },
+    {
+      "id": "complexity",
+      "title": "Сложность и стоимость алгоритма",
+      "group": "Устройство программ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Как размер входа влияет на число операций и потребление памяти.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "loops"
+      ],
+      "related": [
+        "sets",
+        "numpy-arrays"
+      ],
+      "order": 46,
+      "contentUrl": "/content/knowledge/topics/complexity.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-data"
+      ],
+      "keywords": "CSV for pairs print python range set steps sum text"
+    },
+    {
+      "id": "counter",
+      "title": "Подсчёты: Counter и defaultdict",
+      "group": "Устройство программ",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Частоты категорий и группировка значений без лишних условий.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "dictionaries"
+      ],
+      "related": [
+        "dictionaries",
+        "imbalance"
+      ],
+      "order": 47,
+      "contentUrl": "/content/knowledge/topics/counter.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-collections"
+      ],
+      "keywords": "Counter append collections defaultdict for from groups import list most_common print python sequence text word"
+    },
+    {
+      "id": "itertools",
+      "title": "Комбинирование последовательностей",
+      "group": "Устройство программ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "chain, product и islice для обработки потоков и комбинаций.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "iterators"
+      ],
+      "related": [
+        "iterators",
+        "hyperparameters"
+      ],
+      "order": 48,
+      "contentUrl": "/content/knowledge/topics/itertools.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-itertools"
+      ],
+      "keywords": "chain from groupby import islice itertools list print product python text"
+    },
+    {
+      "id": "regex",
+      "title": "Поиск по шаблону: регулярные выражения",
+      "group": "Устройство программ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Группы, повторения и границы применимости re.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "strings"
+      ],
+      "related": [
+        "string-methods",
+        "tfidf"
+      ],
+      "order": 49,
+      "contentUrl": "/content/knowledge/topics/regex.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-re"
+      ],
+      "keywords": "CSV Python csv fullmatch import int map parts print python re.findall search split sum text"
+    },
+    {
+      "id": "datetime",
+      "title": "Даты, время и часовые пояса",
+      "group": "Устройство программ",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Разбор даты и расчёт интервала без ручной арифметики.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "types"
+      ],
+      "related": [
+        "temporal-split",
+        "csv"
+      ],
+      "order": 50,
+      "contentUrl": "/content/knowledge/topics/datetime.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-datetime"
+      ],
+      "keywords": "date date.fromisoformat datetime days end from import print python start text timedelta timestamp"
+    },
+    {
+      "id": "exceptions",
+      "title": "Исключения и валидация",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Узкий try/except, осмысленные ошибки и сохранение причины сбоя.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "conditions"
+      ],
+      "related": [
+        "debugging",
+        "assertions"
+      ],
+      "order": 51,
+      "contentUrl": "/content/knowledge/topics/exceptions.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-exceptions"
+      ],
+      "keywords": "Exception KeyError SyntaxError ValueError assert assertions continue count else except for int pass print python raise text try"
+    },
+    {
+      "id": "debugging",
+      "title": "Отладка: от симптома к причине",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Traceback, наблюдение значений и минимальный воспроизводимый пример.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "exceptions"
+      ],
+      "related": [
+        "exceptions",
+        "assertions"
+      ],
+      "order": 52,
+      "contentUrl": "/content/knowledge/topics/debugging.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-exceptions",
+        "vscode",
+        "pycharm",
+        "ruff"
+      ],
+      "keywords": "Python except for int print python raw repr sum text traceback type value values"
+    },
+    {
+      "id": "assertions",
+      "title": "Утверждения и инварианты",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Проверка предположений внутри программы и границы assert.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "functions"
+      ],
+      "related": [
+        "unittest",
+        "leakage"
+      ],
+      "order": 53,
+      "contentUrl": "/content/knowledge/topics/assertions.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-exceptions",
+        "python-unittest",
+        "pytest"
+      ],
+      "keywords": "AssertionError assert average def len math.isclose print python result return sum test text train values"
+    },
+    {
+      "id": "unittest",
+      "title": "Автоматические проверки: unittest",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Набор проверяемых случаев вместо одного ручного запуска.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "functions",
+        "assertions"
+      ],
+      "related": [
+        "functions",
+        "assertions"
+      ],
+      "order": 54,
+      "contentUrl": "/content/knowledge/topics/unittest.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-unittest",
+        "pytest"
+      ],
+      "keywords": "TestCase TotalTests True assertEqual assertRaises class def import io.StringIO print python result result.testsRun result.wasSuccessful run runner self self.assertEqual stream sum test test_empty test_values text unittest unittest.TestCase unittest.TextTestRunner unittest.defaultTestLoader.loadTestsFromTestCase"
+    },
+    {
+      "id": "type-hints",
+      "title": "Аннотации типов",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как описать контракт функции и не спутать подсказку с проверкой.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "functions"
+      ],
+      "related": [
+        "functions",
+        "none"
+      ],
+      "order": 55,
+      "contentUrl": "/content/knowledge/topics/type-hints.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-typing",
+        "fastapi"
+      ],
+      "keywords": "Any DataFrame None Python True def float int list print python return str sum text total total.__annotations__ values"
+    },
+    {
+      "id": "modules",
+      "title": "Модули, пакеты и import",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как разнести программу по файлам и понять, откуда берётся импорт.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "functions"
+      ],
+      "related": [
+        "main-guard",
+        "venv"
+      ],
+      "order": 56,
+      "contentUrl": "/content/knowledge/topics/modules.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-modules"
+      ],
+      "keywords": "Counter Python aba collections from import math math.isqrt math.py print python sys.modules sys.path text"
+    },
+    {
+      "id": "main-guard",
+      "title": "Точка входа: if __name__",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Разделение запуска программы и повторного использования её функций.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "modules"
+      ],
+      "related": [
+        "modules",
+        "pathlib"
+      ],
+      "order": 57,
+      "contentUrl": "/content/knowledge/topics/main-guard.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-modules"
+      ],
+      "keywords": "__main__ __name__ def main print python return sum text total values"
+    },
+    {
+      "id": "pathlib",
+      "title": "Пути и папки: pathlib",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Создание путей, чтение файлов и различие абсолютного и относительного адреса.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "strings"
+      ],
+      "related": [
+        "file-text",
+        "csv"
+      ],
+      "order": 58,
+      "contentUrl": "/content/knowledge/topics/pathlib.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-pathlib"
+      ],
+      "keywords": "CSV Path TemporaryDirectory True encoding exist_ok folder from import mkdir parents path path.read_text path.stem path.suffix path.write_text pathlib print python report report.txt resolve stem suffix tempfile text txt utf with"
+    },
+    {
+      "id": "file-text",
+      "title": "Текстовые файлы и кодировка",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Чтение и запись через with без утечки открытых файлов.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "exceptions"
+      ],
+      "related": [
+        "pathlib",
+        "csv",
+        "json"
+      ],
+      "order": 59,
+      "contentUrl": "/content/knowledge/topics/file-text.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-io",
+        "python-csv",
+        "python-pathlib"
+      ],
+      "keywords": "CSV Path Path.read_text TemporaryDirectory UTF directory encoding from import len lines note.txt path path.read_text path.write_text pathlib print python splitlines tempfile text utf with write_text"
+    },
+    {
+      "id": "json",
+      "title": "JSON и обмен структурированными данными",
+      "group": "Файлы и качество кода",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Различие текста JSON и объектов Python, типы и ошибки сериализации.",
+      "lessons": [
+        "M01-L10"
+      ],
+      "prerequisites": [
+        "dictionaries"
+      ],
+      "related": [
+        "dictionaries",
+        "file-text",
+        "dataclasses"
+      ],
+      "order": 60,
+      "contentUrl": "/content/knowledge/topics/json.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-io",
+        "python-json"
+      ],
+      "keywords": "False JSON NaN None Python True allow_nan count dump dumps ensure_ascii float import json json.dumps json.loads load loads null print python record text true value"
+    },
+    {
+      "id": "csv",
+      "title": "CSV: разделители, кавычки и типы",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Почему текстовую таблицу нельзя надёжно читать простым split по запятой.",
+      "lessons": [
+        "M01-L15"
+      ],
+      "prerequisites": [
+        "file-text",
+        "lists"
+      ],
+      "related": [
+        "file-text",
+        "tables",
+        "pandas-indexing"
+      ],
+      "order": 61,
+      "contentUrl": "/content/knowledge/topics/csv.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-csv",
+        "pandas",
+        "duckdb"
+      ],
+      "keywords": "CSV DictReader Python StringIO csv csv.DictReader from import int list name newline pandas.read_csv print python rows score sep split text"
+    },
+    {
+      "id": "tables",
+      "title": "Таблица: объект, столбец и единица наблюдения",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как читать DataFrame и не путать число строк с числом уникальных объектов.",
+      "lessons": [
+        "M01-L12"
+      ],
+      "prerequisites": [
+        "dictionaries"
+      ],
+      "related": [
+        "pandas-indexing",
+        "cleaning",
+        "dataset"
+      ],
+      "order": 62,
+      "contentUrl": "/content/knowledge/topics/tables.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pandas",
+        "pandas-index",
+        "pandas-merge",
+        "pandas-text",
+        "jupyter",
+        "duckdb",
+        "sqlite"
+      ],
+      "keywords": "DataFrame columns df.columns.tolist df.shape dtypes hours import nunique pandas pd.DataFrame print python shape test text train"
+    },
+    {
+      "id": "cleaning",
+      "title": "Качество данных и обоснованная очистка",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Проверки пропусков, повторов, диапазонов и категорий с сохранением смысла источника.",
+      "lessons": [
+        "M01-L13",
+        "M01-L14"
+      ],
+      "prerequisites": [
+        "tables"
+      ],
+      "related": [
+        "pandas-missing",
+        "imputation",
+        "leakage"
+      ],
+      "order": 63,
+      "contentUrl": "/content/knowledge/topics/cleaning.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pandas",
+        "pandas-missing",
+        "pandas-text",
+        "sklearn-impute",
+        "kaggle-datasets"
+      ],
+      "keywords": "FAIL None Pass category fail hours import int isna lower pandas pass pd.DataFrame print python str.lower str.strip strip sum test text tolist train"
+    },
+    {
+      "id": "statistics",
+      "title": "Среднее, медиана и разброс",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Как выбрать показатель под вопрос и различить выборочное и генеральное отклонение.",
+      "lessons": [
+        "M01-L16",
+        "M02-L12"
+      ],
+      "prerequisites": [
+        "aggregation"
+      ],
+      "related": [
+        "aggregation",
+        "probability-bayes",
+        "correlation-causality"
+      ],
+      "order": 64,
+      "contentUrl": "/content/knowledge/topics/statistics.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-statistics",
+        "pandas",
+        "pandas-group",
+        "seaborn"
+      ],
+      "keywords": "from import mean median print pstdev python round statistics statistics.pstdev stdev text"
+    },
+    {
+      "id": "charts",
+      "title": "Выбор графика и корректный вывод",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Распределение, сравнение групп, связь и динамика требуют разных визуальных форм.",
+      "lessons": [
+        "M01-L17"
+      ],
+      "prerequisites": [
+        "statistics"
+      ],
+      "related": [
+        "matplotlib",
+        "pandas-groupby",
+        "correlation-causality"
+      ],
+      "order": 65,
+      "contentUrl": "/content/knowledge/topics/charts.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pandas",
+        "matplotlib",
+        "seaborn",
+        "jupyter",
+        "kaggle-datasets"
+      ],
+      "keywords": "for from groups groups.items import len mean name print python scatterplot statistics test text train values"
+    },
+    {
+      "id": "pandas-indexing",
+      "title": "Выбор строк и столбцов pandas",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "loc, iloc и логические маски без неоднозначного обращения.",
+      "lessons": [
+        "M01-L12"
+      ],
+      "prerequisites": [
+        "tables"
+      ],
+      "related": [
+        "tables",
+        "pandas-missing"
+      ],
+      "order": 66,
+      "contentUrl": "/content/knowledge/topics/pandas-indexing.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pandas",
+        "pandas-index"
+      ],
+      "keywords": "DataFrame Series and df.iloc df.loc iloc import index loc pandas pd.DataFrame print python score text tolist"
+    },
+    {
+      "id": "pandas-missing",
+      "title": "Пропуски и типы pandas",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Обнаружение отсутствующих значений и осмысленное заполнение.",
+      "lessons": [
+        "M01-L12"
+      ],
+      "prerequisites": [
+        "tables"
+      ],
+      "related": [
+        "cleaning",
+        "imputation"
+      ],
+      "order": 67,
+      "contentUrl": "/content/knowledge/topics/pandas-missing.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pandas-missing",
+        "sklearn-impute"
+      ],
+      "keywords": "Int64 NaN None dropna fillna import int isna pandas pd.Series print python s.fillna s.isna s.median sum text tolist"
+    },
+    {
+      "id": "pandas-groupby",
+      "title": "Группировка и агрегирование pandas",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Разбиение таблицы на группы и получение сводных показателей.",
+      "lessons": [
+        "M01-L12"
+      ],
+      "prerequisites": [
+        "tables",
+        "aggregation"
+      ],
+      "related": [
+        "aggregation",
+        "statistics"
+      ],
+      "order": 68,
+      "contentUrl": "/content/knowledge/topics/pandas-groupby.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pandas",
+        "pandas-group",
+        "duckdb"
+      ],
+      "keywords": "True agg count df.groupby dropna group groupby import mean pandas pd.DataFrame print python score size sort summary text tolist transform"
+    },
+    {
+      "id": "pandas-merge",
+      "title": "Объединение таблиц и ключи",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Как merge связывает строки и откуда берётся неожиданное умножение данных.",
+      "lessons": [
+        "M01-L12"
+      ],
+      "prerequisites": [
+        "tables"
+      ],
+      "related": [
+        "tables",
+        "leakage"
+      ],
+      "order": 69,
+      "contentUrl": "/content/knowledge/topics/pandas-merge.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pandas-merge",
+        "sqlite"
+      ],
+      "keywords": "client clients how import inner isna left len many_to_one merge name orders orders.merge pandas pd.DataFrame print python result sum text validate"
+    },
+    {
+      "id": "numpy-arrays",
+      "title": "Массивы NumPy и оси",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "shape, dtype и векторные вычисления над числовыми данными.",
+      "lessons": [
+        "M01-L12"
+      ],
+      "prerequisites": [
+        "lists"
+      ],
+      "related": [
+        "numpy-broadcasting",
+        "features"
+      ],
+      "order": 70,
+      "contentUrl": "/content/knowledge/topics/numpy-arrays.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "numpy-basics",
+        "sklearn-pca"
+      ],
+      "keywords": "X.shape a.shape a.sum axis dtype fit import ndarray np.array numpy print python shape sum text tolist y.shape"
+    },
+    {
+      "id": "numpy-broadcasting",
+      "title": "Broadcasting и формы массивов",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "intermediate",
+      "summary": "Когда NumPy сопоставляет размеры автоматически и когда это ошибка.",
+      "lessons": [
+        "M01-L12"
+      ],
+      "prerequisites": [
+        "numpy-arrays"
+      ],
+      "related": [
+        "numpy-arrays",
+        "matplotlib"
+      ],
+      "order": 71,
+      "contentUrl": "/content/knowledge/topics/numpy-broadcasting.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "numpy-basics",
+        "numpy-broadcast"
+      ],
+      "keywords": "Broadcasting NumPy import np.array np.ones numpy prediction print python reshape shape text tolist"
+    },
+    {
+      "id": "matplotlib",
+      "title": "График как объект: Matplotlib",
+      "group": "Таблицы и анализ",
+      "track": "python",
+      "level": "beginner",
+      "summary": "Figure, Axes, подписи и сохранение воспроизводимого рисунка.",
+      "lessons": [
+        "M01-L12"
+      ],
+      "prerequisites": [
+        "charts"
+      ],
+      "related": [
+        "charts",
+        "statistics"
+      ],
+      "order": 72,
+      "contentUrl": "/content/knowledge/topics/matplotlib.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "matplotlib"
+      ],
+      "keywords": "Agg Axes Figure Path TemporaryDirectory True ax.plot ax.set backend bar chart.png close fig fig.savefig folder from import matplotlib matplotlib.pyplot matplotlib.use path path.exists path.stat pathlib plot plt plt.close plt.subplots print pyplot python savefig scatter set st_size subplots tempfile text title with xlabel ylabel"
+    },
+    {
+      "id": "ai-ml-dl",
+      "title": "ИИ, машинное обучение и глубокое обучение",
+      "group": "От задачи к данным",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Три связанных понятия и граница между правилом и обучаемой моделью.",
+      "lessons": [
+        "M01-L11",
+        "M03-L02"
+      ],
+      "prerequisites": [],
+      "related": [
+        "supervised",
+        "baseline"
+      ],
+      "order": 73,
+      "contentUrl": "/content/knowledge/topics/ai-ml-dl.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-guide",
+        "yandex-ml",
+        "google-mlcc"
+      ],
+      "keywords": "def else for print python return rule text value"
+    },
+    {
+      "id": "ml-workflow",
+      "title": "Полный цикл ML-эксперимента",
+      "group": "От задачи к данным",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "От определения задачи до независимой проверки и наблюдения после запуска.",
+      "lessons": [
+        "M01-L11",
+        "M03-L02"
+      ],
+      "prerequisites": [
+        "ai-ml-dl"
+      ],
+      "related": [
+        "baseline",
+        "validation",
+        "model-monitoring"
+      ],
+      "order": 74,
+      "contentUrl": "/content/knowledge/topics/ml-workflow.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-guide",
+        "google-production",
+        "orange"
+      ],
+      "keywords": "True baseline len print python steps steps.index text validation"
+    },
+    {
+      "id": "supervised",
+      "title": "Обучение с учителем",
+      "group": "От задачи к данным",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Примеры с известным ответом и обобщение на новые объекты.",
+      "lessons": [
+        "M01-L11",
+        "M03-L02"
+      ],
+      "prerequisites": [
+        "features",
+        "target"
+      ],
+      "related": [
+        "classification",
+        "regression",
+        "split"
+      ],
+      "order": 75,
+      "contentUrl": "/content/knowledge/topics/supervised.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-guide",
+        "yandex-ml"
+      ],
+      "keywords": "LinearRegression X_train fit float from import model model.predict predict print python round sklearn.linear_model text y_train"
+    },
+    {
+      "id": "unsupervised",
+      "title": "Обучение без учителя",
+      "group": "От задачи к данным",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Поиск структуры в данных без заранее заданной целевой метки.",
+      "lessons": [
+        "M01-L11",
+        "M03-L02"
+      ],
+      "prerequisites": [
+        "features"
+      ],
+      "related": [
+        "clustering",
+        "pca"
+      ],
+      "order": 76,
+      "contentUrl": "/content/knowledge/topics/unsupervised.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-guide"
+      ],
+      "keywords": "KMeans True bool fit_predict from import labels n_clusters n_init print python random_state sklearn.cluster text"
+    },
+    {
+      "id": "features",
+      "title": "Признаки и матрица объектов",
+      "group": "От задачи к данным",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Что модель видит на входе и какие сведения недопустимо использовать.",
+      "lessons": [
+        "M01-L11",
+        "M03-L02"
+      ],
+      "prerequisites": [
+        "tables"
+      ],
+      "related": [
+        "target",
+        "leakage",
+        "encoding"
+      ],
+      "order": 77,
+      "contentUrl": "/content/knowledge/topics/features.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "numpy-basics",
+        "sklearn",
+        "sklearn-preprocessing",
+        "sklearn-text",
+        "sklearn-importance"
+      ],
+      "keywords": "CSV X.shape import n_features n_objects np.array numpy print python text tolist"
+    },
+    {
+      "id": "target",
+      "title": "Целевая переменная и разметка",
+      "group": "От задачи к данным",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Как определить ответ, который должна предсказывать модель.",
+      "lessons": [
+        "M03-L02"
+      ],
+      "prerequisites": [
+        "features"
+      ],
+      "related": [
+        "classification",
+        "dataset"
+      ],
+      "order": 78,
+      "contentUrl": "/content/knowledge/topics/target.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn"
+      ],
+      "keywords": "Counter collections from import items len print python sorted text"
+    },
+    {
+      "id": "probability-bayes",
+      "title": "Вероятность и формула Байеса",
+      "group": "От задачи к данным",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Условная вероятность, базовая частота и обратное условие.",
+      "lessons": [
+        "M01-L11",
+        "M03-L02"
+      ],
+      "prerequisites": [
+        "arithmetic"
+      ],
+      "related": [
+        "naive-bayes",
+        "precision-recall"
+      ],
+      "order": 79,
+      "contentUrl": "/content/knowledge/topics/probability-bayes.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-statistics",
+        "sklearn-bayes"
+      ],
+      "keywords": "false_positive_rate posterior precision print prior python round sensitivity text"
+    },
+    {
+      "id": "correlation-causality",
+      "title": "Корреляция и причинность",
+      "group": "От задачи к данным",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Совместное изменение величин не доказывает влияние одной на другую.",
+      "lessons": [
+        "M01-L11",
+        "M03-L02"
+      ],
+      "prerequisites": [
+        "statistics"
+      ],
+      "related": [
+        "statistics",
+        "linear-regression"
+      ],
+      "order": 80,
+      "contentUrl": "/content/knowledge/topics/correlation-causality.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "seaborn"
+      ],
+      "keywords": "float import np.corrcoef numpy print python round text"
+    },
+    {
+      "id": "split",
+      "title": "Обучающая и тестовая выборки",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Независимая оценка вместо проверки на уже известных объектах.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "features",
+        "target"
+      ],
+      "related": [
+        "validation",
+        "leakage",
+        "temporal-split"
+      ],
+      "order": 81,
+      "contentUrl": "/content/knowledge/topics/split.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn",
+        "sklearn-pitfalls",
+        "sklearn-cv"
+      ],
+      "keywords": "True from import isdisjoint len list print python random_state range set sklearn.model_selection stratify test test_size text train train_test_split"
+    },
+    {
+      "id": "validation",
+      "title": "Validation и выбор решения",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Третья часть данных для подбора настроек без расходования финального теста.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "split"
+      ],
+      "related": [
+        "cross-validation",
+        "hyperparameters"
+      ],
+      "order": 82,
+      "contentUrl": "/content/knowledge/topics/validation.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-cv",
+        "sklearn-grid"
+      ],
+      "keywords": "Validation best key max print python test text train validation validation_scores validation_scores.get"
+    },
+    {
+      "id": "cross-validation",
+      "title": "Перекрёстная проверка",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Несколько разбиений для устойчивого сравнения моделей.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "validation"
+      ],
+      "related": [
+        "pipeline",
+        "stratification"
+      ],
+      "order": 83,
+      "contentUrl": "/content/knowledge/topics/cross-validation.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-cv",
+        "sklearn-grid"
+      ],
+      "keywords": "KFold Pipeline fold folds for from import int len list n_splits print python range seed sklearn.model_selection sorted split test text"
+    },
+    {
+      "id": "stratification",
+      "title": "Стратификация и групповые разбиения",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Сохранение долей классов и независимость связанных наблюдений.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "split"
+      ],
+      "related": [
+        "imbalance",
+        "leakage"
+      ],
+      "order": 84,
+      "contentUrl": "/content/knowledge/topics/stratification.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-cv"
+      ],
+      "keywords": "GroupKFold from import len print python random_state sklearn.model_selection stratify sum test test_size text train_test_split"
+    },
+    {
+      "id": "temporal-split",
+      "title": "Разделение по времени",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Проверка на будущем и защита от информации, которой ещё не было.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "split"
+      ],
+      "related": [
+        "datetime",
+        "data-drift"
+      ],
+      "order": 85,
+      "contentUrl": "/content/knowledge/topics/temporal-split.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-cv"
+      ],
+      "keywords": "TimeSeriesSplit True days list max min print python range test text train"
+    },
+    {
+      "id": "baseline",
+      "title": "Базовое решение для сравнения",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Простой ориентир, который модель должна оправданно превзойти.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "target"
+      ],
+      "related": [
+        "imbalance",
+        "metrics"
+      ],
+      "order": 86,
+      "contentUrl": "/content/knowledge/topics/baseline.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-guide"
+      ],
+      "keywords": "Baseline DummyClassifier accuracy accuracy_score baseline fit for from import model model.predict most_frequent print python range sklearn.dummy sklearn.metrics strategy text train"
+    },
+    {
+      "id": "leakage",
+      "title": "Утечка данных",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Как сведения из будущего или проверки незаметно попадают в обучение.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "split"
+      ],
+      "related": [
+        "pipeline",
+        "temporal-split"
+      ],
+      "order": 87,
+      "contentUrl": "/content/knowledge/topics/leakage.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-pitfalls"
+      ],
+      "keywords": "False Pipeline print python sorted test test_ids text train train_ids train_ids.isdisjoint validation"
+    },
+    {
+      "id": "scaling",
+      "title": "Масштабирование признаков",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Стандартизация и нормализация с обучением только по train.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "features"
+      ],
+      "related": [
+        "pipeline",
+        "knn",
+        "numpy-broadcasting"
+      ],
+      "order": 88,
+      "contentUrl": "/content/knowledge/topics/scaling.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "numpy-broadcast",
+        "sklearn-preprocessing",
+        "sklearn-knn",
+        "sklearn-svm"
+      ],
+      "keywords": "KNN MinMaxScaler Pipeline RobustScaler StandardScaler fit fit_transform from import print python ravel scaler scaler.transform sklearn.preprocessing test text tolist train"
+    },
+    {
+      "id": "encoding",
+      "title": "Кодирование категорий",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "One-hot, порядок значений и неизвестные категории.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "features"
+      ],
+      "related": [
+        "features",
+        "column-transformer"
+      ],
+      "order": 89,
+      "contentUrl": "/content/knowledge/topics/encoding.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-preprocessing",
+        "sklearn-pipeline"
+      ],
+      "keywords": "False OneHotEncoder OrdinalEncoder Target astype encoder encoder.transform encoding fit from handle_unknown ignore import int print python sklearn.preprocessing sparse_output text tolist train"
+    },
+    {
+      "id": "imputation",
+      "title": "Заполнение пропусков в ML",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Статистика train и отдельный смысл отсутствующего значения.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "pandas-missing"
+      ],
+      "related": [
+        "pandas-missing",
+        "pipeline"
+      ],
+      "order": 90,
+      "contentUrl": "/content/knowledge/topics/imputation.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pandas-missing",
+        "sklearn-impute"
+      ],
+      "keywords": "Pipeline SimpleImputer fit from import imputer imputer.transform median np.nan numpy print python ravel sklearn.impute strategy text tolist train transform"
+    },
+    {
+      "id": "pipeline",
+      "title": "Pipeline: единый процесс обучения",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Преобразования и модель в одной проверяемой последовательности.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "split",
+        "functions"
+      ],
+      "related": [
+        "leakage",
+        "cross-validation",
+        "column-transformer"
+      ],
+      "order": 91,
+      "contentUrl": "/content/knowledge/topics/pipeline.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-pitfalls",
+        "sklearn-pipeline"
+      ],
+      "keywords": "KNN KNeighborsClassifier Pipeline StandardScaler fit from import make_pipeline model model.fit model.predict n_neighbors predict print python scaler sklearn.neighbors sklearn.pipeline sklearn.preprocessing text tolist train"
+    },
+    {
+      "id": "column-transformer",
+      "title": "Разная обработка разных столбцов",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "ColumnTransformer для чисел и категорий в одной таблице.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "pipeline",
+        "encoding"
+      ],
+      "related": [
+        "encoding",
+        "pipeline"
+      ],
+      "order": 92,
+      "contentUrl": "/content/knowledge/topics/column-transformer.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-pipeline"
+      ],
+      "keywords": "ColumnTransformer False OneHotEncoder Pipeline StandardScaler age cat city from get_feature_names_out import num pandas passthrough pd.DataFrame print python remainder shape sklearn.compose sklearn.preprocessing sparse_output text transform transform.fit_transform"
+    },
+    {
+      "id": "reproducibility",
+      "title": "Воспроизводимость эксперимента",
+      "group": "Эксперимент и данные",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Данные, окружение, настройки и случайность как части одного результата.",
+      "lessons": [
+        "M03-L03"
+      ],
+      "prerequisites": [
+        "split"
+      ],
+      "related": [
+        "venv",
+        "git",
+        "split"
+      ],
+      "order": 93,
+      "contentUrl": "/content/knowledge/topics/reproducibility.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-pitfalls",
+        "git"
+      ],
+      "keywords": "NumPy True first import integers np.array_equal np.random.default_rng numpy print python requirements second seed text"
+    },
+    {
+      "id": "classification",
+      "title": "Классификация",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Предсказание категории и различие класса, оценки и вероятности.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "supervised"
+      ],
+      "related": [
+        "confusion-matrix",
+        "thresholds"
+      ],
+      "order": 94,
+      "contentUrl": "/content/knowledge/topics/classification.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn",
+        "yandex-ml",
+        "uci",
+        "sklearn-datasets",
+        "orange",
+        "teachable"
+      ],
+      "keywords": "DecisionTreeClassifier accuracy classes_ confusion fit from import matrix max_depth model model.classes_.tolist model.predict predict predict_proba print python random_state sklearn.tree text tolist"
+    },
+    {
+      "id": "regression",
+      "title": "Регрессия",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Предсказание числовой величины и осмысленная мера ошибки.",
+      "lessons": [
+        "M03-L09",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "supervised"
+      ],
+      "related": [
+        "linear-regression",
+        "mae-rmse",
+        "r2"
+      ],
+      "order": 95,
+      "contentUrl": "/content/knowledge/topics/regression.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn",
+        "sklearn-linear",
+        "yandex-ml",
+        "uci"
+      ],
+      "keywords": "LinearRegression MAE MSE baseline fit float from import model model.predict print python round sklearn.linear_model text train"
+    },
+    {
+      "id": "clustering",
+      "title": "Кластеризация",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Группы по сходству, которые нельзя автоматически считать истинными классами.",
+      "lessons": [
+        "M03-L11"
+      ],
+      "prerequisites": [
+        "unsupervised"
+      ],
+      "related": [
+        "kmeans",
+        "dbscan",
+        "scaling"
+      ],
+      "order": 96,
+      "contentUrl": "/content/knowledge/topics/clustering.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn",
+        "sklearn-clusters",
+        "sklearn-datasets",
+        "orange"
+      ],
+      "keywords": "DBSCAN KMeans fit float for from import model model.cluster_centers_ n_clusters n_init print python random_state sklearn.cluster sorted text"
+    },
+    {
+      "id": "linear-regression",
+      "title": "Линейная регрессия и коэффициенты",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Взвешенная сумма признаков и смысл коэффициентов.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "regression"
+      ],
+      "related": [
+        "regression",
+        "regularization",
+        "correlation-causality"
+      ],
+      "order": 97,
+      "contentUrl": "/content/knowledge/topics/linear-regression.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-linear",
+        "google-mlcc",
+        "desmos"
+      ],
+      "keywords": "LinearRegression baseline fit float from import model model.coef_ model.intercept_ print python round sklearn.linear_model text"
+    },
+    {
+      "id": "logistic-regression",
+      "title": "Логистическая регрессия",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Линейная оценка, сигмоида и классификация.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "classification"
+      ],
+      "related": [
+        "thresholds",
+        "calibration",
+        "tfidf"
+      ],
+      "order": 98,
+      "contentUrl": "/content/knowledge/topics/logistic-regression.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-linear",
+        "google-mlcc"
+      ],
+      "keywords": "IDF baseline def exp from import log math predict_proba print python return round sigmoid text validation"
+    },
+    {
+      "id": "knn",
+      "title": "Метод ближайших соседей",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Предсказание по похожим объектам и роль расстояния.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "classification",
+        "scaling"
+      ],
+      "related": [
+        "scaling",
+        "hyperparameters"
+      ],
+      "order": 99,
+      "contentUrl": "/content/knowledge/topics/knn.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-knn"
+      ],
+      "keywords": "KNN KNeighborsClassifier Pipeline fit from import model model.predict n_neighbors print python sklearn.neighbors text tolist validation"
+    },
+    {
+      "id": "decision-trees",
+      "title": "Деревья решений",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Последовательность условий и контроль сложности.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "classification"
+      ],
+      "related": [
+        "overfitting",
+        "random-forest"
+      ],
+      "order": 100,
+      "contentUrl": "/content/knowledge/topics/decision-trees.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-trees"
+      ],
+      "keywords": "DecisionTreeClassifier baseline fit from get_depth import max_depth model model.get_depth model.predict print python random_state sklearn.tree text tolist"
+    },
+    {
+      "id": "random-forest",
+      "title": "Случайный лес",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Ансамбль деревьев и снижение нестабильности отдельного решения.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "decision-trees"
+      ],
+      "related": [
+        "decision-trees",
+        "feature-importance"
+      ],
+      "order": 101,
+      "contentUrl": "/content/knowledge/topics/random-forest.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-ensembles"
+      ],
+      "keywords": "RandomForestClassifier estimators fit from import len max_depth model model.estimators_ model.predict n_estimators print python random_state sklearn.ensemble text tolist"
+    },
+    {
+      "id": "boosting",
+      "title": "Градиентный бустинг",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Последовательное улучшение ансамбля и взаимодействие числа шагов со скоростью.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "decision-trees"
+      ],
+      "related": [
+        "gradient-descent",
+        "hyperparameters"
+      ],
+      "order": 102,
+      "contentUrl": "/content/knowledge/topics/boosting.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-ensembles"
+      ],
+      "keywords": "GradientBoostingClassifier baseline fit from import learning_rate max_depth model model.n_estimators_ model.predict n_estimators print python random_state sklearn.ensemble text tolist validation"
+    },
+    {
+      "id": "svm",
+      "title": "Метод опорных векторов",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Разделяющая граница, зазор и роль параметра C.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "classification",
+        "scaling"
+      ],
+      "related": [
+        "scaling",
+        "tfidf"
+      ],
+      "order": 103,
+      "contentUrl": "/content/knowledge/topics/svm.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-svm"
+      ],
+      "keywords": "IDF Pipeline RBF SVC SVM decision_function fit from gamma import kernel linear model model.predict predict_proba print python sklearn.svm text tolist train"
+    },
+    {
+      "id": "naive-bayes",
+      "title": "Наивный байесовский классификатор",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Вероятности признаков и упрощающее предположение независимости.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "probability-bayes"
+      ],
+      "related": [
+        "probability-bayes",
+        "tfidf"
+      ],
+      "order": 104,
+      "contentUrl": "/content/knowledge/topics/naive-bayes.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-bayes"
+      ],
+      "keywords": "CountVectorizer IDF MultinomialNB alpha baseline fit from import model model.predict print python sklearn.naive_bayes text tolist"
+    },
+    {
+      "id": "kmeans",
+      "title": "KMeans и центры кластеров",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Минимизация расстояний до центров и выбор числа групп.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "clustering"
+      ],
+      "related": [
+        "clustering",
+        "scaling"
+      ],
+      "order": 105,
+      "contentUrl": "/content/knowledge/topics/kmeans.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-clusters"
+      ],
+      "keywords": "KMeans fit float for from import inertia model model.cluster_centers_ model.inertia_ n_clusters n_init print python random_state round sklearn.cluster sorted text"
+    },
+    {
+      "id": "dbscan",
+      "title": "DBSCAN и выделение шума",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Плотностные группы без заранее заданного числа кластеров.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "clustering"
+      ],
+      "related": [
+        "clustering",
+        "scaling"
+      ],
+      "order": 106,
+      "contentUrl": "/content/knowledge/topics/dbscan.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-clusters"
+      ],
+      "keywords": "DBSCAN eps fit_predict from import int labels len min_samples print python set sklearn sklearn.cluster sum text"
+    },
+    {
+      "id": "pca",
+      "title": "PCA и понижение размерности",
+      "group": "Алгоритмы ML",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Новые направления максимального разброса и пределы визуализации.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "numpy-arrays"
+      ],
+      "related": [
+        "numpy-arrays",
+        "pipeline"
+      ],
+      "order": 107,
+      "contentUrl": "/content/knowledge/topics/pca.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-pca"
+      ],
+      "keywords": "PCA Pipeline explained_variance_ratio_ fit float from import model model.explained_variance_ratio_ model.fit_transform n_components print python reduced reduced.shape round sklearn.decomposition test text"
+    },
+    {
+      "id": "metrics",
+      "title": "Метрики и критерий успеха",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Выбор измерения, соответствующего задаче и цене ошибок.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "target"
+      ],
+      "related": [
+        "precision-recall",
+        "mae-rmse",
+        "baseline"
+      ],
+      "order": 108,
+      "contentUrl": "/content/knowledge/topics/metrics.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-metrics",
+        "google-fairness",
+        "yandex-ml",
+        "google-mlcc"
+      ],
+      "keywords": "MAE RMSE accuracy accuracy_score baseline from import precision prediction print python recall sklearn.metrics text truth"
+    },
+    {
+      "id": "confusion-matrix",
+      "title": "Матрица ошибок",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Четыре типа исходов бинарной классификации и порядок классов.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "classification"
+      ],
+      "related": [
+        "precision-recall",
+        "metrics"
+      ],
+      "order": 109,
+      "contentUrl": "/content/knowledge/topics/confusion-matrix.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-metrics"
+      ],
+      "keywords": "confusion_matrix from import labels matrix matrix.ravel matrix.tolist precision print python ravel recall sklearn sklearn.metrics text tolist"
+    },
+    {
+      "id": "precision-recall",
+      "title": "Precision и recall",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Точность положительных решений и полнота обнаружения.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "confusion-matrix"
+      ],
+      "related": [
+        "thresholds",
+        "f1",
+        "confusion-matrix"
+      ],
+      "order": 110,
+      "contentUrl": "/content/knowledge/topics/precision-recall.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-metrics",
+        "sklearn-threshold"
+      ],
+      "keywords": "Precision Recall from import macro micro precision precision_score print python recall recall_score round sklearn.metrics text weighted zero_division"
+    },
+    {
+      "id": "f1",
+      "title": "F1 и способы усреднения",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Гармоническое среднее precision и recall и его ограничения.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "precision-recall"
+      ],
+      "related": [
+        "precision-recall",
+        "imbalance"
+      ],
+      "order": 111,
+      "contentUrl": "/content/knowledge/topics/f1.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-metrics"
+      ],
+      "keywords": "Macro True average binary f1_score from import micro negative pos_label precision print python recall round sklearn.metrics text validation weighted zero_division"
+    },
+    {
+      "id": "roc-pr",
+      "title": "ROC-AUC и PR-кривая",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Оценка ранжирования по непрерывным значениям вместо одного порога.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "precision-recall"
+      ],
+      "related": [
+        "thresholds",
+        "calibration"
+      ],
+      "order": 112,
+      "contentUrl": "/content/knowledge/topics/roc-pr.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-metrics"
+      ],
+      "keywords": "AUC Average FPR ROC TPR average average_precision_score confusion from import matrix precision print python recall roc_auc_score scores sklearn.metrics text"
+    },
+    {
+      "id": "thresholds",
+      "title": "Порог принятия решения",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Как одна модель даёт разные компромиссы между ошибками.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "classification"
+      ],
+      "related": [
+        "precision-recall",
+        "validation"
+      ],
+      "order": 113,
+      "contentUrl": "/content/knowledge/topics/thresholds.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-threshold",
+        "sklearn-calibration"
+      ],
+      "keywords": "for int print python score scores test text threshold validation"
+    },
+    {
+      "id": "imbalance",
+      "title": "Дисбаланс классов",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Редкие события, бессодержательная accuracy и осторожная балансировка.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "metrics"
+      ],
+      "related": [
+        "baseline",
+        "stratification"
+      ],
+      "order": 114,
+      "contentUrl": "/content/knowledge/topics/imbalance.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-threshold"
+      ],
+      "keywords": "accuracy accuracy_score baseline confusion from import matrix precision print python recall recall_score sklearn.metrics test text train zero_division"
+    },
+    {
+      "id": "calibration",
+      "title": "Калибровка вероятностей",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Соответствуют ли оценки модели наблюдаемой частоте событий.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "probability-bayes"
+      ],
+      "related": [
+        "roc-pr",
+        "thresholds"
+      ],
+      "order": 115,
+      "contentUrl": "/content/knowledge/topics/calibration.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-calibration"
+      ],
+      "keywords": "Brier brier_score_loss from import print python score sklearn.metrics text"
+    },
+    {
+      "id": "mae-rmse",
+      "title": "MAE, MSE и RMSE",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Числовая ошибка, единицы измерения и чувствительность к большим промахам.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "regression"
+      ],
+      "related": [
+        "regression",
+        "r2"
+      ],
+      "order": 116,
+      "contentUrl": "/content/knowledge/topics/mae-rmse.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-metrics"
+      ],
+      "keywords": "MAE MSE RMSE from import mean_absolute_error print python root_mean_squared_error round sklearn.metrics text"
+    },
+    {
+      "id": "r2",
+      "title": "Коэффициент детерминации R²",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Сравнение квадратичной ошибки с постоянным средним.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "mae-rmse"
+      ],
+      "related": [
+        "mae-rmse",
+        "baseline"
+      ],
+      "order": 117,
+      "contentUrl": "/content/knowledge/topics/r2.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-metrics"
+      ],
+      "keywords": "MAE SSE SST baseline from import print python r2_score sklearn.metrics text"
+    },
+    {
+      "id": "overfitting",
+      "title": "Переобучение",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Почему хорошее запоминание train не гарантирует работу на новых данных.",
+      "lessons": [
+        "M03-L12",
+        "M03-L16",
+        "M03-L17"
+      ],
+      "prerequisites": [
+        "split",
+        "metrics"
+      ],
+      "related": [
+        "bias-variance",
+        "regularization",
+        "learning-curves"
+      ],
+      "order": 118,
+      "contentUrl": "/content/knowledge/topics/overfitting.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-pitfalls",
+        "sklearn-trees",
+        "sklearn-curves"
+      ],
+      "keywords": "best item key lambda max print python round runs text train validation"
+    },
+    {
+      "id": "bias-variance",
+      "title": "Смещение и разброс",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Недостаточная гибкость и чувствительность к обучающей выборке.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "overfitting"
+      ],
+      "related": [
+        "overfitting",
+        "learning-curves"
+      ],
+      "order": 119,
+      "contentUrl": "/content/knowledge/topics/bias-variance.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-curves"
+      ],
+      "keywords": "bias from import mean print pvariance python round stable statistics text train validation variable variance"
+    },
+    {
+      "id": "regularization",
+      "title": "Регуляризация",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Ограничение сложности через штраф и другие правила.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "linear-regression"
+      ],
+      "related": [
+        "linear-regression",
+        "scaling"
+      ],
+      "order": 120,
+      "contentUrl": "/content/knowledge/topics/regularization.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-linear"
+      ],
+      "keywords": "LinearRegression Pipeline Ridge True abs alpha fit from import plain plain.coef_ print python regularized regularized.coef_ scaler sklearn.linear_model text train validation"
+    },
+    {
+      "id": "hyperparameters",
+      "title": "Гиперпараметры и поиск",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Настройки алгоритма, которые выбираются внешним экспериментом.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "validation"
+      ],
+      "related": [
+        "cross-validation",
+        "validation",
+        "itertools"
+      ],
+      "order": 121,
+      "contentUrl": "/content/knowledge/topics/hyperparameters.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-grid",
+        "mlflow"
+      ],
+      "keywords": "GridSearchCV ParameterGrid Pipeline RandomizedSearchCV cross from grid import len list max_depth min_samples_leaf print python refit sklearn.model_selection test text validation"
+    },
+    {
+      "id": "learning-curves",
+      "title": "Кривые обучения",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Как меняется качество при росте объёма обучающих данных.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "overfitting"
+      ],
+      "related": [
+        "bias-variance",
+        "overfitting"
+      ],
+      "order": 122,
+      "contentUrl": "/content/knowledge/topics/learning-curves.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-curves"
+      ],
+      "keywords": "for print python round sizes text train validation zip"
+    },
+    {
+      "id": "feature-importance",
+      "title": "Важность признаков",
+      "group": "Качество и метрики",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Вклад в качество модели и отличие от причинного объяснения.",
+      "lessons": [
+        "M03-L07",
+        "M03-L08",
+        "M03-L10"
+      ],
+      "prerequisites": [
+        "metrics"
+      ],
+      "related": [
+        "leakage",
+        "correlation-causality"
+      ],
+      "order": 123,
+      "contentUrl": "/content/knowledge/topics/feature-importance.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-importance"
+      ],
+      "keywords": "Permutation True drops drops.get importance key permutation print python ranking reverse sorted text train"
+    },
+    {
+      "id": "tfidf",
+      "title": "Текстовые признаки: TF-IDF",
+      "group": "Нейросети и текст",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Частоты слов, редкость в корпусе и фиксированный словарь.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "strings",
+        "features"
+      ],
+      "related": [
+        "naive-bayes",
+        "embeddings"
+      ],
+      "order": 124,
+      "contentUrl": "/content/knowledge/topics/tfidf.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-bayes",
+        "sklearn-text"
+      ],
+      "keywords": "IDF Pipeline TfidfVectorizer axis fit from getnnz import print python sklearn.feature_extraction.text test text tolist train transform vectorizer vectorizer.get_feature_names_out vectorizer.transform"
+    },
+    {
+      "id": "embeddings",
+      "title": "Векторные представления: embeddings",
+      "group": "Нейросети и текст",
+      "track": "ai",
+      "level": "advanced",
+      "summary": "Обученные числовые представления и ограничения семантической близости.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "numpy-arrays"
+      ],
+      "related": [
+        "cosine-similarity",
+        "rag"
+      ],
+      "order": 125,
+      "contentUrl": "/content/knowledge/topics/embeddings.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sklearn-text",
+        "hf-course",
+        "sentence-transformers"
+      ],
+      "keywords": "Embedding IDF RAG True axis embeddings import keepdims normalized np.array np.linalg.norm np.round numpy print python text tolist vectors vectors.shape"
+    },
+    {
+      "id": "cosine-similarity",
+      "title": "Косинусное сходство",
+      "group": "Нейросети и текст",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Направление векторов, нормализация и нулевые значения.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "numpy-arrays"
+      ],
+      "related": [
+        "embeddings",
+        "rag"
+      ],
+      "order": 126,
+      "contentUrl": "/content/knowledge/topics/cosine-similarity.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sentence-transformers"
+      ],
+      "keywords": "RAG cosine_similarity from import print python scores scores.tolist sklearn sklearn.metrics.pairwise text"
+    },
+    {
+      "id": "neural-networks",
+      "title": "Нейросети: слои и активации",
+      "group": "Нейросети и текст",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Взвешенные суммы, нелинейность и обучение параметров.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "features",
+        "functions"
+      ],
+      "related": [
+        "gradient-descent",
+        "numpy-arrays"
+      ],
+      "order": 127,
+      "contentUrl": "/content/knowledge/topics/neural-networks.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pytorch",
+        "colab",
+        "teachable",
+        "netron"
+      ],
+      "keywords": "ReLU baseline def max neuron print python relu return text"
+    },
+    {
+      "id": "gradient-descent",
+      "title": "Градиентный спуск",
+      "group": "Нейросети и текст",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Обновление параметров по направлению уменьшения потерь.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "arithmetic"
+      ],
+      "related": [
+        "regularization",
+        "learning-curves"
+      ],
+      "order": 128,
+      "contentUrl": "/content/knowledge/topics/gradient-descent.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pytorch",
+        "google-mlcc",
+        "desmos"
+      ],
+      "keywords": "LLM NaN for gradient learning loss print python range rate round text train validation"
+    },
+    {
+      "id": "transformers",
+      "title": "Transformer и attention",
+      "group": "Нейросети и текст",
+      "track": "ai",
+      "level": "advanced",
+      "summary": "Контекстные представления токенов и взвешивание информации.",
+      "lessons": [
+        "M03-L05",
+        "M03-L06"
+      ],
+      "prerequisites": [
+        "neural-networks",
+        "embeddings"
+      ],
+      "related": [
+        "llm-tokens",
+        "neural-networks"
+      ],
+      "order": 129,
+      "contentUrl": "/content/knowledge/topics/transformers.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "pytorch",
+        "hf-course",
+        "hf-tokenizers",
+        "attention-paper",
+        "netron"
+      ],
+      "keywords": "Attention LLM Transformer attention dot embeddings float import np.array np.exp np.log np.round numpy print product python round scaled scores scores.max softmax text tolist weights weights.sum"
+    },
+    {
+      "id": "llm-tokens",
+      "title": "Токены и контекстное окно",
+      "group": "LLM и RAG",
+      "track": "ai",
+      "level": "advanced",
+      "summary": "Почему токен не равен слову и как текст превращается в последовательность.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "strings"
+      ],
+      "related": [
+        "transformers",
+        "llm-generation"
+      ],
+      "order": 130,
+      "contentUrl": "/content/knowledge/topics/llm-tokens.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "hf-course",
+        "hf-generation",
+        "hf-tokenizers"
+      ],
+      "keywords": "LLM RAG illustrative_pieces len print python split text text.split words"
+    },
+    {
+      "id": "llm-generation",
+      "title": "Генерация следующего токена",
+      "group": "LLM и RAG",
+      "track": "ai",
+      "level": "advanced",
+      "summary": "Авторегрессия, температура и различие вероятности с достоверностью.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "llm-tokens"
+      ],
+      "related": [
+        "llm-tokens",
+        "hallucinations"
+      ],
+      "order": 131,
+      "contentUrl": "/content/knowledge/topics/llm-generation.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "hf-course",
+        "hf-generation"
+      ],
+      "keywords": "Greedy for import logits np.array np.exp np.log np.round numpy p.sum print python sampling softmax temperature text tolist top z.max"
+    },
+    {
+      "id": "prompting",
+      "title": "Постановка запроса к языковой модели",
+      "group": "LLM и RAG",
+      "track": "ai",
+      "level": "advanced",
+      "summary": "Задача, контекст, формат и критерии проверки вместо магической фразы.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "llm-generation"
+      ],
+      "related": [
+        "rag",
+        "llm-evaluation",
+        "prompt-injection"
+      ],
+      "order": 132,
+      "contentUrl": "/content/knowledge/topics/prompting.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "hf-course"
+      ],
+      "keywords": "True def injection len make_prompt print prompt python question return source text"
+    },
+    {
+      "id": "hallucinations",
+      "title": "Фактические ошибки и выдуманные ссылки",
+      "group": "LLM и RAG",
+      "track": "ai",
+      "level": "advanced",
+      "summary": "Правдоподобная форма ответа не подтверждает его содержание.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "llm-generation"
+      ],
+      "related": [
+        "rag",
+        "llm-evaluation"
+      ],
+      "order": 133,
+      "contentUrl": "/content/knowledge/topics/hallucinations.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "rag-paper",
+        "owasp-llm"
+      ],
+      "keywords": "RAG citations for invented item known_sources lecture not print python text"
+    },
+    {
+      "id": "rag",
+      "title": "RAG: поиск перед ответом",
+      "group": "LLM и RAG",
+      "track": "ai",
+      "level": "advanced",
+      "summary": "Документы, извлечение фрагментов и генерация с подтверждением.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "tfidf",
+        "cosine-similarity"
+      ],
+      "related": [
+        "embeddings",
+        "cosine-similarity",
+        "llm-evaluation"
+      ],
+      "order": 134,
+      "contentUrl": "/content/knowledge/topics/rag.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "sentence-transformers",
+        "rag-paper",
+        "hf-datasets"
+      ],
+      "keywords": "API Augmented Generation IDF Retrieval TfidfVectorizer cosine_similarity docs from import int matrix print python retrieval scores scores.argmax sklearn.feature_extraction.text sklearn.metrics.pairwise text vectorizer vectorizer.fit_transform vectorizer.transform"
+    },
+    {
+      "id": "llm-evaluation",
+      "title": "Оценка LLM и RAG",
+      "group": "LLM и RAG",
+      "track": "ai",
+      "level": "advanced",
+      "summary": "Отдельные проверки поиска, содержания, цитат и отказов.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "rag",
+        "metrics"
+      ],
+      "related": [
+        "testing",
+        "rag",
+        "hallucinations"
+      ],
+      "order": 135,
+      "contentUrl": "/content/knowledge/topics/llm-evaluation.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "rag-paper",
+        "gradio",
+        "hf-datasets"
+      ],
+      "keywords": "LLM RAG Recall accuracy candidates expected for hits len print python retrieval retrieved round sum target text top zip"
+    },
+    {
+      "id": "prompt-injection",
+      "title": "Prompt injection и недоверенные документы",
+      "group": "LLM и RAG",
+      "track": "ai",
+      "level": "advanced",
+      "summary": "Чужой текст может содержать команды, которые система не должна выполнять.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "rag"
+      ],
+      "related": [
+        "ai-privacy",
+        "rag"
+      ],
+      "order": 136,
+      "contentUrl": "/content/knowledge/topics/prompt-injection.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "owasp-llm"
+      ],
+      "keywords": "False LLM Prompt RAG True action allowed_actions allowlist def delete_file injection permitted print python return search_course show_source text"
+    },
+    {
+      "id": "problem",
+      "title": "Постановка задачи ИИ",
+      "group": "Применение и проект",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Пользовательская потребность, объект решения и критерий успеха.",
+      "lessons": [
+        "M04-L01",
+        "M04-L03",
+        "M04-L04"
+      ],
+      "prerequisites": [],
+      "related": [
+        "target",
+        "metrics",
+        "baseline"
+      ],
+      "order": 137,
+      "contentUrl": "/content/knowledge/topics/problem.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "google-mlcc"
+      ],
+      "keywords": "True action input object output print python required spec spec.keys text"
+    },
+    {
+      "id": "dataset",
+      "title": "Набор данных и паспорт происхождения",
+      "group": "Применение и проект",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Источники, лицензия, схема и представительность выборки.",
+      "lessons": [
+        "M04-L06"
+      ],
+      "prerequisites": [],
+      "related": [
+        "leakage",
+        "ai-privacy",
+        "reproducibility"
+      ],
+      "order": 138,
+      "contentUrl": "/content/knowledge/topics/dataset.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "google-fairness",
+        "dvc",
+        "uci",
+        "sklearn-datasets",
+        "hf-datasets",
+        "kaggle-datasets"
+      ],
+      "keywords": "README for len print python row rows text"
+    },
+    {
+      "id": "prototype",
+      "title": "Прототип ИИ-сервиса",
+      "group": "Применение и проект",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Минимальный путь от входа пользователя к понятному результату.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [],
+      "related": [
+        "testing",
+        "documentation",
+        "ai-privacy"
+      ],
+      "order": 139,
+      "contentUrl": "/content/knowledge/topics/prototype.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "streamlit",
+        "gradio",
+        "fastapi"
+      ],
+      "keywords": "False True bool cleaned def print python return text text.strip validate"
+    },
+    {
+      "id": "testing",
+      "title": "Проверка ИИ-проекта",
+      "group": "Применение и проект",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Программные тесты, качество модели и сценарии пользователя.",
+      "lessons": [
+        "M04-L10",
+        "M04-L11"
+      ],
+      "prerequisites": [],
+      "related": [
+        "unittest",
+        "llm-evaluation"
+      ],
+      "order": 140,
+      "contentUrl": "/content/knowledge/topics/testing.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "python-unittest",
+        "pytest",
+        "fastapi"
+      ],
+      "keywords": "README assert def join normalize print python return text text.split unit"
+    },
+    {
+      "id": "documentation",
+      "title": "README и документация проекта",
+      "group": "Применение и проект",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Инструкция, по которой другой человек действительно повторит запуск.",
+      "lessons": [
+        "M04-L12"
+      ],
+      "prerequisites": [],
+      "related": [
+        "reproducibility",
+        "git",
+        "defense"
+      ],
+      "order": 141,
+      "contentUrl": "/content/knowledge/topics/documentation.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "git",
+        "ruff",
+        "streamlit",
+        "mlflow",
+        "dvc"
+      ],
+      "keywords": "README True baseline len print python required sections text"
+    },
+    {
+      "id": "defense",
+      "title": "Защита и объяснение результатов",
+      "group": "Применение и проект",
+      "track": "ai",
+      "level": "beginner",
+      "summary": "Как показать проблему, доказательства и границы проекта.",
+      "lessons": [
+        "M04-L13",
+        "M04-L14",
+        "M04-L15",
+        "M04-L16",
+        "M05-L01"
+      ],
+      "prerequisites": [],
+      "related": [
+        "documentation",
+        "metrics",
+        "problem"
+      ],
+      "order": 142,
+      "contentUrl": "/content/knowledge/topics/defense.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [],
+      "keywords": "README evidence len print python text"
+    },
+    {
+      "id": "ai-privacy",
+      "title": "Данные, приватность и ответственное применение",
+      "group": "Применение и проект",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Минимизация данных, доступ и ограничения автоматических решений.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "dataset"
+      ],
+      "related": [
+        "dataset",
+        "prompt-injection"
+      ],
+      "order": 143,
+      "contentUrl": "/content/knowledge/topics/ai-privacy.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "owasp-llm",
+        "google-fairness"
+      ],
+      "keywords": "False age_group allowed email example.test for key print public python record record.items score sorted student text value"
+    },
+    {
+      "id": "model-monitoring",
+      "title": "Наблюдение за моделью после запуска",
+      "group": "Применение и проект",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Качество, доступность и изменения потока во времени.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "metrics"
+      ],
+      "related": [
+        "data-drift",
+        "ai-privacy"
+      ],
+      "order": 144,
+      "contentUrl": "/content/knowledge/topics/model-monitoring.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "google-production",
+        "mlflow"
+      ],
+      "keywords": "for latencies_ms len limit_ms print python sum text value violations"
+    },
+    {
+      "id": "data-drift",
+      "title": "Сдвиг данных и изменение задачи",
+      "group": "Применение и проект",
+      "track": "ai",
+      "level": "intermediate",
+      "summary": "Почему прежняя оценка перестаёт описывать новые условия.",
+      "lessons": [
+        "M04-L07",
+        "M04-L08"
+      ],
+      "prerequisites": [
+        "split"
+      ],
+      "related": [
+        "temporal-split",
+        "model-monitoring"
+      ],
+      "order": 145,
+      "contentUrl": "/content/knowledge/topics/data-drift.json",
+      "readingMinutes": 2,
+      "exampleCount": 1,
+      "sourceIds": [
+        "google-production"
+      ],
+      "keywords": "Concept Data current current.values drift p_new p_old print python reference reference.values round sum text"
+    }
+  ],
+  "resources": [
+    {
+      "id": "python-intro",
+      "title": "Python: числа, текст и присваивание",
+      "url": "https://docs.python.org/3.12/tutorial/introduction.html",
+      "category": "Python: основы",
+      "type": "docs",
+      "topics": [
+        "variables",
+        "types",
+        "arithmetic",
+        "strings",
+        "conversion",
+        "indentation",
+        "string-slices"
+      ],
+      "description": "Официальное введение в операции со значениями и строками.",
+      "start": "Читайте примеры с числами, индексами и присваиванием.",
+      "limits": "Материал на английском; примеры сайта проверяются отдельно.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-flow",
+      "title": "Python: управление выполнением",
+      "url": "https://docs.python.org/3.12/tutorial/controlflow.html",
+      "category": "Python: основы",
+      "type": "docs",
+      "topics": [
+        "conditions",
+        "loops",
+        "logic",
+        "functions",
+        "parameters",
+        "loop-control",
+        "return-print"
+      ],
+      "description": "Условия, циклы, range и определения функций.",
+      "start": "Начните с if и for, затем переходите к параметрам функций.",
+      "limits": "Некоторые возможности выходят за начальный уровень курса.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-data",
+      "title": "Python: структуры данных",
+      "url": "https://docs.python.org/3.12/tutorial/datastructures.html",
+      "category": "Python: основы",
+      "type": "docs",
+      "topics": [
+        "lists",
+        "dictionaries",
+        "tuples",
+        "sets",
+        "comprehensions",
+        "sorting",
+        "mutability",
+        "complexity"
+      ],
+      "description": "Списки, словари, множества и способы обхода коллекций.",
+      "start": "Сопоставьте методы списка с изменениями исходного объекта.",
+      "limits": "Порядок элементов множества не следует использовать как контракт.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-functions",
+      "title": "Python: встроенные функции",
+      "url": "https://docs.python.org/3.12/library/functions.html",
+      "category": "Python: основы",
+      "type": "docs",
+      "topics": [
+        "input",
+        "output",
+        "conversion",
+        "aggregation",
+        "enumerate-zip",
+        "sorting",
+        "types"
+      ],
+      "description": "Справочник print, input, len, sum, sorted и других функций.",
+      "start": "Найдите конкретную функцию и проверьте аргументы и возвращаемое значение.",
+      "limits": "Справочник удобнее читать по запросу, а не целиком.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-types",
+      "title": "Python: встроенные типы",
+      "url": "https://docs.python.org/3.12/library/stdtypes.html",
+      "category": "Python: основы",
+      "type": "docs",
+      "topics": [
+        "truthiness",
+        "none",
+        "comparisons",
+        "string-methods",
+        "list-slices",
+        "dictionaries",
+        "dictionary-patterns",
+        "split-text"
+      ],
+      "description": "Подробное описание чисел, строк, коллекций и логических проверок.",
+      "start": "Используйте поиск по методу или оператору.",
+      "limits": "Детали API требуют знания основных типов.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-io",
+      "title": "Python: ввод, вывод и файлы",
+      "url": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+      "category": "Файлы и качество кода",
+      "type": "docs",
+      "topics": [
+        "output",
+        "formatting",
+        "file-text",
+        "json",
+        "float-precision"
+      ],
+      "description": "Форматирование строк, чтение файлов и сериализация JSON.",
+      "start": "Сравните режимы открытия и работу контекстного менеджера.",
+      "limits": "Путь и кодировку нужно выбирать под конкретный файл.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-exceptions",
+      "title": "Python: ошибки и исключения",
+      "url": "https://docs.python.org/3.12/tutorial/errors.html",
+      "category": "Файлы и качество кода",
+      "type": "docs",
+      "topics": [
+        "exceptions",
+        "debugging",
+        "assertions"
+      ],
+      "description": "Как читать traceback, перехватывать и поднимать исключения.",
+      "start": "Разберите пример с ValueError и узким except.",
+      "limits": "Перехват ошибки не должен скрывать причину сбоя.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-modules",
+      "title": "Python: модули и пакеты",
+      "url": "https://docs.python.org/3.12/tutorial/modules.html",
+      "category": "Файлы и качество кода",
+      "type": "docs",
+      "topics": [
+        "modules",
+        "main-guard"
+      ],
+      "description": "Импорт, пространства имён и организация нескольких файлов.",
+      "start": "Начните с собственного небольшого модуля.",
+      "limits": "Не называйте свои файлы именами используемых библиотек.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-classes",
+      "title": "Python: классы",
+      "url": "https://docs.python.org/3.12/tutorial/classes.html",
+      "category": "Python: устройство программ",
+      "type": "docs",
+      "topics": [
+        "classes",
+        "scope",
+        "iterators",
+        "generators"
+      ],
+      "description": "Объекты, атрибуты, методы, наследование и итераторы.",
+      "start": "Сначала изучите простой объект с несколькими полями.",
+      "limits": "Наследование не требуется для каждой маленькой программы.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-csv",
+      "title": "Python: модуль csv",
+      "url": "https://docs.python.org/3.12/library/csv.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "csv",
+        "file-text"
+      ],
+      "description": "Чтение таблиц, DictReader, разделители и кавычки.",
+      "start": "Сравните reader и DictReader на небольшом CSV.",
+      "limits": "CSV не хранит типы столбцов; данные нужно проверять.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-json",
+      "title": "Python: JSON",
+      "url": "https://docs.python.org/3.12/library/json.html",
+      "category": "Файлы и качество кода",
+      "type": "docs",
+      "topics": [
+        "json"
+      ],
+      "description": "Преобразование между JSON-текстом и объектами Python.",
+      "start": "Разберите разницу loads/load и dumps/dump.",
+      "limits": "Не все объекты Python непосредственно сериализуются в JSON.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-pathlib",
+      "title": "Python: pathlib",
+      "url": "https://docs.python.org/3.12/library/pathlib.html",
+      "category": "Файлы и качество кода",
+      "type": "docs",
+      "topics": [
+        "pathlib",
+        "file-text"
+      ],
+      "description": "Работа с путями как с объектами.",
+      "start": "Соберите путь оператором / и проверьте exists или is_file.",
+      "limits": "Относительный путь считается от рабочего каталога.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-re",
+      "title": "Python: регулярные выражения",
+      "url": "https://docs.python.org/3.12/library/re.html",
+      "category": "Python: устройство программ",
+      "type": "docs",
+      "topics": [
+        "regex",
+        "string-methods"
+      ],
+      "description": "Поиск шаблонов, группы и замена фрагментов текста.",
+      "start": "Начните с findall и простой группы цифр.",
+      "limits": "Регулярное выражение не заменяет полноценный парсер сложного формата.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-datetime",
+      "title": "Python: даты и время",
+      "url": "https://docs.python.org/3.12/library/datetime.html",
+      "category": "Python: устройство программ",
+      "type": "docs",
+      "topics": [
+        "datetime"
+      ],
+      "description": "Даты, длительности и преобразование строк.",
+      "start": "Изучите date, datetime и timedelta.",
+      "limits": "Для реальных событий нужно учитывать часовой пояс.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-collections",
+      "title": "Python: collections",
+      "url": "https://docs.python.org/3.12/library/collections.html",
+      "category": "Python: устройство программ",
+      "type": "docs",
+      "topics": [
+        "counter",
+        "dictionaries",
+        "aggregation"
+      ],
+      "description": "Counter, defaultdict и другие полезные контейнеры.",
+      "start": "Подсчитайте частоты с Counter и сравните со словарём.",
+      "limits": "Контейнер не проверяет предметный смысл ключей и значений.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-itertools",
+      "title": "Python: itertools",
+      "url": "https://docs.python.org/3.12/library/itertools.html",
+      "category": "Python: устройство программ",
+      "type": "docs",
+      "topics": [
+        "itertools",
+        "iterators",
+        "generators"
+      ],
+      "description": "Комбинирование и ленивый обход последовательностей.",
+      "start": "Начните с chain, islice и accumulate.",
+      "limits": "Некоторые итераторы бесконечны; не превращайте их целиком в список.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-typing",
+      "title": "Python: аннотации типов",
+      "url": "https://docs.python.org/3.12/library/typing.html",
+      "category": "Файлы и качество кода",
+      "type": "docs",
+      "topics": [
+        "type-hints"
+      ],
+      "description": "Контракты функций и контейнеров с аннотациями.",
+      "start": "Сравните сигнатуру list[int] с фактическим входом.",
+      "limits": "Аннотации обычно не выполняют проверку типов во время запуска.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-dataclasses",
+      "title": "Python: dataclasses",
+      "url": "https://docs.python.org/3.12/library/dataclasses.html",
+      "category": "Python: устройство программ",
+      "type": "docs",
+      "topics": [
+        "dataclasses",
+        "classes",
+        "mutability"
+      ],
+      "description": "Компактное объявление объектов с полями.",
+      "start": "Разберите field(default_factory=list).",
+      "limits": "Изменяемые значения по умолчанию требуют отдельного внимания.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-unittest",
+      "title": "Python: unittest",
+      "url": "https://docs.python.org/3.12/library/unittest.html",
+      "category": "Файлы и качество кода",
+      "type": "docs",
+      "topics": [
+        "unittest",
+        "testing",
+        "assertions"
+      ],
+      "description": "Проверки ожидаемого поведения программ.",
+      "start": "Начните с TestCase и assertEqual.",
+      "limits": "Хороший тест проверяет требование, а не повторяет реализацию.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-venv",
+      "title": "Python: виртуальные окружения",
+      "url": "https://docs.python.org/3.12/library/venv.html",
+      "category": "Среды и инструменты",
+      "type": "docs",
+      "topics": [
+        "venv",
+        "setup",
+        "pip"
+      ],
+      "description": "Изоляция библиотек разных проектов.",
+      "start": "Создайте окружение отдельной командой python -m venv.",
+      "limits": "Команда активации зависит от оболочки и операционной системы.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pip",
+      "title": "pip: установка пакетов",
+      "url": "https://pip.pypa.io/en/stable/user_guide/",
+      "category": "Среды и инструменты",
+      "type": "docs",
+      "topics": [
+        "pip",
+        "venv",
+        "setup"
+      ],
+      "description": "Установка, просмотр и фиксация зависимостей.",
+      "start": "Используйте python -m pip из нужного окружения.",
+      "limits": "Установка пакета выполняет код поставщика: проверяйте источник.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-statistics",
+      "title": "Python: статистика",
+      "url": "https://docs.python.org/3.12/library/statistics.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "statistics",
+        "aggregation",
+        "probability-bayes"
+      ],
+      "description": "Среднее, медиана, выборочное и генеральное отклонение.",
+      "start": "Сравните mean, median, stdev и pstdev.",
+      "limits": "Выбор знаменателя зависит от смысла исходного набора.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pandas",
+      "title": "pandas: вводные уроки",
+      "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "tables",
+        "csv",
+        "cleaning",
+        "statistics",
+        "charts",
+        "pandas-indexing",
+        "pandas-groupby"
+      ],
+      "description": "Короткие официальные главы по анализу таблиц.",
+      "start": "Идите от чтения таблицы к выбору строк и сводным показателям.",
+      "limits": "Документация может описывать более новую версию, чем ваш проект.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pandas-index",
+      "title": "pandas: выбор строк и столбцов",
+      "url": "https://pandas.pydata.org/docs/user_guide/indexing.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "pandas-indexing",
+        "tables"
+      ],
+      "description": "Индексы, loc, iloc и логические маски.",
+      "start": "Сравните выбор по метке и по позиции.",
+      "limits": "Срезы loc и iloc имеют разные правила правой границы.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pandas-group",
+      "title": "pandas: группировка",
+      "url": "https://pandas.pydata.org/docs/user_guide/groupby.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "pandas-groupby",
+        "statistics"
+      ],
+      "description": "Разделение таблицы на группы и агрегации.",
+      "start": "Постройте сводку count и mean по одной категории.",
+      "limits": "Среднее группы без её размера может вводить в заблуждение.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pandas-merge",
+      "title": "pandas: объединение таблиц",
+      "url": "https://pandas.pydata.org/docs/user_guide/merging.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "pandas-merge",
+        "tables"
+      ],
+      "description": "merge, join и concat с разными задачами объединения.",
+      "start": "Изучите ключи и параметр validate.",
+      "limits": "Повторные ключи могут резко увеличить число строк.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pandas-missing",
+      "title": "pandas: пропущенные данные",
+      "url": "https://pandas.pydata.org/docs/user_guide/missing_data.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "pandas-missing",
+        "cleaning",
+        "imputation"
+      ],
+      "description": "Типы пропусков, проверки и способы обработки.",
+      "start": "Сначала посчитайте пропуски, затем выберите правило.",
+      "limits": "Заполнение нулём не является универсально корректным.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pandas-text",
+      "title": "pandas: текстовые данные",
+      "url": "https://pandas.pydata.org/docs/user_guide/text.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "cleaning",
+        "string-methods",
+        "tables"
+      ],
+      "description": "Векторные строковые операции по столбцам.",
+      "start": "Начните со str.strip и str.lower.",
+      "limits": "Нормализация может изменить смысл идентификаторов.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "numpy-basics",
+      "title": "NumPy: основы массивов",
+      "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "numpy-arrays",
+        "numpy-broadcasting",
+        "features"
+      ],
+      "description": "Массивы, формы, индексы и вычисления над данными.",
+      "start": "Проследите shape, ndim и операции по осям.",
+      "limits": "Список и ndarray имеют разную семантику арифметических операций.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "numpy-broadcast",
+      "title": "NumPy: broadcasting",
+      "url": "https://numpy.org/doc/stable/user/basics.broadcasting.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "numpy-broadcasting",
+        "scaling"
+      ],
+      "description": "Правила совместимости форм при поэлементных операциях.",
+      "start": "Сравнивайте размеры справа налево.",
+      "limits": "Неявное расширение может создать неожиданно большой результат.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "matplotlib",
+      "title": "Matplotlib: первые графики",
+      "url": "https://matplotlib.org/stable/tutorials/pyplot.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "matplotlib",
+        "charts"
+      ],
+      "description": "Линии, подписи осей и организация рисунка.",
+      "start": "Начните с fig, ax = plt.subplots().",
+      "limits": "График должен отвечать на вопрос и содержать единицы.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "seaborn",
+      "title": "Seaborn: статистическая визуализация",
+      "url": "https://seaborn.pydata.org/tutorial.html",
+      "category": "Таблицы и графики",
+      "type": "docs",
+      "topics": [
+        "charts",
+        "correlation-causality",
+        "statistics"
+      ],
+      "description": "Распределения, категории и отношения в табличных данных.",
+      "start": "Выберите график под типы переменных.",
+      "limits": "Автоматические оценки на графике нужно интерпретировать.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn",
+      "title": "Scikit-learn: начало работы",
+      "url": "https://scikit-learn.org/stable/getting_started.html",
+      "category": "Машинное обучение",
+      "type": "docs",
+      "topics": [
+        "classification",
+        "regression",
+        "clustering",
+        "split",
+        "features",
+        "target"
+      ],
+      "description": "Единый интерфейс моделей и преобразователей.",
+      "start": "Сравните fit, predict и transform.",
+      "limits": "Обучение и оценка должны использовать разные роли данных.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-guide",
+      "title": "Scikit-learn: руководство",
+      "url": "https://scikit-learn.org/stable/user_guide.html",
+      "category": "Машинное обучение",
+      "type": "docs",
+      "topics": [
+        "ai-ml-dl",
+        "supervised",
+        "unsupervised",
+        "ml-workflow",
+        "baseline"
+      ],
+      "description": "Официальная карта алгоритмов и этапов ML.",
+      "start": "Выберите главу по типу целевого ответа.",
+      "limits": "Это справочник; не нужно изучать все алгоритмы до первого проекта.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-pitfalls",
+      "title": "Scikit-learn: типичные ошибки",
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "category": "Проверка моделей",
+      "type": "docs",
+      "topics": [
+        "leakage",
+        "split",
+        "pipeline",
+        "overfitting",
+        "reproducibility"
+      ],
+      "description": "Утечки данных и несогласованная подготовка признаков.",
+      "start": "Разберите примеры неправильного и правильного разделения.",
+      "limits": "Особенно важно до сравнения моделей по метрикам.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-cv",
+      "title": "Scikit-learn: кросс-валидация",
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "category": "Проверка моделей",
+      "type": "docs",
+      "topics": [
+        "cross-validation",
+        "stratification",
+        "temporal-split",
+        "validation",
+        "split"
+      ],
+      "description": "Способы разделения и повторная оценка моделей.",
+      "start": "Сопоставьте KFold, StratifiedKFold и TimeSeriesSplit.",
+      "limits": "Разбиение должно отражать зависимости между объектами.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-metrics",
+      "title": "Scikit-learn: метрики",
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "category": "Проверка моделей",
+      "type": "docs",
+      "topics": [
+        "metrics",
+        "confusion-matrix",
+        "precision-recall",
+        "f1",
+        "roc-pr",
+        "mae-rmse",
+        "r2"
+      ],
+      "description": "Метрики классификации, регрессии и кластеризации.",
+      "start": "Сначала определите цену ошибки и нужный знаменатель.",
+      "limits": "Одинаковое название метрики не делает разные тестовые наборы сопоставимыми.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-threshold",
+      "title": "Scikit-learn: порог классификации",
+      "url": "https://scikit-learn.org/stable/modules/classification_threshold.html",
+      "category": "Проверка моделей",
+      "type": "docs",
+      "topics": [
+        "thresholds",
+        "precision-recall",
+        "imbalance"
+      ],
+      "description": "Разделение модельной оценки и рабочего решения.",
+      "start": "Проследите, как меняются FP и FN при другом пороге.",
+      "limits": "Порог нельзя подбирать по окончательному тесту.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-calibration",
+      "title": "Scikit-learn: калибровка",
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "category": "Проверка моделей",
+      "type": "docs",
+      "topics": [
+        "calibration",
+        "thresholds"
+      ],
+      "description": "Когда предсказанная вероятность соответствует наблюдаемой частоте.",
+      "start": "Разберите calibration curve и отдельную калибровочную выборку.",
+      "limits": "Высокая accuracy сама по себе не доказывает калибровку.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-preprocessing",
+      "title": "Scikit-learn: преобразование признаков",
+      "url": "https://scikit-learn.org/stable/modules/preprocessing.html",
+      "category": "Машинное обучение",
+      "type": "docs",
+      "topics": [
+        "scaling",
+        "encoding",
+        "features"
+      ],
+      "description": "Стандартизация, нормализация и кодирование.",
+      "start": "Сравните StandardScaler и OneHotEncoder.",
+      "limits": "Параметры преобразований получают по train.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-impute",
+      "title": "Scikit-learn: заполнение пропусков",
+      "url": "https://scikit-learn.org/stable/modules/impute.html",
+      "category": "Машинное обучение",
+      "type": "docs",
+      "topics": [
+        "imputation",
+        "pandas-missing",
+        "cleaning"
+      ],
+      "description": "Стратегии заполнения и индикаторы отсутствия.",
+      "start": "Начните с SimpleImputer внутри Pipeline.",
+      "limits": "Выбор стратегии зависит от природы пропусков.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-pipeline",
+      "title": "Scikit-learn: Pipeline и ColumnTransformer",
+      "url": "https://scikit-learn.org/stable/modules/compose.html",
+      "category": "Машинное обучение",
+      "type": "docs",
+      "topics": [
+        "pipeline",
+        "column-transformer",
+        "encoding"
+      ],
+      "description": "Совместная подготовка разных типов столбцов.",
+      "start": "Соберите обработку чисел и категорий перед моделью.",
+      "limits": "Пайплайн помогает избежать технических утечек, но не исправляет неверную постановку.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-linear",
+      "title": "Scikit-learn: линейные модели",
+      "url": "https://scikit-learn.org/stable/modules/linear_model.html",
+      "category": "Алгоритмы ML",
+      "type": "docs",
+      "topics": [
+        "linear-regression",
+        "logistic-regression",
+        "regularization",
+        "regression"
+      ],
+      "description": "Линейная регрессия, логистическая модель и регуляризация.",
+      "start": "Различайте числовой прогноз и вероятность класса.",
+      "limits": "Линейность не означает, что данные всегда описываются прямой.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-knn",
+      "title": "Scikit-learn: ближайшие соседи",
+      "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+      "category": "Алгоритмы ML",
+      "type": "docs",
+      "topics": [
+        "knn",
+        "scaling"
+      ],
+      "description": "Расстояния и голосование по похожим объектам.",
+      "start": "Проследите влияние k и масштаба признаков.",
+      "limits": "Предсказание может требовать хранения и сравнения многих объектов.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-trees",
+      "title": "Scikit-learn: деревья решений",
+      "url": "https://scikit-learn.org/stable/modules/tree.html",
+      "category": "Алгоритмы ML",
+      "type": "docs",
+      "topics": [
+        "decision-trees",
+        "overfitting"
+      ],
+      "description": "Разбиение данных условиями и контроль сложности.",
+      "start": "Сравните глубину дерева и число листьев.",
+      "limits": "Глубокое дерево легко подстраивается под шум.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-ensembles",
+      "title": "Scikit-learn: ансамбли",
+      "url": "https://scikit-learn.org/stable/modules/ensemble.html",
+      "category": "Алгоритмы ML",
+      "type": "docs",
+      "topics": [
+        "random-forest",
+        "boosting"
+      ],
+      "description": "Объединение моделей: леса, bagging и boosting.",
+      "start": "Сначала различите независимое усреднение и последовательное исправление ошибок.",
+      "limits": "Сложный ансамбль не отменяет необходимость baseline.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-svm",
+      "title": "Scikit-learn: SVM",
+      "url": "https://scikit-learn.org/stable/modules/svm.html",
+      "category": "Алгоритмы ML",
+      "type": "docs",
+      "topics": [
+        "svm",
+        "scaling"
+      ],
+      "description": "Разделяющая граница, ядра и параметры модели.",
+      "start": "Сравните C и роль масштабирования.",
+      "limits": "decision_function не является готовой вероятностью.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-bayes",
+      "title": "Scikit-learn: наивный Байес",
+      "url": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+      "category": "Алгоритмы ML",
+      "type": "docs",
+      "topics": [
+        "naive-bayes",
+        "probability-bayes",
+        "tfidf"
+      ],
+      "description": "Вероятностная классификация с условной независимостью признаков.",
+      "start": "Сопоставьте MultinomialNB и типы входных данных.",
+      "limits": "Предположение независимости является упрощением.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-clusters",
+      "title": "Scikit-learn: кластеризация",
+      "url": "https://scikit-learn.org/stable/modules/clustering.html",
+      "category": "Алгоритмы ML",
+      "type": "docs",
+      "topics": [
+        "clustering",
+        "kmeans",
+        "dbscan"
+      ],
+      "description": "Разные представления похожести и группировки.",
+      "start": "Сравните число групп, форму кластеров и шум.",
+      "limits": "Номер кластера не имеет заранее заданного предметного смысла.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-pca",
+      "title": "Scikit-learn: PCA",
+      "url": "https://scikit-learn.org/stable/modules/decomposition.html",
+      "category": "Алгоритмы ML",
+      "type": "docs",
+      "topics": [
+        "pca",
+        "numpy-arrays"
+      ],
+      "description": "Снижение размерности и объяснённая дисперсия.",
+      "start": "Отделите компоненты от исходных признаков.",
+      "limits": "Сохранение дисперсии не гарантирует сохранение информации о цели.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-text",
+      "title": "Scikit-learn: текстовые признаки",
+      "url": "https://scikit-learn.org/stable/modules/feature_extraction.html",
+      "category": "Нейросети и язык",
+      "type": "docs",
+      "topics": [
+        "tfidf",
+        "embeddings",
+        "features"
+      ],
+      "description": "Bag-of-Words, TF-IDF и разреженные матрицы.",
+      "start": "Проследите построение словаря только по train.",
+      "limits": "Разные формы слова могут стать разными признаками.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-grid",
+      "title": "Scikit-learn: подбор параметров",
+      "url": "https://scikit-learn.org/stable/modules/grid_search.html",
+      "category": "Проверка моделей",
+      "type": "docs",
+      "topics": [
+        "hyperparameters",
+        "validation",
+        "cross-validation"
+      ],
+      "description": "Поиск настроек с независимой оценкой.",
+      "start": "Начните с небольшого GridSearchCV внутри Pipeline.",
+      "limits": "Большой перебор повышает вычислительную цену и риск подгонки.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-curves",
+      "title": "Scikit-learn: кривые обучения",
+      "url": "https://scikit-learn.org/stable/modules/learning_curve.html",
+      "category": "Проверка моделей",
+      "type": "docs",
+      "topics": [
+        "learning-curves",
+        "bias-variance",
+        "overfitting"
+      ],
+      "description": "Как меняется качество с размером данных и сложностью.",
+      "start": "Сравнивайте train и validation на одном рисунке.",
+      "limits": "Один график не доказывает единственную причину ошибки.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-importance",
+      "title": "Scikit-learn: важность признаков",
+      "url": "https://scikit-learn.org/stable/modules/permutation_importance.html",
+      "category": "Проверка моделей",
+      "type": "docs",
+      "topics": [
+        "feature-importance",
+        "features"
+      ],
+      "description": "Падение метрики после перестановки признака.",
+      "start": "Оценивайте важность на отложенных данных.",
+      "limits": "Коррелирующие признаки могут скрывать важность друг друга.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pytorch",
+      "title": "PyTorch: основы нейросетей",
+      "url": "https://pytorch.org/tutorials/beginner/basics/intro.html",
+      "category": "Нейросети и язык",
+      "type": "docs",
+      "topics": [
+        "neural-networks",
+        "gradient-descent",
+        "transformers"
+      ],
+      "description": "Тензоры, градиенты, обучение и сохранение модели.",
+      "start": "Начните с tensor и automatic differentiation.",
+      "limits": "Полноценные эксперименты требуют зависимостей и вычислительных ресурсов.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "hf-course",
+      "title": "Hugging Face: курс LLM",
+      "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "category": "LLM и RAG",
+      "type": "course",
+      "topics": [
+        "transformers",
+        "llm-tokens",
+        "llm-generation",
+        "prompting",
+        "embeddings"
+      ],
+      "description": "Структура языковых моделей и работа с NLP-библиотеками.",
+      "start": "Читайте главы о токенизаторе и архитектурах перед запуском больших моделей.",
+      "limits": "Учебные главы не отменяют проверки лицензии конкретной модели.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "hf-generation",
+      "title": "Hugging Face: генерация текста",
+      "url": "https://huggingface.co/docs/transformers/en/llm_tutorial",
+      "category": "LLM и RAG",
+      "type": "docs",
+      "topics": [
+        "llm-generation",
+        "llm-tokens"
+      ],
+      "description": "Авторегрессивная генерация и методы декодирования.",
+      "start": "Сравните greedy decoding, temperature и sampling.",
+      "limits": "Параметры генерации не гарантируют фактологическую правильность.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "hf-tokenizers",
+      "title": "Hugging Face: токенизаторы",
+      "url": "https://huggingface.co/docs/tokenizers/index",
+      "category": "LLM и RAG",
+      "type": "docs",
+      "topics": [
+        "llm-tokens",
+        "transformers"
+      ],
+      "description": "Преобразование текста в токены и идентификаторы.",
+      "start": "Посмотрите encoding и специальные токены.",
+      "limits": "Число слов и число токенов не совпадают.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sentence-transformers",
+      "title": "Sentence Transformers: embeddings",
+      "url": "https://www.sbert.net/docs/quickstart.html",
+      "category": "LLM и RAG",
+      "type": "docs",
+      "topics": [
+        "embeddings",
+        "cosine-similarity",
+        "rag"
+      ],
+      "description": "Векторы предложений и поиск похожих текстов.",
+      "start": "Начните с encode и сравнения косинусной близости.",
+      "limits": "Высокая близость не доказывает истинность найденного текста.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "attention-paper",
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "category": "Нейросети и язык",
+      "type": "docs",
+      "topics": [
+        "transformers"
+      ],
+      "description": "Первичная исследовательская статья об архитектуре Transformer.",
+      "start": "Сопоставьте attention и позиционные представления с вводной главой.",
+      "limits": "Техническая статья предполагает знание линейной алгебры.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "rag-paper",
+      "title": "Retrieval-Augmented Generation",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "category": "LLM и RAG",
+      "type": "docs",
+      "topics": [
+        "rag",
+        "hallucinations",
+        "llm-evaluation"
+      ],
+      "description": "Исследовательская работа, связывающая извлечение документов и генерацию.",
+      "start": "Разделите этапы retrieval и generation.",
+      "limits": "Наличие поиска не гарантирует качество извлечения и ответа.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "owasp-llm",
+      "title": "OWASP: риски приложений с LLM",
+      "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "category": "Ответственное применение",
+      "type": "docs",
+      "topics": [
+        "prompt-injection",
+        "ai-privacy",
+        "hallucinations"
+      ],
+      "description": "Первичный справочник угроз prompt injection.",
+      "start": "Разберите границы доверия к найденному документу и инструменту.",
+      "limits": "Одной фразы в промпте недостаточно для изоляции недоверенных данных.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "google-fairness",
+      "title": "Google ML: справедливость моделей",
+      "url": "https://developers.google.com/machine-learning/crash-course/fairness?hl=ru",
+      "category": "Ответственное применение",
+      "type": "course",
+      "topics": [
+        "ai-privacy",
+        "dataset",
+        "metrics"
+      ],
+      "description": "Проверка качества по группам и ограничений выборки.",
+      "start": "Сопоставьте общую метрику с результатами подгрупп.",
+      "limits": "Выбор групп и критериев зависит от применения.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "google-production",
+      "title": "Google ML: производственные системы",
+      "url": "https://developers.google.com/machine-learning/crash-course/production-ml-systems?hl=ru",
+      "category": "Ответственное применение",
+      "type": "course",
+      "topics": [
+        "model-monitoring",
+        "data-drift",
+        "ml-workflow"
+      ],
+      "description": "Модель как часть системы данных и рабочих процессов.",
+      "start": "Проследите путь от данных до мониторинга результата.",
+      "limits": "Учебный пример не является готовым планом эксплуатации.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "yandex-python",
+      "title": "Яндекс: справочник Python",
+      "url": "https://contest.yandex.ru/tracks/python/",
+      "category": "Русскоязычные материалы",
+      "type": "docs",
+      "topics": [
+        "variables",
+        "input",
+        "output",
+        "loops",
+        "lists",
+        "functions"
+      ],
+      "description": "Русскоязычные объяснения основных конструкций.",
+      "start": "Выберите нужную конструкцию в оглавлении.",
+      "limits": "Для отдельных заданий и сохранения работы могут действовать условия платформы.",
+      "language": "RU",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "yandex-handbook-python",
+      "title": "Яндекс: основы Python",
+      "url": "https://education.yandex.ru/handbook/python",
+      "category": "Русскоязычные материалы",
+      "type": "course",
+      "topics": [
+        "setup",
+        "conditions",
+        "loops",
+        "dictionaries",
+        "functions"
+      ],
+      "description": "Учебник от авторов курса с последовательными темами.",
+      "start": "Начните с раздела, соответствующего вашей подготовке.",
+      "limits": "Внешние упражнения не являются заданиями iSMART.",
+      "language": "RU",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "yandex-ml",
+      "title": "Яндекс: машинное обучение",
+      "url": "https://education.yandex.ru/handbook/ml",
+      "category": "Русскоязычные материалы",
+      "type": "course",
+      "topics": [
+        "ai-ml-dl",
+        "supervised",
+        "regression",
+        "classification",
+        "metrics"
+      ],
+      "description": "Теория и математические основы машинного обучения.",
+      "start": "Сверяйте термины с главами библиотеки.",
+      "limits": "Часть материала требует дополнительной математики.",
+      "language": "RU",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pythontutor-inout",
+      "title": "PythonTutor: ввод и арифметика",
+      "url": "https://pythontutor.ru/lessons/inout_and_arithmetic_operations/",
+      "category": "Русскоязычные материалы",
+      "type": "docs",
+      "topics": [
+        "input",
+        "output",
+        "conversion",
+        "arithmetic"
+      ],
+      "description": "Русскоязычное объяснение ввода, вывода и чисел.",
+      "start": "Проследите переход от строки к числу.",
+      "limits": "Это внешний учебный сайт.",
+      "language": "RU",
+      "mode": "read",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "id": "stepik-beginner",
+      "title": "Stepik: Поколение Python",
+      "url": "https://stepik.org/course/58852/promo",
+      "category": "Русскоязычные материалы",
+      "type": "course",
+      "topics": [
+        "variables",
+        "strings",
+        "loops",
+        "functions",
+        "lists"
+      ],
+      "description": "Курс авторов BEEGEEK по основам языка.",
+      "start": "Посмотрите программу и выберите соответствующий раздел.",
+      "limits": "Регистрация и условия доступа определяются платформой.",
+      "language": "RU",
+      "mode": "browser",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "google-mlcc",
+      "title": "Google: ускоренный курс ML",
+      "url": "https://developers.google.com/machine-learning/crash-course?hl=ru",
+      "category": "Русскоязычные материалы",
+      "type": "course",
+      "topics": [
+        "ai-ml-dl",
+        "linear-regression",
+        "logistic-regression",
+        "metrics",
+        "gradient-descent",
+        "problem"
+      ],
+      "description": "Официальный курс с объяснениями моделей и их оценки.",
+      "start": "Начните с предварительных требований и линейной регрессии.",
+      "limits": "Отдельные примеры могут быть на английском.",
+      "language": "RU",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "vscode",
+      "title": "Visual Studio Code: Python",
+      "url": "https://code.visualstudio.com/docs/languages/python",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "setup",
+        "debugging",
+        "venv",
+        "notebooks",
+        "terminal"
+      ],
+      "description": "Редактор с выбором интерпретатора и отладкой.",
+      "start": "Откройте папку проекта и выберите нужный Python interpreter.",
+      "limits": "Расширение редактора не заменяет установленный интерпретатор.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pycharm",
+      "title": "PyCharm: начало работы",
+      "url": "https://www.jetbrains.com/help/pycharm/quick-start-guide.html",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "setup",
+        "debugging",
+        "venv"
+      ],
+      "description": "Среда разработки для организации Python-проекта.",
+      "start": "Создайте проект и проверьте используемое окружение.",
+      "limits": "Возможности зависят от установленной версии и условий продукта.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "jupyter",
+      "title": "JupyterLab: руководство",
+      "url": "https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "notebooks",
+        "tables",
+        "charts"
+      ],
+      "description": "Ноутбуки, текстовые редакторы и вывод вычислений.",
+      "start": "Откройте notebook и разберите порядок выполнения ячеек.",
+      "limits": "Состояние ядра может скрывать зависимость от старых запусков.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "colab",
+      "title": "Google Colab",
+      "url": "https://research.google.com/colaboratory/faq.html",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "notebooks",
+        "setup",
+        "neural-networks"
+      ],
+      "description": "Браузерная среда для запуска ноутбуков.",
+      "start": "Прочитайте FAQ о хранении, ресурсах и доступе.",
+      "limits": "Доступность ресурсов и условия сервиса могут меняться.",
+      "language": "EN",
+      "mode": "browser",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "python-visualizer",
+      "title": "Python Tutor: визуализация выполнения",
+      "url": "https://pythontutor.com/",
+      "category": "Среды и инструменты",
+      "type": "interactive",
+      "topics": [
+        "variables",
+        "mutability",
+        "scope",
+        "functions"
+      ],
+      "description": "Пошаговое отображение выполнения небольших программ.",
+      "start": "Смотрите, как меняются имена, ссылки и стек вызовов.",
+      "limits": "Поддержка библиотек и размер примера ограничены.",
+      "language": "EN",
+      "mode": "browser",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "git",
+      "title": "Git: книга Pro Git",
+      "url": "https://git-scm.com/book/ru/v2",
+      "category": "Среды и инструменты",
+      "type": "docs",
+      "topics": [
+        "git",
+        "reproducibility",
+        "documentation"
+      ],
+      "description": "Официальная книга по истории изменений и веткам.",
+      "start": "Начните с состояния рабочей папки и первого коммита.",
+      "limits": "Не добавляйте в историю секреты и закрытые данные.",
+      "language": "RU",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "pytest",
+      "title": "pytest: начало работы",
+      "url": "https://docs.pytest.org/en/stable/getting-started.html",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "unittest",
+        "assertions",
+        "testing"
+      ],
+      "description": "Проверки поведения с обычными assert и фикстурами.",
+      "start": "Запустите один маленький тест на ожидаемый результат.",
+      "limits": "В проекте нужно явно установить зависимость.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "ruff",
+      "title": "Ruff: проверка Python-кода",
+      "url": "https://docs.astral.sh/ruff/",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "debugging",
+        "documentation"
+      ],
+      "description": "Автоматический поиск части ошибок и единый стиль.",
+      "start": "Посмотрите сообщения проверки до автоматического исправления.",
+      "limits": "Линтер не доказывает правильность алгоритма.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "uv",
+      "title": "uv: окружения и зависимости",
+      "url": "https://docs.astral.sh/uv/",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "venv",
+        "pip"
+      ],
+      "description": "Менеджер проектов, окружений и пакетов.",
+      "start": "Сначала разберите, какой проект и lock-файл используются.",
+      "limits": "Не смешивайте несколько менеджеров без понятного правила.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "streamlit",
+      "title": "Streamlit: первые шаги",
+      "url": "https://docs.streamlit.io/get-started",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "prototype",
+        "documentation"
+      ],
+      "description": "Создание интерфейса для демонстрации анализа и модели.",
+      "start": "Начните с простого ввода и отображения результата.",
+      "limits": "Перезапуск приложения влияет на состояние переменных.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "gradio",
+      "title": "Gradio: быстрый старт",
+      "url": "https://www.gradio.app/guides/quickstart",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "prototype",
+        "llm-evaluation"
+      ],
+      "description": "Демо-интерфейсы для функций и моделей.",
+      "start": "Определите функцию вход → выход, затем оболочку интерфейса.",
+      "limits": "Публичное демо требует отдельной проверки данных и доступа.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "fastapi",
+      "title": "FastAPI: учебник",
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "prototype",
+        "type-hints",
+        "testing"
+      ],
+      "description": "HTTP-интерфейс к Python-функциям с валидацией моделей данных.",
+      "start": "Начните с одной операции и формата запроса.",
+      "limits": "API требует отдельного запуска сервера и проверки доступа.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "mlflow",
+      "title": "MLflow: документация",
+      "url": "https://mlflow.org/docs/latest/",
+      "category": "Данные и воспроизводимость",
+      "type": "tool",
+      "topics": [
+        "model-monitoring",
+        "hyperparameters",
+        "documentation"
+      ],
+      "description": "Учёт параметров, метрик и артефактов эксперимента.",
+      "start": "Сохраните один запуск с параметрами и результатом.",
+      "limits": "Журнал экспериментов не заменяет версионирование исходных данных.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "dvc",
+      "title": "DVC: начало работы",
+      "url": "https://dvc.org/doc/start",
+      "category": "Данные и воспроизводимость",
+      "type": "tool",
+      "topics": [
+        "dataset",
+        "documentation",
+        "git"
+      ],
+      "description": "Версионирование данных и описания вычислительных этапов.",
+      "start": "Разделите исходники в Git и тяжёлые артефакты.",
+      "limits": "Удалённое хранилище и права доступа настраиваются отдельно.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "uci",
+      "title": "UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/",
+      "category": "Данные и воспроизводимость",
+      "type": "dataset",
+      "topics": [
+        "dataset",
+        "classification",
+        "regression"
+      ],
+      "description": "Каталог учебных наборов с описаниями признаков и источников.",
+      "start": "Читайте описание набора до скачивания.",
+      "limits": "Лицензия и ограничения проверяются для каждого набора отдельно.",
+      "language": "EN",
+      "mode": "browser",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sklearn-datasets",
+      "title": "Scikit-learn: встроенные датасеты",
+      "url": "https://scikit-learn.org/stable/datasets/toy_dataset.html",
+      "category": "Данные и воспроизводимость",
+      "type": "dataset",
+      "topics": [
+        "dataset",
+        "classification",
+        "clustering"
+      ],
+      "description": "Небольшие наборы для воспроизводимых первых моделей.",
+      "start": "Начните с Iris и отделите data от target.",
+      "limits": "Высокий результат на учебном наборе не переносится автоматически на рабочую задачу.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "hf-datasets",
+      "title": "Hugging Face Datasets: руководство",
+      "url": "https://huggingface.co/docs/datasets/index",
+      "category": "Данные и воспроизводимость",
+      "type": "docs",
+      "topics": [
+        "dataset",
+        "rag",
+        "llm-evaluation"
+      ],
+      "description": "Загрузка и обработка наборов данных.",
+      "start": "Проверьте карточку, колонки, разбиения и лицензию набора.",
+      "limits": "Не следует исполнять неизвестный код подготовки данных без рассмотрения.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "kaggle-datasets",
+      "title": "Kaggle: наборы данных",
+      "url": "https://www.kaggle.com/datasets",
+      "category": "Данные и воспроизводимость",
+      "type": "dataset",
+      "topics": [
+        "dataset",
+        "cleaning",
+        "charts"
+      ],
+      "description": "Каталог наборов, описаний и обсуждений.",
+      "start": "Проверяйте автора, обновление, лицензию и качество.",
+      "limits": "Наличие набора в каталоге не гарантирует пригодность или отсутствие персональных данных.",
+      "language": "EN",
+      "mode": "browser",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "duckdb",
+      "title": "DuckDB: введение",
+      "url": "https://duckdb.org/docs/stable/",
+      "category": "Данные и воспроизводимость",
+      "type": "tool",
+      "topics": [
+        "csv",
+        "tables",
+        "pandas-groupby"
+      ],
+      "description": "Локальная аналитическая база для табличных запросов.",
+      "start": "Начните с чтения CSV и простой группировки.",
+      "limits": "SQL-запросы не исправляют ошибки источника автоматически.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "sqlite",
+      "title": "SQLite: справочник SQL",
+      "url": "https://www.sqlite.org/lang.html",
+      "category": "Данные и воспроизводимость",
+      "type": "docs",
+      "topics": [
+        "tables",
+        "pandas-merge"
+      ],
+      "description": "Официальный справочник языка запросов встроенной базы.",
+      "start": "Сравните SELECT, WHERE и GROUP BY.",
+      "limits": "Типы и особенности SQLite отличаются от других СУБД.",
+      "language": "EN",
+      "mode": "read",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "orange",
+      "title": "Orange Data Mining",
+      "url": "https://orangedatamining.com/docs/",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "ml-workflow",
+        "classification",
+        "clustering"
+      ],
+      "description": "Визуальная сборка потоков анализа данных.",
+      "start": "Начните с загрузки таблицы, осмотра и разделения данных.",
+      "limits": "Визуальная схема тоже может содержать утечку или неверную оценку.",
+      "language": "EN",
+      "mode": "local",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "teachable",
+      "title": "Teachable Machine",
+      "url": "https://teachablemachine.withgoogle.com/",
+      "category": "Среды и инструменты",
+      "type": "interactive",
+      "topics": [
+        "neural-networks",
+        "classification"
+      ],
+      "description": "Браузерная демонстрация обучения простых классификаторов.",
+      "start": "Сравните разные классы и примеры, не использованные при обучении.",
+      "limits": "Демонстрационный успех не является производственной оценкой.",
+      "language": "EN",
+      "mode": "browser",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "desmos",
+      "title": "Desmos: графический калькулятор",
+      "url": "https://www.desmos.com/calculator?lang=ru",
+      "category": "Среды и инструменты",
+      "type": "interactive",
+      "topics": [
+        "gradient-descent",
+        "linear-regression",
+        "arithmetic"
+      ],
+      "description": "Графики функций с изменяемыми параметрами.",
+      "start": "Введите простую функцию и изменяйте коэффициенты.",
+      "limits": "График помогает понять зависимость, но не заменяет аналитическое доказательство.",
+      "language": "RU",
+      "mode": "browser",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "netron",
+      "title": "Netron: просмотр моделей",
+      "url": "https://netron.app/",
+      "category": "Среды и инструменты",
+      "type": "tool",
+      "topics": [
+        "neural-networks",
+        "transformers"
+      ],
+      "description": "Просмотр структуры поддерживаемых форматов моделей.",
+      "start": "Изучите входные размеры и последовательность слоёв.",
+      "limits": "Просмотр структуры не доказывает качество или безопасность модели.",
+      "language": "EN",
+      "mode": "browser",
+      "verifiedAt": "2026-11-02"
+    }
+  ],
+  "report": {
+    "topics": 145,
+    "pythonTopics": 72,
+    "aiTopics": 73,
+    "resources": 94,
+    "verifiedResources": 94,
+    "examples": 156,
+    "verifiedExamples": 156,
+    "wordsIncludingCode": 25720,
+    "lazyLoading": true,
+    "reviewedAt": "2026-11-03"
+  }
+}

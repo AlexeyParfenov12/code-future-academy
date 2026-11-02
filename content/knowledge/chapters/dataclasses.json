@@ -1,0 +1,28 @@
+{
+  "id": "dataclasses",
+  "title": "Записи данных: dataclass",
+  "group": "Устройство программ",
+  "track": "python",
+  "level": "intermediate",
+  "summary": "Именованные поля вместо неясных позиций в списке.",
+  "lessons": [
+    "M01-L10"
+  ],
+  "prerequisites": [
+    "classes"
+  ],
+  "related": [
+    "classes",
+    "dictionaries"
+  ],
+  "content": "## Ключевая идея\n\nКогда несколько значений описывают один объект, полезна запись с именованными полями. dataclass автоматически создаёт инициализацию и понятное представление. Это уменьшает служебный код, но не заменяет выбор структуры данных.\n\n## Как это работает\n\nПоля объявляют аннотациями; значения по умолчанию размещают после обязательных. Для изменяемого значения по умолчанию нужен field(default_factory=list), чтобы экземпляры не делили один список.\n\n## Разобранный пример\n\n```python\nfrom dataclasses import dataclass, asdict\n@dataclass\nclass Student:\n    name: str\n    score: int\nstudent = Student(\"Анна\", 8)\nprint(student.score)\nprint(asdict(student)[\"name\"])\n```\n\nРезультат:\n\n```text\n8\nАнна\n```\n\n## Почему получается такой результат\n\nДве записи Student содержат имя и оценку. Доступ через поле score поясняет смысл лучше, чем позиция student[1]. asdict превращает запись в словарь для сериализации.\n\n## Границы и частые ошибки\n\nАннотация поля не проверяет значение во время создания. frozen=True ограничивает присваивание полям, но не делает вложенный список неизменяемым. Большие таблицы удобнее обрабатывать табличными библиотеками.\n\n## Применение в курсе\n\nДля небольшого проекта запись может описывать настройку эксперимента или итог метрики. Отдельное поле для единиц измерения снижает вероятность перепутать доли и проценты.\n",
+  "examples": [
+    {
+      "code": "from dataclasses import dataclass, asdict\n@dataclass\nclass Student:\n    name: str\n    score: int\nstudent = Student(\"Анна\", 8)\nprint(student.score)\nprint(asdict(student)[\"name\"])",
+      "input": "",
+      "expected": "8\nАнна",
+      "sha256": "040fcba8017db375d4748357280822e5ba845dfcbad186c3d1c25dd47942dbdc"
+    }
+  ],
+  "order": 43
+}

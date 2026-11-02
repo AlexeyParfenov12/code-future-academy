@@ -1,0 +1,31 @@
+{
+  "id": "rag",
+  "title": "RAG: поиск перед ответом",
+  "group": "LLM и RAG",
+  "track": "ai",
+  "level": "advanced",
+  "summary": "Документы, извлечение фрагментов и генерация с подтверждением.",
+  "lessons": [
+    "M04-L07",
+    "M04-L08"
+  ],
+  "prerequisites": [
+    "tfidf",
+    "cosine-similarity"
+  ],
+  "related": [
+    "embeddings",
+    "cosine-similarity",
+    "llm-evaluation"
+  ],
+  "content": "## Ключевая идея\n\nRetrieval-Augmented Generation соединяет поиск внешних материалов с генерацией ответа. Сначала система извлекает релевантные фрагменты, затем передаёт их модели вместе с вопросом. Это не переобучение весов на каждой странице.\n\n## Как это работает\n\nДокументы очищают, делят на фрагменты и индексируют. Запрос преобразуют для поиска, выбирают и при необходимости переранжируют кандидатов. Ответ должен ссылаться на полученное подтверждение и учитывать его границы.\n\n## Разобранный пример\n\n```python\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.metrics.pairwise import cosine_similarity\ndocs = [\"список хранит элементы\", \"словарь хранит пары ключ значение\"]\nvectorizer = TfidfVectorizer()\nmatrix = vectorizer.fit_transform(docs)\nscores = cosine_similarity(vectorizer.transform([\"список\"]), matrix)[0]\nprint(int(scores.argmax()))\nprint(docs[int(scores.argmax())])\n```\n\nРезультат:\n\n```text\n0\nсписок хранит элементы\n```\n\n## Почему получается такой результат\n\nМинимальный поисковый этап использует TF-IDF и косинусное сходство. Вопрос «список» выбирает соответствующий фрагмент. Генерации здесь нет: пример отдельно проверяет retrieval без сетевого API.\n\n## Границы и частые ошибки\n\nХороший поиск не гарантирует верный ответ. Неверное разбиение теряет контекст, устаревший индекс — актуальность, вредный документ — безопасность. Проверяйте права доступа до выдачи фрагментов.\n\n## Применение в курсе\n\nДля материалов курса подготовьте набор вопросов с ожидаемыми источниками. Измерьте, находится ли нужная глава, затем отдельно оцените ответ и корректность цитат.\n",
+  "examples": [
+    {
+      "code": "from sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.metrics.pairwise import cosine_similarity\ndocs = [\"список хранит элементы\", \"словарь хранит пары ключ значение\"]\nvectorizer = TfidfVectorizer()\nmatrix = vectorizer.fit_transform(docs)\nscores = cosine_similarity(vectorizer.transform([\"список\"]), matrix)[0]\nprint(int(scores.argmax()))\nprint(docs[int(scores.argmax())])",
+      "input": "",
+      "expected": "0\nсписок хранит элементы",
+      "sha256": "b3d16dc5ac60e234bb5dacbf6fd5d73e7a4be48a2974828ca1e7ebed12f193a4"
+    }
+  ],
+  "order": 134
+}

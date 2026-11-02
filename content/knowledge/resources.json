@@ -1,0 +1,2286 @@
+[
+  {
+    "id": "python-intro",
+    "title": "Python: числа, текст и присваивание",
+    "url": "https://docs.python.org/3.12/tutorial/introduction.html",
+    "category": "Python: основы",
+    "type": "docs",
+    "topics": [
+      "variables",
+      "types",
+      "arithmetic",
+      "strings",
+      "conversion",
+      "indentation",
+      "string-slices"
+    ],
+    "description": "Официальное введение в операции со значениями и строками.",
+    "start": "Читайте примеры с числами, индексами и присваиванием.",
+    "limits": "Материал на английском; примеры сайта проверяются отдельно.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "3. An Informal Introduction to Python — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/tutorial/introduction.html"
+    }
+  },
+  {
+    "id": "python-flow",
+    "title": "Python: управление выполнением",
+    "url": "https://docs.python.org/3.12/tutorial/controlflow.html",
+    "category": "Python: основы",
+    "type": "docs",
+    "topics": [
+      "conditions",
+      "loops",
+      "logic",
+      "functions",
+      "parameters",
+      "loop-control",
+      "return-print"
+    ],
+    "description": "Условия, циклы, range и определения функций.",
+    "start": "Начните с if и for, затем переходите к параметрам функций.",
+    "limits": "Некоторые возможности выходят за начальный уровень курса.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "4. More Control Flow Tools — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/tutorial/controlflow.html"
+    }
+  },
+  {
+    "id": "python-data",
+    "title": "Python: структуры данных",
+    "url": "https://docs.python.org/3.12/tutorial/datastructures.html",
+    "category": "Python: основы",
+    "type": "docs",
+    "topics": [
+      "lists",
+      "dictionaries",
+      "tuples",
+      "sets",
+      "comprehensions",
+      "sorting",
+      "mutability",
+      "complexity"
+    ],
+    "description": "Списки, словари, множества и способы обхода коллекций.",
+    "start": "Сопоставьте методы списка с изменениями исходного объекта.",
+    "limits": "Порядок элементов множества не следует использовать как контракт.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "5. Data Structures — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/tutorial/datastructures.html"
+    }
+  },
+  {
+    "id": "python-functions",
+    "title": "Python: встроенные функции",
+    "url": "https://docs.python.org/3.12/library/functions.html",
+    "category": "Python: основы",
+    "type": "docs",
+    "topics": [
+      "input",
+      "output",
+      "conversion",
+      "aggregation",
+      "enumerate-zip",
+      "sorting",
+      "types"
+    ],
+    "description": "Справочник print, input, len, sum, sorted и других функций.",
+    "start": "Найдите конкретную функцию и проверьте аргументы и возвращаемое значение.",
+    "limits": "Справочник удобнее читать по запросу, а не целиком.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Built-in Functions — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/functions.html"
+    }
+  },
+  {
+    "id": "python-types",
+    "title": "Python: встроенные типы",
+    "url": "https://docs.python.org/3.12/library/stdtypes.html",
+    "category": "Python: основы",
+    "type": "docs",
+    "topics": [
+      "truthiness",
+      "none",
+      "comparisons",
+      "string-methods",
+      "list-slices",
+      "dictionaries",
+      "dictionary-patterns",
+      "split-text"
+    ],
+    "description": "Подробное описание чисел, строк, коллекций и логических проверок.",
+    "start": "Используйте поиск по методу или оператору.",
+    "limits": "Детали API требуют знания основных типов.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Built-in Types — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/stdtypes.html"
+    }
+  },
+  {
+    "id": "python-io",
+    "title": "Python: ввод, вывод и файлы",
+    "url": "https://docs.python.org/3.12/tutorial/inputoutput.html",
+    "category": "Файлы и качество кода",
+    "type": "docs",
+    "topics": [
+      "output",
+      "formatting",
+      "file-text",
+      "json",
+      "float-precision"
+    ],
+    "description": "Форматирование строк, чтение файлов и сериализация JSON.",
+    "start": "Сравните режимы открытия и работу контекстного менеджера.",
+    "limits": "Путь и кодировку нужно выбирать под конкретный файл.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "7. Input and Output — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/tutorial/inputoutput.html"
+    }
+  },
+  {
+    "id": "python-exceptions",
+    "title": "Python: ошибки и исключения",
+    "url": "https://docs.python.org/3.12/tutorial/errors.html",
+    "category": "Файлы и качество кода",
+    "type": "docs",
+    "topics": [
+      "exceptions",
+      "debugging",
+      "assertions"
+    ],
+    "description": "Как читать traceback, перехватывать и поднимать исключения.",
+    "start": "Разберите пример с ValueError и узким except.",
+    "limits": "Перехват ошибки не должен скрывать причину сбоя.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "8. Errors and Exceptions — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/tutorial/errors.html"
+    }
+  },
+  {
+    "id": "python-modules",
+    "title": "Python: модули и пакеты",
+    "url": "https://docs.python.org/3.12/tutorial/modules.html",
+    "category": "Файлы и качество кода",
+    "type": "docs",
+    "topics": [
+      "modules",
+      "main-guard"
+    ],
+    "description": "Импорт, пространства имён и организация нескольких файлов.",
+    "start": "Начните с собственного небольшого модуля.",
+    "limits": "Не называйте свои файлы именами используемых библиотек.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "6. Modules — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/tutorial/modules.html"
+    }
+  },
+  {
+    "id": "python-classes",
+    "title": "Python: классы",
+    "url": "https://docs.python.org/3.12/tutorial/classes.html",
+    "category": "Python: устройство программ",
+    "type": "docs",
+    "topics": [
+      "classes",
+      "scope",
+      "iterators",
+      "generators"
+    ],
+    "description": "Объекты, атрибуты, методы, наследование и итераторы.",
+    "start": "Сначала изучите простой объект с несколькими полями.",
+    "limits": "Наследование не требуется для каждой маленькой программы.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "9. Classes — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/tutorial/classes.html"
+    }
+  },
+  {
+    "id": "python-csv",
+    "title": "Python: модуль csv",
+    "url": "https://docs.python.org/3.12/library/csv.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "csv",
+      "file-text"
+    ],
+    "description": "Чтение таблиц, DictReader, разделители и кавычки.",
+    "start": "Сравните reader и DictReader на небольшом CSV.",
+    "limits": "CSV не хранит типы столбцов; данные нужно проверять.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "csv — CSV File Reading and Writing — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/csv.html"
+    }
+  },
+  {
+    "id": "python-json",
+    "title": "Python: JSON",
+    "url": "https://docs.python.org/3.12/library/json.html",
+    "category": "Файлы и качество кода",
+    "type": "docs",
+    "topics": [
+      "json"
+    ],
+    "description": "Преобразование между JSON-текстом и объектами Python.",
+    "start": "Разберите разницу loads/load и dumps/dump.",
+    "limits": "Не все объекты Python непосредственно сериализуются в JSON.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "json — JSON encoder and decoder — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/json.html"
+    }
+  },
+  {
+    "id": "python-pathlib",
+    "title": "Python: pathlib",
+    "url": "https://docs.python.org/3.12/library/pathlib.html",
+    "category": "Файлы и качество кода",
+    "type": "docs",
+    "topics": [
+      "pathlib",
+      "file-text"
+    ],
+    "description": "Работа с путями как с объектами.",
+    "start": "Соберите путь оператором / и проверьте exists или is_file.",
+    "limits": "Относительный путь считается от рабочего каталога.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "pathlib — Object-oriented filesystem paths — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/pathlib.html"
+    }
+  },
+  {
+    "id": "python-re",
+    "title": "Python: регулярные выражения",
+    "url": "https://docs.python.org/3.12/library/re.html",
+    "category": "Python: устройство программ",
+    "type": "docs",
+    "topics": [
+      "regex",
+      "string-methods"
+    ],
+    "description": "Поиск шаблонов, группы и замена фрагментов текста.",
+    "start": "Начните с findall и простой группы цифр.",
+    "limits": "Регулярное выражение не заменяет полноценный парсер сложного формата.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "re — Regular expression operations — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/re.html"
+    }
+  },
+  {
+    "id": "python-datetime",
+    "title": "Python: даты и время",
+    "url": "https://docs.python.org/3.12/library/datetime.html",
+    "category": "Python: устройство программ",
+    "type": "docs",
+    "topics": [
+      "datetime"
+    ],
+    "description": "Даты, длительности и преобразование строк.",
+    "start": "Изучите date, datetime и timedelta.",
+    "limits": "Для реальных событий нужно учитывать часовой пояс.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "datetime — Basic date and time types — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/datetime.html"
+    }
+  },
+  {
+    "id": "python-collections",
+    "title": "Python: collections",
+    "url": "https://docs.python.org/3.12/library/collections.html",
+    "category": "Python: устройство программ",
+    "type": "docs",
+    "topics": [
+      "counter",
+      "dictionaries",
+      "aggregation"
+    ],
+    "description": "Counter, defaultdict и другие полезные контейнеры.",
+    "start": "Подсчитайте частоты с Counter и сравните со словарём.",
+    "limits": "Контейнер не проверяет предметный смысл ключей и значений.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "collections — Container datatypes — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/collections.html"
+    }
+  },
+  {
+    "id": "python-itertools",
+    "title": "Python: itertools",
+    "url": "https://docs.python.org/3.12/library/itertools.html",
+    "category": "Python: устройство программ",
+    "type": "docs",
+    "topics": [
+      "itertools",
+      "iterators",
+      "generators"
+    ],
+    "description": "Комбинирование и ленивый обход последовательностей.",
+    "start": "Начните с chain, islice и accumulate.",
+    "limits": "Некоторые итераторы бесконечны; не превращайте их целиком в список.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "itertools — Functions creating iterators for efficient looping — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/itertools.html"
+    }
+  },
+  {
+    "id": "python-typing",
+    "title": "Python: аннотации типов",
+    "url": "https://docs.python.org/3.12/library/typing.html",
+    "category": "Файлы и качество кода",
+    "type": "docs",
+    "topics": [
+      "type-hints"
+    ],
+    "description": "Контракты функций и контейнеров с аннотациями.",
+    "start": "Сравните сигнатуру list[int] с фактическим входом.",
+    "limits": "Аннотации обычно не выполняют проверку типов во время запуска.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "typing — Support for type hints — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/typing.html"
+    }
+  },
+  {
+    "id": "python-dataclasses",
+    "title": "Python: dataclasses",
+    "url": "https://docs.python.org/3.12/library/dataclasses.html",
+    "category": "Python: устройство программ",
+    "type": "docs",
+    "topics": [
+      "dataclasses",
+      "classes",
+      "mutability"
+    ],
+    "description": "Компактное объявление объектов с полями.",
+    "start": "Разберите field(default_factory=list).",
+    "limits": "Изменяемые значения по умолчанию требуют отдельного внимания.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "dataclasses — Data Classes — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/dataclasses.html"
+    }
+  },
+  {
+    "id": "python-unittest",
+    "title": "Python: unittest",
+    "url": "https://docs.python.org/3.12/library/unittest.html",
+    "category": "Файлы и качество кода",
+    "type": "docs",
+    "topics": [
+      "unittest",
+      "testing",
+      "assertions"
+    ],
+    "description": "Проверки ожидаемого поведения программ.",
+    "start": "Начните с TestCase и assertEqual.",
+    "limits": "Хороший тест проверяет требование, а не повторяет реализацию.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "unittest — Unit testing framework — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/unittest.html"
+    }
+  },
+  {
+    "id": "python-venv",
+    "title": "Python: виртуальные окружения",
+    "url": "https://docs.python.org/3.12/library/venv.html",
+    "category": "Среды и инструменты",
+    "type": "docs",
+    "topics": [
+      "venv",
+      "setup",
+      "pip"
+    ],
+    "description": "Изоляция библиотек разных проектов.",
+    "start": "Создайте окружение отдельной командой python -m venv.",
+    "limits": "Команда активации зависит от оболочки и операционной системы.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "venv — Creation of virtual environments — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/venv.html"
+    }
+  },
+  {
+    "id": "pip",
+    "title": "pip: установка пакетов",
+    "url": "https://pip.pypa.io/en/stable/user_guide/",
+    "category": "Среды и инструменты",
+    "type": "docs",
+    "topics": [
+      "pip",
+      "venv",
+      "setup"
+    ],
+    "description": "Установка, просмотр и фиксация зависимостей.",
+    "start": "Используйте python -m pip из нужного окружения.",
+    "limits": "Установка пакета выполняет код поставщика: проверяйте источник.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "User Guide - pip documentation v26.2.2",
+      "resolvedUrl": "https://pip.pypa.io/en/stable/user_guide/"
+    }
+  },
+  {
+    "id": "python-statistics",
+    "title": "Python: статистика",
+    "url": "https://docs.python.org/3.12/library/statistics.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "statistics",
+      "aggregation",
+      "probability-bayes"
+    ],
+    "description": "Среднее, медиана, выборочное и генеральное отклонение.",
+    "start": "Сравните mean, median, stdev и pstdev.",
+    "limits": "Выбор знаменателя зависит от смысла исходного набора.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "statistics — Mathematical statistics functions — Python 3.12.16 documentation",
+      "resolvedUrl": "https://docs.python.org/3.12/library/statistics.html"
+    }
+  },
+  {
+    "id": "pandas",
+    "title": "pandas: вводные уроки",
+    "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "tables",
+      "csv",
+      "cleaning",
+      "statistics",
+      "charts",
+      "pandas-indexing",
+      "pandas-groupby"
+    ],
+    "description": "Короткие официальные главы по анализу таблиц.",
+    "start": "Идите от чтения таблицы к выбору строк и сводным показателям.",
+    "limits": "Документация может описывать более новую версию, чем ваш проект.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Getting started tutorials — pandas 3.1.0 documentation",
+      "resolvedUrl": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html"
+    }
+  },
+  {
+    "id": "pandas-index",
+    "title": "pandas: выбор строк и столбцов",
+    "url": "https://pandas.pydata.org/docs/user_guide/indexing.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "pandas-indexing",
+      "tables"
+    ],
+    "description": "Индексы, loc, iloc и логические маски.",
+    "start": "Сравните выбор по метке и по позиции.",
+    "limits": "Срезы loc и iloc имеют разные правила правой границы.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Indexing and selecting data — pandas 3.1.0 documentation",
+      "resolvedUrl": "https://pandas.pydata.org/docs/user_guide/indexing.html"
+    }
+  },
+  {
+    "id": "pandas-group",
+    "title": "pandas: группировка",
+    "url": "https://pandas.pydata.org/docs/user_guide/groupby.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "pandas-groupby",
+      "statistics"
+    ],
+    "description": "Разделение таблицы на группы и агрегации.",
+    "start": "Постройте сводку count и mean по одной категории.",
+    "limits": "Среднее группы без её размера может вводить в заблуждение.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Group by: split-apply-combine — pandas 3.1.0 documentation",
+      "resolvedUrl": "https://pandas.pydata.org/docs/user_guide/groupby.html"
+    }
+  },
+  {
+    "id": "pandas-merge",
+    "title": "pandas: объединение таблиц",
+    "url": "https://pandas.pydata.org/docs/user_guide/merging.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "pandas-merge",
+      "tables"
+    ],
+    "description": "merge, join и concat с разными задачами объединения.",
+    "start": "Изучите ключи и параметр validate.",
+    "limits": "Повторные ключи могут резко увеличить число строк.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Merge, join, concatenate and compare — pandas 3.1.0 documentation",
+      "resolvedUrl": "https://pandas.pydata.org/docs/user_guide/merging.html"
+    }
+  },
+  {
+    "id": "pandas-missing",
+    "title": "pandas: пропущенные данные",
+    "url": "https://pandas.pydata.org/docs/user_guide/missing_data.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "pandas-missing",
+      "cleaning",
+      "imputation"
+    ],
+    "description": "Типы пропусков, проверки и способы обработки.",
+    "start": "Сначала посчитайте пропуски, затем выберите правило.",
+    "limits": "Заполнение нулём не является универсально корректным.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Working with missing data — pandas 3.1.0 documentation",
+      "resolvedUrl": "https://pandas.pydata.org/docs/user_guide/missing_data.html"
+    }
+  },
+  {
+    "id": "pandas-text",
+    "title": "pandas: текстовые данные",
+    "url": "https://pandas.pydata.org/docs/user_guide/text.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "cleaning",
+      "string-methods",
+      "tables"
+    ],
+    "description": "Векторные строковые операции по столбцам.",
+    "start": "Начните со str.strip и str.lower.",
+    "limits": "Нормализация может изменить смысл идентификаторов.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Working with text data — pandas 3.1.0 documentation",
+      "resolvedUrl": "https://pandas.pydata.org/docs/user_guide/text.html"
+    }
+  },
+  {
+    "id": "numpy-basics",
+    "title": "NumPy: основы массивов",
+    "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "numpy-arrays",
+      "numpy-broadcasting",
+      "features"
+    ],
+    "description": "Массивы, формы, индексы и вычисления над данными.",
+    "start": "Проследите shape, ndim и операции по осям.",
+    "limits": "Список и ndarray имеют разную семантику арифметических операций.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "NumPy: the absolute basics for beginners — NumPy v2.5 Manual",
+      "resolvedUrl": "https://numpy.org/doc/stable/user/absolute_beginners.html"
+    }
+  },
+  {
+    "id": "numpy-broadcast",
+    "title": "NumPy: broadcasting",
+    "url": "https://numpy.org/doc/stable/user/basics.broadcasting.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "numpy-broadcasting",
+      "scaling"
+    ],
+    "description": "Правила совместимости форм при поэлементных операциях.",
+    "start": "Сравнивайте размеры справа налево.",
+    "limits": "Неявное расширение может создать неожиданно большой результат.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Broadcasting — NumPy v2.5 Manual",
+      "resolvedUrl": "https://numpy.org/doc/stable/user/basics.broadcasting.html"
+    }
+  },
+  {
+    "id": "matplotlib",
+    "title": "Matplotlib: первые графики",
+    "url": "https://matplotlib.org/stable/tutorials/pyplot.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "matplotlib",
+      "charts"
+    ],
+    "description": "Линии, подписи осей и организация рисунка.",
+    "start": "Начните с fig, ax = plt.subplots().",
+    "limits": "График должен отвечать на вопрос и содержать единицы.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Pyplot tutorial — Matplotlib 3.11.2 documentation",
+      "resolvedUrl": "https://matplotlib.org/stable/tutorials/pyplot.html"
+    }
+  },
+  {
+    "id": "seaborn",
+    "title": "Seaborn: статистическая визуализация",
+    "url": "https://seaborn.pydata.org/tutorial.html",
+    "category": "Таблицы и графики",
+    "type": "docs",
+    "topics": [
+      "charts",
+      "correlation-causality",
+      "statistics"
+    ],
+    "description": "Распределения, категории и отношения в табличных данных.",
+    "start": "Выберите график под типы переменных.",
+    "limits": "Автоматические оценки на графике нужно интерпретировать.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "User guide and tutorial — seaborn 0.13.2 documentation",
+      "resolvedUrl": "https://seaborn.pydata.org/tutorial.html"
+    }
+  },
+  {
+    "id": "sklearn",
+    "title": "Scikit-learn: начало работы",
+    "url": "https://scikit-learn.org/stable/getting_started.html",
+    "category": "Машинное обучение",
+    "type": "docs",
+    "topics": [
+      "classification",
+      "regression",
+      "clustering",
+      "split",
+      "features",
+      "target"
+    ],
+    "description": "Единый интерфейс моделей и преобразователей.",
+    "start": "Сравните fit, predict и transform.",
+    "limits": "Обучение и оценка должны использовать разные роли данных.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Getting Started — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/getting_started.html"
+    }
+  },
+  {
+    "id": "sklearn-guide",
+    "title": "Scikit-learn: руководство",
+    "url": "https://scikit-learn.org/stable/user_guide.html",
+    "category": "Машинное обучение",
+    "type": "docs",
+    "topics": [
+      "ai-ml-dl",
+      "supervised",
+      "unsupervised",
+      "ml-workflow",
+      "baseline"
+    ],
+    "description": "Официальная карта алгоритмов и этапов ML.",
+    "start": "Выберите главу по типу целевого ответа.",
+    "limits": "Это справочник; не нужно изучать все алгоритмы до первого проекта.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "User Guide — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/user_guide.html"
+    }
+  },
+  {
+    "id": "sklearn-pitfalls",
+    "title": "Scikit-learn: типичные ошибки",
+    "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+    "category": "Проверка моделей",
+    "type": "docs",
+    "topics": [
+      "leakage",
+      "split",
+      "pipeline",
+      "overfitting",
+      "reproducibility"
+    ],
+    "description": "Утечки данных и несогласованная подготовка признаков.",
+    "start": "Разберите примеры неправильного и правильного разделения.",
+    "limits": "Особенно важно до сравнения моделей по метрикам.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "12. Common pitfalls and recommended practices — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/common_pitfalls.html"
+    }
+  },
+  {
+    "id": "sklearn-cv",
+    "title": "Scikit-learn: кросс-валидация",
+    "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+    "category": "Проверка моделей",
+    "type": "docs",
+    "topics": [
+      "cross-validation",
+      "stratification",
+      "temporal-split",
+      "validation",
+      "split"
+    ],
+    "description": "Способы разделения и повторная оценка моделей.",
+    "start": "Сопоставьте KFold, StratifiedKFold и TimeSeriesSplit.",
+    "limits": "Разбиение должно отражать зависимости между объектами.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "3.1. Cross-validation: evaluating estimator performance — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/cross_validation.html"
+    }
+  },
+  {
+    "id": "sklearn-metrics",
+    "title": "Scikit-learn: метрики",
+    "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+    "category": "Проверка моделей",
+    "type": "docs",
+    "topics": [
+      "metrics",
+      "confusion-matrix",
+      "precision-recall",
+      "f1",
+      "roc-pr",
+      "mae-rmse",
+      "r2"
+    ],
+    "description": "Метрики классификации, регрессии и кластеризации.",
+    "start": "Сначала определите цену ошибки и нужный знаменатель.",
+    "limits": "Одинаковое название метрики не делает разные тестовые наборы сопоставимыми.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "3.4. Metrics and scoring: quantifying the quality of predictions — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+    }
+  },
+  {
+    "id": "sklearn-threshold",
+    "title": "Scikit-learn: порог классификации",
+    "url": "https://scikit-learn.org/stable/modules/classification_threshold.html",
+    "category": "Проверка моделей",
+    "type": "docs",
+    "topics": [
+      "thresholds",
+      "precision-recall",
+      "imbalance"
+    ],
+    "description": "Разделение модельной оценки и рабочего решения.",
+    "start": "Проследите, как меняются FP и FN при другом пороге.",
+    "limits": "Порог нельзя подбирать по окончательному тесту.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "3.3. Tuning the decision threshold for class prediction — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/classification_threshold.html"
+    }
+  },
+  {
+    "id": "sklearn-calibration",
+    "title": "Scikit-learn: калибровка",
+    "url": "https://scikit-learn.org/stable/modules/calibration.html",
+    "category": "Проверка моделей",
+    "type": "docs",
+    "topics": [
+      "calibration",
+      "thresholds"
+    ],
+    "description": "Когда предсказанная вероятность соответствует наблюдаемой частоте.",
+    "start": "Разберите calibration curve и отдельную калибровочную выборку.",
+    "limits": "Высокая accuracy сама по себе не доказывает калибровку.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "1.16. Probability calibration — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/calibration.html"
+    }
+  },
+  {
+    "id": "sklearn-preprocessing",
+    "title": "Scikit-learn: преобразование признаков",
+    "url": "https://scikit-learn.org/stable/modules/preprocessing.html",
+    "category": "Машинное обучение",
+    "type": "docs",
+    "topics": [
+      "scaling",
+      "encoding",
+      "features"
+    ],
+    "description": "Стандартизация, нормализация и кодирование.",
+    "start": "Сравните StandardScaler и OneHotEncoder.",
+    "limits": "Параметры преобразований получают по train.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "8.3. Preprocessing data — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/preprocessing.html"
+    }
+  },
+  {
+    "id": "sklearn-impute",
+    "title": "Scikit-learn: заполнение пропусков",
+    "url": "https://scikit-learn.org/stable/modules/impute.html",
+    "category": "Машинное обучение",
+    "type": "docs",
+    "topics": [
+      "imputation",
+      "pandas-missing",
+      "cleaning"
+    ],
+    "description": "Стратегии заполнения и индикаторы отсутствия.",
+    "start": "Начните с SimpleImputer внутри Pipeline.",
+    "limits": "Выбор стратегии зависит от природы пропусков.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "8.4. Imputation of missing values — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/impute.html"
+    }
+  },
+  {
+    "id": "sklearn-pipeline",
+    "title": "Scikit-learn: Pipeline и ColumnTransformer",
+    "url": "https://scikit-learn.org/stable/modules/compose.html",
+    "category": "Машинное обучение",
+    "type": "docs",
+    "topics": [
+      "pipeline",
+      "column-transformer",
+      "encoding"
+    ],
+    "description": "Совместная подготовка разных типов столбцов.",
+    "start": "Соберите обработку чисел и категорий перед моделью.",
+    "limits": "Пайплайн помогает избежать технических утечек, но не исправляет неверную постановку.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "8.1. Pipelines and composite estimators — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/compose.html"
+    }
+  },
+  {
+    "id": "sklearn-linear",
+    "title": "Scikit-learn: линейные модели",
+    "url": "https://scikit-learn.org/stable/modules/linear_model.html",
+    "category": "Алгоритмы ML",
+    "type": "docs",
+    "topics": [
+      "linear-regression",
+      "logistic-regression",
+      "regularization",
+      "regression"
+    ],
+    "description": "Линейная регрессия, логистическая модель и регуляризация.",
+    "start": "Различайте числовой прогноз и вероятность класса.",
+    "limits": "Линейность не означает, что данные всегда описываются прямой.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "1.1. Linear Models — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/linear_model.html"
+    }
+  },
+  {
+    "id": "sklearn-knn",
+    "title": "Scikit-learn: ближайшие соседи",
+    "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+    "category": "Алгоритмы ML",
+    "type": "docs",
+    "topics": [
+      "knn",
+      "scaling"
+    ],
+    "description": "Расстояния и голосование по похожим объектам.",
+    "start": "Проследите влияние k и масштаба признаков.",
+    "limits": "Предсказание может требовать хранения и сравнения многих объектов.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "1.6. Nearest Neighbors — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/neighbors.html"
+    }
+  },
+  {
+    "id": "sklearn-trees",
+    "title": "Scikit-learn: деревья решений",
+    "url": "https://scikit-learn.org/stable/modules/tree.html",
+    "category": "Алгоритмы ML",
+    "type": "docs",
+    "topics": [
+      "decision-trees",
+      "overfitting"
+    ],
+    "description": "Разбиение данных условиями и контроль сложности.",
+    "start": "Сравните глубину дерева и число листьев.",
+    "limits": "Глубокое дерево легко подстраивается под шум.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "1.10. Decision Trees — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/tree.html"
+    }
+  },
+  {
+    "id": "sklearn-ensembles",
+    "title": "Scikit-learn: ансамбли",
+    "url": "https://scikit-learn.org/stable/modules/ensemble.html",
+    "category": "Алгоритмы ML",
+    "type": "docs",
+    "topics": [
+      "random-forest",
+      "boosting"
+    ],
+    "description": "Объединение моделей: леса, bagging и boosting.",
+    "start": "Сначала различите независимое усреднение и последовательное исправление ошибок.",
+    "limits": "Сложный ансамбль не отменяет необходимость baseline.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "1.11. Ensembles: Gradient boosting, random forests, bagging, voting, stacking — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/ensemble.html"
+    }
+  },
+  {
+    "id": "sklearn-svm",
+    "title": "Scikit-learn: SVM",
+    "url": "https://scikit-learn.org/stable/modules/svm.html",
+    "category": "Алгоритмы ML",
+    "type": "docs",
+    "topics": [
+      "svm",
+      "scaling"
+    ],
+    "description": "Разделяющая граница, ядра и параметры модели.",
+    "start": "Сравните C и роль масштабирования.",
+    "limits": "decision_function не является готовой вероятностью.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "1.4. Support Vector Machines — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/svm.html"
+    }
+  },
+  {
+    "id": "sklearn-bayes",
+    "title": "Scikit-learn: наивный Байес",
+    "url": "https://scikit-learn.org/stable/modules/naive_bayes.html",
+    "category": "Алгоритмы ML",
+    "type": "docs",
+    "topics": [
+      "naive-bayes",
+      "probability-bayes",
+      "tfidf"
+    ],
+    "description": "Вероятностная классификация с условной независимостью признаков.",
+    "start": "Сопоставьте MultinomialNB и типы входных данных.",
+    "limits": "Предположение независимости является упрощением.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "1.9. Naive Bayes — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/naive_bayes.html"
+    }
+  },
+  {
+    "id": "sklearn-clusters",
+    "title": "Scikit-learn: кластеризация",
+    "url": "https://scikit-learn.org/stable/modules/clustering.html",
+    "category": "Алгоритмы ML",
+    "type": "docs",
+    "topics": [
+      "clustering",
+      "kmeans",
+      "dbscan"
+    ],
+    "description": "Разные представления похожести и группировки.",
+    "start": "Сравните число групп, форму кластеров и шум.",
+    "limits": "Номер кластера не имеет заранее заданного предметного смысла.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "2.3. Clustering — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/clustering.html"
+    }
+  },
+  {
+    "id": "sklearn-pca",
+    "title": "Scikit-learn: PCA",
+    "url": "https://scikit-learn.org/stable/modules/decomposition.html",
+    "category": "Алгоритмы ML",
+    "type": "docs",
+    "topics": [
+      "pca",
+      "numpy-arrays"
+    ],
+    "description": "Снижение размерности и объяснённая дисперсия.",
+    "start": "Отделите компоненты от исходных признаков.",
+    "limits": "Сохранение дисперсии не гарантирует сохранение информации о цели.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "2.5. Decomposing signals in components (matrix factorization problems) — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/decomposition.html"
+    }
+  },
+  {
+    "id": "sklearn-text",
+    "title": "Scikit-learn: текстовые признаки",
+    "url": "https://scikit-learn.org/stable/modules/feature_extraction.html",
+    "category": "Нейросети и язык",
+    "type": "docs",
+    "topics": [
+      "tfidf",
+      "embeddings",
+      "features"
+    ],
+    "description": "Bag-of-Words, TF-IDF и разреженные матрицы.",
+    "start": "Проследите построение словаря только по train.",
+    "limits": "Разные формы слова могут стать разными признаками.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "8.2. Feature extraction — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/feature_extraction.html"
+    }
+  },
+  {
+    "id": "sklearn-grid",
+    "title": "Scikit-learn: подбор параметров",
+    "url": "https://scikit-learn.org/stable/modules/grid_search.html",
+    "category": "Проверка моделей",
+    "type": "docs",
+    "topics": [
+      "hyperparameters",
+      "validation",
+      "cross-validation"
+    ],
+    "description": "Поиск настроек с независимой оценкой.",
+    "start": "Начните с небольшого GridSearchCV внутри Pipeline.",
+    "limits": "Большой перебор повышает вычислительную цену и риск подгонки.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "3.2. Tuning the hyper-parameters of an estimator — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/grid_search.html"
+    }
+  },
+  {
+    "id": "sklearn-curves",
+    "title": "Scikit-learn: кривые обучения",
+    "url": "https://scikit-learn.org/stable/modules/learning_curve.html",
+    "category": "Проверка моделей",
+    "type": "docs",
+    "topics": [
+      "learning-curves",
+      "bias-variance",
+      "overfitting"
+    ],
+    "description": "Как меняется качество с размером данных и сложностью.",
+    "start": "Сравнивайте train и validation на одном рисунке.",
+    "limits": "Один график не доказывает единственную причину ошибки.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "3.5. Validation curves: plotting scores to evaluate models — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/learning_curve.html"
+    }
+  },
+  {
+    "id": "sklearn-importance",
+    "title": "Scikit-learn: важность признаков",
+    "url": "https://scikit-learn.org/stable/modules/permutation_importance.html",
+    "category": "Проверка моделей",
+    "type": "docs",
+    "topics": [
+      "feature-importance",
+      "features"
+    ],
+    "description": "Падение метрики после перестановки признака.",
+    "start": "Оценивайте важность на отложенных данных.",
+    "limits": "Коррелирующие признаки могут скрывать важность друг друга.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "5.2. Permutation feature importance — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/modules/permutation_importance.html"
+    }
+  },
+  {
+    "id": "pytorch",
+    "title": "PyTorch: основы нейросетей",
+    "url": "https://pytorch.org/tutorials/beginner/basics/intro.html",
+    "category": "Нейросети и язык",
+    "type": "docs",
+    "topics": [
+      "neural-networks",
+      "gradient-descent",
+      "transformers"
+    ],
+    "description": "Тензоры, градиенты, обучение и сохранение модели.",
+    "start": "Начните с tensor и automatic differentiation.",
+    "limits": "Полноценные эксперименты требуют зависимостей и вычислительных ресурсов.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Learn the Basics — PyTorch Tutorials 2.15.0+cu132 documentation",
+      "resolvedUrl": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html"
+    }
+  },
+  {
+    "id": "hf-course",
+    "title": "Hugging Face: курс LLM",
+    "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+    "category": "LLM и RAG",
+    "type": "course",
+    "topics": [
+      "transformers",
+      "llm-tokens",
+      "llm-generation",
+      "prompting",
+      "embeddings"
+    ],
+    "description": "Структура языковых моделей и работа с NLP-библиотеками.",
+    "start": "Читайте главы о токенизаторе и архитектурах перед запуском больших моделей.",
+    "limits": "Учебные главы не отменяют проверки лицензии конкретной модели.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Introduction · Hugging Face",
+      "resolvedUrl": "https://huggingface.co/learn/llm-course/chapter1/1"
+    }
+  },
+  {
+    "id": "hf-generation",
+    "title": "Hugging Face: генерация текста",
+    "url": "https://huggingface.co/docs/transformers/en/llm_tutorial",
+    "category": "LLM и RAG",
+    "type": "docs",
+    "topics": [
+      "llm-generation",
+      "llm-tokens"
+    ],
+    "description": "Авторегрессивная генерация и методы декодирования.",
+    "start": "Сравните greedy decoding, temperature и sampling.",
+    "limits": "Параметры генерации не гарантируют фактологическую правильность.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Text generation · Hugging Face",
+      "resolvedUrl": "https://huggingface.co/docs/transformers/en/llm_tutorial"
+    }
+  },
+  {
+    "id": "hf-tokenizers",
+    "title": "Hugging Face: токенизаторы",
+    "url": "https://huggingface.co/docs/tokenizers/index",
+    "category": "LLM и RAG",
+    "type": "docs",
+    "topics": [
+      "llm-tokens",
+      "transformers"
+    ],
+    "description": "Преобразование текста в токены и идентификаторы.",
+    "start": "Посмотрите encoding и специальные токены.",
+    "limits": "Число слов и число токенов не совпадают.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Tokenizers · Hugging Face",
+      "resolvedUrl": "https://huggingface.co/docs/tokenizers/index"
+    }
+  },
+  {
+    "id": "sentence-transformers",
+    "title": "Sentence Transformers: embeddings",
+    "url": "https://www.sbert.net/docs/quickstart.html",
+    "category": "LLM и RAG",
+    "type": "docs",
+    "topics": [
+      "embeddings",
+      "cosine-similarity",
+      "rag"
+    ],
+    "description": "Векторы предложений и поиск похожих текстов.",
+    "start": "Начните с encode и сравнения косинусной близости.",
+    "limits": "Высокая близость не доказывает истинность найденного текста.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Quickstart — Sentence Transformers  documentation",
+      "resolvedUrl": "https://www.sbert.net/docs/quickstart.html"
+    }
+  },
+  {
+    "id": "attention-paper",
+    "title": "Attention Is All You Need",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "category": "Нейросети и язык",
+    "type": "docs",
+    "topics": [
+      "transformers"
+    ],
+    "description": "Первичная исследовательская статья об архитектуре Transformer.",
+    "start": "Сопоставьте attention и позиционные представления с вводной главой.",
+    "limits": "Техническая статья предполагает знание линейной алгебры.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "[1706.03762] Attention Is All You Need",
+      "resolvedUrl": "https://arxiv.org/abs/1706.03762"
+    }
+  },
+  {
+    "id": "rag-paper",
+    "title": "Retrieval-Augmented Generation",
+    "url": "https://arxiv.org/abs/2005.11401",
+    "category": "LLM и RAG",
+    "type": "docs",
+    "topics": [
+      "rag",
+      "hallucinations",
+      "llm-evaluation"
+    ],
+    "description": "Исследовательская работа, связывающая извлечение документов и генерацию.",
+    "start": "Разделите этапы retrieval и generation.",
+    "limits": "Наличие поиска не гарантирует качество извлечения и ответа.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "resolvedUrl": "https://arxiv.org/abs/2005.11401"
+    }
+  },
+  {
+    "id": "owasp-llm",
+    "title": "OWASP: риски приложений с LLM",
+    "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+    "category": "Ответственное применение",
+    "type": "docs",
+    "topics": [
+      "prompt-injection",
+      "ai-privacy",
+      "hallucinations"
+    ],
+    "description": "Первичный справочник угроз prompt injection.",
+    "start": "Разберите границы доверия к найденному документу и инструменту.",
+    "limits": "Одной фразы в промпте недостаточно для изоляции недоверенных данных.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "LLM01:2025 Prompt Injection - OWASP Gen AI Security Project",
+      "resolvedUrl": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+    }
+  },
+  {
+    "id": "google-fairness",
+    "title": "Google ML: справедливость моделей",
+    "url": "https://developers.google.com/machine-learning/crash-course/fairness?hl=ru",
+    "category": "Ответственное применение",
+    "type": "course",
+    "topics": [
+      "ai-privacy",
+      "dataset",
+      "metrics"
+    ],
+    "description": "Проверка качества по группам и ограничений выборки.",
+    "start": "Сопоставьте общую метрику с результатами подгрупп.",
+    "limits": "Выбор групп и критериев зависит от применения.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Справедливость  |  Machine Learning  |  Google for Developers",
+      "resolvedUrl": "https://developers.google.com/machine-learning/crash-course/fairness?hl=ru"
+    }
+  },
+  {
+    "id": "google-production",
+    "title": "Google ML: производственные системы",
+    "url": "https://developers.google.com/machine-learning/crash-course/production-ml-systems?hl=ru",
+    "category": "Ответственное применение",
+    "type": "course",
+    "topics": [
+      "model-monitoring",
+      "data-drift",
+      "ml-workflow"
+    ],
+    "description": "Модель как часть системы данных и рабочих процессов.",
+    "start": "Проследите путь от данных до мониторинга результата.",
+    "limits": "Учебный пример не является готовым планом эксплуатации.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Производственные системы машинного обучения  |  Machine Learning  |  Google for Developers",
+      "resolvedUrl": "https://developers.google.com/machine-learning/crash-course/production-ml-systems?hl=ru"
+    }
+  },
+  {
+    "id": "yandex-python",
+    "title": "Яндекс: справочник Python",
+    "url": "https://contest.yandex.ru/tracks/python/",
+    "category": "Русскоязычные материалы",
+    "type": "docs",
+    "topics": [
+      "variables",
+      "input",
+      "output",
+      "loops",
+      "lists",
+      "functions"
+    ],
+    "description": "Русскоязычные объяснения основных конструкций.",
+    "start": "Выберите нужную конструкцию в оглавлении.",
+    "limits": "Для отдельных заданий и сохранения работы могут действовать условия платформы.",
+    "language": "RU",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Основы Python — хендбук от Яндекса",
+      "resolvedUrl": "https://contest.yandex.ru/tracks/python/"
+    }
+  },
+  {
+    "id": "yandex-handbook-python",
+    "title": "Яндекс: основы Python",
+    "url": "https://education.yandex.ru/handbook/python",
+    "category": "Русскоязычные материалы",
+    "type": "course",
+    "topics": [
+      "setup",
+      "conditions",
+      "loops",
+      "dictionaries",
+      "functions"
+    ],
+    "description": "Учебник от авторов курса с последовательными темами.",
+    "start": "Начните с раздела, соответствующего вашей подготовке.",
+    "limits": "Внешние упражнения не являются заданиями iSMART.",
+    "language": "RU",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Основы Python — хендбук от Яндекса",
+      "resolvedUrl": "https://contest.yandex.ru/tracks/python/"
+    }
+  },
+  {
+    "id": "yandex-ml",
+    "title": "Яндекс: машинное обучение",
+    "url": "https://education.yandex.ru/handbook/ml",
+    "category": "Русскоязычные материалы",
+    "type": "course",
+    "topics": [
+      "ai-ml-dl",
+      "supervised",
+      "regression",
+      "classification",
+      "metrics"
+    ],
+    "description": "Теория и математические основы машинного обучения.",
+    "start": "Сверяйте термины с главами библиотеки.",
+    "limits": "Часть материала требует дополнительной математики.",
+    "language": "RU",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Учебник по машинному обучению — от ШАД Яндекса",
+      "resolvedUrl": "https://contest.yandex.ru/tracks/ml/"
+    }
+  },
+  {
+    "id": "pythontutor-inout",
+    "title": "PythonTutor: ввод и арифметика",
+    "url": "https://pythontutor.ru/lessons/inout_and_arithmetic_operations/",
+    "category": "Русскоязычные материалы",
+    "type": "docs",
+    "topics": [
+      "input",
+      "output",
+      "conversion",
+      "arithmetic"
+    ],
+    "description": "Русскоязычное объяснение ввода, вывода и чисел.",
+    "start": "Проследите переход от строки к числу.",
+    "limits": "Это внешний учебный сайт.",
+    "language": "RU",
+    "mode": "read",
+    "verifiedAt": "2026-11-03",
+    "verification": {
+      "method": "Web document lookup",
+      "status": 200,
+      "title": "Интерактивный учебник языка Python",
+      "resolvedUrl": "https://pythontutor.ru/lessons/inout_and_arithmetic_operations/"
+    }
+  },
+  {
+    "id": "stepik-beginner",
+    "title": "Stepik: Поколение Python",
+    "url": "https://stepik.org/course/58852/promo",
+    "category": "Русскоязычные материалы",
+    "type": "course",
+    "topics": [
+      "variables",
+      "strings",
+      "loops",
+      "functions",
+      "lists"
+    ],
+    "description": "Курс авторов BEEGEEK по основам языка.",
+    "start": "Посмотрите программу и выберите соответствующий раздел.",
+    "limits": "Регистрация и условия доступа определяются платформой.",
+    "language": "RU",
+    "mode": "browser",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "\"Поколение Python\": курс для начинающих: Начальный уровень, Бесплатно | курс на Stepik",
+      "resolvedUrl": "https://stepik.org/course/58852/promo"
+    }
+  },
+  {
+    "id": "google-mlcc",
+    "title": "Google: ускоренный курс ML",
+    "url": "https://developers.google.com/machine-learning/crash-course?hl=ru",
+    "category": "Русскоязычные материалы",
+    "type": "course",
+    "topics": [
+      "ai-ml-dl",
+      "linear-regression",
+      "logistic-regression",
+      "metrics",
+      "gradient-descent",
+      "problem"
+    ],
+    "description": "Официальный курс с объяснениями моделей и их оценки.",
+    "start": "Начните с предварительных требований и линейной регрессии.",
+    "limits": "Отдельные примеры могут быть на английском.",
+    "language": "RU",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Machine Learning  |  Google for Developers",
+      "resolvedUrl": "https://developers.google.com/machine-learning/crash-course?hl=ru"
+    }
+  },
+  {
+    "id": "vscode",
+    "title": "Visual Studio Code: Python",
+    "url": "https://code.visualstudio.com/docs/languages/python",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "setup",
+      "debugging",
+      "venv",
+      "notebooks",
+      "terminal"
+    ],
+    "description": "Редактор с выбором интерпретатора и отладкой.",
+    "start": "Откройте папку проекта и выберите нужный Python interpreter.",
+    "limits": "Расширение редактора не заменяет установленный интерпретатор.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Python in Visual Studio Code",
+      "resolvedUrl": "https://code.visualstudio.com/docs/languages/python"
+    }
+  },
+  {
+    "id": "pycharm",
+    "title": "PyCharm: начало работы",
+    "url": "https://www.jetbrains.com/help/pycharm/quick-start-guide.html",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "setup",
+      "debugging",
+      "venv"
+    ],
+    "description": "Среда разработки для организации Python-проекта.",
+    "start": "Создайте проект и проверьте используемое окружение.",
+    "limits": "Возможности зависят от установленной версии и условий продукта.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Quick start guide | PyCharm Documentation",
+      "resolvedUrl": "https://www.jetbrains.com/help/pycharm/quick-start-guide.html"
+    }
+  },
+  {
+    "id": "jupyter",
+    "title": "JupyterLab: руководство",
+    "url": "https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "notebooks",
+      "tables",
+      "charts"
+    ],
+    "description": "Ноутбуки, текстовые редакторы и вывод вычислений.",
+    "start": "Откройте notebook и разберите порядок выполнения ячеек.",
+    "limits": "Состояние ядра может скрывать зависимость от старых запусков.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Get Started — JupyterLab 4.6.5 documentation",
+      "resolvedUrl": "https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html"
+    }
+  },
+  {
+    "id": "colab",
+    "title": "Google Colab",
+    "url": "https://research.google.com/colaboratory/faq.html",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "notebooks",
+      "setup",
+      "neural-networks"
+    ],
+    "description": "Браузерная среда для запуска ноутбуков.",
+    "start": "Прочитайте FAQ о хранении, ресурсах и доступе.",
+    "limits": "Доступность ресурсов и условия сервиса могут меняться.",
+    "language": "EN",
+    "mode": "browser",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Google Colab",
+      "resolvedUrl": "https://research.google.com/colaboratory/faq.html"
+    }
+  },
+  {
+    "id": "python-visualizer",
+    "title": "Python Tutor: визуализация выполнения",
+    "url": "https://pythontutor.com/",
+    "category": "Среды и инструменты",
+    "type": "interactive",
+    "topics": [
+      "variables",
+      "mutability",
+      "scope",
+      "functions"
+    ],
+    "description": "Пошаговое отображение выполнения небольших программ.",
+    "start": "Смотрите, как меняются имена, ссылки и стек вызовов.",
+    "limits": "Поддержка библиотек и размер примера ограничены.",
+    "language": "EN",
+    "mode": "browser",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Python Tutor - Python Online Compiler with Visual Debugger",
+      "resolvedUrl": "https://pythontutor.com/"
+    }
+  },
+  {
+    "id": "git",
+    "title": "Git: книга Pro Git",
+    "url": "https://git-scm.com/book/ru/v2",
+    "category": "Среды и инструменты",
+    "type": "docs",
+    "topics": [
+      "git",
+      "reproducibility",
+      "documentation"
+    ],
+    "description": "Официальная книга по истории изменений и веткам.",
+    "start": "Начните с состояния рабочей папки и первого коммита.",
+    "limits": "Не добавляйте в историю секреты и закрытые данные.",
+    "language": "RU",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Git",
+      "resolvedUrl": "https://git-scm.com/book/ru/v2"
+    }
+  },
+  {
+    "id": "pytest",
+    "title": "pytest: начало работы",
+    "url": "https://docs.pytest.org/en/stable/getting-started.html",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "unittest",
+      "assertions",
+      "testing"
+    ],
+    "description": "Проверки поведения с обычными assert и фикстурами.",
+    "start": "Запустите один маленький тест на ожидаемый результат.",
+    "limits": "В проекте нужно явно установить зависимость.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Get Started - pytest documentation",
+      "resolvedUrl": "https://docs.pytest.org/en/stable/getting-started.html"
+    }
+  },
+  {
+    "id": "ruff",
+    "title": "Ruff: проверка Python-кода",
+    "url": "https://docs.astral.sh/ruff/",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "debugging",
+      "documentation"
+    ],
+    "description": "Автоматический поиск части ошибок и единый стиль.",
+    "start": "Посмотрите сообщения проверки до автоматического исправления.",
+    "limits": "Линтер не доказывает правильность алгоритма.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Ruff",
+      "resolvedUrl": "https://docs.astral.sh/ruff/"
+    }
+  },
+  {
+    "id": "uv",
+    "title": "uv: окружения и зависимости",
+    "url": "https://docs.astral.sh/uv/",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "venv",
+      "pip"
+    ],
+    "description": "Менеджер проектов, окружений и пакетов.",
+    "start": "Сначала разберите, какой проект и lock-файл используются.",
+    "limits": "Не смешивайте несколько менеджеров без понятного правила.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "uv",
+      "resolvedUrl": "https://docs.astral.sh/uv/"
+    }
+  },
+  {
+    "id": "streamlit",
+    "title": "Streamlit: первые шаги",
+    "url": "https://docs.streamlit.io/get-started",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "prototype",
+      "documentation"
+    ],
+    "description": "Создание интерфейса для демонстрации анализа и модели.",
+    "start": "Начните с простого ввода и отображения результата.",
+    "limits": "Перезапуск приложения влияет на состояние переменных.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Get started with Streamlit - Streamlit Docs",
+      "resolvedUrl": "https://docs.streamlit.io/get-started"
+    }
+  },
+  {
+    "id": "gradio",
+    "title": "Gradio: быстрый старт",
+    "url": "https://www.gradio.app/guides/quickstart",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "prototype",
+      "llm-evaluation"
+    ],
+    "description": "Демо-интерфейсы для функций и моделей.",
+    "start": "Определите функцию вход → выход, затем оболочку интерфейса.",
+    "limits": "Публичное демо требует отдельной проверки данных и доступа.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Quickstart",
+      "resolvedUrl": "https://gradio.app/guides/quickstart"
+    }
+  },
+  {
+    "id": "fastapi",
+    "title": "FastAPI: учебник",
+    "url": "https://fastapi.tiangolo.com/tutorial/",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "prototype",
+      "type-hints",
+      "testing"
+    ],
+    "description": "HTTP-интерфейс к Python-функциям с валидацией моделей данных.",
+    "start": "Начните с одной операции и формата запроса.",
+    "limits": "API требует отдельного запуска сервера и проверки доступа.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Tutorial - User Guide - FastAPI",
+      "resolvedUrl": "https://fastapi.tiangolo.com/tutorial/"
+    }
+  },
+  {
+    "id": "mlflow",
+    "title": "MLflow: документация",
+    "url": "https://mlflow.org/docs/latest/",
+    "category": "Данные и воспроизводимость",
+    "type": "tool",
+    "topics": [
+      "model-monitoring",
+      "hyperparameters",
+      "documentation"
+    ],
+    "description": "Учёт параметров, метрик и артефактов эксперимента.",
+    "start": "Сохраните один запуск с параметрами и результатом.",
+    "limits": "Журнал экспериментов не заменяет версионирование исходных данных.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "MLflow Documentation | MLflow AI Platform",
+      "resolvedUrl": "https://mlflow.org/docs/latest/"
+    }
+  },
+  {
+    "id": "dvc",
+    "title": "DVC: начало работы",
+    "url": "https://dvc.org/doc/start",
+    "category": "Данные и воспроизводимость",
+    "type": "tool",
+    "topics": [
+      "dataset",
+      "documentation",
+      "git"
+    ],
+    "description": "Версионирование данных и описания вычислительных этапов.",
+    "start": "Разделите исходники в Git и тяжёлые артефакты.",
+    "limits": "Удалённое хранилище и права доступа настраиваются отдельно.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Get Started with DVC | Data Version Control · DVC",
+      "resolvedUrl": "https://doc.dvc.org/start"
+    }
+  },
+  {
+    "id": "uci",
+    "title": "UCI Machine Learning Repository",
+    "url": "https://archive.ics.uci.edu/",
+    "category": "Данные и воспроизводимость",
+    "type": "dataset",
+    "topics": [
+      "dataset",
+      "classification",
+      "regression"
+    ],
+    "description": "Каталог учебных наборов с описаниями признаков и источников.",
+    "start": "Читайте описание набора до скачивания.",
+    "limits": "Лицензия и ограничения проверяются для каждого набора отдельно.",
+    "language": "EN",
+    "mode": "browser",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "UCI Machine Learning Repository",
+      "resolvedUrl": "https://archive.ics.uci.edu/"
+    }
+  },
+  {
+    "id": "sklearn-datasets",
+    "title": "Scikit-learn: встроенные датасеты",
+    "url": "https://scikit-learn.org/stable/datasets/toy_dataset.html",
+    "category": "Данные и воспроизводимость",
+    "type": "dataset",
+    "topics": [
+      "dataset",
+      "classification",
+      "clustering"
+    ],
+    "description": "Небольшие наборы для воспроизводимых первых моделей.",
+    "start": "Начните с Iris и отделите data от target.",
+    "limits": "Высокий результат на учебном наборе не переносится автоматически на рабочую задачу.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "9.1. Toy datasets — scikit-learn 1.9.1 documentation",
+      "resolvedUrl": "https://scikit-learn.org/stable/datasets/toy_dataset.html"
+    }
+  },
+  {
+    "id": "hf-datasets",
+    "title": "Hugging Face Datasets: руководство",
+    "url": "https://huggingface.co/docs/datasets/index",
+    "category": "Данные и воспроизводимость",
+    "type": "docs",
+    "topics": [
+      "dataset",
+      "rag",
+      "llm-evaluation"
+    ],
+    "description": "Загрузка и обработка наборов данных.",
+    "start": "Проверьте карточку, колонки, разбиения и лицензию набора.",
+    "limits": "Не следует исполнять неизвестный код подготовки данных без рассмотрения.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Datasets · Hugging Face",
+      "resolvedUrl": "https://huggingface.co/docs/datasets/index"
+    }
+  },
+  {
+    "id": "kaggle-datasets",
+    "title": "Kaggle: наборы данных",
+    "url": "https://www.kaggle.com/datasets",
+    "category": "Данные и воспроизводимость",
+    "type": "dataset",
+    "topics": [
+      "dataset",
+      "cleaning",
+      "charts"
+    ],
+    "description": "Каталог наборов, описаний и обсуждений.",
+    "start": "Проверяйте автора, обновление, лицензию и качество.",
+    "limits": "Наличие набора в каталоге не гарантирует пригодность или отсутствие персональных данных.",
+    "language": "EN",
+    "mode": "browser",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Find Open Datasets for AI and Research | Kaggle",
+      "resolvedUrl": "https://www.kaggle.com/datasets"
+    }
+  },
+  {
+    "id": "duckdb",
+    "title": "DuckDB: введение",
+    "url": "https://duckdb.org/docs/stable/",
+    "category": "Данные и воспроизводимость",
+    "type": "tool",
+    "topics": [
+      "csv",
+      "tables",
+      "pandas-groupby"
+    ],
+    "description": "Локальная аналитическая база для табличных запросов.",
+    "start": "Начните с чтения CSV и простой группировки.",
+    "limits": "SQL-запросы не исправляют ошибки источника автоматически.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Redirecting…",
+      "resolvedUrl": "https://duckdb.org/docs/stable/"
+    }
+  },
+  {
+    "id": "sqlite",
+    "title": "SQLite: справочник SQL",
+    "url": "https://www.sqlite.org/lang.html",
+    "category": "Данные и воспроизводимость",
+    "type": "docs",
+    "topics": [
+      "tables",
+      "pandas-merge"
+    ],
+    "description": "Официальный справочник языка запросов встроенной базы.",
+    "start": "Сравните SELECT, WHERE и GROUP BY.",
+    "limits": "Типы и особенности SQLite отличаются от других СУБД.",
+    "language": "EN",
+    "mode": "read",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Query Language Understood by SQLite",
+      "resolvedUrl": "https://www.sqlite.org/lang.html"
+    }
+  },
+  {
+    "id": "orange",
+    "title": "Orange Data Mining",
+    "url": "https://orangedatamining.com/docs/",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "ml-workflow",
+      "classification",
+      "clustering"
+    ],
+    "description": "Визуальная сборка потоков анализа данных.",
+    "start": "Начните с загрузки таблицы, осмотра и разделения данных.",
+    "limits": "Визуальная схема тоже может содержать утечку или неверную оценку.",
+    "language": "EN",
+    "mode": "local",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Orange Data Mining - Documentation",
+      "resolvedUrl": "https://orangedatamining.com/docs/"
+    }
+  },
+  {
+    "id": "teachable",
+    "title": "Teachable Machine",
+    "url": "https://teachablemachine.withgoogle.com/",
+    "category": "Среды и инструменты",
+    "type": "interactive",
+    "topics": [
+      "neural-networks",
+      "classification"
+    ],
+    "description": "Браузерная демонстрация обучения простых классификаторов.",
+    "start": "Сравните разные классы и примеры, не использованные при обучении.",
+    "limits": "Демонстрационный успех не является производственной оценкой.",
+    "language": "EN",
+    "mode": "browser",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Teachable Machine",
+      "resolvedUrl": "https://teachablemachine.withgoogle.com/"
+    }
+  },
+  {
+    "id": "desmos",
+    "title": "Desmos: графический калькулятор",
+    "url": "https://www.desmos.com/calculator?lang=ru",
+    "category": "Среды и инструменты",
+    "type": "interactive",
+    "topics": [
+      "gradient-descent",
+      "linear-regression",
+      "arithmetic"
+    ],
+    "description": "Графики функций с изменяемыми параметрами.",
+    "start": "Введите простую функцию и изменяйте коэффициенты.",
+    "limits": "График помогает понять зависимость, но не заменяет аналитическое доказательство.",
+    "language": "RU",
+    "mode": "browser",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Desmos | Графический калькулятор",
+      "resolvedUrl": "https://www.desmos.com/calculator?lang=ru"
+    }
+  },
+  {
+    "id": "netron",
+    "title": "Netron: просмотр моделей",
+    "url": "https://netron.app/",
+    "category": "Среды и инструменты",
+    "type": "tool",
+    "topics": [
+      "neural-networks",
+      "transformers"
+    ],
+    "description": "Просмотр структуры поддерживаемых форматов моделей.",
+    "start": "Изучите входные размеры и последовательность слоёв.",
+    "limits": "Просмотр структуры не доказывает качество или безопасность модели.",
+    "language": "EN",
+    "mode": "browser",
+    "verifiedAt": "2026-11-02",
+    "verification": {
+      "method": "HTTP GET / document title",
+      "status": 200,
+      "title": "Netron",
+      "resolvedUrl": "https://netron.app/"
+    }
+  }
+]

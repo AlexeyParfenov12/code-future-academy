@@ -1,0 +1,30 @@
+{
+  "id": "pipeline",
+  "title": "Pipeline: единый процесс обучения",
+  "group": "Эксперимент и данные",
+  "track": "ai",
+  "level": "intermediate",
+  "summary": "Преобразования и модель в одной проверяемой последовательности.",
+  "lessons": [
+    "M03-L03"
+  ],
+  "prerequisites": [
+    "split",
+    "functions"
+  ],
+  "related": [
+    "leakage",
+    "cross-validation",
+    "column-transformer"
+  ],
+  "content": "## Ключевая идея\n\nPipeline соединяет преобразования и финальную модель в один объект. При fit предыдущие этапы обучаются и преобразуют train, затем обучается модель. При predict применяются уже сохранённые правила.\n\n## Как это работает\n\nВ перекрёстной проверке Pipeline заново обучает обработку внутри каждого фолда. Это предотвращает типичную утечку от предварительного масштабирования всех данных. Параметры этапов задаются через имя__параметр.\n\n## Разобранный пример\n\n```python\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nmodel = make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=1))\nmodel.fit([[0], [1], [9], [10]], [0, 0, 1, 1])\nprint(model.predict([[0.5], [9.5]]).tolist())\n```\n\nРезультат:\n\n```text\n[0, 1]\n```\n\n## Почему получается такой результат\n\nМасштабирование и KNN объединены в make_pipeline. Два новых числа получают классы ближайших обучающих объектов. Пользователь не должен вручную повторять scaler перед каждым прогнозом.\n\n## Границы и частые ошибки\n\nPipeline не знает, что исходный столбец содержит будущий ответ. Он также не выбирает правильную схему разбиения сам. Корректность входных данных остаётся ответственностью автора.\n\n## Применение в курсе\n\nХраните готовый процесс, а не модель отдельно от случайного кодировщика. В отчёте покажите последовательность этапов и настройки.\n",
+  "examples": [
+    {
+      "code": "from sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nmodel = make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=1))\nmodel.fit([[0], [1], [9], [10]], [0, 0, 1, 1])\nprint(model.predict([[0.5], [9.5]]).tolist())",
+      "input": "",
+      "expected": "[0, 1]",
+      "sha256": "b8c97bdceae75c51d89d5d356338444f021146f53b87eac99c81465ea4b21508"
+    }
+  ],
+  "order": 91
+}

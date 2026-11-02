@@ -1,0 +1,29 @@
+{
+  "id": "boosting",
+  "title": "Градиентный бустинг",
+  "group": "Алгоритмы ML",
+  "track": "ai",
+  "level": "intermediate",
+  "summary": "Последовательное улучшение ансамбля и взаимодействие числа шагов со скоростью.",
+  "lessons": [
+    "M03-L05",
+    "M03-L06"
+  ],
+  "prerequisites": [
+    "decision-trees"
+  ],
+  "related": [
+    "gradient-descent",
+    "hyperparameters"
+  ],
+  "content": "## Ключевая идея\n\nБустинг строит ансамбль последовательно. Новые слабые модели корректируют текущие ошибки в соответствии с функцией потерь. Это отличается от независимого обучения деревьев случайного леса.\n\n## Как это работает\n\nВ градиентном бустинге следующий шаг приближает направление уменьшения потерь. learning_rate уменьшает вклад шага, n_estimators задаёт число этапов. Эти параметры подбирают совместно с ограничениями деревьев.\n\n## Разобранный пример\n\n```python\nfrom sklearn.ensemble import GradientBoostingClassifier\nmodel = GradientBoostingClassifier(n_estimators=10, max_depth=1, random_state=0).fit([[0], [1], [9], [10]], [0, 0, 1, 1])\nprint(model.n_estimators_)\nprint(model.predict([[0], [10]]).tolist())\n```\n\nРезультат:\n\n```text\n10\n[0, 1]\n```\n\n## Почему получается такой результат\n\nНебольшой классификатор строит десять этапов на искусственной задаче. Пример проверяет интерфейс и число этапов; он не сравнивает бустинг с другими моделями по настоящим данным.\n\n## Границы и частые ошибки\n\nБольше этапов может привести к переобучению. Не выбирайте остановку по финальному тесту. Разные библиотеки бустинга имеют разные правила категорий, пропусков и регуляризации.\n\n## Применение в курсе\n\nПосле baseline попробуйте бустинг, если табличная задача оправдывает сложность. Сохраняйте параметры и время обучения вместе с validation-метрикой.\n",
+  "examples": [
+    {
+      "code": "from sklearn.ensemble import GradientBoostingClassifier\nmodel = GradientBoostingClassifier(n_estimators=10, max_depth=1, random_state=0).fit([[0], [1], [9], [10]], [0, 0, 1, 1])\nprint(model.n_estimators_)\nprint(model.predict([[0], [10]]).tolist())",
+      "input": "",
+      "expected": "10\n[0, 1]",
+      "sha256": "5528126d2f3d6fcf616dab62d506a61e1552fcc7f4632004ca82186a1d96b54d"
+    }
+  ],
+  "order": 102
+}

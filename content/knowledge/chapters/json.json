@@ -1,0 +1,29 @@
+{
+  "id": "json",
+  "title": "JSON и обмен структурированными данными",
+  "group": "Файлы и качество кода",
+  "track": "python",
+  "level": "beginner",
+  "summary": "Различие текста JSON и объектов Python, типы и ошибки сериализации.",
+  "lessons": [
+    "M01-L10"
+  ],
+  "prerequisites": [
+    "dictionaries"
+  ],
+  "related": [
+    "dictionaries",
+    "file-text",
+    "dataclasses"
+  ],
+  "content": "## Ключевая идея\n\nJSON — текстовый формат обмена: объекты, массивы, строки, числа, логические значения и null. В Python ему соответствуют словари, списки и другие базовые значения, но их запись не полностью совпадает с синтаксисом JSON.\n\n## Как это работает\n\nloads разбирает строку, load читает из файла; dumps создаёт строку, dump записывает в файл. Имена ключей объекта JSON являются строками. После чтения всё равно нужна проверка схемы и диапазонов.\n\n## Разобранный пример\n\n```python\nimport json\nrecord = json.loads('{\"ok\": true, \"value\": null}')\nprint(record[\"ok\"], record[\"value\"])\nprint(json.dumps({\"count\": 3}, ensure_ascii=False))\n```\n\nРезультат:\n\n```text\nTrue None\n{\"count\": 3}\n```\n\n## Почему получается такой результат\n\nВ примере true и null превращаются в True и None. Затем выбранное поле снова сериализуется. Код не исполняет содержимое как программу.\n\n## Границы и частые ошибки\n\nОдинарные кавычки и True не являются стандартной записью JSON. Произвольные экземпляры классов не сериализуются автоматически. Специальные float вроде NaN требуют внимания: для строгой записи используют allow_nan=False.\n\n## Применение в курсе\n\nJSON удобен для настроек и результатов прототипа. Сохраняйте понятную версию схемы, если формат будет меняться между выпусками проекта.\n",
+  "examples": [
+    {
+      "code": "import json\nrecord = json.loads('{\"ok\": true, \"value\": null}')\nprint(record[\"ok\"], record[\"value\"])\nprint(json.dumps({\"count\": 3}, ensure_ascii=False))",
+      "input": "",
+      "expected": "True None\n{\"count\": 3}",
+      "sha256": "109dac5ff9d86c9bbdde7b8e0f468f4b6e0039cb0aca7b077d1fbcd8f57c0f80"
+    }
+  ],
+  "order": 60
+}

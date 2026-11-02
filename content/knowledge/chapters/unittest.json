@@ -1,0 +1,29 @@
+{
+  "id": "unittest",
+  "title": "Автоматические проверки: unittest",
+  "group": "Файлы и качество кода",
+  "track": "python",
+  "level": "beginner",
+  "summary": "Набор проверяемых случаев вместо одного ручного запуска.",
+  "lessons": [
+    "M01-L10"
+  ],
+  "prerequisites": [
+    "functions",
+    "assertions"
+  ],
+  "related": [
+    "functions",
+    "assertions"
+  ],
+  "content": "## Ключевая идея\n\nТест фиксирует ожидаемое поведение на конкретном входе. Хороший набор включает обычный случай, границы и ожидаемые ошибки. Тест не доказывает отсутствие дефектов, но защищает уже сформулированные требования.\n\n## Как это работает\n\nunittest из стандартной библиотеки группирует проверки в TestCase. Методы assertEqual и assertRaises описывают ожидание. Результат запуска содержит число случаев и признак успеха; тестовые данные должны быть независимыми.\n\n## Разобранный пример\n\n```python\nimport io\nimport unittest\nclass TotalTests(unittest.TestCase):\n    def test_values(self):\n        self.assertEqual(sum([2, 3]), 5)\n    def test_empty(self):\n        self.assertEqual(sum([]), 0)\nresult = unittest.TextTestRunner(stream=io.StringIO()).run(unittest.defaultTestLoader.loadTestsFromTestCase(TotalTests))\nprint(result.testsRun, result.wasSuccessful())\n```\n\nРезультат:\n\n```text\n2 True\n```\n\n## Почему получается такой результат\n\nВ примере два теста проверяют непустой и пустой списки. Вывод самого test runner направлен в память, поэтому пример показывает только количество выполненных тестов и итог.\n\n## Границы и частые ошибки\n\nНе проверяйте только то, что буквально повторяет реализацию. Если вычисляете среднее, задайте известный ответ вручную. Сетевые сервисы и случайность делают тесты нестабильными без отдельной подготовки.\n\n## Применение в курсе\n\nДля функции очистки проверьте пробелы, пустые значения и уже чистую строку. Эти случаи полезнее десятков одинаковых примеров без пограничных условий.\n",
+  "examples": [
+    {
+      "code": "import io\nimport unittest\nclass TotalTests(unittest.TestCase):\n    def test_values(self):\n        self.assertEqual(sum([2, 3]), 5)\n    def test_empty(self):\n        self.assertEqual(sum([]), 0)\nresult = unittest.TextTestRunner(stream=io.StringIO()).run(unittest.defaultTestLoader.loadTestsFromTestCase(TotalTests))\nprint(result.testsRun, result.wasSuccessful())",
+      "input": "",
+      "expected": "2 True",
+      "sha256": "1ebb8a515060e64ad9b8951c122a93f2c9c30b7595a1926c29a417f74a99d9ce"
+    }
+  ],
+  "order": 54
+}

@@ -1,0 +1,30 @@
+{
+  "id": "f1",
+  "title": "F1 и способы усреднения",
+  "group": "Качество и метрики",
+  "track": "ai",
+  "level": "intermediate",
+  "summary": "Гармоническое среднее precision и recall и его ограничения.",
+  "lessons": [
+    "M03-L07",
+    "M03-L08",
+    "M03-L10"
+  ],
+  "prerequisites": [
+    "precision-recall"
+  ],
+  "related": [
+    "precision-recall",
+    "imbalance"
+  ],
+  "content": "## Ключевая идея\n\nF1 объединяет precision и recall, сильно снижаясь, когда один из них мал. Это удобно для некоторых задач с положительным классом, но не заменяет обсуждение цены ошибок.\n\n## Как это работает\n\nF1=2PR/(P+R), эквивалентно 2TP/(2TP+FP+FN). True negative напрямую не входит в формулу. Macro усредняет метрики классов поровну, weighted учитывает их размеры, micro сначала суммирует исходы.\n\n## Разобранный пример\n\n```python\nfrom sklearn.metrics import f1_score\nprint(round(f1_score([1, 1, 1, 0], [1, 0, 0, 1], zero_division=0), 3))\n```\n\nРезультат:\n\n```text\n0.4\n```\n\n## Почему получается такой результат\n\nОдин TP, один FP и два FN дают F1=2/5=0.4. Расчёт совпадает с примером precision=0.5 и recall=1/3. Значение зависит от выбранного положительного класса.\n\n## Границы и частые ошибки\n\nНе сравнивайте binary F1 одной модели с weighted F1 другой. Максимизация F1 не всегда соответствует экономической или пользовательской цели. Порог подбирают отдельно на validation.\n\n## Применение в курсе\n\nВ отчёте укажите average, pos_label и распределение классов. Сохраните precision и recall, чтобы читатель видел, за счёт чего получился F1.\n",
+  "examples": [
+    {
+      "code": "from sklearn.metrics import f1_score\nprint(round(f1_score([1, 1, 1, 0], [1, 0, 0, 1], zero_division=0), 3))",
+      "input": "",
+      "expected": "0.4",
+      "sha256": "79c5b4a66411fb80e2e15c852bb2d13debaa809550cea947291f4f0a06935424"
+    }
+  ],
+  "order": 111
+}

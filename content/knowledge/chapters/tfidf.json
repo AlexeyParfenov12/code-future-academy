@@ -1,0 +1,30 @@
+{
+  "id": "tfidf",
+  "title": "Текстовые признаки: TF-IDF",
+  "group": "Нейросети и текст",
+  "track": "ai",
+  "level": "intermediate",
+  "summary": "Частоты слов, редкость в корпусе и фиксированный словарь.",
+  "lessons": [
+    "M03-L05",
+    "M03-L06"
+  ],
+  "prerequisites": [
+    "strings",
+    "features"
+  ],
+  "related": [
+    "naive-bayes",
+    "embeddings"
+  ],
+  "content": "## Ключевая идея\n\nTF-IDF представляет документ числовым вектором слов или n-грамм. Частые в документе, но редкие в корпусе элементы получают больший вес. Это статистическое представление, а не полноценное понимание смысла.\n\n## Как это работает\n\nВекторизатор учит словарь и IDF на train. transform новых текстов использует тот же словарь; неизвестные слова обычно не создают новые столбцы. Настройки токенизации, регистра и n-грамм меняют признаки.\n\n## Разобранный пример\n\n```python\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nvectorizer = TfidfVectorizer().fit([\"кот спит\", \"пёс спит\"])\nprint(vectorizer.get_feature_names_out().tolist())\nprint(vectorizer.transform([\"кот\", \"тигр\"]).getnnz(axis=1).tolist())\n```\n\nРезультат:\n\n```text\n['кот', 'пёс', 'спит']\n[1, 0]\n```\n\n## Почему получается такой результат\n\nИз двух коротких документов получается словарь из трёх слов. Новый документ со словом «кот» имеет ненулевой вектор, а полностью неизвестное слово даёт нули.\n\n## Границы и частые ошибки\n\nНе обучайте словарь на test при оценке обобщения. Стандартные правила могут игнорировать односимвольные токены. Отрицания, порядок и морфология требуют отдельного внимания.\n\n## Применение в курсе\n\nДля классификации сообщений соберите Pipeline с TfidfVectorizer и простой моделью. Разберите, какие неизвестные и неоднозначные тексты дают ошибки.\n",
+  "examples": [
+    {
+      "code": "from sklearn.feature_extraction.text import TfidfVectorizer\nvectorizer = TfidfVectorizer().fit([\"кот спит\", \"пёс спит\"])\nprint(vectorizer.get_feature_names_out().tolist())\nprint(vectorizer.transform([\"кот\", \"тигр\"]).getnnz(axis=1).tolist())",
+      "input": "",
+      "expected": "['кот', 'пёс', 'спит']\n[1, 0]",
+      "sha256": "4eea56208ef889f1b9e47e6eae46b05dcde3d02476115595b25b7a6125e991fa"
+    }
+  ],
+  "order": 124
+}

@@ -1,0 +1,31 @@
+{
+  "id": "precision-recall",
+  "title": "Precision и recall",
+  "group": "Качество и метрики",
+  "track": "ai",
+  "level": "intermediate",
+  "summary": "Точность положительных решений и полнота обнаружения.",
+  "lessons": [
+    "M03-L07",
+    "M03-L08",
+    "M03-L10"
+  ],
+  "prerequisites": [
+    "confusion-matrix"
+  ],
+  "related": [
+    "thresholds",
+    "f1",
+    "confusion-matrix"
+  ],
+  "content": "## Ключевая идея\n\nPrecision отвечает: какая доля объявленных положительными объектов действительно положительна? Recall отвечает: какую долю всех настоящих положительных модель нашла? Эти знаменатели различаются.\n\n## Как это работает\n\nPrecision=TP/(TP+FP), recall=TP/(TP+FN). Выбор приоритета зависит от цены ложных тревог и пропусков. Изменение порога меняет оба показателя, а не просто делает модель «точнее».\n\n## Разобранный пример\n\n```python\nfrom sklearn.metrics import precision_score, recall_score\ny = [1, 1, 1, 0]\np = [1, 0, 0, 1]\nprint(round(precision_score(y, p, zero_division=0), 3))\nprint(round(recall_score(y, p, zero_division=0), 3))\n```\n\nРезультат:\n\n```text\n0.5\n0.333\n```\n\n## Почему получается такой результат\n\nИз двух найденных положительных один верен, поэтому precision=0.5. Из трёх реальных положительных найден один, поэтому recall примерно 0.333.\n\n## Границы и частые ошибки\n\nПри отсутствии положительных предсказаний precision может быть неопределён; задайте и объясните zero_division. Усреднение macro, micro и weighted в многоклассовой задаче имеет разный смысл.\n\n## Применение в курсе\n\nДля поиска опасных сообщений обсудите стоимость пропуска и ручной проверки ложной тревоги. Покажите оба показателя рядом с числом объектов.\n",
+  "examples": [
+    {
+      "code": "from sklearn.metrics import precision_score, recall_score\ny = [1, 1, 1, 0]\np = [1, 0, 0, 1]\nprint(round(precision_score(y, p, zero_division=0), 3))\nprint(round(recall_score(y, p, zero_division=0), 3))",
+      "input": "",
+      "expected": "0.5\n0.333",
+      "sha256": "7030c7360bbe698e2431ff8a1140af76ec7e375e6b4fa2cfad90e5b0ca240e50"
+    }
+  ],
+  "order": 110
+}
