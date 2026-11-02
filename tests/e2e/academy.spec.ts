@@ -78,3 +78,15 @@ test('six screen widths, menu, light and dark reading',async({page})=>{
  await page.setViewportSize({width:390,height:844});await page.goto('/');await page.getByRole('button',{name:'Открыть меню'}).click();await page.locator('.sidebar').getByRole('link',{name:'Готовые решения',exact:true}).click();await expect(page.locator('h1')).toContainText('Готовые решения');
  await page.goto('/');await snap(page,'home-mobile.png');await page.goto('/#/lesson/M01-L03/task/'+first.id);await page.getByRole('button',{name:'Включить тёмную тему'}).click();await snap(page,'answer-mobile-dark.png');
 });
+
+
+test('assessment navigation: eight controls, four intermediate documents and final defense',async({page})=>{
+ await page.goto('/#/assessments');await expect(page.locator('h1')).toHaveText('Контроли и аттестации.');await expect(page.locator('.assessment-control')).toHaveCount(8);await expect(page.locator('.assessment-assessment')).toHaveCount(4);await expect(page.locator('.assessment-final')).toHaveCount(1);
+ for(const link of await page.locator('.assessment-control a').all()){await expect(link).toHaveAttribute('href',/^https:\/\/edu.future.ismart.org\/course\/practice\/0\/unit\/[a-z0-9]+\/element\/[a-z0-9]+$/)}
+ await page.getByRole('navigation',{name:'Модули контролей и аттестаций'}).getByRole('link',{name:'Модуль 1',exact:true}).click();await expect(page.locator('.assessment-entry')).toHaveCount(3);await page.reload();await expect(page.locator('.assessment-entry')).toHaveCount(3);
+ await page.locator('.assessment-assessment').getByRole('link',{name:'Открыть документы'}).click();await expect(page.locator('h1')).toHaveText('Промежуточная аттестация');await expect(page.locator('.document-reader')).toBeVisible();
+ await page.goto('/#/assessments?module=5');await page.getByRole('link',{name:'Открыть документы'}).click();await expect(page.locator('h1')).toHaveText('Защита итогового проекта');
+ await page.goto('/#/lesson/M01-C1-4');await expect(page).toHaveURL(/assessments\?module=1/);
+ for(const width of [320,390,1440]){await page.setViewportSize({width,height:900});await page.goto('/#/assessments');await expect(page.locator('.assessment-entry')).toHaveCount(13);expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1)}
+ await snap(page,'assessments-desktop.png');
+});

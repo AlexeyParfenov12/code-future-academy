@@ -1,0 +1,134 @@
+{
+  "entries": [
+    {
+      "id": "M01-C1-4",
+      "moduleId": 1,
+      "order": 4,
+      "number": "1.К1-4",
+      "title": "Текущий контроль по темам 1-4 Модуля 1",
+      "kind": "control",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/fdd4aea6c0a97d47114f9bc8/element/f22cfdc83c204027f54c9c44",
+      "linkStatus": "unverified"
+    },
+    {
+      "id": "M01-C5-13",
+      "moduleId": 1,
+      "order": 14,
+      "number": "1.К5-13",
+      "title": "Текущий контроль по темам 5-13 Модуля 1",
+      "kind": "control",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9562534c2de5000736fb72/element/6a9562534c2de5000736fb85",
+      "linkStatus": "unverified"
+    },
+    {
+      "id": "M01-L19",
+      "moduleId": 1,
+      "order": 20,
+      "number": "1.19",
+      "title": "Промежуточная аттестация",
+      "kind": "assessment",
+      "documentUrl": "/lesson/M01-L19?tab=lecture"
+    },
+    {
+      "id": "M02-C1-2",
+      "moduleId": 2,
+      "order": 23,
+      "number": "2.К1-2",
+      "title": "Текущий контроль по темам 1-2 Модуля 2",
+      "kind": "control",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/69a310f0755167ba98ad7c79/element/ca2039661c70091089194831",
+      "linkStatus": "unverified"
+    },
+    {
+      "id": "M02-C2-9",
+      "moduleId": 2,
+      "order": 31,
+      "number": "2.К2-9",
+      "title": "Текущий контроль по темам 2-9 Модуля 2",
+      "kind": "control",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9564bb4c2de5000736fe4f/element/6a9564bb4c2de5000736fe56",
+      "linkStatus": "unverified"
+    },
+    {
+      "id": "M02-L18",
+      "moduleId": 2,
+      "order": 40,
+      "number": "2.18",
+      "title": "Промежуточная аттестация",
+      "kind": "assessment",
+      "documentUrl": "/lesson/M02-L18?tab=lecture"
+    },
+    {
+      "id": "M03-C1-7",
+      "moduleId": 3,
+      "order": 48,
+      "number": "3.К1-7",
+      "title": "Текущий контроль по темам 1-7 Модуля 3",
+      "kind": "control",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/05c4269c56a60b73a17ea396/element/ca3d7e6d46e68a20e7f6552c",
+      "linkStatus": "unverified"
+    },
+    {
+      "id": "M03-C8-11",
+      "moduleId": 3,
+      "order": 53,
+      "number": "3.К8-11",
+      "title": "Текущий контроль по темам 8-11 Модуля 3",
+      "kind": "control",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9566a24c2de500073705ef/element/6a9566a24c2de50007370620",
+      "linkStatus": "unverified"
+    },
+    {
+      "id": "M03-L19",
+      "moduleId": 3,
+      "order": 61,
+      "number": "3.19",
+      "title": "Промежуточная аттестация",
+      "kind": "assessment",
+      "documentUrl": "/lesson/M03-L19?tab=lecture"
+    },
+    {
+      "id": "M04-C1-3",
+      "moduleId": 4,
+      "order": 65,
+      "number": "4.К1-3",
+      "title": "Текущий контроль по темам 1-3 Модуля 4",
+      "kind": "control",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/1e43885de15d0188db5d26bc/element/afc7801fbd277f9573e1cffc",
+      "linkStatus": "unverified"
+    },
+    {
+      "id": "M04-C4-5",
+      "moduleId": 4,
+      "order": 68,
+      "number": "4.К4-5",
+      "title": "Текущий контроль по темам 4-5 Модуля 4",
+      "kind": "control",
+      "candidateUrl": "https://edu.future.ismart.org/course/practice/0/unit/6a9579184c2de50007370f26/element/6a9579184c2de50007370f2d",
+      "linkStatus": "unverified"
+    },
+    {
+      "id": "M04-L17",
+      "moduleId": 4,
+      "order": 80,
+      "number": "4.17",
+      "title": "Промежуточная аттестация",
+      "kind": "assessment",
+      "documentUrl": "/lesson/M04-L17?tab=lecture"
+    },
+    {
+      "id": "M05-L01",
+      "moduleId": 5,
+      "order": 81,
+      "number": "5.1",
+      "title": "Защита итогового проекта",
+      "kind": "final",
+      "documentUrl": "/lesson/M05-L01?tab=lecture"
+    }
+  ],
+  "counts": {
+    "control": 8,
+    "assessment": 4,
+    "final": 1
+  }
+}

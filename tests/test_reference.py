@@ -11,6 +11,18 @@ class ReferenceContract(unittest.TestCase):
         value=ref.capture_markdown(capture)
         self.assertIn('Вторая часть',value);self.assertIn('    print("a\\nb")',value)
         self.assertIn('А) Первый',value);self.assertNotIn('Секрет',value)
+    def test_assessment_navigation_contains_outline_only(self):
+        data=load(ROOT/'public/content/assessments.json')
+        self.assertEqual(data['counts'],{'control':8,'assessment':4,'final':1})
+        self.assertEqual(len(data['entries']),13)
+        allowed={'id','moduleId','order','number','title','kind','candidateUrl','linkStatus','documentUrl'}
+        for entry in data['entries']:
+            self.assertTrue(set(entry)<=allowed)
+            if entry['kind']=='control':
+                self.assertEqual(entry['linkStatus'],'unverified')
+                self.assertIn('https://edu.future.ismart.org/course/practice/',entry['candidateUrl'])
+                self.assertNotIn('?',entry['candidateUrl'])
+            else:self.assertTrue((ROOT/'public/content/lessons'/f"{entry['id']}.json").is_file())
     def test_native_question_excludes_teacher_answer(self):
         value=ref.capture_markdown({'text':'Задание:\nСопоставьте А и Б\nВерный ответ:\nА=42','html':''})
         self.assertIn('Сопоставьте',value);self.assertNotIn('А=42',value)

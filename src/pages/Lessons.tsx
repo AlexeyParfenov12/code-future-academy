@@ -37,6 +37,7 @@ function ArrowUpRightIcon(){return <ArrowRight size={14}/>}
 
 export function LessonPage(){
   const {lessonId}=useParams();const {catalog}=useStore();
+  const control=lessonId?.match(/^M0([1-4])-C\d+-\d+$/);if(control)return <Navigate to={'/assessments?module='+control[1]} replace/>;
   if(!lessonId||!catalog.lessons.some(l=>l.id===lessonId&&l.kind!=='control'))return <Navigate to="/catalog" replace/>;
   return <LoadedLessonPage key={lessonId} lessonId={lessonId}/>;
 }

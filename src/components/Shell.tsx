@@ -1,13 +1,13 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {Link,NavLink,Outlet,useLocation,useNavigate} from 'react-router-dom';
-import {ArrowRight,ArrowUpRight,BookOpen,Bookmark,BrainCircuit,Check,ChevronDown,ChevronRight,Code2,Command,FileText,House,Library,Menu,Moon,Search,Sun,TriangleAlert,X} from 'lucide-react';
+import {ArrowRight,ArrowUpRight,BookOpen,Bookmark,BrainCircuit,Check,ChevronDown,ChevronRight,Code2,ClipboardCheck,Command,FileText,House,Library,Menu,Moon,Search,Sun,TriangleAlert,X} from 'lucide-react';
 import Fuse from 'fuse.js';
 import {topics} from '../learning';
 import {useStore} from '../state';
 import {getJSON} from '../data';
 
 type SearchRecord={id:string;title:string;context:string;url:string;body?:string;aliases?:string};
-const navigation=[{to:'/',label:'Обзор библиотеки',icon:House},{to:'/catalog',label:'Все занятия',icon:BookOpen},{to:'/practice',label:'Готовые решения',icon:Code2}];
+const navigation=[{to:'/',label:'Обзор библиотеки',icon:House},{to:'/catalog',label:'Все занятия',icon:BookOpen},{to:'/practice',label:'Готовые решения',icon:Code2},{to:'/assessments',label:'Контроли и аттестации',icon:ClipboardCheck}];
 const reference=[{to:'/textbook',label:'Учебник Python',icon:BookOpen},{to:'/ai',label:'Искусственный интеллект',icon:BrainCircuit},{to:'/errors',label:'Справочник ошибок',icon:TriangleAlert},{to:'/resources',label:'Источники и инструменты',icon:Library}];
 
 export function SearchBox({large=false}:{large?:boolean}) {

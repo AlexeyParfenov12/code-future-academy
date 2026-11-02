@@ -181,6 +181,31 @@ def original_presentation(source,folder):
     if len(candidates)>1:raise ValueError('Ambiguous original presentation: '+folder)
     return candidates[0] if candidates else None
 
+def build_assessment_navigation(content,source,source_index):
+    """Only the course outline and observed student links, never question/key bodies."""
+    from import_course import student_url
+    content,source=map(Path,[content,source])
+    entries=[]
+    for row in source_index['lessons']:
+        if row['kind'] not in ['control','assessment','final']:continue
+        entry={key:row[key] for key in ['id','moduleId','order','number','title','kind']}
+        if row['kind']=='control':
+            folder=f"Модуль {row['moduleId']}/Контроль {row['id'].split('-C')[1]}"
+            metadata=load(source/'Архив iSmart'/folder/'Состав исходников.json')
+            candidates=[student_url(link.get('href','')) for link in metadata.get('links',[])]
+            entry['candidateUrl']=next((url for url in candidates if url),None)
+            entry['linkStatus']='unverified'
+        else:entry['documentUrl']='/lesson/'+row['id']+'?tab=lecture'
+        entries.append(entry)
+    dump(content/'assessments.json',{'entries':entries,'counts':{kind:sum(e['kind']==kind for e in entries) for kind in ['control','assessment','final']}})
+    search_path=content/'search-index.json'
+    search=[r for r in load(search_path) if not r['id'].startswith('assessment-nav-')]
+    search.append({'id':'assessment-nav-index','title':'Контроли и аттестации','context':'Текущие контроли / промежуточные аттестации / итоговая защита','url':'/assessments'})
+    for entry in entries:
+        if entry['kind']=='control':search.append({'id':'assessment-nav-'+entry['id'],'title':entry['title'],'context':'Контроль / Модуль '+str(entry['moduleId']),'url':'/assessments?module='+str(entry['moduleId'])})
+    dump(search_path,search)
+    return entries
+
 def project_reference(content,source,private,solutions_dir=None):
     content,source,private=map(Path,[content,source,private]);index=load(content/'index.json');source_index=load(private/'full-course-index.json') if (private/'full-course-index.json').exists() and len(index['lessons'])<82 else json.loads(json.dumps(index))
     private.mkdir(parents=True,exist_ok=True);dump(private/'full-course-index.json',source_index)
@@ -290,6 +315,7 @@ def project_reference(content,source,private,solutions_dir=None):
         search.append({'id':row['id'],'title':row['title'],'context':'Занятие '+row['number'],'url':'/lesson/'+row['id'],'body':lesson['lecture']+' '+lesson.get('extendedLecture','')})
         for task in lesson['tasks']:search.append({'id':task['id'],'title':task['title'],'context':f"Занятие {row['number']} / Задание {task['number']}",'aliases':f"{row['number']} №{task['number']} задание {task['number']} занятие {row['number'].split('.')[-1]} "+' '.join(task['relatedTopics']),'url':f"/lesson/{row['id']}/task/{task['id']}",'body':task['statement']+' '+(task.get('solution') or {}).get('code','')})
     dump(content/'search-index.json',search)
+    build_assessment_navigation(content,source,source_index)
     report=load(content/'import-report.json');report['sourceCounts']=report.get('sourceCounts',report['counts']);report['counts']=index['counts'];report['publication']['solutions']='381_individually_reviewed_ordinary_practice_answers_authorized'
     if not any(issue['lessonId']=='M02-L17' for issue in report['knownIssues']):report['knownIssues'].append({'lessonId':'M02-L17','message':'В исходном виджете задания 3.1 часть подписей диапазонов повреждена. Пропуски сохранены явно; ответ поясняет выбранные интервалы.'})
     report['manualReview']=['Проверить кандидаты ссылок в авторизованной студенческой сессии.','Оригинальные презентации доступны только для 36 занятий. Для остальных 38 разделов в архиве исходная PPTX не найдена.']
