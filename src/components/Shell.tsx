@@ -1,6 +1,6 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {Link,NavLink,Outlet,useLocation,useNavigate} from 'react-router-dom';
-import {ArrowRight,ArrowUpRight,BookOpen,Bookmark,BrainCircuit,Check,ChevronDown,ChevronRight,Code2,ClipboardCheck,Command,FileText,House,Library,Menu,Moon,Search,Sun,TriangleAlert,X} from 'lucide-react';
+import {ArrowRight,ArrowUpRight,BookOpen,Bookmark,BrainCircuit,Check,ChevronRight,Code2,ClipboardCheck,Command,FileText,House,Library,Menu,Moon,Search,Sun,TriangleAlert,X} from 'lucide-react';
 import Fuse from 'fuse.js';
 import {topics} from '../learning';
 import {useStore} from '../state';
@@ -47,7 +47,6 @@ export function Shell() {
       <button className="mobile-close icon-button" aria-label="Закрыть меню" onClick={()=>setMobile(false)}><X size={21}/></button>
       <div className="sidebar-scroll">
         <div className="nav-label">МАТЕРИАЛЫ КУРСА</div><nav aria-label="Основная навигация">{navigation.map(({to,label,icon:Icon})=><NavLink key={to} to={to} end={to==='/'}><Icon size={18}/>{label}</NavLink>)}</nav>
-        <div className="course-index"><div className="nav-label">ИНДЕКС МОДУЛЕЙ</div>{catalog.modules.map(module=><details key={module.id} open={current?.moduleId===module.id||undefined}><summary><span className="index-number">0{module.id}</span><span>{module.id===1?'Python и данные':module.id===2?'Математика для ИИ':module.id===3?'Модели и алгоритмы':module.id===4?'Проектирование':'Итоговая защита'}</span><ChevronDown size={14}/></summary><div className="course-index-lessons"><Link className="module-index-link" to={'/module/'+module.id}>Все материалы модуля<ArrowUpRight size={13}/></Link>{catalog.lessons.filter(l=>l.moduleId===module.id&&l.kind!=='control').map(lesson=><NavLink key={lesson.id} to={'/lesson/'+lesson.id}><span>{lesson.number}</span>{lesson.title}</NavLink>)}</div></details>)}</div>
         <div className="nav-label">РАЗОБРАТЬСЯ В ТЕМЕ</div><nav>{reference.map(({to,label,icon:Icon})=><Link key={to} to={to} className={referencePath.startsWith(to)?'active':undefined} aria-current={referencePath.startsWith(to)?'page':undefined}><Icon size={18}/>{label}</Link>)}<NavLink to="/favorites"><Bookmark size={18}/>Избранное{local.favorites.length>0&&<span className="count-badge">{local.favorites.length}</span>}</NavLink></nav>
       </div>
       <a className="platform-link" href={catalog.course.officialUrl} target="_blank" rel="noopener noreferrer"><span><strong>Официальная платформа</strong><small>Сдача и проверка — iSMART</small></span><ArrowUpRight size={19}/></a>
