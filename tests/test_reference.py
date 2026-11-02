@@ -15,7 +15,7 @@ class ReferenceContract(unittest.TestCase):
         data=load(ROOT/'public/content/assessments.json')
         self.assertEqual(data['counts'],{'control':8,'assessment':4,'final':1})
         self.assertEqual(len(data['entries']),13)
-        allowed={'id','moduleId','order','number','title','kind','candidateUrl','linkStatus','documentUrl'}
+        allowed={'id','moduleId','order','number','title','kind','candidateUrl','linkStatus','documentUrl','url','taskCount','solutionCount'}
         for entry in data['entries']:
             self.assertTrue(set(entry)<=allowed)
             if entry['kind']=='control':

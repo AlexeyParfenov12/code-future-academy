@@ -82,11 +82,39 @@ test('six screen widths, menu, light and dark reading',async({page})=>{
 
 test('assessment navigation: eight controls, four intermediate documents and final defense',async({page})=>{
  await page.goto('/#/assessments');await expect(page.locator('h1')).toHaveText('Контроли и аттестации.');await expect(page.locator('.assessment-control')).toHaveCount(8);await expect(page.locator('.assessment-assessment')).toHaveCount(4);await expect(page.locator('.assessment-final')).toHaveCount(1);
- for(const link of await page.locator('.assessment-control a').all()){await expect(link).toHaveAttribute('href',/^https:\/\/edu.future.ismart.org\/course\/practice\/0\/unit\/[a-z0-9]+\/element\/[a-z0-9]+$/)}
+ for(const link of await page.locator('.assessment-control a[target="_blank"]').all()){await expect(link).toHaveAttribute('href',/^https:\/\/edu.future.ismart.org\/course\/practice\/0\/unit\/[a-z0-9]+\/element\/[a-z0-9]+$/)}
  await page.getByRole('navigation',{name:'Модули контролей и аттестаций'}).getByRole('link',{name:'Модуль 1',exact:true}).click();await expect(page.locator('.assessment-entry')).toHaveCount(3);await page.reload();await expect(page.locator('.assessment-entry')).toHaveCount(3);
  await page.locator('.assessment-assessment').getByRole('link',{name:'Открыть документы'}).click();await expect(page.locator('h1')).toHaveText('Промежуточная аттестация');await expect(page.locator('.document-reader')).toBeVisible();
  await page.goto('/#/assessments?module=5');await page.getByRole('link',{name:'Открыть документы'}).click();await expect(page.locator('h1')).toHaveText('Защита итогового проекта');
  await page.goto('/#/lesson/M01-C1-4');await expect(page).toHaveURL(/assessments\?module=1/);
  for(const width of [320,390,1440]){await page.setViewportSize({width,height:900});await page.goto('/#/assessments');await expect(page.locator('.assessment-entry')).toHaveCount(13);expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1)}
  await snap(page,'assessments-desktop.png');
+});
+
+
+test('assessment answers, different variants, clipboard, code, missing condition and final project',async({page,request})=>{
+ const control=JSON.parse(fs.readFileSync('public/content/assessments/M01-C1-4.json','utf8'));
+ await page.goto('/#/assessments/M01-C1-4');await expect(page.locator('.task-card')).toHaveCount(12);await page.locator('.task-card').first().click();await expect(page.locator('.text-answer')).toContainText('имя, за которым хранится значение');await page.getByRole('button',{name:'Скопировать ответ',exact:true}).click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(control.tasks[0].variants[0].solution.answer);await page.getByText('Подробное объяснение',{exact:true}).click();await expect(page.locator('.solution-explanation')).toContainText('Переменная');
+ const a=JSON.parse(fs.readFileSync('public/content/assessments/M01-L19.json','utf8'));
+ await page.goto('/#/assessments/M01-L19/task/'+a.tasks[0].id);await expect(page.locator('.text-answer')).toContainText('количество строк и столбцов');await page.getByLabel('Вариант задания').selectOption('1');await expect(page.locator('.text-answer')).toContainText('количество пропусков');await expect(page).toHaveURL(/variant=2/);await page.reload();await expect(page.locator('.text-answer')).toContainText('количество пропусков');
+ await page.goto('/#/assessments/M01-L19/task/'+a.tasks[15].id+'?variant=4');await expect(page.locator('.text-answer')).toContainText('repeat');await page.locator('.solution-section').getByRole('button',{name:'Скопировать код',exact:true}).click();expect(await page.evaluate(()=>navigator.clipboard.readText().then(t=>t.replace(/\r\n?/g,'\n')))).toBe(a.tasks[15].variants[3].solution.code);
+ const [download]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'Скачать код PY',exact:true}).click()]);expect(fs.readFileSync((await download.path())!,'utf8')).toBe(a.tasks[15].variants[3].solution.code);await download.delete();
+ await snap(page,'assessment-code-variant.png');
+ const b=JSON.parse(fs.readFileSync('public/content/assessments/M02-L18.json','utf8'));await page.goto('/#/assessments/M02-L18/task/'+b.tasks[8].id);await expect(page.locator('.solution-section')).toContainText('Полного условия нет');await expect(page.locator('.text-answer')).toHaveCount(0);
+ const final=JSON.parse(fs.readFileSync('public/content/assessments/M05-L01.json','utf8'));await page.goto('/#/assessments/M05-L01/task/'+final.tasks[0].id);await expect(page.locator('.text-answer')).toContainText('100%');const zip=page.getByRole('link',{name:/Скачать готовый образец итогового проекта/});expect((await request.get((await zip.getAttribute('href'))!)).ok()).toBeTruthy();
+ for(const width of [320,390,1440]){await page.setViewportSize({width,height:900});for(const route of ['/#/assessments/M01-C5-13','/#/assessments/M01-L19/task/'+a.tasks[15].id+'?variant=4','/#/assessments/M05-L01/task/'+final.tasks[0].id]){await page.goto(route);await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth),route).toBeLessThanOrEqual(1)}}
+});
+
+
+test('all 268 assessment task routes and 346 saved conditions render the corresponding answer',async({page})=>{
+ test.setTimeout(180000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));let published=0,missing=0;
+ for(const file of fs.readdirSync('public/content/assessments').filter(name=>name.endsWith('.json'))){
+  const work=JSON.parse(fs.readFileSync('public/content/assessments/'+file,'utf8'));
+  for(const task of work.tasks)for(const [index,variant] of task.variants.entries()){
+   await page.goto('/#/assessments/'+work.id+'/task/'+task.id+'?variant='+(index+1));await expect(page.locator('h1')).toHaveText(task.title);
+   if(variant.solution.status==='published'){await expect(page.locator('.text-answer pre')).toHaveText(variant.solution.answer);published++}
+   else{await expect(page.locator('.solution-section')).toContainText('Полного условия нет');missing++}
+  }
+ }
+ expect(published).toBe(344);expect(missing).toBe(2);expect(errors).toEqual([]);
 });

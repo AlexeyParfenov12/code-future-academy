@@ -24,7 +24,11 @@
     "attachmentMetadataUrls": 155,
     "publishedSolutions": 381,
     "sourceSections": 82,
-    "missingOriginalPresentations": 38
+    "missingOriginalPresentations": 38,
+    "assessmentTasks": 268,
+    "assessmentConditions": 346,
+    "assessmentSolutions": 344,
+    "assessmentMissingConditions": 2
   },
   "expected": {
     "date": "2026-11-02",
@@ -86,7 +90,8 @@
     "ismartLinks": "all_unverified_no_student_session",
     "pptx": "notes_comments_and_personal_metadata_removed",
     "originals": "unchanged_outside_project",
-    "publicRightsConfirmed": true
+    "publicRightsConfirmed": true,
+    "assessmentAnswers": "reviewed_explanations_published_on_explicit_owner_request"
   },
   "manualReview": [
     "Проверить кандидаты ссылок в авторизованной студенческой сессии.",
@@ -136,7 +141,7 @@
     ],
     "authorPractice": "excluded_from_public_files",
     "ordinaryPracticeSolutionsPermission": "confirmed_by_owner_2026-11-02",
-    "assessmentKeys": "excluded",
+    "assessmentKeys": "reviewed_answers_published; raw_teacher_archive_private",
     "rawRegistry": "kept_private"
   }
 }
