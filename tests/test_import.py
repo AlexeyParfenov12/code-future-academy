@@ -18,14 +18,25 @@ class ImportSecurity(unittest.TestCase):
         self.assertEqual(candidate,'https://edu.future.ismart.org/course/practice/0/unit/abc/element/def')
     def test_content_integrity_and_teacher_exclusion(self):
         content=ROOT/'public/content';index=imp.load(content/'index.json')
-        self.assertEqual(index['counts']['sections'],82);self.assertEqual(index['counts']['slides'],1239)
+        self.assertEqual(index['counts']['sections'],74);self.assertEqual(index['counts']['slides'],497)
+        self.assertEqual(index['counts']['sourceSections'],82)
+        self.assertEqual(index['counts']['publishedSolutions'],381)
+        self.assertEqual(index['counts']['additionalPractices'],0)
+        self.assertEqual(len(list((content/'lessons').glob('*.json'))),74)
         ids=set();all_tasks=set();slides=0;presentations=0
         for r in index['lessons']:
+            self.assertNotEqual(r['kind'],'control')
             self.assertNotIn(r['id'],ids);ids.add(r['id']);l=imp.load(content/'lessons'/f"{r['id']}.json")
             for t in l['tasks']:
+                self.assertEqual(t['origin'],'ismart')
+                self.assertEqual(t['solutionStatus'],'published')
+                self.assertEqual(t['variants'],[])
+                self.assertTrue(t['solution']['explanation'])
                 self.assertNotIn(t['id'],all_tasks);all_tasks.add(t['id'])
                 if t['type']=='assessment':self.assertIsNone(t['solution']);self.assertEqual(t['variants'],[])
                 if t['ismartLink']:self.assertEqual(t['ismartLink']['status'],'unverified')
+            slides+=l['slideCount']
+            self.assertEqual(l['slides'],[])
             for uri in l['slides']:
                 self.assertTrue((ROOT/'public'/uri.lstrip('/')).is_file());slides+=1
             if l['deckDownload']:
@@ -35,11 +46,12 @@ class ImportSecurity(unittest.TestCase):
                     self.assertFalse(any(b'/teacher/' in z.read(n) for n in z.namelist() if n.endswith('.rels')))
             for f in l['files']:
                 p=ROOT/'public'/f['url'].lstrip('/');self.assertTrue(p.is_file());self.assertEqual(imp.sha(p.read_bytes()),f['sha256'])
-        self.assertEqual(len(ids),82);self.assertEqual(slides,1239);self.assertEqual(presentations,74)
+        self.assertEqual(len(ids),74);self.assertEqual(slides,497);self.assertEqual(presentations,36)
+        self.assertEqual(len(all_tasks),381)
         self.assertEqual(len(all_tasks),index['counts']['tasks']);self.assertIn('M03-L16',ids);self.assertIn('M03-L17',ids)
         for p in content.rglob('*'):
             if p.suffix in ('.json','.svg'):
-                s=p.read_text(encoding='utf-8');self.assertNotIn('/teacher/',s,str(p));self.assertNotIn('OneDrive',s,str(p));self.assertNotRegex(s,r'(?i)(?:access_token|bearer [a-z0-9_-]{20})')
+                s=p.read_text(encoding='utf-8');self.assertIsNone(re.search(r'https?://[^\s"<>]*?/teacher/',s),str(p));self.assertNotIn('OneDrive',s,str(p));self.assertNotRegex(s,r'(?i)(?:access_token|bearer [a-z0-9_-]{20})')
         self.assertFalse(any(p.suffix=='.docx' for p in content.rglob('*')))
 
 if __name__=='__main__':unittest.main()

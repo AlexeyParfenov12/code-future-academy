@@ -5,6 +5,7 @@ test-results/
 playwright-report/
 private/
 *.zip
+!public/content/examples/*.zip
 __pycache__/
 
 *.tsbuildinfo

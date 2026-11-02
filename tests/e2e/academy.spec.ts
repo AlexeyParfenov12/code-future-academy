@@ -1,8 +1,80 @@
-import {test,expect} from '@playwright/test';
+import {test,expect,type Page} from '@playwright/test';
 import fs from 'node:fs';
+import path from 'node:path';
 const catalog=JSON.parse(fs.readFileSync('public/content/index.json','utf8'));
-test('dashboard, modules, all lesson routes and source material requests',async({page,request})=>{const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/');await expect(page.getByRole('heading',{name:/Лекции, презентации и готовые решения/})).toBeVisible();await expect(page.locator('.module-card')).toHaveCount(4);await page.screenshot({path:'../../work/qa/dashboard-desktop.png',fullPage:true});for(const m of catalog.modules){await page.goto('/#/module/'+m.id);await expect(page.locator('h1')).toContainText(m.title)}for(const lesson of catalog.lessons.filter((lesson:{kind:string})=>lesson.kind!=='control')){await page.goto('/#/lesson/'+lesson.id);await expect(page.locator('h1').first()).toHaveText(lesson.title);const response=await request.get('/content/lessons/'+lesson.id+'.json');expect(response.ok()).toBeTruthy()}expect(errors).toEqual([])});
-test('slides navigation, original student files and CSV preview',async({page})=>{await page.goto('/#/lesson/M01-L03?tab=slides');const slide=page.locator('.slide-stage img');await expect(slide).toHaveAttribute('src',/001.svg/);await page.getByRole('button',{name:'Далее',exact:true}).click();await expect(slide).toHaveAttribute('src',/002.svg/);await page.getByLabel('Номер слайда').selectOption({value:'2'});await expect(slide).toHaveAttribute('src',/003.svg/);await page.screenshot({path:'../../work/qa/slides.png',fullPage:true});await page.goto('/#/lesson/M01-L12?tab=files');await expect(page.locator('.file-header')).not.toHaveCount(0);await page.getByText(/Посмотреть первые/).first().click();await expect(page.locator('table').first()).toBeVisible();await page.screenshot({path:'../../work/qa/csv.png',fullPage:true})});
-test('bookmarks, theme, clipboard and trace',async({page})=>{await page.goto('/#/lesson/M01-L03');await page.getByRole('button',{name:'В избранное',exact:true}).click();await page.getByRole('button',{name:'Включить тёмную тему'}).click();await page.reload();await expect(page.getByRole('button',{name:'В избранном',exact:true})).toBeVisible();await expect(page.getByText('Мой прогресс')).toHaveCount(0);await expect(page.locator('html')).toHaveAttribute('data-theme','dark');await page.goto('/#/favorites');await expect(page.locator('.lesson-row-main')).toContainText('Первые программы');await page.goto('/#/lab');const pre=page.locator('.code-block pre').first();await page.getByRole('button',{name:'Скопировать код'}).first().click();const copied=await page.evaluate(()=>navigator.clipboard.readText());expect(copied.replace(/\r\n/g,'\n')).toBe('correct = 15\ntotal = 20\npercent = correct / total * 100\nprint(f"{percent}%")');await page.getByRole('button',{name:'Следующий шаг'}).click();await expect(page.locator('.trace-state')).toContainText('20');await expect(pre).toContainText('correct = 15');await page.screenshot({path:'../../work/qa/dark-lab.png',fullPage:true})});
-test('global full-text search, practical filters and task navigation',async({page})=>{await page.goto('/');await page.getByLabel('Глобальный поиск').fill('Калькулятор результата теста');await expect(page.locator('.search-results')).toContainText('Калькулятор');await page.locator('.search-results a').filter({hasText:'Калькулятор результата теста'}).first().click();await expect(page.locator('h1')).toContainText('Калькулятор');await expect(page.locator('.task-actions')).toContainText('Решение не опубликовано');await expect(page.getByRole('link',{name:'Открыть задание на iSMART'}).first()).toHaveAttribute('href',/\/course\/practice\//);await expect(page.locator('.official').first()).toContainText('не проверена');expect(await page.locator('a[href*="/teacher/"]').count()).toBe(0);await page.goto('/#/practice?module=3&type=file');await expect(page.locator('.practice-card').first()).toBeVisible();await page.getByRole('checkbox',{name:'С решением'}).check();await expect(page.locator('.empty-state')).toContainText('Решения требуют проверки')});
-test('mobile reading, navigation, slides, no document overflow',async({page})=>{await page.setViewportSize({width:390,height:844});for(const route of ['/', '/#/catalog','/#/lesson/M01-L03','/#/lesson/M01-L03?tab=slides','/#/practice','/#/textbook/variables','/#/lesson/M05-L01']){await page.goto(route);await expect(page.locator('h1').first()).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth)).toBeLessThanOrEqual(1)}await page.goto('/');await page.getByRole('button',{name:'Открыть меню'}).click();await expect(page.locator('.sidebar')).toHaveClass(/mobile-open/);await page.locator('.sidebar').getByRole('link',{name:'Практические задания',exact:true}).click();await expect(page.locator('h1')).toHaveText('Практические задания.');await page.goto('/#/lesson/M01-L03?tab=slides');await page.screenshot({path:'../../work/qa/mobile-slides.png',fullPage:true});await page.goto('/');await page.screenshot({path:'../../work/qa/dashboard-mobile.png',fullPage:true})});
+const lesson=(id:string)=>JSON.parse(fs.readFileSync('public/content/lessons/'+id+'.json','utf8'));
+const first=lesson('M01-L03').tasks[0];
+const fifth=lesson('M01-L03').tasks.find((t:{number:number})=>t.number===5);
+const shots=process.env.CFA_QA_DIR||'test-results/visual';fs.mkdirSync(shots,{recursive:true});
+async function snap(page:Page,name:string){await page.evaluate(()=>{(document.activeElement as HTMLElement)?.blur();window.scrollTo({top:0,behavior:'instant'})});await page.screenshot({path:path.join(shots,name),fullPage:true})}
+
+test('all 74 routes, modules and material requests',async({page,request})=>{
+ test.setTimeout(120000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('/');await expect(page.locator('h1')).toHaveText('Code Future Academy.');await expect(page.locator('.module-entry')).toHaveCount(5);
+ await snap(page,'home-desktop.png');
+ for(const m of catalog.modules){await page.goto('/#/module/'+m.id);await expect(page.locator('h1')).toContainText(m.title)}
+ for(const l of catalog.lessons){await page.goto('/#/lesson/'+l.id+'?tab=tasks');await expect(page.locator('h1').first()).toHaveText(l.title);expect((await request.get('/content/lessons/'+l.id+'.json')).ok()).toBeTruthy()}
+ expect(errors).toEqual([]);
+});
+
+test('number search, immediate code, exact clipboard and expanded links',async({page})=>{
+ await page.goto('/');await page.getByLabel('Глобальный поиск').fill('1.3 №5');await expect(page.locator('.search-results a')).toHaveCount(1);await page.locator('.search-results a').click();
+ await expect(page.locator('h1')).toHaveText(fifth.title);await expect(page.locator('.solution-section .code-block')).toBeVisible();await expect(page.locator('.solution-explanation')).not.toHaveAttribute('open');
+ await page.locator('.solution-section').getByRole('button',{name:'Скопировать код',exact:true}).click();expect(await page.evaluate(()=>navigator.clipboard.readText().then(t=>t.replace(/\r\n?/g,'\n')))).toBe(fifth.solution.code.replace(/\r\n?/g,'\n'));
+ await expect(page.getByRole('link',{name:'Открыть задание на iSMART'})).toHaveAttribute('href',fifth.ismartLink.candidateUrl);await expect(page.locator('.official')).toContainText('ещё не проверена');
+ await page.getByText('Подробное объяснение',{exact:true}).click();await expect(page.locator('.line-explanations')).toBeVisible();await snap(page,'answer-desktop.png');
+ await page.goto('/#/lesson/M01-L03?tab=extended');await expect(page.locator('.extended-lecture')).toContainText('input');await page.locator('.extended-lecture a[href*="/task/"]').first().click();await expect(page.locator('.solution-section')).toBeVisible();
+ await page.getByLabel('Глобальный поиск').fill('Переменные');await page.locator('.search-results a[href*="/textbook/variables"]').click();await expect(page.locator('h1')).toHaveText('Переменные');
+});
+
+test('text clipboard and downloadable project',async({page,request})=>{
+ const t=lesson('M04-L13').tasks[0];await page.goto('/#/lesson/M04-L13/task/'+t.id);await page.getByRole('button',{name:'Скопировать ответ',exact:true}).click();expect(await page.evaluate(()=>navigator.clipboard.readText().then(t=>t.replace(/\r\n?/g,'\n')))).toBe(t.solution.answer);
+ const link=page.getByRole('link',{name:/Скачать самостоятельный пример/});await expect(link).toBeVisible();expect((await request.get((await link.getAttribute('href'))!)).ok()).toBeTruthy();
+});
+
+test('native and converted PDF paging, zoom, download and fullscreen',async({page,request})=>{
+ for(const id of ['M01-L03','M02-L17']){
+  await page.goto('/#/lesson/'+id+'?tab=lecture');await expect(page.locator('.pdf-viewport')).toHaveAttribute('aria-busy','false',{timeout:30000});await expect(page.locator('.document-error')).toHaveCount(0);
+  expect(await page.locator('.pdf-viewport canvas').evaluate((c:HTMLCanvasElement)=>c.width)).toBeGreaterThan(200);
+  await page.getByRole('button',{name:'Следующая страница PDF'}).click();await expect(page.getByLabel('Страница PDF',{exact:true})).toHaveValue('2');await page.getByRole('button',{name:'Увеличить PDF'}).click();await expect(page.getByRole('button',{name:'125%'})).toBeVisible();
+  expect((await request.get((await page.getByRole('link',{name:'Скачать PDF',exact:true}).getAttribute('href'))!)).ok()).toBeTruthy();
+  await page.getByRole('button',{name:'PDF на весь экран'}).click();await expect(page.locator('.document-reader')).toHaveClass(/reader-fullscreen/);await page.getByRole('button',{name:'Выйти из полноэкранного PDF'}).click();await snap(page,id+'-pdf.png');
+ }
+});
+
+test('original presentation PDF, keyboard, PPTX, missing originals and CSV preview',async({page,request})=>{
+ await page.goto('/#/lesson/M01-L03?tab=slides');await expect(page.locator('.pdf-viewport')).toHaveAttribute('aria-busy','false');await expect(page.locator('.document-title')).toContainText('Оригинальная презентация iSMART');
+ await page.locator('.pdf-viewport').focus();await page.keyboard.press('ArrowRight');await expect(page.getByLabel('Страница PDF',{exact:true})).toHaveValue('2');
+ for(const name of ['Скачать оригинальную презентацию PPTX','Скачать PDF'])expect((await request.get((await page.getByRole('link',{name,exact:true}).getAttribute('href'))!)).ok()).toBeTruthy();
+ await page.goto('/#/lesson/M04-L01?tab=slides');await expect(page.locator('.presentation-missing')).toContainText('не обнаружен');await expect(page.locator('.document-reader')).toHaveCount(0);await page.getByRole('button',{name:'Читать исходную лекцию'}).click();await expect(page.locator('.document-reader')).toBeVisible();
+ await page.goto('/#/lesson/M01-L12?tab=files');await page.getByText(/Посмотреть первые/).first().click();await expect(page.locator('table').first()).toBeVisible();
+});
+
+test('solutions are grouped by module and lesson and survive refresh and back',async({page})=>{
+ await page.goto('/#/practice');await expect(page.locator('.solution-module-entry')).toHaveCount(4);await expect(page.locator('.practice-card')).toHaveCount(0);await expect(page.locator('.pagination')).toHaveCount(0);
+ await page.locator('.solution-module-entry').filter({hasText:'Python'}).click();await expect(page).toHaveURL(/module=1/);await expect(page.locator('.solution-lesson-entry')).toHaveCount(13);
+ await page.locator('.solution-lesson-entry').filter({hasText:'Первые программы'}).click();await expect(page).toHaveURL(/lesson=M01-L03/);await expect(page.locator('.task-card')).toHaveCount(8);
+ await page.reload();await expect(page.locator('.task-card')).toHaveCount(8);await expect(page.locator('h1')).toContainText('Занятие 1.3');
+ await page.locator('.task-card').first().click();await expect(page.locator('.solution-section')).toBeVisible();await page.goBack();await expect(page.locator('.task-card')).toHaveCount(8);await expect(page).toHaveURL(/lesson=M01-L03/);
+ await page.getByRole('link',{name:'Все занятия модуля',exact:true}).click();await expect(page.locator('.solution-lesson-entry')).toHaveCount(13);
+ await snap(page,'solutions-lessons.png');
+});
+
+test('migration, bookmarks, theme, excluded routes',async({page,request})=>{
+ await page.addInitScript(()=>{if(!localStorage.getItem('seeded')){localStorage.setItem('cfa-learning-v1',JSON.stringify({theme:'light',favorites:[],progress:{secret:true},drafts:{secret:true}}));localStorage.setItem('cfa-draft-test','old');localStorage.setItem('seeded','yes')}});
+ await page.goto('/#/lesson/M01-L03');await page.getByRole('button',{name:'Добавить в избранное',exact:true}).click();await page.getByRole('button',{name:'Включить тёмную тему'}).click();await page.reload();await expect(page.getByRole('button',{name:'Убрать из избранного',exact:true})).toBeVisible();await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
+ const local=await page.evaluate(()=>({value:JSON.parse(localStorage.getItem('cfa-reference-v2')!),old:localStorage.getItem('cfa-learning-v1'),draft:localStorage.getItem('cfa-draft-test')}));expect(local.value.progress).toBeUndefined();expect(local.value.drafts).toBeUndefined();expect(local.old).toBeNull();expect(local.draft).toBeNull();
+ await page.goto('/#/favorites');await expect(page.locator('.lesson-row-main')).toContainText('Первые программы');await snap(page,'dark-favorites.png');
+ for(const route of ['/lab','/progress','/lesson/M01-C1-4','/lesson/M01-L03/task/M01-L03-A01']){await page.goto('/#'+route);await expect(page.locator('h1')).toBeVisible();await expect(page.locator('.solution-section')).toHaveCount(0)}
+ expect((await (await request.get('/content/lessons/M01-C1-4.json')).text()).includes('"tasks"')).toBeFalsy();
+});
+
+test('six screen widths, menu, light and dark reading',async({page})=>{
+ test.setTimeout(120000);
+ for(const width of [320,375,390,768,1024,1440]){
+  await page.setViewportSize({width,height:900});
+  for(const route of ['/','/#/catalog','/#/practice','/#/practice?module=1','/#/practice?module=1&lesson=M01-L03','/#/lesson/M01-L03/task/'+first.id,'/#/lesson/M01-L03?tab=extended','/#/lesson/M01-L03?tab=lecture','/#/lesson/M01-L03?tab=slides','/#/import-report']){await page.goto(route);await expect(page.locator('h1').first()).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth),width+' '+route).toBeLessThanOrEqual(1)}
+ }
+ await page.setViewportSize({width:390,height:844});await page.goto('/');await page.getByRole('button',{name:'Открыть меню'}).click();await page.locator('.sidebar').getByRole('link',{name:'Готовые решения',exact:true}).click();await expect(page.locator('h1')).toContainText('Готовые решения');
+ await page.goto('/');await snap(page,'home-mobile.png');await page.goto('/#/lesson/M01-L03/task/'+first.id);await page.getByRole('button',{name:'Включить тёмную тему'}).click();await snap(page,'answer-mobile-dark.png');
+});
