@@ -1,0 +1,4 @@
+* text=auto eol=lf
+public/content/** -text
+*.pptx binary
+*.pdf binary

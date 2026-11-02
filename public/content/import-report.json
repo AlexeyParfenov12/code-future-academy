@@ -72,17 +72,16 @@
     }
   ],
   "publication": {
-    "audience": "owner_private",
-    "studentMaterials": "private_owner_use",
+    "audience": "public",
+    "studentMaterials": "public_distribution_confirmed",
     "teacherMaterials": "excluded_from_public_build",
     "solutions": "explicit_review_and_rights_confirmation_required",
     "ismartLinks": "all_unverified_no_student_session",
     "pptx": "notes_comments_and_personal_metadata_removed",
     "originals": "unchanged_outside_project",
-    "publicRightsConfirmed": false
+    "publicRightsConfirmed": true
   },
   "manualReview": [
-    "Подтвердить права iSMART перед открытой публикацией.",
     "Проверить кандидаты ссылок в авторизованной студенческой сессии.",
     "Рассмотреть решения по одному; контрольные ключи и варианты остаются закрытыми.",
     "Сверить отрисовку всех слайдов с PowerPoint перед публичным выпуском."

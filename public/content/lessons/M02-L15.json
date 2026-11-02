@@ -41,7 +41,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     },
@@ -73,7 +73,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     },
@@ -105,7 +105,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     },
@@ -137,7 +137,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     },
@@ -169,7 +169,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     },
@@ -201,7 +201,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     },
@@ -233,7 +233,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     },
@@ -265,7 +265,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     },
@@ -297,7 +297,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     },
@@ -329,7 +329,7 @@
       },
       "publication": {
         "audience": "student",
-        "rights": "private_owner_use",
+        "rights": "public_distribution_confirmed",
         "status": "published"
       }
     }
@@ -469,7 +469,7 @@
   },
   "publication": {
     "audience": "student",
-    "rights": "private_owner_use",
+    "rights": "public_distribution_confirmed",
     "status": "published"
   }
 }
