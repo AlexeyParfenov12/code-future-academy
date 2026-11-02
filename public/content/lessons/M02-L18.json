@@ -7,7 +7,7 @@
   "originalTitle": "Тема 18. Промежуточная аттестация.",
   "kind": "assessment",
   "taskCount": 0,
-  "slideCount": 6,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Промежуточная аттестация». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -18,15 +18,8 @@
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
   "theory": [],
-  "slides": [
-    "/content/slides/M02-L18/001.svg",
-    "/content/slides/M02-L18/002.svg",
-    "/content/slides/M02-L18/003.svg",
-    "/content/slides/M02-L18/004.svg",
-    "/content/slides/M02-L18/005.svg",
-    "/content/slides/M02-L18/006.svg"
-  ],
-  "deckDownload": "/content/files/M02-L18-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -196,19 +189,10 @@
         "path": "Снимки страниц.json / 6a5c96f04e874f00070ea9d2",
         "sha256": "8007ce0f8a51b3cf74ef8882bf4b1d22787c8a100d5fbbb3f3d48a5207b39867"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L18-presentation.pdf",
-      "name": "Промежуточная аттестация — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 6,
-      "sha256": "3b7b92bfd33c9ce3ffa071dfe8973504a7efb5b3487be80430c44f69abf10e16",
-      "source": {
-        "path": "Модуль 2/Занятие 18/Презентация — итоговая.pptx",
-        "sha256": "8eebcdf0b18c6efc8ceaf29fa6331ae75379f55adbae045d9c3ceb6821548ce8"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

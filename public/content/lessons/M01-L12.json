@@ -7,7 +7,7 @@
   "originalTitle": "Тема 12. Занятие 12. Табличные данные и признаки объектов",
   "kind": "lesson",
   "taskCount": 8,
-  "slideCount": 13,
+  "slideCount": 12,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Табличные данные и признаки объектов». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -691,22 +691,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L12/001.svg",
-    "/content/slides/M01-L12/002.svg",
-    "/content/slides/M01-L12/003.svg",
-    "/content/slides/M01-L12/004.svg",
-    "/content/slides/M01-L12/005.svg",
-    "/content/slides/M01-L12/006.svg",
-    "/content/slides/M01-L12/007.svg",
-    "/content/slides/M01-L12/008.svg",
-    "/content/slides/M01-L12/009.svg",
-    "/content/slides/M01-L12/010.svg",
-    "/content/slides/M01-L12/011.svg",
-    "/content/slides/M01-L12/012.svg",
-    "/content/slides/M01-L12/013.svg"
-  ],
-  "deckDownload": "/content/files/M01-L12-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L12-original-student.pptx",
   "files": [
     {
       "id": "40e5e2628907421f.csv",
@@ -1146,16 +1132,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L12-presentation.pdf",
-      "name": "Табличные данные и признаки объектов — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Табличные данные и признаки объектов — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 13,
-      "sha256": "f4fb5aabc979c39779abe631c824eade7f052f73c7c53f8ac6b0712e092b253f",
+      "pageCount": 12,
+      "sha256": "3767783421a6e46f300fdf4ae73ebf7963c7563e3a684794bcee193ce8e1610f",
       "source": {
-        "path": "Модуль 1/Занятие 12/Презентация — итоговая.pptx",
-        "sha256": "91ec8d5dd485cc5570e41f6f98cc3e0aa6a63d73688d1e979552531280fb1564"
+        "path": "lesson_1_12_table_data_10_11_spo_reworked_2ee145.pptx",
+        "sha256": "2ee14568e6faba0528375278c0b5be5bb1d8acb2aa523cb7f4d147db493aeefa"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_1_12_table_data_10_11_spo_reworked_2ee145.pptx",
+    "sourceSha256": "2ee14568e6faba0528375278c0b5be5bb1d8acb2aa523cb7f4d147db493aeefa",
+    "slideCount": 12
   }
 }

@@ -7,7 +7,7 @@
   "originalTitle": "Тема 3. Занятие 3. Производная как скорость изменения и идея обучения модели",
   "kind": "lesson",
   "taskCount": 10,
-  "slideCount": 7,
+  "slideCount": 10,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Производная как скорость изменения и идея обучения модели». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -565,16 +565,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L03/001.svg",
-    "/content/slides/M02-L03/002.svg",
-    "/content/slides/M02-L03/003.svg",
-    "/content/slides/M02-L03/004.svg",
-    "/content/slides/M02-L03/005.svg",
-    "/content/slides/M02-L03/006.svg",
-    "/content/slides/M02-L03/007.svg"
-  ],
-  "deckDownload": "/content/files/M02-L03-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M02-L03-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -706,16 +698,22 @@
     },
     "presentation": {
       "url": "/content/documents/M02-L03-presentation.pdf",
-      "name": "Производная как скорость изменения и идея обучения модели — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Производная как скорость изменения и идея обучения модели — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 7,
-      "sha256": "0a167ef8bf7a1e45572d58e64bdda56695ee01e5f08a81f554cbfcbff010ae77",
+      "pageCount": 10,
+      "sha256": "29247bc7a91d813c85f2349eac8d51097db09cca09a98d06281020e627ec4984",
       "source": {
-        "path": "Модуль 2/Занятие 03/Презентация — итоговая.pptx",
-        "sha256": "aad988201c744a7395ee82f218d3993478df3505595d9018af290e8f591d2026"
+        "path": "a34b1d07cbfd63f7e5afabbf372349df_854b54.pptx",
+        "sha256": "854b54adb5844b4bd369767048781773f4d049aef95ec6d9df1663ab7cf7a741"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "a34b1d07cbfd63f7e5afabbf372349df_854b54.pptx",
+    "sourceSha256": "854b54adb5844b4bd369767048781773f4d049aef95ec6d9df1663ab7cf7a741",
+    "slideCount": 10
   }
 }

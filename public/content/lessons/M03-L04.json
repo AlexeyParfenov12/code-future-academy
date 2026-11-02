@@ -7,7 +7,7 @@
   "originalTitle": "Тема 4. Занятие 4. Типы задач машинного обучения",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 18,
+  "slideCount": 14,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Типы задач машинного обучения». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,27 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L04/001.svg",
-    "/content/slides/M03-L04/002.svg",
-    "/content/slides/M03-L04/003.svg",
-    "/content/slides/M03-L04/004.svg",
-    "/content/slides/M03-L04/005.svg",
-    "/content/slides/M03-L04/006.svg",
-    "/content/slides/M03-L04/007.svg",
-    "/content/slides/M03-L04/008.svg",
-    "/content/slides/M03-L04/009.svg",
-    "/content/slides/M03-L04/010.svg",
-    "/content/slides/M03-L04/011.svg",
-    "/content/slides/M03-L04/012.svg",
-    "/content/slides/M03-L04/013.svg",
-    "/content/slides/M03-L04/014.svg",
-    "/content/slides/M03-L04/015.svg",
-    "/content/slides/M03-L04/016.svg",
-    "/content/slides/M03-L04/017.svg",
-    "/content/slides/M03-L04/018.svg"
-  ],
-  "deckDownload": "/content/files/M03-L04-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L04-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -84,16 +65,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L04-presentation.pdf",
-      "name": "Типы задач машинного обучения — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Типы задач машинного обучения — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 18,
-      "sha256": "0fc321ddcadc4658b9152965ec008af4dbb3825a83ab01879ad8e56bff240a63",
+      "pageCount": 14,
+      "sha256": "ca53c9b8e806f0472c443f2675520647593997ddbf04caabedf1f10f3e145c93",
       "source": {
-        "path": "Модуль 3/Занятие 04/Презентация — итоговая.pptx",
-        "sha256": "f5f85dbaee0708595d70c6c0308b0eb8228527301f9110a56dbf0a4fd140f163"
+        "path": "Урок_3_4_Типы_задач_машинного_обучения_презентация_обновленная_b05d6a.pptx",
+        "sha256": "b05d6ab2bccc80ff3c7bc754cf1a5a88d4767584a2518bd75d1e6f4b1b4ffba5"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Урок_3_4_Типы_задач_машинного_обучения_презентация_обновленная_b05d6a.pptx",
+    "sourceSha256": "b05d6ab2bccc80ff3c7bc754cf1a5a88d4767584a2518bd75d1e6f4b1b4ffba5",
+    "slideCount": 14
   }
 }

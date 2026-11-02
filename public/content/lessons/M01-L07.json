@@ -7,7 +7,7 @@
   "originalTitle": "Тема 7. Занятие 7. Циклы - повторение действий в алгоритмах",
   "kind": "lesson",
   "taskCount": 6,
-  "slideCount": 12,
+  "slideCount": 14,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Циклы - повторение действий в алгоритмах». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -731,21 +731,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L07/001.svg",
-    "/content/slides/M01-L07/002.svg",
-    "/content/slides/M01-L07/003.svg",
-    "/content/slides/M01-L07/004.svg",
-    "/content/slides/M01-L07/005.svg",
-    "/content/slides/M01-L07/006.svg",
-    "/content/slides/M01-L07/007.svg",
-    "/content/slides/M01-L07/008.svg",
-    "/content/slides/M01-L07/009.svg",
-    "/content/slides/M01-L07/010.svg",
-    "/content/slides/M01-L07/011.svg",
-    "/content/slides/M01-L07/012.svg"
-  ],
-  "deckDownload": "/content/files/M01-L07-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L07-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -846,16 +833,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L07-presentation.pdf",
-      "name": "Циклы - повторение действий в алгоритмах — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Циклы - повторение действий в алгоритмах — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 12,
-      "sha256": "a4b0c30961d667f6d9a284d69e80088322013fb9ba2f4062ca72d2635188ef34",
+      "pageCount": 14,
+      "sha256": "e119541734b1e4d3bb505c7b4a96a0018773d07132d627d048e7bf240c383695",
       "source": {
-        "path": "Модуль 1/Занятие 07/Презентация — итоговая.pptx",
-        "sha256": "5974d3607fd8eb30ff6646d104991740d4c776308886685099cbae0c8057c0f6"
+        "path": "17_74b046.pptx",
+        "sha256": "74b04600ee24d02c18a5220143dbae9558280e6ff27e1e1f70bb34401cd99193"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "17_74b046.pptx",
+    "sourceSha256": "74b04600ee24d02c18a5220143dbae9558280e6ff27e1e1f70bb34401cd99193",
+    "slideCount": 14
   }
 }

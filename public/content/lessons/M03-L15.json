@@ -7,7 +7,7 @@
   "originalTitle": "Тема 15. Занятие 15. Полный цикл ML-проекта на датасете",
   "kind": "lesson",
   "taskCount": 5,
-  "slideCount": 20,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Полный цикл ML-проекта на датасете». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -826,29 +826,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L15/001.svg",
-    "/content/slides/M03-L15/002.svg",
-    "/content/slides/M03-L15/003.svg",
-    "/content/slides/M03-L15/004.svg",
-    "/content/slides/M03-L15/005.svg",
-    "/content/slides/M03-L15/006.svg",
-    "/content/slides/M03-L15/007.svg",
-    "/content/slides/M03-L15/008.svg",
-    "/content/slides/M03-L15/009.svg",
-    "/content/slides/M03-L15/010.svg",
-    "/content/slides/M03-L15/011.svg",
-    "/content/slides/M03-L15/012.svg",
-    "/content/slides/M03-L15/013.svg",
-    "/content/slides/M03-L15/014.svg",
-    "/content/slides/M03-L15/015.svg",
-    "/content/slides/M03-L15/016.svg",
-    "/content/slides/M03-L15/017.svg",
-    "/content/slides/M03-L15/018.svg",
-    "/content/slides/M03-L15/019.svg",
-    "/content/slides/M03-L15/020.svg"
-  ],
-  "deckDownload": "/content/files/M03-L15-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -947,19 +926,10 @@
         "path": "Снимки страниц.json / 333f7262adc45c31b1ff40ce, c69a0a766a3423dd40567d73",
         "sha256": "3b467773b765642cb0b52472f01d068e0b9132c10fa745f3b625e8c3ec62d52f"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M03-L15-presentation.pdf",
-      "name": "Полный цикл ML-проекта на датасете — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 20,
-      "sha256": "8e610a608c30a83f11121635e6c018dfee010784ca96a7b53a2b8b3c028625b4",
-      "source": {
-        "path": "Модуль 3/Занятие 15/Презентация — итоговая.pptx",
-        "sha256": "85a3ac80139a2ee2eb9e787e3717fc31b0547e76baab4c04daadfd2e35623e9d"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

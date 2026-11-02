@@ -7,7 +7,7 @@
   "originalTitle": "Тема 14. Занятие 14. Разметка данных для задач ИИ",
   "kind": "lesson",
   "taskCount": 8,
-  "slideCount": 14,
+  "slideCount": 12,
   "fileCount": 5,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Разметка данных для задач ИИ». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -833,23 +833,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L14/001.svg",
-    "/content/slides/M01-L14/002.svg",
-    "/content/slides/M01-L14/003.svg",
-    "/content/slides/M01-L14/004.svg",
-    "/content/slides/M01-L14/005.svg",
-    "/content/slides/M01-L14/006.svg",
-    "/content/slides/M01-L14/007.svg",
-    "/content/slides/M01-L14/008.svg",
-    "/content/slides/M01-L14/009.svg",
-    "/content/slides/M01-L14/010.svg",
-    "/content/slides/M01-L14/011.svg",
-    "/content/slides/M01-L14/012.svg",
-    "/content/slides/M01-L14/013.svg",
-    "/content/slides/M01-L14/014.svg"
-  ],
-  "deckDownload": "/content/files/M01-L14-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L14-original-student.pptx",
   "files": [
     {
       "id": "d114aca146e6a018.csv",
@@ -1314,16 +1299,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L14-presentation.pdf",
-      "name": "Разметка данных для задач ИИ — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Разметка данных для задач ИИ — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 14,
-      "sha256": "5bde442e57ac67b9c5b1b21a31da5b935629bc07f3bdb77e42f04a496792becc",
+      "pageCount": 12,
+      "sha256": "bea2b5224877c927107b26580a2061c6402902a08143bdaa3ebec94172f9b637",
       "source": {
-        "path": "Модуль 1/Занятие 14/Презентация — итоговая.pptx",
-        "sha256": "1c1e0edc1f06a2d01b4b4864251ae36f005bcc3f56e232354ce4777a86aed0f8"
+        "path": "lesson_1_14_labeling_data_reworked_38217e.pptx",
+        "sha256": "38217e643ef63359d784584eb64a1502688a5bb5571a95e71025ec4f55fe63bc"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_1_14_labeling_data_reworked_38217e.pptx",
+    "sourceSha256": "38217e643ef63359d784584eb64a1502688a5bb5571a95e71025ec4f55fe63bc",
+    "slideCount": 12
   }
 }

@@ -7,7 +7,7 @@
   "originalTitle": "Тема 14. Занятие 14. Обработка текста как задача искусственного интеллекта",
   "kind": "lesson",
   "taskCount": 8,
-  "slideCount": 31,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Обработка текста как задача искусственного интеллекта». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -905,40 +905,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L14/001.svg",
-    "/content/slides/M03-L14/002.svg",
-    "/content/slides/M03-L14/003.svg",
-    "/content/slides/M03-L14/004.svg",
-    "/content/slides/M03-L14/005.svg",
-    "/content/slides/M03-L14/006.svg",
-    "/content/slides/M03-L14/007.svg",
-    "/content/slides/M03-L14/008.svg",
-    "/content/slides/M03-L14/009.svg",
-    "/content/slides/M03-L14/010.svg",
-    "/content/slides/M03-L14/011.svg",
-    "/content/slides/M03-L14/012.svg",
-    "/content/slides/M03-L14/013.svg",
-    "/content/slides/M03-L14/014.svg",
-    "/content/slides/M03-L14/015.svg",
-    "/content/slides/M03-L14/016.svg",
-    "/content/slides/M03-L14/017.svg",
-    "/content/slides/M03-L14/018.svg",
-    "/content/slides/M03-L14/019.svg",
-    "/content/slides/M03-L14/020.svg",
-    "/content/slides/M03-L14/021.svg",
-    "/content/slides/M03-L14/022.svg",
-    "/content/slides/M03-L14/023.svg",
-    "/content/slides/M03-L14/024.svg",
-    "/content/slides/M03-L14/025.svg",
-    "/content/slides/M03-L14/026.svg",
-    "/content/slides/M03-L14/027.svg",
-    "/content/slides/M03-L14/028.svg",
-    "/content/slides/M03-L14/029.svg",
-    "/content/slides/M03-L14/030.svg",
-    "/content/slides/M03-L14/031.svg"
-  ],
-  "deckDownload": "/content/files/M03-L14-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -1055,19 +1023,10 @@
         "path": "Снимки страниц.json / b227a494688b3fe2b544eff5",
         "sha256": "012e57628a9fcb99af1b6de2a3f96eef096fe8c5e457d91bd24e788ea94aecbc"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M03-L14-presentation.pdf",
-      "name": "Обработка текста как задача искусственного интеллекта — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 31,
-      "sha256": "797026aab369b2dfbf2cb8cca86b2ec8fdb9b1327c9c75f5ef6a09412e5e7a2b",
-      "source": {
-        "path": "Модуль 3/Занятие 14/Презентация — итоговая.pptx",
-        "sha256": "f999f73486dadf7748a0c6ae1777000a36fe37788f637cb683f22c1be623137a"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

@@ -7,7 +7,7 @@
   "originalTitle": "Тема 2. Занятие 2. Признаки и целевая переменная",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 27,
+  "slideCount": 15,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Признаки и целевая переменная». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,36 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L02/001.svg",
-    "/content/slides/M03-L02/002.svg",
-    "/content/slides/M03-L02/003.svg",
-    "/content/slides/M03-L02/004.svg",
-    "/content/slides/M03-L02/005.svg",
-    "/content/slides/M03-L02/006.svg",
-    "/content/slides/M03-L02/007.svg",
-    "/content/slides/M03-L02/008.svg",
-    "/content/slides/M03-L02/009.svg",
-    "/content/slides/M03-L02/010.svg",
-    "/content/slides/M03-L02/011.svg",
-    "/content/slides/M03-L02/012.svg",
-    "/content/slides/M03-L02/013.svg",
-    "/content/slides/M03-L02/014.svg",
-    "/content/slides/M03-L02/015.svg",
-    "/content/slides/M03-L02/016.svg",
-    "/content/slides/M03-L02/017.svg",
-    "/content/slides/M03-L02/018.svg",
-    "/content/slides/M03-L02/019.svg",
-    "/content/slides/M03-L02/020.svg",
-    "/content/slides/M03-L02/021.svg",
-    "/content/slides/M03-L02/022.svg",
-    "/content/slides/M03-L02/023.svg",
-    "/content/slides/M03-L02/024.svg",
-    "/content/slides/M03-L02/025.svg",
-    "/content/slides/M03-L02/026.svg",
-    "/content/slides/M03-L02/027.svg"
-  ],
-  "deckDownload": "/content/files/M03-L02-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L02-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -93,16 +65,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L02-presentation.pdf",
-      "name": "Признаки и целевая переменная — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Признаки и целевая переменная — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 27,
-      "sha256": "164779d68d5a780f84a0a66bf4719a007bbb0fbd1831e941fe25a49846900619",
+      "pageCount": 15,
+      "sha256": "fe9974b3642e4410a5475fc6b145aa17b5361d5d4eb118b1eb1fc1655f971bbe",
       "source": {
-        "path": "Модуль 3/Занятие 02/Презентация — итоговая.pptx",
-        "sha256": "75c5100dacb5c1720021126bb91fe5d1e5bb56c29c5ef092a3c49b08fe41c1aa"
+        "path": "AI_Features_and_Target_Variables_f33bed.pptx",
+        "sha256": "f33bed035d150fd0ba6abdd247031810100540d18ab9588a68a4cf8407a90945"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "AI_Features_and_Target_Variables_f33bed.pptx",
+    "sourceSha256": "f33bed035d150fd0ba6abdd247031810100540d18ab9588a68a4cf8407a90945",
+    "slideCount": 15
   }
 }

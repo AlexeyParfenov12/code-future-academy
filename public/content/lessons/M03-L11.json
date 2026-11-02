@@ -7,7 +7,7 @@
   "originalTitle": "Тема 11. Занятие 11. Кластеризация в Python",
   "kind": "lesson",
   "taskCount": 3,
-  "slideCount": 13,
+  "slideCount": 14,
   "fileCount": 2,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Кластеризация в Python». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -470,22 +470,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L11/001.svg",
-    "/content/slides/M03-L11/002.svg",
-    "/content/slides/M03-L11/003.svg",
-    "/content/slides/M03-L11/004.svg",
-    "/content/slides/M03-L11/005.svg",
-    "/content/slides/M03-L11/006.svg",
-    "/content/slides/M03-L11/007.svg",
-    "/content/slides/M03-L11/008.svg",
-    "/content/slides/M03-L11/009.svg",
-    "/content/slides/M03-L11/010.svg",
-    "/content/slides/M03-L11/011.svg",
-    "/content/slides/M03-L11/012.svg",
-    "/content/slides/M03-L11/013.svg"
-  ],
-  "deckDownload": "/content/files/M03-L11-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L11-original-student.pptx",
   "files": [
     {
       "id": "5c04a0c81c76fd50.csv",
@@ -649,16 +635,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L11-presentation.pdf",
-      "name": "Кластеризация в Python — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Кластеризация в Python — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 13,
-      "sha256": "de3d34e9a09abcb6b075aa01ec3103b17fdb64220686d369e28604ea45ec4084",
+      "pageCount": 14,
+      "sha256": "f386c4dac5083b7d2ff94eadecdd22de569d727a13da3d0c252e5920a14c2664",
       "source": {
-        "path": "Модуль 3/Занятие 11/Презентация — итоговая.pptx",
-        "sha256": "a39d227194ec59877b8b2f669a0c417dbbdfee5706fbce0cda87ac2ba596e63a"
+        "path": "lesson_3_11_clustering_python_regenerated_d0f26f.pptx",
+        "sha256": "d0f26f7c2da1f32c6376ee79bba32fa46ad393080cf3ee74ce5cce8eddcd4486"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_3_11_clustering_python_regenerated_d0f26f.pptx",
+    "sourceSha256": "d0f26f7c2da1f32c6376ee79bba32fa46ad393080cf3ee74ce5cce8eddcd4486",
+    "slideCount": 14
   }
 }

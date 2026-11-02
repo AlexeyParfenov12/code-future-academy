@@ -7,7 +7,7 @@
   "originalTitle": "Тема 1. Занятие 1. Как модель учится на примерах",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 27,
+  "slideCount": 15,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Как модель учится на примерах». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,36 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L01/001.svg",
-    "/content/slides/M03-L01/002.svg",
-    "/content/slides/M03-L01/003.svg",
-    "/content/slides/M03-L01/004.svg",
-    "/content/slides/M03-L01/005.svg",
-    "/content/slides/M03-L01/006.svg",
-    "/content/slides/M03-L01/007.svg",
-    "/content/slides/M03-L01/008.svg",
-    "/content/slides/M03-L01/009.svg",
-    "/content/slides/M03-L01/010.svg",
-    "/content/slides/M03-L01/011.svg",
-    "/content/slides/M03-L01/012.svg",
-    "/content/slides/M03-L01/013.svg",
-    "/content/slides/M03-L01/014.svg",
-    "/content/slides/M03-L01/015.svg",
-    "/content/slides/M03-L01/016.svg",
-    "/content/slides/M03-L01/017.svg",
-    "/content/slides/M03-L01/018.svg",
-    "/content/slides/M03-L01/019.svg",
-    "/content/slides/M03-L01/020.svg",
-    "/content/slides/M03-L01/021.svg",
-    "/content/slides/M03-L01/022.svg",
-    "/content/slides/M03-L01/023.svg",
-    "/content/slides/M03-L01/024.svg",
-    "/content/slides/M03-L01/025.svg",
-    "/content/slides/M03-L01/026.svg",
-    "/content/slides/M03-L01/027.svg"
-  ],
-  "deckDownload": "/content/files/M03-L01-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L01-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -93,16 +65,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L01-presentation.pdf",
-      "name": "Как модель учится на примерах — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Как модель учится на примерах — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 27,
-      "sha256": "5dfac0f3b143e2a994ae1520b6185af92f19ebd120b7c4dba0651c525e67824b",
+      "pageCount": 15,
+      "sha256": "12c22dc6470587b291f37eb0a5930686e7a2332f37ce43bb7781c28f0e948027",
       "source": {
-        "path": "Модуль 3/Занятие 01/Презентация — итоговая.pptx",
-        "sha256": "f156fd522bd89fa5cb102af611e6760428109df1b6ece9530385090575c417d8"
+        "path": "AI_Learning_Blueprint_afcb78.pptx",
+        "sha256": "afcb7893619277cce1708090272471d478698ada82d7cbd2f026a89d07b96670"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "AI_Learning_Blueprint_afcb78.pptx",
+    "sourceSha256": "afcb7893619277cce1708090272471d478698ada82d7cbd2f026a89d07b96670",
+    "slideCount": 15
   }
 }

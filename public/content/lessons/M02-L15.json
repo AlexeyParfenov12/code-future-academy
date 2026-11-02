@@ -7,7 +7,7 @@
   "originalTitle": "Тема 15. Занятие 15. Принятие решений на основе данных",
   "kind": "lesson",
   "taskCount": 10,
-  "slideCount": 10,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Принятие решений на основе данных». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -939,19 +939,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L15/001.svg",
-    "/content/slides/M02-L15/002.svg",
-    "/content/slides/M02-L15/003.svg",
-    "/content/slides/M02-L15/004.svg",
-    "/content/slides/M02-L15/005.svg",
-    "/content/slides/M02-L15/006.svg",
-    "/content/slides/M02-L15/007.svg",
-    "/content/slides/M02-L15/008.svg",
-    "/content/slides/M02-L15/009.svg",
-    "/content/slides/M02-L15/010.svg"
-  ],
-  "deckDownload": "/content/files/M02-L15-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -1084,19 +1073,10 @@
         "path": "Снимки страниц.json / 0288c4afcff32c064d4d4613",
         "sha256": "559cd755d3ba83e5d9eb6ea0481402ed4252fee79dd393a6bc6abfb9deeaac74"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L15-presentation.pdf",
-      "name": "Принятие решений на основе данных — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 10,
-      "sha256": "5d16b3cd573eb24ac4be937c7600e09f106cd12eeb82fca09137f64c6f4f78ed",
-      "source": {
-        "path": "Модуль 2/Занятие 15/Презентация — итоговая.pptx",
-        "sha256": "9b688a7c5bcf4041015589f76e600ac9e4f4549607012efea4186a9a349e46a2"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

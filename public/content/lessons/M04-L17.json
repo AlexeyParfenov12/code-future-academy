@@ -7,7 +7,7 @@
   "originalTitle": "Занятие 17. Промежуточная аттестация.",
   "kind": "assessment",
   "taskCount": 0,
-  "slideCount": 6,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Промежуточная аттестация». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -18,15 +18,8 @@
     "Удалены служебные адреса, инструкция для преподавателя и метки речи; обращения к слайду адаптированы. Оригинал сохранён отдельно."
   ],
   "theory": [],
-  "slides": [
-    "/content/slides/M04-L17/001.svg",
-    "/content/slides/M04-L17/002.svg",
-    "/content/slides/M04-L17/003.svg",
-    "/content/slides/M04-L17/004.svg",
-    "/content/slides/M04-L17/005.svg",
-    "/content/slides/M04-L17/006.svg"
-  ],
-  "deckDownload": "/content/files/M04-L17-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -232,19 +225,10 @@
         "path": "Снимки страниц.json / 52525899effc80695937e79b",
         "sha256": "0a47917fa280cb4d2566d5dc34c6cb89c5e7104d1eb97f1641590e603121243a"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L17-presentation.pdf",
-      "name": "Промежуточная аттестация — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 6,
-      "sha256": "37a3cd476c894425757206d6242d6bb646e3c484bec63157d4378269eabf2809",
-      "source": {
-        "path": "Модуль 4/Занятие 17/Презентация — итоговая.pptx",
-        "sha256": "6620118fcbd8bfc04dc87e6148296b895703863ba0f920aaf6846eb4ea261654"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

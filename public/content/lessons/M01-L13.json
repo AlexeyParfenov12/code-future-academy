@@ -7,7 +7,7 @@
   "originalTitle": "Тема 13. Занятие 13. Качество данных - ошибки, пропуски, дубли",
   "kind": "lesson",
   "taskCount": 9,
-  "slideCount": 10,
+  "slideCount": 9,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Качество данных - ошибки, пропуски, дубли». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -781,19 +781,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L13/001.svg",
-    "/content/slides/M01-L13/002.svg",
-    "/content/slides/M01-L13/003.svg",
-    "/content/slides/M01-L13/004.svg",
-    "/content/slides/M01-L13/005.svg",
-    "/content/slides/M01-L13/006.svg",
-    "/content/slides/M01-L13/007.svg",
-    "/content/slides/M01-L13/008.svg",
-    "/content/slides/M01-L13/009.svg",
-    "/content/slides/M01-L13/010.svg"
-  ],
-  "deckDownload": "/content/files/M01-L13-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L13-original-student.pptx",
   "files": [
     {
       "id": "771effbab8306ee4.ipynb",
@@ -1183,16 +1172,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L13-presentation.pdf",
-      "name": "Качество данных - ошибки, пропуски, дубли — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Качество данных - ошибки, пропуски, дубли — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 10,
-      "sha256": "01213d526ca522c6c54867a7ed8f7e22fa8c595307bbc65a23f4e69121e04fba",
+      "pageCount": 9,
+      "sha256": "0f5ff9848034f57f8456a201914371438927f07c2511c6ec342ef7e979797d7a",
       "source": {
-        "path": "Модуль 1/Занятие 13/Презентация — итоговая.pptx",
-        "sha256": "604525347551f89d0b9806db9bf080d3f9fc75f96ec6650628db7d5eddbe4bc6"
+        "path": "lesson_1_13_data_quality_reworked_2ce468.pptx",
+        "sha256": "2ce46898bf253217625b06e91828f19edc06c63d9fbf10c3ad6bddcbd0530c38"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_1_13_data_quality_reworked_2ce468.pptx",
+    "sourceSha256": "2ce46898bf253217625b06e91828f19edc06c63d9fbf10c3ad6bddcbd0530c38",
+    "slideCount": 9
   }
 }

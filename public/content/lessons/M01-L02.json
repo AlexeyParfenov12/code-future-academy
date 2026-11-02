@@ -7,7 +7,7 @@
   "originalTitle": "Тема 2. Занятие 2. Как искусственный интеллект решает задачи - данные, алгоритмы и модели",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 20,
+  "slideCount": 10,
   "fileCount": 2,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Как искусственный интеллект решает задачи - данные, алгоритмы и модели». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,29 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L02/001.svg",
-    "/content/slides/M01-L02/002.svg",
-    "/content/slides/M01-L02/003.svg",
-    "/content/slides/M01-L02/004.svg",
-    "/content/slides/M01-L02/005.svg",
-    "/content/slides/M01-L02/006.svg",
-    "/content/slides/M01-L02/007.svg",
-    "/content/slides/M01-L02/008.svg",
-    "/content/slides/M01-L02/009.svg",
-    "/content/slides/M01-L02/010.svg",
-    "/content/slides/M01-L02/011.svg",
-    "/content/slides/M01-L02/012.svg",
-    "/content/slides/M01-L02/013.svg",
-    "/content/slides/M01-L02/014.svg",
-    "/content/slides/M01-L02/015.svg",
-    "/content/slides/M01-L02/016.svg",
-    "/content/slides/M01-L02/017.svg",
-    "/content/slides/M01-L02/018.svg",
-    "/content/slides/M01-L02/019.svg",
-    "/content/slides/M01-L02/020.svg"
-  ],
-  "deckDownload": "/content/files/M01-L02-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L02-original-student.pptx",
   "files": [
     {
       "id": "f7edb9f88bfb57b1.pdf",
@@ -109,16 +88,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L02-presentation.pdf",
-      "name": "Как искусственный интеллект решает задачи - данные, алгоритмы и модели — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Как искусственный интеллект решает задачи - данные, алгоритмы и модели — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 20,
-      "sha256": "9f48856c34eb376ba6e985b4e7ec314763bb19a738fc6663434541b24609da07",
+      "pageCount": 10,
+      "sha256": "de6a293e3c118c1b7159f1e895d91dd2e553112e48fc8371df11247fda92aa21",
       "source": {
-        "path": "Модуль 1/Занятие 02/Презентация — итоговая.pptx",
-        "sha256": "c27bb983f4e108ccbfbe99134a38bfb091d2186668cc065f16f71b7ae507ddfd"
+        "path": "presentation_Как искусственный интеллект решает задачи - данные, алгоритмы и м_5860fc.pptx",
+        "sha256": "5860fceed6129e18e978a1b132f26fef89b3c3557da1a9a849cd9110b39ef3b6"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "presentation_Как искусственный интеллект решает задачи - данные, алгоритмы и м_5860fc.pptx",
+    "sourceSha256": "5860fceed6129e18e978a1b132f26fef89b3c3557da1a9a849cd9110b39ef3b6",
+    "slideCount": 10
   }
 }

@@ -7,7 +7,7 @@
   "originalTitle": "Тема 6. Занятие 6. Условия в Python - принятие решений",
   "kind": "lesson",
   "taskCount": 15,
-  "slideCount": 8,
+  "slideCount": 14,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Условия в Python - принятие решений». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -1759,17 +1759,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L06/001.svg",
-    "/content/slides/M01-L06/002.svg",
-    "/content/slides/M01-L06/003.svg",
-    "/content/slides/M01-L06/004.svg",
-    "/content/slides/M01-L06/005.svg",
-    "/content/slides/M01-L06/006.svg",
-    "/content/slides/M01-L06/007.svg",
-    "/content/slides/M01-L06/008.svg"
-  ],
-  "deckDownload": "/content/files/M01-L06-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L06-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -1952,16 +1943,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L06-presentation.pdf",
-      "name": "Условия в Python - принятие решений — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Условия в Python - принятие решений — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 8,
-      "sha256": "bd9666ed0da1792201b6803cfd1e87bd11a4b2ba4161949f7bf3a043e1a7d27a",
+      "pageCount": 14,
+      "sha256": "4bf6ed67e26a8b93bb11238a14f9781ca2087b2e24152f5a59fd278e6042fa10",
       "source": {
-        "path": "Модуль 1/Занятие 06/Презентация — итоговая.pptx",
-        "sha256": "8e21c34f3616ed4a62c252eaef74255b177121179d2b25361c602ba05fbc45de"
+        "path": "1544573899294_16 ИИ_f20827.pptx",
+        "sha256": "f2082750a6e26a4d4b7c9047640fcb6fc3b3cb8bf472a702fff9cfefbea65515"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "1544573899294_16 ИИ_f20827.pptx",
+    "sourceSha256": "f2082750a6e26a4d4b7c9047640fcb6fc3b3cb8bf472a702fff9cfefbea65515",
+    "slideCount": 14
   }
 }

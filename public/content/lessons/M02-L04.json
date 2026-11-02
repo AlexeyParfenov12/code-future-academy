@@ -7,7 +7,7 @@
   "originalTitle": "Тема 4. Занятие 4. Минимум и максимум функции в задачах оптимизации",
   "kind": "lesson",
   "taskCount": 9,
-  "slideCount": 19,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Минимум и максимум функции в задачах оптимизации». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -747,28 +747,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L04/001.svg",
-    "/content/slides/M02-L04/002.svg",
-    "/content/slides/M02-L04/003.svg",
-    "/content/slides/M02-L04/004.svg",
-    "/content/slides/M02-L04/005.svg",
-    "/content/slides/M02-L04/006.svg",
-    "/content/slides/M02-L04/007.svg",
-    "/content/slides/M02-L04/008.svg",
-    "/content/slides/M02-L04/009.svg",
-    "/content/slides/M02-L04/010.svg",
-    "/content/slides/M02-L04/011.svg",
-    "/content/slides/M02-L04/012.svg",
-    "/content/slides/M02-L04/013.svg",
-    "/content/slides/M02-L04/014.svg",
-    "/content/slides/M02-L04/015.svg",
-    "/content/slides/M02-L04/016.svg",
-    "/content/slides/M02-L04/017.svg",
-    "/content/slides/M02-L04/018.svg",
-    "/content/slides/M02-L04/019.svg"
-  ],
-  "deckDownload": "/content/files/M02-L04-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -890,19 +870,10 @@
         "path": "Снимки страниц.json / 6a57470be147c0448c17ccb4",
         "sha256": "2cc85b9054df759371863ee75575f1119e4c1b0f34f2eb6ff22c7295a8588a78"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L04-presentation.pdf",
-      "name": "Минимум и максимум функции в задачах оптимизации — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 19,
-      "sha256": "68808d26703c29a8a2b28e364b9316a32d67cfc2970b1c98062abad267c69e60",
-      "source": {
-        "path": "Модуль 2/Занятие 04/Презентация — итоговая.pptx",
-        "sha256": "d6822872ad9e7617b8d1a38c70883f3b305c1154f26ae333522ce14beaec5843"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

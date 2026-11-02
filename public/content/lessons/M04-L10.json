@@ -7,7 +7,7 @@
   "originalTitle": "Тема 10. Занятие 10. Доработка прототипа по требованиям",
   "kind": "lesson",
   "taskCount": 6,
-  "slideCount": 21,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Доработка прототипа по требованиям». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -1849,30 +1849,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L10/001.svg",
-    "/content/slides/M04-L10/002.svg",
-    "/content/slides/M04-L10/003.svg",
-    "/content/slides/M04-L10/004.svg",
-    "/content/slides/M04-L10/005.svg",
-    "/content/slides/M04-L10/006.svg",
-    "/content/slides/M04-L10/007.svg",
-    "/content/slides/M04-L10/008.svg",
-    "/content/slides/M04-L10/009.svg",
-    "/content/slides/M04-L10/010.svg",
-    "/content/slides/M04-L10/011.svg",
-    "/content/slides/M04-L10/012.svg",
-    "/content/slides/M04-L10/013.svg",
-    "/content/slides/M04-L10/014.svg",
-    "/content/slides/M04-L10/015.svg",
-    "/content/slides/M04-L10/016.svg",
-    "/content/slides/M04-L10/017.svg",
-    "/content/slides/M04-L10/018.svg",
-    "/content/slides/M04-L10/019.svg",
-    "/content/slides/M04-L10/020.svg",
-    "/content/slides/M04-L10/021.svg"
-  ],
-  "deckDownload": "/content/files/M04-L10-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -1972,19 +1950,10 @@
         "path": "Снимки страниц.json / fb3fa3915918ad1bce8d7509",
         "sha256": "9426c05e12bdb70094f73290b4c279d921f5f3bbe119704c74a0f353c087cfc0"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L10-presentation.pdf",
-      "name": "Доработка прототипа по требованиям — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 21,
-      "sha256": "094ffa08999c8b669aeec753763fb225d7e2b798f36703ab8baa2c9e4c244bed",
-      "source": {
-        "path": "Модуль 4/Занятие 10/Презентация — итоговая.pptx",
-        "sha256": "76e1f2ef0f1ab1c2c3ade8461344f2874ca66454f8a6745cc1439f6adf2bfa91"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

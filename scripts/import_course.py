@@ -415,6 +415,8 @@ def build(source: Path, private: Path, approvals: Path | None = None, rights_con
         import subprocess
         subprocess.run([__import__('sys').executable,'scripts/build-project-example.py'],cwd=PROJECT,check=True)
         subprocess.run(['node','scripts/fit-slides.mjs'],cwd=PROJECT,check=True)
+        if __import__('os').name=='nt':
+            subprocess.run(['powershell','-NoProfile','-ExecutionPolicy','Bypass','-File','scripts/render-original-presentations.ps1','-Sources',str(private/'document-sources.json')],cwd=PROJECT,check=True)
         subprocess.run(['node','scripts/build-documents.mjs','--sources',str(private/'document-sources.json')],cwd=PROJECT,check=True)
         print(json.dumps({'counts':counts,'discrepancies':discrepancies,'warnings':len(warnings),'contentSha256':sha((destination/'index.json').read_bytes())},ensure_ascii=False))
         return report

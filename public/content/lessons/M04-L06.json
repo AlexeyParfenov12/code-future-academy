@@ -7,7 +7,7 @@
   "originalTitle": "Тема 6. Занятие 6. Подготовка датасета для прикладного кейса",
   "kind": "lesson",
   "taskCount": 6,
-  "slideCount": 27,
+  "slideCount": 0,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Подготовка датасета для прикладного кейса». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -617,36 +617,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L06/001.svg",
-    "/content/slides/M04-L06/002.svg",
-    "/content/slides/M04-L06/003.svg",
-    "/content/slides/M04-L06/004.svg",
-    "/content/slides/M04-L06/005.svg",
-    "/content/slides/M04-L06/006.svg",
-    "/content/slides/M04-L06/007.svg",
-    "/content/slides/M04-L06/008.svg",
-    "/content/slides/M04-L06/009.svg",
-    "/content/slides/M04-L06/010.svg",
-    "/content/slides/M04-L06/011.svg",
-    "/content/slides/M04-L06/012.svg",
-    "/content/slides/M04-L06/013.svg",
-    "/content/slides/M04-L06/014.svg",
-    "/content/slides/M04-L06/015.svg",
-    "/content/slides/M04-L06/016.svg",
-    "/content/slides/M04-L06/017.svg",
-    "/content/slides/M04-L06/018.svg",
-    "/content/slides/M04-L06/019.svg",
-    "/content/slides/M04-L06/020.svg",
-    "/content/slides/M04-L06/021.svg",
-    "/content/slides/M04-L06/022.svg",
-    "/content/slides/M04-L06/023.svg",
-    "/content/slides/M04-L06/024.svg",
-    "/content/slides/M04-L06/025.svg",
-    "/content/slides/M04-L06/026.svg",
-    "/content/slides/M04-L06/027.svg"
-  ],
-  "deckDownload": "/content/files/M04-L06-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [
     {
       "id": "a579c0525691c575.pdf",
@@ -757,19 +729,10 @@
         "path": "1c2d1c687636_Занятие 4.6. Подготовка датасета для прикладного кейса — теория.pdf",
         "sha256": "a579c0525691c57529ef9b5c8ee5cacef1ee5c3a2810f752508e20531b583317"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L06-presentation.pdf",
-      "name": "Подготовка датасета для прикладного кейса — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 27,
-      "sha256": "0ffedc4e243d33cc43750fc9436bf653b00aa5b4866f648dbba89ffb858f0054",
-      "source": {
-        "path": "Модуль 4/Занятие 06/Презентация — итоговая.pptx",
-        "sha256": "05e758007a360ab6c175969b42107fd67f8d8b65c401fdf251c31b46faf5ac4f"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

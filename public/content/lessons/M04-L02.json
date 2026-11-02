@@ -7,7 +7,7 @@
   "originalTitle": "Тема 2. Занятие 2. Выбор профессионально ориентированного кейса",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 19,
+  "slideCount": 15,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Выбор профессионально ориентированного кейса». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,28 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L02/001.svg",
-    "/content/slides/M04-L02/002.svg",
-    "/content/slides/M04-L02/003.svg",
-    "/content/slides/M04-L02/004.svg",
-    "/content/slides/M04-L02/005.svg",
-    "/content/slides/M04-L02/006.svg",
-    "/content/slides/M04-L02/007.svg",
-    "/content/slides/M04-L02/008.svg",
-    "/content/slides/M04-L02/009.svg",
-    "/content/slides/M04-L02/010.svg",
-    "/content/slides/M04-L02/011.svg",
-    "/content/slides/M04-L02/012.svg",
-    "/content/slides/M04-L02/013.svg",
-    "/content/slides/M04-L02/014.svg",
-    "/content/slides/M04-L02/015.svg",
-    "/content/slides/M04-L02/016.svg",
-    "/content/slides/M04-L02/017.svg",
-    "/content/slides/M04-L02/018.svg",
-    "/content/slides/M04-L02/019.svg"
-  ],
-  "deckDownload": "/content/files/M04-L02-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M04-L02-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -85,16 +65,22 @@
     },
     "presentation": {
       "url": "/content/documents/M04-L02-presentation.pdf",
-      "name": "Выбор профессионально ориентированного кейса — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Выбор профессионально ориентированного кейса — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 19,
-      "sha256": "346b86c09b6dbbbcf220c0add8fada5a18b19f3958aad2fd6bc133f770bab463",
+      "pageCount": 15,
+      "sha256": "fcd7866be9b63638b7140dcac521be9f43bfc3e4712838e0881d352c8cdf0d60",
       "source": {
-        "path": "Модуль 4/Занятие 02/Презентация — итоговая.pptx",
-        "sha256": "efe2fb03b40a26327bee5bed03541021dc1d17bd0eaa7c597e7bd097a0f104b0"
+        "path": "Professional_AI_Project_Design_19e656.pptx",
+        "sha256": "19e656d1d42d8efa9fe877218de48f61ca42ab791f39d139fed1020605247802"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Professional_AI_Project_Design_19e656.pptx",
+    "sourceSha256": "19e656d1d42d8efa9fe877218de48f61ca42ab791f39d139fed1020605247802",
+    "slideCount": 15
   }
 }

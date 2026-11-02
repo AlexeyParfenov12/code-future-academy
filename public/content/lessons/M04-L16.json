@@ -7,7 +7,7 @@
   "originalTitle": "Тема 16. Занятие 16. Самостоятельная работа: подготовка к защите",
   "kind": "lesson",
   "taskCount": 7,
-  "slideCount": 8,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Самостоятельная работа: подготовка к защите». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -405,17 +405,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L16/001.svg",
-    "/content/slides/M04-L16/002.svg",
-    "/content/slides/M04-L16/003.svg",
-    "/content/slides/M04-L16/004.svg",
-    "/content/slides/M04-L16/005.svg",
-    "/content/slides/M04-L16/006.svg",
-    "/content/slides/M04-L16/007.svg",
-    "/content/slides/M04-L16/008.svg"
-  ],
-  "deckDownload": "/content/files/M04-L16-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -519,19 +510,10 @@
         "path": "Снимки страниц.json / 74bbabf2c033034394f41575",
         "sha256": "0b9cf6e4bcbd3bd0728b2509bc7d85afb519a45c16a82fe7312ae85cfbc51cd0"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L16-presentation.pdf",
-      "name": "Самостоятельная работа: подготовка к защите — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 8,
-      "sha256": "70e6ae9d45232956d0eb9147f9c75884f4413380c10a905bac6e8afdcb8a620a",
-      "source": {
-        "path": "Модуль 4/Занятие 16/Презентация — итоговая.pptx",
-        "sha256": "c2f7f202d15a2ceea99501afd5d1936d6d55ce345796001d935e129bc29e29e6"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

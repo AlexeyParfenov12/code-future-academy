@@ -7,7 +7,7 @@
   "originalTitle": "Тема 6. Занятие 6. Классификация на реальном датасете",
   "kind": "lesson",
   "taskCount": 4,
-  "slideCount": 10,
+  "slideCount": 15,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Классификация на реальном датасете». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -657,19 +657,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L06/001.svg",
-    "/content/slides/M03-L06/002.svg",
-    "/content/slides/M03-L06/003.svg",
-    "/content/slides/M03-L06/004.svg",
-    "/content/slides/M03-L06/005.svg",
-    "/content/slides/M03-L06/006.svg",
-    "/content/slides/M03-L06/007.svg",
-    "/content/slides/M03-L06/008.svg",
-    "/content/slides/M03-L06/009.svg",
-    "/content/slides/M03-L06/010.svg"
-  ],
-  "deckDownload": "/content/files/M03-L06-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L06-original-student.pptx",
   "files": [
     {
       "id": "b6b8efc86732bc48.csv",
@@ -896,16 +885,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L06-presentation.pdf",
-      "name": "Классификация на реальном датасете — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Классификация на реальном датасете — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 10,
-      "sha256": "b3a75af5737c338967c8885b9d2755bef7205703c4606b6e835f198934440bcd",
+      "pageCount": 15,
+      "sha256": "094c89d8047fdde5317754a7761ec64b83064833c678f1ead075b5d4fcc6c225",
       "source": {
-        "path": "Модуль 3/Занятие 06/Презентация — итоговая.pptx",
-        "sha256": "1574e250f7c7e1c3e16355abf9fc3b07862d5244f9da71059ce0209d294a9114"
+        "path": "lesson_3_6_classification_real_dataset_regenerated_ddeec4.pptx",
+        "sha256": "ddeec47c1ae100dfb0f1a80dab961996ae73fad52ce564f6a4198b5f21d5321b"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_3_6_classification_real_dataset_regenerated_ddeec4.pptx",
+    "sourceSha256": "ddeec47c1ae100dfb0f1a80dab961996ae73fad52ce564f6a4198b5f21d5321b",
+    "slideCount": 15
   }
 }

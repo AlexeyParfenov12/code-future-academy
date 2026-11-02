@@ -7,7 +7,7 @@
   "originalTitle": "Тема 9. Занятие 9. Самостоятельная работа - данные и требования проекта",
   "kind": "lesson",
   "taskCount": 7,
-  "slideCount": 18,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Самостоятельная работа - данные и требования проекта». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -407,27 +407,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L09/001.svg",
-    "/content/slides/M04-L09/002.svg",
-    "/content/slides/M04-L09/003.svg",
-    "/content/slides/M04-L09/004.svg",
-    "/content/slides/M04-L09/005.svg",
-    "/content/slides/M04-L09/006.svg",
-    "/content/slides/M04-L09/007.svg",
-    "/content/slides/M04-L09/008.svg",
-    "/content/slides/M04-L09/009.svg",
-    "/content/slides/M04-L09/010.svg",
-    "/content/slides/M04-L09/011.svg",
-    "/content/slides/M04-L09/012.svg",
-    "/content/slides/M04-L09/013.svg",
-    "/content/slides/M04-L09/014.svg",
-    "/content/slides/M04-L09/015.svg",
-    "/content/slides/M04-L09/016.svg",
-    "/content/slides/M04-L09/017.svg",
-    "/content/slides/M04-L09/018.svg"
-  ],
-  "deckDownload": "/content/files/M04-L09-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -532,19 +513,10 @@
         "path": "Снимки страниц.json / 5157acf7b91345a918b281b7",
         "sha256": "1420b1c9ee8fd36ea581c6a08dded047cdb01a2e9126d9ad109b82563423ee5a"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L09-presentation.pdf",
-      "name": "Самостоятельная работа - данные и требования проекта — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 18,
-      "sha256": "cd02159cc9454818b3461b38e26356e0ab67233a1f78b21064b3ff1610c6e43d",
-      "source": {
-        "path": "Модуль 4/Занятие 09/Презентация — итоговая.pptx",
-        "sha256": "09abf41748028174fdc2ca020f28ca51ef4d70f0bf2e51cd4d8e2ea620ecdd17"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

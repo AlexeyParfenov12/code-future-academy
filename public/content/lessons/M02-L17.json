@@ -7,7 +7,7 @@
   "originalTitle": "Тема 17. Занятие 17. Самостоятельная работа - математический разбор данных",
   "kind": "lesson",
   "taskCount": 18,
-  "slideCount": 6,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Самостоятельная работа - математический разбор данных». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -1123,15 +1123,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L17/001.svg",
-    "/content/slides/M02-L17/002.svg",
-    "/content/slides/M02-L17/003.svg",
-    "/content/slides/M02-L17/004.svg",
-    "/content/slides/M02-L17/005.svg",
-    "/content/slides/M02-L17/006.svg"
-  ],
-  "deckDownload": "/content/files/M02-L17-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -1339,19 +1332,10 @@
         "path": "Снимки страниц.json / 6a56c85851ad6c611651ce7b",
         "sha256": "0124864dee9b9485ecbe813fcb740253cbffce4cc96e11bdc0fbc53fb9479089"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L17-presentation.pdf",
-      "name": "Самостоятельная работа - математический разбор данных — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 6,
-      "sha256": "6b7fdaed23df97da6a5b2491f7f7ed8c40409e2c3c5051eb07e56e8762f8637e",
-      "source": {
-        "path": "Модуль 2/Занятие 17/Презентация — итоговая.pptx",
-        "sha256": "72d843a445dcc8ef3ba60f9cb4a19a626faeb3bed151087a040dbe971da1b2d4"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

@@ -7,7 +7,7 @@
   "originalTitle": "Тема 16. Занятие 16. Улучшение модели - данные, признаки, проверка",
   "kind": "lesson",
   "taskCount": 6,
-  "slideCount": 16,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Улучшение модели - данные, признаки, проверка». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -1867,25 +1867,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L16/001.svg",
-    "/content/slides/M03-L16/002.svg",
-    "/content/slides/M03-L16/003.svg",
-    "/content/slides/M03-L16/004.svg",
-    "/content/slides/M03-L16/005.svg",
-    "/content/slides/M03-L16/006.svg",
-    "/content/slides/M03-L16/007.svg",
-    "/content/slides/M03-L16/008.svg",
-    "/content/slides/M03-L16/009.svg",
-    "/content/slides/M03-L16/010.svg",
-    "/content/slides/M03-L16/011.svg",
-    "/content/slides/M03-L16/012.svg",
-    "/content/slides/M03-L16/013.svg",
-    "/content/slides/M03-L16/014.svg",
-    "/content/slides/M03-L16/015.svg",
-    "/content/slides/M03-L16/016.svg"
-  ],
-  "deckDownload": "/content/files/M03-L16-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -1986,19 +1969,10 @@
         "path": "Снимки страниц.json / 08c12fc994ebe48be739da13",
         "sha256": "dbcae8111257ead9d71086616fc04f1a301349e5be95801725284ba5ea3bf002"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M03-L16-presentation.pdf",
-      "name": "Улучшение модели - данные, признаки, проверка — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 16,
-      "sha256": "f913743c32a7b6e4e05a044bd86416c766b82e8fc61c2fb2d60cc0f2a2922127",
-      "source": {
-        "path": "Модуль 3/Занятие 16/Презентация — итоговая.pptx",
-        "sha256": "4812140573568fff92ab5837e2c03c98c87eb454db80930bfa30f57d53d95771"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

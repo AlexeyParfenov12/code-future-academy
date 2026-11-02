@@ -7,7 +7,7 @@
   "originalTitle": "Тема 1. Занятие 1. От учебной задачи к ИИ-проекту",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 13,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «От учебной задачи к ИИ-проекту». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,22 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L01/001.svg",
-    "/content/slides/M04-L01/002.svg",
-    "/content/slides/M04-L01/003.svg",
-    "/content/slides/M04-L01/004.svg",
-    "/content/slides/M04-L01/005.svg",
-    "/content/slides/M04-L01/006.svg",
-    "/content/slides/M04-L01/007.svg",
-    "/content/slides/M04-L01/008.svg",
-    "/content/slides/M04-L01/009.svg",
-    "/content/slides/M04-L01/010.svg",
-    "/content/slides/M04-L01/011.svg",
-    "/content/slides/M04-L01/012.svg",
-    "/content/slides/M04-L01/013.svg"
-  ],
-  "deckDownload": "/content/files/M04-L01-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -76,19 +62,10 @@
         "path": "Снимки страниц.json / ee69f633d26ba1a71a48a8eb",
         "sha256": "11a36cfb340c1e83c4dab1c0e4a897c4dafc8d9c92e2a70096d68ec981b311a2"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L01-presentation.pdf",
-      "name": "От учебной задачи к ИИ-проекту — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 13,
-      "sha256": "be85e224f422b6b75e81284d47daa51d33b85f2e588a65b60b4cb0888488a176",
-      "source": {
-        "path": "Модуль 4/Занятие 01/Презентация — итоговая.pptx",
-        "sha256": "88a8c07708be0d72e92d103350768dca7c26edf9e838908ec2411511b8143a5e"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

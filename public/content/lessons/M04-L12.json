@@ -7,7 +7,7 @@
   "originalTitle": "Тема 12. Занятие 12. Самостоятельная работа - тестирование по сценарию пользователя",
   "kind": "lesson",
   "taskCount": 7,
-  "slideCount": 17,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Самостоятельная работа - тестирование по сценарию пользователя». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -551,26 +551,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L12/001.svg",
-    "/content/slides/M04-L12/002.svg",
-    "/content/slides/M04-L12/003.svg",
-    "/content/slides/M04-L12/004.svg",
-    "/content/slides/M04-L12/005.svg",
-    "/content/slides/M04-L12/006.svg",
-    "/content/slides/M04-L12/007.svg",
-    "/content/slides/M04-L12/008.svg",
-    "/content/slides/M04-L12/009.svg",
-    "/content/slides/M04-L12/010.svg",
-    "/content/slides/M04-L12/011.svg",
-    "/content/slides/M04-L12/012.svg",
-    "/content/slides/M04-L12/013.svg",
-    "/content/slides/M04-L12/014.svg",
-    "/content/slides/M04-L12/015.svg",
-    "/content/slides/M04-L12/016.svg",
-    "/content/slides/M04-L12/017.svg"
-  ],
-  "deckDownload": "/content/files/M04-L12-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -679,19 +661,10 @@
         "path": "Снимки страниц.json / 12e61bdcac8059a34ebfde41",
         "sha256": "8ebfe2dbba6e941b1af934d0d5c0d2a30c11bc3a8e9129439b074a86a7b91557"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L12-presentation.pdf",
-      "name": "Самостоятельная работа - тестирование по сценарию пользователя — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 17,
-      "sha256": "ead99df4ba05c3c83a44aa81ad234c8b15049074f09ac86a04ccf422cfd93ce7",
-      "source": {
-        "path": "Модуль 4/Занятие 12/Презентация — итоговая.pptx",
-        "sha256": "84224de4924ef52828f4203c632bd7761f0cb08901c16d86fa1bf1bc1b660fb6"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

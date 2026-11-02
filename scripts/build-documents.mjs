@@ -44,6 +44,16 @@ for(const source of sources){
   const lessonPath=path.join(root,'lessons',source.lessonId+'.json');const lesson=JSON.parse(fs.readFileSync(lessonPath,'utf8'));lesson.documents||={};
   for(const kind of ['lecture','presentation']){
     const target=path.join(directory,source.lessonId+'-'+kind+'.pdf');const id=source.lessonId+'-'+kind;
+    if(kind==='presentation'){
+      const original=source.originalPresentation;
+      if(!original){if(fs.existsSync(target))fs.unlinkSync(target);delete lesson.documents.presentation;continue}
+      if(!fs.existsSync(original.pdfCache))throw new Error(source.lessonId+': run scripts/render-original-presentations.ps1 first. A prepared replacement will not be used.');
+      fs.copyFileSync(original.pdfCache,target);
+      const record={id,lessonId:source.lessonId,kind,derived:true,sourceFormat:'pptx',renderer:'Microsoft PowerPoint PDF export',sourceSha256:original.sha256,sha256:sha(fs.readFileSync(target)),file:path.basename(target),source:original.name};
+      completed.push(record);
+      lesson.documents.presentation=metadata(target,source.title+' — оригинальная презентация.pdf','Оригинальная презентация iSMART — PDF-копия',{path:original.name,sha256:original.sha256},true,original.slideCount);
+      continue;
+    }
     let content,sourceHash,derived=true,label;
     if(kind==='lecture'&&source.originalPdf){
       content=fs.readFileSync(source.originalPdf);sourceHash=sha(content);derived=false;label='Оригинальная лекция';
@@ -72,5 +82,5 @@ for(const source of sources){
   fs.writeFileSync(lessonPath,JSON.stringify(lesson,null,2)+'\n');
 }
 }finally{await browser.close();highlighter.dispose()}
-fs.writeFileSync(reportPath,JSON.stringify({lecturePdfs:completed.filter(d=>d.kind==='lecture').length,originalPdfs:completed.filter(d=>!d.derived).length,presentationPdfs:completed.filter(d=>d.kind==='presentation').length,htmlConversions:completed.filter(d=>d.sourceFormat==='html').length,conversion:'Исходный PDF без изменений; исходный HTML (с таблицами и схемами) или Markdown → PDF; DrawingML исходной PPTX → SVG → PDF без повторного набора слайдов.',documents:completed},null,2)+'\n');
+fs.writeFileSync(reportPath,JSON.stringify({lecturePdfs:completed.filter(d=>d.kind==='lecture').length,originalPdfs:completed.filter(d=>!d.derived).length,presentationPdfs:completed.filter(d=>d.kind==='presentation').length,missingOriginalPresentations:sources.filter(s=>!s.originalPresentation).map(s=>s.lessonId),htmlConversions:completed.filter(d=>d.sourceFormat==='html').length,conversion:'Исходный PDF без изменений; исходный HTML (с таблицами и схемами) или Markdown → PDF; оригинальные вложения PPTX iSMART → штатный экспорт Microsoft PowerPoint → PDF. Подготовленные владельцем презентации исключены.',documents:completed},null,2)+'\n');
 console.log(JSON.stringify({documents:completed.length,originalPdfs:completed.filter(d=>!d.derived).length}));

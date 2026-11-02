@@ -7,7 +7,7 @@
   "originalTitle": "Тема 4. Занятие 4. Как ИИ использует данные",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 31,
+  "slideCount": 15,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Как ИИ использует данные». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,40 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L04/001.svg",
-    "/content/slides/M01-L04/002.svg",
-    "/content/slides/M01-L04/003.svg",
-    "/content/slides/M01-L04/004.svg",
-    "/content/slides/M01-L04/005.svg",
-    "/content/slides/M01-L04/006.svg",
-    "/content/slides/M01-L04/007.svg",
-    "/content/slides/M01-L04/008.svg",
-    "/content/slides/M01-L04/009.svg",
-    "/content/slides/M01-L04/010.svg",
-    "/content/slides/M01-L04/011.svg",
-    "/content/slides/M01-L04/012.svg",
-    "/content/slides/M01-L04/013.svg",
-    "/content/slides/M01-L04/014.svg",
-    "/content/slides/M01-L04/015.svg",
-    "/content/slides/M01-L04/016.svg",
-    "/content/slides/M01-L04/017.svg",
-    "/content/slides/M01-L04/018.svg",
-    "/content/slides/M01-L04/019.svg",
-    "/content/slides/M01-L04/020.svg",
-    "/content/slides/M01-L04/021.svg",
-    "/content/slides/M01-L04/022.svg",
-    "/content/slides/M01-L04/023.svg",
-    "/content/slides/M01-L04/024.svg",
-    "/content/slides/M01-L04/025.svg",
-    "/content/slides/M01-L04/026.svg",
-    "/content/slides/M01-L04/027.svg",
-    "/content/slides/M01-L04/028.svg",
-    "/content/slides/M01-L04/029.svg",
-    "/content/slides/M01-L04/030.svg",
-    "/content/slides/M01-L04/031.svg"
-  ],
-  "deckDownload": "/content/files/M01-L04-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L04-original-student.pptx",
   "files": [
     {
       "id": "fafd086749e2d927.pdf",
@@ -109,16 +77,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L04-presentation.pdf",
-      "name": "Как ИИ использует данные — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Как ИИ использует данные — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 31,
-      "sha256": "14465b386c96a7962286f4e66ac7e02d3b92c49b744f211c1e85de3776f3508c",
+      "pageCount": 15,
+      "sha256": "12ee92c807e40cd1caca9db94eaff977b946e9fc5f5a0a8048b19f982e4efde9",
       "source": {
-        "path": "Модуль 1/Занятие 04/Презентация — итоговая.pptx",
-        "sha256": "a982939898b5e6f12f6b03bf010cb5bcc80a25141cf2b68aa590511cd5703308"
+        "path": "presentation_Как ИИ использует данные_44262b.pptx",
+        "sha256": "44262b4ee02cb1f71ea79f6027ccaaac18671d4cd3d7667ad2eb62e18e1446a7"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "presentation_Как ИИ использует данные_44262b.pptx",
+    "sourceSha256": "44262b4ee02cb1f71ea79f6027ccaaac18671d4cd3d7667ad2eb62e18e1446a7",
+    "slideCount": 15
   }
 }

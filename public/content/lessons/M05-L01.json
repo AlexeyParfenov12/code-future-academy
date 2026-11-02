@@ -7,7 +7,7 @@
   "originalTitle": "Занятие 5.1. Защита итогового проекта",
   "kind": "final",
   "taskCount": 0,
-  "slideCount": 27,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Защита итогового проекта». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,36 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M05-L01/001.svg",
-    "/content/slides/M05-L01/002.svg",
-    "/content/slides/M05-L01/003.svg",
-    "/content/slides/M05-L01/004.svg",
-    "/content/slides/M05-L01/005.svg",
-    "/content/slides/M05-L01/006.svg",
-    "/content/slides/M05-L01/007.svg",
-    "/content/slides/M05-L01/008.svg",
-    "/content/slides/M05-L01/009.svg",
-    "/content/slides/M05-L01/010.svg",
-    "/content/slides/M05-L01/011.svg",
-    "/content/slides/M05-L01/012.svg",
-    "/content/slides/M05-L01/013.svg",
-    "/content/slides/M05-L01/014.svg",
-    "/content/slides/M05-L01/015.svg",
-    "/content/slides/M05-L01/016.svg",
-    "/content/slides/M05-L01/017.svg",
-    "/content/slides/M05-L01/018.svg",
-    "/content/slides/M05-L01/019.svg",
-    "/content/slides/M05-L01/020.svg",
-    "/content/slides/M05-L01/021.svg",
-    "/content/slides/M05-L01/022.svg",
-    "/content/slides/M05-L01/023.svg",
-    "/content/slides/M05-L01/024.svg",
-    "/content/slides/M05-L01/025.svg",
-    "/content/slides/M05-L01/026.svg",
-    "/content/slides/M05-L01/027.svg"
-  ],
-  "deckDownload": "/content/files/M05-L01-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -108,19 +80,10 @@
         "path": "Снимки страниц.json / 2555bfaf644bb81dfc62e5db, 124eefa392315df98499ef88",
         "sha256": "8332de4a413eba34c5df3b7dcbf53832341181a6f06d77ae3187b63617b9dc8c"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M05-L01-presentation.pdf",
-      "name": "Защита итогового проекта — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 27,
-      "sha256": "7f88d8f9062a39fbf37b74c7731679ae114ef782228bf8fa369052f619e1039f",
-      "source": {
-        "path": "Модуль 5/Итоговая защита/Презентация — итоговая.pptx",
-        "sha256": "22cd40e0459e2095e0967b674c94cacf77b355c8463a02dff6577808400776d1"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

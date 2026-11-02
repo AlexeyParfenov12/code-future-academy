@@ -26,25 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L03/001.svg",
-    "/content/slides/M03-L03/002.svg",
-    "/content/slides/M03-L03/003.svg",
-    "/content/slides/M03-L03/004.svg",
-    "/content/slides/M03-L03/005.svg",
-    "/content/slides/M03-L03/006.svg",
-    "/content/slides/M03-L03/007.svg",
-    "/content/slides/M03-L03/008.svg",
-    "/content/slides/M03-L03/009.svg",
-    "/content/slides/M03-L03/010.svg",
-    "/content/slides/M03-L03/011.svg",
-    "/content/slides/M03-L03/012.svg",
-    "/content/slides/M03-L03/013.svg",
-    "/content/slides/M03-L03/014.svg",
-    "/content/slides/M03-L03/015.svg",
-    "/content/slides/M03-L03/016.svg"
-  ],
-  "deckDownload": "/content/files/M03-L03-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L03-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -82,16 +65,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L03-presentation.pdf",
-      "name": "Обучающая и тестовая выборки — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Обучающая и тестовая выборки — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
       "pageCount": 16,
-      "sha256": "6fdba6ca786db7be6dc962be8580b981c0369f7b6476ad50f07eff88c4da8490",
+      "sha256": "0334c967c31a45ea744164053dc515621104ac3cc0861f7a1046a28c57aa3337",
       "source": {
-        "path": "Модуль 3/Занятие 03/Презентация — итоговая.pptx",
-        "sha256": "d48345cd76e70070d52fd26e0d05a32b73218613d5ebdf3649bc8bbd2ef86f19"
+        "path": "Урок_3_3_Обучающая_и_тестовая_выборки_презентация_обновленная_200a8c.pptx",
+        "sha256": "200a8c614fc5a795c039c8733fa8667d64b31542e2d69c4b3e96a369d7febb6a"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Урок_3_3_Обучающая_и_тестовая_выборки_презентация_обновленная_200a8c.pptx",
+    "sourceSha256": "200a8c614fc5a795c039c8733fa8667d64b31542e2d69c4b3e96a369d7febb6a",
+    "slideCount": 16
   }
 }

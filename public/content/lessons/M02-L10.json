@@ -7,7 +7,7 @@
   "originalTitle": "Тема 10. Занятие 10. Случайная величина и неопределенность результата",
   "kind": "lesson",
   "taskCount": 21,
-  "slideCount": 25,
+  "slideCount": 0,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Случайная величина и неопределенность результата». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -1187,34 +1187,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L10/001.svg",
-    "/content/slides/M02-L10/002.svg",
-    "/content/slides/M02-L10/003.svg",
-    "/content/slides/M02-L10/004.svg",
-    "/content/slides/M02-L10/005.svg",
-    "/content/slides/M02-L10/006.svg",
-    "/content/slides/M02-L10/007.svg",
-    "/content/slides/M02-L10/008.svg",
-    "/content/slides/M02-L10/009.svg",
-    "/content/slides/M02-L10/010.svg",
-    "/content/slides/M02-L10/011.svg",
-    "/content/slides/M02-L10/012.svg",
-    "/content/slides/M02-L10/013.svg",
-    "/content/slides/M02-L10/014.svg",
-    "/content/slides/M02-L10/015.svg",
-    "/content/slides/M02-L10/016.svg",
-    "/content/slides/M02-L10/017.svg",
-    "/content/slides/M02-L10/018.svg",
-    "/content/slides/M02-L10/019.svg",
-    "/content/slides/M02-L10/020.svg",
-    "/content/slides/M02-L10/021.svg",
-    "/content/slides/M02-L10/022.svg",
-    "/content/slides/M02-L10/023.svg",
-    "/content/slides/M02-L10/024.svg",
-    "/content/slides/M02-L10/025.svg"
-  ],
-  "deckDownload": "/content/files/M02-L10-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [
     {
       "id": "f3eb3c867bced1cf.pdf",
@@ -1459,19 +1433,10 @@
         "path": "dd781e304a52_Занятие 2.10. Случайная величина и неопределенность результата — теория.pdf",
         "sha256": "f3eb3c867bced1cf9704ec0349791452118a0ff5a729281ee844beaee233a726"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L10-presentation.pdf",
-      "name": "Случайная величина и неопределенность результата — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 25,
-      "sha256": "401050975343d585c15ba236d1e2daf5b7ec8e7e39a8cb854da0e5df113468d1",
-      "source": {
-        "path": "Модуль 2/Занятие 10/Презентация — итоговая.pptx",
-        "sha256": "cfd32f3b413d73dbcd0aad6bda67567c5d37f393359799b7e9c24e0fc4478baf"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

@@ -7,7 +7,7 @@
   "originalTitle": "Тема 7. Занятие 7. Как ИИ выбирает лучший вариант решения",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 5,
+  "slideCount": 18,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Как ИИ выбирает лучший вариант решения». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,14 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L07/001.svg",
-    "/content/slides/M02-L07/002.svg",
-    "/content/slides/M02-L07/003.svg",
-    "/content/slides/M02-L07/004.svg",
-    "/content/slides/M02-L07/005.svg"
-  ],
-  "deckDownload": "/content/files/M02-L07-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M02-L07-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -71,16 +65,22 @@
     },
     "presentation": {
       "url": "/content/documents/M02-L07-presentation.pdf",
-      "name": "Как ИИ выбирает лучший вариант решения — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Как ИИ выбирает лучший вариант решения — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 5,
-      "sha256": "de5de24765d018193beeefabff28ef7b1c1573f2a9c2fae4a66f36c5aa18aa69",
+      "pageCount": 18,
+      "sha256": "5dedad9751beb56af3c70f4679849d0f6ccc184106e584e78b879443584e5dea",
       "source": {
-        "path": "Модуль 2/Занятие 07/Презентация — итоговая.pptx",
-        "sha256": "fe2f4b5e03cb5c7bcfab0aee49177c857467eb75160fb7d24bd9184867517398"
+        "path": "Урок_2_7_Как_ИИ_выбирает_лучший_вариант_10_11_СПО_презентация_d22180.pptx",
+        "sha256": "d22180fbb9124fed3bfb3c7ec117c183c1378783a59f03cb6dc4e53eca650a2d"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Урок_2_7_Как_ИИ_выбирает_лучший_вариант_10_11_СПО_презентация_d22180.pptx",
+    "sourceSha256": "d22180fbb9124fed3bfb3c7ec117c183c1378783a59f03cb6dc4e53eca650a2d",
+    "slideCount": 18
   }
 }

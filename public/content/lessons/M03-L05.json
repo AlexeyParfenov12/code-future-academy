@@ -7,7 +7,7 @@
   "originalTitle": "Тема 5. Занятие 5. Классификация в Python - первые предсказания",
   "kind": "lesson",
   "taskCount": 3,
-  "slideCount": 13,
+  "slideCount": 15,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Классификация в Python - первые предсказания». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -433,22 +433,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L05/001.svg",
-    "/content/slides/M03-L05/002.svg",
-    "/content/slides/M03-L05/003.svg",
-    "/content/slides/M03-L05/004.svg",
-    "/content/slides/M03-L05/005.svg",
-    "/content/slides/M03-L05/006.svg",
-    "/content/slides/M03-L05/007.svg",
-    "/content/slides/M03-L05/008.svg",
-    "/content/slides/M03-L05/009.svg",
-    "/content/slides/M03-L05/010.svg",
-    "/content/slides/M03-L05/011.svg",
-    "/content/slides/M03-L05/012.svg",
-    "/content/slides/M03-L05/013.svg"
-  ],
-  "deckDownload": "/content/files/M03-L05-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L05-original-student.pptx",
   "files": [
     {
       "id": "5118732c8e5a5fca.ipynb",
@@ -675,16 +661,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L05-presentation.pdf",
-      "name": "Классификация в Python - первые предсказания — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Классификация в Python - первые предсказания — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 13,
-      "sha256": "0c708a05b50b9cd892b0bbda382a948cd6263f0438f141fbaf4b3905c54ced02",
+      "pageCount": 15,
+      "sha256": "c9a03e7b2bd72cc719b97c34eed30c38bcd3a042bf800af1b3d11ed393eabfa7",
       "source": {
-        "path": "Модуль 3/Занятие 05/Презентация — итоговая.pptx",
-        "sha256": "05ace14194189fa5173ead8820a8441912341518c9482364ea41b9e274ee4af3"
+        "path": "6a56a5904b7d558382558eaf344cd0ab_bd9ebb.pptx",
+        "sha256": "bd9ebbf070bb7f51f13d6f7808b5eefb7c196878e8d80746998f086291643069"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "6a56a5904b7d558382558eaf344cd0ab_bd9ebb.pptx",
+    "sourceSha256": "bd9ebbf070bb7f51f13d6f7808b5eefb7c196878e8d80746998f086291643069",
+    "slideCount": 15
   }
 }

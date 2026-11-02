@@ -7,7 +7,7 @@
   "originalTitle": "Тема 13. Занятие 13. Распределение данных - как увидеть закономерность",
   "kind": "lesson",
   "taskCount": 10,
-  "slideCount": 9,
+  "slideCount": 0,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Распределение данных - как увидеть закономерность». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -939,18 +939,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L13/001.svg",
-    "/content/slides/M02-L13/002.svg",
-    "/content/slides/M02-L13/003.svg",
-    "/content/slides/M02-L13/004.svg",
-    "/content/slides/M02-L13/005.svg",
-    "/content/slides/M02-L13/006.svg",
-    "/content/slides/M02-L13/007.svg",
-    "/content/slides/M02-L13/008.svg",
-    "/content/slides/M02-L13/009.svg"
-  ],
-  "deckDownload": "/content/files/M02-L13-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [
     {
       "id": "653743dc57a92d32.pdf",
@@ -1093,19 +1083,10 @@
         "path": "b9727593fbe6_Занятие 2.13. Распределение данных - как увидеть закономерность — теория.pdf",
         "sha256": "653743dc57a92d32e48d354e2797c4cc3d7fd53c9ad40f9d70cfb844d847b68b"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L13-presentation.pdf",
-      "name": "Распределение данных - как увидеть закономерность — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 9,
-      "sha256": "ddc7747f46a343206d347bf2eb924b902b2b9f7724c824a107eb2d3f88057bb7",
-      "source": {
-        "path": "Модуль 2/Занятие 13/Презентация — итоговая.pptx",
-        "sha256": "faec4468ee4c51c9029dc4db47babca344d950bc9086513a4214208a28923532"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

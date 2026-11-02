@@ -171,6 +171,16 @@ def original_lecture_html(metadata,pages):
         parts.append('<section class="original-lecture-part">'+str(main)+'</section>');elements.append(match[1])
     return '\n'.join(parts),elements
 
+def original_presentation(source,folder):
+    prefix='Архив iSmart\\'+folder.replace('/','\\')+'\\Оригиналы\\'
+    candidates=[]
+    for name,location in load(source/'Каталог оригиналов.json').items():
+        if name.startswith(prefix) and name.lower().endswith('.pptx') and not re.search(r'учител|преподав|метод|ответ|ключ',Path(name).name,re.I):
+            path=source/location.replace('\\','/')
+            if path.is_file():candidates.append((name.split('\\')[-1],path))
+    if len(candidates)>1:raise ValueError('Ambiguous original presentation: '+folder)
+    return candidates[0] if candidates else None
+
 def project_reference(content,source,private,solutions_dir=None):
     content,source,private=map(Path,[content,source,private]);index=load(content/'index.json');source_index=load(private/'full-course-index.json') if (private/'full-course-index.json').exists() and len(index['lessons'])<82 else json.loads(json.dumps(index))
     private.mkdir(parents=True,exist_ok=True);dump(private/'full-course-index.json',source_index)
@@ -230,6 +240,25 @@ def project_reference(content,source,private,solutions_dir=None):
             stable_original=private/'document-originals'/f"{lesson['id']}.pdf";stable_original.parent.mkdir(exist_ok=True);shutil.copyfile(original_pdf,stable_original);original_pdf=stable_original
         original_html,html_elements=original_lecture_html(metadata,pages)
         documents.append({'lessonId':lesson['id'],'title':lesson['title'],'originalPdf':str(original_pdf) if original_pdf else None,'originalPdfLabel':original_label,'originalHTML':original_html,'htmlElements':html_elements,'lectureMarkdown':str(lecture_source),'webLecture':lesson['lecture'],'originalMarkdown':format_lecture(lecture_source.read_text(encoding='utf-8-sig'),codes),'slidePaths':lesson['slides'],'sourcePresentation':str(next((source/folder).glob('Презентация*.pptx'))),'folder':folder})
+        # Prepared "итоговая" decks are authored replacements, not iSMART originals.
+        # Publish only a real course attachment, and render it natively in PowerPoint.
+        original=original_presentation(source,folder)
+        lesson['slides']=[];lesson['slideCount']=0;lesson['deckDownload']=None
+        lesson.setdefault('documents',{}).pop('presentation',None)
+        if original:
+            import zipfile
+            name,deck=original
+            with zipfile.ZipFile(deck) as archive:count=sum(bool(re.fullmatch(r'ppt/slides/slide\d+\.xml',n)) for n in archive.namelist())
+            from import_course import student_pptx
+            target=content/'files'/f"{lesson['id']}-original-student.pptx"
+            student_pptx(deck,target)
+            checksum=digest(deck.read_bytes())
+            lesson['deckDownload']='/content/files/'+target.name;lesson['slideCount']=count
+            lesson['presentation']={'kind':'original','sourceName':name,'sourceSha256':checksum,'slideCount':count}
+            cache=private/'original-presentation-pdfs'/f"{lesson['id']}-{checksum[:16]}.pdf"
+            documents[-1]['originalPresentation']={'source':str(deck),'studentCopy':str(target.resolve()),'pdfCache':str(cache.resolve()),'name':name,'sha256':checksum,'slideCount':count}
+        else:lesson['presentation']={'kind':'missing','reason':'Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке.'}
+        documents[-1].pop('sourcePresentation',None);documents[-1]['slidePaths']=[]
         lesson['extendedTopics']=list(dict.fromkeys(topic for task in tasks for topic in task['relatedTopics']))
         paragraphs=[re.sub(r'[*`\n]+',' ',p).strip() for p in lesson['lecture'].split('\n\n') if not p.startswith(('#','-','|','```','Источник:')) and 70<len(p)<350 and 'Содержание' not in p]
         lesson['description']=paragraphs[0] if paragraphs else f"Лекция, презентация и справочные материалы занятия {lesson['number']}."
@@ -239,10 +268,22 @@ def project_reference(content,source,private,solutions_dir=None):
         summary={k:lesson[k] for k in row if k!='tasks'};summary['tasks']=[{k:task[k] for k in ['id','title','type','number','origin','solutionStatus']} for task in tasks];lessons.append(summary)
         for task in tasks:coverage.append({'module':lesson['moduleId'],'lessonId':lesson['id'],'lesson':lesson['number'],'taskId':task['id'],'title':task['title'],'type':task['type'],'published':bool(task['solution']),'verified':bool(task['solution'] and task['solution'].get('verification') in ['local','project_tests','ismart']),'explanation':bool(task['solution'] and task['solution'].get('explanation')),'verifiedIsmartLink':task['ismartLink']['status']=='verified','reason':None if task['solution'] else 'Нет индивидуально проверенного полного решения в манифесте публикации.'})
     index['lessons']=lessons
+    # Remove prepared previews and derivative decks. These are generated files
+    # within the explicitly selected content directory; originals stay private.
+    for file in (content/'slides').glob('*/*.svg'):file.unlink()
+    for folder in (content/'slides').glob('*'):
+        if folder.is_dir() and not any(folder.iterdir()):folder.rmdir()
+    for file in (content/'files').glob('M*-student.pptx'):
+        if '-original-student.pptx' not in file.name:file.unlink()
+    original_count=sum(bool(l.get('slideCount')) for l in lessons)
     for module in index['modules']:
         contained=[l for l in lessons if l['moduleId']==module['id']];module['lessonIds']=[l['id'] for l in contained];module['lessonCount']=len(contained);module['controlCount']=0;module['taskCount']=sum(l['taskCount'] for l in contained)
     index['counts']={**index['counts'],'sections':len(lessons),'controls':0,'additionalPractices':0,'tasks':len(coverage),'officialPracticalElements':len(coverage),'publishedSolutions':sum(t['published'] for t in coverage),'sourceSections':len(source_index['lessons'])}
+    index['counts']['presentations']=original_count
+    index['counts']['slides']=sum(l['slideCount'] for l in lessons)
+    index['counts']['missingOriginalPresentations']=len(lessons)-original_count
     dump(content/'index.json',index);dump(private/'document-sources.json',documents)
+    dump(content/'presentation-report.json',{'originalPresentations':original_count,'originalSlides':index['counts']['slides'],'preparedPresentationsPublished':0,'renderer':'Microsoft PowerPoint PDF export','missing':[{'lessonId':l['id'],'title':l['title']} for l in lessons if not l['slideCount']]})
     search=[]
     for row in lessons:
         lesson=load(content/'lessons'/f"{row['id']}.json")
@@ -251,7 +292,7 @@ def project_reference(content,source,private,solutions_dir=None):
     dump(content/'search-index.json',search)
     report=load(content/'import-report.json');report['sourceCounts']=report.get('sourceCounts',report['counts']);report['counts']=index['counts'];report['publication']['solutions']='381_individually_reviewed_ordinary_practice_answers_authorized'
     if not any(issue['lessonId']=='M02-L17' for issue in report['knownIssues']):report['knownIssues'].append({'lessonId':'M02-L17','message':'В исходном виджете задания 3.1 часть подписей диапазонов повреждена. Пропуски сохранены явно; ответ поясняет выбранные интервалы.'})
-    report['manualReview']=['Проверить кандидаты ссылок в авторизованной студенческой сессии.','Веб-превью презентаций проверены по геометрии; попиксельная сверка с PowerPoint не заявляется.']
+    report['manualReview']=['Проверить кандидаты ссылок в авторизованной студенческой сессии.','Оригинальные презентации доступны только для 36 занятий. Для остальных 38 разделов в архиве исходная PPTX не найдена.']
     report['projection']={'excludedControls':sorted(set(removed+[r['id'] for r in source_index['lessons'] if r['kind']=='control'])),'authorPractice':'excluded_from_public_files','ordinaryPracticeSolutionsPermission':'confirmed_by_owner_2026-11-02','assessmentKeys':'excluded','rawRegistry':'kept_private'}
     dump(content/'import-report.json',report)
     modules=[]

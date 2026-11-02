@@ -7,7 +7,7 @@
   "originalTitle": "Тема 18. Занятие 18. Самостоятельная работа - подготовка мини-пайплайна ML",
   "kind": "lesson",
   "taskCount": 7,
-  "slideCount": 6,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Самостоятельная работа - подготовка мини-пайплайна ML». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -373,15 +373,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L18/001.svg",
-    "/content/slides/M03-L18/002.svg",
-    "/content/slides/M03-L18/003.svg",
-    "/content/slides/M03-L18/004.svg",
-    "/content/slides/M03-L18/005.svg",
-    "/content/slides/M03-L18/006.svg"
-  ],
-  "deckDownload": "/content/files/M03-L18-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -483,19 +476,10 @@
         "path": "Снимки страниц.json / c76e4d3a1c8ec2af04cbf5ac",
         "sha256": "074dc733f1f37b4978663c078def65b27a910d2c84f88acfc1bca681f673486d"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M03-L18-presentation.pdf",
-      "name": "Самостоятельная работа - подготовка мини-пайплайна ML — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 6,
-      "sha256": "fb34f7a052d9d188d230f22e21f5aa1af89b1563bfa3f53499f0cb0b96dca73a",
-      "source": {
-        "path": "Модуль 3/Занятие 18/Презентация — итоговая.pptx",
-        "sha256": "6696e5cebb2758b2632f25ee0a4a6f5a7cdca30eb842c42bf72f5721851ace27"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

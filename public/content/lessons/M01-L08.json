@@ -7,7 +7,7 @@
   "originalTitle": "Тема 8. Занятие 8. Списки в Python - хранение набора данных",
   "kind": "lesson",
   "taskCount": 15,
-  "slideCount": 16,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Списки в Python - хранение набора данных». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -1499,25 +1499,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L08/001.svg",
-    "/content/slides/M01-L08/002.svg",
-    "/content/slides/M01-L08/003.svg",
-    "/content/slides/M01-L08/004.svg",
-    "/content/slides/M01-L08/005.svg",
-    "/content/slides/M01-L08/006.svg",
-    "/content/slides/M01-L08/007.svg",
-    "/content/slides/M01-L08/008.svg",
-    "/content/slides/M01-L08/009.svg",
-    "/content/slides/M01-L08/010.svg",
-    "/content/slides/M01-L08/011.svg",
-    "/content/slides/M01-L08/012.svg",
-    "/content/slides/M01-L08/013.svg",
-    "/content/slides/M01-L08/014.svg",
-    "/content/slides/M01-L08/015.svg",
-    "/content/slides/M01-L08/016.svg"
-  ],
-  "deckDownload": "/content/files/M01-L08-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -1697,19 +1680,10 @@
         "path": "Снимки страниц.json / 6a56c85851ad6c611651ce45",
         "sha256": "59a4213ae29fd6c129ecce6651a7f56e43565ec0eaceec13df4f034a5de0f8c8"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M01-L08-presentation.pdf",
-      "name": "Списки в Python - хранение набора данных — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 16,
-      "sha256": "c363a1c6d34571563b4ed002f78c850e1f033e2f22feab1bf452cfa3fc1af53d",
-      "source": {
-        "path": "Модуль 1/Занятие 08/Презентация — итоговая.pptx",
-        "sha256": "10bb7de1d78694c745fff80749dfff2777972613ef4f33076974832cd3d4d1bb"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

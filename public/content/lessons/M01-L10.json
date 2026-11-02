@@ -7,7 +7,7 @@
   "originalTitle": "Тема 10. Занятие 10. Функции - разбиение программы на части",
   "kind": "lesson",
   "taskCount": 7,
-  "slideCount": 17,
+  "slideCount": 15,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Функции - разбиение программы на части». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -893,26 +893,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L10/001.svg",
-    "/content/slides/M01-L10/002.svg",
-    "/content/slides/M01-L10/003.svg",
-    "/content/slides/M01-L10/004.svg",
-    "/content/slides/M01-L10/005.svg",
-    "/content/slides/M01-L10/006.svg",
-    "/content/slides/M01-L10/007.svg",
-    "/content/slides/M01-L10/008.svg",
-    "/content/slides/M01-L10/009.svg",
-    "/content/slides/M01-L10/010.svg",
-    "/content/slides/M01-L10/011.svg",
-    "/content/slides/M01-L10/012.svg",
-    "/content/slides/M01-L10/013.svg",
-    "/content/slides/M01-L10/014.svg",
-    "/content/slides/M01-L10/015.svg",
-    "/content/slides/M01-L10/016.svg",
-    "/content/slides/M01-L10/017.svg"
-  ],
-  "deckDownload": "/content/files/M01-L10-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L10-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -1022,16 +1004,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L10-presentation.pdf",
-      "name": "Функции - разбиение программы на части — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Функции - разбиение программы на части — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 17,
-      "sha256": "6f0c36af7f4a2a4fc4c2f5bba6d66dac39d6de266a0dd9127db86603213be62d",
+      "pageCount": 15,
+      "sha256": "375899c32acfe97b6b1e0fc7b14c3137a95af09c4af712d9b556796d5d57e8a3",
       "source": {
-        "path": "Модуль 1/Занятие 10/Презентация — итоговая.pptx",
-        "sha256": "eb2163daf100a71f8ec571e0d8d320e16f49438c8452fedf76c5994e26795276"
+        "path": "110_4c28a1.pptx",
+        "sha256": "4c28a125e2152378d92d147598f425a96a0118320ad51f26f9775612bbb7ef5f"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "110_4c28a1.pptx",
+    "sourceSha256": "4c28a125e2152378d92d147598f425a96a0118320ad51f26f9775612bbb7ef5f",
+    "slideCount": 15
   }
 }

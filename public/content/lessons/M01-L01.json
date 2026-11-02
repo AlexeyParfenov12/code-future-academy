@@ -7,7 +7,7 @@
   "originalTitle": "Тема 1. Занятие 1. Освоение образовательной платформы и правил обучения",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 28,
+  "slideCount": 0,
   "fileCount": 2,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Освоение образовательной платформы и правил обучения». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,37 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L01/001.svg",
-    "/content/slides/M01-L01/002.svg",
-    "/content/slides/M01-L01/003.svg",
-    "/content/slides/M01-L01/004.svg",
-    "/content/slides/M01-L01/005.svg",
-    "/content/slides/M01-L01/006.svg",
-    "/content/slides/M01-L01/007.svg",
-    "/content/slides/M01-L01/008.svg",
-    "/content/slides/M01-L01/009.svg",
-    "/content/slides/M01-L01/010.svg",
-    "/content/slides/M01-L01/011.svg",
-    "/content/slides/M01-L01/012.svg",
-    "/content/slides/M01-L01/013.svg",
-    "/content/slides/M01-L01/014.svg",
-    "/content/slides/M01-L01/015.svg",
-    "/content/slides/M01-L01/016.svg",
-    "/content/slides/M01-L01/017.svg",
-    "/content/slides/M01-L01/018.svg",
-    "/content/slides/M01-L01/019.svg",
-    "/content/slides/M01-L01/020.svg",
-    "/content/slides/M01-L01/021.svg",
-    "/content/slides/M01-L01/022.svg",
-    "/content/slides/M01-L01/023.svg",
-    "/content/slides/M01-L01/024.svg",
-    "/content/slides/M01-L01/025.svg",
-    "/content/slides/M01-L01/026.svg",
-    "/content/slides/M01-L01/027.svg",
-    "/content/slides/M01-L01/028.svg"
-  ],
-  "deckDownload": "/content/files/M01-L01-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [
     {
       "id": "77413518e797739b.pdf",
@@ -114,19 +85,10 @@
         "path": "Освоение_образовательной_платформы_и_правил_обучения (1)_774135.pdf",
         "sha256": "77413518e797739bc83da705e87b955b481d08938001574b48f2a6cc551456f2"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M01-L01-presentation.pdf",
-      "name": "Освоение образовательной платформы и правил обучения — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 28,
-      "sha256": "819163035354e3e945aba2e2069881a6929424f9f87a26c079f77cb9f1d45b88",
-      "source": {
-        "path": "Модуль 1/Занятие 01/Презентация — итоговая.pptx",
-        "sha256": "7f7e0062afd8dd6f2bcd9d5c51476e35bd62dfc33732b983b3e89f8ba759058a"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

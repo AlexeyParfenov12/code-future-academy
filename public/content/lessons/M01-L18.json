@@ -564,24 +564,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L18/001.svg",
-    "/content/slides/M01-L18/002.svg",
-    "/content/slides/M01-L18/003.svg",
-    "/content/slides/M01-L18/004.svg",
-    "/content/slides/M01-L18/005.svg",
-    "/content/slides/M01-L18/006.svg",
-    "/content/slides/M01-L18/007.svg",
-    "/content/slides/M01-L18/008.svg",
-    "/content/slides/M01-L18/009.svg",
-    "/content/slides/M01-L18/010.svg",
-    "/content/slides/M01-L18/011.svg",
-    "/content/slides/M01-L18/012.svg",
-    "/content/slides/M01-L18/013.svg",
-    "/content/slides/M01-L18/014.svg",
-    "/content/slides/M01-L18/015.svg"
-  ],
-  "deckDownload": "/content/files/M01-L18-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L18-original-student.pptx",
   "files": [
     {
       "id": "813779132196d3a7.csv",
@@ -825,16 +809,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L18-presentation.pdf",
-      "name": "Самостоятельная работа - мини-анализ данных — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Самостоятельная работа - мини-анализ данных — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
       "pageCount": 15,
-      "sha256": "a594d28b52b7a934a948d453a9a0870cd0392726140f4c31581b75855ec09822",
+      "sha256": "d87f1e775093e1ce50e9e62823397b8b45aa76b31ce405ba7b77b9107209e64a",
       "source": {
-        "path": "Модуль 1/Занятие 18/Презентация — итоговая.pptx",
-        "sha256": "6293b1447aab68d063dc0a9bcbb7bda9bb41497c407a6c13497481eec3905c78"
+        "path": "Урок_1_18_Самостоятельная_работа_мини_анализ_данных_презентация_60ea00.pptx",
+        "sha256": "60ea00a6fc417a533eb8169543c758ba80ae59341807c88c2682f779d62b6231"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Урок_1_18_Самостоятельная_работа_мини_анализ_данных_презентация_60ea00.pptx",
+    "sourceSha256": "60ea00a6fc417a533eb8169543c758ba80ae59341807c88c2682f779d62b6231",
+    "slideCount": 15
   }
 }

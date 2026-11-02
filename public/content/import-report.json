@@ -7,8 +7,8 @@
     "sections": 74,
     "lessons": 74,
     "controls": 0,
-    "presentations": 74,
-    "slides": 1239,
+    "presentations": 36,
+    "slides": 497,
     "lectures": 74,
     "tasks": 381,
     "officialPracticalElements": 381,
@@ -23,7 +23,8 @@
     "attachmentUrls": 156,
     "attachmentMetadataUrls": 155,
     "publishedSolutions": 381,
-    "sourceSections": 82
+    "sourceSections": 82,
+    "missingOriginalPresentations": 38
   },
   "expected": {
     "date": "2026-11-02",
@@ -89,13 +90,17 @@
   },
   "manualReview": [
     "Проверить кандидаты ссылок в авторизованной студенческой сессии.",
-    "Веб-превью презентаций проверены по геометрии; попиксельная сверка с PowerPoint не заявляется."
+    "Оригинальные презентации доступны только для 36 занятий. Для остальных 38 разделов в архиве исходная PPTX не найдена."
   ],
   "rendering": {
-    "renderer": "DrawingML geometry and rich text → script-free SVG; browser text fitting",
-    "slideCount": 1239,
-    "adjustedBlocks": 18,
-    "overflowingBlocks": 0
+    "renderer": "Microsoft PowerPoint native PDF export; original iSMART attachments",
+    "slideCount": 497,
+    "presentations": 36,
+    "preparedPresentationsPublished": 0,
+    "adjustedBlocks": 0,
+    "overflowingBlocks": 0,
+    "adjustments": [],
+    "hashes": {}
   },
   "sourceCounts": {
     "modules": 5,

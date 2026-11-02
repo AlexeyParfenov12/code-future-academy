@@ -7,7 +7,7 @@
   "originalTitle": "Тема 4. Занятие 4. Паспорт проекта и требования к решению",
   "kind": "lesson",
   "taskCount": 8,
-  "slideCount": 11,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Паспорт проекта и требования к решению». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -443,20 +443,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L04/001.svg",
-    "/content/slides/M04-L04/002.svg",
-    "/content/slides/M04-L04/003.svg",
-    "/content/slides/M04-L04/004.svg",
-    "/content/slides/M04-L04/005.svg",
-    "/content/slides/M04-L04/006.svg",
-    "/content/slides/M04-L04/007.svg",
-    "/content/slides/M04-L04/008.svg",
-    "/content/slides/M04-L04/009.svg",
-    "/content/slides/M04-L04/010.svg",
-    "/content/slides/M04-L04/011.svg"
-  ],
-  "deckDownload": "/content/files/M04-L04-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -567,19 +555,10 @@
         "path": "Снимки страниц.json / 5314c73f7d0c3da63c169d1c",
         "sha256": "19158d6186f75939d0c76a9acf3723adb0315be1be0a962067831d4831781126"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L04-presentation.pdf",
-      "name": "Паспорт проекта и требования к решению — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 11,
-      "sha256": "5dcd939a0174eb7fc2a59f9a0fb80193755dafd3e30dcb9c666fbc0c8b31f46f",
-      "source": {
-        "path": "Модуль 4/Занятие 04/Презентация — итоговая.pptx",
-        "sha256": "0fa0b4e69343244e845860a7372f402043768ab1cccf743b07328b762bab1e19"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

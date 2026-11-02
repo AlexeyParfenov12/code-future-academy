@@ -7,7 +7,7 @@
   "originalTitle": "Тема 9. Занятие 9. Условная вероятность и принятие решений по признакам",
   "kind": "lesson",
   "taskCount": 7,
-  "slideCount": 25,
+  "slideCount": 0,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Условная вероятность и принятие решений по признакам». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -577,34 +577,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L09/001.svg",
-    "/content/slides/M02-L09/002.svg",
-    "/content/slides/M02-L09/003.svg",
-    "/content/slides/M02-L09/004.svg",
-    "/content/slides/M02-L09/005.svg",
-    "/content/slides/M02-L09/006.svg",
-    "/content/slides/M02-L09/007.svg",
-    "/content/slides/M02-L09/008.svg",
-    "/content/slides/M02-L09/009.svg",
-    "/content/slides/M02-L09/010.svg",
-    "/content/slides/M02-L09/011.svg",
-    "/content/slides/M02-L09/012.svg",
-    "/content/slides/M02-L09/013.svg",
-    "/content/slides/M02-L09/014.svg",
-    "/content/slides/M02-L09/015.svg",
-    "/content/slides/M02-L09/016.svg",
-    "/content/slides/M02-L09/017.svg",
-    "/content/slides/M02-L09/018.svg",
-    "/content/slides/M02-L09/019.svg",
-    "/content/slides/M02-L09/020.svg",
-    "/content/slides/M02-L09/021.svg",
-    "/content/slides/M02-L09/022.svg",
-    "/content/slides/M02-L09/023.svg",
-    "/content/slides/M02-L09/024.svg",
-    "/content/slides/M02-L09/025.svg"
-  ],
-  "deckDownload": "/content/files/M02-L09-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [
     {
       "id": "0f230ef8db50866f.pdf",
@@ -724,19 +698,10 @@
         "path": "8b32fc9ef0cf_Занятие 2.9. Условная вероятность и принятие решений по признакам — теория.pdf",
         "sha256": "0f230ef8db50866ff56ee7f910223b4e1a8015eeb9971289c25bf41a1a4c251e"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L09-presentation.pdf",
-      "name": "Условная вероятность и принятие решений по признакам — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 25,
-      "sha256": "9ad5e5151a9a250dcdb459695ac3390f804522b0fb329c5a3441afb3a0a222d4",
-      "source": {
-        "path": "Модуль 2/Занятие 09/Презентация — итоговая.pptx",
-        "sha256": "4163991777e80878db1e782960dfe6e6aa1b2efe2598ba775591da46ccbb95a5"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

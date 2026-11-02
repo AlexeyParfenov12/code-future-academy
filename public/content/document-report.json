@@ -1,9 +1,49 @@
 {
   "lecturePdfs": 74,
   "originalPdfs": 13,
-  "presentationPdfs": 74,
+  "presentationPdfs": 36,
+  "missingOriginalPresentations": [
+    "M01-L01",
+    "M01-L08",
+    "M01-L09",
+    "M01-L19",
+    "M02-L04",
+    "M02-L09",
+    "M02-L10",
+    "M02-L12",
+    "M02-L13",
+    "M02-L14",
+    "M02-L15",
+    "M02-L16",
+    "M02-L17",
+    "M02-L18",
+    "M03-L12",
+    "M03-L13",
+    "M03-L14",
+    "M03-L15",
+    "M03-L16",
+    "M03-L17",
+    "M03-L18",
+    "M03-L19",
+    "M04-L01",
+    "M04-L03",
+    "M04-L04",
+    "M04-L05",
+    "M04-L06",
+    "M04-L08",
+    "M04-L09",
+    "M04-L10",
+    "M04-L11",
+    "M04-L12",
+    "M04-L13",
+    "M04-L14",
+    "M04-L15",
+    "M04-L16",
+    "M04-L17",
+    "M05-L01"
+  ],
   "htmlConversions": 61,
-  "conversion": "Исходный PDF без изменений; исходный HTML (с таблицами и схемами) или Markdown → PDF; DrawingML исходной PPTX → SVG → PDF без повторного набора слайдов.",
+  "conversion": "Исходный PDF без изменений; исходный HTML (с таблицами и схемами) или Markdown → PDF; оригинальные вложения PPTX iSMART → штатный экспорт Microsoft PowerPoint → PDF. Подготовленные владельцем презентации исключены.",
   "documents": [
     {
       "id": "M01-L01-lecture",
@@ -15,17 +55,6 @@
       "sha256": "77413518e797739bc83da705e87b955b481d08938001574b48f2a6cc551456f2",
       "file": "M01-L01-lecture.pdf",
       "source": "Освоение_образовательной_платформы_и_правил_обучения (1)_774135.pdf"
-    },
-    {
-      "id": "M01-L01-presentation",
-      "lessonId": "M01-L01",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "7f7e0062afd8dd6f2bcd9d5c51476e35bd62dfc33732b983b3e89f8ba759058a",
-      "sha256": "819163035354e3e945aba2e2069881a6929424f9f87a26c079f77cb9f1d45b88",
-      "file": "M01-L01-presentation.pdf",
-      "source": "Модуль 1/Занятие 01/Презентация — итоговая.pptx"
     },
     {
       "id": "M01-L02-lecture",
@@ -44,10 +73,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "c27bb983f4e108ccbfbe99134a38bfb091d2186668cc065f16f71b7ae507ddfd",
-      "sha256": "9f48856c34eb376ba6e985b4e7ec314763bb19a738fc6663434541b24609da07",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "5860fceed6129e18e978a1b132f26fef89b3c3557da1a9a849cd9110b39ef3b6",
+      "sha256": "de6a293e3c118c1b7159f1e895d91dd2e553112e48fc8371df11247fda92aa21",
       "file": "M01-L02-presentation.pdf",
-      "source": "Модуль 1/Занятие 02/Презентация — итоговая.pptx"
+      "source": "presentation_Как искусственный интеллект решает задачи - данные, алгоритмы и м_5860fc.pptx"
     },
     {
       "id": "M01-L03-lecture",
@@ -66,10 +96,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "aae32254c9abc9df772efdf162c52190d1de92fb9d31c4a9f9246a004a4792cb",
-      "sha256": "e2165a37112d2f21254146658a388b02123ec1310f49d226fd9d4cd19858790a",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "a71ea16e3b20cd2cd556d81e489149bae0086b40d5ac440de88d876b1e40322d",
+      "sha256": "34309d255963bebafe1ee2b9594f7bd9506748b457847179b451ace3c6aa6399",
       "file": "M01-L03-presentation.pdf",
-      "source": "Модуль 1/Занятие 03/Презентация — итоговая.pptx"
+      "source": "presentation_Первые программы на Python - переменные и вычисления_a71ea1.pptx"
     },
     {
       "id": "M01-L04-lecture",
@@ -88,10 +119,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "a982939898b5e6f12f6b03bf010cb5bcc80a25141cf2b68aa590511cd5703308",
-      "sha256": "14465b386c96a7962286f4e66ac7e02d3b92c49b744f211c1e85de3776f3508c",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "44262b4ee02cb1f71ea79f6027ccaaac18671d4cd3d7667ad2eb62e18e1446a7",
+      "sha256": "12ee92c807e40cd1caca9db94eaff977b946e9fc5f5a0a8048b19f982e4efde9",
       "file": "M01-L04-presentation.pdf",
-      "source": "Модуль 1/Занятие 04/Презентация — итоговая.pptx"
+      "source": "presentation_Как ИИ использует данные_44262b.pptx"
     },
     {
       "id": "M01-L05-lecture",
@@ -110,10 +142,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "bc4f1ab05586cea43a30289f7ba81b02e8395922749c351b620e8c0bf9695c39",
-      "sha256": "9a4b66d675990398892aa9fe562905821af69276e16553875c7c5afd53a7eae7",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "7d87ec8382d7eb8fcd7d7d270b95756a3e2d8d35335e55fc424b5ad3e1db03a7",
+      "sha256": "cdeb664d3e59077a654ec5fdf11eb74ba138d20072a44cf9e9bad7ccdf9347f7",
       "file": "M01-L05-presentation.pdf",
-      "source": "Модуль 1/Занятие 05/Презентация — итоговая.pptx"
+      "source": "3a58a94bee81854006a382db99e40946_7d87ec.pptx"
     },
     {
       "id": "M01-L06-lecture",
@@ -132,10 +165,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "8e21c34f3616ed4a62c252eaef74255b177121179d2b25361c602ba05fbc45de",
-      "sha256": "bd9666ed0da1792201b6803cfd1e87bd11a4b2ba4161949f7bf3a043e1a7d27a",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "f2082750a6e26a4d4b7c9047640fcb6fc3b3cb8bf472a702fff9cfefbea65515",
+      "sha256": "4bf6ed67e26a8b93bb11238a14f9781ca2087b2e24152f5a59fd278e6042fa10",
       "file": "M01-L06-presentation.pdf",
-      "source": "Модуль 1/Занятие 06/Презентация — итоговая.pptx"
+      "source": "1544573899294_16 ИИ_f20827.pptx"
     },
     {
       "id": "M01-L07-lecture",
@@ -154,10 +188,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "5974d3607fd8eb30ff6646d104991740d4c776308886685099cbae0c8057c0f6",
-      "sha256": "a4b0c30961d667f6d9a284d69e80088322013fb9ba2f4062ca72d2635188ef34",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "74b04600ee24d02c18a5220143dbae9558280e6ff27e1e1f70bb34401cd99193",
+      "sha256": "e119541734b1e4d3bb505c7b4a96a0018773d07132d627d048e7bf240c383695",
       "file": "M01-L07-presentation.pdf",
-      "source": "Модуль 1/Занятие 07/Презентация — итоговая.pptx"
+      "source": "17_74b046.pptx"
     },
     {
       "id": "M01-L08-lecture",
@@ -171,17 +206,6 @@
       "source": "Снимки страниц.json / 6a56c85851ad6c611651ce45"
     },
     {
-      "id": "M01-L08-presentation",
-      "lessonId": "M01-L08",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "10bb7de1d78694c745fff80749dfff2777972613ef4f33076974832cd3d4d1bb",
-      "sha256": "c363a1c6d34571563b4ed002f78c850e1f033e2f22feab1bf452cfa3fc1af53d",
-      "file": "M01-L08-presentation.pdf",
-      "source": "Модуль 1/Занятие 08/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M01-L09-lecture",
       "lessonId": "M01-L09",
       "kind": "lecture",
@@ -191,17 +215,6 @@
       "sha256": "949baa615dfae273798815867219a13f4713c89c817b0279fc9f9db27b969967",
       "file": "M01-L09-lecture.pdf",
       "source": "ef5c5750c41a_Занятие 1.9. Структурированные данные - словари и записи объектов — теория.pdf"
-    },
-    {
-      "id": "M01-L09-presentation",
-      "lessonId": "M01-L09",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "67064ac518c4ee32fd962690d7b28175427ed0467afee9a8aedf57903bb64c77",
-      "sha256": "65004fbced1b75a106b2774c047d5aa58780960e29e1b0dccbe1cb04fb0d159f",
-      "file": "M01-L09-presentation.pdf",
-      "source": "Модуль 1/Занятие 09/Презентация — итоговая.pptx"
     },
     {
       "id": "M01-L10-lecture",
@@ -220,10 +233,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "eb2163daf100a71f8ec571e0d8d320e16f49438c8452fedf76c5994e26795276",
-      "sha256": "6f0c36af7f4a2a4fc4c2f5bba6d66dac39d6de266a0dd9127db86603213be62d",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "4c28a125e2152378d92d147598f425a96a0118320ad51f26f9775612bbb7ef5f",
+      "sha256": "375899c32acfe97b6b1e0fc7b14c3137a95af09c4af712d9b556796d5d57e8a3",
       "file": "M01-L10-presentation.pdf",
-      "source": "Модуль 1/Занятие 10/Презентация — итоговая.pptx"
+      "source": "110_4c28a1.pptx"
     },
     {
       "id": "M01-L11-lecture",
@@ -242,10 +256,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "916cdbb6c85b9e3d2b70a0d5c5a343fa642d99085fb79ee249eb0818d400fa51",
-      "sha256": "e749514058b5b75d910554cb5474c003da03946e2ed6a1ae9c15b8b32b601ffb",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "7a3216417106f3fcb33d06c5879ad689867335859dc03bd1a67893f8f12c91c5",
+      "sha256": "3212a218c7a89a7a8dd648b28832caf33f2ef03678bc78197aeeeb7bfd39661f",
       "file": "M01-L11-presentation.pdf",
-      "source": "Модуль 1/Занятие 11/Презентация — итоговая.pptx"
+      "source": "Урок_1_11_Датасет_объект_признак_класс_презентация_обновленная_7a3216.pptx"
     },
     {
       "id": "M01-L12-lecture",
@@ -264,10 +279,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "91ec8d5dd485cc5570e41f6f98cc3e0aa6a63d73688d1e979552531280fb1564",
-      "sha256": "f4fb5aabc979c39779abe631c824eade7f052f73c7c53f8ac6b0712e092b253f",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "2ee14568e6faba0528375278c0b5be5bb1d8acb2aa523cb7f4d147db493aeefa",
+      "sha256": "3767783421a6e46f300fdf4ae73ebf7963c7563e3a684794bcee193ce8e1610f",
       "file": "M01-L12-presentation.pdf",
-      "source": "Модуль 1/Занятие 12/Презентация — итоговая.pptx"
+      "source": "lesson_1_12_table_data_10_11_spo_reworked_2ee145.pptx"
     },
     {
       "id": "M01-L13-lecture",
@@ -286,10 +302,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "604525347551f89d0b9806db9bf080d3f9fc75f96ec6650628db7d5eddbe4bc6",
-      "sha256": "01213d526ca522c6c54867a7ed8f7e22fa8c595307bbc65a23f4e69121e04fba",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "2ce46898bf253217625b06e91828f19edc06c63d9fbf10c3ad6bddcbd0530c38",
+      "sha256": "0f5ff9848034f57f8456a201914371438927f07c2511c6ec342ef7e979797d7a",
       "file": "M01-L13-presentation.pdf",
-      "source": "Модуль 1/Занятие 13/Презентация — итоговая.pptx"
+      "source": "lesson_1_13_data_quality_reworked_2ce468.pptx"
     },
     {
       "id": "M01-L14-lecture",
@@ -308,10 +325,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "1c1e0edc1f06a2d01b4b4864251ae36f005bcc3f56e232354ce4777a86aed0f8",
-      "sha256": "5bde442e57ac67b9c5b1b21a31da5b935629bc07f3bdb77e42f04a496792becc",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "38217e643ef63359d784584eb64a1502688a5bb5571a95e71025ec4f55fe63bc",
+      "sha256": "bea2b5224877c927107b26580a2061c6402902a08143bdaa3ebec94172f9b637",
       "file": "M01-L14-presentation.pdf",
-      "source": "Модуль 1/Занятие 14/Презентация — итоговая.pptx"
+      "source": "lesson_1_14_labeling_data_reworked_38217e.pptx"
     },
     {
       "id": "M01-L15-lecture",
@@ -330,10 +348,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "125d60cd5e9c689e8c5bdf0fdf06d779d4c8b9a198e56462ce65be5f0d9dd2a9",
-      "sha256": "7e2d692db35c8b52d8715ae3b09385a9e94c6bd52f4e5b752a9ec8d7db046e57",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "70140404719a56bdb9bf26010dc14a5f42552b7b26cfcbfc3b26a77c675de901",
+      "sha256": "d69eeff34f47277a94eae6f49e76151f1cf96e24eb134611553b61b06db132d8",
       "file": "M01-L15-presentation.pdf",
-      "source": "Модуль 1/Занятие 15/Презентация — итоговая.pptx"
+      "source": "lesson_1_15_csv_10_11_spo_reworked_701404.pptx"
     },
     {
       "id": "M01-L16-lecture",
@@ -352,10 +371,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "cc007094707f712183fcedbcae877930edfb312fccb4bb138d5c7ef735708b9a",
-      "sha256": "1f893b948f232105f7238cad3c65bd45baf6b96b57bd60732ab49c13fb2a628d",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "093d488e91b036d3d3c5d8e2e1b581f6de78f9992457fb8df173e4bfb3239ac1",
+      "sha256": "8ad49026582658c2fc941d911699927e5910a5ae46ed971f61ae7254eab8edb1",
       "file": "M01-L16-presentation.pdf",
-      "source": "Модуль 1/Занятие 16/Презентация — итоговая.pptx"
+      "source": "lesson_1_16_simple_statistics_reworked_093d48.pptx"
     },
     {
       "id": "M01-L17-lecture",
@@ -374,10 +394,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "839be14e886be4ad074cd9becbacd46d8c8919eb3d3a6fc471b860f829941d88",
-      "sha256": "635e07efe442b5bc842af8b1382aa3d5dd5da319b2d19fbd4185a3672e25df7d",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "6cdab2339a4a2898bcf5e1d850658a514adc2c60b9e7dd9732295cbce24124a2",
+      "sha256": "78e03a60726de61ff7c6af44a1005f119de3547ccef453e8bfda938216c673b1",
       "file": "M01-L17-presentation.pdf",
-      "source": "Модуль 1/Занятие 17/Презентация — итоговая.pptx"
+      "source": "lesson_1_17_Презентация_6cdab2.pptx"
     },
     {
       "id": "M01-L18-lecture",
@@ -396,10 +417,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "6293b1447aab68d063dc0a9bcbb7bda9bb41497c407a6c13497481eec3905c78",
-      "sha256": "a594d28b52b7a934a948d453a9a0870cd0392726140f4c31581b75855ec09822",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "60ea00a6fc417a533eb8169543c758ba80ae59341807c88c2682f779d62b6231",
+      "sha256": "d87f1e775093e1ce50e9e62823397b8b45aa76b31ce405ba7b77b9107209e64a",
       "file": "M01-L18-presentation.pdf",
-      "source": "Модуль 1/Занятие 18/Презентация — итоговая.pptx"
+      "source": "Урок_1_18_Самостоятельная_работа_мини_анализ_данных_презентация_60ea00.pptx"
     },
     {
       "id": "M01-L19-lecture",
@@ -411,17 +433,6 @@
       "sha256": "b10d0f9b3503524fa26d3fd6e65c9b56b37d6952e59985d665c58a857d7ec8f4",
       "file": "M01-L19-lecture.pdf",
       "source": "Снимки страниц.json / 6a5c829b4e874f00070e7c6f"
-    },
-    {
-      "id": "M01-L19-presentation",
-      "lessonId": "M01-L19",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "a8cd8f21af7cc223da4708f902e21ed4831cc1943567886de9c928ddcd341e0e",
-      "sha256": "d03a3927d38b37cb90f0097ded77ba0820d512ab482f53d9a7c3ec1685749ebc",
-      "file": "M01-L19-presentation.pdf",
-      "source": "Модуль 1/Занятие 19/Презентация — итоговая.pptx"
     },
     {
       "id": "M02-L01-lecture",
@@ -440,10 +451,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "9727ef735d55b10554fd3e26f00565aacf6342d6c2fcde3603289589d5d55795",
-      "sha256": "221752f16c29714393b0d96c6e8def5591f292a198ae47df8e621cd833412c9d",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "1960d7f4a27dd5bb5f79b103ad1b23e01ad658989b427fa0fe316aaebcb40f5d",
+      "sha256": "7acc7e058dc4fe16e7b3be83b89087053d8b88a0f5cb4622f0a48cff5e606361",
       "file": "M02-L01-presentation.pdf",
-      "source": "Модуль 2/Занятие 01/Презентация — итоговая.pptx"
+      "source": "presentation_Зачем ИИ нужна математика_1960d7.pptx"
     },
     {
       "id": "M02-L02-lecture",
@@ -462,10 +474,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "ca1a60a4d849f636e21ee806d371bf3c020c34ee9bf8cd59572a45673639846d",
-      "sha256": "f1aaa9be37cb4eae5e0de4f3b18f5463a240eb14d0c4f803072ff9d462bd2a13",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "40db914b707540dd78654d90aee202bbc6beb09ef5931857760be24ed63870b1",
+      "sha256": "b22ef42dd772fceb9f128586e98cc8174469519323b756fb45ec3ca4f20f46a4",
       "file": "M02-L02-presentation.pdf",
-      "source": "Модуль 2/Занятие 02/Презентация — итоговая.pptx"
+      "source": "presentation_Функции и графики в задачах ИИ_40db91.pptx"
     },
     {
       "id": "M02-L03-lecture",
@@ -484,10 +497,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "aad988201c744a7395ee82f218d3993478df3505595d9018af290e8f591d2026",
-      "sha256": "0a167ef8bf7a1e45572d58e64bdda56695ee01e5f08a81f554cbfcbff010ae77",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "854b54adb5844b4bd369767048781773f4d049aef95ec6d9df1663ab7cf7a741",
+      "sha256": "29247bc7a91d813c85f2349eac8d51097db09cca09a98d06281020e627ec4984",
       "file": "M02-L03-presentation.pdf",
-      "source": "Модуль 2/Занятие 03/Презентация — итоговая.pptx"
+      "source": "a34b1d07cbfd63f7e5afabbf372349df_854b54.pptx"
     },
     {
       "id": "M02-L04-lecture",
@@ -499,17 +513,6 @@
       "sha256": "045eb496a664eb0b8de70f852550c089e759215428fdbef49a4e9aefabc286b5",
       "file": "M02-L04-lecture.pdf",
       "source": "Снимки страниц.json / 6a57470be147c0448c17ccb4"
-    },
-    {
-      "id": "M02-L04-presentation",
-      "lessonId": "M02-L04",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "d6822872ad9e7617b8d1a38c70883f3b305c1154f26ae333522ce14beaec5843",
-      "sha256": "68808d26703c29a8a2b28e364b9316a32d67cfc2970b1c98062abad267c69e60",
-      "file": "M02-L04-presentation.pdf",
-      "source": "Модуль 2/Занятие 04/Презентация — итоговая.pptx"
     },
     {
       "id": "M02-L05-lecture",
@@ -528,10 +531,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "18e08ba59e4ba76ac0d4633ededde4c15aabad61376cf94c598f13216a78070e",
-      "sha256": "5ec66db7d2a3b81e486b98f095571e5a32c135aa3e414817b811957187cbbc8a",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "e0f002d31d07d281280adee0133b83b71e6ee57407c8478d75e5291088cd6698",
+      "sha256": "0dd0274518a1f29fc31a9d5d7395e8616cc3af47df4f9a4babaf4e49fcaf566c",
       "file": "M02-L05-presentation.pdf",
-      "source": "Модуль 2/Занятие 05/Презентация — итоговая.pptx"
+      "source": "Урок_2_5_Ошибка_модели_презентация_e0f002.pptx"
     },
     {
       "id": "M02-L06-lecture",
@@ -550,10 +554,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "a1f4289ac3b14e0f399305eb682d9c96e389330b90db52feff22bb37b7d5cefd",
-      "sha256": "e0c804aa574ffba40b442023bde099a3cc07c6eb21b336198e6047831f6e2d5b",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "382fbed6b490c6021339cb47177d521d056eaed9023743a8a520096017275303",
+      "sha256": "bb8b7334f3eccad61fa81e677f19c3f0f7572837ed51e33e6a3ff03102020432",
       "file": "M02-L06-presentation.pdf",
-      "source": "Модуль 2/Занятие 06/Презентация — итоговая.pptx"
+      "source": "Урок_2_6_Минимизация_ошибки_презентация_382fbe.pptx"
     },
     {
       "id": "M02-L07-lecture",
@@ -572,10 +577,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "fe2f4b5e03cb5c7bcfab0aee49177c857467eb75160fb7d24bd9184867517398",
-      "sha256": "de5de24765d018193beeefabff28ef7b1c1573f2a9c2fae4a66f36c5aa18aa69",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "d22180fbb9124fed3bfb3c7ec117c183c1378783a59f03cb6dc4e53eca650a2d",
+      "sha256": "5dedad9751beb56af3c70f4679849d0f6ccc184106e584e78b879443584e5dea",
       "file": "M02-L07-presentation.pdf",
-      "source": "Модуль 2/Занятие 07/Презентация — итоговая.pptx"
+      "source": "Урок_2_7_Как_ИИ_выбирает_лучший_вариант_10_11_СПО_презентация_d22180.pptx"
     },
     {
       "id": "M02-L08-lecture",
@@ -594,10 +600,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "fce970e4e048f8b2ee26449831b60803c19d6f0a4b1ce5dadcf5fc30692f47e3",
-      "sha256": "fdf3d4517da21646ad7bc59aa1a009deb8ccc889f6c6d6c9ce39c18a0caaaf53",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "c71561d46d3da9f7cf08157955a714e17cb56d38c5b3f74f309c711b7858fd6d",
+      "sha256": "b2fbb292541d7ab137604a9ed3823a340d605ea59cd24d1472fe96ccdeb9fffb",
       "file": "M02-L08-presentation.pdf",
-      "source": "Модуль 2/Занятие 08/Презентация — итоговая.pptx"
+      "source": "Урок_2_8_Вероятность_события_презентация_v2_c71561.pptx"
     },
     {
       "id": "M02-L09-lecture",
@@ -611,17 +618,6 @@
       "source": "8b32fc9ef0cf_Занятие 2.9. Условная вероятность и принятие решений по признакам — теория.pdf"
     },
     {
-      "id": "M02-L09-presentation",
-      "lessonId": "M02-L09",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "4163991777e80878db1e782960dfe6e6aa1b2efe2598ba775591da46ccbb95a5",
-      "sha256": "9ad5e5151a9a250dcdb459695ac3390f804522b0fb329c5a3441afb3a0a222d4",
-      "file": "M02-L09-presentation.pdf",
-      "source": "Модуль 2/Занятие 09/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M02-L10-lecture",
       "lessonId": "M02-L10",
       "kind": "lecture",
@@ -631,17 +627,6 @@
       "sha256": "f3eb3c867bced1cf9704ec0349791452118a0ff5a729281ee844beaee233a726",
       "file": "M02-L10-lecture.pdf",
       "source": "dd781e304a52_Занятие 2.10. Случайная величина и неопределенность результата — теория.pdf"
-    },
-    {
-      "id": "M02-L10-presentation",
-      "lessonId": "M02-L10",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "cfd32f3b413d73dbcd0aad6bda67567c5d37f393359799b7e9c24e0fc4478baf",
-      "sha256": "401050975343d585c15ba236d1e2daf5b7ec8e7e39a8cb854da0e5df113468d1",
-      "file": "M02-L10-presentation.pdf",
-      "source": "Модуль 2/Занятие 10/Презентация — итоговая.pptx"
     },
     {
       "id": "M02-L11-lecture",
@@ -660,10 +645,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "baa8968df132cb7b6cc76f33caf137976feb091daab42fe64cfab632335fd349",
-      "sha256": "7c5cf3b94e6b4660640323aaa575a261a197b05393aaf3172013e1a59c577023",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "255d218222762bc5cc66eaaa7b8d4c93535ea5b2b70657c519c7c7bd1159791f",
+      "sha256": "96ffeec3c70f3d7c463e7612cac573ddb2c4c0bbf2e8576604f8c97add532006",
       "file": "M02-L11-presentation.pdf",
-      "source": "Модуль 2/Занятие 11/Презентация — итоговая.pptx"
+      "source": "Statistics_for_AI_255d21.pptx"
     },
     {
       "id": "M02-L12-lecture",
@@ -677,17 +663,6 @@
       "source": "0025e323173b_Занятие 2.12. Среднее, медиана и дисперсия на данных — теория.pdf"
     },
     {
-      "id": "M02-L12-presentation",
-      "lessonId": "M02-L12",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "152ec89d5aa8d9944d48ad94b67071d752ec75ae6bd10b8b642da0ea3dbe35e4",
-      "sha256": "1c6794387f19285a53441f75f72fc54a4d62548218e2e91a73fd2af83b646595",
-      "file": "M02-L12-presentation.pdf",
-      "source": "Модуль 2/Занятие 12/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M02-L13-lecture",
       "lessonId": "M02-L13",
       "kind": "lecture",
@@ -697,17 +672,6 @@
       "sha256": "653743dc57a92d32e48d354e2797c4cc3d7fd53c9ad40f9d70cfb844d847b68b",
       "file": "M02-L13-lecture.pdf",
       "source": "b9727593fbe6_Занятие 2.13. Распределение данных - как увидеть закономерность — теория.pdf"
-    },
-    {
-      "id": "M02-L13-presentation",
-      "lessonId": "M02-L13",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "faec4468ee4c51c9029dc4db47babca344d950bc9086513a4214208a28923532",
-      "sha256": "ddc7747f46a343206d347bf2eb924b902b2b9f7724c824a107eb2d3f88057bb7",
-      "file": "M02-L13-presentation.pdf",
-      "source": "Модуль 2/Занятие 13/Презентация — итоговая.pptx"
     },
     {
       "id": "M02-L14-lecture",
@@ -721,17 +685,6 @@
       "source": "710040d8889e_Занятие 2.14. Корреляция - связаны ли два признака — теория.pdf"
     },
     {
-      "id": "M02-L14-presentation",
-      "lessonId": "M02-L14",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "74c601fb41e8623ba5839d6598de30bb5b04c4dab4debac2f7ae8f00427eab66",
-      "sha256": "1fc4305c6c9412438b354c7f16f28206edb8ffcf2562867605c55b922f12cc5b",
-      "file": "M02-L14-presentation.pdf",
-      "source": "Модуль 2/Занятие 14/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M02-L15-lecture",
       "lessonId": "M02-L15",
       "kind": "lecture",
@@ -741,17 +694,6 @@
       "sha256": "f6ec7d563cf7d11c1933ab5ddd5ae2eec9631194998051fa7528f47554ff1e05",
       "file": "M02-L15-lecture.pdf",
       "source": "Снимки страниц.json / 0288c4afcff32c064d4d4613"
-    },
-    {
-      "id": "M02-L15-presentation",
-      "lessonId": "M02-L15",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "9b688a7c5bcf4041015589f76e600ac9e4f4549607012efea4186a9a349e46a2",
-      "sha256": "5d16b3cd573eb24ac4be937c7600e09f106cd12eeb82fca09137f64c6f4f78ed",
-      "file": "M02-L15-presentation.pdf",
-      "source": "Модуль 2/Занятие 15/Презентация — итоговая.pptx"
     },
     {
       "id": "M02-L16-lecture",
@@ -765,17 +707,6 @@
       "source": "8392e283cf95_Занятие 2.16. Мини-кейс - статистика и ошибка модели на датасете — теория.pdf"
     },
     {
-      "id": "M02-L16-presentation",
-      "lessonId": "M02-L16",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "d60c3d2bcfdbb83a8719fe2620e2b440459dc14444b327f9ab3cc1d26abbcaed",
-      "sha256": "7d4c693d1a4a714eab424ed0306141bcd125d095fd65f39c495af09bd1ba2feb",
-      "file": "M02-L16-presentation.pdf",
-      "source": "Модуль 2/Занятие 16/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M02-L17-lecture",
       "lessonId": "M02-L17",
       "kind": "lecture",
@@ -787,17 +718,6 @@
       "source": "Снимки страниц.json / 6a56c85851ad6c611651ce7b"
     },
     {
-      "id": "M02-L17-presentation",
-      "lessonId": "M02-L17",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "72d843a445dcc8ef3ba60f9cb4a19a626faeb3bed151087a040dbe971da1b2d4",
-      "sha256": "6b7fdaed23df97da6a5b2491f7f7ed8c40409e2c3c5051eb07e56e8762f8637e",
-      "file": "M02-L17-presentation.pdf",
-      "source": "Модуль 2/Занятие 17/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M02-L18-lecture",
       "lessonId": "M02-L18",
       "kind": "lecture",
@@ -807,17 +727,6 @@
       "sha256": "7dc1563fb1f5d5c5865dd16bb1a29995fb1582e987ee39c3d73ffe1885bb95bd",
       "file": "M02-L18-lecture.pdf",
       "source": "Снимки страниц.json / 6a5c96f04e874f00070ea9d2"
-    },
-    {
-      "id": "M02-L18-presentation",
-      "lessonId": "M02-L18",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "8eebcdf0b18c6efc8ceaf29fa6331ae75379f55adbae045d9c3ceb6821548ce8",
-      "sha256": "3b7b92bfd33c9ce3ffa071dfe8973504a7efb5b3487be80430c44f69abf10e16",
-      "file": "M02-L18-presentation.pdf",
-      "source": "Модуль 2/Занятие 18/Презентация — итоговая.pptx"
     },
     {
       "id": "M03-L01-lecture",
@@ -836,10 +745,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "f156fd522bd89fa5cb102af611e6760428109df1b6ece9530385090575c417d8",
-      "sha256": "5dfac0f3b143e2a994ae1520b6185af92f19ebd120b7c4dba0651c525e67824b",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "afcb7893619277cce1708090272471d478698ada82d7cbd2f026a89d07b96670",
+      "sha256": "12c22dc6470587b291f37eb0a5930686e7a2332f37ce43bb7781c28f0e948027",
       "file": "M03-L01-presentation.pdf",
-      "source": "Модуль 3/Занятие 01/Презентация — итоговая.pptx"
+      "source": "AI_Learning_Blueprint_afcb78.pptx"
     },
     {
       "id": "M03-L02-lecture",
@@ -858,10 +768,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "75c5100dacb5c1720021126bb91fe5d1e5bb56c29c5ef092a3c49b08fe41c1aa",
-      "sha256": "164779d68d5a780f84a0a66bf4719a007bbb0fbd1831e941fe25a49846900619",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "f33bed035d150fd0ba6abdd247031810100540d18ab9588a68a4cf8407a90945",
+      "sha256": "fe9974b3642e4410a5475fc6b145aa17b5361d5d4eb118b1eb1fc1655f971bbe",
       "file": "M03-L02-presentation.pdf",
-      "source": "Модуль 3/Занятие 02/Презентация — итоговая.pptx"
+      "source": "AI_Features_and_Target_Variables_f33bed.pptx"
     },
     {
       "id": "M03-L03-lecture",
@@ -880,10 +791,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "d48345cd76e70070d52fd26e0d05a32b73218613d5ebdf3649bc8bbd2ef86f19",
-      "sha256": "6fdba6ca786db7be6dc962be8580b981c0369f7b6476ad50f07eff88c4da8490",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "200a8c614fc5a795c039c8733fa8667d64b31542e2d69c4b3e96a369d7febb6a",
+      "sha256": "0334c967c31a45ea744164053dc515621104ac3cc0861f7a1046a28c57aa3337",
       "file": "M03-L03-presentation.pdf",
-      "source": "Модуль 3/Занятие 03/Презентация — итоговая.pptx"
+      "source": "Урок_3_3_Обучающая_и_тестовая_выборки_презентация_обновленная_200a8c.pptx"
     },
     {
       "id": "M03-L04-lecture",
@@ -902,10 +814,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "f5f85dbaee0708595d70c6c0308b0eb8228527301f9110a56dbf0a4fd140f163",
-      "sha256": "0fc321ddcadc4658b9152965ec008af4dbb3825a83ab01879ad8e56bff240a63",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "b05d6ab2bccc80ff3c7bc754cf1a5a88d4767584a2518bd75d1e6f4b1b4ffba5",
+      "sha256": "ca53c9b8e806f0472c443f2675520647593997ddbf04caabedf1f10f3e145c93",
       "file": "M03-L04-presentation.pdf",
-      "source": "Модуль 3/Занятие 04/Презентация — итоговая.pptx"
+      "source": "Урок_3_4_Типы_задач_машинного_обучения_презентация_обновленная_b05d6a.pptx"
     },
     {
       "id": "M03-L05-lecture",
@@ -924,10 +837,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "05ace14194189fa5173ead8820a8441912341518c9482364ea41b9e274ee4af3",
-      "sha256": "0c708a05b50b9cd892b0bbda382a948cd6263f0438f141fbaf4b3905c54ced02",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "bd9ebbf070bb7f51f13d6f7808b5eefb7c196878e8d80746998f086291643069",
+      "sha256": "c9a03e7b2bd72cc719b97c34eed30c38bcd3a042bf800af1b3d11ed393eabfa7",
       "file": "M03-L05-presentation.pdf",
-      "source": "Модуль 3/Занятие 05/Презентация — итоговая.pptx"
+      "source": "6a56a5904b7d558382558eaf344cd0ab_bd9ebb.pptx"
     },
     {
       "id": "M03-L06-lecture",
@@ -946,10 +860,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "1574e250f7c7e1c3e16355abf9fc3b07862d5244f9da71059ce0209d294a9114",
-      "sha256": "b3a75af5737c338967c8885b9d2755bef7205703c4606b6e835f198934440bcd",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "ddeec47c1ae100dfb0f1a80dab961996ae73fad52ce564f6a4198b5f21d5321b",
+      "sha256": "094c89d8047fdde5317754a7761ec64b83064833c678f1ead075b5d4fcc6c225",
       "file": "M03-L06-presentation.pdf",
-      "source": "Модуль 3/Занятие 06/Презентация — итоговая.pptx"
+      "source": "lesson_3_6_classification_real_dataset_regenerated_ddeec4.pptx"
     },
     {
       "id": "M03-L07-lecture",
@@ -968,10 +883,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "9637516d954b122eec2bbcbdc09831f1b9c5462f55d5f57f9cf4712235cf728d",
-      "sha256": "4f8b26aab83de759181fd3961ec033fe3b015fe31ba26d78f31d464dc9bf3d93",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "fa3a12fd7ded06330a9ac9bbccfb952825e6faaedf56987799d2b08d7bf37174",
+      "sha256": "b76ba4c79923545e701a9246501b994aa52b6f1782dd6583a971006878e175da",
       "file": "M03-L07-presentation.pdf",
-      "source": "Модуль 3/Занятие 07/Презентация — итоговая.pptx"
+      "source": "lesson_3_7_accuracy_fa3a12.pptx"
     },
     {
       "id": "M03-L08-lecture",
@@ -990,10 +906,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "4b11763f83c8e8e7701ef599b338a16b8680151e2ada0dfe74fdb3270c84e715",
-      "sha256": "d29950c845322e820f48c17a2d67ce2c19d4c88d989e49b143f287b2681d5f49",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "0e7ddb0e3d0d58664d7a9f94158bad5ea3d2b8776ce5a23c5178a35e884011f7",
+      "sha256": "eb7d3698f92238e5e3a2ab2bd4d44888d9beec272bc0f4187ecfe174053d6575",
       "file": "M03-L08-presentation.pdf",
-      "source": "Модуль 3/Занятие 08/Презентация — итоговая.pptx"
+      "source": "lesson_3_8_confusion_matrix_analysis_0e7ddb.pptx"
     },
     {
       "id": "M03-L09-lecture",
@@ -1012,10 +929,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "3c6d3f9bc9ce6cdad9366e940358ac30c3937583febca419e6829bac8cec422e",
-      "sha256": "d39a04d8161e26621d980f5cc5303f631d966a9a75b76fe236cdc874fc045240",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "f884bba5a3854faa47de14ea14c0794aefd42c583a712b9f40864563ca3af492",
+      "sha256": "1170ac0303e23cb5e4cb49bc9a202f7efe9df6ffe9dc8390ad274394dd7eb9f5",
       "file": "M03-L09-presentation.pdf",
-      "source": "Модуль 3/Занятие 09/Презентация — итоговая.pptx"
+      "source": "lesson_3_9_regression_sklearn_f884bb.pptx"
     },
     {
       "id": "M03-L10-lecture",
@@ -1034,10 +952,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "603ae05f79397f2ac8172e59fb1d06b9b766084147481d56ec1cd76c9b7f210a",
-      "sha256": "7bf19c0ea00f9a65c40aa4b8955ccbf06089d96960e6a399ac871be6b16b75f9",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "8d587a43b9c0f8d4786bd8c56059fb9ba2844989037c4dfd89f78182b14d5e89",
+      "sha256": "dd6c8c649d10bd89bbb21117e802b6724e37b1147138893c16ebb842126588d0",
       "file": "M03-L10-presentation.pdf",
-      "source": "Модуль 3/Занятие 10/Презентация — итоговая.pptx"
+      "source": "lesson_3_10_regression_error_8d587a.pptx"
     },
     {
       "id": "M03-L11-lecture",
@@ -1056,10 +975,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "a39d227194ec59877b8b2f669a0c417dbbdfee5706fbce0cda87ac2ba596e63a",
-      "sha256": "de3d34e9a09abcb6b075aa01ec3103b17fdb64220686d369e28604ea45ec4084",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "d0f26f7c2da1f32c6376ee79bba32fa46ad393080cf3ee74ce5cce8eddcd4486",
+      "sha256": "f386c4dac5083b7d2ff94eadecdd22de569d727a13da3d0c252e5920a14c2664",
       "file": "M03-L11-presentation.pdf",
-      "source": "Модуль 3/Занятие 11/Презентация — итоговая.pptx"
+      "source": "lesson_3_11_clustering_python_regenerated_d0f26f.pptx"
     },
     {
       "id": "M03-L12-lecture",
@@ -1073,17 +993,6 @@
       "source": "Снимки страниц.json / e3329b6b778b119f74f20720"
     },
     {
-      "id": "M03-L12-presentation",
-      "lessonId": "M03-L12",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "810bd55161745cf31f935596dd627efe3e0ef614fb393003ebbdf2decfe7a5cd",
-      "sha256": "918f53acdef85ef27ebdb2cc42f9eb209bd655f2cfee2f0a7714a5ee78dde3a1",
-      "file": "M03-L12-presentation.pdf",
-      "source": "Модуль 3/Занятие 12/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M03-L13-lecture",
       "lessonId": "M03-L13",
       "kind": "lecture",
@@ -1093,17 +1002,6 @@
       "sha256": "2c11aeadce28cf9d22c6394e98524daff5542a33e2b89e35e6e4315995bfcb7c",
       "file": "M03-L13-lecture.pdf",
       "source": "Снимки страниц.json / 2ab91143dde60e3f08c5b06a"
-    },
-    {
-      "id": "M03-L13-presentation",
-      "lessonId": "M03-L13",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "e47b678d4b94a69c614ac22513dfe2f0e83c148ac849fb16ec8bf51fd6858e2d",
-      "sha256": "ad5592d944fa1749da0a8324fe5abde9b0b448ea3e09d4a10e5411109c3f955a",
-      "file": "M03-L13-presentation.pdf",
-      "source": "Модуль 3/Занятие 13/Презентация — итоговая.pptx"
     },
     {
       "id": "M03-L14-lecture",
@@ -1117,17 +1015,6 @@
       "source": "Снимки страниц.json / b227a494688b3fe2b544eff5"
     },
     {
-      "id": "M03-L14-presentation",
-      "lessonId": "M03-L14",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "f999f73486dadf7748a0c6ae1777000a36fe37788f637cb683f22c1be623137a",
-      "sha256": "797026aab369b2dfbf2cb8cca86b2ec8fdb9b1327c9c75f5ef6a09412e5e7a2b",
-      "file": "M03-L14-presentation.pdf",
-      "source": "Модуль 3/Занятие 14/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M03-L15-lecture",
       "lessonId": "M03-L15",
       "kind": "lecture",
@@ -1137,17 +1024,6 @@
       "sha256": "7615e82896df1607f5beb90418f683ab550ddfaed2da7447859c5498ed768711",
       "file": "M03-L15-lecture.pdf",
       "source": "Снимки страниц.json / 333f7262adc45c31b1ff40ce, c69a0a766a3423dd40567d73"
-    },
-    {
-      "id": "M03-L15-presentation",
-      "lessonId": "M03-L15",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "85a3ac80139a2ee2eb9e787e3717fc31b0547e76baab4c04daadfd2e35623e9d",
-      "sha256": "8e610a608c30a83f11121635e6c018dfee010784ca96a7b53a2b8b3c028625b4",
-      "file": "M03-L15-presentation.pdf",
-      "source": "Модуль 3/Занятие 15/Презентация — итоговая.pptx"
     },
     {
       "id": "M03-L16-lecture",
@@ -1161,17 +1037,6 @@
       "source": "Снимки страниц.json / 08c12fc994ebe48be739da13"
     },
     {
-      "id": "M03-L16-presentation",
-      "lessonId": "M03-L16",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "4812140573568fff92ab5837e2c03c98c87eb454db80930bfa30f57d53d95771",
-      "sha256": "f913743c32a7b6e4e05a044bd86416c766b82e8fc61c2fb2d60cc0f2a2922127",
-      "file": "M03-L16-presentation.pdf",
-      "source": "Модуль 3/Занятие 16/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M03-L17-lecture",
       "lessonId": "M03-L17",
       "kind": "lecture",
@@ -1181,17 +1046,6 @@
       "sha256": "5d9449a981e6f4331840ca5febf8694e6b49b24548e13b6f9aa88cc7fa66d5cb",
       "file": "M03-L17-lecture.pdf",
       "source": "Снимки страниц.json / 61adc5e67c1525b694103bf8"
-    },
-    {
-      "id": "M03-L17-presentation",
-      "lessonId": "M03-L17",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "1ea71ad39b20fca8190558dfb0b967653aecc67fb14ccc986bba0b3bf102cc1b",
-      "sha256": "e9e141c3bb20abca63e0b843e71828f47389c8e85c96a5170a9202a0cc86702f",
-      "file": "M03-L17-presentation.pdf",
-      "source": "Модуль 3/Занятие 17/Презентация — итоговая.pptx"
     },
     {
       "id": "M03-L18-lecture",
@@ -1205,17 +1059,6 @@
       "source": "Снимки страниц.json / c76e4d3a1c8ec2af04cbf5ac"
     },
     {
-      "id": "M03-L18-presentation",
-      "lessonId": "M03-L18",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "6696e5cebb2758b2632f25ee0a4a6f5a7cdca30eb842c42bf72f5721851ace27",
-      "sha256": "fb34f7a052d9d188d230f22e21f5aa1af89b1563bfa3f53499f0cb0b96dca73a",
-      "file": "M03-L18-presentation.pdf",
-      "source": "Модуль 3/Занятие 18/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M03-L19-lecture",
       "lessonId": "M03-L19",
       "kind": "lecture",
@@ -1227,17 +1070,6 @@
       "source": "Снимки страниц.json / 6a5ca2994e874f00070ebe29"
     },
     {
-      "id": "M03-L19-presentation",
-      "lessonId": "M03-L19",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "80c60ad1bcf8f2ec22b43aa4e32f128bef7bddf92279ca09c63bfe81d185f6f7",
-      "sha256": "5772b33a167cfe7b85816225d3706969aa700a6e4a565f96846f1bd81b49f601",
-      "file": "M03-L19-presentation.pdf",
-      "source": "Модуль 3/Занятие 19/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M04-L01-lecture",
       "lessonId": "M04-L01",
       "kind": "lecture",
@@ -1247,17 +1079,6 @@
       "sha256": "cc7ed0ca3a63697ad34391c0a72c6ef0f1b5689762c8085934c3e060f10e7a09",
       "file": "M04-L01-lecture.pdf",
       "source": "Снимки страниц.json / ee69f633d26ba1a71a48a8eb"
-    },
-    {
-      "id": "M04-L01-presentation",
-      "lessonId": "M04-L01",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "88a8c07708be0d72e92d103350768dca7c26edf9e838908ec2411511b8143a5e",
-      "sha256": "be85e224f422b6b75e81284d47daa51d33b85f2e588a65b60b4cb0888488a176",
-      "file": "M04-L01-presentation.pdf",
-      "source": "Модуль 4/Занятие 01/Презентация — итоговая.pptx"
     },
     {
       "id": "M04-L02-lecture",
@@ -1276,10 +1097,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "efe2fb03b40a26327bee5bed03541021dc1d17bd0eaa7c597e7bd097a0f104b0",
-      "sha256": "346b86c09b6dbbbcf220c0add8fada5a18b19f3958aad2fd6bc133f770bab463",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "19e656d1d42d8efa9fe877218de48f61ca42ab791f39d139fed1020605247802",
+      "sha256": "fcd7866be9b63638b7140dcac521be9f43bfc3e4712838e0881d352c8cdf0d60",
       "file": "M04-L02-presentation.pdf",
-      "source": "Модуль 4/Занятие 02/Презентация — итоговая.pptx"
+      "source": "Professional_AI_Project_Design_19e656.pptx"
     },
     {
       "id": "M04-L03-lecture",
@@ -1293,17 +1115,6 @@
       "source": "Снимки страниц.json / 372f44322e7569c1a8b66437"
     },
     {
-      "id": "M04-L03-presentation",
-      "lessonId": "M04-L03",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "e11162beaf3cda01487745202b48a0f4f2c3266fd42683162c055efc00447c43",
-      "sha256": "d586b0a60d19660cacf2a18a396e6648ebfeefab8322bb0b7b81ebfc90b08a68",
-      "file": "M04-L03-presentation.pdf",
-      "source": "Модуль 4/Занятие 03/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M04-L04-lecture",
       "lessonId": "M04-L04",
       "kind": "lecture",
@@ -1313,17 +1124,6 @@
       "sha256": "357272898ccde1ba61c3a56f0c45c6c0a6ebe86e46d16deb3921845e09e61604",
       "file": "M04-L04-lecture.pdf",
       "source": "Снимки страниц.json / 5314c73f7d0c3da63c169d1c"
-    },
-    {
-      "id": "M04-L04-presentation",
-      "lessonId": "M04-L04",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "0fa0b4e69343244e845860a7372f402043768ab1cccf743b07328b762bab1e19",
-      "sha256": "5dcd939a0174eb7fc2a59f9a0fb80193755dafd3e30dcb9c666fbc0c8b31f46f",
-      "file": "M04-L04-presentation.pdf",
-      "source": "Модуль 4/Занятие 04/Презентация — итоговая.pptx"
     },
     {
       "id": "M04-L05-lecture",
@@ -1337,17 +1137,6 @@
       "source": "Снимки страниц.json / ea38d3f74810af668807292c"
     },
     {
-      "id": "M04-L05-presentation",
-      "lessonId": "M04-L05",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "81c02181e99990cdf5294bbef939bdf8f9838780bfa89f8b9966799bf35303b7",
-      "sha256": "86b9122a3d970e19fba941f2eb27335ff5eeb3f1413636eb1aa1656c33731292",
-      "file": "M04-L05-presentation.pdf",
-      "source": "Модуль 4/Занятие 05/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M04-L06-lecture",
       "lessonId": "M04-L06",
       "kind": "lecture",
@@ -1357,17 +1146,6 @@
       "sha256": "a579c0525691c57529ef9b5c8ee5cacef1ee5c3a2810f752508e20531b583317",
       "file": "M04-L06-lecture.pdf",
       "source": "1c2d1c687636_Занятие 4.6. Подготовка датасета для прикладного кейса — теория.pdf"
-    },
-    {
-      "id": "M04-L06-presentation",
-      "lessonId": "M04-L06",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "05e758007a360ab6c175969b42107fd67f8d8b65c401fdf251c31b46faf5ac4f",
-      "sha256": "0ffedc4e243d33cc43750fc9436bf653b00aa5b4866f648dbba89ffb858f0054",
-      "file": "M04-L06-presentation.pdf",
-      "source": "Модуль 4/Занятие 06/Презентация — итоговая.pptx"
     },
     {
       "id": "M04-L07-lecture",
@@ -1386,10 +1164,11 @@
       "kind": "presentation",
       "derived": true,
       "sourceFormat": "pptx",
-      "sourceSha256": "ee7d62e2b90b35625f2740e18aa93e398da893f5e7b5d4b9cd7b97d98e52c8d0",
-      "sha256": "ed00c0c8b9cc4108f1ab5dfe702ad8f22518562cbecf5c96ae9f054ce1dcbd1d",
+      "renderer": "Microsoft PowerPoint PDF export",
+      "sourceSha256": "59e720ba1e46b3ecf565e744014a3345db5e3e071340b21e78320a59782d94eb",
+      "sha256": "3a263b582488f364944e9096fdd12728513827cf70d38caa2d54359ad50308f0",
       "file": "M04-L07-presentation.pdf",
-      "source": "Модуль 4/Занятие 07/Презентация — итоговая.pptx"
+      "source": "presentation_Выбор подхода для профессионального решения_59e720.pptx"
     },
     {
       "id": "M04-L08-lecture",
@@ -1403,17 +1182,6 @@
       "source": "Снимки страниц.json / e042f7fc3e427c078704cd56, 073a12dcfbea4042e6082292"
     },
     {
-      "id": "M04-L08-presentation",
-      "lessonId": "M04-L08",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "8a059ca86fe026df3a9811fd4853c0ca5957df77335fa54ef31db033ad404aac",
-      "sha256": "cec68c36ee958ca560424bf4f42c3627a0793f7f3c78fc6dff99e77a8cec20ae",
-      "file": "M04-L08-presentation.pdf",
-      "source": "Модуль 4/Занятие 08/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M04-L09-lecture",
       "lessonId": "M04-L09",
       "kind": "lecture",
@@ -1423,17 +1191,6 @@
       "sha256": "9af7a8bb7acd604b2a6d8db6e1f0469b1710ff83000ba387d66068cc5e426586",
       "file": "M04-L09-lecture.pdf",
       "source": "Снимки страниц.json / 5157acf7b91345a918b281b7"
-    },
-    {
-      "id": "M04-L09-presentation",
-      "lessonId": "M04-L09",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "09abf41748028174fdc2ca020f28ca51ef4d70f0bf2e51cd4d8e2ea620ecdd17",
-      "sha256": "cd02159cc9454818b3461b38e26356e0ab67233a1f78b21064b3ff1610c6e43d",
-      "file": "M04-L09-presentation.pdf",
-      "source": "Модуль 4/Занятие 09/Презентация — итоговая.pptx"
     },
     {
       "id": "M04-L10-lecture",
@@ -1447,17 +1204,6 @@
       "source": "Снимки страниц.json / fb3fa3915918ad1bce8d7509"
     },
     {
-      "id": "M04-L10-presentation",
-      "lessonId": "M04-L10",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "76e1f2ef0f1ab1c2c3ade8461344f2874ca66454f8a6745cc1439f6adf2bfa91",
-      "sha256": "094ffa08999c8b669aeec753763fb225d7e2b798f36703ab8baa2c9e4c244bed",
-      "file": "M04-L10-presentation.pdf",
-      "source": "Модуль 4/Занятие 10/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M04-L11-lecture",
       "lessonId": "M04-L11",
       "kind": "lecture",
@@ -1467,17 +1213,6 @@
       "sha256": "cbaae186055c10544e9b039a2bdfa5ad666b0bcccb12841fd346a6f08edbe9df",
       "file": "M04-L11-lecture.pdf",
       "source": "Снимки страниц.json / cc29e6d3125ac4371219adfb"
-    },
-    {
-      "id": "M04-L11-presentation",
-      "lessonId": "M04-L11",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "f93aba2a953038fe5917fa4ee8af75184443d356b38ee5934313eea39fe0c964",
-      "sha256": "c7bffa952736354893bd3e1a4153e70ecea477b9e29d744bd2ddcd37ef23d895",
-      "file": "M04-L11-presentation.pdf",
-      "source": "Модуль 4/Занятие 11/Презентация — итоговая.pptx"
     },
     {
       "id": "M04-L12-lecture",
@@ -1491,17 +1226,6 @@
       "source": "Снимки страниц.json / 12e61bdcac8059a34ebfde41"
     },
     {
-      "id": "M04-L12-presentation",
-      "lessonId": "M04-L12",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "84224de4924ef52828f4203c632bd7761f0cb08901c16d86fa1bf1bc1b660fb6",
-      "sha256": "ead99df4ba05c3c83a44aa81ad234c8b15049074f09ac86a04ccf422cfd93ce7",
-      "file": "M04-L12-presentation.pdf",
-      "source": "Модуль 4/Занятие 12/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M04-L13-lecture",
       "lessonId": "M04-L13",
       "kind": "lecture",
@@ -1511,17 +1235,6 @@
       "sha256": "4b90614fe532fa3f2a9c636192ffd93f9d1fb861f9182acdac52c5f39e4dd540",
       "file": "M04-L13-lecture.pdf",
       "source": "Снимки страниц.json / 95d39b9d41d4a385c9ec9793"
-    },
-    {
-      "id": "M04-L13-presentation",
-      "lessonId": "M04-L13",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "63ae1a549e07c394dc6ffc9488b0c37ae4e9644acf1cee3d3841470bb4d0c55f",
-      "sha256": "dc101049621c24c454437e68062e3d439624b44054936a2bd335439d2c0100ad",
-      "file": "M04-L13-presentation.pdf",
-      "source": "Модуль 4/Занятие 13/Презентация — итоговая.pptx"
     },
     {
       "id": "M04-L14-lecture",
@@ -1535,17 +1248,6 @@
       "source": "Снимки страниц.json / 8f4616a3985bedd14484f657, 6aba89237b615504cf97b3ad"
     },
     {
-      "id": "M04-L14-presentation",
-      "lessonId": "M04-L14",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "93b442b507fef63d4ab4d11246d19cb956f30e61aa28d47b8fbaf5ef553e059e",
-      "sha256": "70117bc6d1a312cd7b31a6750b1b95342817b9021a20d77f77046fd40e456402",
-      "file": "M04-L14-presentation.pdf",
-      "source": "Модуль 4/Занятие 14/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M04-L15-lecture",
       "lessonId": "M04-L15",
       "kind": "lecture",
@@ -1555,17 +1257,6 @@
       "sha256": "6ea01d4537820bc57b0e31e2fc44be56d3555d90c3a4585585faf40f3b643ef4",
       "file": "M04-L15-lecture.pdf",
       "source": "Снимки страниц.json / ee5bd09a3692cca0628e510b, 109b2759a0bb02391d1f375f"
-    },
-    {
-      "id": "M04-L15-presentation",
-      "lessonId": "M04-L15",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "a38c55e56cd6a4b9e303a9eb77495b5eff084c61e9855117f8cc6d9f6e1e57bf",
-      "sha256": "81be2adb04fff55cc089d21e8a927d04acdac86c39145b9fdb8aa3aeba86c95f",
-      "file": "M04-L15-presentation.pdf",
-      "source": "Модуль 4/Занятие 15/Презентация — итоговая.pptx"
     },
     {
       "id": "M04-L16-lecture",
@@ -1579,17 +1270,6 @@
       "source": "Снимки страниц.json / 74bbabf2c033034394f41575"
     },
     {
-      "id": "M04-L16-presentation",
-      "lessonId": "M04-L16",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "c2f7f202d15a2ceea99501afd5d1936d6d55ce345796001d935e129bc29e29e6",
-      "sha256": "70e6ae9d45232956d0eb9147f9c75884f4413380c10a905bac6e8afdcb8a620a",
-      "file": "M04-L16-presentation.pdf",
-      "source": "Модуль 4/Занятие 16/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M04-L17-lecture",
       "lessonId": "M04-L17",
       "kind": "lecture",
@@ -1601,17 +1281,6 @@
       "source": "Снимки страниц.json / 52525899effc80695937e79b"
     },
     {
-      "id": "M04-L17-presentation",
-      "lessonId": "M04-L17",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "6620118fcbd8bfc04dc87e6148296b895703863ba0f920aaf6846eb4ea261654",
-      "sha256": "37a3cd476c894425757206d6242d6bb646e3c484bec63157d4378269eabf2809",
-      "file": "M04-L17-presentation.pdf",
-      "source": "Модуль 4/Занятие 17/Презентация — итоговая.pptx"
-    },
-    {
       "id": "M05-L01-lecture",
       "lessonId": "M05-L01",
       "kind": "lecture",
@@ -1621,17 +1290,6 @@
       "sha256": "475b52b7bc1bc6de9fcf68334e2a2cf1a3cc25c1c530e96662159f95bf3b7edd",
       "file": "M05-L01-lecture.pdf",
       "source": "Снимки страниц.json / 2555bfaf644bb81dfc62e5db, 124eefa392315df98499ef88"
-    },
-    {
-      "id": "M05-L01-presentation",
-      "lessonId": "M05-L01",
-      "kind": "presentation",
-      "derived": true,
-      "sourceFormat": "pptx",
-      "sourceSha256": "22cd40e0459e2095e0967b674c94cacf77b355c8463a02dff6577808400776d1",
-      "sha256": "7f88d8f9062a39fbf37b74c7731679ae114ef782228bf8fa369052f619e1039f",
-      "file": "M05-L01-presentation.pdf",
-      "source": "Модуль 5/Итоговая защита/Презентация — итоговая.pptx"
     }
   ]
 }

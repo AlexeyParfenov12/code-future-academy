@@ -7,7 +7,7 @@
   "originalTitle": "Тема 13. Занятие 13. Классификация изображений на готовом наборе данных",
   "kind": "lesson",
   "taskCount": 6,
-  "slideCount": 28,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Классификация изображений на готовом наборе данных». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -865,37 +865,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L13/001.svg",
-    "/content/slides/M03-L13/002.svg",
-    "/content/slides/M03-L13/003.svg",
-    "/content/slides/M03-L13/004.svg",
-    "/content/slides/M03-L13/005.svg",
-    "/content/slides/M03-L13/006.svg",
-    "/content/slides/M03-L13/007.svg",
-    "/content/slides/M03-L13/008.svg",
-    "/content/slides/M03-L13/009.svg",
-    "/content/slides/M03-L13/010.svg",
-    "/content/slides/M03-L13/011.svg",
-    "/content/slides/M03-L13/012.svg",
-    "/content/slides/M03-L13/013.svg",
-    "/content/slides/M03-L13/014.svg",
-    "/content/slides/M03-L13/015.svg",
-    "/content/slides/M03-L13/016.svg",
-    "/content/slides/M03-L13/017.svg",
-    "/content/slides/M03-L13/018.svg",
-    "/content/slides/M03-L13/019.svg",
-    "/content/slides/M03-L13/020.svg",
-    "/content/slides/M03-L13/021.svg",
-    "/content/slides/M03-L13/022.svg",
-    "/content/slides/M03-L13/023.svg",
-    "/content/slides/M03-L13/024.svg",
-    "/content/slides/M03-L13/025.svg",
-    "/content/slides/M03-L13/026.svg",
-    "/content/slides/M03-L13/027.svg",
-    "/content/slides/M03-L13/028.svg"
-  ],
-  "deckDownload": "/content/files/M03-L13-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -1003,19 +974,10 @@
         "path": "Снимки страниц.json / 2ab91143dde60e3f08c5b06a",
         "sha256": "d562ebbf53eef794b70c6bb90cdcdae34b38b9bd5fe39c2cadc9667e9e616725"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M03-L13-presentation.pdf",
-      "name": "Классификация изображений на готовом наборе данных — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 28,
-      "sha256": "ad5592d944fa1749da0a8324fe5abde9b0b448ea3e09d4a10e5411109c3f955a",
-      "source": {
-        "path": "Модуль 3/Занятие 13/Презентация — итоговая.pptx",
-        "sha256": "e47b678d4b94a69c614ac22513dfe2f0e83c148ac849fb16ec8bf51fd6858e2d"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

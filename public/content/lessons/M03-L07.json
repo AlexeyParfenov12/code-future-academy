@@ -7,7 +7,7 @@
   "originalTitle": "Тема 7. Занятие 7. Оценка качества классификации - accuracy",
   "kind": "lesson",
   "taskCount": 4,
-  "slideCount": 12,
+  "slideCount": 14,
   "fileCount": 4,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Оценка качества классификации - accuracy». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -475,21 +475,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L07/001.svg",
-    "/content/slides/M03-L07/002.svg",
-    "/content/slides/M03-L07/003.svg",
-    "/content/slides/M03-L07/004.svg",
-    "/content/slides/M03-L07/005.svg",
-    "/content/slides/M03-L07/006.svg",
-    "/content/slides/M03-L07/007.svg",
-    "/content/slides/M03-L07/008.svg",
-    "/content/slides/M03-L07/009.svg",
-    "/content/slides/M03-L07/010.svg",
-    "/content/slides/M03-L07/011.svg",
-    "/content/slides/M03-L07/012.svg"
-  ],
-  "deckDownload": "/content/files/M03-L07-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L07-original-student.pptx",
   "files": [
     {
       "id": "96a4e50689486715.ipynb",
@@ -819,16 +806,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L07-presentation.pdf",
-      "name": "Оценка качества классификации - accuracy — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Оценка качества классификации - accuracy — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 12,
-      "sha256": "4f8b26aab83de759181fd3961ec033fe3b015fe31ba26d78f31d464dc9bf3d93",
+      "pageCount": 14,
+      "sha256": "b76ba4c79923545e701a9246501b994aa52b6f1782dd6583a971006878e175da",
       "source": {
-        "path": "Модуль 3/Занятие 07/Презентация — итоговая.pptx",
-        "sha256": "9637516d954b122eec2bbcbdc09831f1b9c5462f55d5f57f9cf4712235cf728d"
+        "path": "lesson_3_7_accuracy_fa3a12.pptx",
+        "sha256": "fa3a12fd7ded06330a9ac9bbccfb952825e6faaedf56987799d2b08d7bf37174"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_3_7_accuracy_fa3a12.pptx",
+    "sourceSha256": "fa3a12fd7ded06330a9ac9bbccfb952825e6faaedf56987799d2b08d7bf37174",
+    "slideCount": 14
   }
 }

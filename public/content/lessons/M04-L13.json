@@ -7,7 +7,7 @@
   "originalTitle": "Тема 13. Занятие 13. Оформление рабочего продукта и документации",
   "kind": "lesson",
   "taskCount": 6,
-  "slideCount": 20,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Оформление рабочего продукта и документации». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -537,29 +537,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L13/001.svg",
-    "/content/slides/M04-L13/002.svg",
-    "/content/slides/M04-L13/003.svg",
-    "/content/slides/M04-L13/004.svg",
-    "/content/slides/M04-L13/005.svg",
-    "/content/slides/M04-L13/006.svg",
-    "/content/slides/M04-L13/007.svg",
-    "/content/slides/M04-L13/008.svg",
-    "/content/slides/M04-L13/009.svg",
-    "/content/slides/M04-L13/010.svg",
-    "/content/slides/M04-L13/011.svg",
-    "/content/slides/M04-L13/012.svg",
-    "/content/slides/M04-L13/013.svg",
-    "/content/slides/M04-L13/014.svg",
-    "/content/slides/M04-L13/015.svg",
-    "/content/slides/M04-L13/016.svg",
-    "/content/slides/M04-L13/017.svg",
-    "/content/slides/M04-L13/018.svg",
-    "/content/slides/M04-L13/019.svg",
-    "/content/slides/M04-L13/020.svg"
-  ],
-  "deckDownload": "/content/files/M04-L13-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -661,19 +640,10 @@
         "path": "Снимки страниц.json / 95d39b9d41d4a385c9ec9793",
         "sha256": "f0dd86f10533c82e5aa92d0a04c2f94419f73fd8086962186231d2db55a9d689"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L13-presentation.pdf",
-      "name": "Оформление рабочего продукта и документации — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 20,
-      "sha256": "dc101049621c24c454437e68062e3d439624b44054936a2bd335439d2c0100ad",
-      "source": {
-        "path": "Модуль 4/Занятие 13/Презентация — итоговая.pptx",
-        "sha256": "63ae1a549e07c394dc6ffc9488b0c37ae4e9644acf1cee3d3841470bb4d0c55f"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

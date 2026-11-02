@@ -7,7 +7,7 @@
   "originalTitle": "Тема 15. Занятие 15. Работа с CSV-файлом в Python",
   "kind": "lesson",
   "taskCount": 9,
-  "slideCount": 8,
+  "slideCount": 14,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Работа с CSV-файлом в Python». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -733,17 +733,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L15/001.svg",
-    "/content/slides/M01-L15/002.svg",
-    "/content/slides/M01-L15/003.svg",
-    "/content/slides/M01-L15/004.svg",
-    "/content/slides/M01-L15/005.svg",
-    "/content/slides/M01-L15/006.svg",
-    "/content/slides/M01-L15/007.svg",
-    "/content/slides/M01-L15/008.svg"
-  ],
-  "deckDownload": "/content/files/M01-L15-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L15-original-student.pptx",
   "files": [
     {
       "id": "cf2db116fec7cd9a.ipynb",
@@ -1064,16 +1055,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L15-presentation.pdf",
-      "name": "Работа с CSV-файлом в Python — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Работа с CSV-файлом в Python — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 8,
-      "sha256": "7e2d692db35c8b52d8715ae3b09385a9e94c6bd52f4e5b752a9ec8d7db046e57",
+      "pageCount": 14,
+      "sha256": "d69eeff34f47277a94eae6f49e76151f1cf96e24eb134611553b61b06db132d8",
       "source": {
-        "path": "Модуль 1/Занятие 15/Презентация — итоговая.pptx",
-        "sha256": "125d60cd5e9c689e8c5bdf0fdf06d779d4c8b9a198e56462ce65be5f0d9dd2a9"
+        "path": "lesson_1_15_csv_10_11_spo_reworked_701404.pptx",
+        "sha256": "70140404719a56bdb9bf26010dc14a5f42552b7b26cfcbfc3b26a77c675de901"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_1_15_csv_10_11_spo_reworked_701404.pptx",
+    "sourceSha256": "70140404719a56bdb9bf26010dc14a5f42552b7b26cfcbfc3b26a77c675de901",
+    "slideCount": 14
   }
 }

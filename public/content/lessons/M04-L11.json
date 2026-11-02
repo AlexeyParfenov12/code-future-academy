@@ -7,7 +7,7 @@
   "originalTitle": "Тема 11. Занятие 11. Тестирование и оценка качества прикладного решения",
   "kind": "lesson",
   "taskCount": 5,
-  "slideCount": 20,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Тестирование и оценка качества прикладного решения». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -505,29 +505,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L11/001.svg",
-    "/content/slides/M04-L11/002.svg",
-    "/content/slides/M04-L11/003.svg",
-    "/content/slides/M04-L11/004.svg",
-    "/content/slides/M04-L11/005.svg",
-    "/content/slides/M04-L11/006.svg",
-    "/content/slides/M04-L11/007.svg",
-    "/content/slides/M04-L11/008.svg",
-    "/content/slides/M04-L11/009.svg",
-    "/content/slides/M04-L11/010.svg",
-    "/content/slides/M04-L11/011.svg",
-    "/content/slides/M04-L11/012.svg",
-    "/content/slides/M04-L11/013.svg",
-    "/content/slides/M04-L11/014.svg",
-    "/content/slides/M04-L11/015.svg",
-    "/content/slides/M04-L11/016.svg",
-    "/content/slides/M04-L11/017.svg",
-    "/content/slides/M04-L11/018.svg",
-    "/content/slides/M04-L11/019.svg",
-    "/content/slides/M04-L11/020.svg"
-  ],
-  "deckDownload": "/content/files/M04-L11-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -626,19 +605,10 @@
         "path": "Снимки страниц.json / cc29e6d3125ac4371219adfb",
         "sha256": "dee8573bbcd90690fcfbd1c709aa16819505c7456b282954a9db25177809df2b"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L11-presentation.pdf",
-      "name": "Тестирование и оценка качества прикладного решения — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 20,
-      "sha256": "c7bffa952736354893bd3e1a4153e70ecea477b9e29d744bd2ddcd37ef23d895",
-      "source": {
-        "path": "Модуль 4/Занятие 11/Презентация — итоговая.pptx",
-        "sha256": "f93aba2a953038fe5917fa4ee8af75184443d356b38ee5934313eea39fe0c964"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

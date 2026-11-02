@@ -7,7 +7,7 @@
   "originalTitle": "Тема 8. Занятие 8. Создание первого прототипа прикладного ИИ-решения",
   "kind": "lesson",
   "taskCount": 7,
-  "slideCount": 33,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Создание первого прототипа прикладного ИИ-решения». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -1309,42 +1309,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L08/001.svg",
-    "/content/slides/M04-L08/002.svg",
-    "/content/slides/M04-L08/003.svg",
-    "/content/slides/M04-L08/004.svg",
-    "/content/slides/M04-L08/005.svg",
-    "/content/slides/M04-L08/006.svg",
-    "/content/slides/M04-L08/007.svg",
-    "/content/slides/M04-L08/008.svg",
-    "/content/slides/M04-L08/009.svg",
-    "/content/slides/M04-L08/010.svg",
-    "/content/slides/M04-L08/011.svg",
-    "/content/slides/M04-L08/012.svg",
-    "/content/slides/M04-L08/013.svg",
-    "/content/slides/M04-L08/014.svg",
-    "/content/slides/M04-L08/015.svg",
-    "/content/slides/M04-L08/016.svg",
-    "/content/slides/M04-L08/017.svg",
-    "/content/slides/M04-L08/018.svg",
-    "/content/slides/M04-L08/019.svg",
-    "/content/slides/M04-L08/020.svg",
-    "/content/slides/M04-L08/021.svg",
-    "/content/slides/M04-L08/022.svg",
-    "/content/slides/M04-L08/023.svg",
-    "/content/slides/M04-L08/024.svg",
-    "/content/slides/M04-L08/025.svg",
-    "/content/slides/M04-L08/026.svg",
-    "/content/slides/M04-L08/027.svg",
-    "/content/slides/M04-L08/028.svg",
-    "/content/slides/M04-L08/029.svg",
-    "/content/slides/M04-L08/030.svg",
-    "/content/slides/M04-L08/031.svg",
-    "/content/slides/M04-L08/032.svg",
-    "/content/slides/M04-L08/033.svg"
-  ],
-  "deckDownload": "/content/files/M04-L08-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -1471,19 +1437,10 @@
         "path": "Снимки страниц.json / e042f7fc3e427c078704cd56, 073a12dcfbea4042e6082292",
         "sha256": "43b313466f010eb7ea7dc5ac75aa97a3dcf947f9f45b8829a7c53988e18738fa"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L08-presentation.pdf",
-      "name": "Создание первого прототипа прикладного ИИ-решения — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 33,
-      "sha256": "cec68c36ee958ca560424bf4f42c3627a0793f7f3c78fc6dff99e77a8cec20ae",
-      "source": {
-        "path": "Модуль 4/Занятие 08/Презентация — итоговая.pptx",
-        "sha256": "8a059ca86fe026df3a9811fd4853c0ca5957df77335fa54ef31db033ad404aac"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

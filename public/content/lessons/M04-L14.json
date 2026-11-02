@@ -7,7 +7,7 @@
   "originalTitle": "Тема 14. Занятие 14. Самостоятельная работа - техническое описание решения",
   "kind": "lesson",
   "taskCount": 7,
-  "slideCount": 16,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Самостоятельная работа - техническое описание решения». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -628,25 +628,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L14/001.svg",
-    "/content/slides/M04-L14/002.svg",
-    "/content/slides/M04-L14/003.svg",
-    "/content/slides/M04-L14/004.svg",
-    "/content/slides/M04-L14/005.svg",
-    "/content/slides/M04-L14/006.svg",
-    "/content/slides/M04-L14/007.svg",
-    "/content/slides/M04-L14/008.svg",
-    "/content/slides/M04-L14/009.svg",
-    "/content/slides/M04-L14/010.svg",
-    "/content/slides/M04-L14/011.svg",
-    "/content/slides/M04-L14/012.svg",
-    "/content/slides/M04-L14/013.svg",
-    "/content/slides/M04-L14/014.svg",
-    "/content/slides/M04-L14/015.svg",
-    "/content/slides/M04-L14/016.svg"
-  ],
-  "deckDownload": "/content/files/M04-L14-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -762,19 +745,10 @@
         "path": "Снимки страниц.json / 8f4616a3985bedd14484f657, 6aba89237b615504cf97b3ad",
         "sha256": "5c8b366b59ee618f7e096171b26e5543ee56bc686222d66167338a2e0c85af38"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L14-presentation.pdf",
-      "name": "Самостоятельная работа - техническое описание решения — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 16,
-      "sha256": "70117bc6d1a312cd7b31a6750b1b95342817b9021a20d77f77046fd40e456402",
-      "source": {
-        "path": "Модуль 4/Занятие 14/Презентация — итоговая.pptx",
-        "sha256": "93b442b507fef63d4ab4d11246d19cb956f30e61aa28d47b8fbaf5ef553e059e"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

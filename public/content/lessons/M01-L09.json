@@ -7,7 +7,7 @@
   "originalTitle": "Тема 9. Занятие 9. Структурированные данные - словари и записи объектов",
   "kind": "lesson",
   "taskCount": 8,
-  "slideCount": 9,
+  "slideCount": 0,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Структурированные данные - словари и записи объектов». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -629,18 +629,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L09/001.svg",
-    "/content/slides/M01-L09/002.svg",
-    "/content/slides/M01-L09/003.svg",
-    "/content/slides/M01-L09/004.svg",
-    "/content/slides/M01-L09/005.svg",
-    "/content/slides/M01-L09/006.svg",
-    "/content/slides/M01-L09/007.svg",
-    "/content/slides/M01-L09/008.svg",
-    "/content/slides/M01-L09/009.svg"
-  ],
-  "deckDownload": "/content/files/M01-L09-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [
     {
       "id": "949baa615dfae273.pdf",
@@ -770,19 +760,10 @@
         "path": "ef5c5750c41a_Занятие 1.9. Структурированные данные - словари и записи объектов — теория.pdf",
         "sha256": "949baa615dfae273798815867219a13f4713c89c817b0279fc9f9db27b969967"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M01-L09-presentation.pdf",
-      "name": "Структурированные данные - словари и записи объектов — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 9,
-      "sha256": "65004fbced1b75a106b2774c047d5aa58780960e29e1b0dccbe1cb04fb0d159f",
-      "source": {
-        "path": "Модуль 1/Занятие 09/Презентация — итоговая.pptx",
-        "sha256": "67064ac518c4ee32fd962690d7b28175427ed0467afee9a8aedf57903bb64c77"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

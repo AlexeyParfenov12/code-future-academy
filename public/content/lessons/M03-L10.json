@@ -7,7 +7,7 @@
   "originalTitle": "Тема 10. Занятие 10. Ошибка регрессии - насколько модель промахнулась",
   "kind": "lesson",
   "taskCount": 3,
-  "slideCount": 13,
+  "slideCount": 14,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Ошибка регрессии - насколько модель промахнулась». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -246,22 +246,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L10/001.svg",
-    "/content/slides/M03-L10/002.svg",
-    "/content/slides/M03-L10/003.svg",
-    "/content/slides/M03-L10/004.svg",
-    "/content/slides/M03-L10/005.svg",
-    "/content/slides/M03-L10/006.svg",
-    "/content/slides/M03-L10/007.svg",
-    "/content/slides/M03-L10/008.svg",
-    "/content/slides/M03-L10/009.svg",
-    "/content/slides/M03-L10/010.svg",
-    "/content/slides/M03-L10/011.svg",
-    "/content/slides/M03-L10/012.svg",
-    "/content/slides/M03-L10/013.svg"
-  ],
-  "deckDownload": "/content/files/M03-L10-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L10-original-student.pptx",
   "files": [
     {
       "id": "8d1c6fc9aa025473.ipynb",
@@ -532,16 +518,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L10-presentation.pdf",
-      "name": "Ошибка регрессии - насколько модель промахнулась — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Ошибка регрессии - насколько модель промахнулась — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 13,
-      "sha256": "7bf19c0ea00f9a65c40aa4b8955ccbf06089d96960e6a399ac871be6b16b75f9",
+      "pageCount": 14,
+      "sha256": "dd6c8c649d10bd89bbb21117e802b6724e37b1147138893c16ebb842126588d0",
       "source": {
-        "path": "Модуль 3/Занятие 10/Презентация — итоговая.pptx",
-        "sha256": "603ae05f79397f2ac8172e59fb1d06b9b766084147481d56ec1cd76c9b7f210a"
+        "path": "lesson_3_10_regression_error_8d587a.pptx",
+        "sha256": "8d587a43b9c0f8d4786bd8c56059fb9ba2844989037c4dfd89f78182b14d5e89"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_3_10_regression_error_8d587a.pptx",
+    "sourceSha256": "8d587a43b9c0f8d4786bd8c56059fb9ba2844989037c4dfd89f78182b14d5e89",
+    "slideCount": 14
   }
 }

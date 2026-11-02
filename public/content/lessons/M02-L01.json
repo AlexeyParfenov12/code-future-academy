@@ -7,7 +7,7 @@
   "originalTitle": "Тема 1. Занятие 1. Зачем ИИ нужна математика",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 19,
+  "slideCount": 12,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Зачем ИИ нужна математика». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,28 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L01/001.svg",
-    "/content/slides/M02-L01/002.svg",
-    "/content/slides/M02-L01/003.svg",
-    "/content/slides/M02-L01/004.svg",
-    "/content/slides/M02-L01/005.svg",
-    "/content/slides/M02-L01/006.svg",
-    "/content/slides/M02-L01/007.svg",
-    "/content/slides/M02-L01/008.svg",
-    "/content/slides/M02-L01/009.svg",
-    "/content/slides/M02-L01/010.svg",
-    "/content/slides/M02-L01/011.svg",
-    "/content/slides/M02-L01/012.svg",
-    "/content/slides/M02-L01/013.svg",
-    "/content/slides/M02-L01/014.svg",
-    "/content/slides/M02-L01/015.svg",
-    "/content/slides/M02-L01/016.svg",
-    "/content/slides/M02-L01/017.svg",
-    "/content/slides/M02-L01/018.svg",
-    "/content/slides/M02-L01/019.svg"
-  ],
-  "deckDownload": "/content/files/M02-L01-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M02-L01-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -85,16 +65,22 @@
     },
     "presentation": {
       "url": "/content/documents/M02-L01-presentation.pdf",
-      "name": "Зачем ИИ нужна математика — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Зачем ИИ нужна математика — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 19,
-      "sha256": "221752f16c29714393b0d96c6e8def5591f292a198ae47df8e621cd833412c9d",
+      "pageCount": 12,
+      "sha256": "7acc7e058dc4fe16e7b3be83b89087053d8b88a0f5cb4622f0a48cff5e606361",
       "source": {
-        "path": "Модуль 2/Занятие 01/Презентация — итоговая.pptx",
-        "sha256": "9727ef735d55b10554fd3e26f00565aacf6342d6c2fcde3603289589d5d55795"
+        "path": "presentation_Зачем ИИ нужна математика_1960d7.pptx",
+        "sha256": "1960d7f4a27dd5bb5f79b103ad1b23e01ad658989b427fa0fe316aaebcb40f5d"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "presentation_Зачем ИИ нужна математика_1960d7.pptx",
+    "sourceSha256": "1960d7f4a27dd5bb5f79b103ad1b23e01ad658989b427fa0fe316aaebcb40f5d",
+    "slideCount": 12
   }
 }

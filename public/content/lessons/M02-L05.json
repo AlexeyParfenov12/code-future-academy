@@ -7,7 +7,7 @@
   "originalTitle": "Тема 5. Занятие 5. Ошибка модели - как измерить неправильный ответ",
   "kind": "lesson",
   "taskCount": 4,
-  "slideCount": 10,
+  "slideCount": 14,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Ошибка модели - как измерить неправильный ответ». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -387,19 +387,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L05/001.svg",
-    "/content/slides/M02-L05/002.svg",
-    "/content/slides/M02-L05/003.svg",
-    "/content/slides/M02-L05/004.svg",
-    "/content/slides/M02-L05/005.svg",
-    "/content/slides/M02-L05/006.svg",
-    "/content/slides/M02-L05/007.svg",
-    "/content/slides/M02-L05/008.svg",
-    "/content/slides/M02-L05/009.svg",
-    "/content/slides/M02-L05/010.svg"
-  ],
-  "deckDownload": "/content/files/M02-L05-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M02-L05-original-student.pptx",
   "files": [
     {
       "id": "c50e09e38d4bb1e8.csv",
@@ -645,16 +634,22 @@
     },
     "presentation": {
       "url": "/content/documents/M02-L05-presentation.pdf",
-      "name": "Ошибка модели - как измерить неправильный ответ — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Ошибка модели - как измерить неправильный ответ — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 10,
-      "sha256": "5ec66db7d2a3b81e486b98f095571e5a32c135aa3e414817b811957187cbbc8a",
+      "pageCount": 14,
+      "sha256": "0dd0274518a1f29fc31a9d5d7395e8616cc3af47df4f9a4babaf4e49fcaf566c",
       "source": {
-        "path": "Модуль 2/Занятие 05/Презентация — итоговая.pptx",
-        "sha256": "18e08ba59e4ba76ac0d4633ededde4c15aabad61376cf94c598f13216a78070e"
+        "path": "Урок_2_5_Ошибка_модели_презентация_e0f002.pptx",
+        "sha256": "e0f002d31d07d281280adee0133b83b71e6ee57407c8478d75e5291088cd6698"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Урок_2_5_Ошибка_модели_презентация_e0f002.pptx",
+    "sourceSha256": "e0f002d31d07d281280adee0133b83b71e6ee57407c8478d75e5291088cd6698",
+    "slideCount": 14
   }
 }

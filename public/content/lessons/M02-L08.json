@@ -7,7 +7,7 @@
   "originalTitle": "Тема 8. Занятие 8. Вероятность события",
   "kind": "lesson",
   "taskCount": 3,
-  "slideCount": 18,
+  "slideCount": 14,
   "fileCount": 4,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Вероятность события». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -334,27 +334,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L08/001.svg",
-    "/content/slides/M02-L08/002.svg",
-    "/content/slides/M02-L08/003.svg",
-    "/content/slides/M02-L08/004.svg",
-    "/content/slides/M02-L08/005.svg",
-    "/content/slides/M02-L08/006.svg",
-    "/content/slides/M02-L08/007.svg",
-    "/content/slides/M02-L08/008.svg",
-    "/content/slides/M02-L08/009.svg",
-    "/content/slides/M02-L08/010.svg",
-    "/content/slides/M02-L08/011.svg",
-    "/content/slides/M02-L08/012.svg",
-    "/content/slides/M02-L08/013.svg",
-    "/content/slides/M02-L08/014.svg",
-    "/content/slides/M02-L08/015.svg",
-    "/content/slides/M02-L08/016.svg",
-    "/content/slides/M02-L08/017.svg",
-    "/content/slides/M02-L08/018.svg"
-  ],
-  "deckDownload": "/content/files/M02-L08-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M02-L08-original-student.pptx",
   "files": [
     {
       "id": "1314431636f77f84.csv",
@@ -581,16 +562,22 @@
     },
     "presentation": {
       "url": "/content/documents/M02-L08-presentation.pdf",
-      "name": "Вероятность события — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Вероятность события — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 18,
-      "sha256": "fdf3d4517da21646ad7bc59aa1a009deb8ccc889f6c6d6c9ce39c18a0caaaf53",
+      "pageCount": 14,
+      "sha256": "b2fbb292541d7ab137604a9ed3823a340d605ea59cd24d1472fe96ccdeb9fffb",
       "source": {
-        "path": "Модуль 2/Занятие 08/Презентация — итоговая.pptx",
-        "sha256": "fce970e4e048f8b2ee26449831b60803c19d6f0a4b1ce5dadcf5fc30692f47e3"
+        "path": "Урок_2_8_Вероятность_события_презентация_v2_c71561.pptx",
+        "sha256": "c71561d46d3da9f7cf08157955a714e17cb56d38c5b3f74f309c711b7858fd6d"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Урок_2_8_Вероятность_события_презентация_v2_c71561.pptx",
+    "sourceSha256": "c71561d46d3da9f7cf08157955a714e17cb56d38c5b3f74f309c711b7858fd6d",
+    "slideCount": 14
   }
 }

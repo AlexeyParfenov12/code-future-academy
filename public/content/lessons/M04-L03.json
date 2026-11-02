@@ -7,7 +7,7 @@
   "originalTitle": "Тема 3. Занятие 3. Выбор проекта под профессиональный сценарий",
   "kind": "lesson",
   "taskCount": 2,
-  "slideCount": 15,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Выбор проекта под профессиональный сценарий». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -139,24 +139,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L03/001.svg",
-    "/content/slides/M04-L03/002.svg",
-    "/content/slides/M04-L03/003.svg",
-    "/content/slides/M04-L03/004.svg",
-    "/content/slides/M04-L03/005.svg",
-    "/content/slides/M04-L03/006.svg",
-    "/content/slides/M04-L03/007.svg",
-    "/content/slides/M04-L03/008.svg",
-    "/content/slides/M04-L03/009.svg",
-    "/content/slides/M04-L03/010.svg",
-    "/content/slides/M04-L03/011.svg",
-    "/content/slides/M04-L03/012.svg",
-    "/content/slides/M04-L03/013.svg",
-    "/content/slides/M04-L03/014.svg",
-    "/content/slides/M04-L03/015.svg"
-  ],
-  "deckDownload": "/content/files/M04-L03-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -213,19 +197,10 @@
         "path": "Снимки страниц.json / 372f44322e7569c1a8b66437",
         "sha256": "cb4ecbfff34308cddab68ee762bfa52dc12ccfce8f71922b1f02260ec9180cba"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L03-presentation.pdf",
-      "name": "Выбор проекта под профессиональный сценарий — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 15,
-      "sha256": "d586b0a60d19660cacf2a18a396e6648ebfeefab8322bb0b7b81ebfc90b08a68",
-      "source": {
-        "path": "Модуль 4/Занятие 03/Презентация — итоговая.pptx",
-        "sha256": "e11162beaf3cda01487745202b48a0f4f2c3266fd42683162c055efc00447c43"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

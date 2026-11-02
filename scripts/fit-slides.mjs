@@ -4,7 +4,15 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {chromium} from '@playwright/test';
 const base=path.resolve('public/content');
-const files=fs.readdirSync(path.join(base,'slides'),{withFileTypes:true}).flatMap(d=>fs.readdirSync(path.join(base,'slides',d.name)).map(f=>path.join(base,'slides',d.name,f)));
+const slidesDirectory=path.join(base,'slides');
+const files=fs.existsSync(slidesDirectory)?fs.readdirSync(slidesDirectory,{withFileTypes:true}).filter(d=>d.isDirectory()).flatMap(d=>fs.readdirSync(path.join(slidesDirectory,d.name)).map(f=>path.join(slidesDirectory,d.name,f))):[];
+if(!files.length){
+ const catalog=JSON.parse(fs.readFileSync(path.join(base,'index.json'),'utf8'));
+ const report={renderer:'Microsoft PowerPoint native PDF export; original iSMART attachments',slideCount:catalog.counts.slides,presentations:catalog.counts.presentations,preparedPresentationsPublished:0,adjustedBlocks:0,overflowingBlocks:0,adjustments:[],hashes:{}};
+ fs.writeFileSync(path.join(base,'slide-render-report.json'),JSON.stringify(report,null,2)+'\n');
+ const reportPath=path.join(base,'import-report.json');const imported=JSON.parse(fs.readFileSync(reportPath,'utf8'));imported.rendering=report;fs.writeFileSync(reportPath,JSON.stringify(imported,null,2)+'\n');
+ console.log('Original presentation PDFs: '+report.presentations+' / '+report.slideCount+' slides. No authored slide replacements.');process.exit(0);
+}
 const digest=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex');
 const previousPath=path.join(base,'slide-render-report.json');
 const previous=fs.existsSync(previousPath)?JSON.parse(fs.readFileSync(previousPath,'utf8')):null;

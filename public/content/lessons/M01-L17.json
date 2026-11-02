@@ -7,7 +7,7 @@
   "originalTitle": "Тема 17. Занятие 17. Первые визуализации данных",
   "kind": "lesson",
   "taskCount": 1,
-  "slideCount": 15,
+  "slideCount": 14,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Первые визуализации данных». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -401,24 +401,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L17/001.svg",
-    "/content/slides/M01-L17/002.svg",
-    "/content/slides/M01-L17/003.svg",
-    "/content/slides/M01-L17/004.svg",
-    "/content/slides/M01-L17/005.svg",
-    "/content/slides/M01-L17/006.svg",
-    "/content/slides/M01-L17/007.svg",
-    "/content/slides/M01-L17/008.svg",
-    "/content/slides/M01-L17/009.svg",
-    "/content/slides/M01-L17/010.svg",
-    "/content/slides/M01-L17/011.svg",
-    "/content/slides/M01-L17/012.svg",
-    "/content/slides/M01-L17/013.svg",
-    "/content/slides/M01-L17/014.svg",
-    "/content/slides/M01-L17/015.svg"
-  ],
-  "deckDownload": "/content/files/M01-L17-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L17-original-student.pptx",
   "files": [
     {
       "id": "19ef85529ea14e13.csv",
@@ -718,16 +702,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L17-presentation.pdf",
-      "name": "Первые визуализации данных — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Первые визуализации данных — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 15,
-      "sha256": "635e07efe442b5bc842af8b1382aa3d5dd5da319b2d19fbd4185a3672e25df7d",
+      "pageCount": 14,
+      "sha256": "78e03a60726de61ff7c6af44a1005f119de3547ccef453e8bfda938216c673b1",
       "source": {
-        "path": "Модуль 1/Занятие 17/Презентация — итоговая.pptx",
-        "sha256": "839be14e886be4ad074cd9becbacd46d8c8919eb3d3a6fc471b860f829941d88"
+        "path": "lesson_1_17_Презентация_6cdab2.pptx",
+        "sha256": "6cdab2339a4a2898bcf5e1d850658a514adc2c60b9e7dd9732295cbce24124a2"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_1_17_Презентация_6cdab2.pptx",
+    "sourceSha256": "6cdab2339a4a2898bcf5e1d850658a514adc2c60b9e7dd9732295cbce24124a2",
+    "slideCount": 14
   }
 }

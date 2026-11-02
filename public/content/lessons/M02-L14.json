@@ -7,7 +7,7 @@
   "originalTitle": "Тема 14. Занятие 14. Корреляция - связаны ли два признака",
   "kind": "lesson",
   "taskCount": 10,
-  "slideCount": 11,
+  "slideCount": 0,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Корреляция - связаны ли два признака». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -1091,20 +1091,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L14/001.svg",
-    "/content/slides/M02-L14/002.svg",
-    "/content/slides/M02-L14/003.svg",
-    "/content/slides/M02-L14/004.svg",
-    "/content/slides/M02-L14/005.svg",
-    "/content/slides/M02-L14/006.svg",
-    "/content/slides/M02-L14/007.svg",
-    "/content/slides/M02-L14/008.svg",
-    "/content/slides/M02-L14/009.svg",
-    "/content/slides/M02-L14/010.svg",
-    "/content/slides/M02-L14/011.svg"
-  ],
-  "deckDownload": "/content/files/M02-L14-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [
     {
       "id": "6c1ae31796ad42d9.pdf",
@@ -1249,19 +1237,10 @@
         "path": "710040d8889e_Занятие 2.14. Корреляция - связаны ли два признака — теория.pdf",
         "sha256": "6c1ae31796ad42d9d0ee688afd9d39f9a307ab30e2396a7739e9c2f2c7dba1e5"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L14-presentation.pdf",
-      "name": "Корреляция - связаны ли два признака — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 11,
-      "sha256": "1fc4305c6c9412438b354c7f16f28206edb8ffcf2562867605c55b922f12cc5b",
-      "source": {
-        "path": "Модуль 2/Занятие 14/Презентация — итоговая.pptx",
-        "sha256": "74c601fb41e8623ba5839d6598de30bb5b04c4dab4debac2f7ae8f00427eab66"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

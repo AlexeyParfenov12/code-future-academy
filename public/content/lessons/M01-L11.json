@@ -7,7 +7,7 @@
   "originalTitle": "Тема 11. Занятие 11. Датасет, объект, признак, класс",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 20,
+  "slideCount": 16,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Датасет, объект, признак, класс». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,29 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L11/001.svg",
-    "/content/slides/M01-L11/002.svg",
-    "/content/slides/M01-L11/003.svg",
-    "/content/slides/M01-L11/004.svg",
-    "/content/slides/M01-L11/005.svg",
-    "/content/slides/M01-L11/006.svg",
-    "/content/slides/M01-L11/007.svg",
-    "/content/slides/M01-L11/008.svg",
-    "/content/slides/M01-L11/009.svg",
-    "/content/slides/M01-L11/010.svg",
-    "/content/slides/M01-L11/011.svg",
-    "/content/slides/M01-L11/012.svg",
-    "/content/slides/M01-L11/013.svg",
-    "/content/slides/M01-L11/014.svg",
-    "/content/slides/M01-L11/015.svg",
-    "/content/slides/M01-L11/016.svg",
-    "/content/slides/M01-L11/017.svg",
-    "/content/slides/M01-L11/018.svg",
-    "/content/slides/M01-L11/019.svg",
-    "/content/slides/M01-L11/020.svg"
-  ],
-  "deckDownload": "/content/files/M01-L11-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L11-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -86,16 +65,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L11-presentation.pdf",
-      "name": "Датасет, объект, признак, класс — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Датасет, объект, признак, класс — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 20,
-      "sha256": "e749514058b5b75d910554cb5474c003da03946e2ed6a1ae9c15b8b32b601ffb",
+      "pageCount": 16,
+      "sha256": "3212a218c7a89a7a8dd648b28832caf33f2ef03678bc78197aeeeb7bfd39661f",
       "source": {
-        "path": "Модуль 1/Занятие 11/Презентация — итоговая.pptx",
-        "sha256": "916cdbb6c85b9e3d2b70a0d5c5a343fa642d99085fb79ee249eb0818d400fa51"
+        "path": "Урок_1_11_Датасет_объект_признак_класс_презентация_обновленная_7a3216.pptx",
+        "sha256": "7a3216417106f3fcb33d06c5879ad689867335859dc03bd1a67893f8f12c91c5"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Урок_1_11_Датасет_объект_признак_класс_презентация_обновленная_7a3216.pptx",
+    "sourceSha256": "7a3216417106f3fcb33d06c5879ad689867335859dc03bd1a67893f8f12c91c5",
+    "slideCount": 16
   }
 }

@@ -7,7 +7,7 @@
   "originalTitle": "Тема 9. Занятие 9. Регрессия в Scikit-learn",
   "kind": "lesson",
   "taskCount": 3,
-  "slideCount": 13,
+  "slideCount": 16,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Регрессия в Scikit-learn». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -503,22 +503,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L09/001.svg",
-    "/content/slides/M03-L09/002.svg",
-    "/content/slides/M03-L09/003.svg",
-    "/content/slides/M03-L09/004.svg",
-    "/content/slides/M03-L09/005.svg",
-    "/content/slides/M03-L09/006.svg",
-    "/content/slides/M03-L09/007.svg",
-    "/content/slides/M03-L09/008.svg",
-    "/content/slides/M03-L09/009.svg",
-    "/content/slides/M03-L09/010.svg",
-    "/content/slides/M03-L09/011.svg",
-    "/content/slides/M03-L09/012.svg",
-    "/content/slides/M03-L09/013.svg"
-  ],
-  "deckDownload": "/content/files/M03-L09-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L09-original-student.pptx",
   "files": [
     {
       "id": "f286ce785aaeab40.csv",
@@ -734,16 +720,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L09-presentation.pdf",
-      "name": "Регрессия в Scikit-learn — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Регрессия в Scikit-learn — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 13,
-      "sha256": "d39a04d8161e26621d980f5cc5303f631d966a9a75b76fe236cdc874fc045240",
+      "pageCount": 16,
+      "sha256": "1170ac0303e23cb5e4cb49bc9a202f7efe9df6ffe9dc8390ad274394dd7eb9f5",
       "source": {
-        "path": "Модуль 3/Занятие 09/Презентация — итоговая.pptx",
-        "sha256": "3c6d3f9bc9ce6cdad9366e940358ac30c3937583febca419e6829bac8cec422e"
+        "path": "lesson_3_9_regression_sklearn_f884bb.pptx",
+        "sha256": "f884bba5a3854faa47de14ea14c0794aefd42c583a712b9f40864563ca3af492"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_3_9_regression_sklearn_f884bb.pptx",
+    "sourceSha256": "f884bba5a3854faa47de14ea14c0794aefd42c583a712b9f40864563ca3af492",
+    "slideCount": 16
   }
 }

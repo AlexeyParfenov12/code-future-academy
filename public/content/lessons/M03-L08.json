@@ -7,7 +7,7 @@
   "originalTitle": "Тема 8. Занятие 8. Матрица ошибок и анализ ошибок модели",
   "kind": "lesson",
   "taskCount": 3,
-  "slideCount": 11,
+  "slideCount": 15,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Матрица ошибок и анализ ошибок модели». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -475,20 +475,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L08/001.svg",
-    "/content/slides/M03-L08/002.svg",
-    "/content/slides/M03-L08/003.svg",
-    "/content/slides/M03-L08/004.svg",
-    "/content/slides/M03-L08/005.svg",
-    "/content/slides/M03-L08/006.svg",
-    "/content/slides/M03-L08/007.svg",
-    "/content/slides/M03-L08/008.svg",
-    "/content/slides/M03-L08/009.svg",
-    "/content/slides/M03-L08/010.svg",
-    "/content/slides/M03-L08/011.svg"
-  ],
-  "deckDownload": "/content/files/M03-L08-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M03-L08-original-student.pptx",
   "files": [
     {
       "id": "b6b8efc86732bc48.csv",
@@ -653,16 +641,22 @@
     },
     "presentation": {
       "url": "/content/documents/M03-L08-presentation.pdf",
-      "name": "Матрица ошибок и анализ ошибок модели — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Матрица ошибок и анализ ошибок модели — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 11,
-      "sha256": "d29950c845322e820f48c17a2d67ce2c19d4c88d989e49b143f287b2681d5f49",
+      "pageCount": 15,
+      "sha256": "eb7d3698f92238e5e3a2ab2bd4d44888d9beec272bc0f4187ecfe174053d6575",
       "source": {
-        "path": "Модуль 3/Занятие 08/Презентация — итоговая.pptx",
-        "sha256": "4b11763f83c8e8e7701ef599b338a16b8680151e2ada0dfe74fdb3270c84e715"
+        "path": "lesson_3_8_confusion_matrix_analysis_0e7ddb.pptx",
+        "sha256": "0e7ddb0e3d0d58664d7a9f94158bad5ea3d2b8776ce5a23c5178a35e884011f7"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_3_8_confusion_matrix_analysis_0e7ddb.pptx",
+    "sourceSha256": "0e7ddb0e3d0d58664d7a9f94158bad5ea3d2b8776ce5a23c5178a35e884011f7",
+    "slideCount": 15
   }
 }

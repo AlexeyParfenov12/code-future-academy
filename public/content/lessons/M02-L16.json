@@ -7,7 +7,7 @@
   "originalTitle": "Тема 16. Занятие 16. Мини-кейс - статистика и ошибка модели на датасете",
   "kind": "lesson",
   "taskCount": 7,
-  "slideCount": 10,
+  "slideCount": 0,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Мини-кейс - статистика и ошибка модели на датасете». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -719,19 +719,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L16/001.svg",
-    "/content/slides/M02-L16/002.svg",
-    "/content/slides/M02-L16/003.svg",
-    "/content/slides/M02-L16/004.svg",
-    "/content/slides/M02-L16/005.svg",
-    "/content/slides/M02-L16/006.svg",
-    "/content/slides/M02-L16/007.svg",
-    "/content/slides/M02-L16/008.svg",
-    "/content/slides/M02-L16/009.svg",
-    "/content/slides/M02-L16/010.svg"
-  ],
-  "deckDownload": "/content/files/M02-L16-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [
     {
       "id": "4739d5299131991b.pdf",
@@ -850,19 +839,10 @@
         "path": "8392e283cf95_Занятие 2.16. Мини-кейс - статистика и ошибка модели на датасете — теория.pdf",
         "sha256": "4739d5299131991bd7658c1e91f8f5f8bf81b35cfc8be963ea7c978a138be749"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L16-presentation.pdf",
-      "name": "Мини-кейс - статистика и ошибка модели на датасете — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 10,
-      "sha256": "7d4c693d1a4a714eab424ed0306141bcd125d095fd65f39c495af09bd1ba2feb",
-      "source": {
-        "path": "Модуль 2/Занятие 16/Презентация — итоговая.pptx",
-        "sha256": "d60c3d2bcfdbb83a8719fe2620e2b440459dc14444b327f9ab3cc1d26abbcaed"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

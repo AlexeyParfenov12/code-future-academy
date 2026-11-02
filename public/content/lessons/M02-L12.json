@@ -7,7 +7,7 @@
   "originalTitle": "Тема 12. Занятие 12. Среднее, медиана и дисперсия на данных",
   "kind": "lesson",
   "taskCount": 10,
-  "slideCount": 9,
+  "slideCount": 0,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Среднее, медиана и дисперсия на данных». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -963,18 +963,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L12/001.svg",
-    "/content/slides/M02-L12/002.svg",
-    "/content/slides/M02-L12/003.svg",
-    "/content/slides/M02-L12/004.svg",
-    "/content/slides/M02-L12/005.svg",
-    "/content/slides/M02-L12/006.svg",
-    "/content/slides/M02-L12/007.svg",
-    "/content/slides/M02-L12/008.svg",
-    "/content/slides/M02-L12/009.svg"
-  ],
-  "deckDownload": "/content/files/M02-L12-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [
     {
       "id": "1f5bf34fea5c2d39.pdf",
@@ -1118,19 +1108,10 @@
         "path": "0025e323173b_Занятие 2.12. Среднее, медиана и дисперсия на данных — теория.pdf",
         "sha256": "1f5bf34fea5c2d3969053c74fdc65bc8caecf3299fc356096d1c864013935953"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M02-L12-presentation.pdf",
-      "name": "Среднее, медиана и дисперсия на данных — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 9,
-      "sha256": "1c6794387f19285a53441f75f72fc54a4d62548218e2e91a73fd2af83b646595",
-      "source": {
-        "path": "Модуль 2/Занятие 12/Презентация — итоговая.pptx",
-        "sha256": "152ec89d5aa8d9944d48ad94b67071d752ec75ae6bd10b8b642da0ea3dbe35e4"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

@@ -7,7 +7,7 @@
   "originalTitle": "Тема 11. Занятие 11. Математическая статистика в задачах искусственного интеллекта",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 34,
+  "slideCount": 14,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Математическая статистика в задачах искусственного интеллекта». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,43 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L11/001.svg",
-    "/content/slides/M02-L11/002.svg",
-    "/content/slides/M02-L11/003.svg",
-    "/content/slides/M02-L11/004.svg",
-    "/content/slides/M02-L11/005.svg",
-    "/content/slides/M02-L11/006.svg",
-    "/content/slides/M02-L11/007.svg",
-    "/content/slides/M02-L11/008.svg",
-    "/content/slides/M02-L11/009.svg",
-    "/content/slides/M02-L11/010.svg",
-    "/content/slides/M02-L11/011.svg",
-    "/content/slides/M02-L11/012.svg",
-    "/content/slides/M02-L11/013.svg",
-    "/content/slides/M02-L11/014.svg",
-    "/content/slides/M02-L11/015.svg",
-    "/content/slides/M02-L11/016.svg",
-    "/content/slides/M02-L11/017.svg",
-    "/content/slides/M02-L11/018.svg",
-    "/content/slides/M02-L11/019.svg",
-    "/content/slides/M02-L11/020.svg",
-    "/content/slides/M02-L11/021.svg",
-    "/content/slides/M02-L11/022.svg",
-    "/content/slides/M02-L11/023.svg",
-    "/content/slides/M02-L11/024.svg",
-    "/content/slides/M02-L11/025.svg",
-    "/content/slides/M02-L11/026.svg",
-    "/content/slides/M02-L11/027.svg",
-    "/content/slides/M02-L11/028.svg",
-    "/content/slides/M02-L11/029.svg",
-    "/content/slides/M02-L11/030.svg",
-    "/content/slides/M02-L11/031.svg",
-    "/content/slides/M02-L11/032.svg",
-    "/content/slides/M02-L11/033.svg",
-    "/content/slides/M02-L11/034.svg"
-  ],
-  "deckDownload": "/content/files/M02-L11-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M02-L11-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -100,16 +65,22 @@
     },
     "presentation": {
       "url": "/content/documents/M02-L11-presentation.pdf",
-      "name": "Математическая статистика в задачах искусственного интеллекта — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Математическая статистика в задачах искусственного интеллекта — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 34,
-      "sha256": "7c5cf3b94e6b4660640323aaa575a261a197b05393aaf3172013e1a59c577023",
+      "pageCount": 14,
+      "sha256": "96ffeec3c70f3d7c463e7612cac573ddb2c4c0bbf2e8576604f8c97add532006",
       "source": {
-        "path": "Модуль 2/Занятие 11/Презентация — итоговая.pptx",
-        "sha256": "baa8968df132cb7b6cc76f33caf137976feb091daab42fe64cfab632335fd349"
+        "path": "Statistics_for_AI_255d21.pptx",
+        "sha256": "255d218222762bc5cc66eaaa7b8d4c93535ea5b2b70657c519c7c7bd1159791f"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Statistics_for_AI_255d21.pptx",
+    "sourceSha256": "255d218222762bc5cc66eaaa7b8d4c93535ea5b2b70657c519c7c7bd1159791f",
+    "slideCount": 14
   }
 }

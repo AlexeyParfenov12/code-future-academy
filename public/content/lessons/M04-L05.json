@@ -7,7 +7,7 @@
   "originalTitle": "Тема 5. Занятие 5. Данные, безопасность и этика профессионального решения",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 20,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Данные, безопасность и этика профессионального решения». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,29 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M04-L05/001.svg",
-    "/content/slides/M04-L05/002.svg",
-    "/content/slides/M04-L05/003.svg",
-    "/content/slides/M04-L05/004.svg",
-    "/content/slides/M04-L05/005.svg",
-    "/content/slides/M04-L05/006.svg",
-    "/content/slides/M04-L05/007.svg",
-    "/content/slides/M04-L05/008.svg",
-    "/content/slides/M04-L05/009.svg",
-    "/content/slides/M04-L05/010.svg",
-    "/content/slides/M04-L05/011.svg",
-    "/content/slides/M04-L05/012.svg",
-    "/content/slides/M04-L05/013.svg",
-    "/content/slides/M04-L05/014.svg",
-    "/content/slides/M04-L05/015.svg",
-    "/content/slides/M04-L05/016.svg",
-    "/content/slides/M04-L05/017.svg",
-    "/content/slides/M04-L05/018.svg",
-    "/content/slides/M04-L05/019.svg",
-    "/content/slides/M04-L05/020.svg"
-  ],
-  "deckDownload": "/content/files/M04-L05-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -83,19 +62,10 @@
         "path": "Снимки страниц.json / ea38d3f74810af668807292c",
         "sha256": "783171ab61388c636f5d8091a041985c4fdb9e65b492dfa86ad56dc532f5eadc"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M04-L05-presentation.pdf",
-      "name": "Данные, безопасность и этика профессионального решения — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 20,
-      "sha256": "86b9122a3d970e19fba941f2eb27335ff5eeb3f1413636eb1aa1656c33731292",
-      "source": {
-        "path": "Модуль 4/Занятие 05/Презентация — итоговая.pptx",
-        "sha256": "81c02181e99990cdf5294bbef939bdf8f9838780bfa89f8b9966799bf35303b7"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

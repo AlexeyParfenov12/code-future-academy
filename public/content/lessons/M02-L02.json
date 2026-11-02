@@ -7,7 +7,7 @@
   "originalTitle": "Тема 2. Занятие 2. Функции и графики в задачах ИИ",
   "kind": "lesson",
   "taskCount": 1,
-  "slideCount": 32,
+  "slideCount": 7,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Функции и графики в задачах ИИ». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -81,41 +81,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L02/001.svg",
-    "/content/slides/M02-L02/002.svg",
-    "/content/slides/M02-L02/003.svg",
-    "/content/slides/M02-L02/004.svg",
-    "/content/slides/M02-L02/005.svg",
-    "/content/slides/M02-L02/006.svg",
-    "/content/slides/M02-L02/007.svg",
-    "/content/slides/M02-L02/008.svg",
-    "/content/slides/M02-L02/009.svg",
-    "/content/slides/M02-L02/010.svg",
-    "/content/slides/M02-L02/011.svg",
-    "/content/slides/M02-L02/012.svg",
-    "/content/slides/M02-L02/013.svg",
-    "/content/slides/M02-L02/014.svg",
-    "/content/slides/M02-L02/015.svg",
-    "/content/slides/M02-L02/016.svg",
-    "/content/slides/M02-L02/017.svg",
-    "/content/slides/M02-L02/018.svg",
-    "/content/slides/M02-L02/019.svg",
-    "/content/slides/M02-L02/020.svg",
-    "/content/slides/M02-L02/021.svg",
-    "/content/slides/M02-L02/022.svg",
-    "/content/slides/M02-L02/023.svg",
-    "/content/slides/M02-L02/024.svg",
-    "/content/slides/M02-L02/025.svg",
-    "/content/slides/M02-L02/026.svg",
-    "/content/slides/M02-L02/027.svg",
-    "/content/slides/M02-L02/028.svg",
-    "/content/slides/M02-L02/029.svg",
-    "/content/slides/M02-L02/030.svg",
-    "/content/slides/M02-L02/031.svg",
-    "/content/slides/M02-L02/032.svg"
-  ],
-  "deckDownload": "/content/files/M02-L02-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M02-L02-original-student.pptx",
   "files": [],
   "ismartLinks": [
     {
@@ -165,16 +132,22 @@
     },
     "presentation": {
       "url": "/content/documents/M02-L02-presentation.pdf",
-      "name": "Функции и графики в задачах ИИ — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Функции и графики в задачах ИИ — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 32,
-      "sha256": "f1aaa9be37cb4eae5e0de4f3b18f5463a240eb14d0c4f803072ff9d462bd2a13",
+      "pageCount": 7,
+      "sha256": "b22ef42dd772fceb9f128586e98cc8174469519323b756fb45ec3ca4f20f46a4",
       "source": {
-        "path": "Модуль 2/Занятие 02/Презентация — итоговая.pptx",
-        "sha256": "ca1a60a4d849f636e21ee806d371bf3c020c34ee9bf8cd59572a45673639846d"
+        "path": "presentation_Функции и графики в задачах ИИ_40db91.pptx",
+        "sha256": "40db914b707540dd78654d90aee202bbc6beb09ef5931857760be24ed63870b1"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "presentation_Функции и графики в задачах ИИ_40db91.pptx",
+    "sourceSha256": "40db914b707540dd78654d90aee202bbc6beb09ef5931857760be24ed63870b1",
+    "slideCount": 7
   }
 }

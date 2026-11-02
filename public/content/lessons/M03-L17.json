@@ -7,7 +7,7 @@
   "originalTitle": "Тема 17. Занятие 17. Улучшение модели - данные, признаки, проверка",
   "kind": "lesson",
   "taskCount": 1,
-  "slideCount": 14,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Улучшение модели - данные, признаки, проверка». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -83,23 +83,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L17/001.svg",
-    "/content/slides/M03-L17/002.svg",
-    "/content/slides/M03-L17/003.svg",
-    "/content/slides/M03-L17/004.svg",
-    "/content/slides/M03-L17/005.svg",
-    "/content/slides/M03-L17/006.svg",
-    "/content/slides/M03-L17/007.svg",
-    "/content/slides/M03-L17/008.svg",
-    "/content/slides/M03-L17/009.svg",
-    "/content/slides/M03-L17/010.svg",
-    "/content/slides/M03-L17/011.svg",
-    "/content/slides/M03-L17/012.svg",
-    "/content/slides/M03-L17/013.svg",
-    "/content/slides/M03-L17/014.svg"
-  ],
-  "deckDownload": "/content/files/M03-L17-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -147,19 +132,10 @@
         "path": "Снимки страниц.json / 61adc5e67c1525b694103bf8",
         "sha256": "263c1dfb932ed4487c48414e7675c86cd159f1ea47746ed1751e81bf455a1b59"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M03-L17-presentation.pdf",
-      "name": "Улучшение модели - данные, признаки, проверка — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 14,
-      "sha256": "e9e141c3bb20abca63e0b843e71828f47389c8e85c96a5170a9202a0cc86702f",
-      "source": {
-        "path": "Модуль 3/Занятие 17/Презентация — итоговая.pptx",
-        "sha256": "1ea71ad39b20fca8190558dfb0b967653aecc67fb14ccc986bba0b3bf102cc1b"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

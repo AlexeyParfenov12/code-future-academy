@@ -7,7 +7,7 @@
   "originalTitle": "Тема 12. Занятие 12. Переобучение и проверка модели на новых данных",
   "kind": "lesson",
   "taskCount": 6,
-  "slideCount": 15,
+  "slideCount": 0,
   "fileCount": 0,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Переобучение и проверка модели на новых данных». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -975,24 +975,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M03-L12/001.svg",
-    "/content/slides/M03-L12/002.svg",
-    "/content/slides/M03-L12/003.svg",
-    "/content/slides/M03-L12/004.svg",
-    "/content/slides/M03-L12/005.svg",
-    "/content/slides/M03-L12/006.svg",
-    "/content/slides/M03-L12/007.svg",
-    "/content/slides/M03-L12/008.svg",
-    "/content/slides/M03-L12/009.svg",
-    "/content/slides/M03-L12/010.svg",
-    "/content/slides/M03-L12/011.svg",
-    "/content/slides/M03-L12/012.svg",
-    "/content/slides/M03-L12/013.svg",
-    "/content/slides/M03-L12/014.svg",
-    "/content/slides/M03-L12/015.svg"
-  ],
-  "deckDownload": "/content/files/M03-L12-student.pptx",
+  "slides": [],
+  "deckDownload": null,
   "files": [],
   "ismartLinks": [
     {
@@ -1093,19 +1077,10 @@
         "path": "Снимки страниц.json / e3329b6b778b119f74f20720",
         "sha256": "168915aa95e2b499e76cd9cd0e6c249e3515a071ebd8a5f543c6e928c6bc1c3f"
       }
-    },
-    "presentation": {
-      "url": "/content/documents/M03-L12-presentation.pdf",
-      "name": "Переобучение и проверка модели на новых данных — презентация.pdf",
-      "label": "Презентация — PDF-копия",
-      "format": "pdf",
-      "derived": true,
-      "pageCount": 15,
-      "sha256": "918f53acdef85ef27ebdb2cc42f9eb209bd655f2cfee2f0a7714a5ee78dde3a1",
-      "source": {
-        "path": "Модуль 3/Занятие 12/Презентация — итоговая.pptx",
-        "sha256": "810bd55161745cf31f935596dd627efe3e0ef614fb393003ebbdf2decfe7a5cd"
-      }
     }
+  },
+  "presentation": {
+    "kind": "missing",
+    "reason": "Оригинальный файл презентации iSMART не обнаружен в архиве. Исходная лекция доступна в соседней вкладке."
   }
 }

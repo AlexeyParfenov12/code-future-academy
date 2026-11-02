@@ -7,7 +7,7 @@
   "originalTitle": "Тема 5. Занятие 5. Алгоритм и программа - как описывать решение задачи",
   "kind": "lesson",
   "taskCount": 0,
-  "slideCount": 26,
+  "slideCount": 15,
   "fileCount": 1,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Алгоритм и программа - как описывать решение задачи». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -26,35 +26,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L05/001.svg",
-    "/content/slides/M01-L05/002.svg",
-    "/content/slides/M01-L05/003.svg",
-    "/content/slides/M01-L05/004.svg",
-    "/content/slides/M01-L05/005.svg",
-    "/content/slides/M01-L05/006.svg",
-    "/content/slides/M01-L05/007.svg",
-    "/content/slides/M01-L05/008.svg",
-    "/content/slides/M01-L05/009.svg",
-    "/content/slides/M01-L05/010.svg",
-    "/content/slides/M01-L05/011.svg",
-    "/content/slides/M01-L05/012.svg",
-    "/content/slides/M01-L05/013.svg",
-    "/content/slides/M01-L05/014.svg",
-    "/content/slides/M01-L05/015.svg",
-    "/content/slides/M01-L05/016.svg",
-    "/content/slides/M01-L05/017.svg",
-    "/content/slides/M01-L05/018.svg",
-    "/content/slides/M01-L05/019.svg",
-    "/content/slides/M01-L05/020.svg",
-    "/content/slides/M01-L05/021.svg",
-    "/content/slides/M01-L05/022.svg",
-    "/content/slides/M01-L05/023.svg",
-    "/content/slides/M01-L05/024.svg",
-    "/content/slides/M01-L05/025.svg",
-    "/content/slides/M01-L05/026.svg"
-  ],
-  "deckDownload": "/content/files/M01-L05-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L05-original-student.pptx",
   "files": [
     {
       "id": "c5951b52efe182f1.pdf",
@@ -104,16 +77,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L05-presentation.pdf",
-      "name": "Алгоритм и программа - как описывать решение задачи — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Алгоритм и программа - как описывать решение задачи — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 26,
-      "sha256": "9a4b66d675990398892aa9fe562905821af69276e16553875c7c5afd53a7eae7",
+      "pageCount": 15,
+      "sha256": "cdeb664d3e59077a654ec5fdf11eb74ba138d20072a44cf9e9bad7ccdf9347f7",
       "source": {
-        "path": "Модуль 1/Занятие 05/Презентация — итоговая.pptx",
-        "sha256": "bc4f1ab05586cea43a30289f7ba81b02e8395922749c351b620e8c0bf9695c39"
+        "path": "3a58a94bee81854006a382db99e40946_7d87ec.pptx",
+        "sha256": "7d87ec8382d7eb8fcd7d7d270b95756a3e2d8d35335e55fc424b5ad3e1db03a7"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "3a58a94bee81854006a382db99e40946_7d87ec.pptx",
+    "sourceSha256": "7d87ec8382d7eb8fcd7d7d270b95756a3e2d8d35335e55fc424b5ad3e1db03a7",
+    "slideCount": 15
   }
 }

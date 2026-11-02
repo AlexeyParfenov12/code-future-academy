@@ -819,22 +819,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M01-L16/001.svg",
-    "/content/slides/M01-L16/002.svg",
-    "/content/slides/M01-L16/003.svg",
-    "/content/slides/M01-L16/004.svg",
-    "/content/slides/M01-L16/005.svg",
-    "/content/slides/M01-L16/006.svg",
-    "/content/slides/M01-L16/007.svg",
-    "/content/slides/M01-L16/008.svg",
-    "/content/slides/M01-L16/009.svg",
-    "/content/slides/M01-L16/010.svg",
-    "/content/slides/M01-L16/011.svg",
-    "/content/slides/M01-L16/012.svg",
-    "/content/slides/M01-L16/013.svg"
-  ],
-  "deckDownload": "/content/files/M01-L16-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M01-L16-original-student.pptx",
   "files": [
     {
       "id": "97e97f990a5ec116.csv",
@@ -1298,16 +1284,22 @@
     },
     "presentation": {
       "url": "/content/documents/M01-L16-presentation.pdf",
-      "name": "Простые показатели по данным — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Простые показатели по данным — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
       "pageCount": 13,
-      "sha256": "1f893b948f232105f7238cad3c65bd45baf6b96b57bd60732ab49c13fb2a628d",
+      "sha256": "8ad49026582658c2fc941d911699927e5910a5ae46ed971f61ae7254eab8edb1",
       "source": {
-        "path": "Модуль 1/Занятие 16/Презентация — итоговая.pptx",
-        "sha256": "cc007094707f712183fcedbcae877930edfb312fccb4bb138d5c7ef735708b9a"
+        "path": "lesson_1_16_simple_statistics_reworked_093d48.pptx",
+        "sha256": "093d488e91b036d3d3c5d8e2e1b581f6de78f9992457fb8df173e4bfb3239ac1"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "lesson_1_16_simple_statistics_reworked_093d48.pptx",
+    "sourceSha256": "093d488e91b036d3d3c5d8e2e1b581f6de78f9992457fb8df173e4bfb3239ac1",
+    "slideCount": 13
   }
 }

@@ -7,7 +7,7 @@
   "originalTitle": "Тема 6. Занятие 6. Минимизация ошибки - выбираем лучшую модель",
   "kind": "lesson",
   "taskCount": 10,
-  "slideCount": 12,
+  "slideCount": 16,
   "fileCount": 3,
   "hasLecture": true,
   "description": "В этом занятии рассматривается тема «Минимизация ошибки - выбираем лучшую модель». Будем опираться на примеры курса и проверять результат на конкретных данных.",
@@ -859,21 +859,8 @@
       }
     }
   ],
-  "slides": [
-    "/content/slides/M02-L06/001.svg",
-    "/content/slides/M02-L06/002.svg",
-    "/content/slides/M02-L06/003.svg",
-    "/content/slides/M02-L06/004.svg",
-    "/content/slides/M02-L06/005.svg",
-    "/content/slides/M02-L06/006.svg",
-    "/content/slides/M02-L06/007.svg",
-    "/content/slides/M02-L06/008.svg",
-    "/content/slides/M02-L06/009.svg",
-    "/content/slides/M02-L06/010.svg",
-    "/content/slides/M02-L06/011.svg",
-    "/content/slides/M02-L06/012.svg"
-  ],
-  "deckDownload": "/content/files/M02-L06-student.pptx",
+  "slides": [],
+  "deckDownload": "/content/files/M02-L06-original-student.pptx",
   "files": [
     {
       "id": "e5e8622e038ae751.csv",
@@ -1257,16 +1244,22 @@
     },
     "presentation": {
       "url": "/content/documents/M02-L06-presentation.pdf",
-      "name": "Минимизация ошибки - выбираем лучшую модель — презентация.pdf",
-      "label": "Презентация — PDF-копия",
+      "name": "Минимизация ошибки - выбираем лучшую модель — оригинальная презентация.pdf",
+      "label": "Оригинальная презентация iSMART — PDF-копия",
       "format": "pdf",
       "derived": true,
-      "pageCount": 12,
-      "sha256": "e0c804aa574ffba40b442023bde099a3cc07c6eb21b336198e6047831f6e2d5b",
+      "pageCount": 16,
+      "sha256": "bb8b7334f3eccad61fa81e677f19c3f0f7572837ed51e33e6a3ff03102020432",
       "source": {
-        "path": "Модуль 2/Занятие 06/Презентация — итоговая.pptx",
-        "sha256": "a1f4289ac3b14e0f399305eb682d9c96e389330b90db52feff22bb37b7d5cefd"
+        "path": "Урок_2_6_Минимизация_ошибки_презентация_382fbe.pptx",
+        "sha256": "382fbed6b490c6021339cb47177d521d056eaed9023743a8a520096017275303"
       }
     }
+  },
+  "presentation": {
+    "kind": "original",
+    "sourceName": "Урок_2_6_Минимизация_ошибки_презентация_382fbe.pptx",
+    "sourceSha256": "382fbed6b490c6021339cb47177d521d056eaed9023743a8a520096017275303",
+    "slideCount": 16
   }
 }
