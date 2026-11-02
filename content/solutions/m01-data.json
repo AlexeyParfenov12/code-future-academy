@@ -1,0 +1,2147 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6ab29f359bcb29e47d96b7ca",
+      "lessonId": "M01-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(*df.shape)",
+      "answer": "",
+      "explanation": "Размер таблицы получаем из shape. Первая строка CSV служит заголовком и не считается записью.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "15 8"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "14923149c6d8e8436ec7e06590922d29c93e4f21c2631c2dae1f722fb61d7bad",
+      "verificationEvidence": {
+        "codeSha256": "14923149c6d8e8436ec7e06590922d29c93e4f21c2631c2dae1f722fb61d7bad",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "15 8"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab29f779bcb29e47d96b7cb",
+      "lessonId": "M01-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(df.isna().sum().sum())",
+      "answer": "",
+      "explanation": "isna даёт таблицу булевых индикаторов. Первая сумма считает пропуски по столбцам, вторая складывает эти количества.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "3"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "a9fba886edb638725b8872c026f7771820faad2ee75f37e5e13c8f9c5bf556c3",
+      "verificationEvidence": {
+        "codeSha256": "a9fba886edb638725b8872c026f7771820faad2ee75f37e5e13c8f9c5bf556c3",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "3"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab29ff69bcb29e47d96b7cc",
+      "lessonId": "M01-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(df.duplicated().sum())",
+      "answer": "",
+      "explanation": "duplicated помечает повторные полные строки, оставляя первое вхождение False. Сумма True — число лишних копий.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "1"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "66a808eb047969a01ac40e0c500ac296158b5fac19654c4a198dc1ac650eb336",
+      "verificationEvidence": {
+        "codeSha256": "66a808eb047969a01ac40e0c500ac296158b5fac19654c4a198dc1ac650eb336",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "1"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a03d9bcb29e47d96b7cd",
+      "lessonId": "M01-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(int(df['age'].max()))",
+      "answer": "",
+      "explanation": "max показывает аномальное значение 150. Пока это диагностика исходной таблицы: до вычисления максимума ничего не очищаем.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "150"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "30a611a24e42ff4963828358dd7e1f5e1f8e0f561eb5274bf9c0fe99f216e977",
+      "verificationEvidence": {
+        "codeSha256": "30a611a24e42ff4963828358dd7e1f5e1f8e0f561eb5274bf9c0fe99f216e977",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "150"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a10f402619005f00ed6a",
+      "lessonId": "M01-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint((df['screen_time_hours'] < 0).sum())",
+      "answer": "",
+      "explanation": "Сравнение выполняется для каждой строки. True считается единицей, поэтому сумма даёт количество отрицательных значений.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "1"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5b61cfbb6c7969898e294106d714941f1c93b25fffbbce2c2cc25bf0462c33e1",
+      "verificationEvidence": {
+        "codeSha256": "5b61cfbb6c7969898e294106d714941f1c93b25fffbbce2c2cc25bf0462c33e1",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "1"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a156402619005f00ed6b",
+      "lessonId": "M01-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nprint(','.join(sorted(df['stress_level'].dropna().unique())))",
+      "answer": "",
+      "explanation": "Сначала убираем пропуски, затем повторы. sorted задаёт алфавитный порядок, join выводит строку без добавочных пробелов.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "high,hight,low,medium,medum"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "98a0ac811853de0713104ac379a71e290d87857513b94985818af3f04dc01505",
+      "verificationEvidence": {
+        "codeSha256": "98a0ac811853de0713104ac379a71e290d87857513b94985818af3f04dc01505",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "high,hight,low,medium,medum"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a1a6402619005f00ed6c",
+      "lessonId": "M01-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\ndf['stress_level'] = df['stress_level'].replace({'medum': 'medium', 'hight': 'high'})\nprint(','.join(sorted(df['stress_level'].dropna().unique())))",
+      "answer": "",
+      "explanation": "Исправляем опечатки в правильную сторону. Уже верные high и medium сохраняются; после замены уникальных категорий остаётся три.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "high,low,medium"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `df['stress_level'].replace({'medum': 'medium', 'hight': 'high'})` и сохраняем результат в `df['stress_level']`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "14a3963a6997b30f962f9682ccc0c25c5cca7f090c756ef09f79288cb91ee9ae",
+      "verificationEvidence": {
+        "codeSha256": "14a3963a6997b30f962f9682ccc0c25c5cca7f090c756ef09f79288cb91ee9ae",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "high,low,medium"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a21a402619005f00ed6d",
+      "lessonId": "M01-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\nclean = df.drop_duplicates()\nprint(*clean.shape)",
+      "answer": "",
+      "explanation": "drop_duplicates возвращает таблицу без повторных полных строк. Число столбцов сохраняется, число строк уменьшается на один.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "14 8"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `df.drop_duplicates()` и сохраняем результат в `clean`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "8d51c8d3940628efb02c134371fa1e489cb64235906565d319189328e8c0f7c2",
+      "verificationEvidence": {
+        "codeSha256": "8d51c8d3940628efb02c134371fa1e489cb64235906565d319189328e8c0f7c2",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "14 8"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a269402619005f00ed6e",
+      "lessonId": "M01-L13",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_wellness_dirty_1_13.csv')\ndf = df.drop_duplicates().copy()\ndf['uses_ai_for_study'] = df['uses_ai_for_study'].replace({'YES': 'yes', 'да': 'yes'})\ndf['stress_level'] = df['stress_level'].replace({'medum': 'medium', 'hight': 'high'})\nfor column, low, high in [('age', 10, 25), ('sleep_hours', 0, 16), ('screen_time_hours', 0, 16)]:\n    invalid = ~df[column].between(low, high)\n    df.loc[invalid, column] = float('nan')\nprint(df.isna().sum().sum())",
+      "answer": "",
+      "explanation": "Сначала исключаем дубли, затем унифицируем категории. between включает обе границы; всё за ними заменяем пропуском. Исходные пропуски тоже сохраняются. Итоговая сумма isna учитывает и старые, и новые пустые ячейки.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "6"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `df.drop_duplicates().copy()` и сохраняем результат в `df`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `df['uses_ai_for_study'].replace({'YES': 'yes', 'да': 'yes'})` и сохраняем результат в `df['uses_ai_for_study']`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `df['stress_level'].replace({'medum': 'medium', 'hight': 'high'})` и сохраняем результат в `df['stress_level']`."
+        },
+        {
+          "line": 6,
+          "text": "Перебираем `[('age', 10, 25), ('sleep_hours', 0, 16), ('screen_time_hours', 0, 16)]`; очередное значение доступно через `(column, low, high)`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `~df[column].between(low, high)` и сохраняем результат в `invalid`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `float('nan')` и сохраняем результат в `df.loc[invalid, column]`."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "bfcdd31aa81ff18d1598fc7dfaf13fa5cd62980dab22398bda8a3e6ef5fd475d",
+      "verificationEvidence": {
+        "codeSha256": "bfcdd31aa81ff18d1598fc7dfaf13fa5cd62980dab22398bda8a3e6ef5fd475d",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "6"
+        }
+      ]
+    },
+    {
+      "taskId": "T-cc32c931bd92cbe1e1fe8e0b",
+      "lessonId": "M01-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\nprint(*df.shape)",
+      "answer": "",
+      "explanation": "shape показывает число сообщений и число полей, включая пока пустую метку label.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "12 5"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "2c0ebd18569a4d637894569cf659ee1d05c1e8dc72c3494bfccc2792f70ac180",
+      "verificationEvidence": {
+        "codeSha256": "2c0ebd18569a4d637894569cf659ee1d05c1e8dc72c3494bfccc2792f70ac180",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "12 5"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc41bfd2698c58da3f22e9",
+      "lessonId": "M01-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\nprint(df['label'].isna().sum())",
+      "answer": "",
+      "explanation": "Пустые значения CSV read_csv читает как пропуски. Проверяем только столбец label, а не всю таблицу.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "12"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "2df7650726d1eb87b77e4f5921390df0f4f969feb72e88b86614a731d6e33278",
+      "verificationEvidence": {
+        "codeSha256": "2df7650726d1eb87b77e4f5921390df0f4f969feb72e88b86614a731d6e33278",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "12"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc41bfd2698c58da3f22ec",
+      "lessonId": "M01-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\ndef make_label(row):\n    link = row['has_link'] == 'yes'\n    prize = row['has_money_or_prize_word'] == 'yes'\n    if link and prize:\n        return 'spam'\n    if not link and not prize:\n        return 'normal'\n    return 'needs_review'\n\ndf['label'] = df.apply(make_label, axis=1)\nprint(';'.join(f'{label}={(df[\"label\"] == label).sum()}' for label in ['needs_review', 'normal', 'spam']))",
+      "answer": "",
+      "explanation": "Инструкция задаёт AND для спама: одновременно ссылка и призовое слово. Одновременное отсутствие обоих признаков означает normal. Оба смешанных случая — needs_review. apply с axis=1 передаёт функции строку.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "needs_review=2;normal=5;spam=5"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Определяем функцию `make_label` с параметрами `row`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `row['has_link'] == 'yes'` и сохраняем результат в `link`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `row['has_money_or_prize_word'] == 'yes'` и сохраняем результат в `prize`."
+        },
+        {
+          "line": 6,
+          "text": "Проверяем условие `link and prize`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 7,
+          "text": "Возвращаем из функции `'spam'`."
+        },
+        {
+          "line": 8,
+          "text": "Проверяем условие `not link and (not prize)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 9,
+          "text": "Возвращаем из функции `'normal'`."
+        },
+        {
+          "line": 10,
+          "text": "Возвращаем из функции `'needs_review'`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `df.apply(make_label, axis=1)` и сохраняем результат в `df['label']`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "07408a4b0200a9973e31671d7ab6445f8791715ac8578f6a21d7ac24e2c39cad",
+      "verificationEvidence": {
+        "codeSha256": "07408a4b0200a9973e31671d7ab6445f8791715ac8578f6a21d7ac24e2c39cad",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "needs_review=2;normal=5;spam=5"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc41bfd2698c58da3f22ef",
+      "lessonId": "M01-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\ndef make_label(row):\n    link = row['has_link'] == 'yes'\n    prize = row['has_money_or_prize_word'] == 'yes'\n    if link and prize:\n        return 'spam'\n    if not link and not prize:\n        return 'normal'\n    return 'needs_review'\n\ndf['label'] = df.apply(make_label, axis=1)\nprint(','.join(df.loc[df['label'] == 'needs_review', 'id'].astype(str)))",
+      "answer": "",
+      "explanation": "Сначала применяем ту же полную инструкцию разметки. Затем выбираем id только спорных строк. Порядок строк файла сохраняется.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "5,9"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Определяем функцию `make_label` с параметрами `row`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `row['has_link'] == 'yes'` и сохраняем результат в `link`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `row['has_money_or_prize_word'] == 'yes'` и сохраняем результат в `prize`."
+        },
+        {
+          "line": 6,
+          "text": "Проверяем условие `link and prize`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 7,
+          "text": "Возвращаем из функции `'spam'`."
+        },
+        {
+          "line": 8,
+          "text": "Проверяем условие `not link and (not prize)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 9,
+          "text": "Возвращаем из функции `'normal'`."
+        },
+        {
+          "line": 10,
+          "text": "Возвращаем из функции `'needs_review'`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `df.apply(make_label, axis=1)` и сохраняем результат в `df['label']`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "bd9b5bd4ed75d9ec2fda73d8945f787075d3e57523af69c223c1552b99a7be67",
+      "verificationEvidence": {
+        "codeSha256": "bd9b5bd4ed75d9ec2fda73d8945f787075d3e57523af69c223c1552b99a7be67",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "5,9"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc41bfd2698c58da3f22fb",
+      "lessonId": "M01-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('messages_for_labeling_1_14.csv')\ndef make_label(row):\n    link = row['has_link'] == 'yes'\n    prize = row['has_money_or_prize_word'] == 'yes'\n    if link and prize:\n        return 'spam'\n    if not link and not prize:\n        return 'normal'\n    return 'needs_review'\n\ndf['label'] = df.apply(make_label, axis=1)\nprint(';'.join(f'{label}={(df[\"label\"] == label).sum()}' for label in ['needs_review', 'normal', 'spam']))",
+      "answer": "",
+      "explanation": "Ошибочная функция проверяла только призовое слово. Исправление учитывает также ссылку и отдельную категорию сомнительных сочетаний. Наличие одного признака не означает spam.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "needs_review=2;normal=5;spam=5"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Определяем функцию `make_label` с параметрами `row`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `row['has_link'] == 'yes'` и сохраняем результат в `link`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `row['has_money_or_prize_word'] == 'yes'` и сохраняем результат в `prize`."
+        },
+        {
+          "line": 6,
+          "text": "Проверяем условие `link and prize`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 7,
+          "text": "Возвращаем из функции `'spam'`."
+        },
+        {
+          "line": 8,
+          "text": "Проверяем условие `not link and (not prize)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 9,
+          "text": "Возвращаем из функции `'normal'`."
+        },
+        {
+          "line": 10,
+          "text": "Возвращаем из функции `'needs_review'`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `df.apply(make_label, axis=1)` и сохраняем результат в `df['label']`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "07408a4b0200a9973e31671d7ab6445f8791715ac8578f6a21d7ac24e2c39cad",
+      "verificationEvidence": {
+        "codeSha256": "07408a4b0200a9973e31671d7ab6445f8791715ac8578f6a21d7ac24e2c39cad",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "needs_review=2;normal=5;spam=5"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc41bfd2698c58da3f22f2",
+      "lessonId": "M01-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('annotations_by_students_1_14.csv')\nagree = (df['annotator_1'] == df['annotator_2']) & (df['annotator_2'] == df['annotator_3'])\nprint(agree.sum())",
+      "answer": "",
+      "explanation": "Для полного согласия нужны два равенства одновременно: первый разметчик совпал со вторым, второй с третьим. Попарные совпадения только двух участников недостаточны.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "8"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `(df['annotator_1'] == df['annotator_2']) & (df['annotator_2'] == df['annotator_3'])` и сохраняем результат в `agree`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "72cefee4a277a2a7addfc42eb9198f2e206e86ae670523883e10e8d300b6e864",
+      "verificationEvidence": {
+        "codeSha256": "72cefee4a277a2a7addfc42eb9198f2e206e86ae670523883e10e8d300b6e864",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "8"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc41bfd2698c58da3f22f5",
+      "lessonId": "M01-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('annotations_by_students_1_14.csv')\nagree = (df['annotator_1'] == df['annotator_2']) & (df['annotator_2'] == df['annotator_3'])\nprint(','.join(df.loc[~agree, 'id'].astype(str)))",
+      "answer": "",
+      "explanation": "Инверсия маски полного согласия выбирает все строки хотя бы с одним разногласием. Выводим их идентификаторы через запятую.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "5,9"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `(df['annotator_1'] == df['annotator_2']) & (df['annotator_2'] == df['annotator_3'])` и сохраняем результат в `agree`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "3efbf727970bc6520c051de07b2b5143e7aea1589e2459bdd99ababcc3de3d58",
+      "verificationEvidence": {
+        "codeSha256": "3efbf727970bc6520c051de07b2b5143e7aea1589e2459bdd99ababcc3de3d58",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "5,9"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ac638d7e3c21400073b2916",
+      "lessonId": "M01-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_1_15_10_11_spo.csv')\nprint(*df.shape)",
+      "answer": "",
+      "explanation": "shape возвращает размер реально прочитанной таблицы; звёздочка выводит два значения без скобок.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "60 12"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "27551e2c681f74117991c6fc5c68eee92feb804f1f751de970125871f61c915a",
+      "verificationEvidence": {
+        "codeSha256": "27551e2c681f74117991c6fc5c68eee92feb804f1f751de970125871f61c915a",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "60 12"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ac638d7e3c21400073b2919",
+      "lessonId": "M01-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_1_15_10_11_spo.csv')\nprint(len(df))",
+      "answer": "",
+      "explanation": "len DataFrame — число строк данных. Заголовок и количество столбцов в этот показатель не входят.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "60"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "48f6e144de3f4483f58e6c23b01e50af923b4985661521b443e0cdf7fc349307",
+      "verificationEvidence": {
+        "codeSha256": "48f6e144de3f4483f58e6c23b01e50af923b4985661521b443e0cdf7fc349307",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "60"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ac638d7e3c21400073b291c",
+      "lessonId": "M01-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_1_15_10_11_spo.csv')\nprint(','.join(df.columns))",
+      "answer": "",
+      "explanation": "Названия берём из columns и соединяем в исходном порядке запятой без пробелов.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "student_id,age,gender,country,grade,sleep_hours,screen_time_hours,study_hours,uses_ai_for_study,stress_level,board_exam_preparation,preparation_status"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "fad140c403535c91d2aba13068da055b63ee7863394123f5f1edc75895c55f25",
+      "verificationEvidence": {
+        "codeSha256": "fad140c403535c91d2aba13068da055b63ee7863394123f5f1edc75895c55f25",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "student_id,age,gender,country,grade,sleep_hours,screen_time_hours,study_hours,uses_ai_for_study,stress_level,board_exam_preparation,preparation_status"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ac638d7e3c21400073b291f",
+      "lessonId": "M01-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_1_15_10_11_spo.csv')\nprint((df['country'] == 'Japan').sum())",
+      "answer": "",
+      "explanation": "Сравнение с Japan чувствительно к регистру. Сумма булевой маски считает подходящие строки.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "4"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5bed312b51d4b1d27802d0bd9b521f6d364b88e892233d44c0dcf043c8f19be9",
+      "verificationEvidence": {
+        "codeSha256": "5bed312b51d4b1d27802d0bd9b521f6d364b88e892233d44c0dcf043c8f19be9",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "4"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ac638d7e3c21400073b2922",
+      "lessonId": "M01-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_1_15_10_11_spo.csv')\nprint((df['uses_ai_for_study'] == 'Yes').sum())",
+      "answer": "",
+      "explanation": "Выбираем именно значение Yes. Sometimes и No к этой категории не относятся.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "37"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "a9faeff1b5815f03e32e54fc4a2920a09ebe1fc006ade422472d7161199d5f97",
+      "verificationEvidence": {
+        "codeSha256": "a9faeff1b5815f03e32e54fc4a2920a09ebe1fc006ade422472d7161199d5f97",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "37"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ac638d7e3c21400073b2925",
+      "lessonId": "M01-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_1_15_10_11_spo.csv')\nprint((df['stress_level'] >= 8).sum())",
+      "answer": "",
+      "explanation": "Оператор >= включает уровень 8. Сравнивается числовой столбец, затем суммируются индикаторы True.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "9"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "a40e2e3bc2ebc8e55848c1fccd4fd98ccae14c3af85d4dd930b8628dede6d3fd",
+      "verificationEvidence": {
+        "codeSha256": "a40e2e3bc2ebc8e55848c1fccd4fd98ccae14c3af85d4dd930b8628dede6d3fd",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "9"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ac638d7e3c21400073b2928",
+      "lessonId": "M01-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_1_15_10_11_spo.csv')\nmask = (df['stress_level'] >= 8) & (df['sleep_hours'] < 6)\nprint(mask.sum())",
+      "answer": "",
+      "explanation": "Для pandas используется & и скобки вокруг каждого сравнения. Строка учитывается, только если одновременно выполнены оба условия.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "6"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `(df['stress_level'] >= 8) & (df['sleep_hours'] < 6)` и сохраняем результат в `mask`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "78d37d76569456a6bd27d610cd2937224fa5757db731379862d1e9925d44de5b",
+      "verificationEvidence": {
+        "codeSha256": "78d37d76569456a6bd27d610cd2937224fa5757db731379862d1e9925d44de5b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "6"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ac638d7e3c21400073b292b",
+      "lessonId": "M01-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_ru_semicolon_cp1251_1_15.csv', sep=';', encoding='cp1251')\nprint(*df.shape)",
+      "answer": "",
+      "explanation": "Параметр encoding декодирует кириллицу в исходном файле, sep разделяет поля по точке с запятой. Без этих параметров возможны ошибка декодирования или один большой столбец. print(*df.shape) убирает скобки и запятую из вывода размера.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "20 7"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "331ce3a72f136bca59f48cf95233fa478fb92a14d6fb05f1fae5640a3cc5d46b",
+      "verificationEvidence": {
+        "codeSha256": "331ce3a72f136bca59f48cf95233fa478fb92a14d6fb05f1fae5640a3cc5d46b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "20 7"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ac638d7e3c21400073b292e",
+      "lessonId": "M01-L15",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_ru_semicolon_cp1251_1_15.csv', sep=';', encoding='cp1251')\nprint(*df.shape)",
+      "answer": "",
+      "explanation": "Параметр encoding декодирует кириллицу в исходном файле, sep разделяет поля по точке с запятой. Без этих параметров возможны ошибка декодирования или один большой столбец. print(*df.shape) убирает скобки и запятую из вывода размера.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "20 7"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "331ce3a72f136bca59f48cf95233fa478fb92a14d6fb05f1fae5640a3cc5d46b",
+      "verificationEvidence": {
+        "codeSha256": "331ce3a72f136bca59f48cf95233fa478fb92a14d6fb05f1fae5640a3cc5d46b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "20 7"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a70e402619005f00ed7b",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\nprint(*df.shape)",
+      "answer": "",
+      "explanation": "Читаем исходную таблицу без предварительной очистки и выводим её размер.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "35 11"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "1a41692bf8ee0f72b11bfb5dee8a5de96044bb92d1aa779d5cf889bb495bbd82",
+      "verificationEvidence": {
+        "codeSha256": "1a41692bf8ee0f72b11bfb5dee8a5de96044bb92d1aa779d5cf889bb495bbd82",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "35 11"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a816402619005f00ed7c",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\nprint(df['study_hours'].count())",
+      "answer": "",
+      "explanation": "count считает только заполненные значения выбранного столбца, в отличие от len, считающего все строки.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "34"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5fae9475e5f27d70aa5a867bbef725fe8e27ccad7533b8085603a693c9482750",
+      "verificationEvidence": {
+        "codeSha256": "5fae9475e5f27d70aa5a867bbef725fe8e27ccad7533b8085603a693c9482750",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "34"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a882402619005f00ed7d",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\ns = df['sleep_hours']\nprint(int(s.min()), int(s.max()), round(s.mean(), 2))",
+      "answer": "",
+      "explanation": "В этой задаче выброс 99 пока сохраняется. Среднее считается по всей серии и округляется до двух знаков; целые границы выводятся без .0.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "4 99 9.37"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `df['sleep_hours']` и сохраняем результат в `s`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "711a2b054798eecdd2d233cfc0c016d3fbca7e7edb37043cc77e704249403c26",
+      "verificationEvidence": {
+        "codeSha256": "711a2b054798eecdd2d233cfc0c016d3fbca7e7edb37043cc77e704249403c26",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "4 99 9.37"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a8c7402619005f00ed7e",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\nprint(int(df['stress_level'].sum()))",
+      "answer": "",
+      "explanation": "sum складывает уровни стресса, а не считает записи. Преобразование int обеспечивает требуемый целочисленный вывод.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "202"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "42c90abf83411a8331b975deeac92fe554ce96b8b8159352f30c0bde315df8c7",
+      "verificationEvidence": {
+        "codeSha256": "42c90abf83411a8331b975deeac92fe554ce96b8b8159352f30c0bde315df8c7",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "202"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a908402619005f00ed7f",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\nprint(int(df['screen_time_hours'].max()))",
+      "answer": "",
+      "explanation": "max выбирает наибольшее экранное время. На этапе диагностики значение 26 не исправляется.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "26"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "8c88d00eb301b7fba608b992fc38c5cd4919107aa5ca82ef9513b08f84abba1b",
+      "verificationEvidence": {
+        "codeSha256": "8c88d00eb301b7fba608b992fc38c5cd4919107aa5ca82ef9513b08f84abba1b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "26"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a960402619005f00ed80",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\nprint((df['stress_level'] >= 8).sum())",
+      "answer": "",
+      "explanation": "Булева маска включает значения ровно 8. Её сумма — число подходящих строк.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "8"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "2c129561503c566984eb32540c1b86dbc29112722f9c8b0b2d500f8138a4151b",
+      "verificationEvidence": {
+        "codeSha256": "2c129561503c566984eb32540c1b86dbc29112722f9c8b0b2d500f8138a4151b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "8"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a99d402619005f00ed81",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\nprint((df['sleep_hours'] < 6).sum())",
+      "answer": "",
+      "explanation": "Условие строгое: сон ровно 6 часов не учитывается.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "5"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5ffecb9e288b0d04cd6b1e503338365f15fc5eea7bcf65062aa76b8ac1d73fef",
+      "verificationEvidence": {
+        "codeSha256": "5ffecb9e288b0d04cd6b1e503338365f15fc5eea7bcf65062aa76b8ac1d73fef",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "5"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2a9e6402619005f00ed82",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\nprint(df['study_hours'].isna().sum())",
+      "answer": "",
+      "explanation": "isna отмечает пустые значения. Сумма индикаторов даёт число пропусков в study_hours.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "1"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "2b6ab66309a3a4e94c4dae5fed72bd293fbb1f385e58abc572a09f7dbedd0854",
+      "verificationEvidence": {
+        "codeSha256": "2b6ab66309a3a4e94c4dae5fed72bd293fbb1f385e58abc572a09f7dbedd0854",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "1"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2aa28402619005f00ed83",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\ns = df['sleep_hours']\nprint(round(s.mean(), 2), round(s[s <= 16].mean(), 2))",
+      "answer": "",
+      "explanation": "Первое среднее использует весь набор. Второе исключает только sleep_hours > 16: граничное 16 сохраняется. Выброс 99 заметно повышал среднее.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "9.37 6.74"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `df['sleep_hours']` и сохраняем результат в `s`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "ed073df54e54bf0d845af69f3b491797ccb1244b149ca7b827468034528a8e44",
+      "verificationEvidence": {
+        "codeSha256": "ed073df54e54bf0d845af69f3b491797ccb1244b149ca7b827468034528a8e44",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "9.37 6.74"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2aab2402619005f00ed84",
+      "lessonId": "M01-L16",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('student_lifestyle_stats_1_16.csv')\nprint(df['study_hours'].count())",
+      "answer": "",
+      "explanation": "Требуется количество заполненных ячеек, поэтому sum заменяем на count. Сумма часов измеряла бы другую величину.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "34"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5fae9475e5f27d70aa5a867bbef725fe8e27ccad7533b8085603a693c9482750",
+      "verificationEvidence": {
+        "codeSha256": "5fae9475e5f27d70aa5a867bbef725fe8e27ccad7533b8085603a693c9482750",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "34"
+        }
+      ]
+    },
+    {
+      "taskId": "T-496b5b6064ad8525871c5875",
+      "lessonId": "M01-L18",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def check_mini_analysis(report: dict) -> list:\n    if not isinstance(report, dict):\n        return ['NOT_A_DICT']\n    errors = []\n    if not str(report.get('dataset') or '').strip():\n        errors.append('MISSING_DATASET')\n    if not str(report.get('object') or '').strip():\n        errors.append('MISSING_OBJECT')\n    for field, minimum, error in [('features', 3, 'TOO_FEW_FEATURES'), ('metrics', 2, 'TOO_FEW_METRICS')]:\n        values = report.get(field) or []\n        unique = {str(value).strip() for value in values if value is not None and str(value).strip()}\n        if len(unique) < minimum:\n            errors.append(error)\n    if not report.get('visualizations'):\n        errors.append('NO_VISUALIZATION')\n    conclusion = str(report.get('conclusion') or '').strip()\n    if not conclusion:\n        errors.append('EMPTY_CONCLUSION')\n    elif len(conclusion) < 20:\n        errors.append('TOO_SHORT_CONCLUSION')\n    return errors or ['OK']",
+      "answer": "",
+      "explanation": "Проверяем тип до обращения к полям. Ошибки добавляются строго в порядке рубрики. strip исключает пустые строки, множество учитывает различные непустые признаки один раз. Пустой вывод и короткий вывод — взаимоисключающие случаи. При отсутствии ошибок возвращается список [\"OK\"]. Функция отдельно проверена шестью утверждениями: пустой и корректный отчёты, неверный тип, дубли и два случая заключения.",
+      "source": "Самостоятельная реализация по полной рубрике; 6 локальных assert-проверок",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `check_mini_analysis` с параметрами `report: dict`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Проверяем условие `not isinstance(report, dict)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 3,
+          "text": "Возвращаем из функции `['NOT_A_DICT']`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `[]` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 5,
+          "text": "Проверяем условие `not str(report.get('dataset') or '').strip()`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 6,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 7,
+          "text": "Проверяем условие `not str(report.get('object') or '').strip()`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 8,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 9,
+          "text": "Перебираем `[('features', 3, 'TOO_FEW_FEATURES'), ('metrics', 2, 'TOO_FEW_METRICS')]`; очередное значение доступно через `(field, minimum, error)`."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `report.get(field) or []` и сохраняем результат в `values`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `{str(value).strip() for value in values if value is not None and str(value).strip()}` и сохраняем результат в `unique`."
+        },
+        {
+          "line": 12,
+          "text": "Проверяем условие `len(unique) < minimum`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 14,
+          "text": "Проверяем условие `not report.get('visualizations')`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 15,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 16,
+          "text": "Вычисляем `str(report.get('conclusion') or '').strip()` и сохраняем результат в `conclusion`."
+        },
+        {
+          "line": 17,
+          "text": "Проверяем условие `not conclusion`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Проверяем условие `len(conclusion) < 20`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 20,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 21,
+          "text": "Возвращаем из функции `errors or ['OK']`."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "395e6fe4d57433085597d097115267d8d0d93cae82a337e066ed5003aba8923c",
+      "verificationEvidence": {
+        "codeSha256": "395e6fe4d57433085597d097115267d8d0d93cae82a337e066ed5003aba8923c",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abc4083f82a6a54f6b35d0b",
+      "lessonId": "M01-L18",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Б",
+      "explanation": "Каждая строка соответствует одной игровой сессии: это наблюдаемый объект, а имя файла и агрегаты описывают набор в целом.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "c78364c5d0f27706fe002726c70be55fa7ceeb2537db621cfe54f73e9047c389",
+      "verificationEvidence": {
+        "codeSha256": "c78364c5d0f27706fe002726c70be55fa7ceeb2537db621cfe54f73e9047c389",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abc4083f82a6a54f6b35d0e",
+      "lessonId": "M01-L18",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "А,Б,В,Г",
+      "explanation": "head показывает первые строки, shape — размер, columns — поля, info — типы и заполненность. Печать слова «готово» структуру не раскрывает.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "52e966bef5dc8a3fcd807cf7f9647f564af12c8f729fa35949d3a1d119cef815",
+      "verificationEvidence": {
+        "codeSha256": "52e966bef5dc8a3fcd807cf7f9647f564af12c8f729fa35949d3a1d119cef815",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abc4083f82a6a54f6b35d11",
+      "lessonId": "M01-L18",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "1-В,2-Г,3-Б,4-А",
+      "explanation": "value_counts считает частоты, min находит минимум, mean — среднее, sum — общую сумму.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "7dec961222b04d8f9185e471a5447fe12b47c9ef928449af874483fa911aeda5",
+      "verificationEvidence": {
+        "codeSha256": "7dec961222b04d8f9185e471a5447fe12b47c9ef928449af874483fa911aeda5",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abc4083f82a6a54f6b35d14",
+      "lessonId": "M01-L18",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Б",
+      "explanation": "Столбчатая диаграмма частот сравнивает количество объектов в категориях. Линия нужна для упорядоченной динамики, рассеяние — для пары числовых признаков.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "c78364c5d0f27706fe002726c70be55fa7ceeb2537db621cfe54f73e9047c389",
+      "verificationEvidence": {
+        "codeSha256": "c78364c5d0f27706fe002726c70be55fa7ceeb2537db621cfe54f73e9047c389",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abc4083f82a6a54f6b35d17",
+      "lessonId": "M01-L18",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "но по одному графику нельзя доказать причину",
+      "explanation": "Ограничение отделяет наблюдаемую связь от причинного объяснения. В ответе сохранён дословный фрагмент исходной фразы.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "72ebf20ffc32893fdf352b674936a3f0108b10e365fa76e0d5df50ef60690c62",
+      "verificationEvidence": {
+        "codeSha256": "72ebf20ffc32893fdf352b674936a3f0108b10e365fa76e0d5df50ef60690c62",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abc4083f82a6a54f6b35d1a",
+      "lessonId": "M01-L18",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "1-В,2-Г,3-Б,4-А",
+      "explanation": "Вопрос задаёт цель анализа, показатели — вычисленные числа, график — визуальное представление, ограничение — границы допустимых утверждений.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "7dec961222b04d8f9185e471a5447fe12b47c9ef928449af874483fa911aeda5",
+      "verificationEvidence": {
+        "codeSha256": "7dec961222b04d8f9185e471a5447fe12b47c9ef928449af874483fa911aeda5",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    }
+  ]
+}

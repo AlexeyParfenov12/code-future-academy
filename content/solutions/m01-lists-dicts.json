@@ -1,0 +1,1444 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6a56c85851ad6c611651ce49",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "А) [15] / [30] / [10, 15, 20] / [30, 25, 20, 15, 10, 5] / [5, 15, 25]",
+      "explanation": "Правая граница среза не включается: [2:3] содержит только индекс 2. [-1:] — список из последнего элемента. [1:4] берёт индексы 1, 2, 3. Шаг -1 разворачивает список, а шаг 2 выбирает индексы 0, 2, 4.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "3362b22756a527957944d1ce1cfd02525b119d866db4689e6112312bfe063946",
+      "verificationEvidence": {
+        "codeSha256": "3362b22756a527957944d1ce1cfd02525b119d866db4689e6112312bfe063946",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce4a",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "temps = [18, 22, 19, 25, 17, 30, 28]\navg = sum(temps) / len(temps)\nprint(f'Среднее: {avg:.1f}')\nprint('Минимум:', min(temps))\nprint('Максимум:', max(temps))",
+      "answer": "",
+      "explanation": "Исходный расчёт среднего сохранён. min и max возвращают наименьшее и наибольшее значения, а не их позиции. Среднее округляется только при выводе до одного знака.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Среднее: 22.7\nМинимум: 17\nМаксимум: 30"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[18, 22, 19, 25, 17, 30, 28]` и сохраняем результат в `temps`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `sum(temps) / len(temps)` и сохраняем результат в `avg`."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5859c359c46d1880ae703b51e8db2ede5db9ab3b8ba05d6075c6819e7685a946",
+      "verificationEvidence": {
+        "codeSha256": "5859c359c46d1880ae703b51e8db2ede5db9ab3b8ba05d6075c6819e7685a946",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Среднее: 22.7\nМинимум: 17\nМаксимум: 30"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce4b",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "data = [10, 20, 30, 40, 50]\nprint(data[-1])\nprint(data[1:3])\nprint(data[:])",
+      "answer": "",
+      "explanation": "Последний индекс равен 4 или -1, но не 5. [1:3] берёт два элемента. Полная копия списка записывается [:]. Важно: лишнее двоеточие и граница 6 сами по себе не вызывают исключения — их исправление делает запись соответствующей заданию.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "50\n[20, 30]\n[10, 20, 30, 40, 50]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[10, 20, 30, 40, 50]` и сохраняем результат в `data`."
+        },
+        {
+          "line": 2,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "17900d9432acea6cfb1cd0f4b6757203f2b3f1bbfefa2720550df3404c4bb796",
+      "verificationEvidence": {
+        "codeSha256": "17900d9432acea6cfb1cd0f4b6757203f2b3f1bbfefa2720550df3404c4bb796",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "50\n[20, 30]\n[10, 20, 30, 40, 50]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce4c",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "scores = [85, 92, 71, 88, 60, 95, 58, 73, 66, 80]\npassed = failed = 0\nfor score in scores:\n    if score >= 70:\n        passed += 1\n    else:\n        failed += 1\npercentage = passed / len(scores) * 100\nprint(f'Сдали: {passed}  Не сдали: {failed}  Процент: {percentage}%')",
+      "answer": "",
+      "explanation": "Порог включает 70. Ниже него находятся 60, 58 и 66: это три несдавших, остальные семь сдали. Процент 7 / 10 × 100 = 70.0. Между частями итоговой строки ровно два пробела.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Сдали: 7  Не сдали: 3  Процент: 70.0%"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[85, 92, 71, 88, 60, 95, 58, 73, 66, 80]` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `0` и сохраняем результат в `passed, failed`."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `scores`; очередное значение доступно через `score`."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `score >= 70`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Обновляем `passed` операцией `Add` с `1`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 7,
+          "text": "Обновляем `failed` операцией `Add` с `1`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `passed / len(scores) * 100` и сохраняем результат в `percentage`."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "16f4aaec1b017714e24d1486ffd0081c43dfeec419b0adfa7e73bd46b4e5f1d5",
+      "verificationEvidence": {
+        "codeSha256": "16f4aaec1b017714e24d1486ffd0081c43dfeec419b0adfa7e73bd46b4e5f1d5",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Сдали: 7  Не сдали: 3  Процент: 70.0%"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce4d",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "nums = []\nfor _ in range(8):\n    nums.append(int(input()))\nfirst = nums[:4]\nsecond = nums[4:]\nprint(first)\nprint(second)\nif sum(first) > sum(second):\n    print('Первая половина больше')\nelif sum(first) < sum(second):\n    print('Вторая половина больше')\nelse:\n    print('Суммы равны')",
+      "answer": "",
+      "explanation": "Первые четыре позиции имеют индексы 0–3. Срез [:4] исключает индекс 4, а [4:] начинает со второй половины. Сравниваем суммы, а не сами списки: сравнение списков было бы лексикографическим.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 2,
+      "examples": [
+        {
+          "input": "1\n2\n3\n4\n10\n10\n10\n10",
+          "output": "[1, 2, 3, 4]\n[10, 10, 10, 10]\nВторая половина больше"
+        },
+        {
+          "input": "1\n1\n1\n1\n1\n1\n1\n1",
+          "output": "[1, 1, 1, 1]\n[1, 1, 1, 1]\nСуммы равны"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[]` и сохраняем результат в `nums`."
+        },
+        {
+          "line": 2,
+          "text": "Перебираем `range(8)`; очередное значение доступно через `_`."
+        },
+        {
+          "line": 3,
+          "text": "Выполняем `nums.append` с переданными аргументами."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `nums[:4]` и сохраняем результат в `first`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `nums[4:]` и сохраняем результат в `second`."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 8,
+          "text": "Проверяем условие `sum(first) > sum(second)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 10,
+          "text": "Проверяем условие `sum(first) < sum(second)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 11,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "dd3712c3dc0fb32b48bdf464b6470c344dc3f87f084f14717273ee2cc962fbb5",
+      "verificationEvidence": {
+        "codeSha256": "dd3712c3dc0fb32b48bdf464b6470c344dc3f87f084f14717273ee2cc962fbb5",
+        "passed": 2,
+        "total": 2,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "1\n2\n3\n4\n10\n10\n10\n10\n",
+          "expected": "[1, 2, 3, 4]\n[10, 10, 10, 10]\nВторая половина больше"
+        },
+        {
+          "input": "1\n1\n1\n1\n1\n1\n1\n1\n",
+          "expected": "[1, 1, 1, 1]\n[1, 1, 1, 1]\nСуммы равны"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce4e",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "nums = list(map(int, input().split()))\nx = int(input())\nprint('Встречается:', x in nums)\nprint('Количество раз:', nums.count(x))\nif x in nums:\n    print('Первое вхождение на позиции:', nums.index(x))",
+      "answer": "",
+      "explanation": "split разбивает одну строку на числа, map преобразует их в int. Проверка in защищает вызов index: для отсутствующего элемента index вызвал бы ValueError. Позиции считаются с нуля.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 2,
+      "examples": [
+        {
+          "input": "3 7 3 9 3\n3",
+          "output": "Встречается: True\nКоличество раз: 3\nПервое вхождение на позиции: 0"
+        },
+        {
+          "input": "3 7 9\n5",
+          "output": "Встречается: False\nКоличество раз: 0"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Читаем входные данные и сохраняем их в nums. input возвращает строку."
+        },
+        {
+          "line": 2,
+          "text": "Читаем входные данные и сохраняем их в x. int преобразует строку в целое число."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Проверяем условие `x in nums`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "82e54a46ffb6b6d07bcae63f20c017b86f5331c91c8e780240badc971526499e",
+      "verificationEvidence": {
+        "codeSha256": "82e54a46ffb6b6d07bcae63f20c017b86f5331c91c8e780240badc971526499e",
+        "passed": 2,
+        "total": 2,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "3 7 3 9 3\n3\n",
+          "expected": "Встречается: True\nКоличество раз: 3\nПервое вхождение на позиции: 0"
+        },
+        {
+          "input": "3 7 9\n5\n",
+          "expected": "Встречается: False\nКоличество раз: 0"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce4f",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "n = int(input())\nnums = []\nfor _ in range(n):\n    nums.append(int(input()))\nprint('Количество элементов:', len(nums))\nprint('Сумма:', sum(nums))\nprint('Минимум:', min(nums))\nprint('Максимум:', max(nums))\nprint(f'Среднее арифметическое: {sum(nums) / len(nums):.2f}')\nprint('Первый элемент:', nums[0])\nprint('Последний элемент:', nums[-1])\nprint('Список в обратном порядке:', nums[::-1])",
+      "answer": "",
+      "explanation": "После N вводов набор хранится в nums. Функции вычисляют агрегаты, отрицательный индекс обращается к последнему элементу, шаг -1 разворачивает порядок. Формат .2f сохраняет два знака, включая нули. Предполагается N > 0.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "5\n10\n20\n30\n40\n50",
+          "output": "Количество элементов: 5\nСумма: 150\nМинимум: 10\nМаксимум: 50\nСреднее арифметическое: 30.00\nПервый элемент: 10\nПоследний элемент: 50\nСписок в обратном порядке: [50, 40, 30, 20, 10]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Читаем входные данные и сохраняем их в n. int преобразует строку в целое число."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[]` и сохраняем результат в `nums`."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `range(n)`; очередное значение доступно через `_`."
+        },
+        {
+          "line": 4,
+          "text": "Выполняем `nums.append` с переданными аргументами."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 8,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 11,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 12,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "3efa3f400cb9b2fa1ab5cd2c0c7ee8340d05a409cf28f320d3b68c5bbda14417",
+      "verificationEvidence": {
+        "codeSha256": "3efa3f400cb9b2fa1ab5cd2c0c7ee8340d05a409cf28f320d3b68c5bbda14417",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "5\n10\n20\n30\n40\n50\n",
+          "expected": "Количество элементов: 5\nСумма: 150\nМинимум: 10\nМаксимум: 50\nСреднее арифметическое: 30.00\nПервый элемент: 10\nПоследний элемент: 50\nСписок в обратном порядке: [50, 40, 30, 20, 10]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abbeeaaca1552ad79d05eb4",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "[15, 22, 11, 18]\n66",
+      "explanation": "Условие x > 10 пропускает 3, 7 и 6. append сохраняет исходный порядок подходящих элементов: 15, 22, 11, 18. Их сумма равна 66, она выводится второй строкой.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "5f7a7a2014107642806e589c6058bc22a0a622571cd621a43ace202c78ce8087",
+      "verificationEvidence": {
+        "codeSha256": "5f7a7a2014107642806e589c6058bc22a0a622571cd621a43ace202c78ce8087",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abbef4aca1552ad79d05eb9",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "values = [10, 40, 20, 80, 60, 30]\nmin_val = min(values)\nmax_val = max(values)\nprint(f'Мин: {min_val}, Макс: {max_val}')\nnormed = []\nfor x in values:\n    norm = (x - min_val) / (max_val - min_val)\n    normed.append(round(norm, 2))\nprint(normed)",
+      "answer": "",
+      "explanation": "Из каждого значения вычитается минимум 10, затем результат делится на размах 70. Минимум переходит в 0, максимум — в 1. Округляем элементы перед добавлением в список; для постоянного набора отдельно потребовалась бы защита от нулевого размаха.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Мин: 10, Макс: 80\n[0.0, 0.43, 0.14, 1.0, 0.71, 0.29]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[10, 40, 20, 80, 60, 30]` и сохраняем результат в `values`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `min(values)` и сохраняем результат в `min_val`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `max(values)` и сохраняем результат в `max_val`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `[]` и сохраняем результат в `normed`."
+        },
+        {
+          "line": 6,
+          "text": "Перебираем `values`; очередное значение доступно через `x`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `(x - min_val) / (max_val - min_val)` и сохраняем результат в `norm`."
+        },
+        {
+          "line": 8,
+          "text": "Выполняем `normed.append` с переданными аргументами."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "7785e0ed7445253c2d082222877eb68bcd99fbd2c93267b1aa02bc175e1778b2",
+      "verificationEvidence": {
+        "codeSha256": "7785e0ed7445253c2d082222877eb68bcd99fbd2c93267b1aa02bc175e1778b2",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Мин: 10, Макс: 80\n[0.0, 0.43, 0.14, 1.0, 0.71, 0.29]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abbefcdca1552ad79d05ebb",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "nums = [1, 2, 3, 4, 5, 6, 7, 8]\nevens = []\nfor x in nums:\n    if x % 2 == 0:\n        evens.append(x)\nprint(evens)\nprint(evens[::-1])",
+      "answer": "",
+      "explanation": "Для проверки равенства нужен ==. [-1::] берёт только последний элемент, а [::-1] проходит весь список с отрицательным шагом. Сначала выводится исходный порядок чётных, затем обратный.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[2, 4, 6, 8]\n[8, 6, 4, 2]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[1, 2, 3, 4, 5, 6, 7, 8]` и сохраняем результат в `nums`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[]` и сохраняем результат в `evens`."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `nums`; очередное значение доступно через `x`."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `x % 2 == 0`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Выполняем `evens.append` с переданными аргументами."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "466ec1c0f12059d2f65139cde24457446d30470d3b2fb2993ee4204f6f18d001",
+      "verificationEvidence": {
+        "codeSha256": "466ec1c0f12059d2f65139cde24457446d30470d3b2fb2993ee4204f6f18d001",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[2, 4, 6, 8]\n[8, 6, 4, 2]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abbf02dca1552ad79d05ebd",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "data = [10, 20, 30, 40, 50, 60, 70]\nmoving_avg = []\nfor i in range(1, len(data) - 1):\n    moving_avg.append(sum(data[i - 1:i + 2]) / 3)\nprint(moving_avg)",
+      "answer": "",
+      "explanation": "Центры окна — индексы от 1 до len(data)-2. Срез заканчивается перед i+2, поэтому содержит ровно трёх соседей. Крайние позиции не имеют полного окна и не дают отдельного результата.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[20.0, 30.0, 40.0, 50.0, 60.0]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[10, 20, 30, 40, 50, 60, 70]` и сохраняем результат в `data`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[]` и сохраняем результат в `moving_avg`."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `range(1, len(data) - 1)`; очередное значение доступно через `i`."
+        },
+        {
+          "line": 4,
+          "text": "Выполняем `moving_avg.append` с переданными аргументами."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "699c882690c2f206c1972e0aee7c5a86831d5a947dbce1b87c09b59c035867a2",
+      "verificationEvidence": {
+        "codeSha256": "699c882690c2f206c1972e0aee7c5a86831d5a947dbce1b87c09b59c035867a2",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[20.0, 30.0, 40.0, 50.0, 60.0]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abbf072ca1552ad79d05ebf",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "nums = list(map(int, input().split()))\ntotal = 0\nfor x in nums:\n    total += x\naverage = total / len(nums)\nabove = []\nfor x in nums:\n    if x > average:\n        above.append(x)\nprint('Среднее:', average)\nprint('Выше среднего:', above)\nprint('Количество:', len(above))",
+      "answer": "",
+      "explanation": "В первом проходе получаем сумму, затем среднее. Только после этого второй проход может сравнивать каждый элемент с уже известным средним. Условие строгое: равные среднему не включаются.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 2,
+      "examples": [
+        {
+          "input": "4 8 15 16 23 42",
+          "output": "Среднее: 18.0\nВыше среднего: [23, 42]\nКоличество: 2"
+        },
+        {
+          "input": "5 5",
+          "output": "Среднее: 5.0\nВыше среднего: []\nКоличество: 0"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Читаем входные данные и сохраняем их в nums. input возвращает строку."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `0` и сохраняем результат в `total`."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `nums`; очередное значение доступно через `x`."
+        },
+        {
+          "line": 4,
+          "text": "Обновляем `total` операцией `Add` с `x`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `total / len(nums)` и сохраняем результат в `average`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `[]` и сохраняем результат в `above`."
+        },
+        {
+          "line": 7,
+          "text": "Перебираем `nums`; очередное значение доступно через `x`."
+        },
+        {
+          "line": 8,
+          "text": "Проверяем условие `x > average`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 9,
+          "text": "Выполняем `above.append` с переданными аргументами."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 11,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 12,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "11acfed54bc083e30ddf52d13e7d6bcb5b4ae4e23b4009e0d4a4bdb169d01b26",
+      "verificationEvidence": {
+        "codeSha256": "11acfed54bc083e30ddf52d13e7d6bcb5b4ae4e23b4009e0d4a4bdb169d01b26",
+        "passed": 2,
+        "total": 2,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "4 8 15 16 23 42\n",
+          "expected": "Среднее: 18.0\nВыше среднего: [23, 42]\nКоличество: 2"
+        },
+        {
+          "input": "5 5\n",
+          "expected": "Среднее: 5.0\nВыше среднего: []\nКоличество: 0"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abbf0edca1552ad79d05ec4",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "lst = list(map(int, input().split()))\nlst.sort(reverse=True)\ntop = lst[:3]\nprint('Отсортированный список:', lst)\nprint('Топ-3:', top)\nprint('Средний балл топ-3:', round(sum(top) / len(top), 2))",
+      "answer": "",
+      "explanation": "sort изменяет список на месте и возвращает None, поэтому присваивать его результат нельзя. После сортировки первые три значения — лучшие результаты. Сумму делим на фактическое число выбранных значений.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "120 85 200 90 150 300 70",
+          "output": "Отсортированный список: [300, 200, 150, 120, 90, 85, 70]\nТоп-3: [300, 200, 150]\nСредний балл топ-3: 216.67"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Читаем входные данные и сохраняем их в lst. input возвращает строку."
+        },
+        {
+          "line": 2,
+          "text": "Выполняем `lst.sort` с переданными аргументами."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `lst[:3]` и сохраняем результат в `top`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "00057c2f8f71f3aac06c4674298f246960ee2b96af851c34dcc308a866f06bf2",
+      "verificationEvidence": {
+        "codeSha256": "00057c2f8f71f3aac06c4674298f246960ee2b96af851c34dcc308a866f06bf2",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "120 85 200 90 150 300 70\n",
+          "expected": "Отсортированный список: [300, 200, 150, 120, 90, 85, 70]\nТоп-3: [300, 200, 150]\nСредний балл топ-3: 216.67"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abbf184ca1552ad79d05ec8",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "nums = list(map(int, input().split()))\nordered = sorted(nums)\nn = len(nums)\nif n % 2 == 0:\n    median = (ordered[n // 2 - 1] + ordered[n // 2]) / 2\nelse:\n    median = ordered[n // 2]\nunique_count = 0\nseen = []\nrepeated = []\nfor x in ordered:\n    if x not in seen:\n        seen.append(x)\n        unique_count += 1\n        if nums.count(x) > 1:\n            repeated.append(x)\nprint('Количество элементов:', n)\nprint('Сумма:', sum(nums))\nprint('Минимум:', min(nums))\nprint('Максимум:', max(nums))\nprint('Среднее:', round(sum(nums) / n, 2))\nprint('Медиана:', median)\nprint('Уникальных значений:', unique_count)\nprint('Повторяются:', repeated)",
+      "answer": "",
+      "explanation": "Сортировка нужна для медианы и порядка повторов. При чётной длине берём среднее двух центральных, при нечётной — центральное значение. seen исключает повторный подсчёт одного значения; count определяет, повторяется ли оно. Множества и словари не используются.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 2,
+      "examples": [
+        {
+          "input": "5 3 8 3 7 5 9 2",
+          "output": "Количество элементов: 8\nСумма: 42\nМинимум: 2\nМаксимум: 9\nСреднее: 5.25\nМедиана: 5.0\nУникальных значений: 6\nПовторяются: [3, 5]"
+        },
+        {
+          "input": "1 2 2",
+          "output": "Количество элементов: 3\nСумма: 5\nМинимум: 1\nМаксимум: 2\nСреднее: 1.67\nМедиана: 2\nУникальных значений: 2\nПовторяются: [2]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Читаем входные данные и сохраняем их в nums. input возвращает строку."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `sorted(nums)` и сохраняем результат в `ordered`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `len(nums)` и сохраняем результат в `n`."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `n % 2 == 0`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `(ordered[n // 2 - 1] + ordered[n // 2]) / 2` и сохраняем результат в `median`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `ordered[n // 2]` и сохраняем результат в `median`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `0` и сохраняем результат в `unique_count`."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `[]` и сохраняем результат в `seen`."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `[]` и сохраняем результат в `repeated`."
+        },
+        {
+          "line": 11,
+          "text": "Перебираем `ordered`; очередное значение доступно через `x`."
+        },
+        {
+          "line": 12,
+          "text": "Проверяем условие `x not in seen`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `seen.append` с переданными аргументами."
+        },
+        {
+          "line": 14,
+          "text": "Обновляем `unique_count` операцией `Add` с `1`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 15,
+          "text": "Проверяем условие `nums.count(x) > 1`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 16,
+          "text": "Выполняем `repeated.append` с переданными аргументами."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 18,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 19,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 20,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 22,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 23,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 24,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "4af06696e31faea5fbf831a5df573190aea3bd4877c8538ff962b5f212f952c1",
+      "verificationEvidence": {
+        "codeSha256": "4af06696e31faea5fbf831a5df573190aea3bd4877c8538ff962b5f212f952c1",
+        "passed": 2,
+        "total": 2,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "5 3 8 3 7 5 9 2\n",
+          "expected": "Количество элементов: 8\nСумма: 42\nМинимум: 2\nМаксимум: 9\nСреднее: 5.25\nМедиана: 5.0\nУникальных значений: 6\nПовторяются: [3, 5]"
+        },
+        {
+          "input": "1 2 2\n",
+          "expected": "Количество элементов: 3\nСумма: 5\nМинимум: 1\nМаксимум: 2\nСреднее: 1.67\nМедиана: 2\nУникальных значений: 2\nПовторяются: [2]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6a56c85851ad6c611651ce50",
+      "lessonId": "M01-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "a = int(input())\nb = int(input())\nresults = []\nfor n in range(a, b + 1):\n    bits = bin(n)[2:]\n    tail = bits[1:].lstrip('0')\n    remainder = int(tail, 2) if tail else 0\n    result = n - remainder\n    if result not in results:\n        results.append(result)\nprint(len(results))",
+      "answer": "",
+      "explanation": "Сначала убираем ведущую единицу, затем только непосредственно следующие нули. Пустая строка означает ноль. Разность сохраняется без повторов в списке. Также разность всегда равна наибольшей степени двойки не больше N: это позволяет независимо проверить число разных результатов.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 3,
+      "examples": [
+        {
+          "input": "10\n1000",
+          "output": "7"
+        },
+        {
+          "input": "11\n11",
+          "output": "1"
+        },
+        {
+          "input": "1\n8",
+          "output": "4"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Читаем входные данные и сохраняем их в a. int преобразует строку в целое число."
+        },
+        {
+          "line": 2,
+          "text": "Читаем входные данные и сохраняем их в b. int преобразует строку в целое число."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `[]` и сохраняем результат в `results`."
+        },
+        {
+          "line": 4,
+          "text": "Перебираем `range(a, b + 1)`; очередное значение доступно через `n`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `bin(n)[2:]` и сохраняем результат в `bits`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `bits[1:].lstrip('0')` и сохраняем результат в `tail`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `int(tail, 2) if tail else 0` и сохраняем результат в `remainder`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `n - remainder` и сохраняем результат в `result`."
+        },
+        {
+          "line": 9,
+          "text": "Проверяем условие `result not in results`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `results.append` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "ecd3acadd14cc06f8d3c7d2a14db30148f91ea72ab45566e56d99bd9de224ac9",
+      "verificationEvidence": {
+        "codeSha256": "ecd3acadd14cc06f8d3c7d2a14db30148f91ea72ab45566e56d99bd9de224ac9",
+        "passed": 3,
+        "total": 3,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "10\n1000\n",
+          "expected": "7"
+        },
+        {
+          "input": "11\n11\n",
+          "expected": "1"
+        },
+        {
+          "input": "1\n8\n",
+          "expected": "4"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ad21846734afeed051840f9",
+      "lessonId": "M01-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Изменяемая коллекция пар «ключ — значение». Каждый ключ уникален, по нему можно получить соответствующее значение.",
+      "explanation": "Словарь описывает объект именованными признаками. Например, в {\"name\": \"Аня\", \"score\": 85} ключ score связан с числом 85. Порядковый индекс для обращения к этому значению не нужен.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "8fabe1b7e802d03d1876380cff00c7495c26fb5ca48bfb9e4b9d2b68796b89ca",
+      "verificationEvidence": {
+        "codeSha256": "8fabe1b7e802d03d1876380cff00c7495c26fb5ca48bfb9e4b9d2b68796b89ca",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ad21893734afeed051840fe",
+      "lessonId": "M01-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Присваивание по ключу: d[key] = value.\nОбновление через метод: d.update({key: value}).",
+      "explanation": "Оба способа добавляют отсутствующий ключ или заменяют значение существующего. Чтение d[key], get и перебор items сами по себе словарь не изменяют. Выберите в вариантах действия с присваиванием или update.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "c369b03934e5d3c4d49798765c006b529014b09d3bab581b55d2eab8b9571702",
+      "verificationEvidence": {
+        "codeSha256": "c369b03934e5d3c4d49798765c006b529014b09d3bab581b55d2eab8b9571702",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ad218de734afeed05184103",
+      "lessonId": "M01-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "product = {'name': 'Наушники', 'price': 1500, 'category': 'Электроника', 'rating': 4.7}\nfor key, value in product.items():\n    print(key, ':', value)",
+      "answer": "",
+      "explanation": "items возвращает пары ключа и значения в порядке добавления. print с тремя аргументами ставит пробел до и после двоеточия.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "name : Наушники\nprice : 1500\ncategory : Электроника\nrating : 4.7"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `{'name': 'Наушники', 'price': 1500, 'category': 'Электроника', 'rating': 4.7}` и сохраняем результат в `product`."
+        },
+        {
+          "line": 2,
+          "text": "Перебираем `product.items()`; очередное значение доступно через `(key, value)`."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "109ba4de4a3c0f5aa1ac37d52c2f30d7856fccd68a01c55be4dd4180661fa0c1",
+      "verificationEvidence": {
+        "codeSha256": "109ba4de4a3c0f5aa1ac37d52c2f30d7856fccd68a01c55be4dd4180661fa0c1",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "name : Наушники\nprice : 1500\ncategory : Электроника\nrating : 4.7"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ad21901734afeed05184104",
+      "lessonId": "M01-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "film = {'title': 'Матрица', 'year': 1999, 'genre': 'фантастика'}\nprint(film['year'])\nprint(film.get('genre'))",
+      "answer": "",
+      "explanation": "Ключи чувствительны к регистру: Year и year различны. Русского ключа жанр нет; в словаре он называется genre. Исправляем обращения, сохраняя исходную карточку.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "1999\nфантастика"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `{'title': 'Матрица', 'year': 1999, 'genre': 'фантастика'}` и сохраняем результат в `film`."
+        },
+        {
+          "line": 2,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "e55b6f2ecb5e026ab8c87bffe763f3a0b7b7c3bd7df8b32a158f1461933664c7",
+      "verificationEvidence": {
+        "codeSha256": "e55b6f2ecb5e026ab8c87bffe763f3a0b7b7c3bd7df8b32a158f1461933664c7",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "1999\nфантастика"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ad2194b734afeed05184105",
+      "lessonId": "M01-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "hero = {'name': input(), 'level': int(input()), 'class': input()}\nfor key, value in hero.items():\n    print(key, ':', value)",
+      "answer": "",
+      "explanation": "Данные читаются в указанном порядке. Уровень преобразуем в int, имя и класс остаются строками. Ключ class допустим как строка словаря, хотя это зарезервированное слово Python.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "Артас\n42\nмаг",
+          "output": "name : Артас\nlevel : 42\nclass : маг"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Читаем входные данные и сохраняем их в hero. int преобразует строку в целое число."
+        },
+        {
+          "line": 2,
+          "text": "Перебираем `hero.items()`; очередное значение доступно через `(key, value)`."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "2f86c4c0e00a14a1092ecb0535d6c6a98fd8558f1ab3f108a38b60eef0630ccf",
+      "verificationEvidence": {
+        "codeSha256": "2f86c4c0e00a14a1092ecb0535d6c6a98fd8558f1ab3f108a38b60eef0630ccf",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "Артас\n42\nмаг\n",
+          "expected": "name : Артас\nlevel : 42\nclass : маг"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ad2198d734afeed05184106",
+      "lessonId": "M01-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "student = {'name': 'Аня', 'subject': 'Математика', 'score': 85}\nstudent['score'] = 92\nstudent['grade'] = '9А'\nprint(student)",
+      "answer": "",
+      "explanation": "Присваивание существующему score заменяет 85 на 92. Отсутствующий ключ grade добавляется в конец словаря. Остальные признаки сохраняются.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "{'name': 'Аня', 'subject': 'Математика', 'score': 92, 'grade': '9А'}"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `{'name': 'Аня', 'subject': 'Математика', 'score': 85}` и сохраняем результат в `student`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `92` и сохраняем результат в `student['score']`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `'9А'` и сохраняем результат в `student['grade']`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "3133f6ccfaa20ce7c55784fd8499c723d682808a9d621dad9da3e3d5fc82cb7f",
+      "verificationEvidence": {
+        "codeSha256": "3133f6ccfaa20ce7c55784fd8499c723d682808a9d621dad9da3e3d5fc82cb7f",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "{'name': 'Аня', 'subject': 'Математика', 'score': 92, 'grade': '9А'}"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ad219f4734afeed05184107",
+      "lessonId": "M01-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "film = {'title': 'Матрица', 'year': 1999, 'rating': 8.7}\nkey = input()\nif key in film:\n    print(film[key])\nelse:\n    print('Признак не найден')",
+      "answer": "",
+      "explanation": "Оператор in для словаря проверяет ключи. Только после успешной проверки обращаемся по ключу, поэтому неизвестное имя не вызывает KeyError.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 2,
+      "examples": [
+        {
+          "input": "rating",
+          "output": "8.7"
+        },
+        {
+          "input": "genre",
+          "output": "Признак не найден"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `{'title': 'Матрица', 'year': 1999, 'rating': 8.7}` и сохраняем результат в `film`."
+        },
+        {
+          "line": 2,
+          "text": "Читаем входные данные и сохраняем их в key. input возвращает строку."
+        },
+        {
+          "line": 3,
+          "text": "Проверяем условие `key in film`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "4c10d31e62891b134efeccbc248dbc0681fde43611134046aca732ebc97e9fef",
+      "verificationEvidence": {
+        "codeSha256": "4c10d31e62891b134efeccbc248dbc0681fde43611134046aca732ebc97e9fef",
+        "passed": 2,
+        "total": 2,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "rating\n",
+          "expected": "8.7"
+        },
+        {
+          "input": "genre\n",
+          "expected": "Признак не найден"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ad21a42734afeed05184108",
+      "lessonId": "M01-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "games = []\nfor _ in range(3):\n    games.append(input())\nprint(games)\nprint(len(games))\nprint(games[0])",
+      "answer": "",
+      "explanation": "Каждая игра вводится отдельной строкой, поэтому названия с пробелами сохраняются целиком. append добавляет игру в список, len даёт количество, индекс 0 — первую игру.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "Шахматы\nMinecraft\nPortal 2",
+          "output": "['Шахматы', 'Minecraft', 'Portal 2']\n3\nШахматы"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[]` и сохраняем результат в `games`."
+        },
+        {
+          "line": 2,
+          "text": "Перебираем `range(3)`; очередное значение доступно через `_`."
+        },
+        {
+          "line": 3,
+          "text": "Выполняем `games.append` с переданными аргументами."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "896156f0c64496dceb88eea611c483d9ec23f0fa66eff0f4aee4b236568ab76e",
+      "verificationEvidence": {
+        "codeSha256": "896156f0c64496dceb88eea611c483d9ec23f0fa66eff0f4aee4b236568ab76e",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "Шахматы\nMinecraft\nPortal 2\n",
+          "expected": "['Шахматы', 'Minecraft', 'Portal 2']\n3\nШахматы"
+        }
+      ]
+    }
+  ]
+}

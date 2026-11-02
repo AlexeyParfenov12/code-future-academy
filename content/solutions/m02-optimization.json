@@ -1,0 +1,1110 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-847f56ca08b45d5848e16424",
+      "lessonId": "M02-L02",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Признак: количество решённых заданий. Результат: итоговый балл.\nТочки графика: (2;35), (4;48), (6;61), (8;72), (10;78), (12;82), (14;84).\nЗависимость возрастающая. Приращения за каждые 2 задания: 13, 13, 11, 6, 4, 2 балла. Быстрее всего рост на 2–6 заданиях; после 8 он заметно замедляется.\nПримерный прогноз для 16 заданий: 86 баллов, если продолжить последний прирост +2. Это экстраполяция, а не гарантированный результат.\nВывод: дополнительные задания связаны с увеличением балла, но наблюдается уменьшение прироста. Для рекомендаций ИИ нужны дополнительные наблюдения и проверка на новых учениках.",
+      "explanation": "Каждая точка связывает вход с наблюдаемым результатом. Сравниваем приращения при одинаковом шаге по x. Для прогноза вне наблюдаемого диапазона явно выбираем правило продолжения; по семи точкам нельзя доказать причинность или точное значение при x=16.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "6fd30e137104b3890b50a400bfcee1aa30f73e7cd38e3f7ddaa1dcba75569b6a",
+      "verificationEvidence": {
+        "codeSha256": "6fd30e137104b3890b50a400bfcee1aa30f73e7cd38e3f7ddaa1dcba75569b6a",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab95cdbc022be45c3f2a331",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Минимальная ошибка E = 1 при p = 3.\nНа участке p от 0 до 3 ошибка уменьшается; от 3 до 6 увеличивается. Лучший проверенный параметр: p = 3.",
+      "explanation": "Сравниваем все семь табличных ошибок. Значение 1 меньше 2, 5 и 10. Это минимум среди проверенных точек; утверждение о непрерывной функции потребовало бы её формулы.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "dcee1206e05773c7ba40e686e29deafa47aa746d421e9d70a682d8b2fc376e3d",
+      "verificationEvidence": {
+        "codeSha256": "dcee1206e05773c7ba40e686e29deafa47aa746d421e9d70a682d8b2fc376e3d",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab95d07c022be45c3f2a332",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "0→1: −5; 1→2: −3; 2→3: −1; 3→4: +1; 4→5: +3; 5→6: +5.\nДо p=3 изменения отрицательные, после p=3 положительные. Слева от минимума полезно двигаться вправо, справа — влево.",
+      "explanation": "Из новой ошибки вычитаем старую: например, 5−10=−5, 2−1=+1. Все шаги параметра равны единице, поэтому разности позволяют сравнивать скорость изменения.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "bd3b7e2a1b7df2779c8fd0f7788731781994265064a24322b39c24e7ae67fcff",
+      "verificationEvidence": {
+        "codeSha256": "bd3b7e2a1b7df2779c8fd0f7788731781994265064a24322b39c24e7ae67fcff",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab95d0bc022be45c3f2a333",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "p=1: вправо ошибка уменьшается → увеличивать параметр.\np=5: вправо ошибка увеличивается → уменьшать параметр.\np=3: достигнут табличный минимум → сохранить значение, не делать большой шаг.",
+      "explanation": "Чтобы уменьшать ошибку, движемся против направления её роста. Вблизи минимума крупный шаг может перескочить лучшую область.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "c1b4d087d2cdcf8fd1d7ab761b6c06b8fee2f53ed76a8dffd90a626795221df0",
+      "verificationEvidence": {
+        "codeSha256": "c1b4d087d2cdcf8fd1d7ab761b6c06b8fee2f53ed76a8dffd90a626795221df0",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab95d11c022be45c3f2a334",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Параметр → прогноз → сравнение с правильным ответом → ошибка → производная → изменение параметра против роста ошибки → новый прогноз.",
+      "explanation": "Ошибка измеряет качество текущего прогноза. Производная описывает локальное изменение ошибки при изменении параметра. Обновление p_new = p − step × derivative использует положительный небольшой шаг.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "fca9c677ea18b16b36a6ce5aab561c4a230778642f7ac5c6f20a53238efee071",
+      "verificationEvidence": {
+        "codeSha256": "fca9c677ea18b16b36a6ce5aab561c4a230778642f7ac5c6f20a53238efee071",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abbc7fba0b32e271b1f657b",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Производная — показатель направления и скорости изменения функции.\nОшибка модели — насколько прогноз отличается от правильного ответа.\nПараметр модели — настройка, которую можно менять.\nМинимум ошибки — значение, при котором модель ошибается меньше всего.\nОбучение модели — изменение параметров для уменьшения ошибки.",
+      "explanation": "Не путаем величину ошибки с производной: первая отвечает «насколько ошиблись», вторая — «как ошибка меняется». Параметр является изменяемой настройкой, а обучение — процессом её подбора.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "9c5b0b5d7750141a3c8f93d1a888b4318f85898acf644381ed12690568c1b729",
+      "verificationEvidence": {
+        "codeSha256": "9c5b0b5d7750141a3c8f93d1a888b4318f85898acf644381ed12690568c1b729",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba8ec35378f51136e02dcc",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Производная показывает направление изменения ошибки при небольшом изменении параметра. Если при увеличении параметра ошибка растёт, параметр уменьшают; если ошибка падает, параметр увеличивают. Повторяя небольшие обновления, модель ищет параметр с меньшей ошибкой.",
+      "explanation": "Знак производной задаёт направление, модуль — местную чувствительность. При слишком большом шаге уменьшение ошибки не гарантируется.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "8f034c5ee3be2aa8d016d0e5928a73160dfda3c522bf266d00cd648003681be7",
+      "verificationEvidence": {
+        "codeSha256": "8f034c5ee3be2aa8d016d0e5928a73160dfda3c522bf266d00cd648003681be7",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abbc7fba0b32e271b1f658a",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Увеличить параметр.",
+      "explanation": "По условию движение вправо уменьшает ошибку. Поэтому небольшой положительный шаг продолжает движение к меньшей ошибке.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "67388abe793a3a47121b7bb621e15758b64c6bbfb65f6a7004334dd0e0ade356",
+      "verificationEvidence": {
+        "codeSha256": "67388abe793a3a47121b7bb621e15758b64c6bbfb65f6a7004334dd0e0ade356",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abbc7fba0b32e271b1f6591",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Значение функции почти не меняется при небольшом изменении параметра.",
+      "explanation": "Близкая к нулю производная означает почти горизонтальный график. Сама по себе она не доказывает минимум: возможны также максимум или плоский участок.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "36c52882e06d3174a6a0d35ba1a0601c0eea8e2cad4f2f31fe6ab07197386cd2",
+      "verificationEvidence": {
+        "codeSha256": "36c52882e06d3174a6a0d35ba1a0601c0eea8e2cad4f2f31fe6ab07197386cd2",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abbc7fba0b32e271b1f6598",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Случайное изменение параметра может увеличить ошибку вместо уменьшения.",
+      "explanation": "Без оценки направления случайный шаг не использует сведения о графике ошибки. Производная помогает выбирать осмысленное направление; случайные методы возможны, но требуют отдельной стратегии проверки.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "5791b1b888fda22a5240f5d076289caab48e468c73f619fcc801023a26ff20d8",
+      "verificationEvidence": {
+        "codeSha256": "5791b1b888fda22a5240f5d076289caab48e468c73f619fcc801023a26ff20d8",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6ab95d15c022be45c3f2a335",
+      "lessonId": "M02-L03",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def error(p):\n    return (p - 3) ** 2 + 1\n\ndef derivative(p):\n    return 2 * (p - 3)\n\np = 0\nstep = 0.3\n\nfor i in range(8):\n    e = error(p)\n    d = derivative(p)\n    print(f\"Шаг {i}: p = {p:.2f}, ошибка = {e:.2f}, производная = {d:.2f}\")\n    p = p - step * d",
+      "answer": "",
+      "explanation": "Функция ошибки — парабола с минимумом при p=3. Отрицательная производная в начале увеличивает p при вычитании. После каждого шага расстояние до 3 умножается на 0.4, поэтому ошибка уменьшается. Значение 3.00 в последней строке — округление, а не точное равенство.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Шаг 0: p = 0.00, ошибка = 10.00, производная = -6.00\nШаг 1: p = 1.80, ошибка = 2.44, производная = -2.40\nШаг 2: p = 2.52, ошибка = 1.23, производная = -0.96\nШаг 3: p = 2.81, ошибка = 1.04, производная = -0.38\nШаг 4: p = 2.92, ошибка = 1.01, производная = -0.15\nШаг 5: p = 2.97, ошибка = 1.00, производная = -0.06\nШаг 6: p = 2.99, ошибка = 1.00, производная = -0.02\nШаг 7: p = 3.00, ошибка = 1.00, производная = -0.01"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `error` с параметрами `p`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Возвращаем из функции `(p - 3) ** 2 + 1`."
+        },
+        {
+          "line": 4,
+          "text": "Определяем функцию `derivative` с параметрами `p`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 5,
+          "text": "Возвращаем из функции `2 * (p - 3)`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `0` и сохраняем результат в `p`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `0.3` и сохраняем результат в `step`."
+        },
+        {
+          "line": 10,
+          "text": "Перебираем `range(8)`; очередное значение доступно через `i`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `error(p)` и сохраняем результат в `e`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `derivative(p)` и сохраняем результат в `d`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Вычисляем `p - step * d` и сохраняем результат в `p`."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "1c4cc89aa2cf25e5c117be7b640d679cac905c0013a975d9a2e85dd0e8844c60",
+      "verificationEvidence": {
+        "codeSha256": "1c4cc89aa2cf25e5c117be7b640d679cac905c0013a975d9a2e85dd0e8844c60",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Шаг 0: p = 0.00, ошибка = 10.00, производная = -6.00\nШаг 1: p = 1.80, ошибка = 2.44, производная = -2.40\nШаг 2: p = 2.52, ошибка = 1.23, производная = -0.96\nШаг 3: p = 2.81, ошибка = 1.04, производная = -0.38\nШаг 4: p = 2.92, ошибка = 1.01, производная = -0.15\nШаг 5: p = 2.97, ошибка = 1.00, производная = -0.06\nШаг 6: p = 2.99, ошибка = 1.00, производная = -0.02\nШаг 7: p = 3.00, ошибка = 1.00, производная = -0.01"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e9659e82d10cea13a59",
+      "lessonId": "M02-L04",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Нужен минимум. Минимальная ошибка — 4 при параметре 3. Команде стоит выбрать параметр 3 среди проверенных значений.",
+      "explanation": "Ошибка — нежелательная величина, поэтому меньше означает лучше. Сравнение всех строк подтверждает минимум 4.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "0e505fc5d466726058c91037f0242ffe23a150f3a67cf28dc813df1fd45dce3d",
+      "verificationEvidence": {
+        "codeSha256": "0e505fc5d466726058c91037f0242ffe23a150f3a67cf28dc813df1fd45dce3d",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba8e9659e82d10cea13a5c",
+      "lessonId": "M02-L04",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Нужен максимум. Наивысшая точность — 88% при параметре 3. Лучший параметр совпадает с предыдущим кейсом.",
+      "explanation": "Для точности, в отличие от ошибки, ищем наибольшее значение. Совпадение параметров относится к этим таблицам и не является общим правилом.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "88a1e72bfbbe6a384a9101a471b7c0f77148cbce7fc1a79587b62efd989b5f79",
+      "verificationEvidence": {
+        "codeSha256": "88a1e72bfbbe6a384a9101a471b7c0f77148cbce7fc1a79587b62efd989b5f79",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba8e9659e82d10cea13a5f",
+      "lessonId": "M02-L04",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Нижняя точка графика — (3;4). При параметре 0 ошибка 25, при 6 — 23; оба значения значительно больше 4. Среди представленных точек лучше параметр 3.",
+      "explanation": "По обе стороны от точки (3;4) наблюдаемые ошибки выше. Соединение точек помогает увидеть долину, но не добавляет измерений между ними.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "d14f6dbd0d8a2a646edd71892e504f6a665aa4da4c32c431ccdfe2bad75cf7c4",
+      "verificationEvidence": {
+        "codeSha256": "d14f6dbd0d8a2a646edd71892e504f6a665aa4da4c32c431ccdfe2bad75cf7c4",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba8e9659e82d10cea13a62",
+      "lessonId": "M02-L04",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "parameters = [0, 1, 2, 3, 4, 5, 6]\nerrors = [25, 16, 9, 4, 7, 14, 23]\n\nmin_error = min(errors)\nbest_index = errors.index(min_error)\nbest_parameter = parameters[best_index]\n\nprint(f\"Минимальная ошибка: {min_error}\")\nprint(f\"Лучшее значение параметра: {best_parameter}\")",
+      "answer": "",
+      "explanation": "min находит ошибку, index — её позицию. По той же позиции выбираем параметр.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Минимальная ошибка: 4\nЛучшее значение параметра: 3"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[0, 1, 2, 3, 4, 5, 6]` и сохраняем результат в `parameters`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[25, 16, 9, 4, 7, 14, 23]` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `min(errors)` и сохраняем результат в `min_error`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `errors.index(min_error)` и сохраняем результат в `best_index`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `parameters[best_index]` и сохраняем результат в `best_parameter`."
+        },
+        {
+          "line": 8,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "34a9821dd3dfa43578471261eb8960aee2d2224f106241ff6c1fd96147f15744",
+      "verificationEvidence": {
+        "codeSha256": "34a9821dd3dfa43578471261eb8960aee2d2224f106241ff6c1fd96147f15744",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Минимальная ошибка: 4\nЛучшее значение параметра: 3"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e9659e82d10cea13a65",
+      "lessonId": "M02-L04",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "parameters = [0, 1, 2, 3, 4, 5, 6]\naccuracy = [60, 72, 81, 88, 84, 76, 65]\n\nmax_accuracy = max(accuracy)\nbest_index = accuracy.index(max_accuracy)\nbest_parameter = parameters[best_index]\n\nprint(f\"Максимальная точность: {max_accuracy}%\")\nprint(f\"Лучшее значение параметра: {best_parameter}\")",
+      "answer": "",
+      "explanation": "max находит точность, а совпадающая позиция связывает её с параметром.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Максимальная точность: 88%\nЛучшее значение параметра: 3"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[0, 1, 2, 3, 4, 5, 6]` и сохраняем результат в `parameters`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[60, 72, 81, 88, 84, 76, 65]` и сохраняем результат в `accuracy`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `max(accuracy)` и сохраняем результат в `max_accuracy`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `accuracy.index(max_accuracy)` и сохраняем результат в `best_index`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `parameters[best_index]` и сохраняем результат в `best_parameter`."
+        },
+        {
+          "line": 8,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "3e753ba11e9a1dcbce8b96f6507186bdd04ad22b1ce843bc8bd99c66919b2ffb",
+      "verificationEvidence": {
+        "codeSha256": "3e753ba11e9a1dcbce8b96f6507186bdd04ad22b1ce843bc8bd99c66919b2ffb",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Максимальная точность: 88%\nЛучшее значение параметра: 3"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e9659e82d10cea13a68",
+      "lessonId": "M02-L04",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import matplotlib.pyplot as plt\n\nparameters = [0, 1, 2, 3, 4, 5, 6]\nerrors = [25, 16, 9, 4, 7, 14, 23]\n\nplt.plot(parameters, errors, marker=\"o\")\n\nplt.title(\"Зависимость ошибки модели от параметра\")\nplt.xlabel(\"Значение параметра\")\nplt.ylabel(\"Ошибка модели\")\nplt.grid(True)\n\nplt.show()",
+      "answer": "",
+      "explanation": "plot соединяет исходные пары и отмечает наблюдения маркерами. Подписи осей указывают смысл величин, сетка помогает сравнивать значения.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": ""
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `[0, 1, 2, 3, 4, 5, 6]` и сохраняем результат в `parameters`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `[25, 16, 9, 4, 7, 14, 23]` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 6,
+          "text": "Выполняем `plt.plot` с переданными аргументами."
+        },
+        {
+          "line": 8,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 9,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Выполняем `plt.grid` с переданными аргументами."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "8c746d8e4380d2f981868a526a12d101f331a650470773771c06bd489d55bbc4",
+      "verificationEvidence": {
+        "codeSha256": "8c746d8e4380d2f981868a526a12d101f331a650470773771c06bd489d55bbc4",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": ""
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e9659e82d10cea13a6b",
+      "lessonId": "M02-L04",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import matplotlib.pyplot as plt\n\nparameters = [0, 1, 2, 3, 4, 5, 6]\nerrors = [25, 16, 9, 4, 7, 14, 23]\n\nmin_error = min(errors)\nbest_index = errors.index(min_error)\nbest_parameter = parameters[best_index]\n\nplt.plot(parameters, errors, marker=\"o\", label=\"Ошибка модели\")\nplt.scatter(best_parameter, min_error, s=120, label=\"Минимум ошибки\")\n\nplt.title(\"Поиск минимума ошибки модели\")\nplt.xlabel(\"Значение параметра\")\nplt.ylabel(\"Ошибка модели\")\nplt.grid(True)\nplt.legend()\n\nplt.show()\n\nprint(f\"Минимальная ошибка: {min_error}\")\nprint(f\"Лучшее значение параметра: {best_parameter}\")",
+      "answer": "",
+      "explanation": "Сначала вычисляем минимум, затем добавляем отдельный scatter для найденной точки. Координаты берём из данных, а не выбираем по виду графика.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Минимальная ошибка: 4\nЛучшее значение параметра: 3"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `[0, 1, 2, 3, 4, 5, 6]` и сохраняем результат в `parameters`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `[25, 16, 9, 4, 7, 14, 23]` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `min(errors)` и сохраняем результат в `min_error`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `errors.index(min_error)` и сохраняем результат в `best_index`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `parameters[best_index]` и сохраняем результат в `best_parameter`."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `plt.plot` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Выполняем `plt.scatter` с переданными аргументами."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 14,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 15,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 16,
+          "text": "Выполняем `plt.grid` с переданными аргументами."
+        },
+        {
+          "line": 17,
+          "text": "Выполняем `plt.legend` с переданными аргументами."
+        },
+        {
+          "line": 19,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 21,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 22,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "b6af153d4291ceb5c75b16afcb3096751780de767f1d5df6d684acf70647cf0e",
+      "verificationEvidence": {
+        "codeSha256": "b6af153d4291ceb5c75b16afcb3096751780de767f1d5df6d684acf70647cf0e",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Минимальная ошибка: 4\nЛучшее значение параметра: 3"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e9659e82d10cea13a6e",
+      "lessonId": "M02-L04",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import matplotlib.pyplot as plt\nhints = [0, 1, 2, 3, 4, 5, 6]\nerrors = [22, 15, 9, 6, 8, 13, 19]\nbest = errors.index(min(errors))\nprint('Подсказок:', hints[best])\nprint('Минимальная ошибка:', errors[best])\nplt.plot(hints, errors, marker='o')\nplt.scatter(hints[best], errors[best], s=100)\nplt.xlabel('Количество подсказок')\nplt.ylabel('Ошибка после тренировки')\nplt.title('Выбор количества подсказок')\nplt.grid(True)\nplt.show()",
+      "answer": "",
+      "explanation": "Минимум 6 достигается при трёх подсказках. По данному кейсу недостаток подсказок затрудняет работу, а избыток снижает самостоятельность. Это объяснение сценария, которое в реальном исследовании нужно проверять; таблица непосредственно подтверждает только сравнение ошибок.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Подсказок: 3\nМинимальная ошибка: 6"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[0, 1, 2, 3, 4, 5, 6]` и сохраняем результат в `hints`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `[22, 15, 9, 6, 8, 13, 19]` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `errors.index(min(errors))` и сохраняем результат в `best`."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Выполняем `plt.plot` с переданными аргументами."
+        },
+        {
+          "line": 8,
+          "text": "Выполняем `plt.scatter` с переданными аргументами."
+        },
+        {
+          "line": 9,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 10,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 11,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 12,
+          "text": "Выполняем `plt.grid` с переданными аргументами."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "f86fb86731b12d5fcd5323fefd9ea5367ab5ca6d1216e41fb49b68ed45b3565b",
+      "verificationEvidence": {
+        "codeSha256": "f86fb86731b12d5fcd5323fefd9ea5367ab5ca6d1216e41fb49b68ed45b3565b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Подсказок: 3\nМинимальная ошибка: 6"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e9659e82d10cea13a71",
+      "lessonId": "M02-L04",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "versions = ['A', 'B', 'C', 'D', 'E', 'F']\nquality = [64, 71, 83, 79, 88, 74]\nbest = quality.index(max(quality))\nprint(versions[best], quality[best])",
+      "answer": "",
+      "explanation": "Качество максимизируется. Версия E имеет 88%, это наибольшее значение из шести. Индекс максимума связывает качество с названием версии.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "E 88"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `['A', 'B', 'C', 'D', 'E', 'F']` и сохраняем результат в `versions`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[64, 71, 83, 79, 88, 74]` и сохраняем результат в `quality`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `quality.index(max(quality))` и сохраняем результат в `best`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "53af0820b66488b2dd1a95a7acd26e7b6a979aac0d2c4b0a8e18ea6ace04c676",
+      "verificationEvidence": {
+        "codeSha256": "53af0820b66488b2dd1a95a7acd26e7b6a979aac0d2c4b0a8e18ea6ace04c676",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "E 88"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e097847a00f9c7c1ed3",
+      "lessonId": "M02-L05",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\n\ncomparison = pd.read_csv('two_models_comparison.csv')\nmean_a = comparison['error_a'].mean()\nmean_b = comparison['error_b'].mean()\nprint(mean_a, mean_b)",
+      "answer": "",
+      "explanation": "Средняя абсолютная ошибка A равна (3+5+2+15+4+5+8+10)/8 = 6.5. Для B сумма 13 и среднее 1.625. Поэтому B точнее на этом наборе; вывод не гарантирует преимущество на любых новых данных.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "6.5 1.625"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Читаем учебный CSV в таблицу comparison. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `comparison['error_a'].mean()` и сохраняем результат в `mean_a`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `comparison['error_b'].mean()` и сохраняем результат в `mean_b`."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "05d71835e94de6e6abf79cde6da99f693d6045bd3fc3cad827d5371612037d45",
+      "verificationEvidence": {
+        "codeSha256": "05d71835e94de6e6abf79cde6da99f693d6045bd3fc3cad827d5371612037d45",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "6.5 1.625"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e097847a00f9c7c1eca",
+      "lessonId": "M02-L05",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "true_answer = 80\nfor model_answer in [75, 85]:\n    error = abs(true_answer - model_answer)\n    print(error)",
+      "answer": "",
+      "explanation": "Отклонения равны +5 и −5, но модуль обоих равен 5. Абсолютная ошибка измеряет величину отклонения без направления.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "5\n5"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `80` и сохраняем результат в `true_answer`."
+        },
+        {
+          "line": 2,
+          "text": "Перебираем `[75, 85]`; очередное значение доступно через `model_answer`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `abs(true_answer - model_answer)` и сохраняем результат в `error`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "eaef7a3613e5910de3b8f75773cde301cad16ca48fa8f2b09280ea1a35045a04",
+      "verificationEvidence": {
+        "codeSha256": "eaef7a3613e5910de3b8f75773cde301cad16ca48fa8f2b09280ea1a35045a04",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "5\n5"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e097847a00f9c7c1ecd",
+      "lessonId": "M02-L05",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "true_answers = [50, 70, 90, 40, 100]\nmodel_answers = [47, 75, 88, 55, 96]\nerrors = []\n\nfor true, pred in zip(true_answers, model_answers):\n    errors.append(abs(true - pred))\n\nprint(errors)",
+      "answer": "",
+      "explanation": "zip связывает правильные и предсказанные значения попарно. Для каждой пары вычисляется модуль разности; положительные и отрицательные отклонения не компенсируются.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[3, 5, 2, 15, 4]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Вычисляем `[50, 70, 90, 40, 100]` и сохраняем результат в `true_answers`."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[47, 75, 88, 55, 96]` и сохраняем результат в `model_answers`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `[]` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 5,
+          "text": "Перебираем `zip(true_answers, model_answers)`; очередное значение доступно через `(true, pred)`."
+        },
+        {
+          "line": 6,
+          "text": "Выполняем `errors.append` с переданными аргументами."
+        },
+        {
+          "line": 8,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "af8ac3a42472f3e58b5839d0a072bddff4b1ef254044e94cfdf46964cd514db1",
+      "verificationEvidence": {
+        "codeSha256": "af8ac3a42472f3e58b5839d0a072bddff4b1ef254044e94cfdf46964cd514db1",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[3, 5, 2, 15, 4]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba8e097847a00f9c7c1ed0",
+      "lessonId": "M02-L05",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ncomparison = pd.read_csv('two_models_comparison.csv')\ncomparison[['error_a', 'error_b']].plot(kind='bar')\nplt.title('Ошибки моделей A и B')\nplt.xlabel('Номер примера')\nplt.ylabel('Размер ошибки')\nplt.show()",
+      "answer": "",
+      "explanation": "Наиболее заметно различие в примере 4: ошибки 15 и 3, разница 12. Далее пример 8: 10 и 1, разница 9; пример 7: 8 и 1, разница 7. В коде по умолчанию подписи столбцов 0–7 соответствуют example_id 1–8.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": ""
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Читаем учебный CSV в таблицу comparison. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 5,
+          "text": "Выполняем `comparison[['error_a', 'error_b']].plot` с переданными аргументами."
+        },
+        {
+          "line": 6,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 7,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 8,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 9,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "4c58990a1b063f590dc2defb092521d474a46aafba7062c4df490aba911f0397",
+      "verificationEvidence": {
+        "codeSha256": "4c58990a1b063f590dc2defb092521d474a46aafba7062c4df490aba911f0397",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": ""
+        }
+      ]
+    }
+  ]
+}

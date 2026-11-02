@@ -1,0 +1,653 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6aba2dde67b641fb1693aa8b",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Б) 8,0",
+      "explanation": "Сумма 3+7+7+9+14=40, длина 5, среднее 40/5=8.0. Повторяющаяся семёрка — мода, а не среднее.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "a6fcdba957d5ab92d457275d601972e54e9fb4756dca5d657f79616330eedeac",
+      "verificationEvidence": {
+        "codeSha256": "a6fcdba957d5ab92d457275d601972e54e9fb4756dca5d657f79616330eedeac",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba2e8267b641fb1693aa8c",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "# Найти медиану списка из 5 элементов\nscores = [15, 22, 8, 31, 19]\nsorted_scores = sorted(scores)\nmedian = sorted_scores[2] # берём 3-й элемент (индекс 2)\nprint('Медиана:', median)\n# Теперь найдём медиану для 6 элементов\nscores2 = [10, 20, 30, 40, 50, 60]\nsorted2 = sorted(scores2)\nmedian2 = (sorted2[2] + sorted2[3]) / 2\nprint('Медиана:', median2)",
+      "answer": "",
+      "explanation": "В последней строке не хватало закрывающей скобки. Для шести элементов медиана — среднее значений с индексами 2 и 3: (30+40)/2=35.0. Для пяти элементов центральный индекс 2 выбран правильно.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Медиана: 19\nМедиана: 35.0"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 2,
+          "text": "Вычисляем `[15, 22, 8, 31, 19]` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `sorted(scores)` и сохраняем результат в `sorted_scores`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `sorted_scores[2]` и сохраняем результат в `median`."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `[10, 20, 30, 40, 50, 60]` и сохраняем результат в `scores2`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `sorted(scores2)` и сохраняем результат в `sorted2`."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `(sorted2[2] + sorted2[3]) / 2` и сохраняем результат в `median2`."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "89179be1acc2a89a54c2c63171f6fb8ba354a2e94e2c7997384bb6d1d06c28c0",
+      "verificationEvidence": {
+        "codeSha256": "89179be1acc2a89a54c2c63171f6fb8ba354a2e94e2c7997384bb6d1d06c28c0",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Медиана: 19\nМедиана: 35.0"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba2f0067b641fb1693aa8d",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "Генеральное std (деление на 6):\nA: mean=80%, median=80%, min=78%, max=82%, std≈1.291 п.п.\nB: mean=81%, median=89.5%, min=57%, max=95%, std≈15.416 п.п.\nЕсли считать запуски выборкой: stdev A≈1.414, B≈16.888 п.п.\nДля приложения с требованием стабильности выбираю A: среднее лишь на 1 п.п. ниже, но худший запуск 78% против 57%, и разброс намного меньше.",
+      "explanation": "Используем одно правило std для обеих моделей. Большой разрыв mean и median B связан с несколькими низкими результатами. Нельзя считать модели одинаковыми только из-за близких средних; выбор также зависит от цены провального запуска.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "e036d39348fa8ca5ed5e43e64662a783441f58196cb81202ef8816815b8a0f82",
+      "verificationEvidence": {
+        "codeSha256": "e036d39348fa8ca5ed5e43e64662a783441f58196cb81202ef8816815b8a0f82",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba301b67b641fb1693aa8e",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import statistics\ngrades = [45,78,82,56,90,73,65,88,72,91]\nprint('Среднее:', statistics.mean(grades))\nprint('Медиана:', statistics.median(grades))\nprint('Стандартное отклонение:', round(statistics.stdev(grades), 1))",
+      "answer": "",
+      "explanation": "mean и median описывают центр набора. stdev использует выборочное деление на n−1, как требуется в примере. Округление до одного знака выполняется после вычисления.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Среднее: 74\nМедиана: 75.5\nСтандартное отклонение: 15.2"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем statistics, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[45, 78, 82, 56, 90, 73, 65, 88, 72, 91]` и сохраняем результат в `grades`."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "c74d1f56f31c563cb5298f96f35c68b7de00cd50659428b1d500d8fbbf4ac26c",
+      "verificationEvidence": {
+        "codeSha256": "c74d1f56f31c563cb5298f96f35c68b7de00cd50659428b1d500d8fbbf4ac26c",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Среднее: 74\nМедиана: 75.5\nСтандартное отклонение: 15.2"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba31a367b641fb1693aa8f",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import statistics\nprices = [12000,15000,18000,14000,160000,13000,17000]\naverage = statistics.mean(prices)\nmedian = statistics.median(prices)\nprint('Среднее:', average)\nprint('Медиана:', median)\nprint('Стандартное отклонение:', round(statistics.stdev(prices), 2))\ndifference = abs(average - median)\nprint('Разница:', round(difference, 2))\nif difference > 5000:\n    print('Внимание: возможен выброс в данных!')\nprint('Минимум:', min(prices))\nprint('Максимум:', max(prices))",
+      "answer": "",
+      "explanation": "Сохранены исходные показатели и добавлено выборочное std. Разница взята по модулю, поэтому правило работает и для большого отрицательного отклонения. Это сигнал проверки записи 160000, а не автоматическое основание её удалить.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Среднее: 35571.42857142857\nМедиана: 15000\nСтандартное отклонение: 54908.58\nРазница: 20571.43\nВнимание: возможен выброс в данных!\nМинимум: 12000\nМаксимум: 160000"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем statistics, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[12000, 15000, 18000, 14000, 160000, 13000, 17000]` и сохраняем результат в `prices`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `statistics.mean(prices)` и сохраняем результат в `average`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `statistics.median(prices)` и сохраняем результат в `median`."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `abs(average - median)` и сохраняем результат в `difference`."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 10,
+          "text": "Проверяем условие `difference > 5000`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 11,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 12,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "db585b901d1c3a0e01b7e994bd316b6f18e16a1ae5665332ae135820c31c8d7f",
+      "verificationEvidence": {
+        "codeSha256": "db585b901d1c3a0e01b7e994bd316b6f18e16a1ae5665332ae135820c31c8d7f",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Среднее: 35571.42857142857\nМедиана: 15000\nСтандартное отклонение: 54908.58\nРазница: 20571.43\nВнимание: возможен выброс в данных!\nМинимум: 12000\nМаксимум: 160000"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba330567b641fb1693aa90",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import statistics\ngroups = {'Data Analyst':[85,92,78,310,88], 'ML Engineer':[140,155,148,162,145], 'Backend Dev':[110,118,105,122,115]}\nfor name, values in groups.items():\n    print(name, 'mean=', round(statistics.mean(values), 2), 'median=', statistics.median(values), 'stdev=', round(statistics.stdev(values), 2))\nclean = [x for x in groups['Data Analyst'] if x != 310]\nprint('Data Analyst без 310:', statistics.mean(clean), statistics.median(clean))\nprint('Изменение среднего:', round(statistics.mean(groups['Data Analyst'])-statistics.mean(clean), 2))",
+      "answer": "",
+      "explanation": "Зарплаты указаны в тыс. руб. Во всех группах используется выборочное std. У Data Analyst 310 сильно отделяется от диапазона 78–92. Без него mean падает с 130.6 до 85.75, на 44.85, median меняется с 88 до 86.5. Для типичной зарплаты этой группы медиана устойчивее. Для остальных компактных групп полезны оба показателя; роль и уровень специалиста также важны.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Data Analyst mean= 130.6 median= 88 stdev= 100.42\nML Engineer mean= 150 median= 148 stdev= 8.63\nBackend Dev mean= 114 median= 115 stdev= 6.67\nData Analyst без 310: 85.75 86.5\nИзменение среднего: 44.85"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем statistics, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `{'Data Analyst': [85, 92, 78, 310, 88], 'ML Engineer': [140, 155, 148, 162, 145], 'Backend Dev': [110, 118, 105, 122, 115]}` и сохраняем результат в `groups`."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `groups.items()`; очередное значение доступно через `(name, values)`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `[x for x in groups['Data Analyst'] if x != 310]` и сохраняем результат в `clean`."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "31b4a79bfa8e97f6d50655905935d93c832b5a537e557145e419c70b5376cc57",
+      "verificationEvidence": {
+        "codeSha256": "31b4a79bfa8e97f6d50655905935d93c832b5a537e557145e419c70b5376cc57",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Data Analyst mean= 130.6 median= 88 stdev= 100.42\nML Engineer mean= 150 median= 148 stdev= 8.63\nBackend Dev mean= 114 median= 115 stdev= 6.67\nData Analyst без 310: 85.75 86.5\nИзменение среднего: 44.85"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba333e67b641fb1693aa91",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import statistics\nerrors = [0,-1,1,0,45,0,-1,0,-1,0]\nprint('Средняя знаковая ошибка:', statistics.mean(errors))\nprint('Медиана:', statistics.median(errors))\nprint('Выборочное std:', round(statistics.stdev(errors), 2))\nprint('MAE:', statistics.mean([abs(e) for e in errors]))\nprint('Аномальный заказ:', max(range(len(errors)), key=lambda i: abs(errors[i]))+1)",
+      "answer": "",
+      "explanation": "Заказ 5 имеет ошибку +45 часов: факт 48 против прогноза 3. Средняя знаковая ошибка 4.3 скрывает неоднородность, MAE=4.9 также усредняет редкий серьёзный промах. Медиана 0 показывает, что большинство заказов близки к прогнозу. Перед переобучением проверяем причину 48 часов, качество записи и признаки редких задержек; корректное редкое событие нельзя удалять только ради красивой метрики.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Средняя знаковая ошибка: 4.3\nМедиана: 0.0\nВыборочное std: 14.31\nMAE: 4.9\nАномальный заказ: 5"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем statistics, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[0, -1, 1, 0, 45, 0, -1, 0, -1, 0]` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "f231965918f25231bd2628d5f8b1a43a6c4224a1bce09249913ec6e06e178dcf",
+      "verificationEvidence": {
+        "codeSha256": "f231965918f25231bd2628d5f8b1a43a6c4224a1bce09249913ec6e06e178dcf",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Средняя знаковая ошибка: 4.3\nМедиана: 0.0\nВыборочное std: 14.31\nMAE: 4.9\nАномальный заказ: 5"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba33c067b641fb1693aa92",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import statistics\ndef detect_outliers(data):\n    if len(data) < 2:\n        return []\n    average = statistics.mean(data)\n    std = statistics.stdev(data)\n    if std == 0:\n        return []\n    return [x for x in data if abs(x-average) > 2*std]\n\nsalaries = [85,92,78,310,88,140,155,148,162,145,110,118,105,122,115]\nprint(detect_outliers(salaries))\nassert detect_outliers([]) == []\nassert detect_outliers([5,5,5]) == []\nassert detect_outliers([85,92,78,310,88]) == []",
+      "answer": "",
+      "explanation": "Используется выборочное stdev. Для пустого или одноэлементного набора возвращаем [], поскольку выборочное отклонение не определяется. При нулевом std все значения равны. Строгое сравнение > исключает точки ровно на границе. В объединённых 15 зарплатах находится 310, но в группе из пяти значение само повышает порог.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[310]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем statistics, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Определяем функцию `detect_outliers` с параметрами `data`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 3,
+          "text": "Проверяем условие `len(data) < 2`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 4,
+          "text": "Возвращаем из функции `[]`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `statistics.mean(data)` и сохраняем результат в `average`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `statistics.stdev(data)` и сохраняем результат в `std`."
+        },
+        {
+          "line": 7,
+          "text": "Проверяем условие `std == 0`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 8,
+          "text": "Возвращаем из функции `[]`."
+        },
+        {
+          "line": 9,
+          "text": "Возвращаем из функции `[x for x in data if abs(x - average) > 2 * std]`."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `[85, 92, 78, 310, 88, 140, 155, 148, 162, 145, 110, 118, 105, 122, 115]` и сохраняем результат в `salaries`."
+        },
+        {
+          "line": 12,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 13,
+          "text": "Проверяем инвариант `detect_outliers([]) == []`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 14,
+          "text": "Проверяем инвариант `detect_outliers([5, 5, 5]) == []`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 15,
+          "text": "Проверяем инвариант `detect_outliers([85, 92, 78, 310, 88]) == []`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5597d29ea8290f29ed730838c4c8806b2ea50abe462edef4effe7e28280f299a",
+      "verificationEvidence": {
+        "codeSha256": "5597d29ea8290f29ed730838c4c8806b2ea50abe462edef4effe7e28280f299a",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[310]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba341967b641fb1693aa93",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def moving_average(data, window):\n    if window <= 0 or window > len(data):\n        return []\n    return [sum(data[i:i+window])/window for i in range(len(data)-window+1)]\n\nprint(moving_average([2,4,6,8], 2))\nassert moving_average([2,4], 0) == []\nassert moving_average([2,4], 3) == []\nassert moving_average([2,4], 1) == [2.0,4.0]",
+      "answer": "",
+      "explanation": "Выбрано явное поведение для недопустимого окна: пустой список. Начальная позиция окна принимает n−window+1 значений, включая последнее полное окно. Для window=1 получаем исходные значения как float.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[3.0, 5.0, 7.0]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `moving_average` с параметрами `data, window`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Проверяем условие `window <= 0 or window > len(data)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 3,
+          "text": "Возвращаем из функции `[]`."
+        },
+        {
+          "line": 4,
+          "text": "Возвращаем из функции `[sum(data[i:i + window]) / window for i in range(len(data) - window + 1)]`."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Проверяем инвариант `moving_average([2, 4], 0) == []`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 8,
+          "text": "Проверяем инвариант `moving_average([2, 4], 3) == []`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 9,
+          "text": "Проверяем инвариант `moving_average([2, 4], 1) == [2.0, 4.0]`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "61c39d1eb9a6c231c269402b9e4d2688d7c52cc331967f3fb9bc1c1cc83c9b9c",
+      "verificationEvidence": {
+        "codeSha256": "61c39d1eb9a6c231c269402b9e4d2688d7c52cc331967f3fb9bc1c1cc83c9b9c",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[3.0, 5.0, 7.0]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba344b67b641fb1693aa94",
+      "lessonId": "M02-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import statistics\nimport math\nsample_a = [0.82,0.85,0.83,0.84,0.81]\nsample_b = [0.79,0.91,0.68,0.88,0.74]\na = statistics.stdev(sample_a)\nb = statistics.stdev(sample_b)\nprint(f'Выборочное std A: {a:.4f} доли; {a*100:.2f} п.п.')\nprint(f'Выборочное std B: {b:.4f} доли; {b*100:.2f} п.п.')\nif math.isclose(a, b, abs_tol=0.0001):\n    print('Стабильность сопоставима')\nelif a < b:\n    print('A стабильнее: стандартное отклонение меньше')\nelse:\n    print('B стабильнее: стандартное отклонение меньше')",
+      "answer": "",
+      "explanation": "Сравниваем неокруглённые std с допуском 0.0001 доли. Допуск согласован с точностью печати. A имеет меньший разброс: примерно 1.58 против 9.57 процентного пункта. Для будущего качества нужна дополнительная проверка, пять запусков — небольшой набор.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Выборочное std A: 0.0158 доли; 1.58 п.п.\nВыборочное std B: 0.0957 доли; 9.57 п.п.\nA стабильнее: стандартное отклонение меньше"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем statistics, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем math, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `[0.82, 0.85, 0.83, 0.84, 0.81]` и сохраняем результат в `sample_a`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `[0.79, 0.91, 0.68, 0.88, 0.74]` и сохраняем результат в `sample_b`."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `statistics.stdev(sample_a)` и сохраняем результат в `a`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `statistics.stdev(sample_b)` и сохраняем результат в `b`."
+        },
+        {
+          "line": 7,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 8,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 9,
+          "text": "Проверяем условие `math.isclose(a, b, abs_tol=0.0001)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 10,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 11,
+          "text": "Проверяем условие `a < b`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 12,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 14,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "33bc0221f81d200ec1faa276e0cfd3ab640a1708f28f3bb65cc31d0ac3579f96",
+      "verificationEvidence": {
+        "codeSha256": "33bc0221f81d200ec1faa276e0cfd3ab640a1708f28f3bb65cc31d0ac3579f96",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Выборочное std A: 0.0158 доли; 1.58 п.п.\nВыборочное std B: 0.0957 доли; 9.57 п.п.\nA стабильнее: стандартное отклонение меньше"
+        }
+      ]
+    }
+  ]
+}

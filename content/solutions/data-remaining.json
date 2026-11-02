@@ -1,0 +1,1138 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8bc",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Предварительно A выглядит наиболее ровной: ошибки от 2 до 5. У B большинство ошибок 1–2, но есть две ошибки 5; поэтому по внешнему виду выбор A/B неочевиден. C выглядит хуже из-за двух ошибок 10. Предположение: B может иметь меньшее среднее, его нужно проверить расчётом.",
+      "explanation": "Наблюдение по строкам отделено от точного среднего. Не выбираем C по единственному удачному примеру. Последующий расчёт проверяет предположение, учитывая все шесть наблюдений.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "f9511d0b79dfec8e0b7ae57308fb5e0fb706d1d3ddb86880dd24272b5c835c4f",
+      "verificationEvidence": {
+        "codeSha256": "f9511d0b79dfec8e0b7ae57308fb5e0fb706d1d3ddb86880dd24272b5c835c4f",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8bf",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('model_errors_8_9.csv')\nfor name in ['A','B','C']:\n    print(name, df['error_'+name].sum())",
+      "answer": "",
+      "explanation": "Суммируем готовые абсолютные ошибки каждого столбца по всем шести строкам. На одном и том же числе примеров минимум суммы соответствует минимуму среднего.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "A 18\nB 17\nC 33"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `['A', 'B', 'C']`; очередное значение доступно через `name`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "6072ae54a6002b58bdcee2163b82a250fc0448f862ca2b9cd014b52550407161",
+      "verificationEvidence": {
+        "codeSha256": "6072ae54a6002b58bdcee2163b82a250fc0448f862ca2b9cd014b52550407161",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "A 18\nB 17\nC 33"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8c2",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('model_errors_8_9.csv')\nmeans = {name: df['error_'+name].mean() for name in ['A','B','C']}\nfor name, value in means.items():\n    print(name, round(value, 4))\nprint('Лучшая:', min(means, key=means.get))",
+      "answer": "",
+      "explanation": "Средние: A=18/6=3, B=17/6≈2.8333, C=33/6=5.5. B имеет меньшую среднюю ошибку, хотя A выглядит более ровной. Поэтому визуальное впечатление проверяют числом.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "A 3.0\nB 2.8333\nC 5.5\nЛучшая: B"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `{name: df['error_' + name].mean() for name in ['A', 'B', 'C']}` и сохраняем результат в `means`."
+        },
+        {
+          "line": 4,
+          "text": "Перебираем `means.items()`; очередное значение доступно через `(name, value)`."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "567a0840ec7f2a2c93a7f1547f81820e1cc4f5c77e334566931a1fd0ba921e95",
+      "verificationEvidence": {
+        "codeSha256": "567a0840ec7f2a2c93a7f1547f81820e1cc4f5c77e334566931a1fd0ba921e95",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "A 3.0\nB 2.8333\nC 5.5\nЛучшая: B"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8c5",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('model_errors_8_9.csv')\ncalculated = abs(df['true_answer']-df['model_A'])\nprint(calculated.tolist())\nprint('Совпадение:', calculated.equals(df['error_A']))",
+      "answer": "",
+      "explanation": "Вычитаем прогноз из истинного ответа и берём модуль для каждой строки. equals сравнивает значения серии целиком, не только сумму.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "[2, 3, 4, 5, 2, 2]\nСовпадение: True"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `abs(df['true_answer'] - df['model_A'])` и сохраняем результат в `calculated`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "131a36672d5bf9d17636855a7699f84b822f5493efe22b0151beb2daa02fcba9",
+      "verificationEvidence": {
+        "codeSha256": "131a36672d5bf9d17636855a7699f84b822f5493efe22b0151beb2daa02fcba9",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "[2, 3, 4, 5, 2, 2]\nСовпадение: True"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8c8",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('model_errors_8_9.csv')\nfor name in ['A','B','C']:\n    errors = [abs(true-pred) for true,pred in zip(df['true_answer'], df['model_'+name])]\n    assert len(errors) == len(df)\n    print(name, errors)",
+      "answer": "",
+      "explanation": "zip связывает значения одной строки. Модуль устраняет знак; assert подтверждает, что все строки дали ошибку.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "A [2, 3, 4, 5, 2, 2]\nB [5, 2, 2, 2, 1, 5]\nC [1, 10, 2, 10, 5, 5]"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `['A', 'B', 'C']`; очередное значение доступно через `name`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `[abs(true - pred) for true, pred in zip(df['true_answer'], df['model_' + name])]` и сохраняем результат в `errors`."
+        },
+        {
+          "line": 5,
+          "text": "Проверяем инвариант `len(errors) == len(df)`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "905248604b302508dd70f0d9d7de9efa9ca93cb47f319d7e398a5305ae21b7b7",
+      "verificationEvidence": {
+        "codeSha256": "905248604b302508dd70f0d9d7de9efa9ca93cb47f319d7e398a5305ae21b7b7",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "A [2, 3, 4, 5, 2, 2]\nB [5, 2, 2, 2, 1, 5]\nC [1, 10, 2, 10, 5, 5]"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8cb",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('model_errors_8_9.csv')\nimport matplotlib.pyplot as plt\nmeans = [df['error_'+name].mean() for name in ['A','B','C']]\nplt.bar(['A','B','C'], means)\nplt.xlabel('Модель')\nplt.ylabel('Средняя абсолютная ошибка')\nplt.title('Сравнение на шести одинаковых примерах')\nplt.show()",
+      "answer": "",
+      "explanation": "Высоты равны средним, а не суммам. Самый низкий столбец B (17/6), затем A (3), затем C (5.5).",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": ""
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `[df['error_' + name].mean() for name in ['A', 'B', 'C']]` и сохраняем результат в `means`."
+        },
+        {
+          "line": 5,
+          "text": "Выполняем `plt.bar` с переданными аргументами."
+        },
+        {
+          "line": 6,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 7,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 8,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 9,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "9829e5fcdcb07200c62ad526f70fd6068adcb6b5364dfe3076dcf2e49d5d3509",
+      "verificationEvidence": {
+        "codeSha256": "9829e5fcdcb07200c62ad526f70fd6068adcb6b5364dfe3076dcf2e49d5d3509",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": ""
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8ce",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "На этих данных лучше B: MAE=17/6≈2.8333, у A=3, у C=5.5. Модель C имеет ошибку 1 в первой строке, но две ошибки 10 повышают её среднее. Выбор по одной строке ненадёжен, поскольку он игнорирует остальные наблюдения.",
+      "explanation": "Средняя абсолютная ошибка использует одинаковые шесть примеров. Вывод относится к данной проверке и не доказывает преимущество B на любом наборе.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "d3aea2a4839dededc93c368a7d25279a11a8cc110da8b563cb74469210d2dc97",
+      "verificationEvidence": {
+        "codeSha256": "d3aea2a4839dededc93c368a7d25279a11a8cc110da8b563cb74469210d2dc97",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8d1",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('model_errors_10_11_spo.csv')\nmeans = {name: df['error_'+name].mean() for name in ['A','B','C','D']}\nfor name,value in means.items():\n    print(name, round(value, 4))\nprint('Лучшая:', min(means, key=means.get))",
+      "answer": "",
+      "explanation": "Для четырёх моделей применяем одно правило — среднее абсолютных ошибок на всех двенадцати строках. D ошибается на 1 в каждой строке и получает минимальное среднее.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "A 3.6667\nB 2.0\nC 6.6667\nD 1.0\nЛучшая: D"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `{name: df['error_' + name].mean() for name in ['A', 'B', 'C', 'D']}` и сохраняем результат в `means`."
+        },
+        {
+          "line": 4,
+          "text": "Перебираем `means.items()`; очередное значение доступно через `(name, value)`."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "99a458a6fd0a5bc924fd5693802c3ad0c537baac398fe626d83109ef6a98475d",
+      "verificationEvidence": {
+        "codeSha256": "99a458a6fd0a5bc924fd5693802c3ad0c537baac398fe626d83109ef6a98475d",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "A 3.6667\nB 2.0\nC 6.6667\nD 1.0\nЛучшая: D"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8d4",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('model_errors_8_9.csv')\ndef mean_absolute_error(true_answers, predictions):\n    if len(true_answers) != len(predictions) or not true_answers:\n        raise ValueError('Нужны непустые списки одинаковой длины')\n    return sum(abs(t-p) for t,p in zip(true_answers, predictions))/len(true_answers)\n\nprint(mean_absolute_error([80,60,90], [78,63,86]))\nassert mean_absolute_error([1,2], [1,2]) == 0",
+      "answer": "",
+      "explanation": "Проверки не позволяют zip незаметно обрезать разные длины и не допускают деления на ноль. Для примера абсолютные ошибки 2,3,4, среднее 3.0. Функция принимает обычные списки.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "3.0"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Определяем функцию `mean_absolute_error` с параметрами `true_answers, predictions`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `len(true_answers) != len(predictions) or not true_answers`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 6,
+          "text": "Возвращаем из функции `sum((abs(t - p) for t, p in zip(true_answers, predictions))) / len(true_answers)`."
+        },
+        {
+          "line": 8,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 9,
+          "text": "Проверяем инвариант `mean_absolute_error([1, 2], [1, 2]) == 0`. При нарушении программа сообщит об ошибке."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "b7016178d04f83627eab8ec0fd019532875b4e0e4904770def8ac163576a5f75",
+      "verificationEvidence": {
+        "codeSha256": "b7016178d04f83627eab8ec0fd019532875b4e0e4904770def8ac163576a5f75",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "3.0"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba609cb4ad8200752fb8d7",
+      "lessonId": "M02-L06",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Пример 1: у C ошибка 1, у A — 2, у B — 5, поэтому C лучшая в этой строке. Пример 3: C и B имеют ошибку 2. Однако по всему набору MAE C=5.5, A=3.0, B≈2.8333: две ошибки C по 10 перевешивают её отдельные удачные ответы.",
+      "explanation": "Результат одной строки — локальный успех. Среднее оценивает весь набор; нельзя переносить победу на одном примере на общее качество.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "e23e0f0f119bb7ced471aebf99bbd8afd70ef3cf801ec61e695308f6b823c857",
+      "verificationEvidence": {
+        "codeSha256": "e23e0f0f119bb7ced471aebf99bbd8afd70ef3cf801ec61e695308f6b823c857",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-5bbc2b94bced996c390b8f09",
+      "lessonId": "M02-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "Исходы: spam, normal, promo. Событие S: случайно выбранное сообщение имеет класс spam.\nВсего 12+28+10=50 сообщений.\nP(spam)=12/50=0.24=24%; P(normal)=28/50=0.56=56%; P(promo)=10/50=0.20=20%.\nСумма вероятностей 1. Самый частый класс normal — 56%.",
+      "explanation": "Классы являются взаимоисключающими исходами классификации. Частота класса, делённая на общее количество, оценивает вероятность по этой таблице.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "a5c0f8387ef31b1e43b6eba5c873f4b80e079bc5c6f1350e27c9c15524347101",
+      "verificationEvidence": {
+        "codeSha256": "a5c0f8387ef31b1e43b6eba5c873f4b80e079bc5c6f1350e27c9c15524347101",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba87abb2204e0198e3337b",
+      "lessonId": "M02-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('model_probabilities.csv')\ncolumns = ['p_spam','p_normal','p_promo']\ndf['predicted_class'] = df[columns].idxmax(axis=1).str.removeprefix('p_')\nfor row in df.itertuples():\n    print(row.example_id, row.predicted_class)\ncorrect = (df['predicted_class'] == df['true_class']).sum()\nprint('Верных:', correct)\nprint('Доля:', round(correct/len(df), 4))",
+      "answer": "",
+      "explanation": "Максимум выбирается внутри строки, поэтому axis=1. Прогнозы: spam, normal, spam, normal, spam, normal. В третьей строке реальный класс promo: верны 5/6≈83.33%. Наиболее частый в общей таблице normal неверен, например, для сообщения 1 с истинным spam. Даже вероятность 0.44 как наибольшая в строке не гарантирует правильный ответ.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "1 spam\n2 normal\n3 spam\n4 normal\n5 spam\n6 normal\nВерных: 5\nДоля: 0.8333"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `['p_spam', 'p_normal', 'p_promo']` и сохраняем результат в `columns`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `df[columns].idxmax(axis=1).str.removeprefix('p_')` и сохраняем результат в `df['predicted_class']`."
+        },
+        {
+          "line": 5,
+          "text": "Перебираем `df.itertuples()`; очередное значение доступно через `row`."
+        },
+        {
+          "line": 6,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `(df['predicted_class'] == df['true_class']).sum()` и сохраняем результат в `correct`."
+        },
+        {
+          "line": 8,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 9,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5c95ff668079f6f877200a7a07860658f3eacddc9316a5583d3af331a95d664b",
+      "verificationEvidence": {
+        "codeSha256": "5c95ff668079f6f877200a7a07860658f3eacddc9316a5583d3af331a95d664b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "1 spam\n2 normal\n3 spam\n4 normal\n5 spam\n6 normal\nВерных: 5\nДоля: 0.8333"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6aba87abb2204e0198e3337e",
+      "lessonId": "M02-L08",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndef choose_class(p_spam, p_normal, p_promo):\n    values = [p_spam,p_normal,p_promo]\n    return ['spam','normal','promo'][values.index(max(values))]\n\nassert choose_class(.82,.12,.06) == 'spam'\nassert choose_class(.08,.88,.04) == 'normal'\nassert choose_class(.2,.3,.5) == 'promo'\nassert choose_class(.4,.4,.2) == 'spam'\ndf = pd.read_csv('model_probabilities.csv')\nweak = []\nfor row in df.itertuples():\n    probabilities = sorted([row.p_spam,row.p_normal,row.p_promo], reverse=True)\n    if probabilities[0]-probabilities[1] < .15:\n        weak.append(row.example_id)\nprint('Слабая уверенность:', weak)\nrecommendations = pd.read_csv('recommendation_probabilities.csv')\nprint(', '.join(recommendations.sort_values('p_user_likes', ascending=False).head(3)['item']))",
+      "answer": "",
+      "explanation": "В примере 3 разница двух крупнейших вероятностей 0.44−0.36=0.08 <0.15: выбор класса требует внимания. В остальных строках запас больше. Рекомендации сортируются по вероятности интереса: C, E, A. В choose_class index возвращает первую позицию максимума, обеспечивая приоритет spam → normal → promo при равенстве.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Слабая уверенность: [3]\nФильм C, Фильм E, Фильм A"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Определяем функцию `choose_class` с параметрами `p_spam, p_normal, p_promo`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `[p_spam, p_normal, p_promo]` и сохраняем результат в `values`."
+        },
+        {
+          "line": 4,
+          "text": "Возвращаем из функции `['spam', 'normal', 'promo'][values.index(max(values))]`."
+        },
+        {
+          "line": 6,
+          "text": "Проверяем инвариант `choose_class(0.82, 0.12, 0.06) == 'spam'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 7,
+          "text": "Проверяем инвариант `choose_class(0.08, 0.88, 0.04) == 'normal'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 8,
+          "text": "Проверяем инвариант `choose_class(0.2, 0.3, 0.5) == 'promo'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 9,
+          "text": "Проверяем инвариант `choose_class(0.4, 0.4, 0.2) == 'spam'`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 10,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 11,
+          "text": "Вычисляем `[]` и сохраняем результат в `weak`."
+        },
+        {
+          "line": 12,
+          "text": "Перебираем `df.itertuples()`; очередное значение доступно через `row`."
+        },
+        {
+          "line": 13,
+          "text": "Вычисляем `sorted([row.p_spam, row.p_normal, row.p_promo], reverse=True)` и сохраняем результат в `probabilities`."
+        },
+        {
+          "line": 14,
+          "text": "Проверяем условие `probabilities[0] - probabilities[1] < 0.15`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 15,
+          "text": "Выполняем `weak.append` с переданными аргументами."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 17,
+          "text": "Читаем учебный CSV в таблицу recommendations. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 18,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "2660f5f397361f390508d2cedcf71a8fe0449a6d3ee3ec8990215449b6c75aba",
+      "verificationEvidence": {
+        "codeSha256": "2660f5f397361f390508d2cedcf71a8fe0449a6d3ee3ec8990215449b6c75aba",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Слабая уверенность: [3]\nФильм C, Фильм E, Фильм A"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc41bfd2698c58da3f22f8",
+      "lessonId": "M01-L14",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('image_pairs_for_labeling_1_14.csv')\nchoices = {1:'B',2:'A',3:'A',4:'A'}\ndf['best_match'] = df['id'].map(choices)\nprint(','.join(df['best_match']))",
+      "answer": "",
+      "explanation": "Это ручная семантическая разметка четырёх описаний, а не обученная модель. В первой паре только B содержит и школьника, и робота; во второй A — кота на подоконнике с городом; в третьей A посвящена сну; в четвёртой A сохраняет цвета велосипеда и стены. После выбора заполняем best_match и выводим метки в порядке строк.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "B,A,A,A"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `{1: 'B', 2: 'A', 3: 'A', 4: 'A'}` и сохраняем результат в `choices`."
+        },
+        {
+          "line": 4,
+          "text": "Вычисляем `df['id'].map(choices)` и сохраняем результат в `df['best_match']`."
+        },
+        {
+          "line": 5,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "6bb4d8e943b6f79de9063961d35d6883476a0699ffc0561ad9eea25c3f06f105",
+      "verificationEvidence": {
+        "codeSha256": "6bb4d8e943b6f79de9063961d35d6883476a0699ffc0561ad9eea25c3f06f105",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "B,A,A,A"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abc4083f82a6a54f6b35d1d",
+      "lessonId": "M01-L18",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "",
+      "answer": "Образец отзыва для работы с games_activity_mini.csv (заполняется после просмотра реальной работы партнёра).\nСильная сторона 1: объект «игровая сессия» отделён от признаков time_minutes, errors, coins.\nСильная сторона 2: вывод сопоставлен с частотой незавершённых сессий и графиком.\nРекомендация 1: указать число строк и проверить пропуски перед вычислением средних.\nРекомендация 2: подписать оси и явно указать, что связь ошибок с результатом не доказывает причинность.\nВопрос: сохраняется ли наблюдение при сравнении сессий одинаковой длительности?\nПример записи об исправлениях: добавлены размер набора, подписи осей и ограничение причинного вывода.",
+      "explanation": "P2P-задание зависит от фактической работы партнёра. Образец показывает требуемые две сильные стороны, две рекомендации, вопрос и запись об изменениях. Нельзя выдавать эти утверждения за реально проведённую проверку чужой работы; рубрику нужно заполнить по увиденному результату.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "566fc44e96b4c9941233c3fa236d546d70fc83f318095d157f308cf5ab567c20",
+      "verificationEvidence": {
+        "codeSha256": "566fc44e96b4c9941233c3fa236d546d70fc83f318095d157f308cf5ab567c20",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-07798372522ca4765c29c26a",
+      "lessonId": "M01-L17",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "from pathlib import Path\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\nsns.set_theme(style=\"whitegrid\", palette=\"Set2\")\n\ndays = [\"Пн\", \"Вт\", \"Ср\", \"Чт\", \"Пт\"]\nscreen_time = [3.5, 4.0, 6.0, 5.5, 7.0]\n\nplt.figure(figsize=(7, 4))\nsns.barplot(x=days, y=screen_time, color=\"skyblue\")\nplt.title(\"Экранное время по дням\")\nplt.xlabel(\"День недели\")\nplt.ylabel(\"Экранное время, часы\")\nplt.tight_layout()\nplt.savefig(\"l1_screen_time_barplot.png\", dpi=150)\nplt.show()\n\nmax_index = screen_time.index(max(screen_time))\nmin_index = screen_time.index(min(screen_time))\n\nprint(\"L1_MAX_DAY=\", days[max_index], sep=\"\")\nprint(\"L1_MIN_DAY=\", days[min_index], sep=\"\")\nprint(\"L1_FILE_CREATED=\", Path(\"l1_screen_time_barplot.png\").exists(), sep=\"\")\n\nl1_conclusion = \"На диаграмме видно, что максимальное экранное время было в пятницу, а минимальное — в понедельник.\"\nprint(\"L1_CONCLUSION=\", l1_conclusion, sep=\"\")\n\ndf = pd.read_csv(\"students_visualization_1_17_10_11_spo.csv\")\n\nprint(\"L2_ROWS=\", df.shape[0], sep=\"\")\nprint(\"L2_COLUMNS=\", list(df.columns), sep=\"\")\ndf.head()\n\n# Задание 5: barplot по уровню обучения и экранному времени.\n# Можно заменить hue_column на \"stress_level\", если хотите сравнить уровни стресса.\nhue_column = \"uses_ai_for_study\"\n\nplt.figure(figsize=(8, 4.5))\nsns.barplot(\n    data=df,\n    x=\"grade_level\",\n    y=\"screen_time_hours\",\n    hue=hue_column,\n    errorbar=None\n)\nplt.title(\"Среднее экранное время по уровню обучения\")\nplt.xlabel(\"Уровень обучения\")\nplt.ylabel(\"Экранное время, часы\")\nplt.legend(title=\"ИИ для учёбы\")\nplt.tight_layout()\nplt.show()\n\nprint(\"L2_HUE_USED=\", hue_column, sep=\"\")\n\n# Задание 7: countplot по подготовке к экзамену.\nplt.figure(figsize=(8, 4.5))\nsns.countplot(\n    data=df,\n    x=\"exam_preparation\",\n    hue=\"group\"\n)\nplt.title(\"Количество обучающихся по уровню подготовки\")\nplt.xlabel(\"Уровень подготовки\")\nplt.ylabel(\"Количество\")\nplt.legend(title=\"Группа\")\nplt.tight_layout()\nplt.savefig(\"l2_exam_preparation_countplot.png\", dpi=150)\nplt.show()\n\nprint(\"L2_COUNT_FILE_CREATED=\", Path(\"l2_exam_preparation_countplot.png\").exists(), sep=\"\")\n\n# Короткая сводка для вывода.\nsummary = df.groupby(\"grade_level\")[\"screen_time_hours\"].mean().round(2)\nprint(\"L2_MEAN_SCREEN_BY_GRADE=\", summary.to_dict(), sep=\"\")\n\nl2_conclusion = \"Цвет помогает сравнить не только уровень обучения, но и отдельные группы внутри него.\"\nprint(\"L2_CONCLUSION=\", l2_conclusion, sep=\"\")\n\nplt.figure(figsize=(8, 4.8))\nsns.scatterplot(\n    data=df,\n    x=\"screen_time_hours\",\n    y=\"sleep_hours\",\n    hue=\"stress_level\",\n    size=\"study_hours\",\n    sizes=(40, 180)\n)\nplt.title(\"Экранное время, сон и стресс\")\nplt.xlabel(\"Экранное время, часы\")\nplt.ylabel(\"Сон, часы\")\nplt.tight_layout()\nplt.savefig(\"l3_scatter_screen_sleep.png\", dpi=150)\nplt.show()\n\nprint(\"L3_SCATTER_FILE_CREATED=\", Path(\"l3_scatter_screen_sleep.png\").exists(), sep=\"\")\n\nweek_df = pd.read_csv(\"week_visualization_1_17_10_11_spo.csv\")\n\nplt.figure(figsize=(8, 4.5))\nsns.lineplot(\n    data=week_df,\n    x=\"day\",\n    y=\"study_hours\",\n    hue=\"group\",\n    marker=\"o\"\n)\nplt.title(\"Изменение времени подготовки по дням\")\nplt.xlabel(\"День недели\")\nplt.ylabel(\"Часы подготовки\")\nplt.tight_layout()\nplt.savefig(\"l3_week_lineplot.png\", dpi=150)\nplt.show()\n\nprint(\"L3_WEEK_FILE_CREATED=\", Path(\"l3_week_lineplot.png\").exists(), sep=\"\")\n\nmini_report = \"\"\"Мини-отчёт по визуализациям 1.17\n\nНа столбчатой диаграмме видно, что среднее экранное время отличается между уровнями обучения.\nЦветовая группировка помогает сравнить дополнительные категории внутри одного графика.\nНа точечной диаграмме можно заметить возможную связь между экранным временем и сном.\nЛинейный график показывает, как время подготовки меняется по дням недели.\nПо графикам нельзя доказывать причину: они показывают сравнение или связь, а не объясняют её полностью.\n\"\"\"\n\nwith open(\"mini_report_1_17.txt\", \"w\", encoding=\"utf-8\") as f:\n    f.write(mini_report)\n\nprint(\"L3_REPORT_CREATED=\", Path(\"mini_report_1_17.txt\").exists(), sep=\"\")\n\nrequired_files = [\n    \"l1_screen_time_barplot.png\",\n    \"l2_exam_preparation_countplot.png\",\n    \"l3_scatter_screen_sleep.png\",\n    \"l3_week_lineplot.png\",\n    \"mini_report_1_17.txt\"\n]\n\nfor file_name in required_files:\n    print(file_name, Path(file_name).exists())",
+      "answer": "",
+      "explanation": "Пример создаёт столбчатую диаграмму по дням, группированные графики по CSV, scatter экранного времени и сна, линии подготовки по неделе и текстовый мини-отчёт. Максимум первого графика — пятница, минимум — понедельник. В CSV 42 строки. Все пять требуемых PNG/TXT создаются в рабочем каталоге; локальный запуск проверил отсутствие False в контрольных строках. Графики показывают наблюдаемую связь и сравнения, а не причинность.",
+      "source": "Полный студенческий пример из исходного стартового ноутбука; эквивалентные проверки файлов через pathlib",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "L1_MAX_DAY=Пт\nL1_MIN_DAY=Пн\nL1_FILE_CREATED=True\nL1_CONCLUSION=На диаграмме видно, что максимальное экранное время было в пятницу, а минимальное — в понедельник.\nL2_ROWS=42\nL2_COLUMNS=['student_id', 'student_name', 'grade_level', 'group', 'country', 'sleep_hours', 'screen_time_hours', 'study_hours', 'uses_ai_for_study', 'stress_level', 'exam_preparation']\nL2_HUE_USED=uses_ai_for_study\nL2_COUNT_FILE_CREATED=True\nL2_MEAN_SCREEN_BY_GRADE={'10': 6.45, '11': 7.67, 'СПО': 6.72}\nL2_CONCLUSION=Цвет помогает сравнить не только уровень обучения, но и отдельные группы внутри него.\nL3_SCATTER_FILE_CREATED=True\nL3_WEEK_FILE_CREATED=True\nL3_REPORT_CREATED=True\nl1_screen_time_barplot.png True\nl2_exam_preparation_countplot.png True\nl3_scatter_screen_sleep.png True\nl3_week_lineplot.png True\nmini_report_1_17.txt True"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем Path, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Подключаем seaborn, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 4,
+          "text": "Подключаем matplotlib.pyplot, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 6,
+          "text": "Выполняем `sns.set_theme` с переданными аргументами."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `['Пн', 'Вт', 'Ср', 'Чт', 'Пт']` и сохраняем результат в `days`."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `[3.5, 4.0, 6.0, 5.5, 7.0]` и сохраняем результат в `screen_time`."
+        },
+        {
+          "line": 11,
+          "text": "Выполняем `plt.figure` с переданными аргументами."
+        },
+        {
+          "line": 12,
+          "text": "Выполняем `sns.barplot` с переданными аргументами."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 14,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 15,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 16,
+          "text": "Выполняем `plt.tight_layout` с переданными аргументами."
+        },
+        {
+          "line": 17,
+          "text": "Выполняем `plt.savefig` с переданными аргументами."
+        },
+        {
+          "line": 18,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 20,
+          "text": "Вычисляем `screen_time.index(max(screen_time))` и сохраняем результат в `max_index`."
+        },
+        {
+          "line": 21,
+          "text": "Вычисляем `screen_time.index(min(screen_time))` и сохраняем результат в `min_index`."
+        },
+        {
+          "line": 23,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 24,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 25,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `'На диаграмме видно, что максимальное экранное время было в пятницу, а минимальное — в понедельник.'` и сохраняем результат в `l1_conclusion`."
+        },
+        {
+          "line": 28,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 30,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 32,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 33,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 34,
+          "text": "Выполняем `df.head` с переданными аргументами."
+        },
+        {
+          "line": 38,
+          "text": "Вычисляем `'uses_ai_for_study'` и сохраняем результат в `hue_column`."
+        },
+        {
+          "line": 40,
+          "text": "Выполняем `plt.figure` с переданными аргументами."
+        },
+        {
+          "line": 41,
+          "text": "Выполняем `sns.barplot` с переданными аргументами."
+        },
+        {
+          "line": 48,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 49,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 50,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 51,
+          "text": "Выполняем `plt.legend` с переданными аргументами."
+        },
+        {
+          "line": 52,
+          "text": "Выполняем `plt.tight_layout` с переданными аргументами."
+        },
+        {
+          "line": 53,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 55,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 58,
+          "text": "Выполняем `plt.figure` с переданными аргументами."
+        },
+        {
+          "line": 59,
+          "text": "Выполняем `sns.countplot` с переданными аргументами."
+        },
+        {
+          "line": 64,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 65,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 66,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 67,
+          "text": "Выполняем `plt.legend` с переданными аргументами."
+        },
+        {
+          "line": 68,
+          "text": "Выполняем `plt.tight_layout` с переданными аргументами."
+        },
+        {
+          "line": 69,
+          "text": "Выполняем `plt.savefig` с переданными аргументами."
+        },
+        {
+          "line": 70,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 72,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 75,
+          "text": "Вычисляем `df.groupby('grade_level')['screen_time_hours'].mean().round(2)` и сохраняем результат в `summary`."
+        },
+        {
+          "line": 76,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 78,
+          "text": "Вычисляем `'Цвет помогает сравнить не только уровень обучения, но и отдельные группы внутри него.'` и сохраняем результат в `l2_conclusion`."
+        },
+        {
+          "line": 79,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 81,
+          "text": "Выполняем `plt.figure` с переданными аргументами."
+        },
+        {
+          "line": 82,
+          "text": "Выполняем `sns.scatterplot` с переданными аргументами."
+        },
+        {
+          "line": 90,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 91,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 92,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 93,
+          "text": "Выполняем `plt.tight_layout` с переданными аргументами."
+        },
+        {
+          "line": 94,
+          "text": "Выполняем `plt.savefig` с переданными аргументами."
+        },
+        {
+          "line": 95,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 97,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 99,
+          "text": "Читаем учебный CSV в таблицу week_df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 101,
+          "text": "Выполняем `plt.figure` с переданными аргументами."
+        },
+        {
+          "line": 102,
+          "text": "Выполняем `sns.lineplot` с переданными аргументами."
+        },
+        {
+          "line": 109,
+          "text": "Выполняем `plt.title` с переданными аргументами."
+        },
+        {
+          "line": 110,
+          "text": "Выполняем `plt.xlabel` с переданными аргументами."
+        },
+        {
+          "line": 111,
+          "text": "Выполняем `plt.ylabel` с переданными аргументами."
+        },
+        {
+          "line": 112,
+          "text": "Выполняем `plt.tight_layout` с переданными аргументами."
+        },
+        {
+          "line": 113,
+          "text": "Выполняем `plt.savefig` с переданными аргументами."
+        },
+        {
+          "line": 114,
+          "text": "Выполняем `plt.show` с переданными аргументами."
+        },
+        {
+          "line": 116,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 118,
+          "text": "Вычисляем `'Мини-отчёт по визуализациям 1.17\\n\\nНа столбчатой диаграмме видно, что среднее экранное время отличается между уровнями обучения.\\nЦветовая группировка помогает сравнить дополнительные категории внутри одного графика.\\nНа точечной диаграмме можно заметить возможную связь между экранным временем и сном.\\nЛинейный график показывает, как время подготовки меняется по дням недели.\\nПо графикам нельзя доказывать причину: они показывают сравнение или связь, а не объясняют её полностью.\\n'` и сохраняем результат в `mini_report`."
+        },
+        {
+          "line": 128,
+          "text": "Выполняем `f.write` с переданными аргументами."
+        },
+        {
+          "line": 130,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 132,
+          "text": "Вычисляем `['l1_screen_time_barplot.png', 'l2_exam_preparation_countplot.png', 'l3_scatter_screen_sleep.png', 'l3_week_lineplot.png', 'mini_report_1_17.txt']` и сохраняем результат в `required_files`."
+        },
+        {
+          "line": 140,
+          "text": "Перебираем `required_files`; очередное значение доступно через `file_name`."
+        },
+        {
+          "line": 141,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "d975da8f6d512f8c3cf14e9c595c9a6f23abd9abfc8bfc5c618b1c613636d6cf",
+      "verificationEvidence": {
+        "codeSha256": "d975da8f6d512f8c3cf14e9c595c9a6f23abd9abfc8bfc5c618b1c613636d6cf",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "L1_MAX_DAY=Пт\nL1_MIN_DAY=Пн\nL1_FILE_CREATED=True\nL1_CONCLUSION=На диаграмме видно, что максимальное экранное время было в пятницу, а минимальное — в понедельник.\nL2_ROWS=42\nL2_COLUMNS=['student_id', 'student_name', 'grade_level', 'group', 'country', 'sleep_hours', 'screen_time_hours', 'study_hours', 'uses_ai_for_study', 'stress_level', 'exam_preparation']\nL2_HUE_USED=uses_ai_for_study\nL2_COUNT_FILE_CREATED=True\nL2_MEAN_SCREEN_BY_GRADE={'10': 6.45, '11': 7.67, 'СПО': 6.72}\nL2_CONCLUSION=Цвет помогает сравнить не только уровень обучения, но и отдельные группы внутри него.\nL3_SCATTER_FILE_CREATED=True\nL3_WEEK_FILE_CREATED=True\nL3_REPORT_CREATED=True\nl1_screen_time_barplot.png True\nl2_exam_preparation_countplot.png True\nl3_scatter_screen_sleep.png True\nl3_week_lineplot.png True\nmini_report_1_17.txt True"
+        }
+      ]
+    }
+  ]
+}

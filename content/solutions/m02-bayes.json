@@ -1,0 +1,342 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6aba9713155402213f76892d",
+      "lessonId": "M02-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "P(П)=280/400=0.7; P(О)=120/400=0.3.\n5 звёзд: P(П|B)=200/210≈0.952381; P(О|B)=10/210≈0.047619; Δ≈0.252381 для обоих классов.\n«Брак/сломан»: 5/80=0.0625 и 75/80=0.9375; Δ=0.6375.\nДлина >200: 100/160=0.625 и 60/160=0.375; Δ=0.075.\nСамый информативный признак — «брак/сломан», наименее — длина. Для 5 звёзд выбираем положительный класс. В каждой паре сумма условных вероятностей равна 1.",
+      "explanation": "Для условной вероятности знаменатель — число отзывов с данным признаком, а не все 400. Информативность измеряется отклонением от базовой вероятности. Для двух дополняющих классов абсолютные отклонения совпадают.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "ba758a725a05c9b028dff9616e9888e7c0c02bcf99c67efd42ce293c0c806dc0",
+      "verificationEvidence": {
+        "codeSha256": "ba758a725a05c9b028dff9616e9888e7c0c02bcf99c67efd42ce293c0c806dc0",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba9714155402213f768930",
+      "lessonId": "M02-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "P(Д)=90/600=0.15; P(З)=0.85.\nТемпература: P(Д|T)=72/120=0.60, Δ=0.45.\nАнализ крови: 81/100=0.81, Δ=0.66.\nКашель: 36/80=0.45, Δ=0.30.\nРанжирование: анализ крови → температура → кашель.\nБайес: P(T|Д)=72/90=0.8; P(T|З)=48/510≈0.094118.\nP(T)=0.8×0.15+(48/510)×0.85=0.20.\nP(Д|T)=0.8×0.15/0.20=0.60: совпадает с прямым подсчётом.\nВ P(T|Д) рассматриваем только 90 больных, а в P(Д|T) — только 120 пациентов с температурой.",
+      "explanation": "Результат — арифметика учебной таблицы, не индивидуальная медицинская оценка. Байес и прямое отношение описывают одну и ту же совместную частоту 72/600.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "a9c103fa778bee3d0c05d318fa3d9959429ca5b5e113046ae700147c34eaa4cf",
+      "verificationEvidence": {
+        "codeSha256": "a9c103fa778bee3d0c05d318fa3d9959429ca5b5e113046ae700147c34eaa4cf",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba9714155402213f768933",
+      "lessonId": "M02-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "Счёт спама: 0.2×0.60×0.80×0.75=0.072.\nСчёт не спама: 0.8×0.04×0.15×0.10=0.00048.\nP(спам|все)=0.072/0.07248≈0.993377; P(не спам|все)≈0.006623, сумма 1.\nТолько «скидка»: 0.12/(0.12+0.032)=15/19≈0.789474.\nТолько ссылка: 0.16/(0.16+0.12)=4/7≈0.571429.\nТолько незнакомый отправитель: 0.15/(0.15+0.08)=15/23≈0.652174.\nНаиболее сильный отдельный признак — «скидка». Все три дают более высокий результат.",
+      "explanation": "Умножение правдоподобий признаков внутри класса использует условную независимость. Счета до нормировки не являются вероятностями, суммирующимися в 1. В реальных письмах признаки могут зависеть друг от друга.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "875af01b0186f7f792a60c667e5f193243899d2bedfabdb7576d60ad33b6b5a5",
+      "verificationEvidence": {
+        "codeSha256": "875af01b0186f7f792a60c667e5f193243899d2bedfabdb7576d60ad33b6b5a5",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba9714155402213f768939",
+      "lessonId": "M02-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "P(тревога|не брак)=1−0.95=0.05.\nP(тревога)=0.97×0.01+0.05×0.99=0.0592.\nВ среднем 592 тревоги за 10000 деталей: 97 верных и 495 ложных.\nP(брак|тревога)=0.0097/0.0592=97/592≈0.163851≈16.39%.\nЛожных тревог примерно в 5.10 раза больше верных из-за редкости брака (1%).\nДополнительная проверка может сократить ложные срабатывания. Для оценки нужны её чувствительность, специфичность и зависимость ошибок от первого датчика; без независимости нельзя просто перемножить 5% дважды.",
+      "explanation": "Чувствительность относится к бракованным деталям, а не ко всем тревогам. Большое число исправных деталей создаёт много ложных тревог даже при относительно малой доле 5%.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "48d0e2bb800a26974697fe441ed426c5d030238489904a64df97c9c11c8a3a72",
+      "verificationEvidence": {
+        "codeSha256": "48d0e2bb800a26974697fe441ed426c5d030238489904a64df97c9c11c8a3a72",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba9714155402213f76893c",
+      "lessonId": "M02-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "Базовая P(М)=40/800=0.05.\nСумма >50000: P=28/120≈0.233333, Δ≈0.183333.\nЗа рубежом: 22/80=0.275, Δ=0.225.\nНочь: 15/200=0.075, Δ=0.025.\nНовая страна: 24/60=0.4, Δ=0.35.\nПовтор <5 мин: 18/30=0.6, Δ=0.55.\nРанг: повтор → новая страна → за рубежом → сумма → ночь.\nДля двух лучших признаков: P(новая|М)=24/40=0.6; P(повтор|М)=18/40=0.45; P(новая|N)=36/760; P(повтор|N)=12/760.\nСчёт М=0.05×0.6×0.45=0.0135; счёт N=0.95×(36/760)×(12/760)≈0.000710526.\nP(М|оба)=19/20=0.95.\nЕдиного порога блокировки из таблицы не получить. При стоимости ложной блокировки C_FP и пропуска C_FN простое правило минимальных ожидаемых потерь даёт порог C_FP/(C_FP+C_FN), если вероятности откалиброваны и модель затрат применима.",
+      "explanation": "Произведение использует условную независимость признаков внутри класса. Частоты новой страны и быстрого повтора могут зависеть, поэтому 0.95 — оценка выбранной наивной модели. Стоимость ошибок и последствия ручной проверки нужно задавать отдельно.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "de8f7f6343e1eeda3f1b7c82f95fa44153c7a68b9d3521bb87f0a6629a6ba554",
+      "verificationEvidence": {
+        "codeSha256": "de8f7f6343e1eeda3f1b7c82f95fa44153c7a68b9d3521bb87f0a6629a6ba554",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba9714155402213f768936",
+      "lessonId": "M02-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "calculation",
+      "code": "",
+      "answer": "P(Д|телефон)=480/900≈0.533333; ТВ=480/600=0.8; компьютер=240/500=0.48.\nP(Д|вечер)=770/1100=0.7; день=300/600=0.5; ночь=130/300≈0.433333.\nЛучшие отдельные варианты: ТВ и вечер.\nНаивные оценки девяти сегментов:\nТелефон + Вечер: 0.640000\nТелефон + День: 0.432432\nТелефон + Ночь: 0.368142\nТВ + Вечер: 0.861538\nТВ + День: 0.727273\nТВ + Ночь: 0.670968\nКомпьютер + Вечер: 0.589474\nКомпьютер + День: 0.380952\nКомпьютер + Ночь: 0.320000\nЛучший сегмент — ТВ + вечер (≈0.861538). Это модельная оценка при условной независимости устройства и времени внутри классов Д/Н. Нужна таблица частот «устройство × время × досмотр», чтобы проверить оценку непосредственно.\nГипотеза персонализации: на ТВ вечером тестировать удобный запуск продолжения сериала; на телефоне сравнить короткие превью. Сначала A/B-тест: частоты не доказывают эффективность нового интерфейса.",
+      "explanation": "Для каждой комбинации отдельно умножаем базовую вероятность класса на два условных правдоподобия, затем нормируем. Например для ТВ и вечера отношение счётов даёт 0.861538. Выбор интерфейса — предложение эксперимента, а не установленное следствие таблицы.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "557d60ec3e8d180dde39c3fff4f45a797fe35937e5f43d141a0c9945bf973f0b",
+      "verificationEvidence": {
+        "codeSha256": "557d60ec3e8d180dde39c3fff4f45a797fe35937e5f43d141a0c9945bf973f0b",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6aba9714155402213f76893f",
+      "lessonId": "M02-L09",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "project_example",
+      "code": "from itertools import product\nfrom collections import Counter\n\n# Явно синтетический датасет: 200 учеников, по 100 в каждом классе.\nnames = ['attendance','homework','activity']\nprobabilities = {'хорошо': [.8,.6,.5], 'плохо': [.2,.4,.5]}\ndata = []\nfor label, probabilities_in_class in probabilities.items():\n    for values in product([0,1], repeat=3):\n        count = 100\n        for value,p in zip(values,probabilities_in_class):\n            count *= p if value else 1-p\n        data.extend([(*values,label)]*round(count))\nassert len(data) == 200\ncounts = Counter(row[-1] for row in data)\nprint('Классы:', dict(counts))\nfor j,name in enumerate(names):\n    for label in counts:\n        selected = [r for r in data if r[-1] == label]\n        positive = sum(r[j] for r in selected)\n        baseline = counts[label]/len(data)\n        with_feature = [r for r in data if r[j] == 1]\n        conditional = sum(r[-1] == label for r in with_feature)/len(with_feature)\n        print(name, label, 'n=', positive, 'P(B|класс)=', round(positive/len(selected),3), 'P(класс|B)=', round(conditional,3), 'delta=', round(abs(conditional-baseline),3))\n\ndef classify(values):\n    scores = {}\n    for label,count in counts.items():\n        score = count/len(data)\n        selected = [r for r in data if r[-1] == label]\n        for j,value in enumerate(values):\n            score *= sum(r[j] == value for r in selected)/count\n        scores[label] = score\n    total = sum(scores.values())\n    normalized = {label:score/total for label,score in scores.items()}\n    assert abs(sum(normalized.values())-1) < 1e-12\n    return max(normalized,key=normalized.get), {k:round(v,4) for k,v in normalized.items()}\n\nfor values in [(1,1,1),(0,0,0),(1,0,1)]:\n    print(values, classify(values))",
+      "answer": "",
+      "explanation": "Тема — прогноз результата ученика по посещаемости, домашним заданиям и активности. Данные искусственные, содержат 200 объектов и полный набор сочетаний. Код печатает базовые вероятности 0.5/0.5, сводные частоты и условные вероятности, Δ и три прогноза с нормировкой. Посещаемость даёт Δ=0.3, ДЗ — 0.1, активность — 0 и в этом примере не помогает. Вероятности хорошего результата для трёх объектов: 6/7≈0.8571, 1/7≈0.1429, 8/11≈0.7273. В синтетическом построении признаки независимы внутри класса; в реальном классе посещаемость и ДЗ могут зависеть. Оценки нужно проверять на новых независимых наблюдениях.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Классы: {'хорошо': 100, 'плохо': 100}\nattendance хорошо n= 80 P(B|класс)= 0.8 P(класс|B)= 0.8 delta= 0.3\nattendance плохо n= 20 P(B|класс)= 0.2 P(класс|B)= 0.2 delta= 0.3\nhomework хорошо n= 60 P(B|класс)= 0.6 P(класс|B)= 0.6 delta= 0.1\nhomework плохо n= 40 P(B|класс)= 0.4 P(класс|B)= 0.4 delta= 0.1\nactivity хорошо n= 50 P(B|класс)= 0.5 P(класс|B)= 0.5 delta= 0.0\nactivity плохо n= 50 P(B|класс)= 0.5 P(класс|B)= 0.5 delta= 0.0\n(1, 1, 1) ('хорошо', {'хорошо': 0.8571, 'плохо': 0.1429})\n(0, 0, 0) ('плохо', {'хорошо': 0.1429, 'плохо': 0.8571})\n(1, 0, 1) ('хорошо', {'хорошо': 0.7273, 'плохо': 0.2727})"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем product, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Подключаем Counter, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 5,
+          "text": "Вычисляем `['attendance', 'homework', 'activity']` и сохраняем результат в `names`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `{'хорошо': [0.8, 0.6, 0.5], 'плохо': [0.2, 0.4, 0.5]}` и сохраняем результат в `probabilities`."
+        },
+        {
+          "line": 7,
+          "text": "Вычисляем `[]` и сохраняем результат в `data`."
+        },
+        {
+          "line": 8,
+          "text": "Перебираем `probabilities.items()`; очередное значение доступно через `(label, probabilities_in_class)`."
+        },
+        {
+          "line": 9,
+          "text": "Перебираем `product([0, 1], repeat=3)`; очередное значение доступно через `values`."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `100` и сохраняем результат в `count`."
+        },
+        {
+          "line": 11,
+          "text": "Перебираем `zip(values, probabilities_in_class)`; очередное значение доступно через `(value, p)`."
+        },
+        {
+          "line": 12,
+          "text": "Обновляем `count` операцией `Mult` с `p if value else 1 - p`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 13,
+          "text": "Выполняем `data.extend` с переданными аргументами."
+        },
+        {
+          "line": 14,
+          "text": "Проверяем инвариант `len(data) == 200`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `Counter((row[-1] for row in data))` и сохраняем результат в `counts`."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 17,
+          "text": "Перебираем `enumerate(names)`; очередное значение доступно через `(j, name)`."
+        },
+        {
+          "line": 18,
+          "text": "Перебираем `counts`; очередное значение доступно через `label`."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `[r for r in data if r[-1] == label]` и сохраняем результат в `selected`."
+        },
+        {
+          "line": 20,
+          "text": "Вычисляем `sum((r[j] for r in selected))` и сохраняем результат в `positive`."
+        },
+        {
+          "line": 21,
+          "text": "Вычисляем `counts[label] / len(data)` и сохраняем результат в `baseline`."
+        },
+        {
+          "line": 22,
+          "text": "Вычисляем `[r for r in data if r[j] == 1]` и сохраняем результат в `with_feature`."
+        },
+        {
+          "line": 23,
+          "text": "Вычисляем `sum((r[-1] == label for r in with_feature)) / len(with_feature)` и сохраняем результат в `conditional`."
+        },
+        {
+          "line": 24,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 26,
+          "text": "Определяем функцию `classify` с параметрами `values`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 27,
+          "text": "Вычисляем `{}` и сохраняем результат в `scores`."
+        },
+        {
+          "line": 28,
+          "text": "Перебираем `counts.items()`; очередное значение доступно через `(label, count)`."
+        },
+        {
+          "line": 29,
+          "text": "Вычисляем `count / len(data)` и сохраняем результат в `score`."
+        },
+        {
+          "line": 30,
+          "text": "Вычисляем `[r for r in data if r[-1] == label]` и сохраняем результат в `selected`."
+        },
+        {
+          "line": 31,
+          "text": "Перебираем `enumerate(values)`; очередное значение доступно через `(j, value)`."
+        },
+        {
+          "line": 32,
+          "text": "Обновляем `score` операцией `Mult` с `sum((r[j] == value for r in selected)) / count`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 33,
+          "text": "Вычисляем `score` и сохраняем результат в `scores[label]`."
+        },
+        {
+          "line": 34,
+          "text": "Вычисляем `sum(scores.values())` и сохраняем результат в `total`."
+        },
+        {
+          "line": 35,
+          "text": "Вычисляем `{label: score / total for label, score in scores.items()}` и сохраняем результат в `normalized`."
+        },
+        {
+          "line": 36,
+          "text": "Проверяем инвариант `abs(sum(normalized.values()) - 1) < 1e-12`. При нарушении программа сообщит об ошибке."
+        },
+        {
+          "line": 37,
+          "text": "Возвращаем из функции `(max(normalized, key=normalized.get), {k: round(v, 4) for k, v in normalized.items()})`."
+        },
+        {
+          "line": 39,
+          "text": "Перебираем `[(1, 1, 1), (0, 0, 0), (1, 0, 1)]`; очередное значение доступно через `values`."
+        },
+        {
+          "line": 40,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "fc0fd34554ee4cfb133848d6e06a71ec71c505b231ebd0e8c5227db83766a0aa",
+      "verificationEvidence": {
+        "codeSha256": "fc0fd34554ee4cfb133848d6e06a71ec71c505b231ebd0e8c5227db83766a0aa",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Классы: {'хорошо': 100, 'плохо': 100}\nattendance хорошо n= 80 P(B|класс)= 0.8 P(класс|B)= 0.8 delta= 0.3\nattendance плохо n= 20 P(B|класс)= 0.2 P(класс|B)= 0.2 delta= 0.3\nhomework хорошо n= 60 P(B|класс)= 0.6 P(класс|B)= 0.6 delta= 0.1\nhomework плохо n= 40 P(B|класс)= 0.4 P(класс|B)= 0.4 delta= 0.1\nactivity хорошо n= 50 P(B|класс)= 0.5 P(класс|B)= 0.5 delta= 0.0\nactivity плохо n= 50 P(B|класс)= 0.5 P(класс|B)= 0.5 delta= 0.0\n(1, 1, 1) ('хорошо', {'хорошо': 0.8571, 'плохо': 0.1429})\n(0, 0, 0) ('плохо', {'хорошо': 0.1429, 'плохо': 0.8571})\n(1, 0, 1) ('хорошо', {'хорошо': 0.7273, 'плохо': 0.2727})"
+        }
+      ]
+    }
+  ]
+}

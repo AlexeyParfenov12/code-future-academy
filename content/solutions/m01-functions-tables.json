@@ -1,0 +1,1065 @@
+{
+  "permission": "Владелец отдельно разрешил проверенные ответы обычных практик 2026-11-02. Контроли и аттестации не включены.",
+  "solutions": [
+    {
+      "taskId": "T-6abd1ae04e1f7c3d9fefabab",
+      "lessonId": "M01-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "text",
+      "code": "",
+      "answer": "2 Наушники",
+      "explanation": "Фильтр сохраняет записи с рейтингом не ниже 4.0: Наушники и Кабель. Длина результата 2, первая запись — Наушники. print выводит аргументы через пробел.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "source",
+      "testCount": 0,
+      "examples": [],
+      "lineExplanations": [],
+      "relatedTopics": [],
+      "sha256": "3f93132b524de5fee9d60ea01fdfb124e5b6f3b1a6af4f72e5b66380554bc4a0",
+      "verificationEvidence": {
+        "codeSha256": "3f93132b524de5fee9d60ea01fdfb124e5b6f3b1a6af4f72e5b66380554bc4a0",
+        "passed": 0,
+        "total": 0,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": []
+    },
+    {
+      "taskId": "T-6abd1b044e1f7c3d9fefabac",
+      "lessonId": "M01-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def apply_to_column(table, field, func, new_field=\"result\"):\n    for row in table:\n        row[new_field] = func(row[field])\n    return table\n\nproducts = [\n    {\"name\": \"Товар А\", \"price\": 1000},\n    {\"name\": \"Товар Б\", \"price\": 2500},\n]\n# Применить скидку 10% – умножить цену на 0.9\napply_to_column(products, \"price\", lambda x: round(x * 0.9, 2), new_field=\"sale_price\")\nfor p in products:\n    print(p)",
+      "answer": "",
+      "explanation": "Параметр new_field определяет, куда записать результат. Читаем исходное поле field, но записываем в новый ключ: цена не меняется. Именованный аргумент sale_price переопределяет значение по умолчанию result.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "{'name': 'Товар А', 'price': 1000, 'sale_price': 900.0}\n{'name': 'Товар Б', 'price': 2500, 'sale_price': 2250.0}"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `apply_to_column` с параметрами `table, field, func, new_field='result'`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Перебираем `table`; очередное значение доступно через `row`."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `func(row[field])` и сохраняем результат в `row[new_field]`."
+        },
+        {
+          "line": 4,
+          "text": "Возвращаем из функции `table`."
+        },
+        {
+          "line": 6,
+          "text": "Вычисляем `[{'name': 'Товар А', 'price': 1000}, {'name': 'Товар Б', 'price': 2500}]` и сохраняем результат в `products`."
+        },
+        {
+          "line": 11,
+          "text": "Выполняем `apply_to_column` с переданными аргументами."
+        },
+        {
+          "line": 12,
+          "text": "Перебираем `products`; очередное значение доступно через `p`."
+        },
+        {
+          "line": 13,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "97fdb23e581638959addf6672ac23cf296ffe1439011b15530e954512a9defc9",
+      "verificationEvidence": {
+        "codeSha256": "97fdb23e581638959addf6672ac23cf296ffe1439011b15530e954512a9defc9",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "{'name': 'Товар А', 'price': 1000, 'sale_price': 900.0}\n{'name': 'Товар Б', 'price': 2500, 'sale_price': 2250.0}"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abd1b424e1f7c3d9fefabad",
+      "lessonId": "M01-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def total_in_stock(items):\n    total = 0\n    for item in items:\n        if item[\"in_stock\"]:\n            total += item[\"price\"]\n    return total\n\ndef get_max_price(items):\n    max_price = 0\n    for item in items:\n        if item[\"price\"] > max_price:\n            max_price = item[\"price\"]\n    return max_price\n\nshop = [{\"name\": \"Чай\", \"price\": 150, \"in_stock\": True}, {\"name\": \"Кофе\", \"price\": 200, \"in_stock\": False}, {\"name\": \"Сок\", \"price\": 90, \"in_stock\": True}]\nprint(total_in_stock(shop))\nprint(get_max_price(shop))",
+      "answer": "",
+      "explanation": "Ключ in_stock должен быть строкой. После def и if обязательны двоеточия. Суммируются только Чай и Сок (150 + 90), а максимум ищется по всему каталогу, включая отсутствующий Кофе за 200.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "240\n200"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `total_in_stock` с параметрами `items`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `0` и сохраняем результат в `total`."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `items`; очередное значение доступно через `item`."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `item['in_stock']`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Обновляем `total` операцией `Add` с `item['price']`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 6,
+          "text": "Возвращаем из функции `total`."
+        },
+        {
+          "line": 8,
+          "text": "Определяем функцию `get_max_price` с параметрами `items`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `0` и сохраняем результат в `max_price`."
+        },
+        {
+          "line": 10,
+          "text": "Перебираем `items`; очередное значение доступно через `item`."
+        },
+        {
+          "line": 11,
+          "text": "Проверяем условие `item['price'] > max_price`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `item['price']` и сохраняем результат в `max_price`."
+        },
+        {
+          "line": 13,
+          "text": "Возвращаем из функции `max_price`."
+        },
+        {
+          "line": 15,
+          "text": "Вычисляем `[{'name': 'Чай', 'price': 150, 'in_stock': True}, {'name': 'Кофе', 'price': 200, 'in_stock': False}, {'name': 'Сок', 'price': 90, 'in_stock': True}]` и сохраняем результат в `shop`."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "e6a8893aebd24a3eb744abbb18e4b4d5a2eb5c9fbfc0967ef9f4db06adf6ccc9",
+      "verificationEvidence": {
+        "codeSha256": "e6a8893aebd24a3eb744abbb18e4b4d5a2eb5c9fbfc0967ef9f4db06adf6ccc9",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "240\n200"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abd1b6e4e1f7c3d9fefabae",
+      "lessonId": "M01-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def count_positive(numbers):\n    count = 0\n    for number in numbers:\n        if number > 0:\n            count += 1\n    return count\n\ndef average(numbers):\n    total = count = 0\n    for number in numbers:\n        total += number\n        count += 1\n    if count == 0:\n        return None\n    return total / count\n\ndef filter_above(numbers, threshold):\n    result = []\n    for number in numbers:\n        if number > threshold:\n            result.append(number)\n    return result\n\nprint(count_positive([3, -1, 0, 7, -2, 5]))\nprint(average([10, 20, 30]))\nprint(filter_above([1, 5, 3, 8, 2], 4))\nprint(average([]))",
+      "answer": "",
+      "explanation": "Встроенные sum, len, min, max не используются. Счётчики и сумма обновляются в for. Ноль не положителен, равенство порогу не проходит фильтр. Проверка пустого набора предотвращает деление на ноль и возвращает None.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "3\n20.0\n[5, 8]\nNone"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `count_positive` с параметрами `numbers`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `0` и сохраняем результат в `count`."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `numbers`; очередное значение доступно через `number`."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `number > 0`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Обновляем `count` операцией `Add` с `1`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 6,
+          "text": "Возвращаем из функции `count`."
+        },
+        {
+          "line": 8,
+          "text": "Определяем функцию `average` с параметрами `numbers`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 9,
+          "text": "Вычисляем `0` и сохраняем результат в `total, count`."
+        },
+        {
+          "line": 10,
+          "text": "Перебираем `numbers`; очередное значение доступно через `number`."
+        },
+        {
+          "line": 11,
+          "text": "Обновляем `total` операцией `Add` с `number`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 12,
+          "text": "Обновляем `count` операцией `Add` с `1`; прежнее значение участвует в вычислении."
+        },
+        {
+          "line": 13,
+          "text": "Проверяем условие `count == 0`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 14,
+          "text": "Возвращаем из функции `None`."
+        },
+        {
+          "line": 15,
+          "text": "Возвращаем из функции `total / count`."
+        },
+        {
+          "line": 17,
+          "text": "Определяем функцию `filter_above` с параметрами `numbers, threshold`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 18,
+          "text": "Вычисляем `[]` и сохраняем результат в `result`."
+        },
+        {
+          "line": 19,
+          "text": "Перебираем `numbers`; очередное значение доступно через `number`."
+        },
+        {
+          "line": 20,
+          "text": "Проверяем условие `number > threshold`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 21,
+          "text": "Выполняем `result.append` с переданными аргументами."
+        },
+        {
+          "line": 22,
+          "text": "Возвращаем из функции `result`."
+        },
+        {
+          "line": 24,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 25,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 26,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 27,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "6ab3d4b6d64715d8335cd1c7c2e8cb5736122ba4625f5f33006f203fc11c0ff8",
+      "verificationEvidence": {
+        "codeSha256": "6ab3d4b6d64715d8335cd1c7c2e8cb5736122ba4625f5f33006f203fc11c0ff8",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "3\n20.0\n[5, 8]\nNone"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abd1ba94e1f7c3d9fefabaf",
+      "lessonId": "M01-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def get_dataset():\n    return [\n        {\"name\": \"Аня\", \"score\": 92, \"attendance\": 95, \"project\": True},\n        {\"name\": \"Боря\", \"score\": 58, \"attendance\": 70, \"project\": False},\n        {\"name\": \"Вика\", \"score\": 76, \"attendance\": 88, \"project\": True},\n        {\"name\": \"Гоша\", \"score\": 64, \"attendance\": 60, \"project\": False},\n        {\"name\": \"Даша\", \"score\": 87, \"attendance\": 82, \"project\": True},\n    ]\n\n\ndef classify(row):\n    if row[\"score\"] >= 85 and row[\"attendance\"] >= 80 and row[\"project\"]:\n        return \"Отличник\"\n    elif row[\"score\"] >= 70 and row[\"project\"]:\n        return \"Хорошист\"\n    elif row[\"score\"] >= 60:\n        return \"Удовл.\"\n    return \"Неудовл.\"\n\n\ndef add_classes(table):\n    for row in table:\n        row[\"class\"] = classify(row)\n    return table\n\n\ndef stats(table, field):\n    values = [row[field] for row in table]\n    return min(values), max(values), round(sum(values) / len(values), 2)\n\n\ndef filter_by_class(table, cls):\n    return [row for row in table if row[\"class\"] == cls]\n\n\ndef print_table(table):\n    for row in table:\n        print(row[\"name\"], row[\"score\"], row[\"attendance\"], row[\"project\"], row[\"class\"])\n\n\ntable = add_classes(get_dataset())\nprint_table(table)\nprint(stats(table, \"score\"))\nprint(stats(table, \"attendance\"))\nprint_table(filter_by_class(table, \"Отличник\"))",
+      "answer": "",
+      "explanation": "Каждая функция отвечает за одну операцию. classify применяет приоритетные правила, add_classes использует её для каждой записи. stats извлекает выбранный числовой столбец и возвращает кортеж трёх показателей. Фильтр сохраняет только выбранный класс. Заготовка данных и основная программа сохранены.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Аня 92 95 True Отличник\nБоря 58 70 False Неудовл.\nВика 76 88 True Хорошист\nГоша 64 60 False Удовл.\nДаша 87 82 True Отличник\n(58, 92, 75.4)\n(60, 95, 79.0)\nАня 92 95 True Отличник\nДаша 87 82 True Отличник"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `get_dataset` с параметрами ``. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Возвращаем из функции `[{'name': 'Аня', 'score': 92, 'attendance': 95, 'project': True}, {'name': 'Боря', 'score': 58, 'attendance': 70, 'project': False}, {'name': 'Вика', 'score': 76, 'attendance': 88, 'project': True}, {'name': 'Гоша', 'score': 64, 'attendance': 60, 'project': False}, {'name': 'Даша', 'score': 87, 'attendance': 82, 'project': True}]`."
+        },
+        {
+          "line": 11,
+          "text": "Определяем функцию `classify` с параметрами `row`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 12,
+          "text": "Проверяем условие `row['score'] >= 85 and row['attendance'] >= 80 and row['project']`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 13,
+          "text": "Возвращаем из функции `'Отличник'`."
+        },
+        {
+          "line": 14,
+          "text": "Проверяем условие `row['score'] >= 70 and row['project']`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 15,
+          "text": "Возвращаем из функции `'Хорошист'`."
+        },
+        {
+          "line": 16,
+          "text": "Проверяем условие `row['score'] >= 60`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 17,
+          "text": "Возвращаем из функции `'Удовл.'`."
+        },
+        {
+          "line": 18,
+          "text": "Возвращаем из функции `'Неудовл.'`."
+        },
+        {
+          "line": 21,
+          "text": "Определяем функцию `add_classes` с параметрами `table`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 22,
+          "text": "Перебираем `table`; очередное значение доступно через `row`."
+        },
+        {
+          "line": 23,
+          "text": "Вычисляем `classify(row)` и сохраняем результат в `row['class']`."
+        },
+        {
+          "line": 24,
+          "text": "Возвращаем из функции `table`."
+        },
+        {
+          "line": 27,
+          "text": "Определяем функцию `stats` с параметрами `table, field`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 28,
+          "text": "Вычисляем `[row[field] for row in table]` и сохраняем результат в `values`."
+        },
+        {
+          "line": 29,
+          "text": "Возвращаем из функции `(min(values), max(values), round(sum(values) / len(values), 2))`."
+        },
+        {
+          "line": 32,
+          "text": "Определяем функцию `filter_by_class` с параметрами `table, cls`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 33,
+          "text": "Возвращаем из функции `[row for row in table if row['class'] == cls]`."
+        },
+        {
+          "line": 36,
+          "text": "Определяем функцию `print_table` с параметрами `table`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 37,
+          "text": "Перебираем `table`; очередное значение доступно через `row`."
+        },
+        {
+          "line": 38,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 41,
+          "text": "Вычисляем `add_classes(get_dataset())` и сохраняем результат в `table`."
+        },
+        {
+          "line": 42,
+          "text": "Выполняем `print_table` с переданными аргументами."
+        },
+        {
+          "line": 43,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 44,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 45,
+          "text": "Выполняем `print_table` с переданными аргументами."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "993f00acaecf38e6198dd35d83ee2cb57fbf865869c03ade66ab074b2d57f8fb",
+      "verificationEvidence": {
+        "codeSha256": "993f00acaecf38e6198dd35d83ee2cb57fbf865869c03ade66ab074b2d57f8fb",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Аня 92 95 True Отличник\nБоря 58 70 False Неудовл.\nВика 76 88 True Хорошист\nГоша 64 60 False Удовл.\nДаша 87 82 True Отличник\n(58, 92, 75.4)\n(60, 95, 79.0)\nАня 92 95 True Отличник\nДаша 87 82 True Отличник"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abd1bdd4e1f7c3d9fefabb0",
+      "lessonId": "M01-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def apply_filter(table, condition_func):\n    result = []\n    for row in table:\n        if condition_func(row):\n            result.append(row)\n    return result\n\ncatalog = [\n    {\"name\": \"Наушники\", \"price\": 1500, \"rating\": 4.7, \"in_stock\": True},\n    {\"name\": \"Мышь\", \"price\": 890, \"rating\": 4.8, \"in_stock\": False},\n    {\"name\": \"Кабель\", \"price\": 200, \"rating\": 4.2, \"in_stock\": True},\n    {\"name\": \"Монитор\", \"price\": 12000, \"rating\": 4.9, \"in_stock\": True},\n    {\"name\": \"Веб-камера\", \"price\": 3500, \"rating\": 4.1, \"in_stock\": True},\n]\nprint(', '.join(p['name'] for p in apply_filter(catalog, lambda p: p['rating'] >= 4.5)))\nprint(', '.join(p['name'] for p in apply_filter(catalog, lambda p: p['price'] < 2000)))\nprint(', '.join(p['name'] for p in apply_filter(catalog, lambda p: p['in_stock'] and p['rating'] > 4.0)))",
+      "answer": "",
+      "explanation": "Функция получает другую функцию как параметр и вызывает её для каждой записи. Данные не изменяются. Три независимых фильтра проверяют рейтинг, цену и наличие с рейтингом. join добавляет запятую и пробел только между названиями.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Наушники, Мышь, Монитор\nНаушники, Мышь, Кабель\nНаушники, Кабель, Монитор, Веб-камера"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `apply_filter` с параметрами `table, condition_func`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Вычисляем `[]` и сохраняем результат в `result`."
+        },
+        {
+          "line": 3,
+          "text": "Перебираем `table`; очередное значение доступно через `row`."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `condition_func(row)`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Выполняем `result.append` с переданными аргументами."
+        },
+        {
+          "line": 6,
+          "text": "Возвращаем из функции `result`."
+        },
+        {
+          "line": 8,
+          "text": "Вычисляем `[{'name': 'Наушники', 'price': 1500, 'rating': 4.7, 'in_stock': True}, {'name': 'Мышь', 'price': 890, 'rating': 4.8, 'in_stock': False}, {'name': 'Кабель', 'price': 200, 'rating': 4.2, 'in_stock': True}, {'name': 'Монитор', 'price': 12000, 'rating': 4.9, 'in_stock': True}, {'name': 'Веб-камера', 'price': 3500, 'rating': 4.1, 'in_stock': True}]` и сохраняем результат в `catalog`."
+        },
+        {
+          "line": 15,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 16,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "982ed99bbe1a86468460539631c5b1022b0e351189479df147d6e5f76d6f28d5",
+      "verificationEvidence": {
+        "codeSha256": "982ed99bbe1a86468460539631c5b1022b0e351189479df147d6e5f76d6f28d5",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Наушники, Мышь, Монитор\nНаушники, Мышь, Кабель\nНаушники, Кабель, Монитор, Веб-камера"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6abd1c0e4e1f7c3d9fefabb1",
+      "lessonId": "M01-L10",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "def classify_product(product):\n    if not product['in_stock']:\n        return 'Нет в наличии'\n    if product['price'] < 500 and product['rating'] >= 4.0:\n        return 'Выгодная покупка'\n    if product['rating'] >= 4.5:\n        return 'Хороший выбор'\n    return 'Стандарт'\n\ndef add_labels(catalog):\n    for product in catalog:\n        product['label'] = classify_product(product)\n    return catalog\n\ndef print_catalog(catalog):\n    for p in catalog:\n        print(f\"{p['name']} | Цена: {p['price']} | Рейтинг: {p['rating']} | Метка: {p['label']}\")\n\ncatalog = [\n    {\"name\": \"Ноутбук\", \"price\": 45000, \"rating\": 4.8, \"in_stock\": True},\n    {\"name\": \"Флешка\", \"price\": 390, \"rating\": 4.3, \"in_stock\": True},\n    {\"name\": \"Коврик\", \"price\": 350, \"rating\": 3.8, \"in_stock\": True},\n    {\"name\": \"Роутер\", \"price\": 3200, \"rating\": 4.1, \"in_stock\": True},\n    {\"name\": \"Планшет\", \"price\": 28000, \"rating\": 4.6, \"in_stock\": False},\n    {\"name\": \"Колонка\", \"price\": 4200, \"rating\": 4.5, \"in_stock\": True},\n]\nadd_labels(catalog)\nprint_catalog(catalog)",
+      "answer": "",
+      "explanation": "Отсутствующий товар сразу получает соответствующую метку. Затем приоритет у дешёвого товара с хорошим рейтингом, после него — у рейтинга от 4.5. Основная программа задаёт каталог и вызывает две функции; оформление вывода изолировано в print_catalog.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "Ноутбук | Цена: 45000 | Рейтинг: 4.8 | Метка: Хороший выбор\nФлешка | Цена: 390 | Рейтинг: 4.3 | Метка: Выгодная покупка\nКоврик | Цена: 350 | Рейтинг: 3.8 | Метка: Стандарт\nРоутер | Цена: 3200 | Рейтинг: 4.1 | Метка: Стандарт\nПланшет | Цена: 28000 | Рейтинг: 4.6 | Метка: Нет в наличии\nКолонка | Цена: 4200 | Рейтинг: 4.5 | Метка: Хороший выбор"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Определяем функцию `classify_product` с параметрами `product`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 2,
+          "text": "Проверяем условие `not product['in_stock']`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 3,
+          "text": "Возвращаем из функции `'Нет в наличии'`."
+        },
+        {
+          "line": 4,
+          "text": "Проверяем условие `product['price'] < 500 and product['rating'] >= 4.0`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 5,
+          "text": "Возвращаем из функции `'Выгодная покупка'`."
+        },
+        {
+          "line": 6,
+          "text": "Проверяем условие `product['rating'] >= 4.5`. Блок с отступом выполняется только при истинном условии."
+        },
+        {
+          "line": 7,
+          "text": "Возвращаем из функции `'Хороший выбор'`."
+        },
+        {
+          "line": 8,
+          "text": "Возвращаем из функции `'Стандарт'`."
+        },
+        {
+          "line": 10,
+          "text": "Определяем функцию `add_labels` с параметрами `catalog`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 11,
+          "text": "Перебираем `catalog`; очередное значение доступно через `product`."
+        },
+        {
+          "line": 12,
+          "text": "Вычисляем `classify_product(product)` и сохраняем результат в `product['label']`."
+        },
+        {
+          "line": 13,
+          "text": "Возвращаем из функции `catalog`."
+        },
+        {
+          "line": 15,
+          "text": "Определяем функцию `print_catalog` с параметрами `catalog`. Её тело выполняется при вызове."
+        },
+        {
+          "line": 16,
+          "text": "Перебираем `catalog`; очередное значение доступно через `p`."
+        },
+        {
+          "line": 17,
+          "text": "Выводим результат в формате, указанном в условии."
+        },
+        {
+          "line": 19,
+          "text": "Вычисляем `[{'name': 'Ноутбук', 'price': 45000, 'rating': 4.8, 'in_stock': True}, {'name': 'Флешка', 'price': 390, 'rating': 4.3, 'in_stock': True}, {'name': 'Коврик', 'price': 350, 'rating': 3.8, 'in_stock': True}, {'name': 'Роутер', 'price': 3200, 'rating': 4.1, 'in_stock': True}, {'name': 'Планшет', 'price': 28000, 'rating': 4.6, 'in_stock': False}, {'name': 'Колонка', 'price': 4200, 'rating': 4.5, 'in_stock': True}]` и сохраняем результат в `catalog`."
+        },
+        {
+          "line": 27,
+          "text": "Выполняем `add_labels` с переданными аргументами."
+        },
+        {
+          "line": 28,
+          "text": "Выполняем `print_catalog` с переданными аргументами."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "5d4921e084281e0264e7394ba68eedc23eda2ecd17e0015d08123bf14c99f58b",
+      "verificationEvidence": {
+        "codeSha256": "5d4921e084281e0264e7394ba68eedc23eda2ecd17e0015d08123bf14c99f58b",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "Ноутбук | Цена: 45000 | Рейтинг: 4.8 | Метка: Хороший выбор\nФлешка | Цена: 390 | Рейтинг: 4.3 | Метка: Выгодная покупка\nКоврик | Цена: 350 | Рейтинг: 3.8 | Метка: Стандарт\nРоутер | Цена: 3200 | Рейтинг: 4.1 | Метка: Стандарт\nПланшет | Цена: 28000 | Рейтинг: 4.6 | Метка: Нет в наличии\nКолонка | Цена: 4200 | Рейтинг: 4.5 | Метка: Хороший выбор"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab2855daef10a80f7d062e9",
+      "lessonId": "M01-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\n\nstudents_dict = {\n    \"student\": [\"Аня\", \"Илья\", \"Мария\", \"Тимур\"],\n    \"sleep_hours\": [7.5, 6.0, 8.0, 5.5],\n    \"screen_time_hours\": [4.0, 7.0, 3.5, 8.5],\n    \"uses_ai_for_study\": [\"Yes\", \"Sometimes\", \"No\", \"Yes\"],\n    \"stress_level_1_10\": [4, 7, 3, 8],\n}\ndf = pd.DataFrame(students_dict)\nprint(*df.shape)",
+      "answer": "",
+      "explanation": "Ключи словаря становятся названиями столбцов, списки — их значениями. shape возвращает пару (число строк, число столбцов); звёздочка раскрывает её в два аргумента print.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "4 5"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `{'student': ['Аня', 'Илья', 'Мария', 'Тимур'], 'sleep_hours': [7.5, 6.0, 8.0, 5.5], 'screen_time_hours': [4.0, 7.0, 3.5, 8.5], 'uses_ai_for_study': ['Yes', 'Sometimes', 'No', 'Yes'], 'stress_level_1_10': [4, 7, 3, 8]}` и сохраняем результат в `students_dict`."
+        },
+        {
+          "line": 10,
+          "text": "Вычисляем `pd.DataFrame(students_dict)` и сохраняем результат в `df`."
+        },
+        {
+          "line": 11,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "d8eb69892f47ef0a096c75e963327dbf4f202d86f594139a2f10f0cef2224f85",
+      "verificationEvidence": {
+        "codeSha256": "d8eb69892f47ef0a096c75e963327dbf4f202d86f594139a2f10f0cef2224f85",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "4 5"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab289c8aef10a80f7d062ea",
+      "lessonId": "M01-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nprint(*df.shape)",
+      "answer": "",
+      "explanation": "read_csv читает первую строку как заголовки. shape считает только строки данных, поэтому заголовок не добавляет тринадцатую запись.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "12 10"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "74a4693cdd22166bae9aa01080a1cf012cca94ddcbe4cbca9049f27c207bd026",
+      "verificationEvidence": {
+        "codeSha256": "74a4693cdd22166bae9aa01080a1cf012cca94ddcbe4cbca9049f27c207bd026",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "12 10"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab28addaef10a80f7d062eb",
+      "lessonId": "M01-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nprint(','.join(df.columns))",
+      "answer": "",
+      "explanation": "columns хранит названия в исходном порядке. join с разделителем запятая не добавляет пробелы.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "request_id,text,text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority,category"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "e7efd95981a9952b91a57d2fd54359701917252b6e9f0e419ca7d1b0c86a872f",
+      "verificationEvidence": {
+        "codeSha256": "e7efd95981a9952b91a57d2fd54359701917252b6e9f0e419ca7d1b0c86a872f",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "request_id,text,text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority,category"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab28b3aaef10a80f7d062ec",
+      "lessonId": "M01-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nprint(','.join(df.select_dtypes(include='number').columns))",
+      "answer": "",
+      "explanation": "select_dtypes выбирает числовые типы, включая целочисленные индикаторы 0/1. Идентификатор числовой по типу, хотя содержательным признаком модели не является.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "request_id,text_length,has_question,has_payment_word,has_delivery_word,urgency_score"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "828d1cbb0ae5507f2db8ea3104c1f354c6b05d31e8af8975ed736111d47ec393",
+      "verificationEvidence": {
+        "codeSha256": "828d1cbb0ae5507f2db8ea3104c1f354c6b05d31e8af8975ed736111d47ec393",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "request_id,text_length,has_question,has_payment_word,has_delivery_word,urgency_score"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab28b82aef10a80f7d062ed",
+      "lessonId": "M01-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nprint(','.join(df.select_dtypes(exclude='number').columns))",
+      "answer": "",
+      "explanation": "В этом CSV нечисловые столбцы содержат строки. exclude=number работает и с новым строковым типом pandas, и со старыми object-столбцами.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "text,source,priority,category"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "9c3d806ef684b4e04938572eb6565ec1ed2b929fa63e40128cde2056528df2f0",
+      "verificationEvidence": {
+        "codeSha256": "9c3d806ef684b4e04938572eb6565ec1ed2b929fa63e40128cde2056528df2f0",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "text,source,priority,category"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab28c14aef10a80f7d062ee",
+      "lessonId": "M01-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('support_requests_10_11_spo.csv')\nfeatures = [c for c in df.columns if c not in ['request_id', 'text', 'category']]\nprint(','.join(features))",
+      "answer": "",
+      "explanation": "Исключаем служебный номер, сырой текст и целевой ответ. Остальные признаки сохраняют порядок в файле; целевой столбец не должен попадать в X.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `[c for c in df.columns if c not in ['request_id', 'text', 'category']]` и сохраняем результат в `features`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "24ea02d5ebe5d300234f8f4ff388134a0e0e4edf6d0bb74e165120e8a7b6a86d",
+      "verificationEvidence": {
+        "codeSha256": "24ea02d5ebe5d300234f8f4ff388134a0e0e4edf6d0bb74e165120e8a7b6a86d",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "text_length,has_question,has_payment_word,has_delivery_word,urgency_score,source,priority"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab28c94aef10a80f7d062ef",
+      "lessonId": "M01-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('global_high_school_student_lifestyle_wellness_edu_10_11_spo.csv')\nprint(*df.shape)",
+      "answer": "",
+      "explanation": "Та же операция чтения применяется к большему набору. Размер получаем из реально открытого файла, а не печатаем заготовленные числа.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "500 11"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "d7a16c04909a2772f555ee530a28de14433b0bc957e9b0faa2ee19604c822f63",
+      "verificationEvidence": {
+        "codeSha256": "d7a16c04909a2772f555ee530a28de14433b0bc957e9b0faa2ee19604c822f63",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "500 11"
+        }
+      ]
+    },
+    {
+      "taskId": "T-6ab28d9bfa8b59a3bc635dda",
+      "lessonId": "M01-L12",
+      "status": "published",
+      "rightsConfirmed": true,
+      "reviewedAt": "2026-11-02",
+      "reviewer": "Code Future Academy / индивидуальная проверка обычной практики",
+      "kind": "code",
+      "code": "import pandas as pd\ndf = pd.read_csv('global_high_school_student_lifestyle_wellness_edu_10_11_spo.csv')\nfeatures = [c for c in df.columns if c not in ['student_id', 'wellness_group']]\nprint(','.join(features))",
+      "answer": "",
+      "explanation": "student_id — номер записи, wellness_group — целевая группа. Их исключение предотвращает бессодержательное обучение по номеру и утечку ответа в признаки.",
+      "source": "Самостоятельное решение Code Future Academy по исходному условию",
+      "verification": "project_tests",
+      "testCount": 1,
+      "examples": [
+        {
+          "input": "",
+          "output": "age,gender,country,grade,sleep_hours,screen_time_hours,uses_ai_for_study,stress_level_1_10,exam_preparation"
+        }
+      ],
+      "lineExplanations": [
+        {
+          "line": 1,
+          "text": "Подключаем pandas, чтобы использовать необходимые функции библиотеки."
+        },
+        {
+          "line": 2,
+          "text": "Читаем учебный CSV в таблицу df. Файл должен находиться рядом с программой."
+        },
+        {
+          "line": 3,
+          "text": "Вычисляем `[c for c in df.columns if c not in ['student_id', 'wellness_group']]` и сохраняем результат в `features`."
+        },
+        {
+          "line": 4,
+          "text": "Выводим результат в формате, указанном в условии."
+        }
+      ],
+      "relatedTopics": [],
+      "sha256": "994291011e77d0886e5b45ee5852ecd0bd0bbebad45b2c914c4deaf3bfae8f15",
+      "verificationEvidence": {
+        "codeSha256": "994291011e77d0886e5b45ee5852ecd0bd0bbebad45b2c914c4deaf3bfae8f15",
+        "passed": 1,
+        "total": 1,
+        "runner": "Python 3.12.14 / отдельный временный каталог / реальные stdout и stdin"
+      },
+      "tests": [
+        {
+          "input": "",
+          "expected": "age,gender,country,grade,sleep_hours,screen_time_hours,uses_ai_for_study,stress_level_1_10,exam_preparation"
+        }
+      ]
+    }
+  ]
+}
