@@ -14,6 +14,6 @@ export interface Lesson extends LessonSummary { presentation?:{kind:"original"|"
 export interface Module { id:number; title:string; description:string; lessonIds:string[]; lessonCount:number; controlCount:number; taskCount:number }
 export interface Course { id:string; title:string; subtitle:string; officialUrl:string }
 export interface Catalog { course:Course; modules:Module[]; lessons:LessonSummary[]; counts:Record<string,number> }
-export interface Resource { id:string; title:string; description:string; url:string; topics:string[]; language:string; type:'docs'|'interactive'|'course'|'video'; verifiedAt:string|null }
-export interface Topic { id:string; title:string; group:string; lessons:string[]; content:string; visual?:string }
+export interface Resource { id:string; title:string; description:string; url:string; topics:string[]; language:string; type:'docs'|'interactive'|'course'|'video'|'tool'|'dataset';category?:string;start?:string;limits?:string;mode?:string;verifiedAt:string|null }
+export interface Topic { order?:number;summary?:string;track?:'python'|'ai';level?:'beginner'|'intermediate'|'advanced';readingMinutes?:number;exampleCount?:number;contentUrl?:string;sourceIds?:string[];prerequisites?:string[];related?:string[];keywords?:string; id:string; title:string; group:string; lessons:string[]; content:string; visual?:string }
 export interface ImportReport { counts:Record<string,number>; discrepancies:{metric:string;expected:number;actual:number}[]; warnings:{lessonId:string;message:string}[]; knownIssues:{lessonId:string;message:string}[]; missing:{lessonId:string;material:string}[]; manualReview:string[]; publication:Record<string,string|boolean>; sourceSha256:string; sourceName:string }

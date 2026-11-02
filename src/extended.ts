@@ -72,15 +72,20 @@ const mathNotes:Record<string,string>={
 Для числового прогноза MAE усредняет абсолютные ошибки, а средняя знаковая ошибка показывает смещение. Ошибки разных знаков способны сократиться в среднем, хотя каждый промах велик. Поэтому в заключении полезны среднее, крупные ошибки и конкретные случаи. Ожидаемая выгода EV описывает средний результат повторений, а не обещанный исход отдельного проекта.`
 };
 
-export function buildExtendedLecture(lesson:Lesson):string{
+export function getLessonTopicIds(lesson:Lesson):string[]{
+ const number=Number(lesson.number.split(".")[1]||1);
+ return mapping[lesson.moduleId]?.[number-1]||lesson.extendedTopics||[];
+}
+
+export function buildExtendedLecture(lesson:Lesson,expanded:Record<string,string>={}):string{
  if(lesson.extendedLecture)return lesson.extendedLecture+'\n\n## Открыть задания занятия\n\n'+lesson.tasks.map(task=>'— ['+task.number+'. '+task.title+'](#/lesson/'+lesson.id+'/task/'+task.id+')').join('\n\n');
  const number=Number(lesson.number.split('.')[1]||1);
- const ids=mapping[lesson.moduleId]?.[number-1]||lesson.extendedTopics||[];
+ const ids=getLessonTopicIds(lesson);
  const relevant=topics.filter(topic=>ids.includes(topic.id));
  const intro=introductions[lesson.id]||`В этом объяснении разобраны основные понятия темы «${lesson.title}» и их связь с примерами занятия. Сначала полезно отделить исходные данные от правила обработки и результата, затем проследить небольшой пример и проверить ограничения вывода.`;
  const sections=[`## Как устроена тема\n\n${intro}`];
  if(lesson.moduleId===2){const key=number<=6?'optimization':number<=9?'probability':number<=13?'distribution':number===14?'correlation':'decision';sections.push(mathNotes[key])}
- for(const topic of relevant){sections.push(`## ${topic.title}\n\n`+topic.content.replace(/^## (.+)$/gm,`### ${topic.title}: $1`))}
+ for(const topic of relevant){sections.push(`## ${topic.title}\n\n`+(expanded[topic.id]||topic.content).replace(/^## (.+)$/gm,`### ${topic.title}: $1`))}
  const examples=lesson.tasks.filter(task=>task.solution?.status==='published'&&task.solution.explanation).slice(0,3);
  if(examples.length)sections.push('## Связь с заданиями занятия\n\nНиже приведены разборы конкретных официальных условий. Полные копируемые ответы и исходные условия находятся на страницах заданий.');
  for(const task of examples){const solution=task.solution!;sections.push(`### ${task.title}\n\n${solution.explanation}`);if(solution.code&&solution.code.split('\n').length<=45)sections.push('```python\n'+solution.code+'\n```');else if(solution.answer&&solution.answer.length<1600)sections.push(solution.answer);sections.push(`[Открыть исходное условие и готовый ответ](#/lesson/${lesson.id}/task/${task.id})`)}

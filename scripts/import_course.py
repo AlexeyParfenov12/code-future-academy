@@ -414,6 +414,7 @@ def build(source: Path, private: Path, approvals: Path | None = None, rights_con
         shutil.copytree(stage,destination)
         import subprocess
         subprocess.run([__import__('sys').executable,'scripts/build-assessments.py'],cwd=PROJECT,check=True)
+        subprocess.run([__import__('sys').executable,'scripts/build-knowledge.py'],cwd=PROJECT,check=True)
         subprocess.run([__import__('sys').executable,'scripts/build-project-example.py'],cwd=PROJECT,check=True)
         subprocess.run(['node','scripts/fit-slides.mjs'],cwd=PROJECT,check=True)
         if __import__('os').name=='nt':

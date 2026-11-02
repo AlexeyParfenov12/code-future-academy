@@ -5,14 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "python scripts/build-project-example.py && python scripts/build-assessments.py && node scripts/fit-slides.mjs && tsc -b && vite build",
+    "build": "python scripts/build-project-example.py && python scripts/build-assessments.py && python scripts/build-knowledge.py && node scripts/fit-slides.mjs && tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run",
     "test:e2e": "playwright test",
     "import": "python scripts/import_course.py",
     "slides:fit": "node scripts/fit-slides.mjs",
     "example:build": "python scripts/build-project-example.py",
-    "assessments:build": "python scripts/build-assessments.py"
+    "assessments:build": "python scripts/build-assessments.py",
+    "knowledge:build": "python scripts/build-knowledge.py",
+    "knowledge:verify": "python scripts/verify-knowledge.py"
   },
   "dependencies": {
     "fuse.js": "^7.1.0",

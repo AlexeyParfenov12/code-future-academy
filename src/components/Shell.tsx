@@ -23,7 +23,7 @@ export function SearchBox({large=false}:{large?:boolean}) {
   const records=useMemo<SearchRecord[]>(()=>[...(full.length?full:catalog.lessons.filter(l=>l.kind!=='control').flatMap(l=>[
     {id:l.id,title:l.title,context:'Занятие '+l.number,url:'/lesson/'+l.id},
     ...l.tasks.filter(t=>t.origin==='ismart').map(t=>({id:t.id,title:t.title,context:`Задание ${t.number} · Занятие ${l.number}`,url:`/lesson/${l.id}/task/${t.id}`}))
-  ])),...topics.map(t=>({id:'topic-'+t.id,title:t.title,context:'Учебник / '+t.group,url:'/textbook/'+t.id,body:t.content}))],[catalog,full]);
+  ])),...topics.filter(t=>!full.some(record=>record.id==='topic-'+t.id)).map(t=>({id:'topic-'+t.id,title:t.title,context:'Учебник / '+t.group,url:'/textbook/'+t.id,body:t.content+' '+(t.keywords||'')}))],[catalog,full]);
   const results=useMemo(()=>{const numbered=query.match(/^(\d+\.\d+)\s*(?:№|задание)\s*(\d+)$/i);if(numbered)return records.filter(r=>r.aliases?.startsWith(numbered[1]+' №'+numbered[2]+' ')).slice(0,8);return query.trim()?new Fuse(records,{keys:[{name:'title',weight:.45},{name:'aliases',weight:.25},{name:'context',weight:.2},{name:'body',weight:.1}],threshold:.3,ignoreLocation:true}).search(query.trim()).slice(0,8).map(r=>r.item):[]},[query,records]);
   return <div className={'search-box '+(large?'search-large':'')} ref={box}>
     <Search size={large?23:19}/><input ref={input} value={query} placeholder={large?'Найти занятие, задание, функцию или тему…':'Поиск по библиотеке…'} aria-label="Глобальный поиск" onFocus={()=>setOpen(true)} onChange={event=>{setQuery(event.target.value);setOpen(true)}} onKeyDown={event=>{if(event.key==='Enter'&&results[0]){navigate(results[0].url);setOpen(false)}}}/><kbd><Command size={13}/> K</kbd>
@@ -36,7 +36,9 @@ export function Shell() {
   const home=location.pathname==='/';
   useEffect(()=>{setMobile(false);window.scrollTo(0,0)},[location.pathname]);
   const current=catalog.lessons.find(l=>location.pathname.includes(l.id));
-  const page=[...navigation,...reference].find(item=>item.to!=='/'&&location.pathname.startsWith(item.to))?.label||(current?'Занятие '+current.number:'Библиотека');
+  const selectedTopic=topics.find(topic=>location.pathname==='/textbook/'+topic.id);
+  const referencePath=selectedTopic?.track==='ai'?'/ai':location.pathname;
+  const page=[...navigation,...reference].find(item=>item.to!=='/'&&referencePath.startsWith(item.to))?.label||(current?'Занятие '+current.number:'Библиотека');
   return <div className="app-shell">
     <a className="skip-link" href="#main" onClick={event=>{event.preventDefault();document.getElementById('main')?.focus()}}>К содержимому</a>
     {mobile&&<button className="mobile-scrim" onClick={()=>setMobile(false)} aria-label="Закрыть меню"/>}
@@ -46,7 +48,7 @@ export function Shell() {
       <div className="sidebar-scroll">
         <div className="nav-label">МАТЕРИАЛЫ КУРСА</div><nav aria-label="Основная навигация">{navigation.map(({to,label,icon:Icon})=><NavLink key={to} to={to} end={to==='/'}><Icon size={18}/>{label}</NavLink>)}</nav>
         <div className="course-index"><div className="nav-label">ИНДЕКС МОДУЛЕЙ</div>{catalog.modules.map(module=><details key={module.id} open={current?.moduleId===module.id||undefined}><summary><span className="index-number">0{module.id}</span><span>{module.id===1?'Python и данные':module.id===2?'Математика для ИИ':module.id===3?'Модели и алгоритмы':module.id===4?'Проектирование':'Итоговая защита'}</span><ChevronDown size={14}/></summary><div className="course-index-lessons"><Link className="module-index-link" to={'/module/'+module.id}>Все материалы модуля<ArrowUpRight size={13}/></Link>{catalog.lessons.filter(l=>l.moduleId===module.id&&l.kind!=='control').map(lesson=><NavLink key={lesson.id} to={'/lesson/'+lesson.id}><span>{lesson.number}</span>{lesson.title}</NavLink>)}</div></details>)}</div>
-        <div className="nav-label">РАЗОБРАТЬСЯ В ТЕМЕ</div><nav>{reference.map(({to,label,icon:Icon})=><NavLink key={to} to={to}><Icon size={18}/>{label}</NavLink>)}<NavLink to="/favorites"><Bookmark size={18}/>Избранное{local.favorites.length>0&&<span className="count-badge">{local.favorites.length}</span>}</NavLink></nav>
+        <div className="nav-label">РАЗОБРАТЬСЯ В ТЕМЕ</div><nav>{reference.map(({to,label,icon:Icon})=><Link key={to} to={to} className={referencePath.startsWith(to)?'active':undefined} aria-current={referencePath.startsWith(to)?'page':undefined}><Icon size={18}/>{label}</Link>)}<NavLink to="/favorites"><Bookmark size={18}/>Избранное{local.favorites.length>0&&<span className="count-badge">{local.favorites.length}</span>}</NavLink></nav>
       </div>
       <a className="platform-link" href={catalog.course.officialUrl} target="_blank" rel="noopener noreferrer"><span><strong>Официальная платформа</strong><small>Сдача и проверка — iSMART</small></span><ArrowUpRight size={19}/></a>
     </aside>

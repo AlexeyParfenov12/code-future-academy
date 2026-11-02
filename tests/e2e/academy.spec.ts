@@ -24,7 +24,7 @@ test('number search, immediate code, exact clipboard and expanded links',async({
  await expect(page.getByRole('link',{name:'Открыть задание на iSMART'})).toHaveAttribute('href',fifth.ismartLink.candidateUrl);await expect(page.locator('.official')).toContainText('ещё не проверена');
  await page.getByText('Подробное объяснение',{exact:true}).click();await expect(page.locator('.line-explanations')).toBeVisible();await snap(page,'answer-desktop.png');
  await page.goto('/#/lesson/M01-L03?tab=extended');await expect(page.locator('.extended-lecture')).toContainText('input');await page.locator('.extended-lecture a[href*="/task/"]').first().click();await expect(page.locator('.solution-section')).toBeVisible();
- await page.getByLabel('Глобальный поиск').fill('Переменные');await page.locator('.search-results a[href*="/textbook/variables"]').click();await expect(page.locator('h1')).toHaveText('Переменные');
+ await page.getByLabel('Глобальный поиск').fill('Переменные');await page.locator('.search-results a[href*="/textbook/variables"]').click();await expect(page.locator('h1')).toHaveText('Переменные и присваивание');
 });
 
 test('text clipboard and downloadable project',async({page,request})=>{

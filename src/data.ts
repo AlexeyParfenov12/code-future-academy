@@ -1,6 +1,13 @@
-import type {Catalog,Lesson} from './models';
+import type {Catalog,Lesson,Topic} from './models';
 export function assetUrl(path:string){return import.meta.env.BASE_URL+path.replace(/^\//,'')}
 export async function getJSON<T>(path:string, signal?:AbortSignal):Promise<T> {const r=await fetch(assetUrl(path),{signal});if(!r.ok)throw new Error('Не удалось загрузить материал. Попробуйте обновить страницу.');return r.json() as Promise<T>}
 export const getCatalog=()=>getJSON<Catalog>('/content/index.json');
 const cache=new Map<string,Lesson>();
 export async function getLesson(id:string, signal?:AbortSignal){if(cache.has(id))return cache.get(id)!;const l=await getJSON<Lesson>(`/content/lessons/${encodeURIComponent(id)}.json`,signal);cache.set(id,l);return l}
+
+const chapterCache=new Map<string,Promise<string>>();
+export function getTopicContent(topic:Topic){
+ if(!topic.contentUrl)return Promise.resolve(topic.content);
+ if(!chapterCache.has(topic.id))chapterCache.set(topic.id,getJSON<{content:string}>(topic.contentUrl).then(data=>data.content).catch(error=>{chapterCache.delete(topic.id);throw error}));
+ return chapterCache.get(topic.id)!;
+}

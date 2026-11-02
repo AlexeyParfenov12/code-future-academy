@@ -2,11 +2,11 @@ import {useEffect,useState} from 'react';
 import {Link,Navigate,useParams,useSearchParams} from 'react-router-dom';
 import {ArrowLeft,ArrowRight,BookOpen,Bookmark,ChevronDown,ChevronRight,Code2,FileText,FolderOpen,Presentation} from 'lucide-react';
 import type {Lesson,Task} from '../models';
-import {getLesson,assetUrl} from '../data';
+import {getLesson,assetUrl,getTopicContent} from '../data';
 import {useStore} from '../state';
 import {CodeBlock,Files,Markdown,Notice,OfficialLink,TextAnswer,slug} from '../components/Content';
 import {DocumentReader} from '../components/DocumentReader';
-import {buildExtendedLecture} from '../extended';
+import {buildExtendedLecture,getLessonTopicIds} from '../extended';
 import {topics} from '../learning';
 
 export const taskLabels:Record<string,string>={code:'Программа Python',debug:'Исправление кода',file:'Работа с данными',choice:'Вопрос с вариантами',free_response:'Текстовый ответ',assessment:'Аттестация',project:'Образец проекта'};
@@ -45,12 +45,22 @@ export function LessonPage(){
 function LoadedLessonPage({lessonId}:{lessonId:string}){
   const {lesson,error}=useLesson(lessonId);const {catalog,local,toggle}=useStore();const [params,setParams]=useSearchParams();
   const requested=params.get('tab')||'lecture';
+  const [expanded,setExpanded]=useState<Record<string,string>>({}),[chapterError,setChapterError]=useState(false);
+  useEffect(()=>{
+    if(!lesson||requested!=='extended'||lesson.extendedLecture)return;
+    let live=true;setChapterError(false);
+    const referenced=topics.filter(topic=>getLessonTopicIds(lesson).includes(topic.id));
+    Promise.all(referenced.map(async topic=>[topic.id,await getTopicContent(topic)] as const)).then(entries=>{if(live)setExpanded(Object.fromEntries(entries))}).catch(()=>{if(live)setChapterError(true)});
+    return()=>{live=false};
+  },[lesson,requested]);
+
   useEffect(()=>{if(['practice','original'].includes(requested))setParams({tab:requested==='practice'?'tasks':'lecture'},{replace:true})},[requested]);
   if(error)return <NotFound message={error}/>;if(!lesson)return <Loading/>;
   const l=lesson;const tab=requested==='practice'?'tasks':requested==='original'?'lecture':requested;
   const module=catalog.modules.find(m=>m.id===l.moduleId)!;
   const visible=catalog.lessons.filter(item=>item.kind!=='control');const position=visible.findIndex(item=>item.id===l.id);const prev=visible[position-1],next=visible[position+1];
-  const extended=buildExtendedLecture(l);
+  const extended=buildExtendedLecture(l,expanded);
+  const expandedReady=Boolean(l.extendedLecture)||getLessonTopicIds(l).every(id=>Boolean(expanded[id]));
   const tabs=[{id:'lecture',label:'Оригинальная лекция',icon:FileText},{id:'slides',label:'Презентация',icon:Presentation},{id:'extended',label:'Подробная лекция',icon:BookOpen},...(l.tasks.length?[{id:'tasks',label:`Практические задания · ${l.tasks.length}`,icon:Code2}]:[]),...(l.files.length?[{id:'files',label:'Файлы занятия',icon:FolderOpen}]:[])];
   const active=tabs.some(item=>item.id===tab)?tab:'lecture';
   const headings=active==='extended'?(extended.match(/^#{2,3} .+$/gm)||[]):[];
@@ -61,7 +71,7 @@ function LoadedLessonPage({lessonId}:{lessonId:string}){
     <div className={'reading-layout '+(['lecture','slides','files'].includes(active)?'document-layout':'')}><div className="reading-main">
       {active==='lecture'&&(l.documents?.lecture?<DocumentReader document={l.documents.lecture}/>:<><div className="content-origin">ИСХОДНАЯ ЛЕКЦИЯ / ТЕКСТ ИЗ АРХИВА</div><Markdown content={l.lecture}/></>)}
       {active==='slides'&&<section>{l.documents?.presentation?<><div className="section-heading"><div><span className="eyebrow">ИСХОДНЫЙ ФАЙЛ iSMART</span><h2>Оригинальная презентация</h2></div>{l.deckDownload&&<a className="button secondary" href={assetUrl(l.deckDownload)} download aria-label="Скачать оригинальную презентацию PPTX">Скачать PPTX</a>}</div><DocumentReader document={l.documents.presentation}/><p className="muted small">Слайды из оригинальной презентации курса, преобразованные в PDF средствами Microsoft PowerPoint. Из скачиваемой студенческой PPTX исключены заметки и служебные метаданные.</p></>:<div className="presentation-missing"><Notice>{l.presentation?.reason||'Оригинальная презентация iSMART отсутствует в архиве.'}</Notice><button className="button secondary" onClick={()=>setParams({tab:'lecture'})}>Читать исходную лекцию<BookOpen size={17}/></button></div>}</section>}
-      {active==='extended'&&<article className="extended-lecture"><div className="content-origin">ПОДРОБНОЕ ОБЪЯСНЕНИЕ / CODE FUTURE ACADEMY</div>{extended?<Markdown content={extended}/>:<Markdown content={l.lecture}/>}<RelatedTopics lessonId={l.id} ids={l.extendedTopics}/></article>}
+      {active==='extended'&&<article className="extended-lecture"><div className="content-origin">ПОДРОБНОЕ ОБЪЯСНЕНИЕ / CODE FUTURE ACADEMY</div>{!expandedReady&&!chapterError?<Loading/>:<>{chapterError&&<Notice>Часть дополнительных глав не загрузилась. Обновите страницу для полного текста.</Notice>}{extended?<Markdown content={extended}/>:<Markdown content={l.lecture}/>}</>}<RelatedTopics lessonId={l.id} ids={l.extendedTopics}/></article>}
       {active==='tasks'&&<section><div className="section-heading"><h2>Практические задания</h2><span className="muted">Оригинальные элементы iSMART</span></div><TaskList lesson={l}/></section>}
       {active==='files'&&<section><div className="section-heading"><h2>Файлы занятия</h2></div><Files files={l.files}/></section>}
       <nav className="lesson-navigation" aria-label="Соседние занятия">{prev?<Link to={'/lesson/'+prev.id}><ArrowLeft size={18}/><span><small>Предыдущее занятие</small><strong>{prev.number} / {prev.title}</strong></span></Link>:<Link to={'/module/'+l.moduleId}><ArrowLeft size={18}/>К модулю</Link>}{next?<Link to={'/lesson/'+next.id}><span><small>Следующее занятие</small><strong>{next.number} / {next.title}</strong></span><ArrowRight size={18}/></Link>:<Link to="/catalog">Каталог занятий<ArrowRight size={18}/></Link>}</nav>
